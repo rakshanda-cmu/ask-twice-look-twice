@@ -1,0 +1,39 @@
+# ---- Large external assets (NOT distributed here) ----
+# Model weights / checkpoints
+*.safetensors
+*.bin
+*.pt
+*.pth
+llava-v1.5-7b/
+models/
+
+# Datasets and images (download separately; see README)
+COCO/
+naturalbench/*
+!naturalbench/results/
+pope/*
+!pope/results/
+winoground/*
+!winoground/results/
+rf20/*
+!rf20/results/
+vqa/
+
+# ---- Generated / regenerable artifacts ----
+attn_demo/
+patchcos_demo/
+patchcos_demo_half/
+logitlens_demo/
+logitlens_demo_half/
+sitit_compare/
+figs/
+*.gif
+
+# ---- Python / env ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.DS_Store

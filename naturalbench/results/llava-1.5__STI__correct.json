@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "model": "llava-1.5",
+    "order": "STI",
+    "n_spaces": 0,
+    "order_tag": "STI",
+    "resize": null,
+    "resize_mode": null,
+    "image_copies": 1,
+    "cue_mode": false,
+    "think": false,
+    "system_prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions.",
+    "max_tokens": 16,
+    "num_groups": 1900,
+    "pair_acc": 0.5026,
+    "q_acc": 0.0168,
+    "i_acc": 0.035,
+    "g_acc": 0.0,
+    "subset": "correct",
+    "count": 0
+  },
+  "results": []
+}

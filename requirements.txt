@@ -1,0 +1,28 @@
+# Core
+torch>=2.1
+transformers>=4.57
+accelerate>=0.30
+bitsandbytes>=0.43          # 4-bit loading for Gemma-3-27B
+sentencepiece
+einops
+
+# Numeric / data
+numpy
+pandas
+scipy                        # gaussian smoothing in the patch-cosine overlays
+
+# Vision / IO
+Pillow
+opencv-python                # cv2
+imageio                      # GIF export for the logit-lens animations
+inflect                      # class-name pluralization (RF20 detection prompts)
+pycocotools                  # RF20 detection mAP (COCO eval)
+
+# Figures / UI
+matplotlib
+plotly                       # heatmaps in the Streamlit browsers
+streamlit                    # the interactive UI (logit_lens_app.py)
+
+# Datasets (download helpers)
+datasets
+huggingface_hub
