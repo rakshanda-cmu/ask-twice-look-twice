@@ -29,6 +29,12 @@ sitit_compare/
 figs/
 *.gif
 
+# ---- Static review site (DO track its assets, despite the *.gif rule above) ----
+!website/
+!website/assets/
+!website/assets/*.gif
+!website/assets/*.png
+
 # ---- Python / env ----
 __pycache__/
 *.pyc

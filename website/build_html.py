@@ -1,0 +1,184 @@
+"""
+Build the static review-supplement site (index.html) from the generated assets.
+Selects the four clearest low-token NaturalBench examples where question-first (STI)
+fails and image-echoing (SITIT) fixes it, and lays out per-example: the zoomed
+low-token image + question, then the two per-layer logit-lens GIFs side by side.
+
+    python build_html.py      # writes ../index.html, reads assets/manifest.json
+"""
+import json, os, html
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ASSETS = os.path.join(HERE, "assets")
+OUT = os.path.join(HERE, "index.html")
+SELECT = [229, 638, 978, 1231]     # 2 "Yes" + 2 "No", clearest cases
+
+LADDER = {  # Qwen3-VL-8B group accuracy (from the shipped result JSONs)
+    "NaturalBench": {"STI": 0.270, "SIT": 0.351, "STIT": 0.350, "SITIT": 0.374},
+    "Winoground":   {"STI": 0.223, "SIT": 0.318, "STIT": 0.375, "SITIT": 0.403},
+}
+LEGEND = [
+    ("STI",  "System · Task · Image", "question-first (the paradox)"),
+    ("SIT",  "System · Image · Task", "question-last (baseline)"),
+    ("STIT", "System · Task · Image · Task", "question echo (ours)"),
+    ("SITIT","System · Image · Task · Image · Task", "image echo (ours, best)"),
+]
+
+
+def esc(s): return html.escape(str(s))
+
+
+def main():
+    man = json.load(open(os.path.join(ASSETS, "manifest.json")))
+    by = {e["idx"]: e for e in man["examples"]}
+    exs = [by[i] for i in SELECT if i in by]
+
+    rows = ""
+    for ds, d in LADDER.items():
+        cells = "".join(
+            f'<td class="{ "worst" if o=="STI" else ("best" if o=="SITIT" else "") }">{d[o]:.3f}</td>'
+            for o in ("STI", "SIT", "STIT", "SITIT"))
+        rows += f"<tr><th>{esc(ds)}</th>{cells}</tr>\n"
+
+    legend = "".join(
+        f'<li><b>{esc(k)}</b> <span class="seq">{esc(seq)}</span> '
+        f'<span class="role">{esc(role)}</span></li>' for k, seq, role in LEGEND)
+
+    cards = ""
+    for e in exs:
+        q, gt = esc(e["question"]), esc(e["gt"])
+        sti, sit = e["STI"], e["SITIT"]
+        gtcls = "yes" if e["gt"].lower().startswith("y") else "no"
+        cards += f"""
+      <section class="card">
+        <div class="ex-head">
+          <img class="thumb" src="assets/{esc(e['image'])}" alt="example image (low resolution)">
+          <div class="qbox">
+            <div class="q">{q}</div>
+            <div class="gt {gtcls}">ground truth: {gt}</div>
+            <div class="tok">low resolution &middot; {e['img_size'][0]}&times;{e['img_size'][1]} px (few image tokens, zoomed)</div>
+          </div>
+        </div>
+        <div class="pair">
+          <figure class="col fail">
+            <figcaption><span class="tag bad">STI &mdash; question-first</span>
+              answer: <b>{esc(sti['pred'])}</b> <span class="x">&#10007; wrong</span></figcaption>
+            <img src="assets/{esc(sti['gif'])}" alt="STI per-layer logit lens" loading="lazy">
+          </figure>
+          <figure class="col ok">
+            <figcaption><span class="tag good">SITIT &mdash; image echo</span>
+              answer: <b>{esc(sit['pred'])}</b> <span class="c">&#10003; correct</span></figcaption>
+            <img src="assets/{esc(sit['gif'])}" alt="SITIT per-layer logit lens" loading="lazy">
+          </figure>
+        </div>
+        <p class="cap">Per-layer logit lens (Qwen3-VL-8B): each frame is one transformer
+          layer; the heatmap shows what each image patch decodes to and the token grid
+          shows what every token, including the generated answer, decodes to. Under
+          <b>STI</b> the answer locks onto the wrong, image-anchored token early and never
+          recovers; under <b>SITIT</b> the correct answer emerges with depth.</p>
+      </section>"""
+
+    page = f"""<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask Twice, Look Twice &mdash; Interactive Supplement</title>
+<style>
+  :root {{ --ink:#1a1c1f; --mut:#5b6470; --line:#e2e6ea; --bg:#f7f9fb; --card:#fff;
+          --bad:#c23b32; --good:#1f8a5b; --best:#e6f6ee; --worst:#fdeceb; }}
+  * {{ box-sizing:border-box; }}
+  body {{ margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }}
+  .wrap {{ max-width:1040px; margin:0 auto; padding:32px 20px 64px; }}
+  h1 {{ font-size:30px; line-height:1.2; margin:0 0 6px; letter-spacing:-.01em; }}
+  .sub {{ color:var(--mut); font-size:16px; margin:0 0 26px; }}
+  .lead {{ background:var(--card); border:1px solid var(--line); border-radius:12px;
+          padding:20px 22px; margin:0 0 26px; }}
+  .lead p {{ margin:0 0 12px; }} .lead p:last-child {{ margin:0; }}
+  ul.legend {{ list-style:none; padding:0; margin:14px 0 0; display:grid;
+              grid-template-columns:1fr 1fr; gap:6px 24px; }}
+  ul.legend li {{ font-size:14.5px; }}
+  ul.legend .seq {{ color:var(--ink); }} ul.legend .role {{ color:var(--mut); }}
+  h2 {{ font-size:20px; margin:34px 0 12px; }}
+  table {{ border-collapse:collapse; width:100%; background:var(--card);
+          border:1px solid var(--line); border-radius:12px; overflow:hidden; }}
+  th,td {{ padding:10px 14px; text-align:center; border-bottom:1px solid var(--line); }}
+  thead th {{ background:#eef2f6; font-weight:600; }}
+  tbody th {{ text-align:left; font-weight:600; }}
+  td.worst {{ background:var(--worst); color:var(--bad); font-weight:700; }}
+  td.best {{ background:var(--best); color:var(--good); font-weight:700; }}
+  .note {{ color:var(--mut); font-size:13.5px; margin:8px 2px 0; }}
+  .card {{ background:var(--card); border:1px solid var(--line); border-radius:14px;
+          padding:20px; margin:22px 0; }}
+  .ex-head {{ display:flex; gap:18px; align-items:center; margin-bottom:16px; }}
+  .thumb {{ width:200px; height:auto; border-radius:10px; border:1px solid var(--line);
+           image-rendering:auto; }}
+  .qbox .q {{ font-size:19px; font-weight:600; }}
+  .gt {{ display:inline-block; margin-top:8px; padding:3px 10px; border-radius:20px;
+        font-size:14px; font-weight:600; }}
+  .gt.yes {{ background:var(--best); color:var(--good); }}
+  .gt.no {{ background:var(--worst); color:var(--bad); }}
+  .tok {{ color:var(--mut); font-size:13px; margin-top:8px; }}
+  .pair {{ display:flex; gap:18px; }}
+  .col {{ flex:1; margin:0; min-width:0; }}
+  .col img {{ width:100%; height:auto; border:1px solid var(--line); border-radius:8px;
+             background:#111; }}
+  figcaption {{ font-size:14px; margin-bottom:8px; }}
+  .tag {{ display:inline-block; padding:2px 8px; border-radius:6px; font-weight:600;
+         font-size:13px; margin-right:6px; }}
+  .tag.bad {{ background:var(--worst); color:var(--bad); }}
+  .tag.good {{ background:var(--best); color:var(--good); }}
+  .x {{ color:var(--bad); font-weight:700; }} .c {{ color:var(--good); font-weight:700; }}
+  .cap {{ color:var(--mut); font-size:13.5px; margin:14px 2px 0; }}
+  footer {{ color:var(--mut); font-size:13.5px; margin-top:40px; border-top:1px solid var(--line);
+           padding-top:18px; }}
+  @media (max-width:720px) {{ .pair{{flex-direction:column;}} .ex-head{{flex-direction:column;align-items:flex-start;}}
+    ul.legend{{grid-template-columns:1fr;}} .thumb{{width:100%;max-width:280px;}} }}
+</style></head>
+<body><div class="wrap">
+  <h1>Ask Twice, Look Twice</h1>
+  <p class="sub">Interactive supplement &mdash; watching the question-first paradox and its fix, layer by layer.</p>
+
+  <div class="lead">
+    <p>A vision-language model reads <b>system</b>, <b>image</b>, and <b>question</b>
+    tokens as one stream and answers from the final position. <b>Where the question
+    goes changes the answer.</b> Placing it <i>first</i> (<b>STI</b>), before the long
+    span of image tokens, makes the model commit early to an image-anchored, often
+    wrong answer &mdash; even though it perceives the scene correctly. Re-presenting the
+    (image, question) after the image (<b>SITIT</b>) restores the decoder's access to
+    the question and fixes it, with no training.</p>
+    <p>Below are four clear NaturalBench yes/no cases where <b>STI answers wrong and
+    SITIT answers right</b>. Each pair of animations is a <b>per-layer logit lens</b>:
+    scrub through depth and watch the wrong answer lock in under STI while the correct
+    answer emerges under SITIT. Images are shown at low resolution (few image tokens)
+    and zoomed.</p>
+    <ul class="legend">{legend}</ul>
+  </div>
+
+  <h2>Results at a glance</h2>
+  <table>
+    <thead><tr><th>Benchmark (group acc.)</th><th>STI</th><th>SIT</th><th>STIT</th><th>SITIT</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table>
+  <p class="note">Qwen3-VL-8B group accuracy. Question-first (<b>STI</b>, red) is worst
+    on every benchmark; image echoing (<b>SITIT</b>, green) is best. Full tables and all
+    orderings are in the paper and the accompanying code repository.</p>
+
+  <h2>Seeing the mechanism</h2>
+  {cards}
+
+  <footer>
+    Each animation is a per-layer logit lens on Qwen3-VL-8B: the image is presented at
+    low resolution (few visual tokens) and each frame decodes one transformer layer.
+    Examples are NaturalBench yes/no pairs selected for a clear, unambiguous answer.
+    This page is a static supplement; the code, interactive viewer, and full result
+    files accompany it in the repository.
+  </footer>
+</div></body></html>"""
+
+    open(OUT, "w").write(page)
+    print(f"[html] wrote {OUT} with {len(exs)} examples")
+
+
+if __name__ == "__main__":
+    main()

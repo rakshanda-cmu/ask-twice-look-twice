@@ -1,0 +1,105 @@
+{
+  "examples": [
+    {
+      "idx": 638,
+      "question": "Is the person walking?",
+      "gt": "No",
+      "img_size": [
+        280,
+        184
+      ],
+      "STI": {
+        "answer": "Yes",
+        "pred": "yes",
+        "correct": false,
+        "gif": "ex638_STI.gif"
+      },
+      "SITIT": {
+        "answer": "No",
+        "pred": "no",
+        "correct": true,
+        "gif": "ex638_SITIT.gif"
+      },
+      "image": "ex638_image.png",
+      "demonstrates": true
+    },
+    {
+      "idx": 229,
+      "question": "Is the dog chasing a person?",
+      "gt": "Yes",
+      "img_size": [
+        280,
+        210
+      ],
+      "STI": {
+        "answer": "No",
+        "pred": "no",
+        "correct": false,
+        "gif": "ex229_STI.gif"
+      },
+      "SITIT": {
+        "answer": "Yes",
+        "pred": "yes",
+        "correct": true,
+        "gif": "ex229_SITIT.gif"
+      },
+      "image": "ex229_image.png",
+      "demonstrates": true
+    },
+    {
+      "idx": 978,
+      "question": "Is the man performing on a ramp?",
+      "gt": "Yes",
+      "img_size": [
+        186,
+        280
+      ],
+      "STI": {
+        "answer": "No",
+        "pred": "no",
+        "correct": false,
+        "gif": "ex978_STI.gif"
+      },
+      "SITIT": {
+        "answer": "Yes",
+        "pred": "yes",
+        "correct": true,
+        "gif": "ex978_SITIT.gif"
+      },
+      "image": "ex978_image.png",
+      "demonstrates": true
+    },
+    {
+      "idx": 1231,
+      "question": "Is the girl entering the water?",
+      "gt": "No",
+      "img_size": [
+        224,
+        280
+      ],
+      "STI": {
+        "answer": "Yes",
+        "pred": "yes",
+        "correct": false,
+        "gif": "ex1231_STI.gif"
+      },
+      "SITIT": {
+        "answer": "No",
+        "pred": "no",
+        "correct": true,
+        "gif": "ex1231_SITIT.gif"
+      },
+      "image": "ex1231_image.png",
+      "demonstrates": true
+    }
+  ],
+  "low_max": 280,
+  "layer_step": 2,
+  "model": "qwen3-vl-8b",
+  "selected": [
+    229,
+    638,
+    978,
+    1231
+  ]
+}

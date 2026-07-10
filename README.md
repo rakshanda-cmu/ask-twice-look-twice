@@ -8,6 +8,12 @@ and the benchmark result files needed to reproduce the paper's tables, figures,
 and mechanistic analyses. Model weights and raw image datasets are **not**
 included (they are large and publicly available); see [Setup](#setup).
 
+> **Reviewers:** open **[`website/index.html`](website/index.html)** in any browser
+> (no server, no install) for a self-contained visual walkthrough. It shows four
+> clear low-token NaturalBench cases where question-first (STI) answers wrong and
+> image-echoing (SITIT) answers right, with the answer resolving **layer by layer**
+> in per-layer logit-lens animations.
+
 ---
 
 ## Prompt-ordering notation
