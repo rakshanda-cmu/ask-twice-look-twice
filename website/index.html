@@ -19,189 +19,250 @@
               grid-template-columns:1fr 1fr; gap:6px 24px; }
   ul.legend li { font-size:14.5px; }
   ul.legend .seq { color:var(--ink); } ul.legend .role { color:var(--mut); }
-  h2 { font-size:20px; margin:34px 0 12px; }
+  h2 { font-size:22px; margin:40px 0 6px; }
+  .h2sub { color:var(--mut); margin:0 0 14px; }
+  .sec-problem h2 { color:var(--bad); } .sec-fix h2 { color:var(--good); }
   table { border-collapse:collapse; width:100%; background:var(--card);
-          border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+          border:1px solid var(--line); border-radius:12px; overflow:hidden; margin:6px 0; }
   th,td { padding:10px 14px; text-align:center; border-bottom:1px solid var(--line); }
   thead th { background:#eef2f6; font-weight:600; }
   tbody th { text-align:left; font-weight:600; }
   td.worst { background:var(--worst); color:var(--bad); font-weight:700; }
   td.best { background:var(--best); color:var(--good); font-weight:700; }
-  .note { color:var(--mut); font-size:13.5px; margin:8px 2px 0; }
+  .note { color:var(--mut); font-size:13.5px; margin:8px 2px 20px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px;
-          padding:20px; margin:22px 0; }
+          padding:20px; margin:18px 0; }
   .ex-head { display:flex; gap:18px; align-items:center; margin-bottom:16px; }
-  .thumb { width:200px; height:auto; border-radius:10px; border:1px solid var(--line);
-           image-rendering:auto; }
+  .thumb { width:190px; height:auto; border-radius:10px; border:1px solid var(--line); }
   .qbox .q { font-size:19px; font-weight:600; }
   .gt { display:inline-block; margin-top:8px; padding:3px 10px; border-radius:20px;
         font-size:14px; font-weight:600; }
   .gt.yes { background:var(--best); color:var(--good); }
   .gt.no { background:var(--worst); color:var(--bad); }
   .tok { color:var(--mut); font-size:13px; margin-top:8px; }
-  .pair { display:flex; gap:18px; }
+  .pair { display:flex; gap:18px; align-items:flex-start; }
   .col { flex:1; margin:0; min-width:0; }
-  .col img { width:100%; height:auto; border:1px solid var(--line); border-radius:8px;
-             background:#111; }
+  .col img { width:100%; height:auto; border:1px solid var(--line); border-radius:8px; background:#111; }
   figcaption { font-size:14px; margin-bottom:8px; }
+  .role2 { color:var(--mut); font-size:13px; }
   .tag { display:inline-block; padding:2px 8px; border-radius:6px; font-weight:600;
          font-size:13px; margin-right:6px; }
   .tag.bad { background:var(--worst); color:var(--bad); }
   .tag.good { background:var(--best); color:var(--good); }
   .x { color:var(--bad); font-weight:700; } .c { color:var(--good); font-weight:700; }
-  .cap { color:var(--mut); font-size:13.5px; margin:14px 2px 0; }
-  footer { color:var(--mut); font-size:13.5px; margin-top:40px; border-top:1px solid var(--line);
-           padding-top:18px; }
+  .words { display:flex; gap:18px; flex-wrap:wrap; }
+  .wfig { flex:1 1 460px; margin:0; }
+  .wfig img { width:100%; height:auto; border:1px solid var(--line); border-radius:10px; }
+  .wfig figcaption { color:var(--mut); font-size:13.5px; margin-top:6px; text-align:center; }
+  footer { color:var(--mut); font-size:13.5px; margin-top:44px; border-top:1px solid var(--line); padding-top:18px; }
   @media (max-width:720px) { .pair{flex-direction:column;} .ex-head{flex-direction:column;align-items:flex-start;}
     ul.legend{grid-template-columns:1fr;} .thumb{width:100%;max-width:280px;} }
 </style></head>
 <body><div class="wrap">
   <h1>Ask Twice, Look Twice</h1>
-  <p class="sub">Interactive supplement &mdash; watching the question-first paradox and its fix, layer by layer.</p>
+  <p class="sub">Interactive supplement &mdash; the question-first paradox and its fix, layer by layer.</p>
 
   <div class="lead">
     <p>A vision-language model reads <b>system</b>, <b>image</b>, and <b>question</b>
-    tokens as one stream and answers from the final position. <b>Where the question
-    goes changes the answer.</b> Placing it <i>first</i> (<b>STI</b>), before the long
-    span of image tokens, makes the model commit early to an image-anchored, often
-    wrong answer &mdash; even though it perceives the scene correctly. Re-presenting the
-    (image, question) after the image (<b>SITIT</b>) restores the decoder's access to
-    the question and fixes it, with no training.</p>
-    <p>Below are four clear NaturalBench yes/no cases where <b>STI answers wrong and
-    SITIT answers right</b>. Each pair of animations is a <b>per-layer logit lens</b>:
-    scrub through depth and watch the wrong answer lock in under STI while the correct
-    answer emerges under SITIT. Images are shown at low resolution (few image tokens)
-    and zoomed.</p>
+    tokens as one stream and answers from the final position. <b>Where the question goes
+    changes the answer.</b> This page shows, on clear low-token NaturalBench yes/no cases,
+    <b>first the problem</b> (moving the question <i>before</i> the image flips a correct
+    answer to a wrong one) and <b>then the fix</b> (re-presenting the image and question
+    restores it), each with a <b>per-layer logit lens</b> so you can watch the answer form
+    with depth.</p>
     <ul class="legend"><li><b>STI</b> <span class="seq">System · Task · Image</span> <span class="role">question-first (the paradox)</span></li><li><b>SIT</b> <span class="seq">System · Image · Task</span> <span class="role">question-last (baseline)</span></li><li><b>STIT</b> <span class="seq">System · Task · Image · Task</span> <span class="role">question echo (ours)</span></li><li><b>SITIT</b> <span class="seq">System · Image · Task · Image · Task</span> <span class="role">image echo (ours, best)</span></li></ul>
   </div>
 
-  <h2>Results at a glance</h2>
-  <table>
-    <thead><tr><th>Benchmark (group acc.)</th><th>STI</th><th>SIT</th><th>STIT</th><th>SITIT</th></tr></thead>
-    <tbody><tr><th>NaturalBench</th><td class="worst">0.270</td><td class="">0.351</td><td class="">0.350</td><td class="best">0.374</td></tr>
-<tr><th>Winoground</th><td class="worst">0.223</td><td class="">0.318</td><td class="">0.375</td><td class="best">0.403</td></tr>
-</tbody>
-  </table>
-  <p class="note">Qwen3-VL-8B group accuracy. Question-first (<b>STI</b>, red) is worst
-    on every benchmark; image echoing (<b>SITIT</b>, green) is best. Full tables and all
-    orderings are in the paper and the accompanying code repository.</p>
+  <h2>Reading the model: per-patch logit lens</h2>
+  <p class="h2sub">Each image patch, projected through the output embedding, decodes to a
+    vocabulary token. Overlaying that token on the patch shows <b>what the model sees</b>.
+    The animations further down scrub this through every layer.</p>
+  <div class="words"><figure class="wfig"><img src="assets/ex978_words_L24.png" alt="per-patch logit lens words" loading="lazy"><figcaption>&ldquo;Is the man performing on a ramp?&rdquo;</figcaption></figure><figure class="wfig"><img src="assets/ex229_words_L33.png" alt="per-patch logit lens words" loading="lazy"><figcaption>&ldquo;Is the dog chasing a person?&rdquo;</figcaption></figure></div>
+  <p class="note">Qwen3-VL-8B, question-first (STI), a late layer. The patches decode to
+    the scene: the ramp reads <i>skate / skateboard / ramps / athlete / leap</i>; the dog
+    reads <i>dog / running / aggressive / play</i>. Perception is largely correct even when
+    the model then answers wrong &mdash; the paradox is a read-out failure, not a
+    perception failure. Images are shown at low resolution (few, large patches, zoomed).</p>
 
-  <h2>Seeing the mechanism</h2>
+  <div class="sec-problem">
+  <h2>1. The problem: question position flips the answer</h2>
+  <p class="h2sub">Same content, only the question moves. Placing it <b>after</b> the image
+    (<b>SIT</b>) answers correctly; placing it <b>first</b> (<b>STI</b>) commits early to a
+    wrong, image-anchored answer.</p>
+  <table><thead><tr><th>Benchmark (group acc.)</th><th>SIT</th><th>STI</th></tr></thead><tbody><tr><th>NaturalBench</th><td class="best">0.351</td><td class="worst">0.270</td></tr><tr><th>Winoground</th><td class="best">0.318</td><td class="worst">0.223</td></tr></tbody></table>
+  <p class="note">Qwen3-VL-8B group accuracy. Question-first (<b>STI</b>) trails
+    question-last (<b>SIT</b>) by 8&ndash;10 points with identical content.</p>
   
       <section class="card">
         <div class="ex-head">
           <img class="thumb" src="assets/ex229_image.png" alt="example image (low resolution)">
           <div class="qbox">
             <div class="q">Is the dog chasing a person?</div>
-            <div class="gt yes">ground truth: Yes</div>
+            <span class="gt yes">ground truth: Yes</span>
             <div class="tok">low resolution &middot; 280&times;210 px (few image tokens, zoomed)</div>
           </div>
         </div>
-        <div class="pair">
-          <figure class="col fail">
-            <figcaption><span class="tag bad">STI &mdash; question-first</span>
-              answer: <b>no</b> <span class="x">&#10007; wrong</span></figcaption>
-            <img src="assets/ex229_STI.gif" alt="STI per-layer logit lens" loading="lazy">
-          </figure>
-          <figure class="col ok">
-            <figcaption><span class="tag good">SITIT &mdash; image echo</span>
-              answer: <b>yes</b> <span class="c">&#10003; correct</span></figcaption>
-            <img src="assets/ex229_SITIT.gif" alt="SITIT per-layer logit lens" loading="lazy">
-          </figure>
-        </div>
-        <p class="cap">Per-layer logit lens (Qwen3-VL-8B): each frame is one transformer
-          layer; the heatmap shows what each image patch decodes to and the token grid
-          shows what every token, including the generated answer, decodes to. Under
-          <b>STI</b> the answer locks onto the wrong, image-anchored token early and never
-          recovers; under <b>SITIT</b> the correct answer emerges with depth.</p>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag good">SIT — question-last</span>
+          <span class="role2">moves after the image</span><br>answer: <b>yes</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex229_SIT.gif" alt="SIT — question-last per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">moves before the image</span><br>answer: <b>no</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex229_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure></div>
       </section>
       <section class="card">
         <div class="ex-head">
           <img class="thumb" src="assets/ex638_image.png" alt="example image (low resolution)">
           <div class="qbox">
             <div class="q">Is the person walking?</div>
-            <div class="gt no">ground truth: No</div>
+            <span class="gt no">ground truth: No</span>
             <div class="tok">low resolution &middot; 280&times;184 px (few image tokens, zoomed)</div>
           </div>
         </div>
-        <div class="pair">
-          <figure class="col fail">
-            <figcaption><span class="tag bad">STI &mdash; question-first</span>
-              answer: <b>yes</b> <span class="x">&#10007; wrong</span></figcaption>
-            <img src="assets/ex638_STI.gif" alt="STI per-layer logit lens" loading="lazy">
-          </figure>
-          <figure class="col ok">
-            <figcaption><span class="tag good">SITIT &mdash; image echo</span>
-              answer: <b>no</b> <span class="c">&#10003; correct</span></figcaption>
-            <img src="assets/ex638_SITIT.gif" alt="SITIT per-layer logit lens" loading="lazy">
-          </figure>
-        </div>
-        <p class="cap">Per-layer logit lens (Qwen3-VL-8B): each frame is one transformer
-          layer; the heatmap shows what each image patch decodes to and the token grid
-          shows what every token, including the generated answer, decodes to. Under
-          <b>STI</b> the answer locks onto the wrong, image-anchored token early and never
-          recovers; under <b>SITIT</b> the correct answer emerges with depth.</p>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag good">SIT — question-last</span>
+          <span class="role2">moves after the image</span><br>answer: <b>no</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex638_SIT.gif" alt="SIT — question-last per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">moves before the image</span><br>answer: <b>yes</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex638_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure></div>
       </section>
       <section class="card">
         <div class="ex-head">
           <img class="thumb" src="assets/ex978_image.png" alt="example image (low resolution)">
           <div class="qbox">
             <div class="q">Is the man performing on a ramp?</div>
-            <div class="gt yes">ground truth: Yes</div>
+            <span class="gt yes">ground truth: Yes</span>
             <div class="tok">low resolution &middot; 186&times;280 px (few image tokens, zoomed)</div>
           </div>
         </div>
-        <div class="pair">
-          <figure class="col fail">
-            <figcaption><span class="tag bad">STI &mdash; question-first</span>
-              answer: <b>no</b> <span class="x">&#10007; wrong</span></figcaption>
-            <img src="assets/ex978_STI.gif" alt="STI per-layer logit lens" loading="lazy">
-          </figure>
-          <figure class="col ok">
-            <figcaption><span class="tag good">SITIT &mdash; image echo</span>
-              answer: <b>yes</b> <span class="c">&#10003; correct</span></figcaption>
-            <img src="assets/ex978_SITIT.gif" alt="SITIT per-layer logit lens" loading="lazy">
-          </figure>
-        </div>
-        <p class="cap">Per-layer logit lens (Qwen3-VL-8B): each frame is one transformer
-          layer; the heatmap shows what each image patch decodes to and the token grid
-          shows what every token, including the generated answer, decodes to. Under
-          <b>STI</b> the answer locks onto the wrong, image-anchored token early and never
-          recovers; under <b>SITIT</b> the correct answer emerges with depth.</p>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag good">SIT — question-last</span>
+          <span class="role2">moves after the image</span><br>answer: <b>yes</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex978_SIT.gif" alt="SIT — question-last per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">moves before the image</span><br>answer: <b>no</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex978_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure></div>
       </section>
       <section class="card">
         <div class="ex-head">
           <img class="thumb" src="assets/ex1231_image.png" alt="example image (low resolution)">
           <div class="qbox">
             <div class="q">Is the girl entering the water?</div>
-            <div class="gt no">ground truth: No</div>
+            <span class="gt no">ground truth: No</span>
             <div class="tok">low resolution &middot; 224&times;280 px (few image tokens, zoomed)</div>
           </div>
         </div>
-        <div class="pair">
-          <figure class="col fail">
-            <figcaption><span class="tag bad">STI &mdash; question-first</span>
-              answer: <b>yes</b> <span class="x">&#10007; wrong</span></figcaption>
-            <img src="assets/ex1231_STI.gif" alt="STI per-layer logit lens" loading="lazy">
-          </figure>
-          <figure class="col ok">
-            <figcaption><span class="tag good">SITIT &mdash; image echo</span>
-              answer: <b>no</b> <span class="c">&#10003; correct</span></figcaption>
-            <img src="assets/ex1231_SITIT.gif" alt="SITIT per-layer logit lens" loading="lazy">
-          </figure>
-        </div>
-        <p class="cap">Per-layer logit lens (Qwen3-VL-8B): each frame is one transformer
-          layer; the heatmap shows what each image patch decodes to and the token grid
-          shows what every token, including the generated answer, decodes to. Under
-          <b>STI</b> the answer locks onto the wrong, image-anchored token early and never
-          recovers; under <b>SITIT</b> the correct answer emerges with depth.</p>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag good">SIT — question-last</span>
+          <span class="role2">moves after the image</span><br>answer: <b>no</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex1231_SIT.gif" alt="SIT — question-last per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">moves before the image</span><br>answer: <b>yes</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex1231_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure></div>
       </section>
+  </div>
+
+  <div class="sec-fix">
+  <h2>2. The fix: echoing restores the answer</h2>
+  <p class="h2sub">Re-presenting the (image, question) after the image (<b>SITIT</b>) gives
+    the decoder a second, adjacent look and fixes the same cases &mdash; no training.</p>
+  <table><thead><tr><th>Benchmark (group acc.)</th><th>STI</th><th>STIT</th><th>SITIT</th></tr></thead><tbody><tr><th>NaturalBench</th><td class="worst">0.270</td><td class="">0.350</td><td class="best">0.374</td></tr><tr><th>Winoground</th><td class="worst">0.223</td><td class="">0.375</td><td class="best">0.403</td></tr></tbody></table>
+  <p class="note">Qwen3-VL-8B group accuracy. From question-first (<b>STI</b>, worst) up the
+    ladder to image echoing (<b>SITIT</b>, best).</p>
+  
+      <section class="card">
+        <div class="ex-head">
+          <img class="thumb" src="assets/ex229_image.png" alt="example image (low resolution)">
+          <div class="qbox">
+            <div class="q">Is the dog chasing a person?</div>
+            <span class="gt yes">ground truth: Yes</span>
+            <div class="tok">low resolution &middot; 280&times;210 px (few image tokens, zoomed)</div>
+          </div>
+        </div>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">still broken</span><br>answer: <b>no</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex229_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag good">SITIT — image echo</span>
+          <span class="role2">the fix</span><br>answer: <b>yes</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex229_SITIT.gif" alt="SITIT — image echo per-layer logit lens" loading="lazy">
+      </figure></div>
+      </section>
+      <section class="card">
+        <div class="ex-head">
+          <img class="thumb" src="assets/ex638_image.png" alt="example image (low resolution)">
+          <div class="qbox">
+            <div class="q">Is the person walking?</div>
+            <span class="gt no">ground truth: No</span>
+            <div class="tok">low resolution &middot; 280&times;184 px (few image tokens, zoomed)</div>
+          </div>
+        </div>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">still broken</span><br>answer: <b>yes</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex638_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag good">SITIT — image echo</span>
+          <span class="role2">the fix</span><br>answer: <b>no</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex638_SITIT.gif" alt="SITIT — image echo per-layer logit lens" loading="lazy">
+      </figure></div>
+      </section>
+      <section class="card">
+        <div class="ex-head">
+          <img class="thumb" src="assets/ex978_image.png" alt="example image (low resolution)">
+          <div class="qbox">
+            <div class="q">Is the man performing on a ramp?</div>
+            <span class="gt yes">ground truth: Yes</span>
+            <div class="tok">low resolution &middot; 186&times;280 px (few image tokens, zoomed)</div>
+          </div>
+        </div>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">still broken</span><br>answer: <b>no</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex978_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag good">SITIT — image echo</span>
+          <span class="role2">the fix</span><br>answer: <b>yes</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex978_SITIT.gif" alt="SITIT — image echo per-layer logit lens" loading="lazy">
+      </figure></div>
+      </section>
+      <section class="card">
+        <div class="ex-head">
+          <img class="thumb" src="assets/ex1231_image.png" alt="example image (low resolution)">
+          <div class="qbox">
+            <div class="q">Is the girl entering the water?</div>
+            <span class="gt no">ground truth: No</span>
+            <div class="tok">low resolution &middot; 224&times;280 px (few image tokens, zoomed)</div>
+          </div>
+        </div>
+        <div class="pair"><figure class="col">
+        <figcaption><span class="tag bad">STI — question-first</span>
+          <span class="role2">still broken</span><br>answer: <b>yes</b> <span class="x">&#10007; wrong</span></figcaption>
+        <img src="assets/ex1231_STI.gif" alt="STI — question-first per-layer logit lens" loading="lazy">
+      </figure><figure class="col">
+        <figcaption><span class="tag good">SITIT — image echo</span>
+          <span class="role2">the fix</span><br>answer: <b>no</b> <span class="c">&#10003; correct</span></figcaption>
+        <img src="assets/ex1231_SITIT.gif" alt="SITIT — image echo per-layer logit lens" loading="lazy">
+      </figure></div>
+      </section>
+  </div>
 
   <footer>
-    Each animation is a per-layer logit lens on Qwen3-VL-8B: the image is presented at
-    low resolution (few visual tokens) and each frame decodes one transformer layer.
-    Examples are NaturalBench yes/no pairs selected for a clear, unambiguous answer.
-    This page is a static supplement; the code, interactive viewer, and full result
-    files accompany it in the repository.
+    Each animation is a per-layer logit lens on Qwen3-VL-8B: the image is presented at low
+    resolution (few visual tokens) and each frame decodes one transformer layer &mdash; the
+    heatmap is what each image patch decodes to and the token grid is what every token,
+    including the generated answer, decodes to. Examples are NaturalBench yes/no pairs chosen
+    for a clear, unambiguous answer. Static supplement; the code, interactive viewer, and
+    full result files accompany it in the repository.
   </footer>
 </div></body></html>
