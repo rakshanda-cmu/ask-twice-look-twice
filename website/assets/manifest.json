@@ -58,7 +58,7 @@
         "correct": true,
         "gif": "ex638_SIT.gif"
       },
-      "word_still": null
+      "word_still": "ex638_words_L33.png"
     },
     {
       "idx": 978,
@@ -118,7 +118,7 @@
         "correct": true,
         "gif": "ex1231_SIT.gif"
       },
-      "word_still": null
+      "word_still": "ex1231_words_L33.png"
     }
   ],
   "low_max": 280,

@@ -17,7 +17,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
 SELECT = [229, 638, 978, 1231]
-WORDS = [(978, "Is the man performing on a ramp?"), (229, "Is the dog chasing a person?")]
+WORDS = [(229, "Is the dog chasing a person?"), (638, "Is the person walking?"),
+         (978, "Is the man performing on a ramp?"), (1231, "Is the girl entering the water?")]
 
 PARADOX = {  # SIT (question-last) vs STI (question-first); Qwen3-VL-8B group acc.
     "NaturalBench": {"STI": 0.270, "SIT": 0.351},
@@ -158,9 +159,10 @@ def main():
   .tag.bad {{ background:var(--worst); color:var(--bad); }}
   .tag.good {{ background:var(--best); color:var(--good); }}
   .x {{ color:var(--bad); font-weight:700; }} .c {{ color:var(--good); font-weight:700; }}
-  .words {{ display:flex; gap:18px; flex-wrap:wrap; }}
-  .wfig {{ flex:1 1 460px; margin:0; }}
-  .wfig img {{ width:100%; height:auto; border:1px solid var(--line); border-radius:10px; }}
+  /* one still per row, centered -> mismatched aspect ratios never leave a gap */
+  .words {{ display:block; }}
+  .wfig {{ max-width:760px; margin:0 auto 22px; }}
+  .wfig img {{ width:100%; height:auto; border:1px solid var(--line); border-radius:10px; display:block; }}
   .wfig figcaption {{ color:var(--mut); font-size:13.5px; margin-top:6px; text-align:center; }}
   footer {{ color:var(--mut); font-size:13.5px; margin-top:44px; border-top:1px solid var(--line); padding-top:18px; }}
   @media (max-width:720px) {{ .pair{{flex-direction:column;}} .ex-head{{flex-direction:column;align-items:flex-start;}}
