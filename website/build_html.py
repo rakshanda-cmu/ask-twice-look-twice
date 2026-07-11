@@ -95,10 +95,9 @@ def main():
     words = ""
     for idx, q in WORDS:
         e = by.get(idx)
-        if e and e.get("word_still"):
-            words += (f'<figure class="wfig"><img src="assets/{esc(e["word_still"])}" '
-                      f'alt="per-patch logit lens words" loading="lazy">'
-                      f'<figcaption>&ldquo;{esc(q)}&rdquo;</figcaption></figure>')
+        if e and e.get("fig_panel"):
+            words += (f'<figure class="wfig"><img src="assets/{esc(e["fig_panel"])}" '
+                      f'alt="per-patch logit-lens panel: {esc(q)}" loading="lazy"></figure>')
 
     problem_cards = "".join(
         card(e, "SIT", "SIT — question-last", "moves after the image",
@@ -187,12 +186,11 @@ def main():
   <p class="h2sub">Each image patch, projected through the output embedding, decodes to a
     vocabulary token. Overlaying that token on the patch shows <b>what the model sees</b>.
     The animations further down scrub this through every layer.</p>
+  <p class="note">One panel per example (Qwen3-VL-8B, question-first, a late layer). Each
+    reads on its own: the question and ground truth on top, the per-patch decodings in the
+    middle, and what it proves at the bottom. Images are shown at low resolution (few,
+    large, zoomed patches).</p>
   <div class="words">{words}</div>
-  <p class="note">Qwen3-VL-8B, question-first (STI), a late layer. The patches decode to
-    the scene: the ramp reads <i>skate / skateboard / ramps / athlete / leap</i>; the dog
-    reads <i>dog / running / aggressive / play</i>. Perception is largely correct even when
-    the model then answers wrong &mdash; the paradox is a read-out failure, not a
-    perception failure. Images are shown at low resolution (few, large patches, zoomed).</p>
 
   <div class="sec-problem">
   <h2>1. The problem: question position flips the answer</h2>

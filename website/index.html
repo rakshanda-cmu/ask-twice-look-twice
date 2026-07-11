@@ -78,12 +78,11 @@
   <p class="h2sub">Each image patch, projected through the output embedding, decodes to a
     vocabulary token. Overlaying that token on the patch shows <b>what the model sees</b>.
     The animations further down scrub this through every layer.</p>
-  <div class="words"><figure class="wfig"><img src="assets/ex229_words_L33.png" alt="per-patch logit lens words" loading="lazy"><figcaption>&ldquo;Is the dog chasing a person?&rdquo;</figcaption></figure><figure class="wfig"><img src="assets/ex638_words_L33.png" alt="per-patch logit lens words" loading="lazy"><figcaption>&ldquo;Is the person walking?&rdquo;</figcaption></figure><figure class="wfig"><img src="assets/ex978_words_L24.png" alt="per-patch logit lens words" loading="lazy"><figcaption>&ldquo;Is the man performing on a ramp?&rdquo;</figcaption></figure><figure class="wfig"><img src="assets/ex1231_words_L33.png" alt="per-patch logit lens words" loading="lazy"><figcaption>&ldquo;Is the girl entering the water?&rdquo;</figcaption></figure></div>
-  <p class="note">Qwen3-VL-8B, question-first (STI), a late layer. The patches decode to
-    the scene: the ramp reads <i>skate / skateboard / ramps / athlete / leap</i>; the dog
-    reads <i>dog / running / aggressive / play</i>. Perception is largely correct even when
-    the model then answers wrong &mdash; the paradox is a read-out failure, not a
-    perception failure. Images are shown at low resolution (few, large patches, zoomed).</p>
+  <p class="note">One panel per example (Qwen3-VL-8B, question-first, a late layer). Each
+    reads on its own: the question and ground truth on top, the per-patch decodings in the
+    middle, and what it proves at the bottom. Images are shown at low resolution (few,
+    large, zoomed patches).</p>
+  <div class="words"><figure class="wfig"><img src="assets/ex229_fig.png" alt="per-patch logit-lens panel: Is the dog chasing a person?" loading="lazy"></figure><figure class="wfig"><img src="assets/ex638_fig.png" alt="per-patch logit-lens panel: Is the person walking?" loading="lazy"></figure><figure class="wfig"><img src="assets/ex978_fig.png" alt="per-patch logit-lens panel: Is the man performing on a ramp?" loading="lazy"></figure><figure class="wfig"><img src="assets/ex1231_fig.png" alt="per-patch logit-lens panel: Is the girl entering the water?" loading="lazy"></figure></div>
 
   <div class="sec-problem">
   <h2>1. The problem: question position flips the answer</h2>
