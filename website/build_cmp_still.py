@@ -33,6 +33,10 @@ EVIDENCE = {
             "crouching", "ground"],
     58:   ["waiting", "wait", "standing", "platform", "queue", "line", "track",
             "station", "commuter"],
+    879:  ["spectators", "spectator", "crowd", "audience", "stands", "watching",
+            "viewers", "onlookers", "bleachers", "fans"],
+    454:  ["planting", "plant", "crop", "crops", "soil", "field", "seed", "farm",
+            "farming", "dirt", "digging", "garden"],
 }
 
 

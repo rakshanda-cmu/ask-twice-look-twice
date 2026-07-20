@@ -79,7 +79,7 @@ def main():
     warper = TopKLogitsWarper(top_k=TOP_K, filter_value=float("-inf"))
     proc = LogitsProcessorList([])
 
-    cands = json.load(open(os.path.join(SCRATCH, "evidence_sets.json")))
+    cands = json.load(open(os.path.join(SCRATCH, os.environ.get("EVID_FILE","evidence_sets.json"))))
     out = []
     for n, (gid, c) in enumerate(cands.items()):
         ev = c["evidence"]; gt = c["gt"]
@@ -107,18 +107,19 @@ def main():
             return (gt[0].lower() == "y" and a.startswith("y")) or \
                    (gt[0].lower() == "n" and a.startswith("n"))
         paradox = (not ok(sti_ans)) and ok(sit_ans)
+        sti_wins = ok(sti_ans) and (not ok(sit_ans))
         rec = dict(group=int(gid), question=c["question"], gt=gt, image=c["image"],
                    evidence=ev, best_layer=bl, sti=ns, sit=nt, gap=ns - nt,
                    sti_tokens=found, sti_ans=sti_ans, sit_ans=sit_ans,
-                   paradox=paradox,
+                   paradox=paradox, sti_wins=sti_wins,
                    per_layer=[(layers[i], sti_h[i][0], sit_h[i][0]) for i in range(len(layers))])
         out.append(rec)
         print(f"[{n+1}/{len(cands)}] g{gid} bestL{bl} STI {ns} vs SIT {nt} "
-              f"gap {ns-nt} {'PARADOX' if paradox else ''} tokens={list(found)} "
+              f"gap {ns-nt} {'STI-WINS' if sti_wins else ('PARADOX' if paradox else '')} tokens={list(found)} "
               f"| {c['question']}", flush=True)
 
     out.sort(key=lambda r: (r["gap"], r["sti"]), reverse=True)
-    json.dump(out, open(os.path.join(SCRATCH, "evidence_hits.json"), "w"), indent=2)
+    json.dump(out, open(os.path.join(SCRATCH, os.environ.get("EVID_OUT","evidence_hits.json")), "w"), indent=2)
     print("\n===== RANKED by best-layer evidence gap (STI - SIT) =====")
     for r in out:
         print(f"  g{r['group']:4d} L{r['best_layer']:2d} STI {r['sti']:2d} vs SIT "

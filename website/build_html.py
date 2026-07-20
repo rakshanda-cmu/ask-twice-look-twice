@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
-SELECT = [217, 232, 1007, 263]
+SELECT = [217, 232, 1007, 717, 879, 263, 478, 454]
 
 TITLE = ("Ask Twice, Look Twice: Prompt Echoing Resolves the "
          "Question-First Paradox in Vision-Language Models")
@@ -366,7 +366,7 @@ def main():
            flex-wrap:wrap; margin:.4rem 0 .4rem; }}
   .uhead .cmp-q {{ margin:0; }}
   .rawbtn {{ padding:0; border:0; background:none; cursor:zoom-in; line-height:0; }}
-  .rawbtn img {{ height:104px; width:auto; border-radius:8px; border:1px solid #bbb;
+  .rawbtn img {{ height:150px; width:auto; border-radius:8px; border:1px solid #bbb;
                 box-shadow:0 2px 6px rgba(0,0,0,.18); transition:transform .1s; }}
   .rawbtn:hover img {{ transform:scale(1.06); }}
   .lightbox {{ position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:100;

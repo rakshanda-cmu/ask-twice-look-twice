@@ -47,3 +47,4 @@ venv/
 # ---- Build logs / one-off helpers (session artifacts) ----
 *.log
 website/wait_and_gen.sh
+website/wait_and_search.sh
