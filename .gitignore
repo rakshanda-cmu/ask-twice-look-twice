@@ -43,3 +43,7 @@ venv/
 .env
 .ipynb_checkpoints/
 .DS_Store
+
+# ---- Build logs / one-off helpers (session artifacts) ----
+*.log
+website/wait_and_gen.sh

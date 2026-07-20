@@ -9,10 +9,24 @@ and mechanistic analyses. Model weights and raw image datasets are **not**
 included (they are large and publicly available); see [Setup](#setup).
 
 > **Reviewers:** open **[`website/index.html`](website/index.html)** in any browser
-> (no server, no install) for a self-contained visual walkthrough. It shows four
-> clear low-token NaturalBench cases where question-first (STI) answers wrong and
-> image-echoing (SITIT) answers right, with the answer resolving **layer by layer**
-> in per-layer logit-lens animations.
+> (no server, no install) for a self-contained, arXiv-HTML-style walkthrough. It
+> reports the **primary results** (STI, SIT, STIT, SITIT, SITIT_rev on NaturalBench,
+> Winoground, POPE, RF20 for Qwen3-VL-8B and Gemma-3-27B), then shows four clear
+> low-token NaturalBench **perception-steering** cases: at a mid-late layer,
+> question-first (STI) image patches decode the answer word (a **green box**) while
+> question-last (SIT) patches do not (a **red box**) — yet STI answers *wrong* and
+> SIT *right* (better perception, worse read-out). The green/red boxes are placed
+> automatically on the patches that decode the answer word. Each case pairs the
+> static per-patch **logit-lens screenshot** with a **play-on-click** per-layer
+> animation (STI vs. SIT, and STI vs. SITIT) that can be **minimized** again, plus a
+> click-to-enlarge raw thumbnail. A closing repository guide maps each result to the
+> code that produced it.
+>
+> The steering examples were selected by `website/search_steer.py` (measures how
+> many patches decode the question's content word under STI vs. SIT across
+> mid-to-late layers) and their assets built by `website/gen_new_examples.py`;
+> `website/build_cmp_still.py` draws the boxes and `website/build_html.py` assembles
+> the page.
 
 ---
 
