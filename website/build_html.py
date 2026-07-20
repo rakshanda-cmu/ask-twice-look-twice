@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
-SELECT = [478, 217, 769, 58]
+SELECT = [217, 232, 1007, 263]
 
 TITLE = ("Ask Twice, Look Twice: Prompt Echoing Resolves the "
          "Question-First Paradox in Vision-Language Models")
@@ -192,9 +192,10 @@ def main():
                     f"Per-patch logit lens at layer&nbsp;{esc(layer)} for "
                     f"&ldquo;{esc(e['question'])}&rdquo; (ground truth {esc(e['gt'])}). "
                     f"Question-first (STI, left) steers perception: every image patch "
-                    f"that decodes the answer word &ldquo;{esc(e['key'])}&rdquo; is boxed "
-                    f"in <span class='boxg'>green</span>; question-last (SIT, right) "
-                    f"decodes it in almost none (<span class='boxr'>red</span>) &mdash; "
+                    f"that decodes an <em>answer-evidence</em> token &mdash; the action "
+                    f"and related objects that settle the question &mdash; is boxed in "
+                    f"<span class='boxg'>green</span>; question-last (SIT, right) decodes "
+                    f"far fewer (<span class='boxr'>red</span>) &mdash; "
                     f"same image, same layer. Yet STI answers &ldquo;{esc(e['STI']['pred'])}&rdquo; "
                     f"&#10007; while SIT answers &ldquo;{esc(e['SIT']['pred'])}&rdquo; "
                     f"&#10003;: <strong>better perception, worse read-out.</strong> "
@@ -459,9 +460,11 @@ def main():
   yes/no cases rendered at low resolution, so a few large patches each carry a
   legible decoded word. In every case below, question-first
   (<strong>STI</strong>) steers perception to the question: every patch that decodes
-  the answer word is boxed in <span class="boxg">green</span>, while question-last
-  (<strong>SIT</strong>) &mdash; where the question comes after the image and cannot
-  steer &mdash; boxes almost none in <span class="boxr">red</span>.
+  an <em>answer-evidence</em> token &mdash; the action and related objects that help
+  settle the question, not just the question's own words &mdash; is boxed in
+  <span class="boxg">green</span>, while question-last (<strong>SIT</strong>), where
+  the question comes after the image and cannot steer, boxes far fewer in
+  <span class="boxr">red</span>.
   <strong>STI correctly identifies the tokens needed to answer, yet still answers
   wrong; SIT identifies fewer, yet answers right.</strong> Perception and read-out
   come apart. Press <em>Play</em> under a screenshot to expand the two per-layer

@@ -21,6 +21,20 @@ FOOT_BG = (243, 246, 249); GOOD = (31, 138, 91); BAD = (194, 59, 50)
 GREEN = (28, 150, 88); RED = (206, 58, 48); EDGE = (8, 20, 26)
 PAD = 22; COLGAP = 18
 
+# Answer-EVIDENCE token sets: tokens that help answer each question (the action,
+# related objects/props, effects), NOT just the literal question word. STI's patches
+# surface these; SIT's largely miss them. (Fallback: the manifest 'key'.)
+EVIDENCE = {
+    478:  ["sharing", "share", "food", "eating", "meal", "feeding", "giving",
+            "passing", "plate", "vegetarian", "snack"],
+    217:  ["shaking", "shake", "wet", "water", "fur", "bath", "splash", "spray",
+            "droplet", "soaked", "swimming", "dripping"],
+    769:  ["sitting", "seated", "sit", "grass", "lawn", "green", "kneeling",
+            "crouching", "ground"],
+    58:   ["waiting", "wait", "standing", "platform", "queue", "line", "track",
+            "station", "commuter"],
+}
+
 
 def stem(w):
     for suf in ("ing", "ed", "es", "s"):
@@ -184,26 +198,35 @@ def crop_lens(gif_path, frame_idx):
     return crop, frame_idx * LAYER_STEP, gy
 
 
-def highlight_cells(img, gy, words, gw, gh, key, color):
-    """Draw a coloured box around every individual patch cell whose decoded word
-    matches `key`. Returns the number of highlighted cells."""
+def match_any(word, targets):
+    for t in targets:
+        if matches(word, t):
+            return t
+    return None
+
+
+def highlight_cells(img, gy, words, gw, gh, targets, color):
+    """Draw a coloured box around every patch cell whose decoded word matches any of
+    the answer-evidence `targets`. Returns (count, {matched token: count})."""
     W, Ht = img.width, img.height
     cw = W / gw
     ch = (Ht - gy) / gh
     d = ImageDraw.Draw(img)
-    n = 0
+    n, found = 0, {}
     for p, w in enumerate(words):
-        if not matches(w, key):
+        t = match_any(w, targets)
+        if t is None:
             continue
         r, c = p // gw, p % gw
         x0, y0 = c * cw + 2, gy + r * ch + 2
         x1, y1 = (c + 1) * cw - 2, gy + (r + 1) * ch - 2
-        for t in range(2, 4):                 # dark contrast edge
-            d.rectangle([x0 - t, y0 - t, x1 + t, y1 + t], outline=EDGE)
-        for t in range(0, 2):                 # coloured highlight
-            d.rectangle([x0 - t, y0 - t, x1 + t, y1 + t], outline=color)
+        for tt in range(2, 4):                # dark contrast edge
+            d.rectangle([x0 - tt, y0 - tt, x1 + tt, y1 + tt], outline=EDGE)
+        for tt in range(0, 2):                # coloured highlight
+            d.rectangle([x0 - tt, y0 - tt, x1 + tt, y1 + tt], outline=color)
         n += 1
-    return n
+        found[t] = found.get(t, 0) + 1
+    return n, found
 
 
 def grid_label(img, gy, text, color):
@@ -270,14 +293,18 @@ def panel(e):
 
     n_sti = n_sit = 0
     key = e.get("key", "")
+    found_sti = {}
     if steering:
-        # highlight every individual patch cell that decodes the answer word:
-        # green on STI (many), red on SIT (few / none).
+        # highlight every patch cell that decodes an answer-EVIDENCE token (the
+        # action, related objects/props) -- green on STI (many), red on SIT (few).
         gw, gh = e["grid_w"], e["grid_h"]
-        n_sti = highlight_cells(sti_img, gy_s, e["sti_words"], gw, gh, key, GREEN)
-        n_sit = highlight_cells(sit_img, gy_r, e["sit_words"], gw, gh, key, RED)
-        grid_label(sti_img, gy_s, "STI finds “%s” ×%d" % (key, n_sti), GREEN)
-        grid_label(sit_img, gy_r, "SIT finds “%s” ×%d" % (key, n_sit), RED)
+        targets = e.get("evidence") or EVIDENCE.get(idx, [key])
+        n_sti, found_sti = highlight_cells(sti_img, gy_s, e["sti_words"], gw, gh,
+                                           targets, GREEN)
+        n_sit, _ = highlight_cells(sit_img, gy_r, e["sit_words"], gw, gh,
+                                   targets, RED)
+        grid_label(sti_img, gy_s, "STI answer-evidence ×%d" % n_sti, GREEN)
+        grid_label(sit_img, gy_r, "SIT answer-evidence ×%d" % n_sit, RED)
     elif idx in BOXES:                        # legacy single-colour path
         draw_box(sti_img, gy_s, BOXES[idx], (0, 214, 255), BOXES[idx][4], (6, 22, 30))
         draw_box(sit_img, gy_r, BOXES[idx], (0, 214, 255), BOXES[idx][4], (6, 22, 30))
@@ -315,10 +342,11 @@ def panel(e):
     # ---- footer ----
     maxw = W - 2 * PAD
     if steering:
+        toks = ", ".join(sorted(found_sti, key=lambda t: -found_sti[t])[:5])
         lines = [("b", "Question-first (STI) steers perception toward the question.")]
-        for ln in wrap("At layer %d, %d image patches decode to the answer word "
-                       "“%s” under STI (green box); under SIT only %d do (red box) "
-                       "— same image, same layer." % (layer, n_sti, key, n_sit),
+        for ln in wrap("At layer %d, %d image patches decode to answer-evidence "
+                       "tokens (%s) under STI (green); under SIT only %d do (red) "
+                       "— same image, same layer." % (layer, n_sti, toks, n_sit),
                        F_BODY, maxw):
             lines.append(("n", ln))
         for ln in wrap("Yet STI answers “%s” ✗ while SIT answers “%s” ✓  "

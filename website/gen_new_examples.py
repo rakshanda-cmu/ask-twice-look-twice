@@ -102,6 +102,7 @@ def main():
         sit_words, _, _ = words_at(mm, low, query, "SIT", peak, warper, proc)
         rec["grid_h"], rec["grid_w"] = gh, gw
         rec["sti_words"], rec["sit_words"] = sti_words, sit_words
+        rec["evidence"] = w.get("evidence")
         rec["demonstrates"] = (not rec["STI"]["correct"]) and rec["SIT"]["correct"]
         manifest["examples"] = [e for e in manifest["examples"] if e["idx"] != idx] + [rec]
         json.dump(manifest, open(mpath, "w"), indent=2)
