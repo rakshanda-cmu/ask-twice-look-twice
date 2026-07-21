@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
-SELECT = [217, 232, 1007, 717, 879, 263, 478, 454]
+SELECT = [217, 96, 232, 1255, 1007, 717, 879, 263]
 
 TITLE = ("Ask Twice, Look Twice: Prompt Echoing Resolves the "
          "Question-First Paradox in Vision-Language Models")
