@@ -347,19 +347,22 @@ def panel(e):
     maxw = W - 2 * PAD
     if steering:
         toks = ", ".join(sorted(found_sti, key=lambda t: -found_sti[t])[:5])
-        lines = [("b", "Question-first (STI) steers perception toward the question.")]
-        for ln in wrap("At layer %d, %d image patches decode to answer-evidence "
-                       "tokens (%s) under STI (green); under SIT only %d do (red) "
-                       "— same image, same layer." % (layer, n_sti, toks, n_sit),
-                       F_BODY, maxw):
+        sti_ok = e["STI"]["correct"]
+        sit_ok = e["SIT"]["correct"]
+        mk = lambda ok: "✓" if ok else "✗"
+        yesno = "YES" if gt.lower().startswith("y") else "NO"
+        lines = [("b", "Ground truth is %s — the answer-relevant content is really "
+                  "in the image." % yesno)]
+        for ln in wrap("Question-first (STI) identifies it: at layer %d, %d image "
+                       "patches decode to the correct-answer tokens (%s) under STI "
+                       "(green); question-last (SIT) decodes only %d (red)."
+                       % (layer, n_sti, toks, n_sit), F_BODY, maxw):
             lines.append(("n", ln))
-        for ln in wrap("Yet STI answers “%s” ✗ while SIT answers “%s” ✓  "
-                       "(ground truth: %s)." % (sti_pred, sit_pred, gt), F_BODY, maxw):
+        for ln in wrap("STI answers “%s” %s;  SIT answers “%s” %s."
+                       % (sti_pred, mk(sti_ok), sit_pred, mk(sit_ok)), F_BODY, maxw):
             lines.append(("n", ln))
-        for ln in wrap("→ Better perception, worse read-out: STI sees the answer "
-                       "but the question is stranded behind the image and goes "
-                       "unread; SIT keeps question access and answers correctly.",
-                       F_BODYB, maxw):
+        for ln in wrap("→ Question-first (STI) surfaces the tokens that answer the "
+                       "question; question-last (SIT) does not.", F_BODYB, maxw):
             lines.append(("e", ln))
     else:
         boxlab = BOXES.get(idx, (0, 0, 0, 0, "key region"))[4]

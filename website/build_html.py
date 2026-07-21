@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
-SELECT = [217, 96, 232, 1255, 1007, 717, 879, 263]
+SELECT = [22, 33, 373, 994, 189, 232, 1007, 1077]
 
 TITLE = ("Ask Twice, Look Twice: Prompt Echoing Resolves the "
          "Question-First Paradox in Vision-Language Models")
@@ -188,18 +188,21 @@ def main():
         if still:
             layer = e.get("cmp_layer", "late")
             if e.get("key") and e.get("sti_words"):
+                stimk = "&#10003;" if e["STI"]["correct"] else "&#10007;"
+                sitmk = "&#10003;" if e["SIT"]["correct"] else "&#10007;"
                 cap = (
                     f"Per-patch logit lens at layer&nbsp;{esc(layer)} for "
-                    f"&ldquo;{esc(e['question'])}&rdquo; (ground truth {esc(e['gt'])}). "
-                    f"Question-first (STI, left) steers perception: every image patch "
-                    f"that decodes an <em>answer-evidence</em> token &mdash; the action "
-                    f"and related objects that settle the question &mdash; is boxed in "
+                    f"&ldquo;{esc(e['question'])}&rdquo; (ground truth {esc(e['gt'])} &mdash; "
+                    f"the queried thing is really present). Question-first (STI, left) "
+                    f"identifies it: every image patch that decodes a "
+                    f"<em>correct-answer</em> token &mdash; the action and related objects "
+                    f"that confirm the answer &mdash; is boxed in "
                     f"<span class='boxg'>green</span>; question-last (SIT, right) decodes "
-                    f"far fewer (<span class='boxr'>red</span>) &mdash; "
-                    f"same image, same layer. Yet STI answers &ldquo;{esc(e['STI']['pred'])}&rdquo; "
-                    f"&#10007; while SIT answers &ldquo;{esc(e['SIT']['pred'])}&rdquo; "
-                    f"&#10003;: <strong>better perception, worse read-out.</strong> "
-                    f"Press play to watch both resolve layer by layer.")
+                    f"far fewer (<span class='boxr'>red</span>), same image and layer. "
+                    f"STI answers &ldquo;{esc(e['STI']['pred'])}&rdquo; {stimk}, SIT "
+                    f"&ldquo;{esc(e['SIT']['pred'])}&rdquo; {sitmk}. "
+                    f"<strong>STI surfaces the tokens that answer the question; SIT does "
+                    f"not.</strong> Press play to watch both resolve layer by layer.")
             else:
                 cap = (
                     f"Per-patch logit lens at layer&nbsp;{esc(layer)} for "
@@ -453,26 +456,24 @@ def main():
   <p class="caption"><strong>Table 3:</strong> Gemma-3-27B (4-bit, single GPU).
   The ordering effect and the echoing fix reproduce in a second model family.</p>
 
-  <h2 class="sec">3&ensp;Perception Steering: STI Sees the Answer, SIT Does Not</h2>
+  <h2 class="sec">3&ensp;Perception Steering: STI Identifies the Answer, SIT Misses It</h2>
   <p>Projecting each image patch's hidden state through the output embedding
   decodes it to a vocabulary token; overlaying that token on the patch shows
   <strong>what the model sees</strong>. We choose clear, low-token NaturalBench
-  yes/no cases rendered at low resolution, so a few large patches each carry a
-  legible decoded word. In every case below, question-first
+  cases <strong>whose answer is Yes</strong> &mdash; the queried thing is genuinely
+  in the image &mdash; so a patch that decodes it is <em>correct</em>-answer
+  evidence, not a hallucination. In every case, question-first
   (<strong>STI</strong>) steers perception to the question: every patch that decodes
-  an <em>answer-evidence</em> token &mdash; the action and related objects that help
-  settle the question, not just the question's own words &mdash; is boxed in
+  a <em>correct-answer</em> token &mdash; the action and related objects that
+  confirm the answer (racket, glove, climbing, guitar, &hellip;) &mdash; is boxed in
   <span class="boxg">green</span>, while question-last (<strong>SIT</strong>), where
-  the question comes after the image and cannot steer, boxes far fewer in
+  the question comes after the image and cannot steer, decodes far fewer, boxed in
   <span class="boxr">red</span>.
-  <strong>STI correctly identifies the tokens needed to answer, yet still answers
-  wrong; SIT identifies fewer, yet answers right.</strong> Perception and read-out
-  come apart. Press <em>Play</em> under a screenshot to expand the two per-layer
-  animations for that same image side by side: each frame decodes one layer, and the
-  bottom row is what the generated answer decodes to at that depth. Under
-  <strong>SIT</strong> (question-last) the correct answer emerges and holds; under
-  <strong>STI</strong> (question-first) a wrong, image-anchored answer locks in
-  early.</p>
+  <strong>Question-first (STI) identifies the tokens that answer the question;
+  question-last (SIT) does not</strong> &mdash; the answer verdict of each ordering
+  is printed under its column. Press <em>Play</em> under a screenshot to expand the
+  two per-layer animations for that same image side by side: each frame decodes one
+  transformer layer.</p>
   {problem}
 
   <h2 class="sec">4&ensp;The Fix: Image Echoing</h2>

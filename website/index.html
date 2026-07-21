@@ -189,40 +189,38 @@
   <p class="caption"><strong>Table 3:</strong> Gemma-3-27B (4-bit, single GPU).
   The ordering effect and the echoing fix reproduce in a second model family.</p>
 
-  <h2 class="sec">3&ensp;Perception Steering: STI Sees the Answer, SIT Does Not</h2>
+  <h2 class="sec">3&ensp;Perception Steering: STI Identifies the Answer, SIT Misses It</h2>
   <p>Projecting each image patch's hidden state through the output embedding
   decodes it to a vocabulary token; overlaying that token on the patch shows
   <strong>what the model sees</strong>. We choose clear, low-token NaturalBench
-  yes/no cases rendered at low resolution, so a few large patches each carry a
-  legible decoded word. In every case below, question-first
+  cases <strong>whose answer is Yes</strong> &mdash; the queried thing is genuinely
+  in the image &mdash; so a patch that decodes it is <em>correct</em>-answer
+  evidence, not a hallucination. In every case, question-first
   (<strong>STI</strong>) steers perception to the question: every patch that decodes
-  an <em>answer-evidence</em> token &mdash; the action and related objects that help
-  settle the question, not just the question's own words &mdash; is boxed in
+  a <em>correct-answer</em> token &mdash; the action and related objects that
+  confirm the answer (racket, glove, climbing, guitar, &hellip;) &mdash; is boxed in
   <span class="boxg">green</span>, while question-last (<strong>SIT</strong>), where
-  the question comes after the image and cannot steer, boxes far fewer in
+  the question comes after the image and cannot steer, decodes far fewer, boxed in
   <span class="boxr">red</span>.
-  <strong>STI correctly identifies the tokens needed to answer, yet still answers
-  wrong; SIT identifies fewer, yet answers right.</strong> Perception and read-out
-  come apart. Press <em>Play</em> under a screenshot to expand the two per-layer
-  animations for that same image side by side: each frame decodes one layer, and the
-  bottom row is what the generated answer decodes to at that depth. Under
-  <strong>SIT</strong> (question-last) the correct answer emerges and holds; under
-  <strong>STI</strong> (question-first) a wrong, image-anchored answer locks in
-  early.</p>
+  <strong>Question-first (STI) identifies the tokens that answer the question;
+  question-last (SIT) does not</strong> &mdash; the answer verdict of each ordering
+  is printed under its column. Press <em>Play</em> under a screenshot to expand the
+  two per-layer animations for that same image side by side: each frame decodes one
+  transformer layer.</p>
   
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex217_image.png"
+        <button class="rawbtn" type="button" data-full="assets/ex22_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex217_image.png" alt="raw image" loading="lazy">
+          <img src="assets/ex22_image.png" alt="raw image" loading="lazy">
         </button>
-        <p class="cmp-q">&ldquo;Is the dog shaking off water?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
+        <p class="cmp-q">&ldquo;Is there someone holding a tennis racket?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
       </div>
         <figure class="panelfig">
-          <img src="assets/ex217_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 3:</span> Per-patch logit lens at layer&nbsp;32 for &ldquo;Is the dog shaking off water?&rdquo; (ground truth No). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;yes&rdquo; &#10007; while SIT answers &ldquo;no&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
+          <img src="assets/ex22_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
+          <figcaption><span class="fnum">Figure 3:</span> Per-patch logit lens at layer&nbsp;30 for &ldquo;Is there someone holding a tennis racket?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
         
       <div class="reveal">
@@ -231,19 +229,19 @@
         <div class="gifs two-col">
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex217_STI.gif"
+          <img class="lazygif" data-gif="assets/ex22_STI.gif"
                alt="STI (question-first) per-layer logit lens">
           <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex217_SIT.gif"
+          <img class="lazygif" data-gif="assets/ex22_SIT.gif"
                alt="SIT (question-last) per-layer logit lens">
           <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
         </div>
         <button class="minbtn" type="button">
@@ -253,16 +251,16 @@
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex96_image.png"
+        <button class="rawbtn" type="button" data-full="assets/ex33_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex96_image.png" alt="raw image" loading="lazy">
+          <img src="assets/ex33_image.png" alt="raw image" loading="lazy">
         </button>
-        <p class="cmp-q">&ldquo;Is the moon visible in the sky?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
+        <p class="cmp-q">&ldquo;Are the people actively climbing?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
       </div>
         <figure class="panelfig">
-          <img src="assets/ex96_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 4:</span> Per-patch logit lens at layer&nbsp;32 for &ldquo;Is the moon visible in the sky?&rdquo; (ground truth No). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;yes&rdquo; &#10007; while SIT answers &ldquo;no&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
+          <img src="assets/ex33_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
+          <figcaption><span class="fnum">Figure 4:</span> Per-patch logit lens at layer&nbsp;34 for &ldquo;Are the people actively climbing?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
         
       <div class="reveal">
@@ -271,19 +269,139 @@
         <div class="gifs two-col">
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex96_STI.gif"
+          <img class="lazygif" data-gif="assets/ex33_STI.gif"
                alt="STI (question-first) per-layer logit lens">
           <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex96_SIT.gif"
+          <img class="lazygif" data-gif="assets/ex33_SIT.gif"
                alt="SIT (question-last) per-layer logit lens">
           <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+        </div>
+        <button class="minbtn" type="button">
+          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>
+      </div>
+      <div class="unit">
+        
+      <div class="uhead">
+        <button class="rawbtn" type="button" data-full="assets/ex373_image.png"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/ex373_image.png" alt="raw image" loading="lazy">
+        </button>
+        <p class="cmp-q">&ldquo;Is the bird in the image surrounded by salt grass?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
+      </div>
+        <figure class="panelfig">
+          <img src="assets/ex373_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
+          <figcaption><span class="fnum">Figure 5:</span> Per-patch logit lens at layer&nbsp;34 for &ldquo;Is the bird in the image surrounded by salt grass?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
+        </figure>
+        
+      <div class="reveal">
+        <button class="revealbtn" type="button">
+          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
+        <div class="gifs two-col">
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex373_STI.gif"
+               alt="STI (question-first) per-layer logit lens">
+          <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex373_SIT.gif"
+               alt="SIT (question-last) per-layer logit lens">
+          <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+        </div>
+        <button class="minbtn" type="button">
+          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>
+      </div>
+      <div class="unit">
+        
+      <div class="uhead">
+        <button class="rawbtn" type="button" data-full="assets/ex994_image.png"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/ex994_image.png" alt="raw image" loading="lazy">
+        </button>
+        <p class="cmp-q">&ldquo;Is the musician playing a jaguar electric guitar?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
+      </div>
+        <figure class="panelfig">
+          <img src="assets/ex994_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
+          <figcaption><span class="fnum">Figure 6:</span> Per-patch logit lens at layer&nbsp;26 for &ldquo;Is the musician playing a jaguar electric guitar?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
+        </figure>
+        
+      <div class="reveal">
+        <button class="revealbtn" type="button">
+          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
+        <div class="gifs two-col">
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex994_STI.gif"
+               alt="STI (question-first) per-layer logit lens">
+          <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex994_SIT.gif"
+               alt="SIT (question-last) per-layer logit lens">
+          <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+        </div>
+        <button class="minbtn" type="button">
+          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>
+      </div>
+      <div class="unit">
+        
+      <div class="uhead">
+        <button class="rawbtn" type="button" data-full="assets/ex189_image.png"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/ex189_image.png" alt="raw image" loading="lazy">
+        </button>
+        <p class="cmp-q">&ldquo;Is the bicycle trick being performed on a wall?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
+      </div>
+        <figure class="panelfig">
+          <img src="assets/ex189_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
+          <figcaption><span class="fnum">Figure 7:</span> Per-patch logit lens at layer&nbsp;30 for &ldquo;Is the bicycle trick being performed on a wall?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
+        </figure>
+        
+      <div class="reveal">
+        <button class="revealbtn" type="button">
+          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
+        <div class="gifs two-col">
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex189_STI.gif"
+               alt="STI (question-first) per-layer logit lens">
+          <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex189_SIT.gif"
+               alt="SIT (question-last) per-layer logit lens">
+          <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
         </div>
         <button class="minbtn" type="button">
@@ -302,7 +420,7 @@
       </div>
         <figure class="panelfig">
           <img src="assets/ex232_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 5:</span> Per-patch logit lens at layer&nbsp;24 for &ldquo;Is the main action about catching a ball?&rdquo; (ground truth Yes). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;no&rdquo; &#10007; while SIT answers &ldquo;yes&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
+          <figcaption><span class="fnum">Figure 8:</span> Per-patch logit lens at layer&nbsp;24 for &ldquo;Is the main action about catching a ball?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;no&rdquo; &#10007;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
         
       <div class="reveal">
@@ -333,46 +451,6 @@
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex1255_image.png"
-                aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex1255_image.png" alt="raw image" loading="lazy">
-        </button>
-        <p class="cmp-q">&ldquo;Is there a structure that resembles a skull?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
-      </div>
-        <figure class="panelfig">
-          <img src="assets/ex1255_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 6:</span> Per-patch logit lens at layer&nbsp;24 for &ldquo;Is there a structure that resembles a skull?&rdquo; (ground truth No). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;yes&rdquo; &#10007; while SIT answers &ldquo;no&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
-        </figure>
-        
-      <div class="reveal">
-        <button class="revealbtn" type="button">
-          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
-        <div class="gifs two-col">
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex1255_STI.gif"
-               alt="STI (question-first) per-layer logit lens">
-          <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex1255_SIT.gif"
-               alt="SIT (question-last) per-layer logit lens">
-          <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-        </div>
-        <button class="minbtn" type="button">
-          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
-      </div>
-      </div>
-      <div class="unit">
-        
-      <div class="uhead">
         <button class="rawbtn" type="button" data-full="assets/ex1007_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
           <img src="assets/ex1007_image.png" alt="raw image" loading="lazy">
@@ -382,7 +460,7 @@
       </div>
         <figure class="panelfig">
           <img src="assets/ex1007_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 7:</span> Per-patch logit lens at layer&nbsp;32 for &ldquo;Is the adult in the image chasing a child?&rdquo; (ground truth Yes). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;no&rdquo; &#10007; while SIT answers &ldquo;yes&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
+          <figcaption><span class="fnum">Figure 9:</span> Per-patch logit lens at layer&nbsp;32 for &ldquo;Is the adult in the image chasing a child?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;no&rdquo; &#10007;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
         
       <div class="reveal">
@@ -413,16 +491,16 @@
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex717_image.png"
+        <button class="rawbtn" type="button" data-full="assets/ex1077_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex717_image.png" alt="raw image" loading="lazy">
+          <img src="assets/ex1077_image.png" alt="raw image" loading="lazy">
         </button>
-        <p class="cmp-q">&ldquo;Are there several people sitting on a bench?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
+        <p class="cmp-q">&ldquo;Is the main action of the dog pawing at something on the ground?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
       </div>
         <figure class="panelfig">
-          <img src="assets/ex717_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 8:</span> Per-patch logit lens at layer&nbsp;30 for &ldquo;Are there several people sitting on a bench?&rdquo; (ground truth No). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;yes&rdquo; &#10007; while SIT answers &ldquo;no&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
+          <img src="assets/ex1077_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
+          <figcaption><span class="fnum">Figure 10:</span> Per-patch logit lens at layer&nbsp;28 for &ldquo;Is the main action of the dog pawing at something on the ground?&rdquo; (ground truth Yes &mdash; the queried thing is really present). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token &mdash; the action and related objects that confirm the answer &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>), same image and layer. STI answers &ldquo;no&rdquo; &#10007;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
         
       <div class="reveal">
@@ -431,99 +509,19 @@
         <div class="gifs two-col">
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex717_STI.gif"
+          <img class="lazygif" data-gif="assets/ex1077_STI.gif"
                alt="STI (question-first) per-layer logit lens">
           <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex717_SIT.gif"
+          <img class="lazygif" data-gif="assets/ex1077_SIT.gif"
                alt="SIT (question-last) per-layer logit lens">
           <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-        </div>
-        <button class="minbtn" type="button">
-          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
-      </div>
-      </div>
-      <div class="unit">
-        
-      <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex879_image.png"
-                aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex879_image.png" alt="raw image" loading="lazy">
-        </button>
-        <p class="cmp-q">&ldquo;Are there multiple spectators present?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
-      </div>
-        <figure class="panelfig">
-          <img src="assets/ex879_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 9:</span> Per-patch logit lens at layer&nbsp;26 for &ldquo;Are there multiple spectators present?&rdquo; (ground truth No). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;yes&rdquo; &#10007; while SIT answers &ldquo;no&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
-        </figure>
-        
-      <div class="reveal">
-        <button class="revealbtn" type="button">
-          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
-        <div class="gifs two-col">
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex879_STI.gif"
-               alt="STI (question-first) per-layer logit lens">
-          <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex879_SIT.gif"
-               alt="SIT (question-last) per-layer logit lens">
-          <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-        </div>
-        <button class="minbtn" type="button">
-          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
-      </div>
-      </div>
-      <div class="unit">
-        
-      <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex263_image.png"
-                aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex263_image.png" alt="raw image" loading="lazy">
-        </button>
-        <p class="cmp-q">&ldquo;Is the person performing a trick on inline skates?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
-      </div>
-        <figure class="panelfig">
-          <img src="assets/ex263_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure 10:</span> Per-patch logit lens at layer&nbsp;34 for &ldquo;Is the person performing a trick on inline skates?&rdquo; (ground truth No). Question-first (STI, left) steers perception: every image patch that decodes an <em>answer-evidence</em> token &mdash; the action and related objects that settle the question &mdash; is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer (<span class='boxr'>red</span>) &mdash; same image, same layer. Yet STI answers &ldquo;yes&rdquo; &#10007; while SIT answers &ldquo;no&rdquo; &#10003;: <strong>better perception, worse read-out.</strong> Press play to watch both resolve layer by layer.</figcaption>
-        </figure>
-        
-      <div class="reveal">
-        <button class="revealbtn" type="button">
-          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
-        <div class="gifs two-col">
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex263_STI.gif"
-               alt="STI (question-first) per-layer logit lens">
-          <figcaption><span class="fnum">STI (question-first).</span> commits early, wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex263_SIT.gif"
-               alt="SIT (question-last) per-layer logit lens">
-          <figcaption><span class="fnum">SIT (question-last).</span> keeps question access, correct;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
         </div>
         <button class="minbtn" type="button">
@@ -540,12 +538,12 @@
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex217_image.png"
+        <button class="rawbtn" type="button" data-full="assets/ex22_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex217_image.png" alt="raw image" loading="lazy">
+          <img src="assets/ex22_image.png" alt="raw image" loading="lazy">
         </button>
-        <p class="cmp-q">&ldquo;Is the dog shaking off water?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
+        <p class="cmp-q">&ldquo;Is there someone holding a tennis racket?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
       </div>
         
       <div class="reveal">
@@ -554,19 +552,19 @@
         <div class="gifs two-col">
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex217_STI.gif"
+          <img class="lazygif" data-gif="assets/ex22_STI.gif"
                alt="STI (question-first) per-layer logit lens">
           <figcaption><span class="fnum">STI (question-first).</span> still wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex217_SITIT.gif"
+          <img class="lazygif" data-gif="assets/ex22_SITIT.gif"
                alt="SITIT (image echo) per-layer logit lens">
           <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
         </div>
         <button class="minbtn" type="button">
@@ -576,12 +574,12 @@
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex96_image.png"
+        <button class="rawbtn" type="button" data-full="assets/ex33_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex96_image.png" alt="raw image" loading="lazy">
+          <img src="assets/ex33_image.png" alt="raw image" loading="lazy">
         </button>
-        <p class="cmp-q">&ldquo;Is the moon visible in the sky?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
+        <p class="cmp-q">&ldquo;Are the people actively climbing?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
       </div>
         
       <div class="reveal">
@@ -590,19 +588,127 @@
         <div class="gifs two-col">
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex96_STI.gif"
+          <img class="lazygif" data-gif="assets/ex33_STI.gif"
                alt="STI (question-first) per-layer logit lens">
           <figcaption><span class="fnum">STI (question-first).</span> still wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex96_SITIT.gif"
+          <img class="lazygif" data-gif="assets/ex33_SITIT.gif"
                alt="SITIT (image echo) per-layer logit lens">
           <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+        </div>
+        <button class="minbtn" type="button">
+          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>
+      </div>
+      <div class="unit">
+        
+      <div class="uhead">
+        <button class="rawbtn" type="button" data-full="assets/ex373_image.png"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/ex373_image.png" alt="raw image" loading="lazy">
+        </button>
+        <p class="cmp-q">&ldquo;Is the bird in the image surrounded by salt grass?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
+      </div>
+        
+      <div class="reveal">
+        <button class="revealbtn" type="button">
+          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SITIT for this image</button>
+        <div class="gifs two-col">
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex373_STI.gif"
+               alt="STI (question-first) per-layer logit lens">
+          <figcaption><span class="fnum">STI (question-first).</span> still wrong;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex373_SITIT.gif"
+               alt="SITIT (image echo) per-layer logit lens">
+          <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+        </div>
+        <button class="minbtn" type="button">
+          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>
+      </div>
+      <div class="unit">
+        
+      <div class="uhead">
+        <button class="rawbtn" type="button" data-full="assets/ex994_image.png"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/ex994_image.png" alt="raw image" loading="lazy">
+        </button>
+        <p class="cmp-q">&ldquo;Is the musician playing a jaguar electric guitar?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
+      </div>
+        
+      <div class="reveal">
+        <button class="revealbtn" type="button">
+          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SITIT for this image</button>
+        <div class="gifs two-col">
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex994_STI.gif"
+               alt="STI (question-first) per-layer logit lens">
+          <figcaption><span class="fnum">STI (question-first).</span> still wrong;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex994_SITIT.gif"
+               alt="SITIT (image echo) per-layer logit lens">
+          <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+        </div>
+        <button class="minbtn" type="button">
+          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>
+      </div>
+      <div class="unit">
+        
+      <div class="uhead">
+        <button class="rawbtn" type="button" data-full="assets/ex189_image.png"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/ex189_image.png" alt="raw image" loading="lazy">
+        </button>
+        <p class="cmp-q">&ldquo;Is the bicycle trick being performed on a wall?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
+      </div>
+        
+      <div class="reveal">
+        <button class="revealbtn" type="button">
+          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SITIT for this image</button>
+        <div class="gifs two-col">
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex189_STI.gif"
+               alt="STI (question-first) per-layer logit lens">
+          <figcaption><span class="fnum">STI (question-first).</span> still wrong;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
+        </figure>
+          
+        <figure class="giffig">
+          <img class="lazygif" data-gif="assets/ex189_SITIT.gif"
+               alt="SITIT (image echo) per-layer logit lens">
+          <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
+            answers &ldquo;yes&rdquo; <span class="ok">&#10003;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
         </div>
         <button class="minbtn" type="button">
@@ -648,42 +754,6 @@
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex1255_image.png"
-                aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex1255_image.png" alt="raw image" loading="lazy">
-        </button>
-        <p class="cmp-q">&ldquo;Is there a structure that resembles a skull?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
-      </div>
-        
-      <div class="reveal">
-        <button class="revealbtn" type="button">
-          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SITIT for this image</button>
-        <div class="gifs two-col">
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex1255_STI.gif"
-               alt="STI (question-first) per-layer logit lens">
-          <figcaption><span class="fnum">STI (question-first).</span> still wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex1255_SITIT.gif"
-               alt="SITIT (image echo) per-layer logit lens">
-          <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-        </div>
-        <button class="minbtn" type="button">
-          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
-      </div>
-      </div>
-      <div class="unit">
-        
-      <div class="uhead">
         <button class="rawbtn" type="button" data-full="assets/ex1007_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
           <img src="assets/ex1007_image.png" alt="raw image" loading="lazy">
@@ -720,12 +790,12 @@
       <div class="unit">
         
       <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex717_image.png"
+        <button class="rawbtn" type="button" data-full="assets/ex1077_image.png"
                 aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex717_image.png" alt="raw image" loading="lazy">
+          <img src="assets/ex1077_image.png" alt="raw image" loading="lazy">
         </button>
-        <p class="cmp-q">&ldquo;Are there several people sitting on a bench?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
+        <p class="cmp-q">&ldquo;Is the main action of the dog pawing at something on the ground?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></p>
       </div>
         
       <div class="reveal">
@@ -734,91 +804,19 @@
         <div class="gifs two-col">
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex717_STI.gif"
+          <img class="lazygif" data-gif="assets/ex1077_STI.gif"
                alt="STI (question-first) per-layer logit lens">
           <figcaption><span class="fnum">STI (question-first).</span> still wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
           
         <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex717_SITIT.gif"
+          <img class="lazygif" data-gif="assets/ex1077_SITIT.gif"
                alt="SITIT (image echo) per-layer logit lens">
           <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-        </div>
-        <button class="minbtn" type="button">
-          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
-      </div>
-      </div>
-      <div class="unit">
-        
-      <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex879_image.png"
-                aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex879_image.png" alt="raw image" loading="lazy">
-        </button>
-        <p class="cmp-q">&ldquo;Are there multiple spectators present?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
-      </div>
-        
-      <div class="reveal">
-        <button class="revealbtn" type="button">
-          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SITIT for this image</button>
-        <div class="gifs two-col">
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex879_STI.gif"
-               alt="STI (question-first) per-layer logit lens">
-          <figcaption><span class="fnum">STI (question-first).</span> still wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex879_SITIT.gif"
-               alt="SITIT (image echo) per-layer logit lens">
-          <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-        </div>
-        <button class="minbtn" type="button">
-          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
-      </div>
-      </div>
-      <div class="unit">
-        
-      <div class="uhead">
-        <button class="rawbtn" type="button" data-full="assets/ex263_image.png"
-                aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex263_image.png" alt="raw image" loading="lazy">
-        </button>
-        <p class="cmp-q">&ldquo;Is the person performing a trick on inline skates?&rdquo;
-          <span class="gt-no">ground truth: No</span></p>
-      </div>
-        
-      <div class="reveal">
-        <button class="revealbtn" type="button">
-          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SITIT for this image</button>
-        <div class="gifs two-col">
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex263_STI.gif"
-               alt="STI (question-first) per-layer logit lens">
-          <figcaption><span class="fnum">STI (question-first).</span> still wrong;
-            answers &ldquo;yes&rdquo; <span class="bad">&#10007;</span>
-            (ground truth: No).</figcaption>
-        </figure>
-          
-        <figure class="giffig">
-          <img class="lazygif" data-gif="assets/ex263_SITIT.gif"
-               alt="SITIT (image echo) per-layer logit lens">
-          <figcaption><span class="fnum">SITIT (image echo).</span> second look fixes it;
-            answers &ldquo;no&rdquo; <span class="ok">&#10003;</span>
-            (ground truth: No).</figcaption>
+            answers &ldquo;no&rdquo; <span class="bad">&#10007;</span>
+            (ground truth: Yes).</figcaption>
         </figure>
         </div>
         <button class="minbtn" type="button">
