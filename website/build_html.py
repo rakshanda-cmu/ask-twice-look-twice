@@ -179,6 +179,13 @@ def reveal(e, lkey, llab, lrole, rkey, rlab, rrole, btn):
           {lazy_gif(e, lkey, llab, lrole)}
           {lazy_gif(e, rkey, rlab, rrole)}
         </div>
+        <div class="cbar">
+          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
+          <div class="cbar-grad"></div>
+          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+            <span>0.75</span><span>1</span></div>
+          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>"""
@@ -422,6 +429,17 @@ def main():
                 border-radius:8px; background:#111; }}
   .gifs {{ display:none; margin-top:1rem; }}
   .reveal.playing .gifs {{ display:grid; }}
+  .cbar {{ display:none; max-width:560px; margin:1.1rem auto 0; }}
+  .reveal.playing .cbar {{ display:block; }}
+  .cbar-grad {{ height:15px; border-radius:8px; border:1px solid #ccd2da;
+    background:linear-gradient(to right, #f7fbff, #deebf7, #c6dbef, #9ecae1,
+      #6baed6, #4292c6, #2171b5, #08519c, #08306b); }}
+  .cbar-ends {{ display:flex; justify-content:space-between; font-size:.8rem;
+    font-family:Helvetica,Arial,sans-serif; color:var(--muted); margin-bottom:.28rem; }}
+  .cbar-ticks {{ display:flex; justify-content:space-between; font-size:.78rem;
+    font-family:Helvetica,Arial,sans-serif; color:var(--muted); margin-top:.25rem; }}
+  .cbar-cap {{ text-align:center; font-size:.78rem; font-style:italic;
+    color:var(--muted); margin-top:.3rem; }}
 
   hr {{ border:0; border-top:1px solid #ddd; margin:2.2rem 0; }}
   .footer {{ font-size:.82rem; color:var(--muted); text-align:justify;
