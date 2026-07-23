@@ -307,8 +307,7 @@ def panel(e):
                                            targets, GREEN)
         n_sit, _ = highlight_cells(sit_img, gy_r, e["sit_words"], gw, gh,
                                    targets, RED)
-        grid_label(sti_img, gy_s, "STI answer-evidence ×%d" % n_sti, GREEN)
-        grid_label(sit_img, gy_r, "SIT answer-evidence ×%d" % n_sit, RED)
+        # (counts are stated in the footer below the image, not overlaid on it)
     elif idx in BOXES:                        # legacy single-colour path
         draw_box(sti_img, gy_s, BOXES[idx], (0, 214, 255), BOXES[idx][4], (6, 22, 30))
         draw_box(sit_img, gy_r, BOXES[idx], (0, 214, 255), BOXES[idx][4], (6, 22, 30))

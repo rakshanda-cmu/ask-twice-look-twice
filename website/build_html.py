@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
-SELECT = [22, 33, 373, 994, 189, 232, 1007, 1077]
+SELECT = [1264, 22, 33, 373, 994, 189, 232, 1007, 1077]
 
 TITLE = ("Ask Twice, Look Twice: Prompt Echoing Resolves the "
          "Question-First Paradox in Vision-Language Models")
@@ -136,17 +136,24 @@ def lazy_gif(e, key, label, role):
         </figure>"""
 
 
-def unit_head(e):
-    """Per-example header: expandable raw-image thumbnail + question + ground truth."""
+def unit_head(e, show_q=True):
+    """Per-example header: expandable raw-image thumbnail + (optional) question +
+    ground truth. In section 3 the question is already baked into the comparison
+    still, so show_q=False keeps it from repeating."""
     gtc = "gt-yes" if e["gt"].lower().startswith("y") else "gt-no"
+    if show_q:
+        cap = (f'<p class="cmp-q">&ldquo;{esc(e["question"])}&rdquo;'
+               f'<span class="{gtc}">ground truth: {esc(e["gt"])}</span></p>')
+    else:
+        cap = (f'<p class="rawlab">raw image &mdash; click to enlarge'
+               f'<span class="{gtc}">ground truth: {esc(e["gt"])}</span></p>')
     return f"""
       <div class="uhead">
         <button class="rawbtn" type="button" data-full="assets/{esc(e['image'])}"
                 aria-label="Enlarge raw image" title="Click to enlarge">
           <img src="assets/{esc(e['image'])}" alt="raw image" loading="lazy">
         </button>
-        <p class="cmp-q">&ldquo;{esc(e['question'])}&rdquo;
-          <span class="{gtc}">ground truth: {esc(e['gt'])}</span></p>
+        {cap}
       </div>"""
 
 
@@ -191,14 +198,12 @@ def main():
                 stimk = "&#10003;" if e["STI"]["correct"] else "&#10007;"
                 sitmk = "&#10003;" if e["SIT"]["correct"] else "&#10007;"
                 cap = (
-                    f"Per-patch logit lens at layer&nbsp;{esc(layer)} for "
-                    f"&ldquo;{esc(e['question'])}&rdquo; (ground truth {esc(e['gt'])} &mdash; "
-                    f"the queried thing is really present). Question-first (STI, left) "
-                    f"identifies it: every image patch that decodes a "
-                    f"<em>correct-answer</em> token &mdash; the action and related objects "
-                    f"that confirm the answer &mdash; is boxed in "
+                    f"Per-patch logit lens at layer&nbsp;{esc(layer)}; the queried thing "
+                    f"is really present (ground truth {esc(e['gt'])}). Question-first "
+                    f"(STI, left) identifies it: every image patch that decodes a "
+                    f"<em>correct-answer</em> token is boxed in "
                     f"<span class='boxg'>green</span>; question-last (SIT, right) decodes "
-                    f"far fewer (<span class='boxr'>red</span>), same image and layer. "
+                    f"far fewer, in <span class='boxr'>red</span>. "
                     f"STI answers &ldquo;{esc(e['STI']['pred'])}&rdquo; {stimk}, SIT "
                     f"&ldquo;{esc(e['SIT']['pred'])}&rdquo; {sitmk}. "
                     f"<strong>STI surfaces the tokens that answer the question; SIT does "
@@ -223,7 +228,7 @@ def main():
             fnum += 1
         problem += f"""
       <div class="unit">
-        {unit_head(e)}{fig}
+        {unit_head(e, show_q=False)}{fig}
         {reveal(e, "STI", "STI (question-first)", "commits early, wrong",
                 "SIT", "SIT (question-last)", "keeps question access, correct",
                 "Play STI vs. SIT for this image")}
@@ -276,9 +281,11 @@ def main():
           --page:#fff; --soft:#fafafa; }}
   * {{ box-sizing:border-box; }}
   body {{ font-family:"Latin Modern Roman","Times New Roman",Times,serif;
-         background:var(--page); color:var(--body); line-height:1.55;
-         margin:0; font-size:17px; }}
-  .paper {{ max-width:1040px; margin:0 auto; padding:3rem 1.6rem 5rem; }}
+         background:#f6f7f9; color:var(--body); line-height:1.58;
+         margin:0; font-size:17px; -webkit-font-smoothing:antialiased; }}
+  .paper {{ max-width:1060px; margin:2rem auto; padding:3rem 2.4rem 4rem;
+           background:var(--page); border:1px solid #eceef1; border-radius:16px;
+           box-shadow:0 4px 24px rgba(20,24,40,.06); }}
   h1.title {{ font-size:1.85rem; line-height:1.25; text-align:center;
              font-weight:700; color:var(--ink); margin:0 0 1.1rem; }}
   .authors {{ text-align:center; font-size:1.05rem; color:var(--ink);
@@ -287,16 +294,18 @@ def main():
   .authors a:hover {{ border-bottom-color:var(--linkalt); text-decoration:none; }}
   .affil {{ text-align:center; font-size:.95rem; color:var(--muted);
            font-style:italic; margin-bottom:1.6rem; }}
-  .abstract {{ max-width:none; margin:0 auto 1.4rem; }}
+  .abstract {{ max-width:46rem; margin:0 auto 1.8rem; }}
   .abstract h2 {{ text-align:center; font-size:1rem; font-variant:small-caps;
-                 letter-spacing:.05em; font-weight:700; margin:0 0 .5rem; }}
-  .abstract p {{ font-size:.97rem; text-align:justify; margin:.5rem 0; }}
+                 letter-spacing:.08em; font-weight:700; margin:.4rem 0 .6rem; }}
+  .abstract p {{ font-size:.97rem; text-align:justify; margin:.5rem 0;
+                max-width:none; }}
   .abstract .abridge {{ font-size:.9rem; color:var(--muted); }}
   .cyan {{ color:#0782a0; font-weight:700; }}
   .boxg {{ color:#1c9658; font-weight:700; }}
   .boxr {{ color:#ce3a30; font-weight:700; }}
-  h2.sec {{ font-size:1.3rem; font-weight:700; color:var(--ink);
-           margin:2.4rem 0 .8rem; }}
+  h2.sec {{ font-size:1.35rem; font-weight:700; color:var(--ink);
+           margin:2.8rem 0 .9rem; padding-bottom:.35rem;
+           border-bottom:2px solid #eef0f3; }}
   h3.sub {{ font-size:1.08rem; font-weight:700; color:var(--ink);
            margin:1.6rem 0 .5rem; }}
   p {{ margin:.7rem 0; text-align:justify; max-width:53rem; }}
@@ -324,7 +333,8 @@ def main():
   .booktabs .rowname {{ text-align:left; white-space:nowrap; }}
   .booktabs .unit {{ text-align:left; color:var(--muted); font-style:italic;
                     font-size:.82rem; white-space:nowrap; }}
-  .booktabs tbody tr + tr td {{ border-top:1px solid #ddd; }}
+  .booktabs tbody tr + tr td {{ border-top:1px solid #e7e9ec; }}
+  .booktabs tbody tr:hover td {{ background:#f7f8fb; }}
   .best {{ font-weight:700; color:var(--good); }}
   .worst {{ color:var(--bad); }}
   .na {{ color:#aaa; }}
@@ -339,7 +349,8 @@ def main():
   figcaption {{ font-size:.85rem; color:var(--body); text-align:justify;
                margin:.5rem auto 0; line-height:1.45; max-width:53rem; }}
   .fnum {{ font-weight:700; color:var(--ink); }}
-  .panelfig img {{ max-width:100%; border:1px solid #ddd; }}
+  .panelfig img {{ max-width:100%; border:1px solid #e4e6ea; border-radius:10px;
+                  box-shadow:0 2px 12px rgba(20,24,40,.07); }}
   .cmp {{ margin:1.6rem 0 1.2rem; }}
   .cmp-q {{ text-align:center; font-size:1.05rem; font-weight:700;
            color:var(--ink); margin:.2rem 0 .3rem; }}
@@ -350,7 +361,14 @@ def main():
   .gt-no  {{ background:#fdecea; color:var(--bad); }}
   .two-col {{ display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;
              align-items:start; }}
-  .unit {{ margin:1.8rem 0 2rem; }}
+  .unit {{ margin:1.8rem 0; padding:1.5rem 1.5rem 1.2rem; background:#fcfcfd;
+          border:1px solid #e9ebef; border-radius:14px;
+          box-shadow:0 1px 4px rgba(20,24,40,.04); }}
+  .rawlab {{ margin:0; font-size:.9rem; font-style:italic; color:var(--muted);
+            font-family:Helvetica,Arial,sans-serif; }}
+  .rawlab span {{ display:inline-block; font-style:normal; font-size:.85rem;
+                 margin-left:.5rem; padding:.05em .5em; border-radius:10px;
+                 vertical-align:middle; }}
   .reveal {{ text-align:center; margin:.6rem 0 0; }}
   .revealbtn {{ display:inline-flex; align-items:center; gap:.15rem;
                font-family:inherit; font-size:.95rem; font-weight:700;
