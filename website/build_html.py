@@ -20,6 +20,9 @@ ROOT = os.path.dirname(HERE)
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
 SELECT = [1264, 22, 33, 373, 994, 189, 232, 1007, 1077]
+# Section 4 (the fix) needs cases where STI errs and image-echoing (SITIT) recovers
+# the correct answer -- a different, fix-valid subset from the perception panels.
+SELECT_FIX = [1007, 978, 922, 229]
 
 TITLE = ("Ask Twice, Look Twice: Prompt Echoing Resolves the "
          "Question-First Paradox in Vision-Language Models")
@@ -126,35 +129,43 @@ def mark(ok):
 def lazy_gif(e, key, label, role):
     """One animation column; its <img> loads only when the block is revealed."""
     d = e[key]
+    verdict = "correct" if d["correct"] else "wrong"
     return f"""
         <figure class="giffig">
+          <figcaption class="gcap-top"><span class="fnum">{esc(label)}</span> &mdash;
+            per-layer logit lens; answers &ldquo;{esc(d['pred'])}&rdquo;
+            {mark(d['correct'])} ({esc(verdict)}, ground truth {esc(e['gt'])}).</figcaption>
           <img class="lazygif" data-gif="assets/{esc(d['gif'])}"
                alt="{esc(label)} per-layer logit lens">
-          <figcaption><span class="fnum">{esc(label)}.</span> {esc(role)};
-            answers &ldquo;{esc(d['pred'])}&rdquo; {mark(d['correct'])}
-            (ground truth: {esc(e['gt'])}).</figcaption>
         </figure>"""
 
 
-def unit_head(e, show_q=True):
-    """Per-example header: expandable raw-image thumbnail + (optional) question +
-    ground truth. In section 3 the question is already baked into the comparison
-    still, so show_q=False keeps it from repeating."""
+def qhead(e):
+    """The question, shown as a heading ABOVE the raw image, with a ground-truth badge."""
     gtc = "gt-yes" if e["gt"].lower().startswith("y") else "gt-no"
-    if show_q:
-        cap = (f'<p class="cmp-q">&ldquo;{esc(e["question"])}&rdquo;'
-               f'<span class="{gtc}">ground truth: {esc(e["gt"])}</span></p>')
-    else:
-        cap = (f'<p class="rawlab">raw image &mdash; click to enlarge'
-               f'<span class="{gtc}">ground truth: {esc(e["gt"])}</span></p>')
+    return (f'<h3 class="qhead">&ldquo;{esc(e["question"])}&rdquo;'
+            f'<span class="{gtc}">ground truth: {esc(e["gt"])}</span></h3>')
+
+
+def rawthumb(e):
+    """Centered, click-to-enlarge raw image."""
     return f"""
       <div class="uhead">
         <button class="rawbtn" type="button" data-full="assets/{esc(e['image'])}"
                 aria-label="Enlarge raw image" title="Click to enlarge">
           <img src="assets/{esc(e['image'])}" alt="raw image" loading="lazy">
         </button>
-        {cap}
       </div>"""
+
+
+def heatfig(e):
+    """Answer-evidence heatmap figure (STI vs SIT), if present."""
+    if not e.get("heatmap"):
+        return ""
+    return f"""
+      <figure class="panelfig heatfig">
+        <img src="assets/{esc(e['heatmap'])}" alt="answer-evidence heatmap" loading="lazy">
+      </figure>"""
 
 
 def reveal(e, lkey, llab, lrole, rkey, rlab, rrole, btn):
@@ -228,7 +239,9 @@ def main():
             fnum += 1
         problem += f"""
       <div class="unit">
-        {unit_head(e, show_q=False)}{fig}
+        {qhead(e)}
+        {rawthumb(e)}
+        {heatfig(e)}{fig}
         {reveal(e, "STI", "STI (question-first)", "commits early, wrong",
                 "SIT", "SIT (question-last)", "keeps question access, correct",
                 "Play STI vs. SIT for this image")}
@@ -236,13 +249,13 @@ def main():
 
     # Section 4: the fix -> Play -> STI vs SITIT gifs of the same image.
     fix = ""
-    for i in SELECT:
+    for i in SELECT_FIX:
         e = by.get(i)
         if not e:
             continue
         fix += f"""
       <div class="unit">
-        {unit_head(e)}
+        {qhead(e)}
         {reveal(e, "STI", "STI (question-first)", "still wrong",
                 "SITIT", "SITIT (image echo)", "second look fixes it",
                 "Play STI vs. SITIT for this image")}
@@ -283,7 +296,7 @@ def main():
   body {{ font-family:"Latin Modern Roman","Times New Roman",Times,serif;
          background:#f6f7f9; color:var(--body); line-height:1.58;
          margin:0; font-size:17px; -webkit-font-smoothing:antialiased; }}
-  .paper {{ max-width:1060px; margin:2rem auto; padding:3rem 2.4rem 4rem;
+  .paper {{ width:min(1240px, 95vw); margin:2rem auto; padding:3rem 3rem 4rem;
            background:var(--page); border:1px solid #eceef1; border-radius:16px;
            box-shadow:0 4px 24px rgba(20,24,40,.06); }}
   h1.title {{ font-size:1.85rem; line-height:1.25; text-align:center;
@@ -304,12 +317,11 @@ def main():
   .boxg {{ color:#1c9658; font-weight:700; }}
   .boxr {{ color:#ce3a30; font-weight:700; }}
   h2.sec {{ font-size:1.35rem; font-weight:700; color:var(--ink);
-           margin:2.8rem 0 .9rem; padding-bottom:.35rem;
+           margin:2.8rem 0 .9rem; padding-bottom:.35rem; text-align:center;
            border-bottom:2px solid #eef0f3; }}
   h3.sub {{ font-size:1.08rem; font-weight:700; color:var(--ink);
-           margin:1.6rem 0 .5rem; }}
-  p {{ margin:.7rem 0; text-align:justify; max-width:53rem; }}
-  h2.sec + p, h3.sub + p {{ max-width:53rem; }}
+           margin:1.6rem 0 .5rem; text-align:center; }}
+  p {{ margin:.7rem auto; text-align:justify; max-width:53rem; }}
   a {{ color:var(--linkalt); text-decoration:none; }}
   a:hover {{ text-decoration:underline; }}
   code {{ font-family:"Latin Modern Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -342,15 +354,22 @@ def main():
   .legend td {{ padding:.3rem .6rem; text-align:left; font-size:.9rem; }}
   .legend {{ border-top:1.5px solid var(--rule); border-bottom:1.5px solid var(--rule); }}
   .caption {{ font-size:.85rem; color:var(--muted); text-align:left;
-             margin:.4rem 0 0; max-width:53rem; }}
+             margin:.4rem auto 0; max-width:53rem; }}
 
   /* figures */
   figure {{ margin:1.4rem 0; text-align:center; }}
   figcaption {{ font-size:.85rem; color:var(--body); text-align:justify;
                margin:.5rem auto 0; line-height:1.45; max-width:53rem; }}
   .fnum {{ font-weight:700; color:var(--ink); }}
-  .panelfig img {{ max-width:100%; border:1px solid #e4e6ea; border-radius:10px;
-                  box-shadow:0 2px 12px rgba(20,24,40,.07); }}
+  .panelfig {{ margin:1.2rem auto; }}
+  .panelfig img {{ max-width:min(100%, 1002px); border:1px solid #e4e6ea;
+                  border-radius:10px; box-shadow:0 2px 12px rgba(20,24,40,.07); }}
+  .heatfig {{ margin:1rem auto 1.4rem; }}
+  .qhead {{ text-align:center; font-size:1.35rem; font-weight:700; color:var(--ink);
+           margin:1.4rem 0 1rem; }}
+  .qhead span {{ display:inline-block; font-weight:400; font-size:.85rem;
+                margin-left:.6rem; padding:.1em .55em; border-radius:12px;
+                vertical-align:middle; font-family:Helvetica,Arial,sans-serif; }}
   .cmp {{ margin:1.6rem 0 1.2rem; }}
   .cmp-q {{ text-align:center; font-size:1.05rem; font-weight:700;
            color:var(--ink); margin:.2rem 0 .3rem; }}
@@ -397,8 +416,10 @@ def main():
   .lightbox img {{ max-width:92vw; max-height:92vh; border-radius:4px;
                   box-shadow:0 8px 40px rgba(0,0,0,.6); }}
   .giffig {{ margin:0; }}
+  .gcap-top {{ font-size:.85rem; color:var(--body); text-align:left;
+              line-height:1.4; margin:0 0 .45rem; }}
   .giffig img {{ display:block; width:100%; height:auto; border:1px solid #ccc;
-                background:#111; }}
+                border-radius:8px; background:#111; }}
   .gifs {{ display:none; margin-top:1rem; }}
   .reveal.playing .gifs {{ display:grid; }}
 
@@ -495,10 +516,12 @@ def main():
   {problem}
 
   <h2 class="sec">4&ensp;The Fix: Image Echoing</h2>
-  <p>Re-presenting the (image, question) after the image (<strong>SITIT</strong>)
-  gives the decoder a second, adjacent look and flips the same cases from wrong to
-  right, with no training. Press <em>Play</em> to compare STI (still wrong)
-  vs.&nbsp;SITIT (fixed) for each image.</p>
+  <p>Better perception is wasted if the answer still reads out wrong. Re-presenting
+  the (image, question) after the image (<strong>SITIT</strong>) gives the decoder a
+  second, adjacent look and recovers the correct answer, with no training. In each
+  case below question-first (<strong>STI</strong>) answers wrong and image-echoing
+  (<strong>SITIT</strong>) fixes it. Press <em>Play</em> to compare STI
+  (wrong&nbsp;&#10007;) vs.&nbsp;SITIT (correct&nbsp;&#10003;) layer by layer.</p>
   {fix}
 
   <h2 class="sec">5&ensp;Repository Guide</h2>

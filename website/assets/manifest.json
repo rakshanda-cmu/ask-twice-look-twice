@@ -328,7 +328,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex478_cmp.png",
-      "cmp_layer": 28
+      "cmp_layer": 28,
+      "heatmap": "ex478_heat.png"
     },
     {
       "idx": 217,
@@ -510,7 +511,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex217_cmp.png",
-      "cmp_layer": 32
+      "cmp_layer": 32,
+      "heatmap": "ex217_heat.png"
     },
     {
       "idx": 769,
@@ -696,7 +698,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex769_cmp.png",
-      "cmp_layer": 30
+      "cmp_layer": 30,
+      "heatmap": "ex769_heat.png"
     },
     {
       "idx": 879,
@@ -878,7 +881,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex879_cmp.png",
-      "cmp_layer": 26
+      "cmp_layer": 26,
+      "heatmap": "ex879_heat.png"
     },
     {
       "idx": 58,
@@ -1060,7 +1064,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex58_cmp.png",
-      "cmp_layer": 26
+      "cmp_layer": 26,
+      "heatmap": "ex58_heat.png"
     },
     {
       "idx": 454,
@@ -1242,7 +1247,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex454_cmp.png",
-      "cmp_layer": 16
+      "cmp_layer": 16,
+      "heatmap": "ex454_heat.png"
     },
     {
       "idx": 1319,
@@ -1440,7 +1446,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex1319_cmp.png",
-      "cmp_layer": 34
+      "cmp_layer": 34,
+      "heatmap": "ex1319_heat.png"
     },
     {
       "idx": 232,
@@ -1635,7 +1642,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex232_cmp.png",
-      "cmp_layer": 24
+      "cmp_layer": 24,
+      "heatmap": "ex232_heat.png"
     },
     {
       "idx": 1007,
@@ -1848,7 +1856,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex1007_cmp.png",
-      "cmp_layer": 32
+      "cmp_layer": 32,
+      "heatmap": "ex1007_heat.png"
     },
     {
       "idx": 263,
@@ -2045,7 +2054,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex263_cmp.png",
-      "cmp_layer": 34
+      "cmp_layer": 34,
+      "heatmap": "ex263_heat.png"
     },
     {
       "idx": 717,
@@ -2251,7 +2261,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex717_cmp.png",
-      "cmp_layer": 30
+      "cmp_layer": 30,
+      "heatmap": "ex717_heat.png"
     },
     {
       "idx": 1255,
@@ -2447,7 +2458,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex1255_cmp.png",
-      "cmp_layer": 24
+      "cmp_layer": 24,
+      "heatmap": "ex1255_heat.png"
     },
     {
       "idx": 922,
@@ -2645,7 +2657,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex922_cmp.png",
-      "cmp_layer": 18
+      "cmp_layer": 18,
+      "heatmap": "ex922_heat.png"
     },
     {
       "idx": 96,
@@ -2841,7 +2854,8 @@
       ],
       "demonstrates": true,
       "cmp_still": "ex96_cmp.png",
-      "cmp_layer": 32
+      "cmp_layer": 32,
+      "heatmap": "ex96_heat.png"
     },
     {
       "idx": 22,
@@ -3038,7 +3052,8 @@
       ],
       "demonstrates": false,
       "cmp_still": "ex22_cmp.png",
-      "cmp_layer": 30
+      "cmp_layer": 30,
+      "heatmap": "ex22_heat.png"
     },
     {
       "idx": 994,
@@ -3231,7 +3246,8 @@
       ],
       "demonstrates": false,
       "cmp_still": "ex994_cmp.png",
-      "cmp_layer": 26
+      "cmp_layer": 26,
+      "heatmap": "ex994_heat.png"
     },
     {
       "idx": 33,
@@ -3429,7 +3445,8 @@
       ],
       "demonstrates": false,
       "cmp_still": "ex33_cmp.png",
-      "cmp_layer": 34
+      "cmp_layer": 34,
+      "heatmap": "ex33_heat.png"
     },
     {
       "idx": 189,
@@ -3626,7 +3643,8 @@
       ],
       "demonstrates": false,
       "cmp_still": "ex189_cmp.png",
-      "cmp_layer": 30
+      "cmp_layer": 30,
+      "heatmap": "ex189_heat.png"
     },
     {
       "idx": 1077,
@@ -3817,7 +3835,8 @@
       ],
       "demonstrates": false,
       "cmp_still": "ex1077_cmp.png",
-      "cmp_layer": 28
+      "cmp_layer": 28,
+      "heatmap": "ex1077_heat.png"
     },
     {
       "idx": 373,
@@ -4012,7 +4031,8 @@
       ],
       "demonstrates": false,
       "cmp_still": "ex373_cmp.png",
-      "cmp_layer": 34
+      "cmp_layer": 34,
+      "heatmap": "ex373_heat.png"
     },
     {
       "idx": 1264,
@@ -4202,7 +4222,8 @@
       ],
       "demonstrates": false,
       "cmp_still": "ex1264_cmp.png",
-      "cmp_layer": 34
+      "cmp_layer": 34,
+      "heatmap": "ex1264_heat.png"
     }
   ],
   "low_max": 280,

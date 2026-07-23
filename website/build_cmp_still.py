@@ -319,19 +319,18 @@ def panel(e):
     yes = gt.lower().startswith("y")
     gtcol = GOOD if yes else BAD
 
-    # ---- header ----
-    hh = 76
+    # ---- header ----  (question is shown above the raw image in the page, not here)
+    hh = 46
     header = Image.new("RGB", (W, hh), INK)
     d = ImageDraw.Draw(header)
     eyebrow = ("PER-PATCH LOGIT LENS  ·  STI vs. SIT  ·  LAYER %d  ·  PERCEPTION STEERING"
                if steering else
                "PER-PATCH LOGIT LENS  ·  STI vs. SIT  ·  LAYER %d") % layer
-    d.text((PAD, 13), eyebrow, font=F_EYE, fill=(150, 200, 190))
-    d.text((PAD, 36), "“%s”" % question, font=F_Q, fill=(255, 255, 255))
+    d.text((PAD, 15), eyebrow, font=F_EYE, fill=(150, 200, 190))
     btxt = "GROUND TRUTH:  %s" % gt.upper()
     bw = F_BADGE.getlength(btxt) + 24
-    d.rounded_rectangle([W - PAD - bw, 20, W - PAD, 54], radius=17, fill=gtcol)
-    d.text((W - PAD - bw / 2, 37), btxt, font=F_BADGE, fill=(255, 255, 255), anchor="mm")
+    d.rounded_rectangle([W - PAD - bw, 8, W - PAD, 38], radius=15, fill=gtcol)
+    d.text((W - PAD - bw / 2, 23), btxt, font=F_BADGE, fill=(255, 255, 255), anchor="mm")
 
     # ---- column captions ----
     ch = 34
