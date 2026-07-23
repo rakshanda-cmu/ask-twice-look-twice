@@ -21,7 +21,7 @@ FDIR = "/usr/share/fonts/truetype/dejavu"
 COLW = 468            # width of each heatmap column
 PAD, GAP = 20, 16
 GREEN = (28, 150, 88); RED = (206, 58, 48); INK = (26, 28, 31)
-CMAP = cm.get_cmap("inferno")
+CMAP = cm.get_cmap("Blues")          # match the GIF logit lens: light=0, dark blue=1
 
 
 def font(name, size):
@@ -70,10 +70,11 @@ def heat_overlay(raw, words, gh, gw, targets, tint):
     heat = gaussian_filter(heat, sigma=max(zy, zx) * 0.5)
     if heat.max() > 0:
         heat = heat / heat.max()
-    gray = np.asarray(raw.convert("L").convert("RGB")).astype(float) * 0.55
+    # Blues heat field (lightest blue = 0, dark blue = 1), blended over a faint
+    # grayscale image so the object stays visible -- matches the GIF logit lens.
+    gray = np.asarray(raw.convert("L").convert("RGB")).astype(float)
     color = CMAP(heat)[:, :, :3] * 255.0
-    a = (heat ** 0.75)[:, :, None]                # alpha ramps with intensity
-    out = gray * (1 - a) + color * a
+    out = gray * 0.40 + color * 0.60
     img = Image.fromarray(out.clip(0, 255).astype(np.uint8))
     # thin coloured frame to key it to STI (green) / SIT (red)
     ImageDraw.Draw(img).rectangle([0, 0, W - 1, H - 1], outline=tint, width=3)
@@ -102,8 +103,8 @@ def panel(e):
     out.paste(sti, (PAD, eyeh + caph))
     out.paste(sit, (PAD + COLW + GAP, eyeh + caph))
     d.text((PAD, eyeh + caph + ih + 8),
-           "Warm = patches whose logit lens decodes an answer-evidence token; "
-           "STI concentrates on the object, SIT stays mostly cold.",
+           "Dark blue = patches whose logit lens decodes an answer-evidence token; "
+           "STI concentrates on the object, SIT stays mostly light.",
            font=F_CAP, fill=(70, 76, 84))
     ImageDraw.Draw(out).rectangle([0, 0, W - 1, out.height - 1],
                                   outline=(210, 216, 222), width=1)
