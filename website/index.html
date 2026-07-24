@@ -137,8 +137,7 @@
                 border-radius:8px; background:#111; }
   .gifs { display:none; margin-top:1rem; }
   .reveal.playing .gifs { display:grid; }
-  .cbar { display:none; max-width:560px; margin:1.1rem auto 0; }
-  .reveal.playing .cbar { display:block; }
+  .cbar { max-width:520px; margin:.6rem auto 1.1rem; }
   .cbar-grad { height:15px; border-radius:8px; border:1px solid #ccd2da;
     background:linear-gradient(to right, #f7fbff, #deebf7, #c6dbef, #9ecae1,
       #6baed6, #4292c6, #2171b5, #08519c, #08306b); }
@@ -250,13 +249,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex1264_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex1264_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 3:</span> Per-patch logit lens at layer&nbsp;34; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;no&rdquo; &#10007;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -279,13 +283,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -300,13 +297,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex22_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex22_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 4:</span> Per-patch logit lens at layer&nbsp;30; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -329,13 +331,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -350,13 +345,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex33_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex33_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 5:</span> Per-patch logit lens at layer&nbsp;34; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -379,13 +379,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -400,13 +393,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex373_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex373_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 6:</span> Per-patch logit lens at layer&nbsp;34; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -429,13 +427,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -450,13 +441,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex994_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex994_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 7:</span> Per-patch logit lens at layer&nbsp;26; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -479,13 +475,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -500,13 +489,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex189_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex189_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 8:</span> Per-patch logit lens at layer&nbsp;30; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;yes&rdquo; &#10003;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -529,13 +523,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -550,13 +537,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex232_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex232_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 9:</span> Per-patch logit lens at layer&nbsp;24; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;no&rdquo; &#10007;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -579,13 +571,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -600,13 +585,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex1007_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex1007_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 10:</span> Per-patch logit lens at layer&nbsp;32; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;no&rdquo; &#10007;, SIT &ldquo;yes&rdquo; &#10003;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -629,13 +619,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -650,13 +633,18 @@
         </button>
       </div>
         
-      <figure class="panelfig heatfig">
-        <img src="assets/ex1077_heat.png" alt="answer-evidence heatmap" loading="lazy">
-      </figure>
         <figure class="panelfig">
           <img src="assets/ex1077_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
           <figcaption><span class="fnum">Figure 11:</span> Per-patch logit lens at layer&nbsp;28; the queried thing is really present (ground truth Yes). Question-first (STI, left) identifies it: every image patch that decodes a <em>correct-answer</em> token is boxed in <span class='boxg'>green</span>; question-last (SIT, right) decodes far fewer, in <span class='boxr'>red</span>. STI answers &ldquo;no&rdquo; &#10007;, SIT &ldquo;no&rdquo; &#10007;. <strong>STI surfaces the tokens that answer the question; SIT does not.</strong> Press play to watch both resolve layer by layer.</figcaption>
         </figure>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -679,13 +667,6 @@
                alt="SIT (question-last) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
@@ -701,6 +682,14 @@
   
       <div class="unit">
         <h3 class="qhead">&ldquo;Is the adult in the image chasing a child?&rdquo;<span class="gt-yes">ground truth: Yes</span></h3>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -723,19 +712,20 @@
                alt="SITIT (image echo) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
       </div>
       <div class="unit">
         <h3 class="qhead">&ldquo;Is the man performing on a ramp?&rdquo;<span class="gt-yes">ground truth: Yes</span></h3>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -758,19 +748,20 @@
                alt="SITIT (image echo) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
       </div>
       <div class="unit">
         <h3 class="qhead">&ldquo;Is the firetruck parked in a driveway outside the garage?&rdquo;<span class="gt-yes">ground truth: Yes</span></h3>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -793,19 +784,20 @@
                alt="SITIT (image echo) per-layer logit lens">
         </figure>
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>
       </div>
       <div class="unit">
         <h3 class="qhead">&ldquo;Is the dog chasing a person?&rdquo;<span class="gt-yes">ground truth: Yes</span></h3>
+        
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+      </div>
         
       <div class="reveal">
         <button class="revealbtn" type="button">
@@ -827,13 +819,6 @@
           <img class="lazygif" data-gif="assets/ex229_SITIT.gif"
                alt="SITIT (image echo) per-layer logit lens">
         </figure>
-        </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
         </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>

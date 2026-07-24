@@ -179,15 +179,18 @@ def reveal(e, lkey, llab, lrole, rkey, rlab, rrole, btn):
           {lazy_gif(e, lkey, llab, lrole)}
           {lazy_gif(e, rkey, rlab, rrole)}
         </div>
-        <div class="cbar">
-          <div class="cbar-ends"><span>light blue</span><span>dark blue</span></div>
-          <div class="cbar-grad"></div>
-          <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-            <span>0.75</span><span>1</span></div>
-          <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
-        </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>"""
+
+
+CBAR = """
+      <div class="cbar">
+        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
+        <div class="cbar-grad"></div>
+        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
+          <span>0.75</span><span>1</span></div>
+        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
       </div>"""
 
 
@@ -248,7 +251,8 @@ def main():
       <div class="unit">
         {qhead(e)}
         {rawthumb(e)}
-        {heatfig(e)}{fig}
+        {fig}
+        {CBAR}
         {reveal(e, "STI", "STI (question-first)", "commits early, wrong",
                 "SIT", "SIT (question-last)", "keeps question access, correct",
                 "Play STI vs. SIT for this image")}
@@ -263,6 +267,7 @@ def main():
         fix += f"""
       <div class="unit">
         {qhead(e)}
+        {CBAR}
         {reveal(e, "STI", "STI (question-first)", "still wrong",
                 "SITIT", "SITIT (image echo)", "second look fixes it",
                 "Play STI vs. SITIT for this image")}
@@ -429,8 +434,7 @@ def main():
                 border-radius:8px; background:#111; }}
   .gifs {{ display:none; margin-top:1rem; }}
   .reveal.playing .gifs {{ display:grid; }}
-  .cbar {{ display:none; max-width:560px; margin:1.1rem auto 0; }}
-  .reveal.playing .cbar {{ display:block; }}
+  .cbar {{ max-width:520px; margin:.6rem auto 1.1rem; }}
   .cbar-grad {{ height:15px; border-radius:8px; border:1px solid #ccd2da;
     background:linear-gradient(to right, #f7fbff, #deebf7, #c6dbef, #9ecae1,
       #6baed6, #4292c6, #2171b5, #08519c, #08306b); }}
