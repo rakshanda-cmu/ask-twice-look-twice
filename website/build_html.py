@@ -1,5 +1,5 @@
 """
-Build the static supplement site (index.html) in the arXiv-HTML (ar5iv) paper
+Build the project page (index.html) in the arXiv-HTML (ar5iv) paper
 style: serif body, centered title/authors/abstract, numbered sections, booktabs
 tables ("Table N:") and "Figure N:" captions.
 
@@ -288,7 +288,7 @@ def main():
          "model_manager.py, constants.py, utils.py"),
         ("Per-layer / per-patch logit lens (the animations)",
          "logit_lens_overlay.py, logit_lens_runner.py, sitit_stit_gif_gen.py"),
-        ("Interactive viewer for every analysis",
+        ("Result and figure viewer for every analysis",
          "logit_lens_app.py + *_browser.py"),
     ]
     coderows = "".join(
@@ -462,7 +462,7 @@ def main():
     <a href="https://www.ri.cmu.edu/ri-faculty/john-galeotti/" target="_blank" rel="noopener">John Galeotti</a> &emsp;
     <a href="https://www.cs.cmu.edu/~deva/" target="_blank" rel="noopener">Deva Ramanan</a> &emsp;
     <a href="https://ggare-cmu.github.io/" target="_blank" rel="noopener">Gautam Rajendrakumar Gare</a></div>
-  <div class="affil">Carnegie Mellon University &middot; Interactive Supplement, ECCV&nbsp;2026 Submission</div>
+  <div class="affil">Carnegie Mellon University &middot; ECCV&nbsp;2026 Submission</div>
 
   <section class="abstract">
     <h2>Abstract</h2>
@@ -481,9 +481,9 @@ def main():
     the image (question-last, <strong>SIT</strong>) recovers the correct answer.
     Re-presenting the image and question after the image (image echoing,
     <strong>SITIT</strong>) resolves the paradox with no training and gives the
-    best accuracy across four benchmarks and two model families. This page
-    summarizes the primary results and lets you watch the answer form
-    <strong>layer by layer</strong> with a per-layer logit lens.</p>
+    best accuracy across four benchmarks and two model families. We summarize the
+    primary results and trace the answer forming <strong>layer by layer</strong>
+    with a per-layer logit lens.</p>
   </section>
 
   <h2 class="sec">1&ensp;The Question-First Paradox</h2>
@@ -547,9 +547,9 @@ def main():
   {fix}
 
   <h2 class="sec">5&ensp;Repository Guide</h2>
-  <p>This supplement ships the analysis code, the interactive viewer, and the
-  per-run result JSONs for the primary orderings; model weights and raw image
-  datasets are external. Each benchmark runner takes an <code>--order</code> flag
+  <p>The project's code ships the analysis scripts and the per-run result JSONs for
+  the primary orderings; model weights and raw image datasets are external. Each
+  benchmark runner takes an <code>--order</code> flag
   and writes <code>&lt;dataset&gt;/results/&lt;model&gt;__&lt;order&gt;__results.json</code>,
   the exact files that populate the tables above. The order-aware prompt is built
   once in <code>model_manager.py</code> and shared across models, so a single code
@@ -561,8 +561,7 @@ def main():
     </thead><tbody>{coderows}</tbody></table>
   </div>
   <p class="caption"><strong>Table 4:</strong> Where each primary result comes from.
-  Run e.g. <code>python naturalbench_eval.py --order STI</code>; launch the full
-  viewer with <code>streamlit run logit_lens_app.py</code>. See
+  Run e.g. <code>python naturalbench_eval.py --order STI</code>. See
   <code>README.md</code> for the complete code&rarr;paper map and setup.</p>
 
   <hr>
@@ -571,8 +570,7 @@ def main():
   transformer layer &mdash; the heatmap is what each image patch decodes to and the
   token grid is what every token, including the generated answer, decodes to.
   Examples are NaturalBench yes/no pairs chosen for a clear, unambiguous answer.
-  This is a static supplement; the code, interactive viewer, and full result files
-  accompany it in the repository.</p>
+  The code and full result files are available in the repository.</p>
 
 </main>
 <div id="lightbox" class="lightbox" hidden><img alt="raw image, enlarged"></div>
