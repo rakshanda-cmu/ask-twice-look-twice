@@ -129,22 +129,34 @@ def mark(ok):
 def lazy_gif(e, key, label, role):
     """One animation column; its <img> loads only when the block is revealed."""
     d = e[key]
-    verdict = "correct" if d["correct"] else "wrong"
     return f"""
         <figure class="giffig">
-          <figcaption class="gcap-top"><span class="fnum">{esc(label)}</span> &mdash;
-            per-layer logit lens; answers &ldquo;{esc(d['pred'])}&rdquo;
-            {mark(d['correct'])} ({esc(verdict)}, ground truth {esc(e['gt'])}).</figcaption>
+          <figcaption class="gcap-top">{esc(label)} answers
+            &ldquo;{esc(d['pred'])}&rdquo; {mark(d['correct'])}</figcaption>
           <img class="lazygif" data-gif="assets/{esc(d['gif'])}"
                alt="{esc(label)} per-layer logit lens">
         </figure>"""
 
 
 def qhead(e):
-    """The question, shown as a heading ABOVE the raw image, with a ground-truth badge."""
+    """The question, shown as a heading, with a ground-truth badge."""
     gtc = "gt-yes" if e["gt"].lower().startswith("y") else "gt-no"
     return (f'<h3 class="qhead">&ldquo;{esc(e["question"])}&rdquo;'
             f'<span class="{gtc}">ground truth: {esc(e["gt"])}</span></h3>')
+
+
+def qrow(e):
+    """Raw image and the question side by side (question wraps if long)."""
+    gtc = "gt-yes" if e["gt"].lower().startswith("y") else "gt-no"
+    return f"""
+      <div class="qrow">
+        <button class="rawbtn" type="button" data-full="assets/{esc(e['image'])}"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/{esc(e['image'])}" alt="raw image" loading="lazy">
+        </button>
+        <h3 class="qhead qside">&ldquo;{esc(e['question'])}&rdquo;
+          <span class="{gtc}">ground truth: {esc(e['gt'])}</span></h3>
+      </div>"""
 
 
 def rawthumb(e):
@@ -214,43 +226,13 @@ def main():
         fig = ""
         still = e.get("cmp_still") or e.get("fig_panel")
         if still:
-            layer = e.get("cmp_layer", "late")
-            if e.get("key") and e.get("sti_words"):
-                stimk = "&#10003;" if e["STI"]["correct"] else "&#10007;"
-                sitmk = "&#10003;" if e["SIT"]["correct"] else "&#10007;"
-                cap = (
-                    f"Per-patch logit lens at layer&nbsp;{esc(layer)}; the queried thing "
-                    f"is really present (ground truth {esc(e['gt'])}). Question-first "
-                    f"(STI, left) identifies it: every image patch that decodes a "
-                    f"<em>correct-answer</em> token is boxed in "
-                    f"<span class='boxg'>green</span>; question-last (SIT, right) decodes "
-                    f"far fewer, in <span class='boxr'>red</span>. "
-                    f"STI answers &ldquo;{esc(e['STI']['pred'])}&rdquo; {stimk}, SIT "
-                    f"&ldquo;{esc(e['SIT']['pred'])}&rdquo; {sitmk}. "
-                    f"<strong>STI surfaces the tokens that answer the question; SIT does "
-                    f"not.</strong> Press play to watch both resolve layer by layer.")
-            else:
-                cap = (
-                    f"Per-patch logit lens at layer&nbsp;{esc(layer)} for "
-                    f"&ldquo;{esc(e['question'])}&rdquo; (ground truth {esc(e['gt'])}), "
-                    f"under question-first (STI, left) and question-last (SIT, right). "
-                    f"The <span class='cyan'>cyan box</span> marks the object one must "
-                    f"read to answer; inside it the STI patches already decode the "
-                    f"correct scene ({esc(SCENE.get(i, ''))}). Yet STI answers "
-                    f"&ldquo;{esc(e['STI']['pred'])}&rdquo; while SIT answers "
-                    f"&ldquo;{esc(e['SIT']['pred'])}&rdquo; &mdash; the same tokens, "
-                    f"read out differently. Press play to watch both resolve layer "
-                    f"by layer.")
             fig = f"""
         <figure class="panelfig">
           <img src="assets/{esc(still)}" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-          <figcaption><span class="fnum">Figure {fnum}:</span> {cap}</figcaption>
         </figure>"""
-            fnum += 1
         problem += f"""
       <div class="unit">
-        {qhead(e)}
-        {rawthumb(e)}
+        {qrow(e)}
         {fig}
         {CBAR}
         {reveal(e, "STI", "STI (question-first)", "commits early, wrong",
@@ -382,6 +364,11 @@ def main():
   .qhead span {{ display:inline-block; font-weight:400; font-size:.85rem;
                 margin-left:.6rem; padding:.1em .55em; border-radius:12px;
                 vertical-align:middle; font-family:Helvetica,Arial,sans-serif; }}
+  /* raw image + question side by side */
+  .qrow {{ display:flex; align-items:center; justify-content:center; gap:1.6rem;
+          flex-wrap:wrap; margin:1.4rem 0 1.1rem; }}
+  .qrow .qside {{ margin:0; text-align:left; max-width:32rem; line-height:1.3; }}
+  .qrow .qside span {{ margin-left:0; margin-top:.5rem; display:inline-block; }}
   .cmp {{ margin:1.6rem 0 1.2rem; }}
   .cmp-q {{ text-align:center; font-size:1.05rem; font-weight:700;
            color:var(--ink); margin:.2rem 0 .3rem; }}
@@ -428,8 +415,8 @@ def main():
   .lightbox img {{ max-width:92vw; max-height:92vh; border-radius:4px;
                   box-shadow:0 8px 40px rgba(0,0,0,.6); }}
   .giffig {{ margin:0; }}
-  .gcap-top {{ font-size:.85rem; color:var(--body); text-align:left;
-              line-height:1.4; margin:0 0 .45rem; }}
+  .gcap-top {{ font-size:1.05rem; font-weight:700; color:var(--ink);
+              text-align:center; line-height:1.3; margin:0 0 .5rem; }}
   .giffig img {{ display:block; width:100%; height:auto; border:1px solid #ccc;
                 border-radius:8px; background:#111; }}
   .gifs {{ display:none; margin-top:1rem; }}

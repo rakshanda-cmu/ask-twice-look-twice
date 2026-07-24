@@ -319,18 +319,9 @@ def panel(e):
     yes = gt.lower().startswith("y")
     gtcol = GOOD if yes else BAD
 
-    # ---- header ----  (question is shown above the raw image in the page, not here)
-    hh = 46
-    header = Image.new("RGB", (W, hh), INK)
-    d = ImageDraw.Draw(header)
-    eyebrow = ("PER-PATCH LOGIT LENS  ·  STI vs. SIT  ·  LAYER %d  ·  PERCEPTION STEERING"
-               if steering else
-               "PER-PATCH LOGIT LENS  ·  STI vs. SIT  ·  LAYER %d") % layer
-    d.text((PAD, 15), eyebrow, font=F_EYE, fill=(150, 200, 190))
-    btxt = "GROUND TRUTH:  %s" % gt.upper()
-    bw = F_BADGE.getlength(btxt) + 24
-    d.rounded_rectangle([W - PAD - bw, 8, W - PAD, 38], radius=15, fill=gtcol)
-    d.text((W - PAD - bw / 2, 23), btxt, font=F_BADGE, fill=(255, 255, 255), anchor="mm")
+    # ---- header ----  removed: the question + ground truth are shown above the
+    # raw image in the page, so no eyebrow / ground-truth band on the still.
+    hh = 0
 
     # ---- column captions ----
     ch = 34
@@ -355,9 +346,6 @@ def panel(e):
                        "patches decode to the correct-answer tokens (%s) under STI "
                        "(green); question-last (SIT) decodes only %d (red)."
                        % (layer, n_sti, toks, n_sit), F_BODY, maxw):
-            lines.append(("n", ln))
-        for ln in wrap("STI answers “%s” %s;  SIT answers “%s” %s."
-                       % (sti_pred, mk(sti_ok), sit_pred, mk(sit_ok)), F_BODY, maxw):
             lines.append(("n", ln))
         for ln in wrap("→ Question-first (STI) surfaces the tokens that answer the "
                        "question; question-last (SIT) does not.", F_BODYB, maxw):
@@ -393,7 +381,6 @@ def panel(e):
 
     # ---- assemble ----
     out = Image.new("RGB", (W, hh + ch + h + fh), (255, 255, 255))
-    out.paste(header, (0, 0))
     out.paste(caps, (0, hh))
     out.paste(sti_img, (PAD, hh + ch))
     out.paste(sit_img, (PAD + cw + COLGAP, hh + ch))
