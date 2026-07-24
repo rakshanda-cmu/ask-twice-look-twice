@@ -108,6 +108,7 @@ F_EYE = font("DejaVuSans-Bold.ttf", 14)
 F_Q = font("DejaVuSans-Bold.ttf", 25)
 F_BADGE = font("DejaVuSans-Bold.ttf", 16)
 F_COL = font("DejaVuSans-Bold.ttf", 17)
+F_VERD = font("DejaVuSans-Bold.ttf", 18)
 F_BODY = font("DejaVuSans.ttf", 17)
 F_BODYB = font("DejaVuSans-Bold.ttf", 17)
 F_TAG = font("DejaVuSans-Bold.ttf", 14)
@@ -316,6 +317,7 @@ def panel(e):
 
     question, gt = e["question"], e["gt"]
     sti_pred, sit_pred = e["STI"]["pred"], e["SIT"]["pred"]
+    sti_ok, sit_ok = e["STI"]["correct"], e["SIT"]["correct"]
     yes = gt.lower().startswith("y")
     gtcol = GOOD if yes else BAD
 
@@ -323,22 +325,23 @@ def panel(e):
     # raw image in the page, so no eyebrow / ground-truth band on the still.
     hh = 0
 
-    # ---- column captions ----
-    ch = 34
+    # ---- column captions ----  (label + the ordering's answer verdict, above the grid)
+    ch = 60
     caps = Image.new("RGB", (W, ch), (255, 255, 255))
     cd = ImageDraw.Draw(caps)
     lx = PAD + cw / 2
     rx = PAD + cw + COLGAP + cw / 2
-    cd.text((lx, ch / 2), "STI (question-first)", font=F_COL, fill=BAD, anchor="mm")
-    cd.text((rx, ch / 2), "SIT (question-last)", font=F_COL, fill=GOOD, anchor="mm")
+    cd.text((lx, 16), "STI (question-first)", font=F_COL, fill=INK, anchor="mm")
+    cd.text((rx, 16), "SIT (question-last)", font=F_COL, fill=INK, anchor="mm")
+    sti_v = "answers “%s”  %s" % (sti_pred, "✓" if sti_ok else "✗")
+    sit_v = "answers “%s”  %s" % (sit_pred, "✓" if sit_ok else "✗")
+    cd.text((lx, 43), sti_v, font=F_VERD, fill=(GOOD if sti_ok else BAD), anchor="mm")
+    cd.text((rx, 43), sit_v, font=F_VERD, fill=(GOOD if sit_ok else BAD), anchor="mm")
 
     # ---- footer ----
     maxw = W - 2 * PAD
     if steering:
         toks = ", ".join(sorted(found_sti, key=lambda t: -found_sti[t])[:5])
-        sti_ok = e["STI"]["correct"]
-        sit_ok = e["SIT"]["correct"]
-        mk = lambda ok: "✓" if ok else "✗"
         yesno = "YES" if gt.lower().startswith("y") else "NO"
         lines = [("b", "Ground truth is %s — the answer-relevant content is really "
                   "in the image." % yesno)]
@@ -347,9 +350,6 @@ def panel(e):
                        "(green); question-last (SIT) decodes only %d (red)."
                        % (layer, n_sti, toks, n_sit), F_BODY, maxw):
             lines.append(("n", ln))
-        for ln in wrap("→ Question-first (STI) surfaces the tokens that answer the "
-                       "question; question-last (SIT) does not.", F_BODYB, maxw):
-            lines.append(("e", ln))
     else:
         boxlab = BOXES.get(idx, (0, 0, 0, 0, "key region"))[4]
         lines = [("b", "The cyan box marks the object you must read to answer (%s)."
