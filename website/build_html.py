@@ -187,22 +187,24 @@ def reveal(e, lkey, llab, lrole, rkey, rlab, rrole, btn):
       <div class="reveal">
         <button class="revealbtn" type="button">
           <span class="tri">&#9654;</span>&nbsp;{esc(btn)}</button>
-        <div class="gifs two-col">
-          {lazy_gif(e, lkey, llab, lrole)}
-          {lazy_gif(e, rkey, rlab, rrole)}
+        <div class="playarea">
+          <div class="gifs two-col">
+            {lazy_gif(e, lkey, llab, lrole)}
+            {lazy_gif(e, rkey, rlab, rrole)}
+          </div>
+          {VCBAR}
         </div>
         <button class="minbtn" type="button">
           <span class="tri">&#9650;</span>&nbsp;Minimize</button>
       </div>"""
 
 
-CBAR = """
-      <div class="cbar">
-        <div class="cbar-ends"><span>light blue = 0</span><span>1 = dark blue</span></div>
-        <div class="cbar-grad"></div>
-        <div class="cbar-ticks"><span>0</span><span>0.25</span><span>0.5</span>
-          <span>0.75</span><span>1</span></div>
-        <div class="cbar-cap">logit-lens confidence &mdash; per-patch top-token probability</div>
+# Vertical logit-lens confidence scale, shown to the right of the GIFs.
+VCBAR = """
+      <div class="vcbar" title="logit-lens confidence (per-patch top-token probability)">
+        <div class="vcbar-ticks"><span>1</span><span>0.75</span><span>0.5</span>
+          <span>0.25</span><span>0</span></div>
+        <div class="vcbar-bar"></div>
       </div>"""
 
 
@@ -234,7 +236,6 @@ def main():
       <div class="unit">
         {qrow(e)}
         {fig}
-        {CBAR}
         {reveal(e, "STI", "STI (question-first)", "commits early, wrong",
                 "SIT", "SIT (question-last)", "keeps question access, correct",
                 "Play STI vs. SIT for this image")}
@@ -249,7 +250,6 @@ def main():
         fix += f"""
       <div class="unit">
         {qhead(e)}
-        {CBAR}
         {reveal(e, "STI", "STI (question-first)", "still wrong",
                 "SITIT", "SITIT (image echo)", "second look fixes it",
                 "Play STI vs. SITIT for this image")}
@@ -368,7 +368,8 @@ def main():
   .qrow {{ display:flex; align-items:center; justify-content:center; gap:1.6rem;
           flex-wrap:wrap; margin:1.4rem 0 1.1rem; }}
   .qrow .qside {{ margin:0; text-align:left; max-width:32rem; line-height:1.3; }}
-  .qrow .qside span {{ margin-left:0; margin-top:.5rem; display:inline-block; }}
+  .qrow .qside span {{ display:block; width:fit-content; margin-left:0;
+                      margin-top:.6rem; }}
   .cmp {{ margin:1.6rem 0 1.2rem; }}
   .cmp-q {{ text-align:center; font-size:1.05rem; font-weight:700;
            color:var(--ink); margin:.2rem 0 .3rem; }}
@@ -419,18 +420,20 @@ def main():
               text-align:center; line-height:1.3; margin:0 0 .5rem; }}
   .giffig img {{ display:block; width:100%; height:auto; border:1px solid #ccc;
                 border-radius:8px; background:#111; }}
-  .gifs {{ display:none; margin-top:1rem; }}
-  .reveal.playing .gifs {{ display:grid; }}
-  .cbar {{ max-width:520px; margin:.6rem auto 1.1rem; }}
-  .cbar-grad {{ height:15px; border-radius:8px; border:1px solid #ccd2da;
-    background:linear-gradient(to right, #f7fbff, #deebf7, #c6dbef, #9ecae1,
+  /* play area: the two GIFs with a vertical confidence colorbar on the right */
+  .playarea {{ display:none; margin-top:1rem; }}
+  .reveal.playing .playarea {{ display:flex; align-items:stretch; gap:1rem;
+    justify-content:center; }}
+  .gifs {{ flex:1 1 auto; display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;
+    min-width:0; }}
+  .vcbar {{ flex:0 0 auto; display:flex; flex-direction:row-reverse; gap:.4rem;
+    padding-top:.2rem; padding-bottom:.2rem; }}
+  .vcbar-bar {{ width:16px; border-radius:8px; border:1px solid #ccd2da;
+    background:linear-gradient(to top, #f7fbff, #deebf7, #c6dbef, #9ecae1,
       #6baed6, #4292c6, #2171b5, #08519c, #08306b); }}
-  .cbar-ends {{ display:flex; justify-content:space-between; font-size:.8rem;
-    font-family:Helvetica,Arial,sans-serif; color:var(--muted); margin-bottom:.28rem; }}
-  .cbar-ticks {{ display:flex; justify-content:space-between; font-size:.78rem;
-    font-family:Helvetica,Arial,sans-serif; color:var(--muted); margin-top:.25rem; }}
-  .cbar-cap {{ text-align:center; font-size:.78rem; font-style:italic;
-    color:var(--muted); margin-top:.3rem; }}
+  .vcbar-ticks {{ display:flex; flex-direction:column; justify-content:space-between;
+    font-size:.75rem; font-family:Helvetica,Arial,sans-serif; color:var(--muted);
+    text-align:right; }}
 
   hr {{ border:0; border-top:1px solid #ddd; margin:2.2rem 0; }}
   .footer {{ font-size:.82rem; color:var(--muted); text-align:justify;
