@@ -112,6 +112,24 @@ F_VERD = font("DejaVuSans-Bold.ttf", 18)
 F_BODY = font("DejaVuSans.ttf", 17)
 F_BODYB = font("DejaVuSans-Bold.ttf", 17)
 F_TAG = font("DejaVuSans-Bold.ttf", 14)
+F_TICK = font("DejaVuSans.ttf", 13)
+
+# Blues colormap stops (light -> dark), matching the GIF logit lens.
+BLUES = [(247, 251, 255), (222, 235, 247), (198, 219, 239), (158, 202, 225),
+         (107, 174, 214), (66, 146, 198), (33, 113, 181), (8, 81, 156),
+         (8, 48, 107)]
+SCALE_W = 66                       # right-hand band that holds the vertical scale
+
+
+def blues(t):
+    """Interpolate the Blues colormap; t=0 -> lightest, t=1 -> darkest."""
+    t = min(1.0, max(0.0, t)) * (len(BLUES) - 1)
+    i = int(t)
+    if i >= len(BLUES) - 1:
+        return BLUES[-1]
+    f = t - i
+    a, b = BLUES[i], BLUES[i + 1]
+    return tuple(int(round(a[k] + (b[k] - a[k]) * f)) for k in range(3))
 
 
 # exact rendered colours of the section-header bands (SYSTEM=teal, TASK=blue,
@@ -380,16 +398,29 @@ def panel(e):
         y += lh
 
     # ---- assemble ----
-    out = Image.new("RGB", (W, hh + ch + h + fh), (255, 255, 255))
+    Wt = W + SCALE_W                       # extra right band for the vertical scale
+    out = Image.new("RGB", (Wt, hh + ch + h + fh), (255, 255, 255))
     out.paste(caps, (0, hh))
     out.paste(sti_img, (PAD, hh + ch))
     out.paste(sit_img, (PAD + cw + COLGAP, hh + ch))
     out.paste(footer, (0, hh + ch + h))
     dd = ImageDraw.Draw(out)
-    dd.rectangle([0, 0, W - 1, out.height - 1], outline=LINE, width=1)
+    dd.rectangle([0, 0, Wt - 1, out.height - 1], outline=LINE, width=1)
     # thin divider between the two columns
     xdiv = PAD + cw + COLGAP // 2
     dd.line([xdiv, hh + ch, xdiv, hh + ch + h], fill=LINE, width=1)
+
+    # ---- vertical confidence scale, aligned to the grid rows (top=1, bottom=0) ----
+    y0, y1 = hh + ch, hh + ch + h
+    sx, barw = W + 12, 16
+    for yy in range(y0, y1):
+        t = 1.0 - (yy - y0) / max(1, (y1 - y0 - 1))
+        dd.line([(sx, yy), (sx + barw, yy)], fill=blues(t))
+    dd.rectangle([sx, y0, sx + barw, y1 - 1], outline=(168, 176, 186), width=1)
+    for frac, lab in ((0.0, "1"), (0.25, "0.75"), (0.5, "0.5"),
+                      (0.75, "0.25"), (1.0, "0")):
+        ty = min(max(int(y0 + frac * (y1 - y0 - 1)), y0 + 6), y1 - 6)
+        dd.text((sx + barw + 6, ty), lab, font=F_TICK, fill=MUT, anchor="lm")
     return out, layer
 
 
