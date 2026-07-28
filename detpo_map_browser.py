@@ -1,13 +1,15 @@
 """
 Streamlit page: DetPO Detection — mAP on the RF20-VL *Aerial* domain and referring
-[email protected] on RefCOCOg (val), both from the served Qwen3-VL model via the DetPO
-setup. Purely additive and read-only; reads JSON written by the eval scripts in
-detpo_map/:
-    detpo_map/results/rf20_aerial_<config>_<model>.json
-    detpo_map/results/refcocog_val_refacc_<model>.json
+[email protected] on RefCOCOg (val), for the served Qwen3-VL model, and across the prompt
+orderings STI / SIT / STIT / SITIT / SITIT_rev (question-first paradox applied to
+localization). Read-only; reads JSON written by the eval scripts in detpo_map/:
+    detpo_map/results/rf20_aerial_baseline_<model>.json          (30B baseline)
+    detpo_map/results/rf20_aerial_order-<ORD>_<model>.json        (8B orderings)
+    detpo_map/results/refcocog_val_refacc_<model>.json            (30B baseline)
+    detpo_map/results/refcocog_val_order-<ORD>_<model>.json       (8B orderings)
 
-This is distinct from the "🟩 RF20" page (that one is the prompt-ordering yes/no
-object-presence study); this page is the DetPO object-detection benchmark (COCO mAP).
+Distinct from the "🟩 RF20" page (that one is the prompt-ordering yes/no
+object-presence study); this page is the DetPO localization benchmark (mAP / [email protected]).
 """
 import glob
 import json
@@ -19,12 +21,25 @@ import streamlit as st
 RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                            "detpo_map", "results")
 
-RF20_RUN = ("HF_HOME=/data2/hf_cache CUDA_VISIBLE_DEVICES=0,1 \\\n"
-            "  /home/grg/anaconda3/envs/qwen-vllm-env/bin/python "
-            "detpo_map/rf20_aerial_eval.py --model Qwen3-VL-30B-A3B-Instruct")
-REF_RUN = ("/home/grg/anaconda3/envs/qwen-vllm-env/bin/python "
-           "detpo_map/refcocog_eval.py --model Qwen/Qwen3-VL-30B-A3B-Instruct \\\n"
-           "  --n 2573 --out detpo_map/results/refcocog_val_refacc_qwen3vl-30b-a3b.json")
+# Canonical row order: 30B baseline first, then the orderings.
+ORDER_ROWS = ["baseline", "STI", "SIT", "STIT", "SITIT", "SITIT_rev"]
+ORDER_DESC = {
+    "baseline": "DetPO default (S·T·I, question-first)",
+    "STI": "S·T·I — question-first",
+    "SIT": "S·I·T — question-last",
+    "STIT": "S·T·I·T — question echo",
+    "SITIT": "S·I·T·I·T — image echo",
+    "SITIT_rev": "S·I·T·Ī·T — image echo, 2nd image reversed",
+}
+
+RF20_RUN = ("CUDA_VISIBLE_DEVICES=0 HF_HOME=/data2/hf_cache "
+            "/home/grg/anaconda3/envs/logitlens/bin/python "
+            "detpo_map/ordering_eval.py --benchmark rf20 "
+            "--orders STI,SIT,STIT,SITIT,SITIT_rev")
+REF_RUN = ("CUDA_VISIBLE_DEVICES=1 HF_HOME=/data2/hf_cache "
+           "/home/grg/anaconda3/envs/logitlens/bin/python "
+           "detpo_map/ordering_eval.py --benchmark refcoco "
+           "--orders STI,SIT,STIT,SITIT,SITIT_rev --n 0")
 
 
 def _load(pattern):
@@ -41,94 +56,101 @@ def _fmt(x, mult=1.0, nd=1):
     return "—" if x is None else f"{x * mult:.{nd}f}"
 
 
+def _tag(meta):
+    return meta.get("ordering", "baseline")
+
+
+def _order_key(tag):
+    return ORDER_ROWS.index(tag) if tag in ORDER_ROWS else len(ORDER_ROWS)
+
+
 def _rf20_section():
-    st.subheader("🛩️ RF20-VL — Aerial (DetPO, COCO mAP)")
+    st.subheader("🛩️ RF20-VL Aerial — DetPO detection mAP by prompt ordering")
     st.caption(
-        "Few-shot object **detection** on the Aerial domain of the Roboflow20-VL "
-        "benchmark (`wildfire-smoke`, `aerial-airport`), evaluated through the DetPO "
-        "vLLM setup. The model is prompted per class for boxes; scoring is standard "
-        "COCO **mAP@[.50:.95]** and **[email protected]** on the test split. Configuration below "
-        "is the zero-shot **baseline** (default class descriptions parsed from each "
-        "dataset README — no DetPO prompt optimization)."
+        "Few-shot object **detection** on the Aerial domain of Roboflow20-VL "
+        "(`wildfire-smoke`, `aerial-airport`) through the DetPO setup, scored with "
+        "COCO **mAP@[.50:.95]** / **[email protected]** on the test split. Each row re-orders the "
+        "same system (**S**), task/question (**T**) and image (**I**) tokens: "
+        "question-first (STI) vs question-last (SIT), question echo (STIT), image "
+        "echo (SITIT) and image echo with the 2nd image block reversed (SITIT_rev). "
+        "Orderings run on local **Qwen3-VL-8B** (so SITIT_rev's patch reversal can be "
+        "applied); the **baseline** row is the served **Qwen3-VL-30B-A3B** for "
+        "reference."
     )
     runs = _load("rf20_aerial_*.json")
     if not runs:
-        st.info("**No RF20 Aerial results yet.** Run:\n\n```\n" + RF20_RUN + "\n```")
+        st.info("**No RF20 results yet.** Run:\n\n```\n" + RF20_RUN + "\n```")
         return
+    runs.sort(key=lambda r: (_order_key(_tag(r["meta"])), r["meta"]["model"]))
+    rows = []
     for r in runs:
         m = r["meta"]
-        st.markdown(f"### {m['model']}  ·  _{m['config']}_")
-        rows = []
-        pd_ = m["per_dataset"]
-        for ds in sorted(pd_):
-            d = pd_[ds]
-            rows.append({
-                "Dataset": ds,
-                "Classes": ", ".join(d.get("classes", [])),
-                "# test img": str(d.get("n_images", "—")),
-                "mAP@[.5:.95]": _fmt(d.get("mAP")),
-                "[email protected]": _fmt(d.get("mAP50")),
-                "[email protected]": _fmt(d.get("mAP75")),
-            })
-        mean = m.get("mean", {})
-        rows.append({
-            "Dataset": "Aerial (mean)", "Classes": "", "# test img": "",
-            "mAP@[.5:.95]": _fmt(mean.get("mAP")),
-            "[email protected]": _fmt(mean.get("mAP50")),
-            "[email protected]": _fmt(mean.get("mAP75")),
-        })
-        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
-                     use_container_width=True)
-        st.caption(
-            f"Aerial-mean **mAP {_fmt(mean.get('mAP'))}** · "
-            f"**[email protected] {_fmt(mean.get('mAP50'))}** (measured here). "
-            "Config: raw per-class detection scored with COCO mAP, no NMS / VQA "
-            "rescoring (this DetPO `run_evaluation` baseline path). The DetPO paper "
-            "lists the Qwen3-VL-30B Aerial baseline at ~9.0 mAP under its fuller "
-            "pipeline; absolute values shift with decoding, resolution and "
-            "post-processing, so treat this as our reproduction under the simple "
-            "baseline, not a paper-identical number."
-        )
-    st.caption("Re-run:  `" + RF20_RUN.replace("\\\n  ", " ") + "`")
+        tag = _tag(m)
+        pd_ = m["per_dataset"]; mean = m.get("mean", {})
+        row = {"Ordering": tag, "Model": m["model"].replace("Instruct", "").rstrip("-"),
+               "What": ORDER_DESC.get(tag, "")}
+        for ds in ("wildfire-smoke", "aerial-airport"):
+            row[f"{ds} mAP"] = _fmt(pd_.get(ds, {}).get("mAP"))
+        row["mean mAP"] = _fmt(mean.get("mAP"))
+        row["mean [email protected]"] = _fmt(mean.get("mAP50"))
+        rows.append(row)
+    st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                 use_container_width=True)
+    by = {_tag(r["meta"]): r["meta"].get("mean", {}).get("mAP")
+          for r in runs if "8b" in r["meta"].get("model", "")}
+    _delta_caption(by, "mAP")
+    st.caption("Re-run orderings:  `" + RF20_RUN + "`")
+
+
+def _delta_caption(by, unit):
+    """by: {ordering_tag: display_value}. State the ordering effect vs STI."""
+    if by.get("STI") is not None:
+        parts = [f"{t} {by[t]-by['STI']:+.1f}" for t in ("SIT", "STIT", "SITIT",
+                 "SITIT_rev") if by.get(t) is not None]
+        if parts:
+            st.caption(f"8B ordering Δ vs STI (question-first), {unit}: "
+                       + " · ".join(parts) + f"  (STI = {by['STI']:.1f}).")
 
 
 def _refcoco_section():
-    st.subheader("🎯 RefCOCOg (val) — Referring [email protected]")
+    st.subheader("🎯 RefCOCOg (val) — Referring [email protected] by prompt ordering")
     st.caption(
-        "Referring-expression grounding: for each RefCOCOg (umd split) validation "
-        "expression the served model predicts one box; it is correct if IoU with the "
-        "ground-truth box ≥ 0.5. Headline metric is referring **[email protected]** — the "
-        "standard RefCOCO metric (RefCOCO is not a multi-class detection set, so COCO "
-        "mAP does not apply here)."
+        "Referring-expression grounding on RefCOCOg (umd val): one predicted box per "
+        "expression, correct if IoU with the GT box ≥ 0.5 (**[email protected]**). Same "
+        "orderings as above; orderings on local **Qwen3-VL-8B**, baseline on served "
+        "**Qwen3-VL-30B-A3B**."
     )
     runs = _load("refcocog_*.json")
     if not runs:
         st.info("**No RefCOCOg results yet.** Run:\n\n```\n" + REF_RUN + "\n```")
         return
+    runs.sort(key=lambda r: (_order_key(_tag(r["meta"])), r["meta"]["model"]))
     rows = []
     for r in runs:
         m = r["meta"]
+        tag = _tag(m)
         rows.append({
-            "Model": m["model"], "Variant": m.get("variant", "umd"),
-            "Split": m.get("split", "val"),
-            "N": m.get("n"), "Parsed": m.get("parsed"),
-            "Correct": m.get("correct"),
+            "Ordering": tag, "Model": m["model"].replace("Instruct", "").rstrip("-"),
+            "What": ORDER_DESC.get(tag, ""),
+            "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
             "[email protected] (%)": _fmt(m.get("acc"), 100.0),
         })
     st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                  use_container_width=True)
-    best = max(runs, key=lambda r: r["meta"].get("acc", 0))["meta"]
-    st.caption(f"**[email protected] = {_fmt(best.get('acc'), 100.0)}%** "
-               f"on {best.get('n')} val expressions ({best['model']}).")
-    st.caption("Re-run:  `" + REF_RUN.replace("\\\n  ", " ") + "`")
+    by = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
+          for r in runs if "8b" in r["meta"].get("model", "")}
+    _delta_caption(by, "[email protected] %")
+    st.caption("Re-run orderings:  `" + REF_RUN + "`")
 
 
 def render_detpo_map_page():
-    st.title("🛩️ DetPO Detection — RF20 Aerial mAP + RefCOCO")
+    st.title("🛩️ DetPO Detection — RF20 Aerial mAP + RefCOCO (prompt orderings)")
     st.caption(
-        "Object-detection evaluation of the served **Qwen3-VL-30B-A3B** model via the "
-        "DetPO setup (vLLM OpenAI-compatible server). Two benchmarks: RF20-VL Aerial "
-        "(COCO mAP) and RefCOCOg val (referring [email protected])."
+        "The question-first paradox applied to **localization**: does moving the "
+        "question before/after the image, echoing it, or echoing the image change "
+        "detection mAP and referring accuracy? Two benchmarks (RF20-VL Aerial COCO "
+        "mAP; RefCOCOg val referring [email protected]) across STI / SIT / STIT / SITIT / "
+        "SITIT_rev, plus the served Qwen3-VL-30B-A3B baseline."
     )
     _rf20_section()
     st.markdown("---")

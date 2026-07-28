@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL \u2014 Aerial",
+    "ordering": "SITIT",
+    "config": "prompt ordering SITIT (default class descriptions)",
+    "model": "qwen3-vl-8b",
+    "per_dataset": {
+      "wildfire-smoke": {
+        "mAP": 8.886035122139194,
+        "mAP50": 20.30370535294205,
+        "mAP75": 5.37641305658805,
+        "classes": [
+          "smoke"
+        ],
+        "n_images": 75
+      },
+      "aerial-airport": {
+        "mAP": 3.2345537653567824,
+        "mAP50": 9.716608725989705,
+        "mAP75": 1.2886606475288105,
+        "classes": [
+          "airplane"
+        ],
+        "n_images": 34
+      }
+    },
+    "mean": {
+      "mAP": 6.060294443747988,
+      "mAP50": 15.010157039465877,
+      "mAP75": 3.33253685205843
+    }
+  }
+}
