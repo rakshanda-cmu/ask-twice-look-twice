@@ -44,6 +44,7 @@ from decision_browser import render_decision_page
 from gemma_browser import render_gemma_page
 from pope_browser import render_pope_page
 from rf20_browser import render_rf20_page
+from detpo_map_browser import render_detpo_map_page
 from patchcos_browser import render_patchcos_page
 from sitit_compare_browser import render_sitit_compare_page
 from logitlens_demo_browser import render_logitlens_demo_page
@@ -176,6 +177,7 @@ _page = st.sidebar.radio(
     ["🔍 Logit Lens", "🧪 NaturalBench Experiments", "🔬 Middle-Layer Analysis",
      "␣ Middle-Layer + Spaces", "🔁 STIT vs STI / IST", "🧠 Mechanism Probe",
      "🎯 Decision Layer", "🔷 Gemma 3", "🟣 POPE", "🟩 RF20",
+     "🛩️ DetPO mAP (RF20 Aerial + RefCOCO)",
      "🖼️ Patch Perturbation", "🔬 Logit Lens (this image)", "🎞️ SITIT vs STIT",
      "📊 Cross-Dataset Summary"],
     key="app_page",
@@ -206,6 +208,9 @@ if _page == "🟣 POPE":
     st.stop()
 if _page == "🟩 RF20":
     render_rf20_page()
+    st.stop()
+if _page == "🛩️ DetPO mAP (RF20 Aerial + RefCOCO)":
+    render_detpo_map_page()
     st.stop()
 if _page == "🖼️ Patch Perturbation":
     render_patchcos_page()

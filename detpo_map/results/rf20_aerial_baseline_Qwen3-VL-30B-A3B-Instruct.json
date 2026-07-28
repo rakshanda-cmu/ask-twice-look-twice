@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL \u2014 Aerial",
+    "config": "baseline (default class descriptions, zero-shot)",
+    "model": "Qwen3-VL-30B-A3B-Instruct",
+    "per_dataset": {
+      "wildfire-smoke": {
+        "mAP": 17.496816238697445,
+        "mAP50": 41.771496933732855,
+        "mAP75": 10.335533553355337,
+        "classes": [
+          "smoke"
+        ],
+        "n_images": 75
+      },
+      "aerial-airport": {
+        "mAP": 17.333301881366634,
+        "mAP50": 43.81894270510561,
+        "mAP75": 9.70321027383466,
+        "classes": [
+          "airplane"
+        ],
+        "n_images": 34
+      }
+    },
+    "mean": {
+      "mAP": 17.41505906003204,
+      "mAP50": 42.79521981941923,
+      "mAP75": 10.019371913594998
+    }
+  }
+}

@@ -48,3 +48,6 @@ venv/
 *.log
 website/wait_and_gen.sh
 website/wait_and_search.sh
+
+# DetPO eval intermediate prediction cache
+detpo_map/results/_detpo_run/
