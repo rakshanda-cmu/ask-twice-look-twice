@@ -165,14 +165,16 @@ def _refcoco_section():
           for r in runs if "8b" in r["meta"].get("model", "")}
     _delta_caption(by, "referring acc (IoU>=0.5) %")
 
-    # Focused comparison: baseline vs the three "ours" orderings requested.
+    # Focused comparison: 30B baseline vs the 8B orderings (STI/SIT baselines +
+    # the three echo orderings) requested.
     acc = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100 for r in runs}
     base = acc.get("baseline")
-    st.markdown("**Baseline vs STIT / SITIT / SITIT_rev** (the ask-twice orderings)")
+    st.markdown("**Baseline (30B) vs 8B orderings** — STI / SIT baselines and "
+                "STIT / SITIT / SITIT_rev echoes")
     comp = []
     comp.append({"Row": "baseline (Qwen3-VL-30B, S·T·I)",
                  "Ref acc IoU>=0.5 (%)": _fmt(base), "Δ vs baseline": "—"})
-    for t in ("STIT", "SITIT", "SITIT_rev"):
+    for t in ("STI", "SIT", "STIT", "SITIT", "SITIT_rev"):
         v = acc.get(t)
         comp.append({"Row": f"{t}  ·  {ORDER_DESC[t]}  (8B)",
                      "Ref acc IoU>=0.5 (%)": _fmt(v),
