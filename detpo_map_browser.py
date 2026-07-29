@@ -254,6 +254,18 @@ def render_detpo_map_page():
         "mAP; RefCOCOg val referring accuracy at IoU ≥ 0.5) across STI / SIT / STIT / SITIT / "
         "SITIT_rev, plus the served Qwen3-VL-30B-A3B baseline."
     )
+    _prompt_doc()
     _rf20_section()
     st.markdown("---")
     _refcoco_section()
+
+
+def _prompt_doc():
+    """Render the exact prompt templates + ordering construction (detpo_map/PROMPTS.md)."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "detpo_map", "PROMPTS.md")
+    with st.expander("📝 Prompt templates & ordering construction (exact text)"):
+        if os.path.exists(path):
+            st.markdown(open(path).read())
+        else:
+            st.info("Prompt documentation file not found: detpo_map/PROMPTS.md")
