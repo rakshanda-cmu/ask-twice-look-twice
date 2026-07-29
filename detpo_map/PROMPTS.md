@@ -61,6 +61,25 @@ top-left and (x2,y2) the bottom-right corner.
 
 ---
 
+## Inference engine per ordering (why it's split)
+
+| Rows | Orderings | Engine | Why |
+|------|-----------|--------|-----|
+| RF20 detection (20 datasets) | STI, SIT, STIT, SITIT | **vLLM library** (offline `LLM`, batched, greedy) | Pure input-layout changes → expressible through the API; ~10–20× faster than HF |
+| RF20 detection | **SITIT_rev** | **on hold** (local HF + `reverse_image_hooks`) | Reverses the 2nd image block's patches/positions *inside* the forward pass — not expressible in vLLM. Parked for now. |
+| RefCOCOg (all 5 incl. SITIT_rev) | STI…SITIT_rev | local HF | Already completed on HF; SITIT_rev needs the hooks |
+| 30B baseline (Aerial + RefCOCO) | DetPO default | vLLM (served 30B) | Accuracy-only, no internals |
+
+Notes:
+- The four RF20 orderings are run on **all 20 datasets** (Aerial included) on vLLM so
+  the whole 4-ordering table is one engine. This supersedes the earlier HF Aerial
+  ordering numbers; absolute values can shift slightly between HF and vLLM (different
+  kernels / image preprocessing) even at greedy decoding — same 8B weights, so the
+  *ordering comparison* is unaffected.
+- `ordering_eval_vllm.py` builds the ordered content parts exactly as the HF path
+  does (system text as the S content part, image repeated for SITIT), so STI/SIT/
+  STIT/SITIT are constructed identically; only the runtime differs.
+
 ## Ordering construction (how S / T / I are arranged)
 
 Content parts are placed into a single chat `user` turn in the letter order of the

@@ -58,10 +58,10 @@ PAPER_REF_RF20 = [
      "Aerial +DetPO": "13.8", "Aerial +DetPO+VQA": "16.1", "All (baseline)": "11.9"},
 ]
 
-RF20_RUN = ("CUDA_VISIBLE_DEVICES=0 HF_HOME=/data2/hf_cache "
-            "/home/grg/anaconda3/envs/logitlens/bin/python "
-            "detpo_map/ordering_eval.py --benchmark rf20 "
-            "--orders STI,SIT,STIT,SITIT,SITIT_rev --datasets <ds1,ds2,...>")
+RF20_RUN = ("HF_HOME=/data2/hf_cache CUDA_VISIBLE_DEVICES=0,1 "
+            "/home/grg/anaconda3/envs/qwen-vllm-env/bin/python "
+            "detpo_map/ordering_eval_vllm.py --orders STI,SIT,STIT,SITIT   "
+            "# SITIT_rev: detpo_map/ordering_eval.py (HF+hooks), on hold")
 REF_RUN = ("CUDA_VISIBLE_DEVICES=1 HF_HOME=/data2/hf_cache "
            "/home/grg/anaconda3/envs/logitlens/bin/python "
            "detpo_map/ordering_eval.py --benchmark refcoco "
@@ -127,12 +127,19 @@ def _rf20_section():
     if not mp:
         st.info("**No RF20 results yet.** Run:\n\n```\n" + RF20_RUN + "\n```")
         return
-    present_ord = [o for o in ORD_ORDER if o in mp]
+    # The four hook-free orderings run on the vLLM library; SITIT_rev is parked (it
+    # needs the HF patch-reversal hooks), so it is excluded from these 20-dataset
+    # tables for now.
+    active = ["STI", "SIT", "STIT", "SITIT"]
+    present_ord = [o for o in active if o in mp]
 
-    # coverage note
-    ndone = len({ds for o in mp for ds in mp[o]})
-    st.caption(f"Coverage: **{ndone}/20** datasets have results so far "
-               f"(table fills in as the run completes).")
+    ndone = len({ds for o in present_ord for ds in mp.get(o, {})})
+    st.caption(f"Engine: **vLLM library** (batched) for STI/SIT/STIT/SITIT.  "
+               f"Coverage: **{ndone}/20** datasets (table fills in as the run "
+               f"completes).")
+    st.info("**SITIT_rev is on hold.** It reverses the 2nd image block's patches "
+            "inside the model and can only run on the local HF path (not vLLM); it "
+            "will be added later. Rows below cover the four hook-free orderings.")
 
     # --- Super-category summary (paper Table-1 layout) ---
     st.markdown("**By super-category — mean mAP** (paper layout)")
