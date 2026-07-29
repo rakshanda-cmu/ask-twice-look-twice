@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "actions",
+    "ordering": "STI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 0.29402592856461074,
+    "mAP50": 1.2058203247244037,
+    "mAP75": 0.08359635135356186,
+    "classes": [
+      "Attack",
+      "Block",
+      "Defense",
+      "Serve",
+      "Set",
+      "ball"
+    ],
+    "n_images": 409,
+    "n_dets": 264,
+    "complete": true
+  }
+}

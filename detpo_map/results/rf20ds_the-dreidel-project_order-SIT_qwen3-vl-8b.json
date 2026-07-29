@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "the-dreidel-project",
+    "ordering": "SIT",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 12.766846232480903,
+    "mAP50": 23.05243504044963,
+    "mAP75": 10.317618762387037,
+    "classes": [
+      "Dreidel",
+      "Gimel",
+      "Hay",
+      "Nun",
+      "Shin",
+      "Spinning Dreidel"
+    ],
+    "n_images": 54,
+    "n_dets": 118,
+    "complete": true
+  }
+}

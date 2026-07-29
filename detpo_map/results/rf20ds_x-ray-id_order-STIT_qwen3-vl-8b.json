@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "x-ray-id",
+    "ordering": "STIT",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 0.0017025512075017023,
+    "mAP50": 0.011786892975011787,
+    "mAP75": 0.0,
+    "classes": [
+      "DIP",
+      "MCP",
+      "PIP",
+      "Radius",
+      "Ulna",
+      "Wrist"
+    ],
+    "n_images": 385,
+    "n_dets": 526,
+    "complete": true
+  }
+}

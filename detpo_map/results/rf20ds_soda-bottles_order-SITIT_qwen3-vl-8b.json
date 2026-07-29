@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "soda-bottles",
+    "ordering": "SITIT",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 1.131088371050727,
+    "mAP50": 2.4897498430500398,
+    "mAP75": 0.860292428133004,
+    "classes": [
+      "coca-cola",
+      "fanta",
+      "sprite"
+    ],
+    "n_images": 226,
+    "n_dets": 268,
+    "complete": true
+  }
+}

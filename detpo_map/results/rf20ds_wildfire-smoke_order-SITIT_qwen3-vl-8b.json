@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "wildfire-smoke",
+    "ordering": "SITIT",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 2.620999091470381,
+    "mAP50": 6.5975756454150085,
+    "mAP75": 1.6429001390705107,
+    "classes": [
+      "smoke"
+    ],
+    "n_images": 75,
+    "n_dets": 121,
+    "complete": true
+  }
+}
