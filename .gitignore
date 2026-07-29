@@ -51,3 +51,4 @@ website/wait_and_search.sh
 
 # DetPO eval intermediate prediction cache
 detpo_map/results/_detpo_run/
+detpo_map/results/_rf20cache/

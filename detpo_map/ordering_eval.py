@@ -59,6 +59,23 @@ DET_PROMPT = (
     'Return a JSON list like [{{"bbox_2d": [x1,y1,x2,y2], "label": "{cls}", '
     '"score": 0.95}}].')
 
+# Multi-class prompt: all target classes at once, matching the DetPO paper protocol
+# ("detect all target classes simultaneously").
+DET_PROMPT_MULTI = (
+    "Detect every object in the image that belongs to any of these classes: "
+    "{classes}.\n"
+    "Output Requirements:\n"
+    "- Return valid JSON only. Do not include explanations or extra text.\n"
+    "- A single ranked list of detections sorted by confidence (highest first).\n"
+    "- At most 50 detections. If none, return an empty list [].\n"
+    'For each detection provide: "bbox_2d": [x1, y1, x2, y2] (top-left, '
+    'bottom-right), "label": exactly one of the class names above, "score": float '
+    "in 0..1.\n"
+    "Per-class annotator guidance:\n"
+    "{instr}\n"
+    'Return a JSON list like [{{"bbox_2d": [x1,y1,x2,y2], "label": "<class>", '
+    '"score": 0.95}}].')
+
 REF_PROMPT = ('Locate "{phrase}" in the image and output its bounding box. '
               'Return valid JSON only, no extra text, in the form '
               '{{"bbox_2d": [x1, y1, x2, y2]}} where (x1,y1) is the top-left and '
@@ -91,7 +108,7 @@ def gen(mm, pil, task, order_letters, reverse, max_new_tokens):
 
 
 def parse_dets(text):
-    """Return list of {'bbox':[x1,y1,x2,y2] in 0-1000, 'score':float} from output."""
+    """Return list of {'bbox':[x1,y1,x2,y2] in 0-1000, 'score':float, 'label':str|None}."""
     t = text.strip().strip("`")
     t = re.sub(r"^json", "", t).strip()
     out = []
@@ -102,7 +119,8 @@ def parse_dets(text):
             if b and len(b) >= 4:
                 x1, y1, x2, y2 = map(float, b[:4])
                 out.append({"bbox": _order_box(x1, y1, x2, y2),
-                            "score": float(it.get("score", 1.0))})
+                            "score": float(it.get("score", 1.0)),
+                            "label": it.get("label")})
         if out:
             return out
     except Exception:
@@ -111,7 +129,8 @@ def parse_dets(text):
         nums = NUM.findall(m.group(1))
         if len(nums) >= 4:
             x1, y1, x2, y2 = map(float, nums[:4])
-            out.append({"bbox": _order_box(x1, y1, x2, y2), "score": 1.0})
+            out.append({"bbox": _order_box(x1, y1, x2, y2), "score": 1.0,
+                        "label": None})
     return out
 
 
@@ -139,57 +158,102 @@ def iou_xywh(a, b):
 
 
 # --------------------------------------------------------------------------- RF20
-def run_rf20(mm, tag, letters, reverse):
-    per, ms, m50, m75 = {}, [], [], []
-    for ds in AERIAL:
-        ann_path = os.path.join(DET_ROOT, ds, "test", "_annotations.coco.json")
-        coco_gt = COCO(ann_path)
-        cats = [c for c in coco_gt.loadCats(coco_gt.getCatIds())
-                if c["name"].lower() != "none"]
-        instr_json = {}
-        ip = os.path.join(DATA_INSTR, f"README.dataset_{ds}.json")
-        if os.path.isfile(ip):
-            instr_json = json.load(open(ip))
-        dets = []
-        imgs = coco_gt.dataset["images"]
-        for k, img_info in enumerate(imgs):
-            path = os.path.join(DET_ROOT, ds, "test", img_info["file_name"])
-            if not os.path.isfile(path):
+CACHE_DIR = os.path.join(OUT_DIR, "_rf20cache")
+
+
+def _match_label(label, name2id, norm2id):
+    """Map a predicted label string to a category id (exact, then normalized)."""
+    if label is None:
+        return None
+    if label in name2id:
+        return name2id[label]
+    k = re.sub(r"[^a-z0-9]", "", str(label).lower())
+    return norm2id.get(k)
+
+
+def _rf20_one(mm, tag, letters, reverse, ds):
+    """Multi-class detection over one dataset for one ordering, resumable.
+    Writes rf20ds_<ds>_order-<tag>_<model>.json; caches raw detections so an
+    interrupted dataset resumes at the image level."""
+    out = os.path.join(OUT_DIR, f"rf20ds_{ds}_order-{tag}_{MODEL}.json")
+    if os.path.exists(out):
+        try:
+            if json.load(open(out))["meta"].get("complete"):
+                return json.load(open(out))["meta"]
+        except Exception:
+            pass
+    ann_path = os.path.join(DET_ROOT, ds, "test", "_annotations.coco.json")
+    coco_gt = COCO(ann_path)
+    cats = [c for c in coco_gt.loadCats(coco_gt.getCatIds())
+            if c["name"].lower() != "none"]
+    name2id = {c["name"]: c["id"] for c in cats}
+    norm2id = {re.sub(r"[^a-z0-9]", "", c["name"].lower()): c["id"] for c in cats}
+    instr_json = {}
+    ip = os.path.join(DATA_INSTR, f"README.dataset_{ds}.json")
+    if os.path.isfile(ip):
+        instr_json = json.load(open(ip))
+    classes = ", ".join(c["name"] for c in cats)
+    instr = "\n".join(f"- {c['name']}: {instr_json.get(c['name'], '')}".rstrip()
+                      for c in cats)
+    task = DET_PROMPT_MULTI.format(classes=classes, instr=instr)
+
+    cdir = os.path.join(CACHE_DIR, tag)
+    os.makedirs(cdir, exist_ok=True)
+    cpath = os.path.join(cdir, f"{ds}.json")
+    dets, done = [], set()
+    if os.path.exists(cpath):
+        try:
+            c = json.load(open(cpath)); dets = c["dets"]; done = set(c["done"])
+        except Exception:
+            dets, done = [], set()
+
+    imgs = coco_gt.dataset["images"]
+    t0 = time.time()
+    for k, img_info in enumerate(imgs):
+        if img_info["id"] in done:
+            continue
+        path = os.path.join(DET_ROOT, ds, "test", img_info["file_name"])
+        if not os.path.isfile(path):
+            done.add(img_info["id"]); continue
+        pil = Image.open(path).convert("RGB")
+        W, H = pil.size
+        text = gen(mm, downscale(pil, DET_CAP), task, letters, reverse, 1024)
+        for d in parse_dets(text):
+            cid = _match_label(d.get("label"), name2id, norm2id)
+            if cid is None and len(cats) == 1:
+                cid = cats[0]["id"]
+            if cid is None:
                 continue
-            pil = Image.open(path).convert("RGB")
-            W, H = pil.size
-            pin = downscale(pil, DET_CAP)
-            for cat in cats:
-                instr = instr_json.get(cat["name"], "")
-                task = DET_PROMPT.format(cls=cat["name"], instr=instr)
-                text = gen(mm, pin, task, letters, reverse, 1024)
-                for d in parse_dets(text):
-                    x1, y1, x2, y2 = d["bbox"]
-                    dets.append({"image_id": img_info["id"],
-                                 "category_id": cat["id"],
-                                 "bbox": [x1 / 1000 * W, y1 / 1000 * H,
-                                          (x2 - x1) / 1000 * W, (y2 - y1) / 1000 * H],
-                                 "score": d["score"]})
-            if (k + 1) % 20 == 0:
-                print(f"    [{tag}] {ds} {k+1}/{len(imgs)} dets={len(dets)}", flush=True)
-        if dets:
-            ev = COCOeval(coco_gt, coco_gt.loadRes(dets), "bbox")
-            ev.evaluate(); ev.accumulate(); ev.summarize()
-            s = ev.stats
-        else:
-            s = [0.0] * 12
-        per[ds] = {"mAP": s[0] * 100, "mAP50": s[1] * 100, "mAP75": s[2] * 100,
-                   "classes": [c["name"] for c in cats], "n_images": len(imgs)}
-        ms.append(s[0] * 100); m50.append(s[1] * 100); m75.append(s[2] * 100)
-        print(f"  [{tag}] {ds}: mAP={s[0]*100:.1f} [email protected]={s[1]*100:.1f}", flush=True)
-    mean = {"mAP": sum(ms) / len(ms), "mAP50": sum(m50) / len(m50),
-            "mAP75": sum(m75) / len(m75)}
-    res = {"meta": {"benchmark": "RF20-VL — Aerial", "ordering": tag,
-                    "config": f"prompt ordering {tag} (default class descriptions)",
-                    "model": MODEL, "per_dataset": per, "mean": mean}}
-    out = os.path.join(OUT_DIR, f"rf20_aerial_order-{tag}_{MODEL}.json")
-    json.dump(res, open(out, "w"), indent=2)
-    print(f"  [{tag}] RF20 aerial-mean mAP {mean['mAP']:.1f} -> {out}", flush=True)
+            x1, y1, x2, y2 = d["bbox"]
+            dets.append({"image_id": img_info["id"], "category_id": cid,
+                         "bbox": [x1 / 1000 * W, y1 / 1000 * H,
+                                  (x2 - x1) / 1000 * W, (y2 - y1) / 1000 * H],
+                         "score": d["score"]})
+        done.add(img_info["id"])
+        if (k + 1) % 20 == 0:
+            json.dump({"dets": dets, "done": list(done)}, open(cpath, "w"))
+            print(f"    [{tag}] {ds} {k+1}/{len(imgs)} dets={len(dets)} "
+                  f"{len(done)/(time.time()-t0+1e-9):.2f}/s", flush=True)
+    json.dump({"dets": dets, "done": list(done)}, open(cpath, "w"))
+
+    if dets:
+        ev = COCOeval(coco_gt, coco_gt.loadRes(dets), "bbox")
+        ev.evaluate(); ev.accumulate(); ev.summarize()
+        s = ev.stats
+    else:
+        s = [0.0] * 12
+    meta = {"benchmark": "RF20-VL", "dataset": ds, "ordering": tag, "model": MODEL,
+            "prompting": "multi-class", "mAP": s[0] * 100, "mAP50": s[1] * 100,
+            "mAP75": s[2] * 100, "classes": [c["name"] for c in cats],
+            "n_images": len(imgs), "n_dets": len(dets), "complete": True}
+    json.dump({"meta": meta}, open(out, "w"), indent=2)
+    print(f"  [{tag}] {ds}: mAP={s[0]*100:.1f} AP50={s[1]*100:.1f} -> {out}", flush=True)
+    return meta
+
+
+def run_rf20(mm, tag, letters, reverse, datasets):
+    for ds in datasets:
+        _rf20_one(mm, tag, letters, reverse, ds)
 
 
 # ------------------------------------------------------------------------ RefCOCO
@@ -258,7 +322,10 @@ def main():
     ap.add_argument("--benchmark", choices=["rf20", "refcoco"], required=True)
     ap.add_argument("--orders", default="STI,SIT,STIT,SITIT,SITIT_rev")
     ap.add_argument("--n", type=int, default=0, help="RefCOCO ref cap (0=all)")
+    ap.add_argument("--datasets", default=",".join(AERIAL),
+                    help="RF20 dataset list (comma-separated)")
     args = ap.parse_args()
+    rf20_datasets = [d.strip() for d in args.datasets.split(",") if d.strip()]
 
     from utils import setup_seeds, disable_torch_init
     from transformers.utils import logging as hf_logging
@@ -279,7 +346,7 @@ def main():
         print(f"=== {args.benchmark} · ordering {tag} (letters={letters} "
               f"reverse={reverse}) ===", flush=True)
         if args.benchmark == "rf20":
-            run_rf20(mm, tag, letters, reverse)
+            run_rf20(mm, tag, letters, reverse, rf20_datasets)
         else:
             run_refcoco(mm, tag, letters, reverse, args.n)
     print("[done]", flush=True)
