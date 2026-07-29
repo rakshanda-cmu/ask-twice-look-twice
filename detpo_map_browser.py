@@ -1,6 +1,6 @@
 """
 Streamlit page: DetPO Detection — mAP on the RF20-VL *Aerial* domain and referring
-[email protected] on RefCOCOg (val), for the served Qwen3-VL model, and across the prompt
+accuracy (IoU>=0.5) on RefCOCOg (val), for the served Qwen3-VL model, and the prompt
 orderings STI / SIT / STIT / SITIT / SITIT_rev (question-first paradox applied to
 localization). Read-only; reads JSON written by the eval scripts in detpo_map/:
     detpo_map/results/rf20_aerial_baseline_<model>.json          (30B baseline)
@@ -9,7 +9,7 @@ localization). Read-only; reads JSON written by the eval scripts in detpo_map/:
     detpo_map/results/refcocog_val_order-<ORD>_<model>.json       (8B orderings)
 
 Distinct from the "🟩 RF20" page (that one is the prompt-ordering yes/no
-object-presence study); this page is the DetPO localization benchmark (mAP / [email protected]).
+object-presence study); this page is the DetPO localization benchmark (mAP / AP50).
 """
 import glob
 import json
@@ -78,7 +78,8 @@ def _rf20_section():
     st.caption(
         "Few-shot object **detection** on the Aerial domain of Roboflow20-VL "
         "(`wildfire-smoke`, `aerial-airport`) through the DetPO setup, scored with "
-        "COCO **mAP@[.50:.95]** / **[email protected]** on the test split. Each row re-orders the "
+        "COCO **mAP (IoU .50 to .95)** / **AP50 (IoU 0.5)** on the test split. Each row "
+        "re-orders the "
         "same system (**S**), task/question (**T**) and image (**I**) tokens: "
         "question-first (STI) vs question-last (SIT), question echo (STIT), image "
         "echo (SITIT) and image echo with the 2nd image block reversed (SITIT_rev). "
@@ -101,7 +102,7 @@ def _rf20_section():
         for ds in ("wildfire-smoke", "aerial-airport"):
             row[f"{ds} mAP"] = _fmt(pd_.get(ds, {}).get("mAP"))
         row["mean mAP"] = _fmt(mean.get("mAP"))
-        row["mean [email protected]"] = _fmt(mean.get("mAP50"))
+        row["mean AP50"] = _fmt(mean.get("mAP50"))
         rows.append(row)
     st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                  use_container_width=True)
@@ -136,10 +137,10 @@ def _delta_caption(by, unit):
 
 
 def _refcoco_section():
-    st.subheader("🎯 RefCOCOg (val) — Referring [email protected] by prompt ordering")
+    st.subheader("🎯 RefCOCOg (val) — Referring accuracy (IoU ≥ 0.5) by prompt ordering")
     st.caption(
         "Referring-expression grounding on RefCOCOg (umd val): one predicted box per "
-        "expression, correct if IoU with the GT box ≥ 0.5 (**[email protected]**). Same "
+        "expression, correct if IoU with the GT box ≥ 0.5 (**referring accuracy**). Same "
         "orderings as above; orderings on local **Qwen3-VL-8B**, baseline on served "
         "**Qwen3-VL-30B-A3B**."
     )
@@ -156,24 +157,25 @@ def _refcoco_section():
             "Ordering": tag, "Model": m["model"].replace("Instruct", "").rstrip("-"),
             "What": ORDER_DESC.get(tag, ""),
             "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
-            "[email protected] (%)": _fmt(m.get("acc"), 100.0),
+            "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0),
         })
     st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                  use_container_width=True)
     by = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
           for r in runs if "8b" in r["meta"].get("model", "")}
-    _delta_caption(by, "[email protected] %")
+    _delta_caption(by, "referring acc (IoU>=0.5) %")
 
     # Focused comparison: baseline vs the three "ours" orderings requested.
     acc = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100 for r in runs}
     base = acc.get("baseline")
     st.markdown("**Baseline vs STIT / SITIT / SITIT_rev** (the ask-twice orderings)")
     comp = []
-    comp.append({"Row": "baseline (Qwen3-VL-30B, S·T·I)", "[email protected] (%)": _fmt(base),
-                 "Δ vs baseline": "—"})
+    comp.append({"Row": "baseline (Qwen3-VL-30B, S·T·I)",
+                 "Ref acc IoU>=0.5 (%)": _fmt(base), "Δ vs baseline": "—"})
     for t in ("STIT", "SITIT", "SITIT_rev"):
         v = acc.get(t)
-        comp.append({"Row": f"{t}  ·  {ORDER_DESC[t]}  (8B)", "[email protected] (%)": _fmt(v),
+        comp.append({"Row": f"{t}  ·  {ORDER_DESC[t]}  (8B)",
+                     "Ref acc IoU>=0.5 (%)": _fmt(v),
                      "Δ vs baseline": "—" if (v is None or base is None)
                      else f"{v - base:+.1f}"})
     st.dataframe(pd.DataFrame(comp).astype(str), hide_index=True,
@@ -194,7 +196,7 @@ def render_detpo_map_page():
         "The question-first paradox applied to **localization**: does moving the "
         "question before/after the image, echoing it, or echoing the image change "
         "detection mAP and referring accuracy? Two benchmarks (RF20-VL Aerial COCO "
-        "mAP; RefCOCOg val referring [email protected]) across STI / SIT / STIT / SITIT / "
+        "mAP; RefCOCOg val referring accuracy at IoU ≥ 0.5) across STI / SIT / STIT / SITIT / "
         "SITIT_rev, plus the served Qwen3-VL-30B-A3B baseline."
     )
     _rf20_section()
