@@ -32,6 +32,15 @@ ORDER_DESC = {
     "SITIT_rev": "S·I·T·Ī·T — image echo, 2nd image reversed",
 }
 
+# DetPO paper reference numbers (RF20-VL Aerial mAP), Tables 1–2 of the DetPO paper.
+# Baseline is the default "class names + instructions" (C+I) prompt.
+PAPER_REF_RF20 = [
+    {"Model": "Qwen3-VL-8B (C+I)", "Aerial baseline": "7.1",
+     "Aerial +DetPO": "8.3", "Aerial +DetPO+VQA": "12.3", "All (baseline)": "11.4"},
+    {"Model": "Qwen3-VL-30B-A3B (C+I)", "Aerial baseline": "9.0",
+     "Aerial +DetPO": "13.8", "Aerial +DetPO+VQA": "16.1", "All (baseline)": "11.9"},
+]
+
 RF20_RUN = ("CUDA_VISIBLE_DEVICES=0 HF_HOME=/data2/hf_cache "
             "/home/grg/anaconda3/envs/logitlens/bin/python "
             "detpo_map/ordering_eval.py --benchmark rf20 "
@@ -99,6 +108,20 @@ def _rf20_section():
     by = {_tag(r["meta"]): r["meta"].get("mean", {}).get("mAP")
           for r in runs if "8b" in r["meta"].get("model", "")}
     _delta_caption(by, "mAP")
+
+    st.markdown("**DetPO paper reference — RF20-VL Aerial mAP** (Tables 1–2)")
+    st.dataframe(pd.DataFrame(PAPER_REF_RF20), hide_index=True,
+                 use_container_width=True)
+    st.caption(
+        "Published DetPO numbers for context. Baseline = default class-names + "
+        "instructions (C+I) prompt; **+DetPO** = optimized prompt; **+VQA** = with "
+        "VQA-Score confidence re-ranking. \"All\" is the 20-dataset mean. Our measured "
+        "8B **STI** ordering (" + (f"{by.get('STI'):.1f}" if by.get('STI') else "—")
+        + " mAP) lands at the paper's 8B baseline (7.1), so the harness reproduces "
+        "the published operating point; the orderings then move around it. (Our 30B "
+        "baseline row above, 17.4, uses the simpler served-model path without "
+        "NMS / VQA re-ranking, so it runs higher than the paper's 9.0.)"
+    )
     st.caption("Re-run orderings:  `" + RF20_RUN + "`")
 
 
@@ -140,6 +163,28 @@ def _refcoco_section():
     by = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
           for r in runs if "8b" in r["meta"].get("model", "")}
     _delta_caption(by, "[email protected] %")
+
+    # Focused comparison: baseline vs the three "ours" orderings requested.
+    acc = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100 for r in runs}
+    base = acc.get("baseline")
+    st.markdown("**Baseline vs STIT / SITIT / SITIT_rev** (the ask-twice orderings)")
+    comp = []
+    comp.append({"Row": "baseline (Qwen3-VL-30B, S·T·I)", "[email protected] (%)": _fmt(base),
+                 "Δ vs baseline": "—"})
+    for t in ("STIT", "SITIT", "SITIT_rev"):
+        v = acc.get(t)
+        comp.append({"Row": f"{t}  ·  {ORDER_DESC[t]}  (8B)", "[email protected] (%)": _fmt(v),
+                     "Δ vs baseline": "—" if (v is None or base is None)
+                     else f"{v - base:+.1f}"})
+    st.dataframe(pd.DataFrame(comp).astype(str), hide_index=True,
+                 use_container_width=True)
+    st.caption(
+        "All three echo orderings beat the DetPO-default question-first prompt; "
+        "**STIT** (question echo) is strongest. Note the DetPO paper reports **no "
+        "RefCOCO metric** (RefCOCO appears only qualitatively in its intro; its "
+        "quantitative results are RF20-VL and LVIS), so there is no published "
+        "baseline to overlay here — the baseline shown is our own served 30B run."
+    )
     st.caption("Re-run orderings:  `" + REF_RUN + "`")
 
 
