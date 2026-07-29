@@ -127,19 +127,16 @@ def _rf20_section():
     if not mp:
         st.info("**No RF20 results yet.** Run:\n\n```\n" + RF20_RUN + "\n```")
         return
-    # The four hook-free orderings run on the vLLM library; SITIT_rev is parked (it
-    # needs the HF patch-reversal hooks), so it is excluded from these 20-dataset
-    # tables for now.
-    active = ["STI", "SIT", "STIT", "SITIT"]
+    # STI/SIT/STIT/SITIT run on the vLLM library; SITIT_rev runs on the local HF
+    # path (patch-reversal hooks) and fills in separately (slower).
+    active = ["STI", "SIT", "STIT", "SITIT", "SITIT_rev"]
     present_ord = [o for o in active if o in mp]
 
-    ndone = len({ds for o in present_ord for ds in mp.get(o, {})})
-    st.caption(f"Engine: **vLLM library** (batched) for STI/SIT/STIT/SITIT.  "
-               f"Coverage: **{ndone}/20** datasets (table fills in as the run "
-               f"completes).")
-    st.info("**SITIT_rev is on hold.** It reverses the 2nd image block's patches "
-            "inside the model and can only run on the local HF path (not vLLM); it "
-            "will be added later. Rows below cover the four hook-free orderings.")
+    def _cov(o):
+        return len(mp.get(o, {}))
+    cov = " · ".join(f"{o} {_cov(o)}/20" for o in present_ord)
+    st.caption("Engine: **vLLM library** for STI/SIT/STIT/SITIT; **local HF + "
+               "patch-reversal hooks** for SITIT_rev. Coverage: " + cov + ".")
 
     # --- Super-category summary (paper Table-1 layout) ---
     st.markdown("**By super-category — mean mAP** (paper layout)")
