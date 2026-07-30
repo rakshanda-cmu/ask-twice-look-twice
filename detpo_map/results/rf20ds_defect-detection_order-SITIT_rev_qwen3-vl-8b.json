@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "defect-detection",
+    "ordering": "SITIT_rev",
+    "model": "qwen3-vl-8b",
+    "prompting": "multi-class",
+    "mAP": 1.8558469729907607,
+    "mAP50": 6.843331937642303,
+    "mAP75": 0.8333739444494078,
+    "classes": [
+      "defective fishplate",
+      "fastener",
+      "missing fastener",
+      "non defective fishplate"
+    ],
+    "n_images": 188,
+    "n_dets": 533,
+    "complete": true
+  }
+}
