@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "paper-parts",
+    "ordering": "SITIT_rev",
+    "model": "qwen3-vl-8b",
+    "prompting": "multi-class",
+    "mAP": 2.892502932728826,
+    "mAP50": 5.201268000121468,
+    "mAP75": 2.707243581086247,
+    "classes": [
+      "author",
+      "chapter",
+      "equation",
+      "equation number",
+      "figure",
+      "figure caption",
+      "footnote",
+      "list of content heading",
+      "list of content text",
+      "page number",
+      "paragraph",
+      "reference text",
+      "section",
+      "subsection",
+      "subsubsection",
+      "table",
+      "table caption",
+      "table of contents text",
+      "title"
+    ],
+    "n_images": 500,
+    "n_dets": 1742,
+    "complete": true
+  }
+}
