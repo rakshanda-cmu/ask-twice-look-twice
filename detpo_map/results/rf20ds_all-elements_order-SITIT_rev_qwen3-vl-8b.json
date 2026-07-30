@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "all-elements",
+    "ordering": "SITIT_rev",
+    "model": "qwen3-vl-8b",
+    "prompting": "multi-class",
+    "mAP": 0.3327533047651179,
+    "mAP50": 0.9028696987345793,
+    "mAP75": 0.10633164156751808,
+    "classes": [
+      "Button",
+      "Check box",
+      "Checked Radio button",
+      "Checked box",
+      "Dropdown box",
+      "Dropdown expand",
+      "Icon",
+      "Radio button",
+      "Scroll bar",
+      "Text box"
+    ],
+    "n_images": 70,
+    "n_dets": 240,
+    "complete": true
+  }
+}
