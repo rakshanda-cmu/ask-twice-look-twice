@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "recode-waste",
+    "ordering": "STITI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 1.5266372211244401,
+    "mAP50": 2.0896531305605324,
+    "mAP75": 1.6325982590542436,
+    "classes": [
+      "aggregate",
+      "cardboard",
+      "hard plastic",
+      "metal",
+      "soft plastic",
+      "timber"
+    ],
+    "n_images": 251,
+    "n_dets": 434,
+    "complete": true
+  }
+}

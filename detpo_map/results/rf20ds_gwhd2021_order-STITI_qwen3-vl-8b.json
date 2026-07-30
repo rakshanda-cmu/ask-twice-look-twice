@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "gwhd2021",
+    "ordering": "STITI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 2.9069368981684587,
+    "mAP50": 9.470760342749651,
+    "mAP75": 1.0285459792967513,
+    "classes": [
+      "Wheat Head"
+    ],
+    "n_images": 500,
+    "n_dets": 10800,
+    "complete": true
+  }
+}

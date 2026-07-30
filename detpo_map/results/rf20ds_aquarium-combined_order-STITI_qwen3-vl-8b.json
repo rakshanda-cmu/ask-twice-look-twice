@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "aquarium-combined",
+    "ordering": "STITI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 19.138843203211874,
+    "mAP50": 33.42382275784638,
+    "mAP75": 16.964336570857455,
+    "classes": [
+      "fish",
+      "jellyfish",
+      "penguin",
+      "puffin",
+      "shark",
+      "starfish",
+      "stingray"
+    ],
+    "n_images": 65,
+    "n_dets": 216,
+    "complete": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "flir-camera-objects",
+    "ordering": "STITI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 6.958114533219538,
+    "mAP50": 15.12226949891417,
+    "mAP75": 4.715940546230783,
+    "classes": [
+      "bicycle",
+      "car",
+      "dog",
+      "person"
+    ],
+    "n_images": 500,
+    "n_dets": 1414,
+    "complete": true
+  }
+}

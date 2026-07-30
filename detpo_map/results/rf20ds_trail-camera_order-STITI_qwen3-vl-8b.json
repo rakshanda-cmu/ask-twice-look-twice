@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "trail-camera",
+    "ordering": "STITI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 44.782445785782144,
+    "mAP50": 78.98413512938804,
+    "mAP75": 44.937711701534255,
+    "classes": [
+      "Deer",
+      "Hog"
+    ],
+    "n_images": 132,
+    "n_dets": 216,
+    "complete": true
+  }
+}

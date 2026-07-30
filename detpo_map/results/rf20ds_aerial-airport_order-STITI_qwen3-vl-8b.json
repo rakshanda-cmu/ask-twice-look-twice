@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "aerial-airport",
+    "ordering": "STITI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 2.538836605518568,
+    "mAP50": 7.631079545002974,
+    "mAP75": 0.7850874854092231,
+    "classes": [
+      "airplane"
+    ],
+    "n_images": 34,
+    "n_dets": 570,
+    "complete": true
+  }
+}
