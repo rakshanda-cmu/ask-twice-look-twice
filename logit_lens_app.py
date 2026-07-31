@@ -46,6 +46,7 @@ from pope_browser import render_pope_page
 from rf20_browser import render_rf20_page
 from detpo_map_browser import render_detpo_map_page
 from extra_tasks_browser import render_extra_tasks_page
+from refcoco_gaze.gaze_browser import render_gaze_page
 from patchcos_browser import render_patchcos_page
 from sitit_compare_browser import render_sitit_compare_page
 from logitlens_demo_browser import render_logitlens_demo_page
@@ -180,6 +181,7 @@ _page = st.sidebar.radio(
      "🎯 Decision Layer", "🔷 Gemma 3", "🟣 POPE", "🟩 RF20",
      "🛩️ DetPO mAP (RF20 Aerial + RefCOCO)",
      "🧪 New CV Areas (VQA/Counting/MMVP/BLINK/NExT-QA)",
+     "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)",
      "🖼️ Patch Perturbation", "🔬 Logit Lens (this image)", "🎞️ SITIT vs STIT",
      "📊 Cross-Dataset Summary"],
     key="app_page",
@@ -216,6 +218,9 @@ if _page == "🛩️ DetPO mAP (RF20 Aerial + RefCOCO)":
     st.stop()
 if _page == "🧪 New CV Areas (VQA/Counting/MMVP/BLINK/NExT-QA)":
     render_extra_tasks_page()
+    st.stop()
+if _page == "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)":
+    render_gaze_page()
     st.stop()
 if _page == "🖼️ Patch Perturbation":
     render_patchcos_page()
