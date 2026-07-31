@@ -87,6 +87,8 @@ def run_order(llm, sp, tag, letters, pairs, data_dir, log_every):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--orders", default=",".join(ORDER_LIST))
+    ap.add_argument("--model", default="qwen3-vl-8b",
+                    choices=["qwen3-vl-8b", "gemma-3-27b"])
     ap.add_argument("--num-samples", type=int, default=3000, dest="num_samples")
     ap.add_argument("--data-dir", default="/data2/hf_cache/newtasks/vqa/val2014",
                     dest="data_dir")
@@ -97,11 +99,17 @@ def main():
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    global MODEL_TAG
+    MODEL_TAG = args.model  # rebinds the module-global MODEL_TAG other functions read at call time
+    if args.model == "gemma-3-27b" and args.tp != 1:
+        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+        args.tp = 1
+
     pairs = load_vqa(args.vqa_dir)[:args.num_samples]
     print(f"[data] {len(pairs)} VQA pairs", flush=True)
 
     from vllm import SamplingParams
-    llm = make_llm(tp=args.tp)
+    llm = make_llm(tp=args.tp, model_tag=args.model)
     sp = SamplingParams(temperature=0.0, max_tokens=32)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:

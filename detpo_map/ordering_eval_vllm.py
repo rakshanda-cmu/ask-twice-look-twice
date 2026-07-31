@@ -24,7 +24,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
 DET_ROOT = "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod"
 DATA_INSTR = "/home/grg/Research/DetPO/data_instr/default"
-MODEL_HF = "Qwen/Qwen3-VL-8B-Instruct"
+# Model registry: tag -> (HF repo id, vLLM quantization arg or None). See
+# extra_tasks/common.py's MODEL_REGISTRY docstring for the no-NVLink /
+# bnb-4-bit-single-GPU rationale (same box, same constraint).
+MODEL_REGISTRY = {
+    "qwen3-vl-8b": {"hf": "Qwen/Qwen3-VL-8B-Instruct", "quantization": None},
+    "gemma-3-27b": {"hf": "google/gemma-3-27b-it", "quantization": "bitsandbytes"},
+}
+MODEL_HF = MODEL_REGISTRY["qwen3-vl-8b"]["hf"]
 MODEL_TAG = "qwen3-vl-8b"
 DET_CAP = 1024
 
@@ -204,13 +211,28 @@ def main():
     ap.add_argument("--datasets", default=",".join(RF20_DATASETS))
     ap.add_argument("--max-tokens", type=int, default=1024)
     ap.add_argument("--tp", type=int, default=2)
+    ap.add_argument("--model", default="qwen3-vl-8b",
+                    choices=["qwen3-vl-8b", "gemma-3-27b"])
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    global MODEL_TAG
+    MODEL_TAG = args.model
+    if args.model == "gemma-3-27b" and args.tp != 1:
+        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+        args.tp = 1
+    cfg = MODEL_REGISTRY[args.model]
+
     from vllm import LLM, SamplingParams
-    llm = LLM(model=MODEL_HF, trust_remote_code=True, dtype="float16",
-              max_model_len=24096, tensor_parallel_size=args.tp,
-              gpu_memory_utilization=0.85, limit_mm_per_prompt={"image": 2})
+    llm_kwargs = dict(model=cfg["hf"], trust_remote_code=True,
+                      max_model_len=24096, tensor_parallel_size=args.tp,
+                      gpu_memory_utilization=0.85, limit_mm_per_prompt={"image": 2})
+    if cfg["quantization"]:
+        llm_kwargs["quantization"] = cfg["quantization"]
+        llm_kwargs["load_format"] = cfg["quantization"]
+    else:
+        llm_kwargs["dtype"] = "float16"
+    llm = LLM(**llm_kwargs)
     sp = SamplingParams(temperature=0.0, max_tokens=args.max_tokens)
 
     orders = [o.strip() for o in args.orders.split(",") if o.strip()]

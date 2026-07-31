@@ -30,7 +30,11 @@ from pycocotools.coco import COCO
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
 RC = "/home/grg/Research/rf-20-vl-benchmark/datasets/RefCOCO"
-MODEL_HF = "Qwen/Qwen3-VL-8B-Instruct"
+MODEL_REGISTRY = {
+    "qwen3-vl-8b": {"hf": "Qwen/Qwen3-VL-8B-Instruct", "quantization": None},
+    "gemma-3-27b": {"hf": "google/gemma-3-27b-it", "quantization": "bitsandbytes"},
+}
+MODEL_HF = MODEL_REGISTRY["qwen3-vl-8b"]["hf"]
 MODEL_TAG = "qwen3-vl-8b"
 IMG_CAP = 1024
 
@@ -191,13 +195,28 @@ def main():
     ap.add_argument("--splits", default="testA,testB")
     ap.add_argument("--orders", default="STI,SIT,STIT,SITIT,STITI")
     ap.add_argument("--tp", type=int, default=1)
+    ap.add_argument("--model", default="qwen3-vl-8b",
+                    choices=["qwen3-vl-8b", "gemma-3-27b"])
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    global MODEL_TAG
+    MODEL_TAG = args.model
+    if args.model == "gemma-3-27b" and args.tp != 1:
+        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+        args.tp = 1
+    cfg = MODEL_REGISTRY[args.model]
+
     from vllm import LLM, SamplingParams
-    llm = LLM(model=MODEL_HF, trust_remote_code=True, dtype="float16",
-              max_model_len=24096, tensor_parallel_size=args.tp,
-              gpu_memory_utilization=0.85, limit_mm_per_prompt={"image": 2})
+    llm_kwargs = dict(model=cfg["hf"], trust_remote_code=True,
+                      max_model_len=24096, tensor_parallel_size=args.tp,
+                      gpu_memory_utilization=0.85, limit_mm_per_prompt={"image": 2})
+    if cfg["quantization"]:
+        llm_kwargs["quantization"] = cfg["quantization"]
+        llm_kwargs["load_format"] = cfg["quantization"]
+    else:
+        llm_kwargs["dtype"] = "float16"
+    llm = LLM(**llm_kwargs)
     sp = SamplingParams(temperature=0.0, max_tokens=64)
 
     datasets = [d.strip() for d in args.datasets.split(",") if d.strip()]

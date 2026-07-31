@@ -28,7 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
 IMG_CAP = 1024
 MC_SUFFIX = "\nAnswer with the option letter in parentheses, e.g. (a)."
-LETTER = re.compile(r"\(?([a-dA-D])\)?")
+LETTER_PAREN = re.compile(r"\(([A-Da-d])\)")
 
 
 HF_HUB = os.environ.get("HF_HUB_CACHE") or os.path.join(
@@ -56,7 +56,15 @@ def load_mmvp():
 
 
 def parse_letter(text):
-    m = LETTER.search(text.strip())
+    # PARENS-ONLY, deliberately no standalone-letter fallback: a verbose
+    # preamble ("Certainly! Let's take a look...") can contain the English
+    # article "a" as an isolated word, which a naive word-boundary fallback
+    # (naturalbench_eval.py's _first_letter pattern) would falsely match as
+    # the answer -- confirmed empirically on real Gemma-3-27B output. Since
+    # the prompt explicitly requests "(a)"-style formatting, requiring the
+    # parens is not a loss of recall for compliant answers, and a model that
+    # never produces the format within the token budget is honestly unparsed.
+    m = LETTER_PAREN.search(text.strip())
     return f"({m.group(1).lower()})" if m else None
 
 
@@ -106,17 +114,25 @@ def run_order(llm, sp, tag, letters, rows, log_every):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--orders", default=",".join(ORDER_LIST))
+    ap.add_argument("--model", default="qwen3-vl-8b",
+                    choices=["qwen3-vl-8b", "gemma-3-27b"])
     ap.add_argument("--tp", type=int, default=2)
     ap.add_argument("--log-every", type=int, default=50, dest="log_every")
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    global MODEL_TAG
+    MODEL_TAG = args.model  # rebinds the module-global MODEL_TAG other functions read at call time
+    if args.model == "gemma-3-27b" and args.tp != 1:
+        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+        args.tp = 1
+
     rows = load_mmvp()
     print(f"[data] {len(rows)} MMVP rows", flush=True)
 
     from vllm import SamplingParams
-    llm = make_llm(tp=args.tp)
-    sp = SamplingParams(temperature=0.0, max_tokens=16)
+    llm = make_llm(tp=args.tp, model_tag=args.model)
+    sp = SamplingParams(temperature=0.0, max_tokens=48)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:

@@ -1,0 +1,2414 @@
+{
+  "meta": {
+    "benchmark": "MMVP",
+    "ordering": "STI",
+    "model": "gemma-3-27b",
+    "engine": "vllm",
+    "n": 300,
+    "accuracy": 0.4066666666666667,
+    "runtime_s": 109.50023460388184,
+    "complete": true
+  },
+  "results": [
+    {
+      "index": 1,
+      "question": "Are the butterfly's wings closer to being open or closed?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the butterfly's wings are clearly spread out and visible. Therefore, they are closer to being **open**.\n\n(a) \n\nIs",
+      "correct": true
+    },
+    {
+      "index": 2,
+      "question": "Are the butterfly's wings closer to being open or closed?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the visible positioning of the wings, they are clearly spread out and not folded together. Therefore, the butterfly's wings are closer to being **open**.",
+      "correct": false
+    },
+    {
+      "index": 3,
+      "question": "Is the flame of the match more round or thin?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the flame in the picture, it appears to be wider at the base and tapers to a point. While it isn't a perfect circle, it's more *",
+      "correct": false
+    },
+    {
+      "index": 4,
+      "question": "Is the flame of the match more round or thin?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the flame in the picture, it appears to be wider at the base and tapers to a point. While it isn't a perfect circle, it's more *",
+      "correct": false
+    },
+    {
+      "index": 5,
+      "question": "Is the dog facing left or right from the camera's perspective?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nFrom the camera's perspective, the dog is facing towards the **left**.\n\nTherefore, the answer is: **(a)**\n\nI hope this helps! If you have any",
+      "correct": true
+    },
+    {
+      "index": 6,
+      "question": "Is the dog facing left or right from the camera's perspective?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nFrom the camera's perspective, the dog is facing **(a) Left**. \n\nI hope this helps! If you have any other questions about the image or anything else,",
+      "correct": false
+    },
+    {
+      "index": 7,
+      "question": "Is the school bus driving towards or away from the camera?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the direction of the school bus.\n\nBased on the visible details \u2013 specifically the front of the bus, the \"SCHOOL BUS\" sign, and the positioning of the headlights \u2013 it appears the",
+      "correct": false
+    },
+    {
+      "index": 8,
+      "question": "Is the school bus driving towards or away from the camera?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the view of the school bus \u2013 we are seeing its rear end \u2013 it is clearly **(b) Away from the camera**. \n\nIs there anything else I can help",
+      "correct": true
+    },
+    {
+      "index": 9,
+      "question": "Can you see the key \"Z\" in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I have examined the image you provided. \n\nI can clearly see the key \"Z\" in the image.\n\nTherefore, my answer is: **(a)**\n\nIs there anything else I can help you with today?",
+      "correct": true
+    },
+    {
+      "index": 10,
+      "question": "Can you see the key \"Z\" in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! I've examined the image you provided. \n\nBased on what is visible, I can confidently say that the key \"Z\" is **not** present in the portion of the keyboard shown.\n\nTherefore, my answer is",
+      "correct": false
+    },
+    {
+      "index": 11,
+      "question": "Has the peacock opened its tail?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, we can clearly see the magnificent display of feathers behind the peacock. This is the peacock's \"tail,\" though it's actually the elongated upper tail cover",
+      "correct": false
+    },
+    {
+      "index": 12,
+      "question": "Has the peacock opened its tail?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, the peacock is not displaying its full tail feathers in a fan-like shape. It appears to be in a more relaxed posture with its tail feathers folded down.",
+      "correct": false
+    },
+    {
+      "index": 13,
+      "question": "Is the image more likely of a single ear of corn or multiple ears",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible kernels and the way they are arranged, it appears the image shows parts of **multiple** ears of corn clustered together. You can see the distinct cylindrical shape of corn",
+      "correct": false
+    },
+    {
+      "index": 14,
+      "question": "Is the image more likely of a single ear of corn or multiple ears",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible stalks and the way they are arranged, it appears the image shows more than one ear of corn bundled together. Therefore, the answer is:\n\n**(b)**",
+      "correct": true
+    },
+    {
+      "index": 15,
+      "question": "Is there a shadow on the flower?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking closely at the photograph, it appears that part of the flower and the surrounding leaves are darker than other areas. This suggests the presence of shading, and therefore, a shadow.",
+      "correct": false
+    },
+    {
+      "index": 16,
+      "question": "Is there a shadow on the flower?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking closely at the flower, it appears to be brightly and evenly lit. There aren't any darker areas that would indicate a shadow being cast *on* the flower itself.",
+      "correct": false
+    },
+    {
+      "index": 17,
+      "question": "Is the front of the school bus protruding?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided picture, the front of the school bus is clearly visible and *is* protruding. It's the part of the bus that is facing the viewer.\n\nTherefore",
+      "correct": false
+    },
+    {
+      "index": 18,
+      "question": "Is the front of the school bus protruding?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visual information provided, the front of the school bus *is* protruding. It extends forward from the main body of the bus.\n\nTherefore, the answer is: **",
+      "correct": false
+    },
+    {
+      "index": 19,
+      "question": "Can you see the dorsal fin of the animal?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I've examined the image you sent. \n\n(a) \n\nYes, the dorsal fin of the animal (a shark) is clearly visible in the image. It's the prominent fin located on the back of",
+      "correct": true
+    },
+    {
+      "index": 20,
+      "question": "Can you see the dorsal fin of the animal?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! I'd be happy to help with that. \n\nLooking at the image, I can indeed see a portion of a dorsal fin. It's visible just behind the animal's body.\n\nTherefore, the answer is",
+      "correct": false
+    },
+    {
+      "index": 21,
+      "question": "Is the duck's entire beak visible in the picture?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, we can see that a portion of the duck's beak is visible, but not the entire beak. A part of it seems to be submerged in the water",
+      "correct": false
+    },
+    {
+      "index": 22,
+      "question": "Is the duck's entire beak visible in the picture?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, it appears that only a portion of the duck's beak is visible. The beak seems to be partially submerged in the water. Therefore, the entire beak is",
+      "correct": false
+    },
+    {
+      "index": 23,
+      "question": "From which angle is this image taken?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible features \u2013 we can see the snake's head and a significant portion of its body, but not its full length \u2013 the image is taken from the **side**.",
+      "correct": false
+    },
+    {
+      "index": 24,
+      "question": "From which angle is this image taken?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible features \u2013 we can see the snake's head and body in a relatively elongated view, rather than a direct face-on view \u2013 the image is taken from the",
+      "correct": false
+    },
+    {
+      "index": 25,
+      "question": "What color is the chicken's body?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image provided, the chicken's body appears to be primarily **(a) Black**. \n\nWhile there are some areas of lighter coloration and iridescence, the overall body plumage is a dark, black shade",
+      "correct": true
+    },
+    {
+      "index": 26,
+      "question": "What color is the chicken's body?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image provided, the chicken's body appears to be a reddish-brown color. \n\nTherefore, the answer is **(b) Red**. \n\nIs there anything else I can help you with regarding this",
+      "correct": true
+    },
+    {
+      "index": 27,
+      "question": "Is the peacock's head visible in the image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! I'd be happy to help with that. \n\nLooking at the image, the peacock's head is clearly visible. It's a beautiful, vibrant blue and is prominently featured in the foreground.\n\nTherefore, the",
+      "correct": false
+    },
+    {
+      "index": 28,
+      "question": "Is the peacock's head visible in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, which focuses closely on the beautiful, iridescent feathers of a peacock's tail, the peacock's head is **not** visible. The image is a",
+      "correct": false
+    },
+    {
+      "index": 29,
+      "question": "Based on the image, is the following statement correct: We cannot see the window on the school bus?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine if the statement is correct.\n\nBased on the provided image, we are looking at a close-up of the side of a school bus. We can see the yellow exterior, the \"",
+      "correct": false
+    },
+    {
+      "index": 30,
+      "question": "Based on the image, is the following statement correct: We cannot see the window on the school bus?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine if the statement is correct.\n\nLooking at the image, we *can* clearly see the large window of the school bus. It's the dark, transparent area directly behind the \"",
+      "correct": false
+    },
+    {
+      "index": 31,
+      "question": "Is the wind blowing the flag?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the flag is visibly waving and appears to be in motion. This strongly suggests that wind is indeed affecting it. \n\nTherefore, the answer is: (a)",
+      "correct": true
+    },
+    {
+      "index": 32,
+      "question": "Is the wind blowing the flag?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the way the flag is waving and not hanging straight down, it appears the wind *is* affecting it. Therefore, the answer is:\n\n(a) \n\nI",
+      "correct": false
+    },
+    {
+      "index": 33,
+      "question": "Is the butterfly's abdomen visible in the image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided image, the butterfly's abdomen *is* partially visible. It's the slender section extending from the thorax (the middle part of the body",
+      "correct": false
+    },
+    {
+      "index": 34,
+      "question": "Is the butterfly's abdomen visible in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided image, the butterfly's abdomen *is* partially visible. It's the darker, more slender section of the body connecting the thorax (the",
+      "correct": false
+    },
+    {
+      "index": 35,
+      "question": "Do the vegetables have spikes?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture of the cucumbers, it appears they have small, bumpy projections that could be considered spikes. So, the answer is:\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 36,
+      "question": "Do the vegetables have spikes?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the vegetables (which appear to be cucumbers) have small, prickly bumps on their surface. While not sharp spikes in the traditional sense, they do",
+      "correct": false
+    },
+    {
+      "index": 37,
+      "question": "What color are the flowers in the background?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I'd be happy to help with that. \n\nLooking at the image, the flowers in the background appear to be **(a) Pink**. They have a lovely, delicate pink hue. \n\nIs there anything else",
+      "correct": true
+    },
+    {
+      "index": 38,
+      "question": "What color are the flowers in the background?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the flowers in the background appear to be **(b) Violet**. \n\nThey have a lovely lavender-purple hue, which is within the violet color family. I'm happy to help if you",
+      "correct": true
+    },
+    {
+      "index": 39,
+      "question": "Is the duck floating?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the duck appears to be resting *on* the water's surface. \n\nTherefore, the answer is **(a)**. \n\nIs there anything else I can help you with regarding this image",
+      "correct": true
+    },
+    {
+      "index": 40,
+      "question": "Is the duck floating?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the duck is sitting *on* a rock, and the rock is in water. However, the duck itself is not submerged in the water, nor does it",
+      "correct": false
+    },
+    {
+      "index": 41,
+      "question": "Based on the image, is the following statement correct: The spider has 8 legs?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nUpon examining the image, we can clearly see that the spider has eight legs extending from its body. This is a characteristic feature of spiders.\n\nTherefore, the statement \"The spider has",
+      "correct": false
+    },
+    {
+      "index": 42,
+      "question": "Based on the image, is the following statement correct: The spider has 8 legs?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the image, we can clearly see that the spider has eight legs extending from its body. Spiders are arachnids, and a defining characteristic of arachnids is having",
+      "correct": false
+    },
+    {
+      "index": 43,
+      "question": "Are the wheels of the school bus visible in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, we can see the tires of the school buses. Therefore, the wheels are visible.\n\n**(a)** \n\nIs there anything else I can help you",
+      "correct": true
+    },
+    {
+      "index": 44,
+      "question": "Are the wheels of the school bus visible in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided image, the wheels of the school bus are not visible. The image focuses on the upper portion of the bus, specifically the \"SCHOOL BUS\" lettering",
+      "correct": false
+    },
+    {
+      "index": 45,
+      "question": "Is the shark's belly visible in this image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the angle and what is visible in the photograph, we can see the underside of the shark. Therefore, the shark's belly *is* visible.",
+      "correct": false
+    },
+    {
+      "index": 46,
+      "question": "Is the shark's belly visible in this image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the shark's position and the angle of the photograph, we primarily see the shark's back and side. The belly is not visible in this view.\n\nTherefore,",
+      "correct": false
+    },
+    {
+      "index": 47,
+      "question": "How many spots are on the animal in the image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nUpon careful examination of the butterfly's wings, I can see there are **six** distinct spots. \n\nTherefore, the answer is **(b)**.",
+      "correct": false
+    },
+    {
+      "index": 48,
+      "question": "How many spots are on the animal in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nUpon careful examination of the butterfly's wings, I can see there are **6** distinct spots. \n\nTherefore, the answer is **(b)**.",
+      "correct": true
+    },
+    {
+      "index": 49,
+      "question": "Are the arrow keys visible in the image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)\n\nCertainly! After carefully examining the image, I can confirm that the arrow keys are **not** clearly visible. The image focuses on a portion of the keyboard, and the arrow keys are not within the frame or are too",
+      "correct": false
+    },
+    {
+      "index": 50,
+      "question": "Are the arrow keys visible in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)\n\nCertainly! I've examined the image you sent. The image shows a close-up of keyboard keys including \"H\", \"J\", \"K\", and \"N\".  I do not see any of the typical",
+      "correct": true
+    },
+    {
+      "index": 51,
+      "question": "Is the elephant's trunk curled in the picture?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the elephant's trunk is slightly bent downwards, but it isn't tightly curled. It appears to be relaxed and gently curving.\n\nTherefore",
+      "correct": false
+    },
+    {
+      "index": 52,
+      "question": "Is the elephant's trunk curled in the picture?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the elephant's trunk is not fully curled, but it does have a slight curve downwards. However, it isn't tightly curled. Therefore",
+      "correct": false
+    },
+    {
+      "index": 53,
+      "question": "Is the number of pills in the image in the range of countable?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the image, the number of pills appears to be relatively small. It is definitely possible to count each individual pill present. Therefore, the number of pills falls within a range that",
+      "correct": false
+    },
+    {
+      "index": 54,
+      "question": "Is the number of pills in the image in the range of countable?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the image, the number of pills appears to be finite. While there are a good number of them, it is definitely possible to count each individual pill, even if it would",
+      "correct": false
+    },
+    {
+      "index": 55,
+      "question": "Can you see stems of bananas in the image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, I can see the very bottom part of what appears to be the stem of the banana at the bottom of the frame. While it's not a full",
+      "correct": false
+    },
+    {
+      "index": 56,
+      "question": "Can you see stems of bananas in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the close-up view of the bananas, it appears we are looking at the fruit themselves, and not the stems or parts where they connect to the plant. Therefore, we",
+      "correct": false
+    },
+    {
+      "index": 57,
+      "question": "Is the crocodile submerged in the water?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided picture, we can see that only the crocodile's head is visible above the water line. The rest of its body appears to be hidden *under* the water",
+      "correct": false
+    },
+    {
+      "index": 58,
+      "question": "Is the crocodile submerged in the water?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, a significant portion of the crocodile's body is visible *above* the water line. While it's near the water, it isn't fully submerged",
+      "correct": false
+    },
+    {
+      "index": 59,
+      "question": "Is the lock locked to the chain-linked fence?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the lock is indeed securing the chain-linked fence. \n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 60,
+      "question": "Is the lock locked to the chain-linked fence?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visual evidence, the lock is indeed securing the chain to the fence. The shackle of the lock is going *through* the links of the chain, and the lock",
+      "correct": false
+    },
+    {
+      "index": 61,
+      "question": "Can you see letter \"J\" in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I've examined the image you sent. \n\nYes, the letter \"J\" is clearly visible on one of the keyboard keys in the image.\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 62,
+      "question": "Can you see letter \"J\" in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nAfter carefully examining the keyboard keys visible in the image, I can confirm that the letter \"J\" is **not** present within the view.\n\nTherefore, the answer",
+      "correct": false
+    },
+    {
+      "index": 63,
+      "question": "Is the following statement correct: In the image, there is one daisy that is under the shadow of a taller daisy.",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking closely, we can see several daisies. There is indeed a daisy that appears to be partially obscured by the shadow cast by a taller daisy in front of it.\n\nTherefore, the",
+      "correct": false
+    },
+    {
+      "index": 64,
+      "question": "Is the following statement correct: In the image, there is one daisy that is under the shadow of a taller daisy.",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)\n\n**Explanation:**\n\nUpon careful examination of the image, it appears that all the daisies are illuminated by the same light source. There isn't a clear indication of one daisy casting a shadow onto another. The lighting seems",
+      "correct": true
+    },
+    {
+      "index": 65,
+      "question": "Is the following statement correct: There is no letter D on this image.",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)\n\n**Explanation:**\n\nUpon carefully examining the image, we can see the keys \"F\", \"G\", \"H\", \"B\", \"N\", \"V\", \"Y\", \"U\", \"T\", \"R",
+      "correct": true
+    },
+    {
+      "index": 66,
+      "question": "Is the following statement correct: There is no letter D on this image.",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)\n\nCertainly! After carefully examining the image, I can see the letter \"D\" is present on the keyboard. It's located near the left side of the keyboard, below the \"F\" key. Therefore, the",
+      "correct": true
+    },
+    {
+      "index": 67,
+      "question": "Are there any clouds?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image you've provided, I can see a few wispy clouds in the sky. \n\nTherefore, the answer is **(a)**. \n\nIs there anything else I can help you with regarding this",
+      "correct": true
+    },
+    {
+      "index": 68,
+      "question": "Are there any clouds?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Based on the image you've provided, it appears there is a very thin haze or perhaps some high, wispy clouds on the horizon. However, the sky is predominantly clear. \n\nTherefore, the most accurate answer would",
+      "correct": false
+    },
+    {
+      "index": 69,
+      "question": "Did the snake stick out its tongue and touch its skin?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided picture, it appears the snake *is* sticking its tongue out, but it is not touching its skin. The tongue is extended outwards.\n\nTherefore, the answer",
+      "correct": false
+    },
+    {
+      "index": 70,
+      "question": "Did the snake stick out its tongue and touch its skin?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided picture, the snake's tongue is not visibly extended and touching its skin. It appears to be coiled and resting.\n\nTherefore, the answer is: **(",
+      "correct": false
+    },
+    {
+      "index": 71,
+      "question": "Is the lock locked or unlocked?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image provided, the lock appears to be **(a) Locked**. \n\nThe padlock is visibly securing the hasp, and there's no indication that it has been opened. It looks like a combination lock",
+      "correct": true
+    },
+    {
+      "index": 72,
+      "question": "Is the lock locked or unlocked?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image provided, the lock appears to be **(a) Locked**. \n\nThe shackle of the lock is clearly going through the hasp and is secured by the lock body. This indicates that it is currently",
+      "correct": false
+    },
+    {
+      "index": 73,
+      "question": "Is the ground wet?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image provided, it appears the ground is indeed wet. There are visible dark patches and a sheen on the surface where the bicycle is resting. \n\nTherefore, the answer is: **(a)** \n\nIs",
+      "correct": true
+    },
+    {
+      "index": 74,
+      "question": "Is the ground wet?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image provided, the ground appears to be dry. There are no visible signs of water or wetness on the concrete surface where the bicycle is resting. \n\nTherefore, the answer is: **(b)**",
+      "correct": true
+    },
+    {
+      "index": 75,
+      "question": "Do you see this flower from the top or the side?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, we are looking at the flower from a slightly angled **top** view. \n\n(a) \n\nWe can see the top of the flower head with its petals, but the angle also allows us",
+      "correct": true
+    },
+    {
+      "index": 76,
+      "question": "Do you see this flower from the top or the side?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, we are viewing the flower from a slightly angled **(a) Top** perspective. \n\nWhile not *directly* overhead, the image captures the flower head from above, allowing us to see the details",
+      "correct": false
+    },
+    {
+      "index": 77,
+      "question": "Can you see the caudal fin of the shark in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I've examined the image you sent. \n\n(a)\n\nYes, the caudal fin (tail fin) of the shark is clearly visible in the image. It's the fin at the very back of the shark",
+      "correct": true
+    },
+    {
+      "index": 78,
+      "question": "Can you see the caudal fin of the shark in the image?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! I've examined the image you sent. \n\n(a) \n\nYes, the caudal fin (tail fin) of the shark is visible in the image. It's the fin at the very rear of the shark",
+      "correct": false
+    },
+    {
+      "index": 79,
+      "question": "In the image, is the snake's head oriented facing upwards or directed forwards?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the positioning of the snake's head in relation to its body, it appears to be oriented **upwards**. The head is raised and angled towards the top of the frame",
+      "correct": false
+    },
+    {
+      "index": 80,
+      "question": "In the image, is the snake's head oriented facing upwards or directed forwards?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, the snake's head is oriented **(b) Forward**. \n\nIt appears to be looking directly towards the viewer, with its snout pointing in that",
+      "correct": true
+    },
+    {
+      "index": 81,
+      "question": "Is this a hammerhead shark?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the distinctive head shape \u2013 a flattened and extended area on either side, often referred to as a \"cephalofoil\" \u2013 it is indeed a hammerhead shark",
+      "correct": false
+    },
+    {
+      "index": 82,
+      "question": "Is this a hammerhead shark?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the shape of the head and the fin placement, it does **not** appear to be a hammerhead shark. Hammerhead sharks are very distinctive due to their",
+      "correct": false
+    },
+    {
+      "index": 83,
+      "question": "Is the door of the truck cab open?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided picture, the driver-side door of the truck cab is indeed open.\n\n**(a)** \n\nIs there anything else I can help you with regarding this image",
+      "correct": true
+    },
+    {
+      "index": 84,
+      "question": "Is the door of the truck cab open?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine if the truck cab door is open. \n\nLooking at the provided picture, the driver's side door of the truck cab appears to be open.\n\nTherefore, the answer is:",
+      "correct": false
+    },
+    {
+      "index": 85,
+      "question": "Are the ears of the dog erect or drooping?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image provided, the dog's ears are **(a) Erect**. \n\nThey are standing up and pointed forward, rather than hanging down. It's a lovely Border Collie, and they often have naturally",
+      "correct": true
+    },
+    {
+      "index": 86,
+      "question": "Are the ears of the dog erect or drooping?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the dog's ears are **(a) Erect**. They are standing up and pointed, rather than falling or drooping down. \n\nIs",
+      "correct": false
+    },
+    {
+      "index": 87,
+      "question": "Is there a hand using the mouse in the image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, it appears there *is* a hand using a mouse. A portion of a hand is visible gripping a blue mouse on the right side of the image.",
+      "correct": false
+    },
+    {
+      "index": 88,
+      "question": "Is there a hand using the mouse in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, which shows a close-up of a laptop keyboard, there is **no** visible hand or evidence of a hand using a mouse.\n\nTherefore, the",
+      "correct": false
+    },
+    {
+      "index": 89,
+      "question": "Can you see people in this image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I've examined the image you sent. \n\n(a)\n\nI can see a single figure, appearing to be a person, walking down the steps in the foreground of the image. It's a small figure,",
+      "correct": true
+    },
+    {
+      "index": 90,
+      "question": "Can you see people in this image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! I've examined the image you sent. \n\n(b)\n\nIt appears there are no clearly visible people in the image. The focus is on the Dome of the Rock, and while there might be very small figures present",
+      "correct": true
+    },
+    {
+      "index": 91,
+      "question": "Are there any words displayed on the vehicle's lightbar?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nYes, the word \"POLIZEI\" is displayed on the lightbar.\n\nTherefore, the answer is **(a)**. \n\nIs there anything else I",
+      "correct": true
+    },
+    {
+      "index": 92,
+      "question": "Are there any words displayed on the vehicle's lightbar?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nLooking closely at the lightbar on the vehicle, it does not appear to have any visible words displayed on it. \n\nTherefore, the answer is **(b)**.\n\nIf",
+      "correct": true
+    },
+    {
+      "index": 93,
+      "question": "Is there any accessory on the wrists?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, it appears there *is* an accessory on the wrist. \n\n**(a)** \n\nIt looks like a dark-colored wristband or watch is visible on the left wrist in the image. I",
+      "correct": true
+    },
+    {
+      "index": 94,
+      "question": "Is there any accessory on the wrists?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, it appears there are no visible accessories on the wrists of the person typing.\n\nTherefore, the answer is: **(b)**\n\nI hope this is",
+      "correct": true
+    },
+    {
+      "index": 95,
+      "question": "From the camera's perspective, is the spider web very dense or relatively sparse?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the photograph, the spider web appears to have a lot of interconnected strands and a complex structure. While there are some open areas, overall it seems to be quite filled with webbing",
+      "correct": false
+    },
+    {
+      "index": 96,
+      "question": "From the camera's perspective, is the spider web very dense or relatively sparse?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the photograph, the spider web appears to have a great many strands closely packed together. There isn't much empty space visible within the structure of the web.\n\nTherefore,",
+      "correct": false
+    },
+    {
+      "index": 97,
+      "question": "Does the keyboard have a backlight?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, it appears the keyboard *does* have a backlight. You can see a glow emanating from beneath the keys. \n\nTherefore, the answer is **(a)**. \n\nIs there anything else I",
+      "correct": true
+    },
+    {
+      "index": 98,
+      "question": "Does the keyboard have a backlight?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image provided, it appears the keyboard **does** have a backlight. The keys are illuminated, suggesting a light source is shining from behind them. \n\nTherefore, the answer is: **(a)**\n\nIs",
+      "correct": false
+    },
+    {
+      "index": 99,
+      "question": "Does the elephant have long or short tusks?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image and general knowledge, the answer is:\n\n(a) \n\nElephants are well-known for having **long** tusks. These tusks are actually elongated incisor teeth that grow continuously throughout their",
+      "correct": true
+    },
+    {
+      "index": 100,
+      "question": "Does the elephant have long or short tusks?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image provided, the elephant clearly has **long** tusks. \n\nTherefore, the answer is **(a)**.\n\nIt's wonderful you're curious about elephants! Their tusks are actually elongated",
+      "correct": false
+    },
+    {
+      "index": 101,
+      "question": "What is the woman more likely to do?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Based on the image, the woman in the yellow shirt is in the motion of preparing to play volleyball. Her arm is extended, and she appears to be getting ready to hit the ball. \n\nTherefore, she is more likely to **",
+      "correct": false
+    },
+    {
+      "index": 102,
+      "question": "What is the woman more likely to do?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Based on the image, the woman is in a position to **bump** the volleyball. Her arms are raised and bent, ready to make contact with the ball in a bumping motion. \n\nTherefore, the answer is **(a)**",
+      "correct": false
+    },
+    {
+      "index": 103,
+      "question": "Is the needle pointing up or down?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the orientation in the picture, the needle is pointing **(a) Up**. \n\nI hope this helps! If you have any other questions or would like",
+      "correct": true
+    },
+    {
+      "index": 104,
+      "question": "Is the needle pointing up or down?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image provided, the needle is pointing **down** (b). \n\nIs there anything else I can help you with regarding this image or another topic?",
+      "correct": true
+    },
+    {
+      "index": 105,
+      "question": "Is the camera positioned at eye level or looking down from above?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the perspective, the camera is positioned **looking down from above**. The slight angle and how the objects are presented suggest the camera wasn't at the same height as the apple",
+      "correct": false
+    },
+    {
+      "index": 106,
+      "question": "Is the camera positioned at eye level or looking down from above?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the perspective, the camera is positioned **looking down from above** at the apple. We can tell this because we are seeing the top of the apple and a slight curve of",
+      "correct": false
+    },
+    {
+      "index": 107,
+      "question": "Are the butterfly's feet visible?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided picture, we can see the butterfly's legs (or feet) are indeed visible. They are slender and dark in color, extending from the body",
+      "correct": false
+    },
+    {
+      "index": 108,
+      "question": "Are the butterfly's feet visible?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nButterflies don't have feet that are typically visible in the way we think of feet on other animals. However, they *do* have legs with tiny claws at",
+      "correct": false
+    },
+    {
+      "index": 109,
+      "question": "Are the bird's wings flapping upward or downward?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the direction of the bird's wing flaps.\n\nLooking at the photo, the wings appear to be blurred in a way that suggests they are moving **upward**. This is because the",
+      "correct": false
+    },
+    {
+      "index": 110,
+      "question": "Are the bird's wings flapping upward or downward?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the direction of the bird's wing movement.\n\nLooking at the hummingbird in the picture, the wings are positioned with the tips angled **upward**. This indicates that the wings are in",
+      "correct": false
+    },
+    {
+      "index": 111,
+      "question": "Is the end of the elephant's trunk pointing inward or outward?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image provided, the end of the elephant's trunk is pointing **outward**.\n\n(b)\n\nIs there anything else I can help you with",
+      "correct": false
+    },
+    {
+      "index": 112,
+      "question": "Is the end of the elephant's trunk pointing inward or outward?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image provided, the end of the elephant's trunk is pointing **(b) Outward**. \n\nIt's a great question! Elephants",
+      "correct": true
+    },
+    {
+      "index": 113,
+      "question": "Do you see any window in this image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, I can see a small window in the building behind the red postbox. It's a rectangular window with white frames.\n\nTherefore, the answer is:",
+      "correct": false
+    },
+    {
+      "index": 114,
+      "question": "Do you see any window in this image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image of a red post box, I can see a small opening for mail to be deposited. However, it doesn't appear to have a transparent glass pane like",
+      "correct": false
+    },
+    {
+      "index": 115,
+      "question": "Is the snail in the picture facing the camera or away from the camera?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible features \u2013 specifically the position of the snail's body and the direction its head (and antennae) are pointing \u2013 it appears the snail is **facing away from the",
+      "correct": false
+    },
+    {
+      "index": 116,
+      "question": "Is the snail in the picture facing the camera or away from the camera?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible features \u2013 particularly the position of the snail's eyestalks and the direction it appears to be moving \u2013 it seems the snail is **(b) Facing",
+      "correct": true
+    },
+    {
+      "index": 117,
+      "question": "How many eyes of the cat can you see in the picture?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, we can clearly see one eye of the cat. While we know cats have two eyes, only one is fully visible in this view.\n\nTherefore",
+      "correct": false
+    },
+    {
+      "index": 118,
+      "question": "How many eyes of the cat can you see in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the picture. \n\nI can clearly see both of the cat's eyes in the image. Therefore, the answer is:\n\n**(b)** \n\nIs there anything else I can help",
+      "correct": true
+    },
+    {
+      "index": 119,
+      "question": "In this image, how many eyes can you see on the animal?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nI can clearly see two eyes on the animal in the picture. \n\nTherefore, the answer is **(b)**.\n\nIs there anything else I can help you",
+      "correct": false
+    },
+    {
+      "index": 120,
+      "question": "In this image, how many eyes can you see on the animal?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nI can clearly see two eyes on the animal in the picture. Therefore, the answer is:\n\n**(b)** \n\nIs there anything else I can help you with",
+      "correct": true
+    },
+    {
+      "index": 121,
+      "question": "Does this corn have white kernels?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image you've provided, I can see that the corn does indeed have kernels that are white, alongside yellow kernels. \n\nTherefore, the answer is **(a)**. \n\nIs there anything else I",
+      "correct": true
+    },
+    {
+      "index": 122,
+      "question": "Does this corn have white kernels?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image you've provided, the corn kernels appear to be yellow. \n\nTherefore, the answer is **(b)**. \n\nIs there anything else I can help you with today?",
+      "correct": true
+    },
+    {
+      "index": 123,
+      "question": "Is this duck facing left or right from the camera's perspective?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! I'd be happy to help you determine which direction the duck is facing. \n\nLooking at the image, the duck's beak is pointing towards the left side of the frame. Therefore, from the camera's perspective",
+      "correct": false
+    },
+    {
+      "index": 124,
+      "question": "Is this duck facing left or right from the camera's perspective?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the direction the duck's beak is pointing, and the way its body is oriented, the duck is facing **(b) Right** from the camera's perspective.",
+      "correct": true
+    },
+    {
+      "index": 125,
+      "question": "Can you see a door in this image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! I've examined the image you sent. \n\nBased on what I can see, there appears to be a door visible in the background, near the projection equipment. It's a bit subtle, but it's there",
+      "correct": false
+    },
+    {
+      "index": 126,
+      "question": "Can you see a door in this image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! I've examined the image you sent. \n\nBased on what I can see, the answer is **(b)**. \n\nThe image depicts the interior of a movie theater with rows of seats and a large screen.",
+      "correct": true
+    },
+    {
+      "index": 127,
+      "question": "Is the flower's center protruding or indented?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image you've provided, the flower's center appears to be **(a) Protruding**. \n\nThe yellow center is raised and stands out from the surrounding white petals, giving it a protruding appearance",
+      "correct": true
+    },
+    {
+      "index": 128,
+      "question": "Is the flower's center protruding or indented?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image you've provided, the flower's center appears to be **(a) Protruding**. \n\nThe yellow disc florets in the center are raised above the level of the white ray florets",
+      "correct": false
+    },
+    {
+      "index": 129,
+      "question": "From the camera's perspective, are the words \"SCHOOL BUS\" in the picture facing straight or oriented at an angle?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the perspective, the words \"SCHOOL BUS\" appear to be **(a) Directly towards the camera**. \n\nIt seems the camera is positioned in a way that captures the",
+      "correct": true
+    },
+    {
+      "index": 130,
+      "question": "From the camera's perspective, are the words \"SCHOOL BUS\" in the picture facing straight or oriented at an angle?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the perspective in the picture, the words \"SCHOOL BUS\" are **(b) At an angle**. \n\nIt appears the camera is positioned slightly to the side and below",
+      "correct": true
+    },
+    {
+      "index": 131,
+      "question": "Where is the yellow animal's head lying in this image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine where the yellow animal's head is lying. \n\nBased on the image, the yellow animal's head is resting on the **carpet**.\n\nTherefore, the answer is: **",
+      "correct": false
+    },
+    {
+      "index": 132,
+      "question": "Where is the yellow animal's head lying in this image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine where the yellow animal's head is lying. \n\nBased on the image, the yellow animal's head is resting on the **carpet**.\n\nTherefore, the answer is: **",
+      "correct": false
+    },
+    {
+      "index": 133,
+      "question": "What does the center button say?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nThe center button clearly says \"OK SELECT\".\n\nTherefore, the answer is **(a)**. \n\nIs there anything else I can help you with today?",
+      "correct": true
+    },
+    {
+      "index": 134,
+      "question": "What does the center button say?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image provided, the center button clearly says **OK**.\n\nTherefore, the answer is **(b)**. \n\nIs there anything else I can help",
+      "correct": true
+    },
+    {
+      "index": 135,
+      "question": "How many cup(s) of drink are there in the image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the close-up view of a glass containing a dark liquid (likely wine or a similar beverage), it appears there is **one** cup of drink visible.\n\nTherefore,",
+      "correct": false
+    },
+    {
+      "index": 136,
+      "question": "How many cup(s) of drink are there in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visual details, I can see two glasses that appear to contain drinks. One is more clearly in focus with a reddish liquid, and another is slightly blurred in the background.",
+      "correct": false
+    },
+    {
+      "index": 137,
+      "question": "In the picture, how is the snake primarily positioned?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I'd be happy to help you with that. \n\nLooking at the image, the snake is primarily positioned in a **(a) Coiled** manner. It appears to be wrapped around a branch or object, forming",
+      "correct": true
+    },
+    {
+      "index": 138,
+      "question": "In the picture, how is the snake primarily positioned?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, the snake is not tightly wound up in a coil. Instead, it appears to be stretching out with its **head extended** forward.\n\nTherefore, the answer",
+      "correct": false
+    },
+    {
+      "index": 139,
+      "question": "Can you see the side windows of the vehicles?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided image, it is difficult to see the side windows of the vehicle. The image focuses on the front portion of the ambulance, and the side windows are",
+      "correct": false
+    },
+    {
+      "index": 140,
+      "question": "Can you see the side windows of the vehicles?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image of the ambulance, we can see the front windshield clearly. However, the side windows are not visible in this frontal view. \n\nTherefore, the answer is",
+      "correct": false
+    },
+    {
+      "index": 141,
+      "question": "Is the elephant's trunk raised or lowered?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the photograph, the elephant's trunk is **(b) Lowered**. It appears to be extending downwards and slightly to the side. \n\nIs there",
+      "correct": false
+    },
+    {
+      "index": 142,
+      "question": "Is the elephant's trunk raised or lowered?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the elephant's trunk is **(b) Lowered**. It appears to be reaching towards the ground or vegetation. \n\nIs there anything",
+      "correct": true
+    },
+    {
+      "index": 143,
+      "question": "Is the ladybug positioned upright or upside down?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the typical anatomy of a ladybug \u2013 with its legs extending downwards for walking \u2013 it appears the ladybug in the image is positioned **(a) Upright",
+      "correct": true
+    },
+    {
+      "index": 144,
+      "question": "Is the ladybug positioned upright or upside down?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the ladybug's body orientation and how it's clinging to the leaf, it appears to be **(b) Upside down**. \n\nIt",
+      "correct": true
+    },
+    {
+      "index": 145,
+      "question": "Is the photo taken looking down from above or looking up from below?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the perspective, the photo appears to be taken **(a) Looking down from above**. \n\nHere's why: We are viewing the contents of the glass from a",
+      "correct": true
+    },
+    {
+      "index": 146,
+      "question": "Is the photo taken looking down from above or looking up from below?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the angle and perspective, the photo appears to be taken **(b) Looking up from below**. \n\nHere's why: The wine glass is positioned in a way",
+      "correct": true
+    },
+    {
+      "index": 147,
+      "question": "In the picture, is the snake's head visible or not visible?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the snake's head *is* visible. We can clearly see the triangular shape of the head and the eyes.\n\nTherefore, the answer is: (",
+      "correct": false
+    },
+    {
+      "index": 148,
+      "question": "In the picture, is the snake's head visible or not visible?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided picture, the snake's head is **not visible**. The image shows the snake's body winding across the concrete, but the head is obscured and out of",
+      "correct": false
+    },
+    {
+      "index": 149,
+      "question": "Is the piano's back panel on the left or right side?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the perspective and the way the piano is positioned in the image, the back panel appears to be on the **right** side.\n\nTherefore, the answer is",
+      "correct": false
+    },
+    {
+      "index": 150,
+      "question": "Is the piano's back panel on the left or right side?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the perspective shown, the back panel of the piano appears to be on the **left** side. \n\nTherefore, the answer is **(a)**.",
+      "correct": false
+    },
+    {
+      "index": 151,
+      "question": "The image captures a woman running from:",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Okay, I'm ready to analyze the image and answer your question! \n\nBased on the image provided, the woman is captured from a **(a)** back view. \n\nIs there anything else I can help you with regarding",
+      "correct": true
+    },
+    {
+      "index": 152,
+      "question": "The image captures a woman running from:",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the depiction, the woman is primarily shown from a **(b)** side view. We can see the profile of her body as she is in motion. \n\nIs there",
+      "correct": true
+    },
+    {
+      "index": 153,
+      "question": "How many red apples are there in the image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nI can see two red apples in the picture. Therefore, the answer is:\n\n**(b)** \n\nIs there anything else I can help you with regarding this image",
+      "correct": false
+    },
+    {
+      "index": 154,
+      "question": "How many red apples are there in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the number of red apples. \n\nLooking at the image, I can see several red apples in the lower right corner and one in the upper left corner. Therefore, there is **more",
+      "correct": false
+    },
+    {
+      "index": 155,
+      "question": "Is the vase beside the bedside table or on the windowsill?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the vase appears to be **(a) Beside the bedside table**. It's visible on the surface next to the bedside table, with some",
+      "correct": true
+    },
+    {
+      "index": 156,
+      "question": "Is the vase beside the bedside table or on the windowsill?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the vase's location. \n\nLooking at the picture, the vase with the flowers is clearly visible on top of the surface *beside* the bedside table. \n\nTherefore,",
+      "correct": false
+    },
+    {
+      "index": 157,
+      "question": "Is the frame at the front of the motorcycle primarily silver or black in color?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided image, the frame at the front of the motorcycle is primarily **silver** in color. \n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 158,
+      "question": "Is the frame at the front of the motorcycle primarily silver or black in color?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided image of the motorcycle, the frame at the front appears to be primarily **black** in color. \n\nTherefore, the answer is: **(",
+      "correct": false
+    },
+    {
+      "index": 159,
+      "question": "For the people operating the machine in the image, can you see one arm or both arms?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on what is visible, we can see **one arm** of the person operating the machine. The other arm is not visible in the frame.\n\nTherefore, the answer is:",
+      "correct": false
+    },
+    {
+      "index": 160,
+      "question": "For the people operating the machine in the image, can you see one arm or both arms?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on what is visible in the picture, we can see both arms of the person operating the machine. One arm is extended and holding tools, and the other is bent and resting on",
+      "correct": false
+    },
+    {
+      "index": 161,
+      "question": "Is the minute hand of the clock closer to 12 or closer to 1?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the position of the minute hand.\n\nLooking at the clock face, the minute hand is pointing very close to the number 12. Therefore, it is much closer to 12",
+      "correct": false
+    },
+    {
+      "index": 162,
+      "question": "Is the minute hand of the clock closer to 12 or closer to 1?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine where the minute hand is closest to.\n\nLooking at the clock in the image, the minute hand is pointing very close to the number 12. \n\nTherefore, the answer is",
+      "correct": false
+    },
+    {
+      "index": 163,
+      "question": "Is the Christmas tree positioned in front of a large window or in front of a wall situated between two windows?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the Christmas tree's position. \n\nBased on the visual evidence, the Christmas tree is positioned **in front of a wall situated between two windows**. We can see windows on both sides",
+      "correct": false
+    },
+    {
+      "index": 164,
+      "question": "Is the Christmas tree positioned in front of a large window or in front of a wall situated between two windows?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the Christmas tree's positioning. \n\nBased on the visible windows on either side of the tree, it appears the tree is positioned **in front of a wall situated between two windows**.",
+      "correct": false
+    },
+    {
+      "index": 165,
+      "question": "In this image, are the berries placed",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the berries appear to be placed **(b) In bowls of yogurts**. \n\nYou can see a small bowl containing a mix of red and blue berries",
+      "correct": false
+    },
+    {
+      "index": 166,
+      "question": "In this image, are the berries placed",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)\n\nCertainly! Based on the image, the berries appear to be placed in bowls of yogurt. You can see a white bowl with a mix of red and blue berries, and it looks like they are sitting on top of a",
+      "correct": true
+    },
+    {
+      "index": 167,
+      "question": "Are some fruits cut open or are all the fruits uncut?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine if the fruits are cut open or uncut. \n\nLooking at the picture, we can see that the kiwi fruit is cut open, revealing its green flesh with seeds. The orange is also",
+      "correct": false
+    },
+    {
+      "index": 168,
+      "question": "Are some fruits cut open or are all the fruits uncut?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, we can see that the apple has a piece cut out of it. Therefore, not all the fruits are uncut.\n\n(a)",
+      "correct": false
+    },
+    {
+      "index": 169,
+      "question": "Is there a knee visible in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, it appears that a portion of a knee is visible belonging to the man on the right. \n\nTherefore, the answer is: **(a)**.",
+      "correct": true
+    },
+    {
+      "index": 170,
+      "question": "Is there a knee visible in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the provided image, no knees are visible. The photo focuses on the upper bodies of the two individuals.\n\nTherefore, the answer is: **(b)**\n\nIf you",
+      "correct": true
+    },
+    {
+      "index": 171,
+      "question": "Does the snowman in the picture have a mouth?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the picture. \n\nYes, the snowman in the picture does indeed have a mouth. It's a small, curved line represented by a red arc. \n\nTherefore, the answer is",
+      "correct": false
+    },
+    {
+      "index": 172,
+      "question": "Does the snowman in the picture have a mouth?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the snowman does indeed have a mouth \u2013 it's represented by a small, orange carrot!\n\nTherefore, the answer is **(a)**",
+      "correct": false
+    },
+    {
+      "index": 173,
+      "question": "Is the decoration on the Easter egg flat or raised?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the visual details, the decoration on the Easter eggs appears to be **(a) Flat**. \n\nThe patterns seem to be painted directly onto the surface of",
+      "correct": true
+    },
+    {
+      "index": 174,
+      "question": "Is the decoration on the Easter egg flat or raised?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the visual details, the decoration on the Easter eggs appears to be **(a) Flat**. \n\nThe dots seem to be painted *onto* the surface",
+      "correct": false
+    },
+    {
+      "index": 175,
+      "question": "In the image, is the nail polish on the toes dark or light in color?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine the color of the nail polish. \n\nBased on the image, the nail polish on the toes appears to be a **dark** shade of red.\n\nTherefore, the answer is:",
+      "correct": false
+    },
+    {
+      "index": 176,
+      "question": "In the image, is the nail polish on the toes dark or light in color?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visual information, the nail polish on the toes appears to be **light** in color. It seems to be a pale or silvery shade.\n\nTherefore, the answer is",
+      "correct": false
+    },
+    {
+      "index": 177,
+      "question": "In the picture, is the person facing the ocean or turned sideways to the ocean?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the positioning of the figures and the direction they appear to be looking, it seems they are **facing the ocean**. Their bodies are oriented towards the water and the sunset over the",
+      "correct": false
+    },
+    {
+      "index": 178,
+      "question": "In the picture, is the person facing the ocean or turned sideways to the ocean?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the people are **facing the ocean**. They are walking away from the viewer *towards* the water, with their backs visible.\n\nTherefore, the answer is",
+      "correct": false
+    },
+    {
+      "index": 179,
+      "question": "How many wheels can you see in the image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on what is visible in the picture, we can clearly see two wheels on the car. Therefore, the answer is:\n\n**(b)**\n\nI hope this helps! If you",
+      "correct": false
+    },
+    {
+      "index": 180,
+      "question": "How many wheels can you see in the image?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nI can clearly see four wheels on the car in the picture. However, the options provided are only (a) 1 and (b) 2. Based on",
+      "correct": false
+    },
+    {
+      "index": 181,
+      "question": "Is the stripe in the middle of the car blue or white?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image you've provided, the stripe in the middle of the car is **(a) Blue**. \n\nIt appears to be a vibrant, royal blue color contrasting with the white body of the car. I",
+      "correct": true
+    },
+    {
+      "index": 182,
+      "question": "Is the stripe in the middle of the car blue or white?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the visual information, the stripe in the middle of the car appears to be **(b) White**. It contrasts with the blue body of the car, making",
+      "correct": true
+    },
+    {
+      "index": 183,
+      "question": "Are the teddy bears holding hands or leaning against each other?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the teddy bears appear to be **(a) Holding hands**. It looks like they are gently clasping paws, which suggests they are holding hands",
+      "correct": true
+    },
+    {
+      "index": 184,
+      "question": "Are the teddy bears holding hands or leaning against each other?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the teddy bears appear to be **(a) Holding hands**. It looks like they are gently clasping paws, and they are also adorned with",
+      "correct": false
+    },
+    {
+      "index": 185,
+      "question": "Is the person in the picture already standing on the weighing scale?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the person's feet are clearly positioned *on* the weighing scale. Therefore, the answer is:\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 186,
+      "question": "Is the person in the picture already standing on the weighing scale?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, it appears the person is in the process of stepping *onto* the weighing scale, but isn't fully standing on it yet. One foot is firmly on",
+      "correct": false
+    },
+    {
+      "index": 187,
+      "question": "In the picture, is the person stretching out one arm or both arms above their head?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the person is stretching **both** arms above their head. You can see both arms extended and reaching upwards.\n\nTherefore, the answer is: **(b",
+      "correct": false
+    },
+    {
+      "index": 188,
+      "question": "In the picture, is the person stretching out one arm or both arms above their head?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the person is stretching out **both** arms above their head.\n\nTherefore, the answer is: **(b)**\n\nI hope this helps",
+      "correct": true
+    },
+    {
+      "index": 189,
+      "question": "Is the person in the picture on the grass or on the gravel path?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the person is standing on the **grass**. You can see the green grass beneath their feet. The gravel path is visible in the background, but the person is",
+      "correct": false
+    },
+    {
+      "index": 190,
+      "question": "Is the person in the picture on the grass or on the gravel path?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visual details, the person in the picture is on the **gravel path**. The shoes are clearly stepping on a surface composed of small stones, which is characteristic of a",
+      "correct": false
+    },
+    {
+      "index": 191,
+      "question": "Is there a flower next to the Easter egg in the picture?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, there are indeed flowers very close to the Easter eggs. We can see a pink flower and a white daisy near the eggs.\n\nTherefore, the",
+      "correct": false
+    },
+    {
+      "index": 192,
+      "question": "Is there a flower next to the Easter egg in the picture?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, there is indeed a small yellow flower next to the Easter egg in the foreground. \n\nTherefore, the answer is **(a)**.",
+      "correct": false
+    },
+    {
+      "index": 193,
+      "question": "Are these vegetables placed on the floor or on the soil?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the vegetables are placed on a wooden surface that appears to be a **floor**. \n\nTherefore, the answer is **(a)**. \n\nIs there anything else I can help you with regarding this",
+      "correct": true
+    },
+    {
+      "index": 194,
+      "question": "Are these vegetables placed on the floor or on the soil?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, the vegetables are resting directly on the **soil**. You can see the dark earth surrounding the base of the plants and beneath the vegetables that have been harvested.",
+      "correct": false
+    },
+    {
+      "index": 195,
+      "question": "Are juice and all carrots on the same surface?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine if the juice and all the carrots are on the same surface. \n\nLooking at the picture, we can see the glass of juice and the carrots (both whole and sliced) are all",
+      "correct": false
+    },
+    {
+      "index": 196,
+      "question": "Are juice and all carrots on the same surface?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, we can see the carrots are resting on a wooden cutting board, and the glass of juice is placed directly on the countertop. Therefore, they are *not*",
+      "correct": false
+    },
+    {
+      "index": 197,
+      "question": "Is the person weighing themselves barefoot?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visual evidence, the person in the image is standing on the scale with no shoes visible on their feet. Therefore, they are weighing themselves barefoot.\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 198,
+      "question": "Is the person weighing themselves barefoot?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the person is wearing sandals while on the scale. Therefore, they are not weighing themselves barefoot.\n\n(b)",
+      "correct": true
+    },
+    {
+      "index": 199,
+      "question": "Which type of eggs are in the corner of the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the eggs in the corner appear to be quite small with speckled shells. \n\nTherefore, the answer is **(a) Quail eggs**. \n\nIs there anything else I can help you identify in",
+      "correct": true
+    },
+    {
+      "index": 200,
+      "question": "Which type of eggs are in the corner of the picture?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the size and appearance of the eggs in the corner of the picture, the answer is **(a) Quail eggs**. \n\nQuail eggs are significantly",
+      "correct": false
+    },
+    {
+      "index": 201,
+      "question": "What are the words in the image:",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nThe words displayed in the image are \"Happy Easter\".\n\nTherefore, the answer is **(a)**.\n\nIs there anything else I can help you with today?",
+      "correct": true
+    },
+    {
+      "index": 202,
+      "question": "What are the words in the image:",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nThe words in the image are \"Happy Easter!\".\n\nTherefore, the answer is **(b)**. \n\nIs there anything else I can help you with today?",
+      "correct": true
+    },
+    {
+      "index": 203,
+      "question": "Are these oranges hanging on the tree?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image you've provided, it appears there are indeed oranges hanging on the tree. \n\n(a) \n\nIs there anything else I can help you with regarding this image, or perhaps another question you have",
+      "correct": true
+    },
+    {
+      "index": 204,
+      "question": "Are these oranges hanging on the tree?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, it appears the oranges are indeed hanging on a tree, as they are surrounded by leaves and branches. \n\nTherefore, the answer is **(a)**. \n\nIs there anything else I can help",
+      "correct": false
+    },
+    {
+      "index": 205,
+      "question": "Is the coffee cup made of glass?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible clarity and the way light is interacting with the cup, it appears to be made of glass. You can see through the sides, and there's a slight reflection",
+      "correct": false
+    },
+    {
+      "index": 206,
+      "question": "Is the coffee cup made of glass?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the appearance of the coffee cup in the image, it appears to be made of ceramic or porcelain, rather than glass. It has a white, opaque quality and a slightly textured",
+      "correct": false
+    },
+    {
+      "index": 207,
+      "question": "Is the bell pepper in the picture red or yellow?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the bell pepper clearly visible in the basket is **(a) Red**. \n\nIt's a lovely, bright red color! Is there anything else I can help you identify in the picture, or",
+      "correct": true
+    },
+    {
+      "index": 208,
+      "question": "Is the bell pepper in the picture red or yellow?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the bell pepper is **(b) Yellow**. \n\nIt appears to be a bright, sunny yellow color. I'm happy to help if you have any other questions about the image or anything else",
+      "correct": true
+    },
+    {
+      "index": 209,
+      "question": "Is there an orange with leaves next to the cup?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nLooking closely at the image, there is indeed an orange with leaves next to the cup. \n\nTherefore, the answer is: **(a)**\n\nI hope this helps! Please",
+      "correct": true
+    },
+    {
+      "index": 210,
+      "question": "Is there an orange with leaves next to the cup?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let me take a look at the image. \n\nBased on the image provided, there is no whole orange with leaves next to the cup. There are orange slices, but not a complete orange with leaves.\n\nTherefore, the",
+      "correct": false
+    },
+    {
+      "index": 211,
+      "question": "Is the heart-shaped object resting on the palm or being held by the fingers?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the heart-shaped object is **resting on the palm**. It appears to be cradled within the curve of the hand, rather than being actively gripped by the",
+      "correct": false
+    },
+    {
+      "index": 212,
+      "question": "Is the heart-shaped object resting on the palm or being held by the fingers?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the heart-shaped object is clearly being **held by the fingers**. You can see the doctor's fingers gently supporting and lifting the heart. It is not",
+      "correct": false
+    },
+    {
+      "index": 213,
+      "question": "Does the snowman have arms made of branches?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image provided, the snowman *does* appear to have arms made of branches. \n\nTherefore, the answer is **(a)**. \n\nIs",
+      "correct": true
+    },
+    {
+      "index": 214,
+      "question": "Does the snowman have arms made of branches?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the snowman does indeed have arms made of branches. \n\nTherefore, the answer is **(a)**.\n\nIs there anything else I can",
+      "correct": false
+    },
+    {
+      "index": 215,
+      "question": "Are there black stripes on the roof of the car?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let me take a look at the image. \n\nBased on the image provided, I can see that there **are** black stripes extending onto the roof of the car. \n\nTherefore, the answer is **(a)**",
+      "correct": true
+    },
+    {
+      "index": 216,
+      "question": "Are there black stripes on the roof of the car?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the provided picture of the green car, I can confirm that there are **no** black stripes visible on the roof. \n\nTherefore, the answer is: **(b",
+      "correct": false
+    },
+    {
+      "index": 217,
+      "question": "Is the knife laid flat or standing up?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the knife is **(a) Flat** on the cutting board. It is lying horizontally amongst the vegetables and other food items. \n\nIs",
+      "correct": true
+    },
+    {
+      "index": 218,
+      "question": "Is the knife laid flat or standing up?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the knife is **(a) Flat**. \n\nIt is resting on the cutting board amongst the vegetables, with the blade laid across a cut red bell pepper. I'm happy to help if you",
+      "correct": false
+    },
+    {
+      "index": 219,
+      "question": "Is the person in the image running towards or away from the camera?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the body position and the direction of the stride, the person in the image appears to be **running towards** the camera. Their body is angled forward, and their arms are",
+      "correct": false
+    },
+    {
+      "index": 220,
+      "question": "Is the person in the image running towards or away from the camera?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the body position and the direction of the stride, the person in the image is running **away from** the camera. Their back is to the viewer, and their leg is",
+      "correct": false
+    },
+    {
+      "index": 221,
+      "question": "In the photo, is one of the man's hands blocked by the woman?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the photo, it appears that the woman is positioned in front of the man, and one of his hands is partially obscured by her.\n\nTherefore, the answer is: **",
+      "correct": false
+    },
+    {
+      "index": 222,
+      "question": "In the photo, is one of the man's hands blocked by the woman?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the photo, it appears that the woman is positioned in front of the man, and one of his hands is partially obscured by her.\n\nTherefore, the answer is: (",
+      "correct": false
+    },
+    {
+      "index": 223,
+      "question": "Is there a pomegranate in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nYes, there is a pomegranate in the picture. It's located on the lower right side, partially cut open to reveal the seeds.\n\n**(a)**",
+      "correct": true
+    },
+    {
+      "index": 224,
+      "question": "Is there a pomegranate in the picture?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on my analysis, there is not a pomegranate visible in the picture. However, there is an orange and a kiwi.\n\nTherefore, the answer is **(b",
+      "correct": false
+    },
+    {
+      "index": 225,
+      "question": "Are all the cups and bottles in the picture the same height?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the bottles and cups, it appears they are not all the same height. There's some variation in their sizes, particularly noticeable when comparing the taller, slender bottles to the",
+      "correct": false
+    },
+    {
+      "index": 226,
+      "question": "Are all the cups and bottles in the picture the same height?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image to determine if all the cups and bottles are the same height.\n\nLooking at the picture, it's clear that the cups and bottles vary in height. We can see a tall glass bottle,",
+      "correct": false
+    },
+    {
+      "index": 227,
+      "question": "Does the person in the picture have something in their hand?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the person on the left (the man with the beard) is indeed holding an orange water bottle in his hand. \n\nTherefore, the answer is: **",
+      "correct": false
+    },
+    {
+      "index": 228,
+      "question": "Does the person in the picture have something in their hand?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, it appears the man on the right is indeed holding something in his hand \u2013 it looks like a water bottle or similar container.\n\nTherefore, the answer is:",
+      "correct": false
+    },
+    {
+      "index": 229,
+      "question": "Do all the bottles in the picture face the same direction?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the visual information, it appears that all three bottles are facing generally towards the viewer. While there might be slight variations in their exact angle, they are all oriented",
+      "correct": false
+    },
+    {
+      "index": 230,
+      "question": "Do all the bottles in the picture face the same direction?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the arrangement of the bottles, it appears that they are not all facing the same direction. The orange bottle is oriented differently compared to the pink and green bottles.",
+      "correct": false
+    },
+    {
+      "index": 231,
+      "question": "Are all easter eggs placed in a container (e.g nest, basket)?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's consider the question and the image provided. \n\nThe question asks if *all* Easter eggs are placed in a container like a nest or basket. While it's very common to see Easter eggs displayed in nests",
+      "correct": false
+    },
+    {
+      "index": 232,
+      "question": "Are all easter eggs placed in a container (e.g nest, basket)?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's consider the question.\n\nThe question asks if *all* Easter eggs are placed in a container like a nest or basket. While it's very common to *find* Easter eggs in baskets or nests during Easter",
+      "correct": false
+    },
+    {
+      "index": 233,
+      "question": "Is the sky in the background dark blue or light blue?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided picture, the sky in the background appears to be **(a) Dark blue**. \n\nIt's a rich, deep shade of blue,",
+      "correct": true
+    },
+    {
+      "index": 234,
+      "question": "Is the sky in the background dark blue or light blue?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image you've provided, the sky in the background appears to be **(b) Light blue**. \n\nIt's a lovely, bright shade of blue, typical of a clear day. I'm",
+      "correct": true
+    },
+    {
+      "index": 235,
+      "question": "Do the individuals in the picture face the front or the back?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the individuals are facing **towards the front**. We can see their faces and upper bodies clearly.\n\nTherefore, the answer is: **(a)**\n\nIs",
+      "correct": true
+    },
+    {
+      "index": 236,
+      "question": "Do the individuals in the picture face the front or the back?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the individuals are facing *away* from the viewer. We can see the backs of their heads and shoulders.\n\nTherefore, the answer is **(b)**",
+      "correct": true
+    },
+    {
+      "index": 237,
+      "question": "Is the ground completely covered by red fallen leaves?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Based on the image provided, it appears that the ground is largely covered in red fallen leaves. However, there are also areas of green grass and other foliage visible. \n\nTherefore, the most accurate answer is:\n\n**(b",
+      "correct": false
+    },
+    {
+      "index": 238,
+      "question": "Is the ground completely covered by red fallen leaves?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Based on the image provided, it appears that the ground is *mostly* covered in red fallen leaves, but not *completely*. There are patches of grass and the path is visible through the leaves. \n\nTherefore, the answer",
+      "correct": false
+    },
+    {
+      "index": 239,
+      "question": "Are the leather shoes placed side by side or is one on top of the other?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the leather shoes are placed **(a) Side by side**. \n\nThey are both resting on the surface, next to each other, rather than one being stacked on top of the other. I'",
+      "correct": true
+    },
+    {
+      "index": 240,
+      "question": "Are the leather shoes placed side by side or is one on top of the other?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image to determine the arrangement of the leather shoes.\n\nBased on the provided image, the leather shoes are clearly placed **side by side**. \n\nTherefore, the answer is: **(a)**",
+      "correct": false
+    },
+    {
+      "index": 241,
+      "question": "Is the photo taken directly above the coffee or from the side?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the photo appears to be taken **directly above** the coffee. \n\n(a)\n\nYou can tell because we are looking straight down into the mug, seeing the surface of the coffee and the inside",
+      "correct": true
+    },
+    {
+      "index": 242,
+      "question": "Is the photo taken directly above the coffee or from the side?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the photo appears to be taken **(b) From the side**. \n\nHere's why: We can see the side profile of the cup, and the angle suggests the camera wasn't directly",
+      "correct": true
+    },
+    {
+      "index": 243,
+      "question": "Is the rabbit in the image facing left or right?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image, the rabbit is facing towards the **right**.\n\nTherefore, the answer is **(b)**. \n\nIs there anything else I can help",
+      "correct": false
+    },
+    {
+      "index": 244,
+      "question": "Is the rabbit in the image facing left or right?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the direction the rabbit is looking and the positioning of its head, it appears to be facing **(b) Right**. \n\nIs there anything else I can help you with",
+      "correct": true
+    },
+    {
+      "index": 245,
+      "question": "Is the elderly person in the picture standing or sitting?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the elderly person is using a walker for support and appears to be **standing**.\n\nTherefore, the answer is: **(a)**\n\nI hope this helps",
+      "correct": true
+    },
+    {
+      "index": 246,
+      "question": "Is the elderly person in the picture standing or sitting?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the elderly person is **(b) Sitting**. \n\nIt appears they are seated in a wheelchair, and a younger person is assisting them by gently pushing the wheelchair. I hope this helps! Is there",
+      "correct": true
+    },
+    {
+      "index": 247,
+      "question": "Are there any fruits or vegetables in the heart-shaped part of the picture?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nYes, there are indeed fruits and vegetables within the heart-shaped dishes. The larger heart-shaped dish contains blueberries, strawberries, grapes, and a lemon slice \u2013 all",
+      "correct": false
+    },
+    {
+      "index": 248,
+      "question": "Are there any fruits or vegetables in the heart-shaped part of the picture?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, there are no fruits or vegetables *within* the heart-shaped wooden area itself. The fruits and vegetables are arranged *around* the heart shape",
+      "correct": false
+    },
+    {
+      "index": 249,
+      "question": "Is the very top of the cake strawberries or cream?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the very top of the cake is decorated with **strawberries**. \n\nTherefore, the answer is **(a)**. \n\nIs there anything else I can help you with regarding this image or another",
+      "correct": true
+    },
+    {
+      "index": 250,
+      "question": "Is the very top of the cake strawberries or cream?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the very top of the cake is decorated with **cream**. \n\nTherefore, the answer is **(b)**. \n\nIs there anything else I can help you with regarding this image or another topic",
+      "correct": true
+    },
+    {
+      "index": 251,
+      "question": "Is the beverage in the picture contained in a mug or a glass?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the beverage appears to be contained in a **(b) Glass**. \n\nIt looks like a mason jar glass, specifically, which is a type of glass often used for serving drinks. I'm",
+      "correct": false
+    },
+    {
+      "index": 252,
+      "question": "Is the beverage in the picture contained in a mug or a glass?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the beverage appears to be contained in a **(b) Glass**. \n\nIt has the clear, smooth appearance and shape characteristic of a glass, rather than the thicker, often opaque appearance of a mug",
+      "correct": true
+    },
+    {
+      "index": 253,
+      "question": "Is the design in the picture Santa Claus or a snowman?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the design on the vest, it clearly features a depiction of **Santa Claus**. \n\nTherefore, the answer is **(a)**. \n\nIs there",
+      "correct": true
+    },
+    {
+      "index": 254,
+      "question": "Is the design in the picture Santa Claus or a snowman?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the design depicted, it is a **snowman**. The image clearly shows a figure built of snowballs with traditional snowman features like a carrot nose and a hat.",
+      "correct": false
+    },
+    {
+      "index": 255,
+      "question": "Are there cookies stacked on top of other cookies?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, it appears that the cookies are arranged on a cooling rack and are all resting on the rack itself. There are no cookies visibly stacked on top of other cookies.",
+      "correct": false
+    },
+    {
+      "index": 256,
+      "question": "Are there cookies stacked on top of other cookies?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, it appears the cookies are arranged on a cooling rack, and none are visibly stacked on top of each other. They are all lying flat on the rack.",
+      "correct": false
+    },
+    {
+      "index": 257,
+      "question": "Is there a lemon inside the drink in the cup or are all the lemons outside the drink?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, we can see a slice of lemon *inside* the glass with the drink, and additional lemon slices arranged around the outside of the glass.\n\nTherefore, the",
+      "correct": false
+    },
+    {
+      "index": 258,
+      "question": "Is there a lemon inside the drink in the cup or are all the lemons outside the drink?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the picture, we can see lemon wedges placed *outside* the cup, and no visible lemon slices *inside* the drink itself.\n\nTherefore, the answer is: **",
+      "correct": false
+    },
+    {
+      "index": 259,
+      "question": "In the picture, are the elderly people moving to the left or to the right?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the pose of the elderly people in the picture, they appear to be stretching and bending. It doesn't seem like they are actively *moving* in a particular direction (",
+      "correct": false
+    },
+    {
+      "index": 260,
+      "question": "In the picture, are the elderly people moving to the left or to the right?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the positioning of the individuals and the direction of their body movements as they stretch, it appears they are both moving towards the **left**.\n\nTherefore, the answer is: **",
+      "correct": false
+    },
+    {
+      "index": 261,
+      "question": "Is the person in the picture sitting on a black or white chair?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image to determine the chair color. \n\nBased on the visible portion of the chair in the image, it appears to be **black**.\n\nTherefore, the answer is: **(a)**\n\nIf",
+      "correct": true
+    },
+    {
+      "index": 262,
+      "question": "Is the person in the picture sitting on a black or white chair?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image to determine the chair color. \n\nBased on the provided picture, the person appears to be sitting on a **white** chair.\n\nTherefore, the answer is: **(b)**\n\nIf",
+      "correct": true
+    },
+    {
+      "index": 263,
+      "question": "Is it a slice of cake or a whole cake in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, it appears to be a **slice** of cake (or, more specifically, a slice of pumpkin pie!). \n\nTherefore, the answer is: **(a)**\n\nIs there anything else I can",
+      "correct": true
+    },
+    {
+      "index": 264,
+      "question": "Is it a slice of cake or a whole cake in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, it appears to be a **whole** cake (or, more specifically, a pie!). \n\n(b)\n\nIs there anything else I can help you with regarding this image or another topic?",
+      "correct": true
+    },
+    {
+      "index": 265,
+      "question": "Is the shoe in the image tied or untied?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on what I can see, the shoelaces appear to be **(a) Tied**. They are visible and seem to be securely fastened. \n\nIs there",
+      "correct": true
+    },
+    {
+      "index": 266,
+      "question": "Is the shoe in the image tied or untied?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the image, the shoelaces are being held in the hands and are not currently tied around the shoe. Therefore, the shoe is **(b) Untied**.",
+      "correct": true
+    },
+    {
+      "index": 267,
+      "question": "Is the child in the picture facing forward or in profile?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the child is **(a) Facing forward**. \n\nWe can see both of their eyes, and a good portion of their face is visible",
+      "correct": true
+    },
+    {
+      "index": 268,
+      "question": "Is the child in the picture facing forward or in profile?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the child is **(a) Facing forward**. \n\nWhile not a completely direct gaze at the camera, we can see both of the child's eyes",
+      "correct": false
+    },
+    {
+      "index": 269,
+      "question": "Is the wall behind the bed empty or is there a painting hanging on it?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the provided picture, the wall behind the bed appears to be **(a) Empty**. There isn't a painting visible on that wall. It's",
+      "correct": true
+    },
+    {
+      "index": 270,
+      "question": "Is the wall behind the bed empty or is there a painting hanging on it?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the wall behind the bed is **(b) A painting hanging on it**. \n\nYou can see a painting clearly visible above the headboard",
+      "correct": true
+    },
+    {
+      "index": 271,
+      "question": "Is the male in the picture wearing a shirt or a T-shirt?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the collar and button-down style, the male in the picture is wearing a **shirt**.\n\nTherefore, the answer is **(a)**.",
+      "correct": true
+    },
+    {
+      "index": 272,
+      "question": "Is the male in the picture wearing a shirt or a T-shirt?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the male is wearing a **T-shirt**. \n\n(b)\n\nIt appears to be a short-sleeved, casual T-shirt, likely a polo style due to the collar. I",
+      "correct": true
+    },
+    {
+      "index": 273,
+      "question": "What pattern is in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the pattern is **(a) Pumpkin Lights**. \n\nYou can see several pumpkins lit up at the bottom of the image, giving off a",
+      "correct": true
+    },
+    {
+      "index": 274,
+      "question": "What pattern is in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the pattern appears to be **(b) Bats**. \n\nI can see several bats flying around a spooky tree and a full moon, which",
+      "correct": true
+    },
+    {
+      "index": 275,
+      "question": "How many trees are the treehouse built on?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, it appears the treehouse is built around and supported by multiple tree trunks. Therefore, the answer is:\n\n**(b)** \n\nIs there",
+      "correct": false
+    },
+    {
+      "index": 276,
+      "question": "How many trees are the treehouse built on?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, it appears the treehouse is supported by multiple tree trunks. Therefore, the answer is:\n\n**(b)** \n\nIs there anything else I",
+      "correct": true
+    },
+    {
+      "index": 277,
+      "question": "What are all the letter in the image?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nAs you can see in the image, the word \"SUGAR\" is written in what appears to be sugar or a similar white powder.\n\nTherefore, the answer is: **(",
+      "correct": false
+    },
+    {
+      "index": 278,
+      "question": "What are all the letter in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nThe letters clearly spelled out in the sugar are **U, G, A**. However, there is also an **S** partially visible at the beginning. Therefore, the",
+      "correct": false
+    },
+    {
+      "index": 279,
+      "question": "Is the elderly person standing or sitting in the picture?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible parts of a bench and the way the elderly person is positioned, it appears they are **(b) Sitting**. \n\nIs there anything else I can help you",
+      "correct": false
+    },
+    {
+      "index": 280,
+      "question": "Is the elderly person standing or sitting in the picture?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the picture, the elderly person is **(a) Standing**. \n\nIt appears they are giving a piggyback ride to a child, which would require them to be standing",
+      "correct": false
+    },
+    {
+      "index": 281,
+      "question": "Are there drinks on the table?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let me take a look at the image. \n\nBased on the picture, it appears there are glasses with orange juice on the table. Therefore, the answer is:\n\n**(a)**\n\nIs there anything else I can help",
+      "correct": true
+    },
+    {
+      "index": 282,
+      "question": "Are there drinks on the table?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nBased on what is visible, it appears there are no visible drinks on the table. There are plates of food, and utensils, but no glasses or other drink containers are readily apparent.",
+      "correct": false
+    },
+    {
+      "index": 283,
+      "question": "In the image, is it a salmon fillet or a salmon steak?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the appearance of the salmon pieces \u2013 they are flat, without any bones visible, and appear to be cut across the fish \u2013 it is a **(a)",
+      "correct": true
+    },
+    {
+      "index": 284,
+      "question": "In the image, is it a salmon fillet or a salmon steak?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the appearance of the salmon in the image \u2013 it's a flat, boneless piece of fish \u2013 it is a **(a) Salmon fillet**.",
+      "correct": false
+    },
+    {
+      "index": 285,
+      "question": "Do you see a yellow towel in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! I've examined the image you sent. \n\n(a) \n\nYes, I do see a yellow towel (or a portion of one) in the image. It appears to be crumpled up and is located to the",
+      "correct": true
+    },
+    {
+      "index": 286,
+      "question": "Do you see a yellow towel in the image?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's analyze the image. \n\nLooking at the provided picture, I do not see a yellow towel. There is a white towel and a yellow water bottle, but no yellow towel.\n\nTherefore, the answer is **",
+      "correct": false
+    },
+    {
+      "index": 287,
+      "question": "Is the cup placed on a surface or being held by hand?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the cup appears to be **(b) Held by hand**. \n\nWe can see a portion of a hand gripping the handle of the mug. It doesn't appear to be resting on a surface",
+      "correct": false
+    },
+    {
+      "index": 288,
+      "question": "Is the cup placed on a surface or being held by hand?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Based on the image, the cup appears to be **(b) Held by hand**. \n\nIt is nestled within a knitted or woven material \u2013 likely a pair of mittens or a cozy sleeve \u2013 which suggests someone is holding it",
+      "correct": true
+    },
+    {
+      "index": 289,
+      "question": "Is the following statement correct: There are different colors of grapes in the image.",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 290,
+      "question": "Is the following statement correct: There are different colors of grapes in the image.",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)\n\n**Explanation:**\n\nLooking at the image, we can clearly see both green and reddish-purple grapes. Therefore, the statement \"There are different colors of grapes in the image\" is correct. \n\nI'm",
+      "correct": false
+    },
+    {
+      "index": 291,
+      "question": "Is the minion in the image smiling with its tongue out?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image, the minion *is* smiling with its tongue slightly sticking out. It appears to be a playful expression.\n\nTherefore, the answer is:",
+      "correct": false
+    },
+    {
+      "index": 292,
+      "question": "Is the minion in the image smiling with its tongue out?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image provided, the minion is **not** smiling with its tongue out. It has a simple, curved line for a mouth, which appears to be",
+      "correct": false
+    },
+    {
+      "index": 293,
+      "question": "Is the sports car in the picture facing left or right?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's analyze the image. \n\nBased on the visible front of the car and the direction it is angled, the sports car is facing **(a) Left**. \n\nI'm happy to help if you have",
+      "correct": true
+    },
+    {
+      "index": 294,
+      "question": "Is the sports car in the picture facing left or right?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Based on the image, the sports car is facing **(a) Left**. \n\nI can see the driver's side of the car, and the front of the vehicle is angled towards the left side of the image.",
+      "correct": false
+    },
+    {
+      "index": 295,
+      "question": "Is the edge of the heart in the picture white or dark-colored?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the edge of the hearts appears to be **white**. \n\nTherefore, the answer is: **(a)**\n\nI hope this helps!",
+      "correct": true
+    },
+    {
+      "index": 296,
+      "question": "Is the edge of the heart in the picture white or dark-colored?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the picture, the edge of the heart appears to be **(a) White**. The hearts have a blurred, soft effect, and the edges seem to fade",
+      "correct": false
+    },
+    {
+      "index": 297,
+      "question": "Are there patterns on the easter eggs?",
+      "gt": "(a)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image, it appears that some of the Easter eggs *do* have patterns on them. We can see polka dots and floral designs.\n\nTherefore, the",
+      "correct": false
+    },
+    {
+      "index": 298,
+      "question": "Are there patterns on the easter eggs?",
+      "gt": "(b)",
+      "pred": null,
+      "raw": "Certainly! Let's take a look at the image. \n\nBased on the image provided, it appears the eggs are decorated with solid colors \u2013 red, yellow, green, blue, and orange. While they don't have intricate",
+      "correct": false
+    },
+    {
+      "index": 299,
+      "question": "How would you describe the background of the image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image background. \n\nBased on the image, the most accurate description would be **(b) Most of the background is dark and cloudy**. \n\nWhile there *is* some lighter tone present,",
+      "correct": false
+    },
+    {
+      "index": 300,
+      "question": "How would you describe the background of the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "Certainly! Let's analyze the image background. \n\nBased on the image, the most accurate description is **(b) Most of the background is dark and cloudy**. \n\nWhile there *is* some light present, the overall",
+      "correct": true
+    }
+  ]
+}

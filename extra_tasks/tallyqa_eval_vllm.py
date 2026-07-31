@@ -29,7 +29,7 @@ TSV_PATH = os.path.join(HF_HUB, "datasets--moondream--TallyQA-VLMEvalKit",
                         "snapshots", "*", "tallyqa_data.tsv")
 IMG_CAP = 1024
 COUNT_SUFFIX = "\nAnswer with a single integer only."
-NUM = re.compile(r"-?\d+")
+NUM = re.compile(r"(?<!\d)(-?\d+)(?!\d)")
 
 
 def _find_tsv():
@@ -63,11 +63,16 @@ PLAUSIBLE_MAX_COUNT = 200
 
 
 def parse_count(text):
-    m = NUM.search(text.strip())
-    if not m:
-        return None
-    v = int(m.group())
-    return v if 0 <= v <= PLAUSIBLE_MAX_COUNT else None
+    # Isolated digits, LAST match -- see mvbench_eval_vllm.py's parse_choice
+    # for why (a verbose preamble that reasons through the scene before
+    # stating the final count would otherwise have an early incidental number
+    # falsely picked over the actual total).
+    matches = NUM.findall(text.strip())
+    for v in reversed(matches):
+        v = int(v)
+        if 0 <= v <= PLAUSIBLE_MAX_COUNT:
+            return v
+    return None
 
 
 def run_order(llm, sp, tag, letters, rows, log_every):
@@ -123,18 +128,26 @@ def run_order(llm, sp, tag, letters, rows, log_every):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--orders", default=",".join(ORDER_LIST))
+    ap.add_argument("--model", default="qwen3-vl-8b",
+                    choices=["qwen3-vl-8b", "gemma-3-27b"])
     ap.add_argument("--num-samples", type=int, default=2000, dest="num_samples")
     ap.add_argument("--tp", type=int, default=2)
     ap.add_argument("--log-every", type=int, default=200, dest="log_every")
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    global MODEL_TAG
+    MODEL_TAG = args.model  # rebinds the module-global MODEL_TAG other functions read at call time
+    if args.model == "gemma-3-27b" and args.tp != 1:
+        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+        args.tp = 1
+
     rows = load_tallyqa(args.num_samples)
     print(f"[data] {len(rows)} TallyQA rows", flush=True)
 
     from vllm import SamplingParams
-    llm = make_llm(tp=args.tp)
-    sp = SamplingParams(temperature=0.0, max_tokens=16)
+    llm = make_llm(tp=args.tp, model_tag=args.model)
+    sp = SamplingParams(temperature=0.0, max_tokens=48)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:

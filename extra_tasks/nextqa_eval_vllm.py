@@ -19,7 +19,7 @@ Run:
     /home/grg/anaconda3/envs/qwen-vllm-env/bin/python extra_tasks/nextqa_eval_vllm.py \
       --orders STI,SIT,STIT,SITIT --num-samples 1500 --frames 6
 """
-import argparse, glob, json, os, sys, time
+import argparse, glob, json, os, re, sys, time
 
 SUPP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, SUPP)
@@ -80,12 +80,14 @@ def sample_frames(video_path, k):
     return frames
 
 
+ISOLATED_NUM_5 = re.compile(r"(?<!\d)([0-4])(?!\d)")
+
+
 def parse_choice(text):
-    t = text.strip()
-    for c in t:
-        if c in "01234":
-            return int(c)
-    return None
+    # Isolated digits only, LAST match -- see mvbench_eval_vllm.py's
+    # parse_choice for why (preamble text can mention unrelated numbers).
+    matches = ISOLATED_NUM_5.findall(text.strip())
+    return int(matches[-1]) if matches else None
 
 
 # vLLM's internal multimodal-processor cache has hit an AssertionError
@@ -189,7 +191,7 @@ def main():
     from vllm import SamplingParams
     # SITIT doubles the frame block -> 2*frames images per prompt; cap accordingly.
     llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1, disable_mm_cache=True)
-    sp = SamplingParams(temperature=0.0, max_tokens=8)
+    sp = SamplingParams(temperature=0.0, max_tokens=48)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
