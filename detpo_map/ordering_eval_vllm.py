@@ -42,7 +42,8 @@ RF20_DATASETS = [
 ]
 
 # Ordering tag -> S/T/I letter layout (content-part order in the single user turn).
-ORDER_LETTERS = {"STI": "STI", "SIT": "SIT", "STIT": "STIT", "SITIT": "SITIT"}
+ORDER_LETTERS = {"STI": "STI", "SIT": "SIT", "STIT": "STIT", "SITIT": "SITIT",
+                 "STITI": "STITI"}
 
 DET_PROMPT_MULTI = (
     "Detect every object in the image that belongs to any of these classes: "
