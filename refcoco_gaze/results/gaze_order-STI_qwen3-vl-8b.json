@@ -1,0 +1,413 @@
+{
+  "meta": {
+    "benchmark": "RefCOCO-Gaze-vs-GradCAM",
+    "ordering": "STI",
+    "model": "qwen3-vl-8b",
+    "n": 50,
+    "mean_nss": 0.06289758149235583,
+    "argmax_in_bbox_rate": 0.16,
+    "complete": false
+  },
+  "results": [
+    {
+      "ref_gaze_id": "rgo2200538",
+      "ref_id": 34573,
+      "nss": -0.23545596191718862,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 4
+    },
+    {
+      "ref_gaze_id": "rgo2204715",
+      "ref_id": 34573,
+      "nss": -0.2284838292866659,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 5
+    },
+    {
+      "ref_gaze_id": "rgo2206829",
+      "ref_id": 34573,
+      "nss": -0.23027053536975098,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo2211223",
+      "ref_id": 34573,
+      "nss": -0.20328231832197877,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 11
+    },
+    {
+      "ref_gaze_id": "rgo2215470",
+      "ref_id": 34573,
+      "nss": -0.218370274776234,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 4
+    },
+    {
+      "ref_gaze_id": "rgo2217570",
+      "ref_id": 34573,
+      "nss": -0.2595918400851339,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 4
+    },
+    {
+      "ref_gaze_id": "rgo2219649",
+      "ref_id": 34573,
+      "nss": 0.06658410850901192,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 9
+    },
+    {
+      "ref_gaze_id": "rgo2223853",
+      "ref_id": 34573,
+      "nss": -0.243243994446046,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 7
+    },
+    {
+      "ref_gaze_id": "rgo2226129",
+      "ref_id": 34573,
+      "nss": -0.1588073164441849,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 8
+    },
+    {
+      "ref_gaze_id": "rgo222735",
+      "ref_id": 34573,
+      "nss": -0.12735937683224954,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 5
+    },
+    {
+      "ref_gaze_id": "rgo1100159",
+      "ref_id": 46954,
+      "nss": -0.2715532373517075,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 8
+    },
+    {
+      "ref_gaze_id": "rgo1102257",
+      "ref_id": 46954,
+      "nss": 0.5249814357579285,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 11
+    },
+    {
+      "ref_gaze_id": "rgo1106422",
+      "ref_id": 46954,
+      "nss": 0.5166441297006393,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 12
+    },
+    {
+      "ref_gaze_id": "rgo110878",
+      "ref_id": 46954,
+      "nss": -0.1467240360698989,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 11
+    },
+    {
+      "ref_gaze_id": "rgo1112949",
+      "ref_id": 46954,
+      "nss": 0.17337539964593296,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 12
+    },
+    {
+      "ref_gaze_id": "rgo1115084",
+      "ref_id": 46954,
+      "nss": 0.44386979725116993,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 10
+    },
+    {
+      "ref_gaze_id": "rgo1117146",
+      "ref_id": 46954,
+      "nss": -0.034886282763790105,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 11
+    },
+    {
+      "ref_gaze_id": "rgo111922",
+      "ref_id": 46954,
+      "nss": 0.3030563230395748,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo1127232",
+      "ref_id": 46954,
+      "nss": -0.05177678629077998,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 11
+    },
+    {
+      "ref_gaze_id": "rgo310075",
+      "ref_id": 15021,
+      "nss": 0.3545133724078676,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 14
+    },
+    {
+      "ref_gaze_id": "rgo3102855",
+      "ref_id": 15021,
+      "nss": 0.24053585934354135,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 12
+    },
+    {
+      "ref_gaze_id": "rgo310497",
+      "ref_id": 15021,
+      "nss": 0.23798352339085554,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 10
+    },
+    {
+      "ref_gaze_id": "rgo3107050",
+      "ref_id": 15021,
+      "nss": 0.049120137901817504,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 5
+    },
+    {
+      "ref_gaze_id": "rgo3109314",
+      "ref_id": 15021,
+      "nss": 1.3555834632917219,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 12
+    },
+    {
+      "ref_gaze_id": "rgo3111449",
+      "ref_id": 15021,
+      "nss": 0.42010782994617835,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 7
+    },
+    {
+      "ref_gaze_id": "rgo3113556",
+      "ref_id": 15021,
+      "nss": 0.36875833014023773,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 9
+    },
+    {
+      "ref_gaze_id": "rgo3119860",
+      "ref_id": 15021,
+      "nss": -0.11323272186150457,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 8
+    },
+    {
+      "ref_gaze_id": "rgo5201441",
+      "ref_id": 6987,
+      "nss": 0.5630007624567319,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 10
+    },
+    {
+      "ref_gaze_id": "rgo5207727",
+      "ref_id": 6987,
+      "nss": 0.17972454155340215,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo5212188",
+      "ref_id": 6987,
+      "nss": -0.062362940163094134,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 9
+    },
+    {
+      "ref_gaze_id": "rgo5214298",
+      "ref_id": 6987,
+      "nss": 0.27012680384219806,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo5216358",
+      "ref_id": 6987,
+      "nss": 0.011232420355687056,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 10
+    },
+    {
+      "ref_gaze_id": "rgo5218454",
+      "ref_id": 6987,
+      "nss": -0.024482774873759997,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 11
+    },
+    {
+      "ref_gaze_id": "rgo5220597",
+      "ref_id": 6987,
+      "nss": 0.6035985472067531,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 10
+    },
+    {
+      "ref_gaze_id": "rgo5226813",
+      "ref_id": 6987,
+      "nss": 0.9868224365674647,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 2
+    },
+    {
+      "ref_gaze_id": "rgo5227491",
+      "ref_id": 6987,
+      "nss": -0.09840800104673911,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 8
+    },
+    {
+      "ref_gaze_id": "rgo1100133",
+      "ref_id": 42880,
+      "nss": 0.5782836371455174,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo1102274",
+      "ref_id": 42880,
+      "nss": -0.15650751056414003,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 7
+    },
+    {
+      "ref_gaze_id": "rgo1106433",
+      "ref_id": 42880,
+      "nss": 0.4312977321656924,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo1108777",
+      "ref_id": 42880,
+      "nss": 0.08355437288240157,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo1112924",
+      "ref_id": 42880,
+      "nss": -0.2111413707933468,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo1115079",
+      "ref_id": 42880,
+      "nss": -0.23285480758146676,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 7
+    },
+    {
+      "ref_gaze_id": "rgo1117128",
+      "ref_id": 42880,
+      "nss": -0.19278492528661162,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 3
+    },
+    {
+      "ref_gaze_id": "rgo1127289",
+      "ref_id": 42880,
+      "nss": -0.18826245047439005,
+      "argmax_in_bbox": true,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 11
+    },
+    {
+      "ref_gaze_id": "rgo5301521",
+      "ref_id": 49168,
+      "nss": -0.3399330441909363,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 9
+    },
+    {
+      "ref_gaze_id": "rgo5303632",
+      "ref_id": 49168,
+      "nss": -0.24302161551864673,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 4
+    },
+    {
+      "ref_gaze_id": "rgo5305737",
+      "ref_id": 49168,
+      "nss": -0.39227114858497947,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 7
+    },
+    {
+      "ref_gaze_id": "rgo5307864",
+      "ref_id": 49168,
+      "nss": -0.30971900860287394,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    },
+    {
+      "ref_gaze_id": "rgo5312250",
+      "ref_id": 49168,
+      "nss": -0.33402427062439355,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 5
+    },
+    {
+      "ref_gaze_id": "rgo5314382",
+      "ref_id": 49168,
+      "nss": -0.3090635097620418,
+      "argmax_in_bbox": false,
+      "human_final_fix_in_bbox": true,
+      "n_fixations": 6
+    }
+  ]
+}

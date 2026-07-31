@@ -257,15 +257,23 @@ def run_rf20(mm, tag, letters, reverse, datasets):
 
 
 # ------------------------------------------------------------------------ RefCOCO
-def run_refcoco(mm, tag, letters, reverse, n):
-    refs = [r for r in pickle.load(open(f"{RC}/refcocog/refs(umd).p", "rb"))
-            if r["split"] == "val"]
-    inst = json.load(open(f"{RC}/refcocog/instances.json"))
+REF_DATASET_CFG = {
+    "refcocog": {"pfile": "refs(umd).p", "img_dir": "train2014"},
+    "refcoco":  {"pfile": "refs(unc).p", "img_dir": "train2014"},
+    "refcoco+": {"pfile": "refs(unc).p", "img_dir": "train2014"},
+}
+
+
+def run_refcoco(mm, tag, letters, reverse, n, dataset="refcocog", split="val"):
+    cfg = REF_DATASET_CFG[dataset]
+    refs = [r for r in pickle.load(open(f"{RC}/{dataset}/{cfg['pfile']}", "rb"))
+            if r["split"] == split]
+    inst = json.load(open(f"{RC}/{dataset}/instances.json"))
     ann = {a["id"]: a for a in inst["annotations"]}
     img = {im["id"]: im for im in inst["images"]}
     if n and n < len(refs):
         refs = refs[:n]
-    out = os.path.join(OUT_DIR, f"refcocog_val_order-{tag}_{MODEL}.json")
+    out = os.path.join(OUT_DIR, f"{dataset}_{split}_order-{tag}_{MODEL}.json")
     per, done = [], set()
     if os.path.exists(out):
         try:
@@ -303,15 +311,16 @@ def run_refcoco(mm, tag, letters, reverse, n):
             print(f"    [{tag}] {i+1}/{len(refs)} [email protected]={acc:.3f} "
                   f"{len(per)/(time.time()-t0+1e-9):.2f}/s", flush=True)
         if (i + 1) % 100 == 0 or i + 1 == len(refs):
-            _save_ref(out, tag, refs, per, correct, parsed)
-    _save_ref(out, tag, refs, per, correct, parsed)
-    print(f"  [{tag}] RefCOCOg [email protected] {correct/max(1,len(per))*100:.1f} -> {out}", flush=True)
+            _save_ref(out, tag, refs, per, correct, parsed, dataset, split)
+    _save_ref(out, tag, refs, per, correct, parsed, dataset, split)
+    print(f"  [{tag}] {dataset}/{split} ref_acc "
+          f"{correct/max(1,len(per))*100:.1f} -> {out}", flush=True)
 
 
-def _save_ref(out, tag, refs, per, correct, parsed):
+def _save_ref(out, tag, refs, per, correct, parsed, dataset="refcocog", split="val"):
     n = len(per)
-    meta = {"benchmark": "RefCOCOg", "variant": "umd", "split": "val",
-            "metric": "[email protected]", "ordering": tag, "model": MODEL,
+    meta = {"benchmark": dataset, "split": split,
+            "metric": "ref_acc_iou0.5", "ordering": tag, "model": MODEL,
             "n": n, "n_total_split": len(refs), "parsed": parsed,
             "correct": correct, "acc": correct / n if n else 0.0}
     json.dump({"meta": meta, "per_sample": per}, open(out, "w"), indent=2)
@@ -324,6 +333,9 @@ def main():
     ap.add_argument("--n", type=int, default=0, help="RefCOCO ref cap (0=all)")
     ap.add_argument("--datasets", default=",".join(AERIAL),
                     help="RF20 dataset list (comma-separated)")
+    ap.add_argument("--ref-dataset", default="refcocog", dest="ref_dataset",
+                    choices=["refcocog", "refcoco", "refcoco+"])
+    ap.add_argument("--ref-split", default="val", dest="ref_split")
     args = ap.parse_args()
     rf20_datasets = [d.strip() for d in args.datasets.split(",") if d.strip()]
 
@@ -348,7 +360,8 @@ def main():
         if args.benchmark == "rf20":
             run_rf20(mm, tag, letters, reverse, rf20_datasets)
         else:
-            run_refcoco(mm, tag, letters, reverse, args.n)
+            run_refcoco(mm, tag, letters, reverse, args.n,
+                        args.ref_dataset, args.ref_split)
     print("[done]", flush=True)
 
 
