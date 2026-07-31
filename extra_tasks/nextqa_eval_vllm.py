@@ -107,14 +107,18 @@ def run_order(llm, sp, tag, letters, rows, k_frames, log_every):
                 print(f"  [{tag}] cached (acc={d['meta'].get('accuracy'):.3f})", flush=True)
                 return
             results = d.get("results", [])
-            done = {r["qid"] for r in results}
+            done = {(r["video"], r["qid"]) for r in results}
             print(f"  [resume] {len(done)} already done", flush=True)
         except Exception:
             results, done = [], set()
 
     convs, meta = [], []
     for r in rows:
-        if int(r["qid"]) in done:
+        # NExT-QA's qid is a PER-VIDEO local question index (0..~13), NOT
+        # globally unique -- it restarts at 0 for every video, so dedup must
+        # key on (video, qid) together or almost every row gets wrongly
+        # treated as "already done" once a few small qid values have appeared.
+        if (str(r["video"]), int(r["qid"])) in done:
             continue
         vpath = os.path.join(VIDEO_DIR, f"{r['video']}.mp4")
         frames = sample_frames(vpath, k_frames)
