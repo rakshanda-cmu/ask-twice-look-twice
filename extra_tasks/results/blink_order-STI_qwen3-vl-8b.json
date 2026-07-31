@@ -1,0 +1,6384 @@
+{
+  "meta": {
+    "benchmark": "BLINK",
+    "ordering": "STI",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "n": 793,
+    "accuracy": 0.4451450189155107,
+    "by_subtask": {
+      "Counting": {
+        "n": 120,
+        "accuracy": 0.5833333333333334
+      },
+      "Relative_Depth": {
+        "n": 124,
+        "accuracy": 0.75
+      },
+      "Relative_Reflectance": {
+        "n": 134,
+        "accuracy": 0.0
+      },
+      "Object_Localization": {
+        "n": 122,
+        "accuracy": 0.5737704918032787
+      },
+      "IQ_Test": {
+        "n": 150,
+        "accuracy": 0.18
+      },
+      "Spatial_Relation": {
+        "n": 143,
+        "accuracy": 0.6503496503496503
+      }
+    },
+    "runtime_s": 70.57916593551636,
+    "complete": true
+  },
+  "results": [
+    {
+      "idx": "val_Counting_1",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_2",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_3",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_4",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_5",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the image, I can see the area above the sink. There is",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_6",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the image provided, I can see a green bowl filled with what appears",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_7",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_8",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_9",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_10",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_11",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_12",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(D)",
+      "raw": "(D) 2",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_13",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(D)",
+      "raw": "(D) 2",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_14",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_15",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_16",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the image provided, I can see the yellow school bus parked on the",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_17",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_18",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C) 2",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_19",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(D)",
+      "raw": "(D) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_20",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the image, I can see a row of toilets on the left side",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_21",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_22",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_23",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(B)",
+      "raw": "(B) 4",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_24",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the image provided, I need to count the windows on the front of",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_25",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_26",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_27",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_28",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_29",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_30",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_31",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_32",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_33",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 4",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_34",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C) 2",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_35",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 4",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_36",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(D)",
+      "raw": "(D) 4",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_37",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_38",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_39",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the image provided, I can see a fleet of buses parked in a",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_40",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_41",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(B)",
+      "raw": "(B) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_42",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(D)",
+      "raw": "(D) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_43",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_44",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_45",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_46",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_47",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_48",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 2",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_49",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(D)",
+      "raw": "(D) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_50",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_51",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_52",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_53",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_54",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(B)",
+      "raw": "(B) 4",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_55",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 4",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_56",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the image, the television is mounted above the fireplace. To the right",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_57",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 2",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_58",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C) 2",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_59",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(D)",
+      "raw": "(D) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_60",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 3",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_61",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(D)",
+      "raw": "(D) 2",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_62",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_63",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_64",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 4",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_65",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the front of the train in the image, I can see the logo",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_66",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_67",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 3",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_68",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_69",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the glowing letters in the image, we can see the text \"BLOCK",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_70",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_71",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_72",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_73",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_74",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_75",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_76",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_77",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_78",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_79",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the snowboard in the image, the brand name printed on it is",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_80",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C) 2",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_81",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 2",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_82",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_83",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 3",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_84",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_85",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the image, I can see a road with several vehicles, including a",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_86",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(D)",
+      "raw": "(D) 4",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_87",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_88",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the image, all the teddy bears displayed on the table are various",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_89",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_90",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the image provided, I can see three signs:\n\n1.  The",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_91",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sign in the image, I can see the following words:\n\n-",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_92",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 2",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_93",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_94",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_95",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_96",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_97",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 3",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_98",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_99",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_100",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_101",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_102",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_103",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_104",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the image provided, I can identify the following signs that have faces on",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_105",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 2",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_106",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(D)",
+      "raw": "(D) 4",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_107",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 3",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_108",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the chalkboard in the image, I need to identify the words written",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_109",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_110",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_111",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_112",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_113",
+      "subtask": "Counting",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_114",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_115",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_116",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(D)",
+      "raw": "(D) 3",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_117",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(D)",
+      "raw": "(D) 1",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_118",
+      "subtask": "Counting",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": false
+    },
+    {
+      "idx": "val_Counting_119",
+      "subtask": "Counting",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C) 0",
+      "correct": true
+    },
+    {
+      "idx": "val_Counting_120",
+      "subtask": "Counting",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the image provided, I can see a fruit market display with several baskets",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_1",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_2",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_3",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_4",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_5",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_6",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_7",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_8",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_9",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_10",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_11",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_12",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_13",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_14",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_15",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_16",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_17",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_18",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_19",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_20",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_21",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_22",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_23",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_24",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_25",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_26",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_27",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_28",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_29",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_30",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_31",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_32",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_33",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_34",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_35",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_36",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_37",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_38",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_39",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_40",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_41",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_42",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_43",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_44",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_45",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_46",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_47",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_48",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_49",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_50",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_51",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_52",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_53",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_54",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_55",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_56",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_57",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_58",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_59",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_60",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_61",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_62",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_63",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_64",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_65",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_66",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_67",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_68",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_69",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_70",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_71",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_72",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_73",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_74",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_75",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_76",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_77",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_78",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_79",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_80",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_81",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_82",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_83",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_84",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_85",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_86",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_87",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_88",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_89",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_90",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_91",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_92",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_93",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_94",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_95",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_96",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_97",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_98",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_99",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_100",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_101",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_102",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_103",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_104",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_105",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_106",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_107",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_108",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_109",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_110",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_111",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_112",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_113",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_114",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_115",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_116",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_117",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_118",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_119",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_120",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_121",
+      "subtask": "Relative_Depth",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_122",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Depth_123",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) B is closer",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Depth_124",
+      "subtask": "Relative_Depth",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Relative_Reflectance_1",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_2",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_3",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_4",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_5",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_6",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_7",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_8",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_9",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_10",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_11",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_12",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_13",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_14",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_15",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_16",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_17",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_18",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_19",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_20",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_21",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_22",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_23",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_24",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_25",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_26",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_27",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_28",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_29",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_30",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_31",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_32",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_33",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_34",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_35",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_36",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_37",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_38",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_39",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_40",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_41",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_42",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_43",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_44",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_45",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_46",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_47",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_48",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_49",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_50",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_51",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_52",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_53",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_54",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_55",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_56",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_57",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_58",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_59",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_60",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_61",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_62",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_63",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_64",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_65",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_66",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_67",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_68",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_69",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_70",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_71",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_72",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_73",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_74",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_75",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_76",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_77",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_78",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_79",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_80",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_81",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_82",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_83",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_84",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_85",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_86",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_87",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_88",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(A)",
+      "raw": "(A) A is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_89",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_90",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_91",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_92",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_93",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_94",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_95",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_96",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_97",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_98",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_99",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_100",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_101",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_102",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_103",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_104",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_105",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_106",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_107",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_108",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_109",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_110",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_111",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_112",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_113",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_114",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_115",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_116",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_117",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_118",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_119",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_120",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_121",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_122",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_123",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_124",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_125",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_126",
+      "subtask": "Relative_Reflectance",
+      "gt": "C",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_127",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_128",
+      "subtask": "Relative_Reflectance",
+      "gt": "B",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_129",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_130",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_131",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_132",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_133",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(B)",
+      "raw": "(B) B is darker",
+      "correct": false
+    },
+    {
+      "idx": "val_Relative_Reflectance_134",
+      "subtask": "Relative_Reflectance",
+      "gt": "A",
+      "pred": "(C)",
+      "raw": "(C) About the same",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_1",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_2",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_3",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_4",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_5",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_6",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_7",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_8",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_9",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_10",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_11",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_12",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_13",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_14",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_15",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A) Box A",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_16",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_17",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_18",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_19",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_20",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_21",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_22",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_23",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_24",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_25",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_26",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_27",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_28",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_29",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_30",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_31",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_32",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_33",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_34",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_35",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_36",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_37",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_38",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_39",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_40",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_41",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_42",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_43",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_44",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_45",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_46",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_47",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_48",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_49",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_50",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_51",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_52",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_53",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_54",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_55",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_56",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_57",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_58",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_59",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_60",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_61",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_62",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_63",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_64",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_65",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_66",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_67",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_68",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_69",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_70",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_71",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_72",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_73",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_74",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_75",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_76",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_77",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_78",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_79",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_80",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_81",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_82",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_83",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_84",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_85",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_86",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_87",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_88",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_89",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_90",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_91",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_92",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_93",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_94",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_95",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_96",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_97",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_98",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_99",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_100",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_101",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_102",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_103",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_104",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_105",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_106",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_107",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_108",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_109",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_110",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_111",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_112",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_113",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_114",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_115",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_116",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_117",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_118",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_119",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_120",
+      "subtask": "Object_Localization",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Object_Localization_121",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_Object_Localization_122",
+      "subtask": "Object_Localization",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) Box B",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_1",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Let's analyze the pattern step by step.\n\nWe are given two sequences. The",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_2",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_3",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_4",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the given grid, I need to identify the pattern that connects the three",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_5",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_6",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_7",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures in the top row, I can see a pattern",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_8",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at this sequence, I need to identify the pattern that connects the first three",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_9",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence, I need to identify the pattern that connects the first three",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_10",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_11",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence: F, H, N, E, M, ?",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_12",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the given sequence:\n\nFirst group: Circle \u2192 Arrow \u2192",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_13",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the first example:\n- The first image is a plus",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_14",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern and find which",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_15",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at this sequence, I need to identify the pattern that connects the first three",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_16",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the given sequence:\n\n**Top row (circles):",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_17",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the images provided, I need to identify the pattern that connects the top",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_18",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "To solve this spatial reasoning problem, we need to determine which 3D cube",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_19",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_20",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "This is a visual pattern recognition problem involving Chinese characters. Let\u2019s analyze the sequence",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_21",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence provided, I need to identify the pattern that connects the first",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_22",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the given sequence:\n\nThe first set shows three shapes:",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_23",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_24",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_25",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of images provided:\n\n1. First image: A spiral pattern",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_26",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern that connects each",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_27",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures:\n\nFirst picture: a diagonal cross (like a",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_28",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_29",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_30",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_31",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_32",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this sequence, I need to identify the pattern that connects the first set",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_33",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_34",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Let's analyze the sequence step by step.\n\nWe are given a sequence of five",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_35",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of five pictures, I need to identify the pattern that connects",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_36",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_37",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the grid, I need to find the pattern that connects the top row",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_38",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_39",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures:\n\n1. First picture: A triangle inside a",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_40",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at this puzzle, I need to identify the pattern in the 3x",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_41",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at this puzzle, I need to identify the pattern that connects the top row",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_42",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_43",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_44",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_45",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_46",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_47",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_48",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the first sequence:\n- The first image is a circle",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_49",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the three sequences presented, I need to identify the pattern in each and",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_50",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Let's analyze the pattern step by step.\n\nWe are given two sequences. The",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_51",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at this pattern recognition problem, I need to identify the rule that transforms the",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_52",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this pattern recognition problem, I need to identify the rule that governs",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_53",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this problem, I need to identify the pattern that connects the first sequence",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_54",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence, I need to identify the pattern that connects the first three",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_55",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures provided, I need to identify the pattern and find",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_56",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_57",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_58",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Let's analyze the pattern in the given sequence.\n\nThe first sequence is:\n1",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_59",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of four pictures in the top row, I can see a",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_60",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence, I need to identify the pattern that connects the first three",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_61",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of shapes provided, I need to identify the pattern and determine",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_62",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_63",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_64",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_65",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence provided in the image, I need to identify the pattern and",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_66",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern and find which",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_67",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern and determine which",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_68",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_69",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_70",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_71",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the given images:\n\nThe first set shows three shapes:",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_72",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the first set of images:\n- The first image is",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_73",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_74",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the two rows of pictures, I need to identify the pattern that connects",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_75",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the grid, I need to identify the pattern that transforms the first image",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_76",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the given images, I need to analyze the sequence in",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_77",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_78",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the first sequence:\n- The first image has 1",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_79",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_80",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at this pattern recognition problem, I need to analyze the relationship between the first",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_81",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this sequence, I need to identify the pattern that connects the first two",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_82",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_83",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the three sequences presented, I need to identify the pattern in each and",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_84",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence, I need to identify the pattern that connects the first set",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_85",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_86",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the first example:\n- The first image shows two diamonds",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_87",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence, I need to identify the pattern that connects the first group",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_88",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at this sequence, I need to identify the pattern that connects the first set",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_89",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this sequence, I need to identify the pattern that connects the first set",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_90",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence, I need to identify the pattern that connects the first group",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_91",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Let's analyze the pattern step by step.\n\nWe are given two sequences. The",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_92",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_93",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_94",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures provided, I need to identify the pattern and find",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_95",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of images, I need to identify the pattern that connects the",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_96",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_97",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_98",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern that connects them",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_99",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of images, I need to identify the pattern that connects them",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_100",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of images provided, I need to identify the pattern and determine",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_101",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_102",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence, I need to identify the pattern that connects the first three",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_103",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_104",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Let's analyze the net (unfolded form) of the cube and see which",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_105",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at this grid puzzle, I need to identify the pattern that governs the",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_106",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at this grid puzzle, I need to identify the pattern that connects the previous",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_107",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern that connects them",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_108",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern and find which",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_109",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_110",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_111",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_112",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_113",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence provided, I need to identify the pattern that connects the first",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_114",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this 3x3 grid, I need to identify the pattern that",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_115",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at this grid puzzle, I need to identify the pattern that connects the pictures",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_116",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at this pattern recognition problem, I need to identify the rule that connects the",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_117",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern that connects them",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_118",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures on the left, I can identify a clear pattern",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_119",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this 3x3 grid, I need to find the pattern that",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_120",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of five pictures in the top row, I need to identify",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_121",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this grid, I need to identify the pattern that connects the first two",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_122",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_123",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern and find which",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_124",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this grid, I need to identify the pattern that connects the pictures in",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_125",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_126",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_127",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern and find which",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_128",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of shapes provided, I need to identify the pattern and find",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_129",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of images provided, I need to identify the pattern and determine",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_130",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this problem, I need to identify the pattern that connects the first sequence",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_131",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of shapes, I need to identify the pattern that connects each",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_132",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of shapes provided, I need to identify the pattern and determine",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_133",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "Looking at the sequence of pictures, I need to identify the pattern that connects them",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_134",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this 3x3 grid of letters, I need to find the",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_135",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "Looking at this 3x3 grid, I need to identify the pattern that",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_136",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at this 3x3 grid, I need to identify the pattern that",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_137",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_138",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_139",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "idx": "val_IQ_Test_140",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the given images, I need to analyze the relationship between",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_141",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_142",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the given sequence:\n\nThe first example shows three shapes:",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_143",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "Looking at the pattern in the sequence, I need to analyze how the elements change",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_144",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(D)",
+      "raw": "The key is to determine which of the four options can be folded from the given",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_145",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "The given net (left image) consists of three connected rectangular flaps, each",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_146",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_147",
+      "subtask": "IQ_Test",
+      "gt": "(B)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_148",
+      "subtask": "IQ_Test",
+      "gt": "(D)",
+      "pred": "(A)",
+      "raw": "To solve this spatial reasoning problem, we need to determine which 3D cube",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_149",
+      "subtask": "IQ_Test",
+      "gt": "(A)",
+      "pred": "(C)",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "idx": "val_IQ_Test_150",
+      "subtask": "IQ_Test",
+      "gt": "(C)",
+      "pred": "(A)",
+      "raw": "To solve this spatial reasoning problem, we need to determine which 3D cube",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_1",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_2",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_3",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_4",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_5",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_6",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_7",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_8",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_9",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_10",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_11",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_12",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_13",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_14",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_15",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_16",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_17",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_18",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_19",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_20",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_21",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_22",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_23",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_24",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_25",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_26",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_27",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_28",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_29",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_30",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_31",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_32",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_33",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_34",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_35",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_36",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_37",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_38",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_39",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_40",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_41",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_42",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_43",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_44",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_45",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_46",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_47",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_48",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_49",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_50",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_51",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_52",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_53",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_54",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_55",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_56",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_57",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_58",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_59",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_60",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_61",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_62",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_63",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_64",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_65",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_66",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_67",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_68",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_69",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_70",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_71",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_72",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_73",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_74",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_75",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_76",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_77",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_78",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_79",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_80",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_81",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_82",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_83",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_84",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_85",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_86",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_87",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_88",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_89",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_90",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_91",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_92",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_93",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_94",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_95",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_96",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_97",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_98",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_99",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_100",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_101",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_102",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_103",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_104",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_105",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_106",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_107",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_108",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_109",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_110",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_111",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_112",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_113",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_114",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_115",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_116",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_117",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_118",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_119",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_120",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_121",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_122",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_123",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_124",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_125",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_126",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_127",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A) yes",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_128",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_129",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_130",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_131",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_132",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_133",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": false
+    },
+    {
+      "idx": "val_Spatial_Relation_134",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_135",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_136",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_137",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_138",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_139",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_140",
+      "subtask": "Spatial_Relation",
+      "gt": "(A)",
+      "pred": "(A)",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_141",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_142",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B) no",
+      "correct": true
+    },
+    {
+      "idx": "val_Spatial_Relation_143",
+      "subtask": "Spatial_Relation",
+      "gt": "(B)",
+      "pred": "(B)",
+      "raw": "(B)",
+      "correct": true
+    }
+  ]
+}

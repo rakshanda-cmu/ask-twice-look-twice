@@ -52,9 +52,22 @@ def load_tallyqa(n, seed=0):
     return rows[:n]
 
 
+# TallyQA answers are small object counts (the public dataset's max is well
+# under 100); a model occasionally emits a degenerate huge number (observed:
+# "1000000000" for a true count of 0), which is a generation artifact, not a
+# plausible count. A single such value dominates the MEAN absolute error (one
+# outlier of 1e9 over 2000 examples inflates MAE from ~0.3 to ~500,000) without
+# affecting exact-match accuracy. Treat implausible values as unparsed rather
+# than silently averaging them in.
+PLAUSIBLE_MAX_COUNT = 200
+
+
 def parse_count(text):
     m = NUM.search(text.strip())
-    return int(m.group()) if m else None
+    if not m:
+        return None
+    v = int(m.group())
+    return v if 0 <= v <= PLAUSIBLE_MAX_COUNT else None
 
 
 def run_order(llm, sp, tag, letters, rows, log_every):
