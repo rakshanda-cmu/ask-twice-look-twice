@@ -88,19 +88,34 @@ def parse_choice(text):
     return None
 
 
+# vLLM's internal multimodal-processor cache has hit an AssertionError
+# ("Expected a cached item for mm_hash=...") when a single llm.chat() call
+# carries too many distinct images at once (observed: 1500 prompts x 6 frames
+# = 9000 images in one batch overwhelmed it). Chunking keeps each batch's
+# working set well inside the cache and is also checkpoint-friendly, so a
+# crash mid-ordering resumes from the last saved chunk instead of restarting.
+CHUNK_SIZE = 100
+
+
 def run_order(llm, sp, tag, letters, rows, k_frames, log_every):
     out = os.path.join(OUT_DIR, f"nextqa_order-{tag}_{MODEL_TAG}.json")
+    results, done = [], set()
     if os.path.exists(out):
         try:
-            m = json.load(open(out))["meta"]
-            if m.get("complete"):
-                print(f"  [{tag}] cached (acc={m.get('accuracy'):.3f})", flush=True)
+            d = json.load(open(out))
+            if d["meta"].get("complete"):
+                print(f"  [{tag}] cached (acc={d['meta'].get('accuracy'):.3f})", flush=True)
                 return
+            results = d.get("results", [])
+            done = {r["qid"] for r in results}
+            print(f"  [resume] {len(done)} already done", flush=True)
         except Exception:
-            pass
+            results, done = [], set()
 
     convs, meta = [], []
     for r in rows:
+        if int(r["qid"]) in done:
+            continue
         vpath = os.path.join(VIDEO_DIR, f"{r['video']}.mp4")
         frames = sample_frames(vpath, k_frames)
         if not frames:
@@ -114,31 +129,44 @@ def run_order(llm, sp, tag, letters, rows, k_frames, log_every):
                      "question": r["question"]})
 
     t0 = time.time()
-    outputs = llm.chat(convs, sp, use_tqdm=False)
+    outputs = []
+    for i in range(0, len(convs), CHUNK_SIZE):
+        chunk_out = llm.chat(convs[i:i + CHUNK_SIZE], sp, use_tqdm=False)
+        outputs.extend(chunk_out)
+        print(f"    [{tag}] generated {min(i+CHUNK_SIZE, len(convs))}/{len(convs)}",
+              flush=True)
+        _save(out, tag, results + _score(outputs, meta[:len(outputs)]))
     dt = time.time() - t0
 
-    results, by_type, n_correct = [], {}, 0
+    results = results + _score(outputs, meta)
+    n_correct = sum(r["correct"] for r in results)
+    _save(out, tag, results, complete=True)
+    print(f"  [{tag}] n={len(results)} acc={n_correct/max(1,len(results)):.3f} "
+          f"({dt:.0f}s) -> {out}", flush=True)
+
+
+def _score(outputs, meta):
+    scored = []
     for o, m in zip(outputs, meta):
         text = o.outputs[0].text.strip()
         pred = parse_choice(text)
         correct = pred == m["answer"]
-        n_correct += int(correct)
-        bt = by_type.setdefault(m["type"], {"n": 0, "correct": 0})
-        bt["n"] += 1; bt["correct"] += int(correct)
-        results.append({**m, "pred": pred, "raw": text, "correct": correct})
-        if len(results) % log_every == 0:
-            print(f"    [{tag}] {len(results)}/{len(convs)} "
-                  f"acc={n_correct/len(results):.3f}", flush=True)
+        scored.append({**m, "pred": pred, "raw": text, "correct": correct})
+    return scored
 
+
+def _save(out, tag, results, complete=False):
+    by_type, n_correct = {}, sum(r["correct"] for r in results)
+    for r in results:
+        bt = by_type.setdefault(r["type"], {"n": 0, "correct": 0})
+        bt["n"] += 1; bt["correct"] += int(r["correct"])
     by_type_summary = {k: {"n": v["n"], "accuracy": v["correct"] / v["n"]}
                        for k, v in by_type.items()}
     meta_out = {"benchmark": "NExT-QA", "ordering": tag, "model": MODEL_TAG,
-                "engine": "vllm", "n": len(results), "k_frames": k_frames,
+                "engine": "vllm", "n": len(results),
                 "accuracy": n_correct / max(1, len(results)),
-                "by_type": by_type_summary, "runtime_s": dt, "complete": True}
+                "by_type": by_type_summary, "complete": complete}
     json.dump({"meta": meta_out, "results": results}, open(out, "w"), indent=2)
-    print(f"  [{tag}] n={len(results)} acc={meta_out['accuracy']:.3f} "
-          f"({dt:.0f}s) -> {out}", flush=True)
 
 
 def main():
