@@ -184,7 +184,7 @@ def main():
 
     from vllm import SamplingParams
     # SITIT doubles the frame block -> 2*frames images per prompt; cap accordingly.
-    llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1)
+    llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1, disable_mm_cache=True)
     sp = SamplingParams(temperature=0.0, max_tokens=8)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:

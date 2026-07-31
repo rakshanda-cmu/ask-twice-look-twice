@@ -62,9 +62,18 @@ def build_conversation(letters, task_text, image_uris, system_text=SYSTEM_MESSAG
     return [{"role": "user", "content": parts}]
 
 
-def make_llm(tp=2, max_model_len=24096, gpu_mem=0.85, limit_images=2):
+def make_llm(tp=2, max_model_len=24096, gpu_mem=0.85, limit_images=2,
+            disable_mm_cache=False):
+    """disable_mm_cache: vLLM's multimodal-processor LRU cache can hit an
+    internal AssertionError ("Expected a cached item for mm_hash=...") under
+    large batches with many distinct images per request (observed on NExT-QA:
+    1500 prompts x 6 frames). It exists to avoid reprocessing the SAME image
+    seen in multiple prompts, which barely helps workloads where each prompt's
+    images are mostly unique (e.g. one video's frames per prompt) -- disabling
+    it there trades a little redundant preprocessing for correctness."""
     from vllm import LLM
     return LLM(model=MODEL_HF, trust_remote_code=True, dtype="float16",
               max_model_len=max_model_len, tensor_parallel_size=tp,
               gpu_memory_utilization=gpu_mem,
-              limit_mm_per_prompt={"image": limit_images})
+              limit_mm_per_prompt={"image": limit_images},
+              disable_mm_preprocessor_cache=disable_mm_cache)
