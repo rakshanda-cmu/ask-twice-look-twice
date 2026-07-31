@@ -1,15 +1,17 @@
 """
-Streamlit page: DetPO Detection — mAP on the RF20-VL *Aerial* domain and referring
-accuracy (IoU>=0.5) on RefCOCOg (val), for the served Qwen3-VL model, and the prompt
-orderings STI / SIT / STIT / SITIT / SITIT_rev (question-first paradox applied to
-localization). Read-only; reads JSON written by the eval scripts in detpo_map/:
+Streamlit page: DetPO Detection — mAP on RF20-VL (all 20 datasets) and referring
+accuracy (IoU>=0.5) on RefCOCO / RefCOCO+ / RefCOCOg, for the served Qwen3-VL
+model and the prompt orderings STI / SIT / STIT / SITIT / STITI / SITIT_rev
+(question-first paradox applied to localization). Read-only; reads JSON written
+by the eval scripts in detpo_map/:
     detpo_map/results/rf20_aerial_baseline_<model>.json          (30B baseline)
-    detpo_map/results/rf20_aerial_order-<ORD>_<model>.json        (8B orderings)
-    detpo_map/results/refcocog_val_refacc_<model>.json            (30B baseline)
-    detpo_map/results/refcocog_val_order-<ORD>_<model>.json       (8B orderings)
+    detpo_map/results/rf20ds_<dataset>_order-<ORD>_<model>.json  (8B orderings, RF20)
+    detpo_map/results/refcocog_val_refacc_<model>.json           (30B baseline)
+    detpo_map/results/<dataset>_<split>_order-<ORD>_<model>.json (8B orderings, grounding)
 
 Distinct from the "🟩 RF20" page (that one is the prompt-ordering yes/no
-object-presence study); this page is the DetPO localization benchmark (mAP / AP50).
+object-presence study); this page is the DetPO localization benchmark (mAP / AP50
+/ referring accuracy).
 """
 import glob
 import json
@@ -22,13 +24,14 @@ RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                            "detpo_map", "results")
 
 # Canonical row order: 30B baseline first, then the orderings.
-ORDER_ROWS = ["baseline", "STI", "SIT", "STIT", "SITIT", "SITIT_rev"]
+ORDER_ROWS = ["baseline", "STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"]
 ORDER_DESC = {
     "baseline": "DetPO default (S·T·I, question-first)",
     "STI": "S·T·I — question-first",
     "SIT": "S·I·T — question-last",
     "STIT": "S·T·I·T — question echo",
     "SITIT": "S·I·T·I·T — image echo",
+    "STITI": "S·T·I·T·I — exploratory (ends on image, not text)",
     "SITIT_rev": "S·I·T·Ī·T — image echo, 2nd image reversed",
 }
 
@@ -47,7 +50,7 @@ RF20_CATS = {
 }
 CAT_ORDER = ["Aerial", "Document", "Flora/Fauna", "Industrial", "Lab Imaging",
              "Misc", "Sport"]
-ORD_ORDER = ["STI", "SIT", "STIT", "SITIT", "SITIT_rev"]
+ORD_ORDER = ["STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"]
 
 # DetPO paper reference numbers (RF20-VL Aerial mAP), Tables 1–2 of the DetPO paper.
 # Baseline is the default "class names + instructions" (C+I) prompt.
@@ -60,12 +63,14 @@ PAPER_REF_RF20 = [
 
 RF20_RUN = ("HF_HOME=/data2/hf_cache CUDA_VISIBLE_DEVICES=0,1 "
             "/home/grg/anaconda3/envs/qwen-vllm-env/bin/python "
-            "detpo_map/ordering_eval_vllm.py --orders STI,SIT,STIT,SITIT   "
-            "# SITIT_rev: detpo_map/ordering_eval.py (HF+hooks), on hold")
-REF_RUN = ("CUDA_VISIBLE_DEVICES=1 HF_HOME=/data2/hf_cache "
-           "/home/grg/anaconda3/envs/logitlens/bin/python "
-           "detpo_map/ordering_eval.py --benchmark refcoco "
-           "--orders STI,SIT,STIT,SITIT,SITIT_rev --n 0")
+            "detpo_map/ordering_eval_vllm.py --orders STI,SIT,STIT,SITIT,STITI   "
+            "# SITIT_rev: detpo_map/ordering_eval.py (HF+hooks)")
+GROUNDING_RUN = ("HF_HOME=/data2/hf_cache CUDA_VISIBLE_DEVICES=0,1 "
+                 "/home/grg/anaconda3/envs/qwen-vllm-env/bin/python "
+                 "detpo_map/grounding_eval_vllm.py --datasets refcoco,refcoco+ "
+                 "--splits testA,testB --orders STI,SIT,STIT,SITIT,STITI   "
+                 "# SITIT_rev: detpo_map/ordering_eval.py --benchmark refcoco "
+                 "--ref-dataset <ds> --ref-split <split>")
 
 
 def _load(pattern):
@@ -119,23 +124,22 @@ def _rf20_section():
         "prompting** (all classes at once, as in the DetPO paper), scored with COCO "
         "**mAP (IoU .50 to .95)** on each test split. Each row re-orders the same "
         "system (**S**), task/question (**T**) and image (**I**) tokens: question-first "
-        "(STI), question-last (SIT), question echo (STIT), image echo (SITIT) and image "
-        "echo with the 2nd image block reversed (SITIT_rev). Run on local "
-        "**Qwen3-VL-8B** (so SITIT_rev's patch reversal applies)."
+        "(STI), question-last (SIT), question echo (STIT), image echo (SITIT), the "
+        "exploratory STITI (ends on an image, not text), and image echo with the "
+        "2nd image block reversed (SITIT_rev). Run on local **Qwen3-VL-8B** (so "
+        "SITIT_rev's patch reversal applies)."
     )
     mp, _ = _rf20_by_ordering()
     if not mp:
         st.info("**No RF20 results yet.** Run:\n\n```\n" + RF20_RUN + "\n```")
         return
-    # STI/SIT/STIT/SITIT run on the vLLM library; SITIT_rev runs on the local HF
-    # path (patch-reversal hooks) and fills in separately (slower).
-    active = ["STI", "SIT", "STIT", "SITIT", "SITIT_rev"]
+    active = ["STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"]
     present_ord = [o for o in active if o in mp]
 
     def _cov(o):
         return len(mp.get(o, {}))
     cov = " · ".join(f"{o} {_cov(o)}/20" for o in present_ord)
-    st.caption("Engine: **vLLM library** for STI/SIT/STIT/SITIT; **local HF + "
+    st.caption("Engine: **vLLM library** for STI/SIT/STIT/SITIT/STITI; **local HF + "
                "patch-reversal hooks** for SITIT_rev. Coverage: " + cov + ".")
 
     # --- Super-category summary (paper Table-1 layout) ---
@@ -177,7 +181,7 @@ def _rf20_section():
         "instructions (C+I) prompt; **+DetPO** = optimized prompt; **+VQA** = with "
         "VQA-Score confidence re-ranking. \"All\" is the 20-dataset mean; the paper's "
         "8B baseline is 11.4 All-mean / 7.1 Aerial. Compare against the STI row's "
-        "All-mean above once coverage reaches 20/20."
+        "All-mean above."
     )
     st.caption("Re-run orderings (dataset-split across GPUs, resumable):  `"
                + RF20_RUN + "`")
@@ -187,23 +191,23 @@ def _delta_caption(by, unit):
     """by: {ordering_tag: display_value}. State the ordering effect vs STI."""
     if by.get("STI") is not None:
         parts = [f"{t} {by[t]-by['STI']:+.1f}" for t in ("SIT", "STIT", "SITIT",
-                 "SITIT_rev") if by.get(t) is not None]
+                 "STITI", "SITIT_rev") if by.get(t) is not None]
         if parts:
             st.caption(f"8B ordering Δ vs STI (question-first), {unit}: "
                        + " · ".join(parts) + f"  (STI = {by['STI']:.1f}).")
 
 
-def _refcoco_section():
+def _refcocog_section():
     st.subheader("🎯 RefCOCOg (val) — Referring accuracy (IoU ≥ 0.5) by prompt ordering")
     st.caption(
-        "Referring-expression grounding on RefCOCOg (umd val): one predicted box per "
-        "expression, correct if IoU with the GT box ≥ 0.5 (**referring accuracy**). Same "
-        "orderings as above; orderings on local **Qwen3-VL-8B**, baseline on served "
-        "**Qwen3-VL-30B-A3B**."
+        "Referring-expression grounding on RefCOCOg (umd val, 2573 expressions): "
+        "one predicted box per expression, correct if IoU with the GT box ≥ 0.5 "
+        "(**referring accuracy**). Orderings on local **Qwen3-VL-8B**, baseline on "
+        "served **Qwen3-VL-30B-A3B**."
     )
-    runs = _load("refcocog_*.json")
+    runs = _load("refcocog_val_*.json")
     if not runs:
-        st.info("**No RefCOCOg results yet.** Run:\n\n```\n" + REF_RUN + "\n```")
+        st.info("**No RefCOCOg results yet.**")
         return
     runs.sort(key=lambda r: (_order_key(_tag(r["meta"])), r["meta"]["model"]))
     rows = []
@@ -222,16 +226,14 @@ def _refcoco_section():
           for r in runs if "8b" in r["meta"].get("model", "")}
     _delta_caption(by, "referring acc (IoU>=0.5) %")
 
-    # Focused comparison: 30B baseline vs the 8B orderings (STI/SIT baselines +
-    # the three echo orderings) requested.
+    # Focused comparison: 30B baseline vs the 8B orderings.
     acc = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100 for r in runs}
     base = acc.get("baseline")
-    st.markdown("**Baseline (30B) vs 8B orderings** — STI / SIT baselines and "
-                "STIT / SITIT / SITIT_rev echoes")
+    st.markdown("**Baseline (30B) vs 8B orderings**")
     comp = []
     comp.append({"Row": "baseline (Qwen3-VL-30B, S·T·I)",
                  "Ref acc IoU>=0.5 (%)": _fmt(base), "Δ vs baseline": "—"})
-    for t in ("STI", "SIT", "STIT", "SITIT", "SITIT_rev"):
+    for t in ("STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"):
         v = acc.get(t)
         comp.append({"Row": f"{t}  ·  {ORDER_DESC[t]}  (8B)",
                      "Ref acc IoU>=0.5 (%)": _fmt(v),
@@ -240,28 +242,65 @@ def _refcoco_section():
     st.dataframe(pd.DataFrame(comp).astype(str), hide_index=True,
                  use_container_width=True)
     st.caption(
-        "All three echo orderings beat the DetPO-default question-first prompt; "
-        "**STIT** (question echo) is strongest. Note the DetPO paper reports **no "
-        "RefCOCO metric** (RefCOCO appears only qualitatively in its intro; its "
-        "quantitative results are RF20-VL and LVIS), so there is no published "
-        "baseline to overlay here — the baseline shown is our own served 30B run."
+        "Every 8B ordering beats the DetPO-default question-first prompt. Note "
+        "the DetPO paper reports **no RefCOCO metric** (RefCOCO appears only "
+        "qualitatively in its intro; its quantitative results are RF20-VL and "
+        "LVIS), so there is no published baseline to overlay here — the baseline "
+        "shown is our own served 30B run."
     )
-    st.caption("Re-run orderings:  `" + REF_RUN + "`")
+
+
+def _refcoco_variant_section(dataset, title, caption_extra=""):
+    """Generic renderer for refcoco / refcoco+ (testA + testB splits, no 30B
+    baseline was run for these -- only the 8B ordering sweep)."""
+    st.subheader(title)
+    st.caption(
+        f"Referring-expression grounding on **{dataset}** (testA + testB, the "
+        "standard reporting splits), same referring-accuracy (IoU ≥ 0.5) metric "
+        "and orderings as RefCOCOg, on local **Qwen3-VL-8B**. " + caption_extra
+    )
+    runs = _load(f"{dataset}_test*_order-*.json")
+    if not runs:
+        st.info(f"**No {dataset} results yet.** Run:\n\n```\n" + GROUNDING_RUN + "\n```")
+        return
+    by_split = {}
+    for r in runs:
+        m = r["meta"]
+        by_split.setdefault(m["split"], []).append(m)
+    for split in sorted(by_split):
+        st.markdown(f"**{dataset} / {split}**")
+        ms = sorted(by_split[split], key=lambda m: _order_key(_tag(m)))
+        rows = [{"Ordering": _tag(m), "What": ORDER_DESC.get(_tag(m), ""),
+                "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
+                "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0)} for m in ms]
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                     use_container_width=True)
+        by = {_tag(m): (m.get("acc") or 0) * 100 for m in ms}
+        _delta_caption(by, f"{split} referring acc %")
+    st.caption("Re-run:  `" + GROUNDING_RUN + "`")
 
 
 def render_detpo_map_page():
-    st.title("🛩️ DetPO Detection — RF20 Aerial mAP + RefCOCO (prompt orderings)")
+    st.title("🛩️ DetPO Detection — RF20 mAP + RefCOCO/RefCOCO+/RefCOCOg (prompt orderings)")
     st.caption(
         "The question-first paradox applied to **localization**: does moving the "
         "question before/after the image, echoing it, or echoing the image change "
-        "detection mAP and referring accuracy? Two benchmarks (RF20-VL Aerial COCO "
-        "mAP; RefCOCOg val referring accuracy at IoU ≥ 0.5) across STI / SIT / STIT / SITIT / "
-        "SITIT_rev, plus the served Qwen3-VL-30B-A3B baseline."
+        "detection mAP and referring accuracy? RF20-VL (20 datasets, COCO mAP) and "
+        "three referring-grounding benchmarks (RefCOCO, RefCOCO+, RefCOCOg — "
+        "referring accuracy at IoU ≥ 0.5) across STI / SIT / STIT / SITIT / STITI / "
+        "SITIT_rev, plus the served Qwen3-VL-30B-A3B baseline where available."
     )
     _prompt_doc()
     _rf20_section()
     st.markdown("---")
-    _refcoco_section()
+    _refcocog_section()
+    st.markdown("---")
+    _refcoco_variant_section("refcoco", "🎯 RefCOCO — Referring accuracy by prompt ordering")
+    st.markdown("---")
+    _refcoco_variant_section(
+        "refcoco+", "🎯 RefCOCO+ — Referring accuracy by prompt ordering",
+        "RefCOCO+ forbids location words in expressions (appearance-only), so "
+        "it's generally harder than RefCOCO.")
 
 
 def _prompt_doc():
