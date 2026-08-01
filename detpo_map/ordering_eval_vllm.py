@@ -27,9 +27,21 @@ DATA_INSTR = "/home/grg/Research/DetPO/data_instr/default"
 # Model registry: tag -> (HF repo id, vLLM quantization arg or None). See
 # extra_tasks/common.py's MODEL_REGISTRY docstring for the no-NVLink /
 # bnb-4-bit-single-GPU rationale (same box, same constraint).
+# coord_scale: the denominator for converting a model's raw bbox_2d output
+# into a 0..1 fraction of the image before rescaling to pixel space. Qwen2/2.5/
+# 3-VL are documented+trained to always emit boxes normalized to 0-1000
+# regardless of input image size. Gemma-3 has NO such convention -- verified
+# empirically (a box on a 640x480 image came back as [668,368,761,426], with
+# x exceeding the actual 640px width) and confirmed against
+# google/gemma-3-27b-it's preprocessor_config.json: Gemma3ImageProcessor
+# resizes every image to a FIXED 896x896 square (non-aspect-preserving)
+# before the vision encoder sees it, and its box coordinates are in THAT
+# squished canvas, not the original image or a 0-1000 normalized space.
 MODEL_REGISTRY = {
-    "qwen3-vl-8b": {"hf": "Qwen/Qwen3-VL-8B-Instruct", "quantization": None},
-    "gemma-3-27b": {"hf": "google/gemma-3-27b-it", "quantization": "bitsandbytes"},
+    "qwen3-vl-8b": {"hf": "Qwen/Qwen3-VL-8B-Instruct", "quantization": None,
+                    "coord_scale": 1000},
+    "gemma-3-27b": {"hf": "google/gemma-3-27b-it", "quantization": "bitsandbytes",
+                    "coord_scale": 896},
 }
 MODEL_HF = MODEL_REGISTRY["qwen3-vl-8b"]["hf"]
 MODEL_TAG = "qwen3-vl-8b"
@@ -185,9 +197,10 @@ def run_dataset(llm, sp, tag, letters, ds):
             if cid is None:
                 continue
             x1, y1, x2, y2 = d["bbox"]
+            cs = MODEL_REGISTRY[MODEL_TAG]["coord_scale"]
             dets.append({"image_id": img_id, "category_id": cid,
-                         "bbox": [x1 / 1000 * W, y1 / 1000 * H,
-                                  (x2 - x1) / 1000 * W, (y2 - y1) / 1000 * H],
+                         "bbox": [x1 / cs * W, y1 / cs * H,
+                                  (x2 - x1) / cs * W, (y2 - y1) / cs * H],
                          "score": d["score"]})
     if dets:
         ev = COCOeval(coco_gt, coco_gt.loadRes(dets), "bbox")

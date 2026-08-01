@@ -30,9 +30,17 @@ from pycocotools.coco import COCO
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
 RC = "/home/grg/Research/rf-20-vl-benchmark/datasets/RefCOCO"
+# coord_scale: see ordering_eval_vllm.py's MODEL_REGISTRY docstring -- Qwen
+# emits boxes normalized to 0-1000 by training convention; Gemma-3 has no such
+# convention and its raw box coords are pixels on the FIXED 896x896 square
+# canvas its Gemma3ImageProcessor resizes every image to (confirmed via
+# preprocessor_config.json and empirically via an out-of-bounds box on a
+# 640x480 test image), not a 0-1000 normalized space.
 MODEL_REGISTRY = {
-    "qwen3-vl-8b": {"hf": "Qwen/Qwen3-VL-8B-Instruct", "quantization": None},
-    "gemma-3-27b": {"hf": "google/gemma-3-27b-it", "quantization": "bitsandbytes"},
+    "qwen3-vl-8b": {"hf": "Qwen/Qwen3-VL-8B-Instruct", "quantization": None,
+                    "coord_scale": 1000},
+    "gemma-3-27b": {"hf": "google/gemma-3-27b-it", "quantization": "bitsandbytes",
+                    "coord_scale": 896},
 }
 MODEL_HF = MODEL_REGISTRY["qwen3-vl-8b"]["hf"]
 MODEL_TAG = "qwen3-vl-8b"
@@ -173,8 +181,9 @@ def run_order(llm, sp, dataset, split, tag, letters, refs, ann, img, img_dir):
         if box is not None:
             parsed += 1
             x1, y1, x2, y2 = box
-            pred = [x1 / 1000 * m["W"], y1 / 1000 * m["H"],
-                    (x2 - x1) / 1000 * m["W"], (y2 - y1) / 1000 * m["H"]]
+            cs = MODEL_REGISTRY[MODEL_TAG]["coord_scale"]
+            pred = [x1 / cs * m["W"], y1 / cs * m["H"],
+                    (x2 - x1) / cs * m["W"], (y2 - y1) / cs * m["H"]]
             ok = iou_xywh(pred, m["gt"]) >= 0.5
         correct += int(ok)
         results.append({"ref_id": m["ref_id"], "ok": ok, "parsed": box is not None})
