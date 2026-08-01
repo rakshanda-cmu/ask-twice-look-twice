@@ -226,7 +226,10 @@ def main():
     else:
         llm_kwargs["dtype"] = "float16"
     llm = LLM(**llm_kwargs)
-    sp = SamplingParams(temperature=0.0, max_tokens=64)
+    # 64 was fine for Qwen (terse compliance) but risks truncating Gemma-3-27B
+    # before its JSON, given the same verbose-preamble behavior confirmed on
+    # BLINK/MMVP (see extra_tasks/mmvp_eval_vllm.py's max_tokens comment).
+    sp = SamplingParams(temperature=0.0, max_tokens=150)
 
     datasets = [d.strip() for d in args.datasets.split(",") if d.strip()]
     splits = [s.strip() for s in args.splits.split(",") if s.strip()]

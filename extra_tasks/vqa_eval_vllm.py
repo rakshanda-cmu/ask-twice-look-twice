@@ -110,7 +110,11 @@ def main():
 
     from vllm import SamplingParams
     llm = make_llm(tp=args.tp, model_tag=args.model)
-    sp = SamplingParams(temperature=0.0, max_tokens=32)
+    # 32 was fine for Qwen; Gemma-3-27B's verbose-preamble tendency (confirmed
+    # on BLINK/MMVP, see mmvp_eval_vllm.py) risks truncating before the answer
+    # word ever appears, even though VQA scoring itself is containment-based
+    # (not exact-match) and so is otherwise tolerant of extra text around it.
+    sp = SamplingParams(temperature=0.0, max_tokens=96)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:

@@ -132,7 +132,13 @@ def main():
 
     from vllm import SamplingParams
     llm = make_llm(tp=args.tp, model_tag=args.model)
-    sp = SamplingParams(temperature=0.0, max_tokens=48)
+    sp = SamplingParams(temperature=0.0, max_tokens=256)  # Gemma-3-27B often
+    # emits a verbose reasoning preamble before its final answer -- 48 tokens
+    # truncated 16-79% of Gemma's BLINK/MMVP responses before the parseable
+    # "(X)" ever appeared (confirmed by inspecting raw truncated text), which
+    # also risked confounding the STI-vs-SITIT ordering comparison itself since
+    # different orderings truncated at very different rates. Harmless for Qwen,
+    # which reliably stops at EOS well before this budget.
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
