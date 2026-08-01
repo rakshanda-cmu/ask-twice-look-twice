@@ -27,8 +27,9 @@ OUT_DIR = os.path.join(HERE, "results")
 IMG_CAP = 1024
 
 
-def run_order(llm, sp, tag, letters, pairs, data_dir, log_every):
-    out = os.path.join(OUT_DIR, f"vqa_order-{tag}_{MODEL_TAG}.json")
+def run_order(llm, sp, tag, letters, pairs, data_dir, log_every, use_suffix=True,
+             out_tag=""):
+    out = os.path.join(OUT_DIR, f"vqa_order-{tag}_{MODEL_TAG}{out_tag}.json")
     if os.path.exists(out):
         try:
             m = json.load(open(out))["meta"]
@@ -44,7 +45,7 @@ def run_order(llm, sp, tag, letters, pairs, data_dir, log_every):
         if not os.path.isfile(path):
             continue
         pil = downscale(Image.open(path).convert("RGB"), IMG_CAP)
-        task = q["question"] + SHORT_ANSWER_SUFFIX
+        task = q["question"] + (SHORT_ANSWER_SUFFIX if use_suffix else "")
         convs.append(build_conversation(letters, task, data_uri(pil)))
         gts = [ans["answer"] for ans in a["answers"]]
         meta.append({"question_id": q["question_id"], "question": q["question"],
@@ -96,6 +97,16 @@ def main():
                     dest="vqa_dir")
     ap.add_argument("--tp", type=int, default=2)
     ap.add_argument("--log-every", type=int, default=200, dest="log_every")
+    ap.add_argument("--max-tokens", type=int, default=None, dest="max_tokens",
+                    help="override the default (96, or 256 with --no-suffix's "
+                         "typical companion of a lower budget); paper config is 16")
+    ap.add_argument("--no-suffix", action="store_true", dest="no_suffix",
+                    help="drop SHORT_ANSWER_SUFFIX -- matches the paper's exact "
+                         "VQAv2 config (Appendix A), which our default run added")
+    ap.add_argument("--out-tag", default="", dest="out_tag",
+                    help="appended to the output filename's model tag, e.g. "
+                         "'_paperconfig', so a diagnostic re-run doesn't "
+                         "overwrite the existing production result file")
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -114,13 +125,15 @@ def main():
     # on BLINK/MMVP, see mmvp_eval_vllm.py) risks truncating before the answer
     # word ever appears, even though VQA scoring itself is containment-based
     # (not exact-match) and so is otherwise tolerant of extra text around it.
-    sp = SamplingParams(temperature=0.0, max_tokens=96)
+    max_tokens = args.max_tokens if args.max_tokens is not None else 96
+    sp = SamplingParams(temperature=0.0, max_tokens=max_tokens)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
             print(f"  skip {tag} (not hook-free)"); continue
         print(f"=== VQA · ordering {tag} ===", flush=True)
-        run_order(llm, sp, tag, ORDER_LETTERS[tag], pairs, args.data_dir, args.log_every)
+        run_order(llm, sp, tag, ORDER_LETTERS[tag], pairs, args.data_dir, args.log_every,
+                  use_suffix=not args.no_suffix, out_tag=args.out_tag)
     print("[done]", flush=True)
 
 
