@@ -182,30 +182,30 @@ def main():
     print(f"[data] {len(rows)} {args.dataset} rows, {args.frames} frames/video", flush=True)
 
     from vllm import SamplingParams
+    # One engine per PROCESS, not recreated in-process per ordering: an
+    # earlier in-process "del llm; gc.collect(); torch.cuda.empty_cache();
+    # make_llm() again" approach (tried after a shared engine OOM'd 1400
+    # chat() calls into a run -- see below) hung indefinitely reinitializing
+    # the SECOND replacement engine, confirmed via a live run stuck 36+
+    # minutes at the same vLLM init log line with the GPU sitting at 0%
+    # util / ~350MB used. vLLM's engine core is a separate subprocess with
+    # its own CUDA context; dropping the Python reference doesn't reliably
+    # tear that down the way a full process exit does. So: run ONE ordering
+    # per process invocation (chain `--orders X` calls in the shell, one per
+    # tag) instead of looping orderings inside main() -- OS-level process
+    # exit between orderings is what actually guarantees clean GPU state,
+    # matching every other multi-stage chain in this session (mmvp -> blink
+    # -> ... are already separate subprocess calls, not an internal loop).
+    llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1,
+                   disable_mm_cache=True, model_tag=args.model)
     sp = SamplingParams(temperature=0.0, max_tokens=16)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
             print(f"  skip {tag} (not hook-free)"); continue
-        # A fresh engine per ordering, not one shared across the whole run:
-        # a live crash (MSVD-QA, this exact harness) showed the shared-engine
-        # version handling STI's 1000 rows fine, then OOM-ing 400 rows into
-        # SIT ("46.97 GiB in use" of a 47.4 GiB card, well past the 0.85
-        # gpu_memory_utilization budget fixed at init) -- consistent with
-        # multimodal encoder/CUDA-graph fragmentation accumulating across many
-        # chat() calls to one long-lived vLLM engine, not a per-item issue.
-        # Costs ~1 extra engine init per ordering; trades a known-safe amount
-        # of startup time for not losing an entire ordering's generation to a
-        # crash near the end.
-        llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1,
-                       disable_mm_cache=True, model_tag=args.model)
         print(f"=== {args.dataset} · ordering {tag} ===", flush=True)
         run_order(llm, sp, args.dataset, tag, ORDER_LETTERS[tag], rows, args.frames,
                   args.model, args.log_every)
-        del llm
-        import gc, torch
-        gc.collect()
-        torch.cuda.empty_cache()
     print("[done]", flush=True)
 
 
