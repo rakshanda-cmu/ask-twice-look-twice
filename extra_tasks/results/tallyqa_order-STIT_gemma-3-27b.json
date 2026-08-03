@@ -1,0 +1,12016 @@
+{
+  "meta": {
+    "benchmark": "TallyQA",
+    "ordering": "STIT",
+    "model": "gemma-3-27b",
+    "engine": "vllm",
+    "n": 2000,
+    "accuracy": 0.634,
+    "mae": 0.7620481927710844,
+    "parsed": 1992,
+    "runtime_s": 473.10398530960083,
+    "complete": true
+  },
+  "results": [
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 7,
+      "raw": "7",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 8,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 11,
+      "raw": "11",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 18,
+      "raw": "18",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 16,
+      "raw": "16",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 7,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 28,
+      "raw": "28",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": null,
+      "raw": "4700000",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 8,
+      "raw": "8",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 13,
+      "raw": "13",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1.",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 13,
+      "raw": "13",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 8,
+      "raw": "Certainly! Let's analyze the image to determine the number of buoys to the right of the white pole.\n\nBased on the provided image, there appear to be **8** buoys to the right of the white pole. \n\nI hope this is helpful! If you have any other questions about the image or anything else, feel free to ask.",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 5,
+      "raw": "5",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": null,
+      "raw": "415000",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 5,
+      "raw": "5",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 10,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 10,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 200,
+      "raw": "200+",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 12,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 11,
+      "raw": "11",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 1,
+      "raw": "Certainly! \n\nBased on the image provided, I can see **1** elephant that is not in the water. \n\nI hope this is helpful! Let me know if you have any other questions.",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 12,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 5,
+      "raw": "5",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 11,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 13,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 9,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 7,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": null,
+      "raw": "80000",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 10,
+      "pred": 8,
+      "raw": "Okay, I've examined the image.\n\nThere appears to be a sign in the top left corner that is rectangular and red. Counting the individuals positioned to the right of this sign, I can identify **8** people. \n\nI hope this is helpful! Let me know if you have any other questions about the image.",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 12,
+      "raw": "12",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 12,
+      "pred": 11,
+      "raw": "11",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 5,
+      "raw": "5",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 22,
+      "raw": "22",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 6,
+      "raw": "6",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 8,
+      "raw": "8",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": null,
+      "raw": "26000",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 13,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 8,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 10,
+      "raw": "10",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 11,
+      "raw": "11",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 6,
+      "raw": "6",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": null,
+      "raw": "13000000",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 8,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 7,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 6,
+      "raw": "6",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 14,
+      "raw": "14",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": null,
+      "raw": "10000",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 11,
+      "pred": 11,
+      "raw": "11",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "Certainly! Let's analyze the image to determine the number of people to the right of the little girl with the cell phone who are wearing a burgundy headscarf.\n\nBased on the image, there appears to be **1** person to the right of the girl wearing a burgundy headscarf. \n\nIf you have another question or need further assistance, feel free to ask!",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 30,
+      "raw": "30",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 14,
+      "raw": "14",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 14,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 9,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": null,
+      "raw": "117000",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 10,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 6,
+      "raw": "6",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 22,
+      "raw": "22",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 5,
+      "raw": "5",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 12,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 8,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 5,
+      "raw": "5",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": null,
+      "raw": "117000",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 8,
+      "pred": 14,
+      "raw": "14",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2.",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "It appears there's been a slight misunderstanding! The image provided actually shows a tennis player, not a football (soccer) player. \n\nBased on the image, there is **1** person actively *playing* tennis. However, to directly answer your question about football, it's impossible to know how many people are playing football worldwide at this moment without specific data. \n\nIf you'd like, I can tell you how many players are *on the field* during a standard football match! Would you be interested in that?",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 7,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 5,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 10,
+      "pred": 9,
+      "raw": "9",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 6,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 5,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 4,
+      "raw": "4",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 4,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 8,
+      "raw": "8",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 4,
+      "raw": "4",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 7,
+      "raw": "7",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "gt": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "gt": 6,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "gt": 2,
+      "pred": 6,
+      "raw": "6",
+      "correct": false
+    }
+  ]
+}

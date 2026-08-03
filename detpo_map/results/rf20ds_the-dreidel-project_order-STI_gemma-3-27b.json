@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "the-dreidel-project",
+    "ordering": "STI",
+    "model": "gemma-3-27b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 0.10392110639635393,
+    "mAP50": 0.3673581643878674,
+    "mAP75": 0.0,
+    "classes": [
+      "Dreidel",
+      "Gimel",
+      "Hay",
+      "Nun",
+      "Shin",
+      "Spinning Dreidel"
+    ],
+    "n_images": 54,
+    "n_dets": 157,
+    "complete": true
+  }
+}

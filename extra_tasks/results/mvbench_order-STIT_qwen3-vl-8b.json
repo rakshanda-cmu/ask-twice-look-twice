@@ -1,0 +1,3968 @@
+{
+  "meta": {
+    "benchmark": "MVBench",
+    "ordering": "STIT",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "n": 390,
+    "k_frames": 6,
+    "accuracy": 0.6205128205128205,
+    "by_task": {
+      "action_antonym": {
+        "n": 30,
+        "accuracy": 0.7
+      },
+      "action_localization": {
+        "n": 30,
+        "accuracy": 0.4
+      },
+      "action_prediction": {
+        "n": 30,
+        "accuracy": 0.6333333333333333
+      },
+      "action_sequence": {
+        "n": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "counterfactual_inference": {
+        "n": 30,
+        "accuracy": 0.6
+      },
+      "egocentric_navigation": {
+        "n": 30,
+        "accuracy": 0.3
+      },
+      "fine_grained_action": {
+        "n": 30,
+        "accuracy": 0.5333333333333333
+      },
+      "moving_attribute": {
+        "n": 30,
+        "accuracy": 0.7666666666666667
+      },
+      "moving_count": {
+        "n": 30,
+        "accuracy": 0.43333333333333335
+      },
+      "moving_direction": {
+        "n": 30,
+        "accuracy": 0.6
+      },
+      "object_existence": {
+        "n": 30,
+        "accuracy": 0.8333333333333334
+      },
+      "object_interaction": {
+        "n": 30,
+        "accuracy": 0.6333333333333333
+      },
+      "scene_transition": {
+        "n": 30,
+        "accuracy": 0.9666666666666667
+      }
+    },
+    "complete": true
+  },
+  "results": [
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/110987.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/80491.webm",
+      "question": "What activity does the video depict?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/196343.webm",
+      "question": "What activity does the video depict?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/136034.webm",
+      "question": "What activity does the video depict?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/88927.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/46338.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/4049.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/83918.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/448.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/184891.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/137016.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/9741.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/7213.webm",
+      "question": "What activity does the video depict?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/203562.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/167575.webm",
+      "question": "What activity does the video depict?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/167347.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/81368.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/114567.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/196423.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/115191.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/188476.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/214227.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/56901.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/195294.webm",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/20656.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/40597.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/14384.webm",
+      "question": "What activity does the video depict?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/220346.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/205422.webm",
+      "question": "What activity does the video depict?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_antonym",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/ssv2_video/3224.webm",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/MNNJS.mp4",
+      "question": "Can you identify when the action 'the person puts the cups onto a table' happens in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/4NHRT.mp4",
+      "question": "At what moment in the video does the action 'the person takes a bag off of a shelf' occur?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/81VSN.mp4",
+      "question": "During which part of the video does the action 'person walking through a doorway in the living room' occur?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/4WVTC.mp4",
+      "question": "During which part of the video does the action 'the person is holding a laptop' occur?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/GFK4S.mp4",
+      "question": "When in the video sequence do we observe the action 'person opens the door'?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/VXZBA.mp4",
+      "question": "At what moment in the video does the action 'person begins laughing' occur?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/ZPRJH.mp4",
+      "question": "At what moment in the video does the action 'person throws the book down' occur?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/HLB3J.mp4",
+      "question": "At what moment in the video does the action 'one person propped on a pillow awakens' occur?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/OKHVL.mp4",
+      "question": "In the given video, when does the action 'person eats a sandwich' take place?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/W5ZY8.mp4",
+      "question": "At what moment in the video does the action 'person smiling at a camera' occur?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/TKAUR.mp4",
+      "question": "When in the video sequence do we observe the action 'person reads a book'?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/QLFR5.mp4",
+      "question": "In the given video, when does the action 'the person closes the book' take place?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/U502L.mp4",
+      "question": "At what moment in the video does the action 'a person awakens in their bathroom holding their phone' occur?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/QOYH2.mp4",
+      "question": "During which part of the video does the action 'person takes a drink from a cup' occur?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/XRG9K.mp4",
+      "question": "When in the video sequence do we observe the action 'person is sitting on floor sneezing'?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/DAA3F.mp4",
+      "question": "Can you identify when the action 'person take some food' happens in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/K6W5I.mp4",
+      "question": "During which part of the video does the action 'the person puts the groceries on the table' occur?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/SM4AO.mp4",
+      "question": "In the given video, when does the action 'a person is holding a bag' take place?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/Q948H.mp4",
+      "question": "When in the video sequence do we observe the action 'the person takes a picture out'?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/TU9K1.mp4",
+      "question": "When in the video sequence do we observe the action 'person tidying clothes'?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/YAFX0.mp4",
+      "question": "In the given video, when does the action 'person looks out the window' take place?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/ECW3E.mp4",
+      "question": "In the given video, when does the action 'person takes a pink laptop from a shelf opens' take place?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/E6DLK.mp4",
+      "question": "Can you identify when the action 'person runs to the door' happens in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/9VF2C.mp4",
+      "question": "During which part of the video does the action 'person runs out' occur?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/V26U3.mp4",
+      "question": "In the given video, when does the action 'person throws a pillow at a refrigerator' take place?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/ICQZX.mp4",
+      "question": "At what moment in the video does the action 'person the take shoes out of the closet stand up' occur?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/V1WN7.mp4",
+      "question": "During which part of the video does the action 'person sitting on bed' occur?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/XMYXI.mp4",
+      "question": "During which part of the video does the action 'a person is smiling' occur?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/ONMCW.mp4",
+      "question": "In the given video, when does the action 'person takes a glass from the desk' take place?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_localization",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/GL2JW.mp4",
+      "question": "In the given video, when does the action 'person closes a cupboard door' take place?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/K71S1.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/3ND23.mp4",
+      "question": "What will the person do next with the blanket?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/1O1JS.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/AZFKK.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/BI31D.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/Y79PC.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/UEP20.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/BQKW5.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/LLOGB.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/BDWIX.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/N2GFQ.mp4",
+      "question": "What will the person do next with the sofa/couch?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/E7Q3R.mp4",
+      "question": "What will the person do next with the cup/glass/bottle?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/W0XPU.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/D1WYU.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/8IPWO.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/EBTD6.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/C1DK7.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/V3RAX.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/N2GFQ.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/55AH5.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/M52K2.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/TZL6H.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/RBC8N.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/84893.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/ZPRJH.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/WOD0G.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/2U0QT.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/GPR89.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/DGPAW.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "action_prediction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/U0X4P.mp4",
+      "question": "What will the person do next?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/9B93K.mp4",
+      "question": "What happened after the person held the food?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/data0613/star/Charades_v1_480/Q8UJ8.mp4",
+      "question": "What happened before the person drank from the cup/glass/bottle?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/MD6P2.mp4",
+      "question": "What happened before the person held the medicine?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/MVPQF.mp4",
+      "question": "What happened before the person took the food?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/1L5D3.mp4",
+      "question": "What happened before the person took the phone/camera?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/data0613/star/Charades_v1_480/EDXBD.mp4",
+      "question": "What happened before the person opened the door?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/I562C.mp4",
+      "question": "What happened after the person closed the door?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/HL5OP.mp4",
+      "question": "What happened after the person opened the bag?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/UDGRS.mp4",
+      "question": "What happened before the person closed the book?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/3CLVI.mp4",
+      "question": "What happened before the person threw the clothes?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/GLGQJ.mp4",
+      "question": "What happened after the person took the phone/camera?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/KU656.mp4",
+      "question": "What happened after the person lied on the bed?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/G87XG.mp4",
+      "question": "What happened after the person sat at the table?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/TBRZ5.mp4",
+      "question": "What happened before the person held the phone/camera?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/LSVHK.mp4",
+      "question": "What happened before the person opened the door?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/data0613/star/Charades_v1_480/PHH6B.mp4",
+      "question": "What happened after the person took the cup/glass/bottle?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/APVAD.mp4",
+      "question": "What happened after the person held the clothes?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/ZS9XR.mp4",
+      "question": "What happened before the person washed the table?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/DSZYT.mp4",
+      "question": "What happened after the person held the dish?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/VO45S.mp4",
+      "question": "What happened before the person washed the dish?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/HPAYB.mp4",
+      "question": "What happened before the person took the clothes?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/1FIGA.mp4",
+      "question": "What happened after the person opened the door?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/GMMVC.mp4",
+      "question": "What happened before the person closed the book?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/8XXNK.mp4",
+      "question": "What happened after the person sat on the sofa/couch?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/3W6TL.mp4",
+      "question": "What happened before the person closed the door?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/V54TI.mp4",
+      "question": "What happened after the person lied on the bed?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/8G9A9.mp4",
+      "question": "What happened before the person held the phone/camera?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/LH6LE.mp4",
+      "question": "What happened after the person opened the closet/cabinet?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/RKGG5.mp4",
+      "question": "What happened before the person lied on the sofa/couch?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "action_sequence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/8BBX0.mp4",
+      "question": "What happened before the person opened the door?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14577.mp4",
+      "question": "If the brown object is removed, which of the following will happen?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12551.mp4",
+      "question": "If the sphere is removed, what will happen?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13235.mp4",
+      "question": "Which event will happen if the yellow object is removed?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10553.mp4",
+      "question": "If the sphere is removed, what will happen?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10615.mp4",
+      "question": "Which of the following will happen without the cube?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13883.mp4",
+      "question": "Which event will happen without the sphere?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13408.mp4",
+      "question": "If the cube is removed, which of the following will happen?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10454.mp4",
+      "question": "If the metal object is removed, which of the following will happen?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11758.mp4",
+      "question": "Which of the following will happen if the purple object is removed?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12536.mp4",
+      "question": "If the cylinder is removed, which event will happen?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12989.mp4",
+      "question": "If the cylinder is removed, what will happen?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14408.mp4",
+      "question": "Which of the following will happen if the red object is removed?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10999.mp4",
+      "question": "Without the cylinder, which event will happen?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10030.mp4",
+      "question": "Without the sphere, which event will happen?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12316.mp4",
+      "question": "If the cube is removed, which event will happen?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13615.mp4",
+      "question": "What will happen if the cyan object is removed?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14570.mp4",
+      "question": "Without the sphere, what will happen?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13424.mp4",
+      "question": "What will happen without the cube?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14293.mp4",
+      "question": "If the cube is removed, which event will happen?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "None of the events will happen, because the cube is not involved in any collision in the sequence shown. The objects are moving independently, and removing the cube does not cause any of the listed collisions to occur. However, since the question requires selecting one option, and none of the collisions are triggered by the cube's removal, the correct answer is that no event from the list occurs. But since we must choose from the given options, and none are correct, the answer is not among them. However, if forced to pick, the most plausible answer based on the sequence is 0, as the brown object (cylinder) and gray object (sphere) are closest and might collide if the cube were removed, but this is speculative. The correct answer is that no event occurs, but since that's not an option, the answer is not applicable. However, the question requires an answer, so I will choose 0 as the least incorrect option.\n\n0",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11204.mp4",
+      "question": "Which event will happen if the green object is removed?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11263.mp4",
+      "question": "If the brown object is removed, what will happen?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12929.mp4",
+      "question": "If the metal object is removed, what will happen?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12447.mp4",
+      "question": "Which event will happen if the metal object is removed?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14232.mp4",
+      "question": "Which of the following will happen without the cube?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11222.mp4",
+      "question": "If the cylinder is removed, which of the following will happen?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14694.mp4",
+      "question": "Which event will happen if the gray object is removed?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10277.mp4",
+      "question": "If the cylinder is removed, what will happen?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14105.mp4",
+      "question": "What will happen if the gray object is removed?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10524.mp4",
+      "question": "If the sphere is removed, which event will happen?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "counterfactual_inference",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11232.mp4",
+      "question": "Which of the following will happen if the yellow object is removed?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/3492_frame46.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Go right and head up the right side of the house. Go up one step then wait there.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/5883_frame45.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Stand with the bed behind you and walk straight down the red carpet. Go into the room with the tile floor and stop after a few steps closer to the middle of the room.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/left/1420_frame30.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk to the end of the hallway, pass the bathroom and wait by the laundry room.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/548_frame43.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk down the hallway and wait near the end, next to the mirror and side table.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/1836_frame40.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk straight and to the right of the table and through the doorway. Wait in front of the bench.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/right/4469_frame47.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Turn right and go down the hallway then turn left.Pass the chair on the left and turn right into the kitchen. Wait near the fridge.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/right/6339_frame50.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk to the far end of the lobby and wait under the exit sign.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/5873_frame35.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk straight and then turn left. Turn right and wait near the door.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/right/7181_frame30.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Turn around and go passed the refridgerator. Turn right and go through the door. Stop near the large table.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/right/1275_frame35.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk down the flight of stairs to the lower level. Walk into the room ahead with the tile mosaic on the floor. Walk around the corner through the open arched door to the right with rug on the ground.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/left/6632_frame30.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk up the stairs Through the doorway on the left. Make a left in the room and stop before the two manikins.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/right/1189_frame31.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Exit the bathroom, enter the bedroom, exit the bedroom to the hallway, wait at the top of the stairs.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/6077_frame56.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Exit the sitting room and turn left. Take the first turn to the right.Go straight and then turn left at the shelf. Walk into the first door on the right.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/right/3108_frame47.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"exit bedroom to hallway, turn right and enter bathroom. Stop before bathtub.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/5186_frame68.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk up the steps and turn left. Walk toward the front door and turn right at the steps. Walk up the stairs and stop at the top of the steps.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/2341_frame55.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk past the refrigerator and out of the kitchen. Enter the second bedroom on the right. Stop near the foot of the bed with a gray comforter.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/6893_frame35.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Turn right down the hallway and enter the last room on the left. Stop after entering the bedroom.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/3822_frame52.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Exit the kitchen and wait in the sitting room, near the loveseat.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/left/5261_frame33.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Turn right and go down the long hall. Turn left toward the bar. Turn right into the kitchen and stop by the fridge.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/left/1382_frame58.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk down the stairs towards and past the atrium. Head towards the kitchen and wait in the dining area.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/left/4597_frame44.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"walk around the sofa then walk straight at the island table.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/5512_frame35.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk past the end table and turn right into the kitchen. Walk to the left of the island past the oven into the next room and stop.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/4940_frame37.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk forward passing the dining table on it's right side. Exit the room with the table, and stop before you reach the end of the rug on the right.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/right/4563_frame35.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Turn right and walk through the kitchen. Go right into the living room and stop by the rug.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/stop/2599_frame38.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Walk to the left of the stairs and stop next to the nearest of the two beds.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/6093_frame70.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Turn around and go passed the dining room table. Enter the doors next to the red chairs. Go down the hallway and enter the doors on the right.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/left/4993_frame35.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Go out of the bedroom towards some stairs. Pass the stairs and go into a bedroom with some posters of girls on the wall and wait at the doorway to the bathroom.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/left/2695_frame39.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Go to the painting. Go to the electrical receptacle. Go to the NQHG painting. Go to the couch. Go to the footstool.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/15_frame39.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Go out of the room you're in. Turn left. Go poast the dining room and into the living room. Wait right by the coffee table.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "egocentric_navigation",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/vlnqa/forward/5956_frame32.mp4",
+      "question": "This is a navigation video of an agent following instruction: \"Go straight toward the stairs. When you get to the stairs on the left. Stop there.\" What is the next action it should take?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/giving/getty-pantages-theater-marquee-for-the-30th-annual-academy-awards-honoring-video-id136343623_28.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/ascending/flickr-3-2-6-11671834326_90.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/filling/getty-unloading-wheat-video-id803358844_2.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/rinsing/yt--1HAdbmOznM_96.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/stirring/yt-3MCW-PoD9cI_63.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/taping/yt-bPfFtuc3XNs_209.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/brushing/yt-MML5z_ITWG8_130.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/welding/getty-welding-work-video-id665918848_1.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/sailing/getty-white-beach-video-id493104796_11.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/camping/flickr-2-1-2-1-4-7-1-6-24421214716_50.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/marrying/getty-newlyweds-groom-horace-d-taft-bride-mary-jane-badger-taft-in-wedding-video-id834564764_32.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/hunting/flickr-0-6-8-5-4-3-4-4-4606854344_1.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/launching/getty-commercial-jetliner-taking-off-into-evening-sky-video-id640164973_1.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/preaching/yt-uI-1lWvt4DA_10.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/building/flickr-0-7-3-6-8-4-4-0-2807368440_35.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/extinguishing/yt-gDDZcSyRdPs_342.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/racing/getty-marathon-police-lights-video-id473285613_14.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/assembling/meta-688521_64.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/knocking/flickr-9-5-2-3-2-6-3-3-2395232633_2.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/waxing/yt-o2ltzpODghA_13.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/rocking/yt-7dvX95jqwxM_15.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/queuing/getty-june-2016-an-aerial-view-of-vehicles-stuck-in-gridlock-kazi-nazrul-video-id543524348_6.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/driving/yt-_HHCE1LEUqU_144.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/clawing/getty-black-cat-tearing-apart-toy-mouse-video-id467715164_4.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/talking/flickr-2-1-7-6-7-9-8-9-14321767989_1.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/unloading/getty-farmer-working-early-in-the-morning-video-id460811842_7.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/feeding/yt-7juMxJjxO6M_19.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/spraying/getty-farmer-spraying-water-on-plants-in-greenhouse-video-id542355444_4.mp4",
+      "question": "What is the action performed by the person in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/balancing/getty-boy-balancing-milk-bottle-video-id581793286_13.mp4",
+      "question": "Which one of these descriptions correctly matches the actions in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "fine_grained_action",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/Moments_in_Time_Raw/videos/validation/playing+music/yt-OIjQlKZJN34_35.mp4",
+      "question": "What activity does the video depict?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11047.mp4",
+      "question": "What material is the object that is stationary when the video begins?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13249.mp4",
+      "question": "What is the color of the last object that enters the scene?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11343.mp4",
+      "question": "What is the material of the last object that enters the scene?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14028.mp4",
+      "question": "What shape is the stationary rubber object when the video begins?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12211.mp4",
+      "question": "What material is the last object that enters the scene?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11398.mp4",
+      "question": "What is the shape of the stationary rubber object when the video begins?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10995.mp4",
+      "question": "What is the material of the moving green object?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14776.mp4",
+      "question": "What is the shape of the stationary object?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14679.mp4",
+      "question": "What material is the brown object that is moving when the video begins?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12853.mp4",
+      "question": "What shape is the last object that enters the scene?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12696.mp4",
+      "question": "What material is the cylinder that is moving when the video ends?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11349.mp4",
+      "question": "What is the color of the moving rubber object?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13171.mp4",
+      "question": "What is the shape of the object that is stationary when the video begins?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11338.mp4",
+      "question": "What color is the last object that enters the scene?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13335.mp4",
+      "question": "What is the material of the cube that is stationary when the video ends?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12669.mp4",
+      "question": "What is the material of the stationary cyan object when the video begins?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13431.mp4",
+      "question": "What material is the moving cube when the video begins?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11832.mp4",
+      "question": "What color is the second object that enters the scene?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14998.mp4",
+      "question": "What is the material of the green cylinder that is moving when the video begins?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13226.mp4",
+      "question": "What shape is the first object that enters the scene?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12609.mp4",
+      "question": "What shape is the metal object that is stationary when the video ends?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12380.mp4",
+      "question": "What is the color of the rubber sphere that is moving?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14985.mp4",
+      "question": "What is the material of the moving object when the video begins?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13441.mp4",
+      "question": "What is the color of the stationary metal object when the video ends?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11849.mp4",
+      "question": "What material is the stationary blue object when the video begins?",
+      "n_choices": 2,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14973.mp4",
+      "question": "What material is the last object that enters the scene?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14294.mp4",
+      "question": "What shape is the moving rubber object when the video begins?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13547.mp4",
+      "question": "What color is the object that exits the scene?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14262.mp4",
+      "question": "What material is the stationary yellow cube when the video ends?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_attribute",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11825.mp4",
+      "question": "What material is the sphere that is moving?",
+      "n_choices": 2,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12413.mp4",
+      "question": "How many purple cylinders enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10955.mp4",
+      "question": "How many moving purple objects are there?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11086.mp4",
+      "question": "How many collisions happen?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12391.mp4",
+      "question": "How many moving rubber objects are there when the video ends?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10181.mp4",
+      "question": "How many stationary brown objects are there when the video ends?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12675.mp4",
+      "question": "How many cubes enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12027.mp4",
+      "question": "How many objects enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13853.mp4",
+      "question": "How many moving objects are there?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10481.mp4",
+      "question": "How many moving objects are there when the video ends?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13020.mp4",
+      "question": "How many purple objects are stationary?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10983.mp4",
+      "question": "How many objects enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12697.mp4",
+      "question": "How many objects enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11341.mp4",
+      "question": "How many objects are moving?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10502.mp4",
+      "question": "How many objects are moving?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10017.mp4",
+      "question": "How many purple objects are stationary when the video begins?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13525.mp4",
+      "question": "How many purple spheres exit the scene?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12596.mp4",
+      "question": "How many moving metal objects are there?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13709.mp4",
+      "question": "How many moving metal objects are there?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12589.mp4",
+      "question": "How many cubes are stationary?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12056.mp4",
+      "question": "How many spheres enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10546.mp4",
+      "question": "How many moving cyan objects are there?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14746.mp4",
+      "question": "How many purple cubes enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10390.mp4",
+      "question": "How many moving yellow objects are there when the video begins?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12177.mp4",
+      "question": "How many cyan objects are moving?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13629.mp4",
+      "question": "How many stationary rubber objects are there when the video begins?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13422.mp4",
+      "question": "How many metal objects enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12108.mp4",
+      "question": "How many moving objects are there when the video ends?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11972.mp4",
+      "question": "How many metal objects enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12821.mp4",
+      "question": "How many objects enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_count",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13765.mp4",
+      "question": "How many rubber objects enter the scene?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11857.mp4",
+      "question": "Can you identify the direction of the gray sphere's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14957.mp4",
+      "question": "What direction is the brown sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11574.mp4",
+      "question": "Can you identify the direction of the purple cube's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14897.mp4",
+      "question": "What direction is the purple sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11671.mp4",
+      "question": "In which direction does the red sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14718.mp4",
+      "question": "Can you identify the direction of the red sphere's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10572.mp4",
+      "question": "In which direction does the blue sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10287.mp4",
+      "question": "In which direction does the green sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10995.mp4",
+      "question": "What direction is the red cylinder moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11978.mp4",
+      "question": "Can you identify the direction of the red sphere's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10643.mp4",
+      "question": "What direction is the cyan sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13684.mp4",
+      "question": "What direction is the yellow sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13135.mp4",
+      "question": "What direction is the green sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13620.mp4",
+      "question": "Can you identify the direction of the green sphere's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11625.mp4",
+      "question": "In which direction does the yellow sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11446.mp4",
+      "question": "In which direction does the gray sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13739.mp4",
+      "question": "What direction is the blue sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13809.mp4",
+      "question": "Can you identify the direction of the blue sphere's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10909.mp4",
+      "question": "In which direction does the purple sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11171.mp4",
+      "question": "In which direction does the gray sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10834.mp4",
+      "question": "Can you identify the direction of the yellow sphere's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13444.mp4",
+      "question": "In which direction does the yellow sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10760.mp4",
+      "question": "In which direction does the red sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10908.mp4",
+      "question": "What direction is the cyan cylinder moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12872.mp4",
+      "question": "In which direction does the gray sphere move in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12468.mp4",
+      "question": "What direction is the cyan cylinder moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10901.mp4",
+      "question": "What direction is the green sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12844.mp4",
+      "question": "What direction is the gray sphere moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12838.mp4",
+      "question": "What direction is the brown cube moving in within the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "moving_direction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13146.mp4",
+      "question": "Can you identify the direction of the yellow cube's movement in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14966.mp4",
+      "question": "Are there any moving brown objects when the video ends?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13005.mp4",
+      "question": "Are there any metal objects that exit the scene?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10498.mp4",
+      "question": "Are there any rubber cylinders that exit the scene?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14664.mp4",
+      "question": "Are there any cylinders that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12253.mp4",
+      "question": "Are there any metal objects that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14368.mp4",
+      "question": "Are there any blue cubes that exit the scene?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11083.mp4",
+      "question": "Are there any stationary cylinders?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14969.mp4",
+      "question": "Are there any moving gray objects?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13760.mp4",
+      "question": "Are there any moving yellow objects when the video ends?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12442.mp4",
+      "question": "Are there any gray objects that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14086.mp4",
+      "question": "Are there any stationary cubes?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13674.mp4",
+      "question": "Are there any moving purple objects?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12588.mp4",
+      "question": "Are there any green spheres that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12537.mp4",
+      "question": "Are there any stationary red objects when the video ends?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12634.mp4",
+      "question": "Are there any stationary gray objects?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11734.mp4",
+      "question": "Are there any moving brown objects?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11916.mp4",
+      "question": "Are there any rubber cylinders that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13028.mp4",
+      "question": "Are there any moving cylinders?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11683.mp4",
+      "question": "Are there any stationary brown objects when the video begins?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14691.mp4",
+      "question": "Are there any blue objects that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10515.mp4",
+      "question": "Are there any cylinders that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13406.mp4",
+      "question": "Are there any stationary cyan objects when the video ends?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_11622.mp4",
+      "question": "Are there any moving yellow objects?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_13360.mp4",
+      "question": "Are there any yellow cylinders that exit the scene?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10646.mp4",
+      "question": "Are there any purple cubes that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14328.mp4",
+      "question": "Are there any moving blue objects when the video ends?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_14884.mp4",
+      "question": "Are there any stationary spheres?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_10815.mp4",
+      "question": "Are there any moving spheres?",
+      "n_choices": 3,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12514.mp4",
+      "question": "Are there any stationary spheres when the video begins?",
+      "n_choices": 3,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_existence",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/clevrer/video_validation/video_12744.mp4",
+      "question": "Are there any spheres that enter the scene?",
+      "n_choices": 3,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/I329H.mp4",
+      "question": "Which object was opened by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/H2B7U.mp4",
+      "question": "Which object was washed by the person?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/data0613/star/Charades_v1_480/2NV6L.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/O8PO3.mp4",
+      "question": "Which object was taken by the person?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/7ZCXJ.mp4",
+      "question": "Which object was sat on by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/QLAS7.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/XFRYR.mp4",
+      "question": "Which object was closed by the person?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/JCNHL.mp4",
+      "question": "Which object was tidied up by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/NR9L2.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/4MFE0.mp4",
+      "question": "Which object was taken by the person?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/O2DXE.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/sta/sta_video/7MRKY.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/OEE36.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/data0613/star/Charades_v1_480/OKYYQ.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/T1CQE.mp4",
+      "question": "Which object was taken by the person?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/V115C.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/6RQHP.mp4",
+      "question": "Which object was washed by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/5657O.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/E18UD.mp4",
+      "question": "Which object was taken by the person?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/34J80.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/QRWQ3.mp4",
+      "question": "Which object was opened by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/0CESB.mp4",
+      "question": "Which object was tidied up by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/1L5D3.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/MLS4T.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 1,
+      "raw": "1",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/XOOPP.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/9PXC0.mp4",
+      "question": "Which object was lied on by the person?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/M704T.mp4",
+      "question": "Which object was taken by the person?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 3,
+      "raw": "3",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/IIW0F.mp4",
+      "question": "Which object was tidied up by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/3DO95.mp4",
+      "question": "Which object was put down by the person?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    },
+    {
+      "task": "object_interaction",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/star/Charades_v1_480/428VQ.mp4",
+      "question": "Which object was opened by the person?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 0,
+      "raw": "0",
+      "correct": false
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top091_01800.mp4",
+      "question": "Which choice tells us the correct order of scenes in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top136_02740.mp4",
+      "question": "Which choice matches the scene changes in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top135_02445.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top083_00685.mp4",
+      "question": "Can you choose the option that matches how the scenes change in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top014_00525.mp4",
+      "question": "Which choice matches the scene changes in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top004_07620.mp4",
+      "question": "Pick the choice that correctly describes how the scenes in the video change.",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top064_02590.mp4",
+      "question": "Pick the choice that correctly describes how the scenes in the video change.",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top009_02005.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top099_04845.mp4",
+      "question": "What's the right option for how the scenes in the video change?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top015_00675.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top012_07450.mp4",
+      "question": "What's the right option for how the scenes in the video change?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top009_02605.mp4",
+      "question": "What's the right option for how the scenes in the video change?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top042_05370.mp4",
+      "question": "Pick the choice that correctly describes how the scenes in the video change.",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top091_01630.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top042_09625.mp4",
+      "question": "Which choice tells us the correct order of scenes in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top101_04605.mp4",
+      "question": "Which choice matches the scene changes in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top133_05575.mp4",
+      "question": "Which choice tells us the correct order of scenes in the video?",
+      "n_choices": 4,
+      "answer_idx": 2,
+      "pred": 2,
+      "raw": "2",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top069_07390.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top101_00540.mp4",
+      "question": "Which choice matches the scene changes in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top027_00760.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top043_01235.mp4",
+      "question": "Which choice tells us the correct order of scenes in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top046_11485.mp4",
+      "question": "What's the right option for how the scenes in the video change?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top014_01990.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top019_07810.mp4",
+      "question": "Which choice tells us the correct order of scenes in the video?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top008_01355.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 1,
+      "raw": "1",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top081_01155.mp4",
+      "question": "Which choice tells us the correct order of scenes in the video?",
+      "n_choices": 4,
+      "answer_idx": 3,
+      "pred": 3,
+      "raw": "3",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top009_01745.mp4",
+      "question": "Which choice matches the scene changes in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top075_05935.mp4",
+      "question": "Which choice matches the scene changes in the video?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top023_09385.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 0,
+      "pred": 0,
+      "raw": "0",
+      "correct": true
+    },
+    {
+      "task": "scene_transition",
+      "video_path": "/data2/hf_cache/newtasks/mvbench/videos/scene_qa/video/Top097_01280.mp4",
+      "question": "Based on the video, which choice shows the scene changes accurately?",
+      "n_choices": 4,
+      "answer_idx": 1,
+      "pred": 2,
+      "raw": "2",
+      "correct": false
+    }
+  ]
+}

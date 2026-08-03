@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "x-ray-id",
+    "ordering": "STITI",
+    "model": "gemma-3-27b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 0.0016417323820102157,
+    "mAP50": 0.008478403919581268,
+    "mAP75": 0.00029516784649136094,
+    "classes": [
+      "DIP",
+      "MCP",
+      "PIP",
+      "Radius",
+      "Ulna",
+      "Wrist"
+    ],
+    "n_images": 385,
+    "n_dets": 6068,
+    "complete": true
+  }
+}

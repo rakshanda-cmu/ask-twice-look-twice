@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "aquarium-combined",
+    "ordering": "STITI",
+    "model": "gemma-3-27b",
+    "engine": "vllm",
+    "prompting": "multi-class",
+    "mAP": 0.3638737186158345,
+    "mAP50": 1.5245421600983629,
+    "mAP75": 0.0027051885516420496,
+    "classes": [
+      "fish",
+      "jellyfish",
+      "penguin",
+      "puffin",
+      "shark",
+      "starfish",
+      "stingray"
+    ],
+    "n_images": 65,
+    "n_dets": 327,
+    "complete": true
+  }
+}
