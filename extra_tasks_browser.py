@@ -44,6 +44,21 @@ def _order_key(tag):
     return ORDER_LIST.index(tag) if tag in ORDER_LIST else len(ORDER_LIST)
 
 
+# Short display label per model tag as it appears in meta["model"]. Falls
+# back to the raw tag for anything unrecognized so nothing is ever silently
+# dropped if a new model gets added later.
+MODEL_LABEL = {"qwen3-vl-8b": "Qwen3-VL (8B)", "gemma-3-27b": "Gemma-3 (27B)"}
+MODELS = ["qwen3-vl-8b", "gemma-3-27b"]
+
+
+def _model_label(tag):
+    return MODEL_LABEL.get(tag, tag)
+
+
+def _model_of(meta):
+    return meta.get("model", "qwen3-vl-8b")
+
+
 def _delta_line(by, unit):
     if by.get("STI") is None:
         return None
@@ -57,43 +72,67 @@ def _delta_line(by, unit):
 
 def _simple_section(title, caption, pattern, script, acc_key="accuracy",
                     extra_cols=None, by_key=None, by_label=None):
-    """Generic single-number-per-ordering section (MMVP / TallyQA / VQA-pooled)."""
+    """Generic single-number-per-ordering section (MMVP / TallyQA / VQA-pooled),
+    one sub-table per model present -- results for different models share the
+    same (ordering, ...) keys, so they must never be merged into one row."""
     st.subheader(title)
     st.caption(caption)
     runs = _load(pattern)
     if not runs:
         st.info(f"**No results yet.** Run:\n\n```\n{RUN_PREFIX}{script}\n```")
         return
-    runs.sort(key=lambda r: _order_key(r["meta"]["ordering"]))
-    rows = []
-    for r in runs:
-        m = r["meta"]
-        row = {"Ordering": m["ordering"], "What": ORDER_DESC.get(m["ordering"], ""),
-               "N": str(m.get("n", "")),
-               "Accuracy (%)": _fmt(m.get(acc_key), 100.0)}
-        if extra_cols:
-            for label, key, mult in extra_cols:
-                row[label] = _fmt(m.get(key), mult)
-        rows.append(row)
-    st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
-                 use_container_width=True)
-    by = {r["meta"]["ordering"]: (r["meta"].get(acc_key) or 0) * 100 for r in runs}
-    line = _delta_line(by, "accuracy %")
-    if line:
-        st.caption(line)
-    if by_key:
-        st.markdown(f"**By {by_label}**")
-        sub_names = sorted({k for r in runs for k in r["meta"].get(by_key, {})})
-        srows = []
-        for r in runs:
+    runs.sort(key=lambda r: (_order_key(r["meta"]["ordering"]), _model_of(r["meta"])))
+    models_present = [m for m in MODELS if any(_model_of(r["meta"]) == m for r in runs)]
+    by_model = {}
+    for model in models_present:
+        mruns = [r for r in runs if _model_of(r["meta"]) == model]
+        if len(models_present) > 1:
+            st.markdown(f"**{_model_label(model)}**")
+        rows = []
+        for r in mruns:
             m = r["meta"]
-            row = {"Ordering": m["ordering"]}
-            for s in sub_names:
-                d = m.get(by_key, {}).get(s)
-                row[s] = _fmt(d["accuracy"] * 100) if d else "—"
-            srows.append(row)
-        st.dataframe(pd.DataFrame(srows).astype(str), hide_index=True,
+            row = {"Ordering": m["ordering"], "What": ORDER_DESC.get(m["ordering"], ""),
+                   "N": str(m.get("n", "")),
+                   "Accuracy (%)": _fmt(m.get(acc_key), 100.0)}
+            if extra_cols:
+                for label, key, mult in extra_cols:
+                    row[label] = _fmt(m.get(key), mult)
+            rows.append(row)
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                      use_container_width=True)
+        by = {r["meta"]["ordering"]: (r["meta"].get(acc_key) or 0) * 100 for r in mruns}
+        by_model[model] = by
+        line = _delta_line(by, "accuracy %")
+        if line:
+            st.caption(line)
+        if by_key:
+            st.markdown(f"**By {by_label}**" + (f" — {_model_label(model)}"
+                                                 if len(models_present) > 1 else ""))
+            sub_names = sorted({k for r in mruns for k in r["meta"].get(by_key, {})})
+            srows = []
+            for r in mruns:
+                m = r["meta"]
+                row = {"Ordering": m["ordering"]}
+                for s in sub_names:
+                    d = m.get(by_key, {}).get(s)
+                    row[s] = _fmt(d["accuracy"] * 100) if d else "—"
+                srows.append(row)
+            st.dataframe(pd.DataFrame(srows).astype(str), hide_index=True,
+                         use_container_width=True)
+
+    if len(models_present) > 1:
+        st.markdown("**Cross-model — Accuracy (%) by ordering**")
+        comp_rows = []
+        for o in ORDER_LIST:
+            if not any(by_model[m].get(o) is not None for m in models_present):
+                continue
+            row = {"Ordering": o}
+            for model in models_present:
+                row[_model_label(model)] = _fmt(by_model[model].get(o))
+            comp_rows.append(row)
+        st.dataframe(pd.DataFrame(comp_rows).astype(str), hide_index=True,
+                     use_container_width=True)
+
     st.caption(f"Re-run:  `{RUN_PREFIX}{script}`")
 
 
@@ -105,27 +144,90 @@ def _vqa_section():
         "type: **yes/no**, **number** (implicit counting), **other**. Tests "
         "whether the ordering paradox holds outside constrained yes/no framing."
     )
-    runs = _load("vqa_order-*.json")
+    # Excludes *_paperconfig.json on purpose -- that's a separate diagnostic
+    # re-run (no answer suffix, max_tokens=16, N=2000) matching the paper's
+    # exact VQAv2 config, kept out of the main "our protocol" comparison below
+    # (see _vqa_paperconfig_section).
+    runs = []
+    for p in sorted(glob.glob(os.path.join(RESULTS_DIR, "vqa_order-*.json"))):
+        if "_paperconfig" in os.path.basename(p):
+            continue
+        try:
+            runs.append(json.load(open(p)))
+        except Exception:
+            pass
     if not runs:
         st.info(f"**No results yet.** Run:\n\n```\n{RUN_PREFIX}vqa_eval_vllm.py\n```")
         return
+    runs.sort(key=lambda r: (_order_key(r["meta"]["ordering"]), _model_of(r["meta"])))
+    models_present = [m for m in MODELS if any(_model_of(r["meta"]) == m for r in runs)]
+    by_model = {}
+    for model in models_present:
+        mruns = [r for r in runs if _model_of(r["meta"]) == model]
+        if len(models_present) > 1:
+            st.markdown(f"**{_model_label(model)}**")
+        rows = []
+        for r in mruns:
+            m = r["meta"]
+            row = {"Ordering": m["ordering"], "N": str(m["n"]),
+                   "VQA-score (%)": _fmt(m["vqa_score"], 100.0),
+                   "Accuracy (%)": _fmt(m["accuracy"], 100.0)}
+            for t, d in m.get("by_answer_type", {}).items():
+                row[f"{t} (%)"] = _fmt(d["accuracy"], 100.0)
+            rows.append(row)
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                     use_container_width=True)
+        by = {r["meta"]["ordering"]: r["meta"]["vqa_score"] * 100 for r in mruns}
+        by_model[model] = by
+        line = _delta_line(by, "VQA-score %")
+        if line:
+            st.caption(line)
+
+    if len(models_present) > 1:
+        st.markdown("**Cross-model — VQA-score (%) by ordering**")
+        comp_rows = []
+        for o in ORDER_LIST:
+            if not any(by_model[m].get(o) is not None for m in models_present):
+                continue
+            row = {"Ordering": o}
+            for model in models_present:
+                row[_model_label(model)] = _fmt(by_model[model].get(o))
+            comp_rows.append(row)
+        st.dataframe(pd.DataFrame(comp_rows).astype(str), hide_index=True,
+                     use_container_width=True)
+    st.caption(f"Re-run:  `{RUN_PREFIX}vqa_eval_vllm.py`")
+    _vqa_paperconfig_section()
+
+
+def _vqa_paperconfig_section():
+    """Diagnostic: our normal vqa_eval_vllm.py protocol (SHORT_ANSWER_SUFFIX,
+    max_tokens=32/96, N=3000) doesn't match the paper's own VQAv2 numbers
+    (Table 4). This re-run drops the suffix and uses max_tokens=16, N=2000 --
+    the paper's exact Appendix A config -- to confirm the discrepancy is
+    config, not a regression."""
+    runs = _load("vqa_order-*_paperconfig.json")
+    if not runs:
+        return
+    st.markdown("#### 📄 Paper-config confirm run (no suffix, max_tokens=16, N=2000)")
+    st.caption(
+        "Our production VQAv2 numbers above use SHORT_ANSWER_SUFFIX + a larger "
+        "token budget + N=3000, which don't match the paper's Table 4 (Appendix A "
+        "config: no suffix, max_tokens=16, N=2000). This re-run matches the "
+        "paper's exact config on Qwen3-VL-8B to confirm that's the actual source "
+        "of the mismatch."
+    )
     runs.sort(key=lambda r: _order_key(r["meta"]["ordering"]))
     rows = []
     for r in runs:
         m = r["meta"]
-        row = {"Ordering": m["ordering"], "N": str(m["n"]),
-               "VQA-score (%)": _fmt(m["vqa_score"], 100.0),
-               "Accuracy (%)": _fmt(m["accuracy"], 100.0)}
-        for t, d in m.get("by_answer_type", {}).items():
-            row[f"{t} (%)"] = _fmt(d["accuracy"], 100.0)
-        rows.append(row)
+        rows.append({"Ordering": m["ordering"], "N": str(m["n"]),
+                     "VQA-score (%)": _fmt(m["vqa_score"], 100.0),
+                     "Accuracy (%)": _fmt(m["accuracy"], 100.0)})
     st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                  use_container_width=True)
-    by = {r["meta"]["ordering"]: r["meta"]["vqa_score"] * 100 for r in runs}
-    line = _delta_line(by, "VQA-score %")
-    if line:
-        st.caption(line)
-    st.caption(f"Re-run:  `{RUN_PREFIX}vqa_eval_vllm.py`")
+    st.caption("Paper (Table 4, Qwen3-VL-8B, N=2000): STI 81.1% · SIT 83.4% · "
+              "STIT 82.1% · SITIT 83.8% (VQA accuracy). Compare against the row "
+              "above to see how much of the gap the config difference explains.")
 
 
 def _nextqa_section():
@@ -140,23 +242,93 @@ def _nextqa_section():
     if not runs:
         st.info(f"**No results yet.** Run:\n\n```\n{RUN_PREFIX}nextqa_eval_vllm.py\n```")
         return
-    runs.sort(key=lambda r: _order_key(r["meta"]["ordering"]))
-    rows = []
-    for r in runs:
-        m = r["meta"]
-        row = {"Ordering": m["ordering"], "N": str(m["n"]),
-               "Frames": str(m.get("k_frames", "")),
-               "Accuracy (%)": _fmt(m["accuracy"], 100.0)}
-        for t, d in m.get("by_type", {}).items():
-            row[f"type={t} (%)"] = _fmt(d["accuracy"], 100.0)
-        rows.append(row)
-    st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
-                 use_container_width=True)
-    by = {r["meta"]["ordering"]: r["meta"]["accuracy"] * 100 for r in runs}
-    line = _delta_line(by, "accuracy %")
-    if line:
-        st.caption(line)
+    runs.sort(key=lambda r: (_order_key(r["meta"]["ordering"]), _model_of(r["meta"])))
+    models_present = [m for m in MODELS if any(_model_of(r["meta"]) == m for r in runs)]
+    for model in models_present:
+        mruns = [r for r in runs if _model_of(r["meta"]) == model]
+        if len(models_present) > 1:
+            st.markdown(f"**{_model_label(model)}**")
+        rows = []
+        for r in mruns:
+            m = r["meta"]
+            row = {"Ordering": m["ordering"], "N": str(m["n"]),
+                   "Frames": str(m.get("k_frames", "")),
+                   "Accuracy (%)": _fmt(m["accuracy"], 100.0)}
+            for t, d in m.get("by_type", {}).items():
+                row[f"type={t} (%)"] = _fmt(d["accuracy"], 100.0)
+            rows.append(row)
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                     use_container_width=True)
+        by = {r["meta"]["ordering"]: r["meta"]["accuracy"] * 100 for r in mruns}
+        line = _delta_line(by, "accuracy %")
+        if line:
+            st.caption(line)
     st.caption(f"Re-run:  `{RUN_PREFIX}nextqa_eval_vllm.py`")
+
+
+def _mvbench_section():
+    st.subheader("🎥 MVBench — Multi-frame video QA by prompt ordering")
+    st.caption(
+        "13 of MVBench's 20 tasks (Li et al. 2024) with confirmed video coverage "
+        "in our download (7 excluded: their video content wasn't available in the "
+        "subset we pulled, see mvbench_eval_vllm.py's module docstring) -- action "
+        "recognition/prediction/localization, object existence/interaction, "
+        "counting, direction, scene transitions, egocentric navigation, "
+        "counterfactual inference. Multiple-choice, same K-frame SITIT-echo "
+        "generalization as NExT-QA."
+    )
+    runs = _load("mvbench_order-*.json")
+    if not runs:
+        st.info(f"**No results yet.** Run:\n\n```\n{RUN_PREFIX}mvbench_eval_vllm.py\n```")
+        return
+    runs.sort(key=lambda r: (_order_key(r["meta"]["ordering"]), _model_of(r["meta"])))
+    models_present = [m for m in MODELS if any(_model_of(r["meta"]) == m for r in runs)]
+    for model in models_present:
+        mruns = [r for r in runs if _model_of(r["meta"]) == model]
+        if len(models_present) > 1:
+            st.markdown(f"**{_model_label(model)}**")
+        rows = []
+        for r in mruns:
+            m = r["meta"]
+            row = {"Ordering": m["ordering"], "N": str(m["n"]),
+                   "Frames": str(m.get("k_frames", "")),
+                   "Accuracy (%)": _fmt(m.get("accuracy"), 100.0)}
+            for t, d in m.get("by_task", {}).items():
+                row[f"task={t} (%)"] = _fmt(d.get("accuracy"), 100.0)
+            rows.append(row)
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                     use_container_width=True)
+        by = {r["meta"]["ordering"]: (r["meta"].get("accuracy") or 0) * 100 for r in mruns}
+        line = _delta_line(by, "accuracy %")
+        if line:
+            st.caption(line)
+    st.caption(f"Re-run:  `{RUN_PREFIX}mvbench_eval_vllm.py`")
+
+
+def _video_qa_section(dataset, title, caption):
+    st.subheader(title)
+    st.caption(caption)
+    runs = _load(f"{dataset}qa_order-*.json")
+    script = f"video_qa_eval_vllm.py --dataset {dataset}"
+    if not runs:
+        st.info(f"**No results yet.** Run:\n\n```\n{RUN_PREFIX}{script}\n```")
+        return
+    runs.sort(key=lambda r: (_order_key(r["meta"]["ordering"]), _model_of(r["meta"])))
+    models_present = [m for m in MODELS if any(_model_of(r["meta"]) == m for r in runs)]
+    for model in models_present:
+        mruns = [r for r in runs if _model_of(r["meta"]) == model]
+        if len(models_present) > 1:
+            st.markdown(f"**{_model_label(model)}**")
+        rows = [{"Ordering": r["meta"]["ordering"], "N": str(r["meta"]["n"]),
+                "Frames": str(r["meta"].get("k_frames", "")),
+                "Accuracy (%)": _fmt(r["meta"].get("accuracy"), 100.0)} for r in mruns]
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                     use_container_width=True)
+        by = {r["meta"]["ordering"]: (r["meta"].get("accuracy") or 0) * 100 for r in mruns}
+        line = _delta_line(by, "accuracy %")
+        if line:
+            st.caption(line)
+    st.caption(f"Re-run:  `{RUN_PREFIX}{script}`")
 
 
 def render_extra_tasks_page():
@@ -165,9 +337,10 @@ def render_extra_tasks_page():
         "STI / SIT / STIT / SITIT applied to task types not covered elsewhere in "
         "this repo: open-ended text answers (VQA), numeric/counting answers "
         "(TallyQA), curated perception-blind-spot probes (MMVP, BLINK), and "
-        "multi-frame video QA (NExT-QA). All run on **Qwen3-VL-8B** via the vLLM "
-        "library; SITIT_rev (needs local HF + patch-reversal hooks) is not yet "
-        "run for these tasks."
+        "multi-frame video QA (NExT-QA, MVBench, MSVD-QA, TGIF-QA). Run on "
+        "**Qwen3-VL-8B** and, where noted, **Gemma-3-27B** (the paper's second "
+        "model) via the vLLM library; SITIT_rev (needs local HF + "
+        "patch-reversal hooks) is not yet run for these tasks."
     )
     _vqa_section()
     st.markdown("---")
@@ -197,3 +370,17 @@ def render_extra_tasks_page():
         by_key="by_subtask", by_label="subtask")
     st.markdown("---")
     _nextqa_section()
+    st.markdown("---")
+    _mvbench_section()
+    st.markdown("---")
+    _video_qa_section(
+        "msvd", "🐕 MSVD-QA — Open-ended video QA by prompt ordering",
+        "Classic short-answer video QA (Xu et al. 2017, Chen & Dolan 2011 videos), "
+        "whole-word-containment scoring against a single canonical answer per "
+        "question. Same K-frame SITIT-echo generalization as NExT-QA/MVBench.")
+    st.markdown("---")
+    _video_qa_section(
+        "tgif", "🎞️ TGIF-QA — Open-ended video QA by prompt ordering",
+        "Short-answer video QA over animated GIFs (Jang et al. 2017; Repeating "
+        "Action / State Transition / FrameQA / Count subtasks pooled), same "
+        "scoring and frame-echo generalization as MSVD-QA.")

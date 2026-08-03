@@ -95,19 +95,40 @@ def _order_key(tag):
     return ORDER_ROWS.index(tag) if tag in ORDER_ROWS else len(ORDER_ROWS)
 
 
+# Short display label per model tag as it appears in meta["model"]. Falls
+# back to the raw tag for anything unrecognized (e.g. a future model added
+# without updating this map) so nothing is ever silently dropped.
+MODEL_LABEL = {
+    "qwen3-vl-8b": "Qwen3-VL (8B)",
+    "gemma-3-27b": "Gemma-3 (27B)",
+    "Qwen/Qwen3-VL-30B-A3B-Instruct": "Qwen3-VL-30B (served baseline)",
+}
+
+
+def _model_label(tag):
+    return MODEL_LABEL.get(tag, tag)
+
+
+def _model_of(meta):
+    return meta.get("model", "qwen3-vl-8b")
+
+
 def _rf20_by_ordering():
-    """Unified {ordering: {dataset: mAP}} from both the aerial ordering files and
-    the per-dataset ordering files."""
+    """{model: {ordering: {dataset: mAP}}} from both the aerial ordering files
+    and the per-dataset ordering files. Keyed by model as well as ordering --
+    Qwen and Gemma both write rf20ds_<dataset>_order-<tag>_<model>.json for the
+    same (dataset, ordering), and a plain {ordering: {dataset: ...}} dict would
+    silently let one model's value clobber the other's for shared keys."""
     mp, mp50 = {}, {}
     for r in _load("rf20_aerial_order-*.json"):
-        m = r["meta"]; o = m["ordering"]
+        m = r["meta"]; o = m["ordering"]; model = _model_of(m)
         for ds, d in m.get("per_dataset", {}).items():
-            mp.setdefault(o, {})[ds] = d.get("mAP")
-            mp50.setdefault(o, {})[ds] = d.get("mAP50")
+            mp.setdefault(model, {}).setdefault(o, {})[ds] = d.get("mAP")
+            mp50.setdefault(model, {}).setdefault(o, {})[ds] = d.get("mAP50")
     for r in _load("rf20ds_*.json"):
-        m = r["meta"]; o = m["ordering"]; ds = m["dataset"]
-        mp.setdefault(o, {})[ds] = m.get("mAP")
-        mp50.setdefault(o, {})[ds] = m.get("mAP50")
+        m = r["meta"]; o = m["ordering"]; ds = m["dataset"]; model = _model_of(m)
+        mp.setdefault(model, {}).setdefault(o, {})[ds] = m.get("mAP")
+        mp50.setdefault(model, {}).setdefault(o, {})[ds] = m.get("mAP50")
     return mp, mp50
 
 
@@ -134,43 +155,70 @@ def _rf20_section():
         st.info("**No RF20 results yet.** Run:\n\n```\n" + RF20_RUN + "\n```")
         return
     active = ["STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"]
-    present_ord = [o for o in active if o in mp]
-
-    def _cov(o):
-        return len(mp.get(o, {}))
-    cov = " · ".join(f"{o} {_cov(o)}/20" for o in present_ord)
-    st.caption("Engine: **vLLM library** for STI/SIT/STIT/SITIT/STITI; **local HF + "
-               "patch-reversal hooks** for SITIT_rev. Coverage: " + cov + ".")
-
-    # --- Super-category summary (paper Table-1 layout) ---
-    st.markdown("**By super-category — mean mAP** (paper layout)")
+    models_present = [m for m in ("qwen3-vl-8b", "gemma-3-27b") if m in mp]
     cat_ds = {c: [d for d in RF20_CATS if RF20_CATS[d] == c] for c in CAT_ORDER}
-    rows = []
-    for o in present_ord:
-        row = {"Ordering": o, "What": ORDER_DESC.get(o, "")}
-        allvals = []
-        for c in CAT_ORDER:
-            vals = [mp[o].get(d) for d in cat_ds[c]]
-            row[c] = _fmt(_mean(vals))
-            allvals += [v for v in vals if v is not None]
-        row["All"] = _fmt(_mean(allvals))
-        rows.append(row)
-    st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
-                 use_container_width=True)
-    by = {o: _mean([mp[o].get(d) for d in RF20_CATS]) for o in present_ord}
-    _delta_caption(by, "mAP (All-mean)")
+    all_mean_by_model = {}
 
-    # --- Per-dataset breakdown (expandable) ---
-    with st.expander("Per-dataset mAP breakdown (20 datasets × orderings)"):
-        drows = []
-        for c in CAT_ORDER:
-            for ds in cat_ds[c]:
-                row = {"Category": c, "Dataset": ds}
-                for o in present_ord:
-                    row[o] = _fmt(mp[o].get(ds))
-                drows.append(row)
-        st.dataframe(pd.DataFrame(drows).astype(str), hide_index=True,
+    for model in models_present:
+        mp_m = mp[model]
+        present_ord = [o for o in active if o in mp_m]
+        st.markdown(f"#### {_model_label(model)}")
+
+        def _cov(o):
+            return len(mp_m.get(o, {}))
+        cov = " · ".join(f"{o} {_cov(o)}/20" for o in present_ord)
+        st.caption("Coverage: " + cov + ".")
+
+        st.markdown("**By super-category — mean mAP** (paper layout)")
+        rows = []
+        for o in present_ord:
+            row = {"Ordering": o, "What": ORDER_DESC.get(o, "")}
+            allvals = []
+            for c in CAT_ORDER:
+                vals = [mp_m[o].get(d) for d in cat_ds[c]]
+                row[c] = _fmt(_mean(vals))
+                allvals += [v for v in vals if v is not None]
+            row["All"] = _fmt(_mean(allvals))
+            rows.append(row)
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                      use_container_width=True)
+        by = {o: _mean([mp_m[o].get(d) for d in RF20_CATS]) for o in present_ord}
+        all_mean_by_model[model] = by
+        _delta_caption(by, "mAP (All-mean)")
+
+        with st.expander(f"Per-dataset mAP breakdown — {_model_label(model)} "
+                         "(20 datasets × orderings)"):
+            drows = []
+            for c in CAT_ORDER:
+                for ds in cat_ds[c]:
+                    row = {"Category": c, "Dataset": ds}
+                    for o in present_ord:
+                        row[o] = _fmt(mp_m[o].get(ds))
+                    drows.append(row)
+            st.dataframe(pd.DataFrame(drows).astype(str), hide_index=True,
+                         use_container_width=True)
+        st.markdown("")
+
+    # --- Cross-model comparison (All-mean mAP by ordering) ---
+    if len(models_present) > 1:
+        st.markdown("**Cross-model — All-mean mAP by ordering**")
+        comp_rows = []
+        for o in active:
+            row = {"Ordering": o, "What": ORDER_DESC.get(o, "")}
+            for model in models_present:
+                row[_model_label(model)] = _fmt(all_mean_by_model[model].get(o))
+            if any(all_mean_by_model[m].get(o) is not None for m in models_present):
+                comp_rows.append(row)
+        st.dataframe(pd.DataFrame(comp_rows).astype(str), hide_index=True,
+                     use_container_width=True)
+        st.caption(
+            "Gemma-3-27B has no dedicated grounding/localization training the way "
+            "Qwen2/2.5/3-VL does (it is a general chat-tuned multimodal model), so "
+            "its raw detection boxes are markedly less precise even after "
+            "correcting for its coordinate convention (fixed 896×896 canvas per "
+            "its own image processor, vs. Qwen's 0-1000 normalized convention) — "
+            "expect much lower absolute mAP, not a bug."
+        )
 
     # --- DetPO paper reference (Aerial column) ---
     st.markdown("**DetPO paper reference — RF20-VL Aerial mAP** (Tables 1–2)")
@@ -209,36 +257,44 @@ def _refcocog_section():
     if not runs:
         st.info("**No RefCOCOg results yet.**")
         return
-    runs.sort(key=lambda r: (_order_key(_tag(r["meta"])), r["meta"]["model"]))
+    runs.sort(key=lambda r: (_order_key(_tag(r["meta"])), _model_of(r["meta"])))
     rows = []
     for r in runs:
         m = r["meta"]
         tag = _tag(m)
         rows.append({
-            "Ordering": tag, "Model": m["model"].replace("Instruct", "").rstrip("-"),
+            "Ordering": tag, "Model": _model_label(_model_of(m)),
             "What": ORDER_DESC.get(tag, ""),
             "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
             "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0),
         })
     st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                  use_container_width=True)
-    by = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
-          for r in runs if "8b" in r["meta"].get("model", "")}
-    _delta_caption(by, "referring acc (IoU>=0.5) %")
+    for model in ("qwen3-vl-8b", "gemma-3-27b"):
+        by = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
+              for r in runs if _model_of(r["meta"]) == model}
+        if by:
+            st.caption(f"**{_model_label(model)}**")
+            _delta_caption(by, "referring acc (IoU>=0.5) %")
 
-    # Focused comparison: 30B baseline vs the 8B orderings.
-    acc = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100 for r in runs}
-    base = acc.get("baseline")
-    st.markdown("**Baseline (30B) vs 8B orderings**")
-    comp = []
-    comp.append({"Row": "baseline (Qwen3-VL-30B, S·T·I)",
-                 "Ref acc IoU>=0.5 (%)": _fmt(base), "Δ vs baseline": "—"})
-    for t in ("STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"):
-        v = acc.get(t)
-        comp.append({"Row": f"{t}  ·  {ORDER_DESC[t]}  (8B)",
-                     "Ref acc IoU>=0.5 (%)": _fmt(v),
-                     "Δ vs baseline": "—" if (v is None or base is None)
-                     else f"{v - base:+.1f}"})
+    # Focused comparison: 30B baseline vs each 8B-scale model's orderings.
+    st.markdown("**Baseline (30B) vs orderings, by model**")
+    base = None
+    for r in runs:
+        if _tag(r["meta"]) == "baseline":
+            base = (r["meta"].get("acc") or 0) * 100
+    comp = [{"Row": "baseline (Qwen3-VL-30B, S·T·I)",
+             "Ref acc IoU>=0.5 (%)": _fmt(base), "Δ vs baseline": "—"}]
+    for model in ("qwen3-vl-8b", "gemma-3-27b"):
+        acc = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
+              for r in runs if _model_of(r["meta"]) == model}
+        for t in ("STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"):
+            v = acc.get(t)
+            if v is None:
+                continue
+            comp.append({"Row": f"{t}  ·  {ORDER_DESC[t]}  ({_model_label(model)})",
+                         "Ref acc IoU>=0.5 (%)": _fmt(v),
+                         "Δ vs baseline": "—" if base is None else f"{v - base:+.1f}"})
     st.dataframe(pd.DataFrame(comp).astype(str), hide_index=True,
                  use_container_width=True)
     st.caption(
@@ -269,14 +325,19 @@ def _refcoco_variant_section(dataset, title, caption_extra=""):
         by_split.setdefault(m["split"], []).append(m)
     for split in sorted(by_split):
         st.markdown(f"**{dataset} / {split}**")
-        ms = sorted(by_split[split], key=lambda m: _order_key(_tag(m)))
-        rows = [{"Ordering": _tag(m), "What": ORDER_DESC.get(_tag(m), ""),
+        ms = sorted(by_split[split], key=lambda m: (_order_key(_tag(m)), _model_of(m)))
+        rows = [{"Ordering": _tag(m), "Model": _model_label(_model_of(m)),
+                "What": ORDER_DESC.get(_tag(m), ""),
                 "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
                 "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0)} for m in ms]
         st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                      use_container_width=True)
-        by = {_tag(m): (m.get("acc") or 0) * 100 for m in ms}
-        _delta_caption(by, f"{split} referring acc %")
+        for model in ("qwen3-vl-8b", "gemma-3-27b"):
+            by = {_tag(m): (m.get("acc") or 0) * 100 for m in ms
+                 if _model_of(m) == model}
+            if by:
+                st.caption(f"**{_model_label(model)}**")
+                _delta_caption(by, f"{split} referring acc %")
     st.caption("Re-run:  `" + GROUNDING_RUN + "`")
 
 

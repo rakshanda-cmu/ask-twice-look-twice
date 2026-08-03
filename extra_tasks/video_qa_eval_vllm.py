@@ -52,7 +52,11 @@ _PUNCT_RE = re.compile(r"[^\w\s]")
 
 
 def normalize(s):
-    return _PUNCT_RE.sub("", s.lower()).strip()
+    # TGIF-QA's Count subtask stores answers as a JSON int, not str (confirmed
+    # via a live crash: "'int' object has no attribute 'lower'" on the very
+    # first TGIF row) -- MSVD-QA's answers happen to all be strings, but str()
+    # here is correct for both regardless.
+    return _PUNCT_RE.sub("", str(s).lower()).strip()
 
 
 def load_rows(dataset, n, seed=0):
@@ -178,16 +182,30 @@ def main():
     print(f"[data] {len(rows)} {args.dataset} rows, {args.frames} frames/video", flush=True)
 
     from vllm import SamplingParams
-    llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1,
-                   disable_mm_cache=True, model_tag=args.model)
     sp = SamplingParams(temperature=0.0, max_tokens=16)
 
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
             print(f"  skip {tag} (not hook-free)"); continue
+        # A fresh engine per ordering, not one shared across the whole run:
+        # a live crash (MSVD-QA, this exact harness) showed the shared-engine
+        # version handling STI's 1000 rows fine, then OOM-ing 400 rows into
+        # SIT ("46.97 GiB in use" of a 47.4 GiB card, well past the 0.85
+        # gpu_memory_utilization budget fixed at init) -- consistent with
+        # multimodal encoder/CUDA-graph fragmentation accumulating across many
+        # chat() calls to one long-lived vLLM engine, not a per-item issue.
+        # Costs ~1 extra engine init per ordering; trades a known-safe amount
+        # of startup time for not losing an entire ordering's generation to a
+        # crash near the end.
+        llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1,
+                       disable_mm_cache=True, model_tag=args.model)
         print(f"=== {args.dataset} · ordering {tag} ===", flush=True)
         run_order(llm, sp, args.dataset, tag, ORDER_LETTERS[tag], rows, args.frames,
                   args.model, args.log_every)
+        del llm
+        import gc, torch
+        gc.collect()
+        torch.cuda.empty_cache()
     print("[done]", flush=True)
 
 
