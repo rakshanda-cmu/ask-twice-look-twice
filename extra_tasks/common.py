@@ -91,8 +91,11 @@ def make_llm(tp=2, max_model_len=24096, gpu_mem=0.85, limit_images=2,
     kwargs = dict(model=cfg["hf"], trust_remote_code=True,
                  max_model_len=max_model_len, tensor_parallel_size=tp,
                  gpu_memory_utilization=gpu_mem,
-                 limit_mm_per_prompt={"image": limit_images},
-                 disable_mm_preprocessor_cache=disable_mm_cache)
+                 limit_mm_per_prompt={"image": limit_images})
+    # disable_mm_preprocessor_cache was removed in vLLM 0.19; mm_processor_cache_gb=0
+    # is its replacement (0 == cache disabled).
+    if disable_mm_cache:
+        kwargs["mm_processor_cache_gb"] = 0
     if cfg["quantization"]:
         kwargs["quantization"] = cfg["quantization"]
         kwargs["load_format"] = cfg["quantization"]
