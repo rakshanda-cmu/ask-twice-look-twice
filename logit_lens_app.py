@@ -330,7 +330,7 @@ with col_img:
         label_visibility="collapsed",
     )
     coco_id   = st.text_input("…or COCO val2014 image ID", placeholder="e.g. 499775", value="000000499775")
-    data_path = st.text_input("COCO val2014 directory", value="./COCO/val2014/")
+    data_path = st.text_input("COCO val2014 directory", value="/data2/datasets/COCO/val2014/")
 
 with col_prompt:
     st.subheader("Task prompt")

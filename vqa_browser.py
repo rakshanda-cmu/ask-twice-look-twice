@@ -82,7 +82,7 @@ def _render_example(ex, data_dir, idx):
     st.divider()
 
 
-def render_vqa_browser(default_data_dir="./COCO/val2014", vqa_dir="./vqa"):
+def render_vqa_browser(default_data_dir="/data2/datasets/COCO/val2014", vqa_dir="./vqa"):
     st.subheader("📊 VQA Evaluation Browser")
     st.caption(
         "Browse VQA v2 (val) examples the model answered right vs. wrong. "
