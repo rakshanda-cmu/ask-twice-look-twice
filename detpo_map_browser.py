@@ -101,8 +101,13 @@ def _order_key(tag):
 MODEL_LABEL = {
     "qwen3-vl-8b": "Qwen3-VL (8B)",
     "gemma-3-27b": "Gemma-3 (27B)",
+    "gemma-4-31b": "Gemma-4 (31B)",
     "Qwen/Qwen3-VL-30B-A3B-Instruct": "Qwen3-VL-30B (served baseline)",
 }
+# Ordered list of the "local ordering sweep" models -- iterate this, not a
+# hardcoded tuple, so a newly-added model (e.g. gemma-4-31b) automatically
+# gets its own section everywhere instead of needing every call site updated.
+MODELS = ["qwen3-vl-8b", "gemma-3-27b", "gemma-4-31b"]
 
 
 def _model_label(tag):
@@ -155,7 +160,7 @@ def _rf20_section():
         st.info("**No RF20 results yet.** Run:\n\n```\n" + RF20_RUN + "\n```")
         return
     active = ["STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"]
-    models_present = [m for m in ("qwen3-vl-8b", "gemma-3-27b") if m in mp]
+    models_present = [m for m in MODELS if m in mp]
     cat_ds = {c: [d for d in RF20_CATS if RF20_CATS[d] == c] for c in CAT_ORDER}
     all_mean_by_model = {}
 
@@ -258,26 +263,32 @@ def _refcocog_section():
         st.info("**No RefCOCOg results yet.**")
         return
     runs.sort(key=lambda r: (_order_key(_tag(r["meta"])), _model_of(r["meta"])))
-    rows = []
-    for r in runs:
-        m = r["meta"]
-        tag = _tag(m)
-        rows.append({
-            "Ordering": tag, "Model": _model_label(_model_of(m)),
-            "What": ORDER_DESC.get(tag, ""),
-            "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
-            "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0),
-        })
-    st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
-                 use_container_width=True)
-    for model in ("qwen3-vl-8b", "gemma-3-27b"):
-        by = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
-              for r in runs if _model_of(r["meta"]) == model}
+    # Separate table PER MODEL -- results for different models share the same
+    # ordering keys, so merging them into one dataframe would make it easy to
+    # misread which row belongs to which model. Never combine.
+    models_present = [m for m in MODELS if any(_model_of(r["meta"]) == m for r in runs)]
+    for model in models_present:
+        mruns = [r for r in runs if _model_of(r["meta"]) == model]
+        if len(models_present) > 1:
+            st.markdown(f"**{_model_label(model)}**")
+        rows = []
+        for r in mruns:
+            m = r["meta"]
+            tag = _tag(m)
+            rows.append({
+                "Ordering": tag, "What": ORDER_DESC.get(tag, ""),
+                "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
+                "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0),
+            })
+        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                     use_container_width=True)
+        by = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100 for r in mruns}
         if by:
-            st.caption(f"**{_model_label(model)}**")
             _delta_caption(by, "referring acc (IoU>=0.5) %")
 
     # Focused comparison: 30B baseline vs each 8B-scale model's orderings.
+    # Deliberately cross-model (every row is labeled with its model name) --
+    # this is a comparison table by design, not a merge.
     st.markdown("**Baseline (30B) vs orderings, by model**")
     base = None
     for r in runs:
@@ -285,7 +296,7 @@ def _refcocog_section():
             base = (r["meta"].get("acc") or 0) * 100
     comp = [{"Row": "baseline (Qwen3-VL-30B, S·T·I)",
              "Ref acc IoU>=0.5 (%)": _fmt(base), "Δ vs baseline": "—"}]
-    for model in ("qwen3-vl-8b", "gemma-3-27b"):
+    for model in models_present:
         acc = {_tag(r["meta"]): (r["meta"].get("acc") or 0) * 100
               for r in runs if _model_of(r["meta"]) == model}
         for t in ("STI", "SIT", "STIT", "SITIT", "STITI", "SITIT_rev"):
@@ -326,17 +337,19 @@ def _refcoco_variant_section(dataset, title, caption_extra=""):
     for split in sorted(by_split):
         st.markdown(f"**{dataset} / {split}**")
         ms = sorted(by_split[split], key=lambda m: (_order_key(_tag(m)), _model_of(m)))
-        rows = [{"Ordering": _tag(m), "Model": _model_label(_model_of(m)),
-                "What": ORDER_DESC.get(_tag(m), ""),
-                "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
-                "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0)} for m in ms]
-        st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
-                     use_container_width=True)
-        for model in ("qwen3-vl-8b", "gemma-3-27b"):
-            by = {_tag(m): (m.get("acc") or 0) * 100 for m in ms
-                 if _model_of(m) == model}
-            if by:
+        # Separate table per model -- never merge different models' rows.
+        models_present = [mo for mo in MODELS if any(_model_of(m) == mo for m in ms)]
+        for model in models_present:
+            mms = [m for m in ms if _model_of(m) == model]
+            if len(models_present) > 1:
                 st.caption(f"**{_model_label(model)}**")
+            rows = [{"Ordering": _tag(m), "What": ORDER_DESC.get(_tag(m), ""),
+                    "N": str(m.get("n", "")), "Parsed": str(m.get("parsed", "")),
+                    "Ref acc IoU>=0.5 (%)": _fmt(m.get("acc"), 100.0)} for m in mms]
+            st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
+                         use_container_width=True)
+            by = {_tag(m): (m.get("acc") or 0) * 100 for m in mms}
+            if by:
                 _delta_caption(by, f"{split} referring acc %")
     st.caption("Re-run:  `" + GROUNDING_RUN + "`")
 

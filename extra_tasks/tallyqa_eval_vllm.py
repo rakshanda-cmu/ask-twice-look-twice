@@ -129,7 +129,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--orders", default=",".join(ORDER_LIST))
     ap.add_argument("--model", default="qwen3-vl-8b",
-                    choices=["qwen3-vl-8b", "gemma-3-27b"])
+                    choices=["qwen3-vl-8b", "gemma-3-27b", "gemma-4-31b"])
     ap.add_argument("--num-samples", type=int, default=2000, dest="num_samples")
     ap.add_argument("--tp", type=int, default=2)
     ap.add_argument("--log-every", type=int, default=200, dest="log_every")
@@ -138,8 +138,8 @@ def main():
 
     global MODEL_TAG
     MODEL_TAG = args.model  # rebinds the module-global MODEL_TAG other functions read at call time
-    if args.model == "gemma-3-27b" and args.tp != 1:
-        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+    if args.model in ("gemma-3-27b", "gemma-4-31b") and args.tp != 1:
+        print(f"  [note] forcing --tp 1 for {args.model} (bnb 4-bit, single GPU only)")
         args.tp = 1
 
     rows = load_tallyqa(args.num_samples)

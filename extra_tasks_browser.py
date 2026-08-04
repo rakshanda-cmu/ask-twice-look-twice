@@ -47,8 +47,9 @@ def _order_key(tag):
 # Short display label per model tag as it appears in meta["model"]. Falls
 # back to the raw tag for anything unrecognized so nothing is ever silently
 # dropped if a new model gets added later.
-MODEL_LABEL = {"qwen3-vl-8b": "Qwen3-VL (8B)", "gemma-3-27b": "Gemma-3 (27B)"}
-MODELS = ["qwen3-vl-8b", "gemma-3-27b"]
+MODEL_LABEL = {"qwen3-vl-8b": "Qwen3-VL (8B)", "gemma-3-27b": "Gemma-3 (27B)",
+              "gemma-4-31b": "Gemma-4 (31B)"}
+MODELS = ["qwen3-vl-8b", "gemma-3-27b", "gemma-4-31b"]
 
 
 def _model_label(tag):

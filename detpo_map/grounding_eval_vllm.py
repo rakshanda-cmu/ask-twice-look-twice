@@ -22,10 +22,14 @@ Run:
     /home/grg/anaconda3/envs/qwen-vllm-env/bin/python detpo_map/grounding_eval_vllm.py \
       --datasets refcocog --splits val --orders STITI
 """
-import argparse, base64, io, json, os, pickle, re, time
+import argparse, base64, io, json, os, pickle, re, sys, time
 
 from PIL import Image
 from pycocotools.coco import COCO
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                "extra_tasks"))
+from common import load_hf_chat_engine  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
@@ -36,11 +40,29 @@ RC = "/home/grg/Research/rf-20-vl-benchmark/datasets/RefCOCO"
 # canvas its Gemma3ImageProcessor resizes every image to (confirmed via
 # preprocessor_config.json and empirically via an out-of-bounds box on a
 # 640x480 test image), not a 0-1000 normalized space.
+#
+# gemma-4-31b's coord_scale is INTENTIONALLY None: Gemma4ImageProcessor has no
+# fixed square canvas at all (patch_size=16, variable soft-token budget per
+# image, confirmed via its processor_config.json) -- there is no reason to
+# assume its raw box output follows the SAME convention as either Qwen's 1000
+# or Gemma-3's 896, and guessing wrong here would silently corrupt every
+# gemma-4-31b RF20/grounding number the same way the original 1000-for-everyone
+# bug did for gemma-3-27b. Fill this in only after empirically capturing a raw
+# gemma-4-31b bbox_2d output against a known image size (see the debug script
+# used to find Gemma-3's 896 -- same method). The None deliberately makes
+# run_order() below crash with a clear error if this model is used for
+# grounding before that verification happens, rather than silently guessing.
 MODEL_REGISTRY = {
     "qwen3-vl-8b": {"hf": "Qwen/Qwen3-VL-8B-Instruct", "quantization": None,
-                    "coord_scale": 1000},
+                    "coord_scale": 1000, "box_order": "xyxy", "engine": "vllm"},
     "gemma-3-27b": {"hf": "google/gemma-3-27b-it", "quantization": "bitsandbytes",
-                    "coord_scale": 896},
+                    "coord_scale": 896, "box_order": "xyxy", "engine": "vllm"},
+    # coord_scale=1000, box_order="yxyx" -- both confirmed empirically, see
+    # ordering_eval_vllm.py's MODEL_REGISTRY comment for the verification
+    # method. engine="local_hf": vLLM 0.19.1 cannot load this model (see
+    # extra_tasks/common.py's MODEL_REGISTRY comment for the upstream bug).
+    "gemma-4-31b": {"hf": "google/gemma-4-31B-it", "quantization": "bitsandbytes",
+                    "coord_scale": 1000, "box_order": "yxyx", "engine": "local_hf"},
 }
 MODEL_HF = MODEL_REGISTRY["qwen3-vl-8b"]["hf"]
 MODEL_TAG = "qwen3-vl-8b"
@@ -102,7 +124,16 @@ def _order_box(x1, y1, x2, y2):
     return [x1, y1, x2, y2]
 
 
-def parse_box(text):
+def _maybe_swap_yx(x1, y1, x2, y2, box_order):
+    # See ordering_eval_vllm.py's _maybe_swap_yx docstring -- gemma-4-31b
+    # emits "bbox_2d" as [y1, x1, y2, x2] regardless of the prompted order,
+    # confirmed empirically by drawing predicted boxes on real images.
+    if box_order == "yxyx":
+        return y1, x1, y2, x2
+    return x1, y1, x2, y2
+
+
+def parse_box(text, box_order="xyxy"):
     t = text.strip().strip("`")
     t = re.sub(r"^json", "", t).strip()
     try:
@@ -111,6 +142,7 @@ def parse_box(text):
         b = d.get("bbox_2d") or d.get("bbox")
         if b and len(b) >= 4:
             x1, y1, x2, y2 = map(float, b[:4])
+            x1, y1, x2, y2 = _maybe_swap_yx(x1, y1, x2, y2, box_order)
             return _order_box(x1, y1, x2, y2)
     except Exception:
         pass
@@ -119,6 +151,7 @@ def parse_box(text):
         nums = NUM.findall(m.group(1))
         if len(nums) >= 4:
             x1, y1, x2, y2 = map(float, nums[:4])
+            x1, y1, x2, y2 = _maybe_swap_yx(x1, y1, x2, y2, box_order)
             return _order_box(x1, y1, x2, y2)
     return None
 
@@ -176,12 +209,15 @@ def run_order(llm, sp, dataset, split, tag, letters, refs, ann, img, img_dir):
     results, correct, parsed = [], 0, 0
     for o, m in zip(outputs, meta):
         text = o.outputs[0].text.strip()
-        box = parse_box(text)
+        box = parse_box(text, box_order=MODEL_REGISTRY[MODEL_TAG].get("box_order", "xyxy"))
         ok = False
         if box is not None:
             parsed += 1
             x1, y1, x2, y2 = box
             cs = MODEL_REGISTRY[MODEL_TAG]["coord_scale"]
+            assert cs is not None, (
+                f"{MODEL_TAG} has no verified coord_scale -- fill in "
+                "MODEL_REGISTRY before running grounding/detection with it")
             pred = [x1 / cs * m["W"], y1 / cs * m["H"],
                     (x2 - x1) / cs * m["W"], (y2 - y1) / cs * m["H"]]
             ok = iou_xywh(pred, m["gt"]) >= 0.5
@@ -190,7 +226,8 @@ def run_order(llm, sp, dataset, split, tag, letters, refs, ann, img, img_dir):
 
     n = len(results)
     meta_out = {"benchmark": dataset, "split": split, "ordering": tag,
-                "model": MODEL_TAG, "engine": "vllm", "metric": "ref_acc_iou0.5",
+                "model": MODEL_TAG, "engine": MODEL_REGISTRY[MODEL_TAG]["engine"],
+                "metric": "ref_acc_iou0.5",
                 "n": n, "parsed": parsed, "correct": correct,
                 "acc": correct / max(1, n), "runtime_s": dt, "complete": True}
     json.dump({"meta": meta_out, "results": results}, open(out, "w"), indent=2)
@@ -205,27 +242,31 @@ def main():
     ap.add_argument("--orders", default="STI,SIT,STIT,SITIT,STITI")
     ap.add_argument("--tp", type=int, default=1)
     ap.add_argument("--model", default="qwen3-vl-8b",
-                    choices=["qwen3-vl-8b", "gemma-3-27b"])
+                    choices=["qwen3-vl-8b", "gemma-3-27b", "gemma-4-31b"])
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
 
     global MODEL_TAG
     MODEL_TAG = args.model
-    if args.model == "gemma-3-27b" and args.tp != 1:
-        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+    if args.model in ("gemma-3-27b", "gemma-4-31b") and args.tp != 1:
+        print(f"  [note] forcing --tp 1 for {args.model} (bnb 4-bit, single GPU only)")
         args.tp = 1
     cfg = MODEL_REGISTRY[args.model]
 
-    from vllm import LLM, SamplingParams
-    llm_kwargs = dict(model=cfg["hf"], trust_remote_code=True,
-                      max_model_len=24096, tensor_parallel_size=args.tp,
-                      gpu_memory_utilization=0.85, limit_mm_per_prompt={"image": 2})
-    if cfg["quantization"]:
-        llm_kwargs["quantization"] = cfg["quantization"]
-        llm_kwargs["load_format"] = cfg["quantization"]
+    from vllm import SamplingParams
+    if cfg["engine"] == "local_hf":
+        llm = load_hf_chat_engine(args.model)
     else:
-        llm_kwargs["dtype"] = "float16"
-    llm = LLM(**llm_kwargs)
+        from vllm import LLM
+        llm_kwargs = dict(model=cfg["hf"], trust_remote_code=True,
+                          max_model_len=24096, tensor_parallel_size=args.tp,
+                          gpu_memory_utilization=0.85, limit_mm_per_prompt={"image": 2})
+        if cfg["quantization"]:
+            llm_kwargs["quantization"] = cfg["quantization"]
+            llm_kwargs["load_format"] = cfg["quantization"]
+        else:
+            llm_kwargs["dtype"] = "float16"
+        llm = LLM(**llm_kwargs)
     # 64 was fine for Qwen (terse compliance) but risks truncating Gemma-3-27B
     # before its JSON, given the same verbose-preamble behavior confirmed on
     # BLINK/MMVP (see extra_tasks/mmvp_eval_vllm.py's max_tokens comment).

@@ -167,15 +167,15 @@ def main():
     ap.add_argument("--dataset", required=True, choices=["msvd", "tgif"])
     ap.add_argument("--orders", default=",".join(ORDER_LIST))
     ap.add_argument("--model", default="qwen3-vl-8b",
-                    choices=["qwen3-vl-8b", "gemma-3-27b"])
+                    choices=["qwen3-vl-8b", "gemma-3-27b", "gemma-4-31b"])
     ap.add_argument("--num-samples", type=int, default=1000, dest="num_samples")
     ap.add_argument("--frames", type=int, default=6)
     ap.add_argument("--tp", type=int, default=1)
     ap.add_argument("--log-every", type=int, default=100, dest="log_every")
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
-    if args.model == "gemma-3-27b" and args.tp != 1:
-        print("  [note] forcing --tp 1 for gemma-3-27b (bnb 4-bit, single GPU only)")
+    if args.model in ("gemma-3-27b", "gemma-4-31b") and args.tp != 1:
+        print(f"  [note] forcing --tp 1 for {args.model} (bnb 4-bit, single GPU only)")
         args.tp = 1
 
     rows = load_rows(args.dataset, args.num_samples)
