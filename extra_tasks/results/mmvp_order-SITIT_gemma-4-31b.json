@@ -1,0 +1,2414 @@
+{
+  "meta": {
+    "benchmark": "MMVP",
+    "ordering": "SITIT",
+    "model": "gemma-4-31b",
+    "engine": "vllm",
+    "n": 300,
+    "accuracy": 0.8733333333333333,
+    "runtime_s": 412.15929770469666,
+    "complete": true
+  },
+  "results": [
+    {
+      "index": 1,
+      "question": "Are the butterfly's wings closer to being open or closed?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 2,
+      "question": "Are the butterfly's wings closer to being open or closed?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 3,
+      "question": "Is the flame of the match more round or thin?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 4,
+      "question": "Is the flame of the match more round or thin?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 5,
+      "question": "Is the dog facing left or right from the camera's perspective?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 6,
+      "question": "Is the dog facing left or right from the camera's perspective?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 7,
+      "question": "Is the school bus driving towards or away from the camera?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 8,
+      "question": "Is the school bus driving towards or away from the camera?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 9,
+      "question": "Can you see the key \"Z\" in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 10,
+      "question": "Can you see the key \"Z\" in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 11,
+      "question": "Has the peacock opened its tail?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 12,
+      "question": "Has the peacock opened its tail?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 13,
+      "question": "Is the image more likely of a single ear of corn or multiple ears",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 14,
+      "question": "Is the image more likely of a single ear of corn or multiple ears",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 15,
+      "question": "Is there a shadow on the flower?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 16,
+      "question": "Is there a shadow on the flower?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 17,
+      "question": "Is the front of the school bus protruding?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 18,
+      "question": "Is the front of the school bus protruding?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 19,
+      "question": "Can you see the dorsal fin of the animal?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 20,
+      "question": "Can you see the dorsal fin of the animal?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 21,
+      "question": "Is the duck's entire beak visible in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 22,
+      "question": "Is the duck's entire beak visible in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 23,
+      "question": "From which angle is this image taken?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 24,
+      "question": "From which angle is this image taken?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 25,
+      "question": "What color is the chicken's body?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 26,
+      "question": "What color is the chicken's body?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 27,
+      "question": "Is the peacock's head visible in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 28,
+      "question": "Is the peacock's head visible in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 29,
+      "question": "Based on the image, is the following statement correct: We cannot see the window on the school bus?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 30,
+      "question": "Based on the image, is the following statement correct: We cannot see the window on the school bus?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 31,
+      "question": "Is the wind blowing the flag?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 32,
+      "question": "Is the wind blowing the flag?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 33,
+      "question": "Is the butterfly's abdomen visible in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 34,
+      "question": "Is the butterfly's abdomen visible in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 35,
+      "question": "Do the vegetables have spikes?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 36,
+      "question": "Do the vegetables have spikes?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 37,
+      "question": "What color are the flowers in the background?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 38,
+      "question": "What color are the flowers in the background?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 39,
+      "question": "Is the duck floating?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 40,
+      "question": "Is the duck floating?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 41,
+      "question": "Based on the image, is the following statement correct: The spider has 8 legs?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 42,
+      "question": "Based on the image, is the following statement correct: The spider has 8 legs?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 43,
+      "question": "Are the wheels of the school bus visible in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 44,
+      "question": "Are the wheels of the school bus visible in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 45,
+      "question": "Is the shark's belly visible in this image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 46,
+      "question": "Is the shark's belly visible in this image?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 47,
+      "question": "How many spots are on the animal in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 48,
+      "question": "How many spots are on the animal in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 49,
+      "question": "Are the arrow keys visible in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 50,
+      "question": "Are the arrow keys visible in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 51,
+      "question": "Is the elephant's trunk curled in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 52,
+      "question": "Is the elephant's trunk curled in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 53,
+      "question": "Is the number of pills in the image in the range of countable?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 54,
+      "question": "Is the number of pills in the image in the range of countable?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 55,
+      "question": "Can you see stems of bananas in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 56,
+      "question": "Can you see stems of bananas in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 57,
+      "question": "Is the crocodile submerged in the water?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 58,
+      "question": "Is the crocodile submerged in the water?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 59,
+      "question": "Is the lock locked to the chain-linked fence?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 60,
+      "question": "Is the lock locked to the chain-linked fence?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 61,
+      "question": "Can you see letter \"J\" in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 62,
+      "question": "Can you see letter \"J\" in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 63,
+      "question": "Is the following statement correct: In the image, there is one daisy that is under the shadow of a taller daisy.",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 64,
+      "question": "Is the following statement correct: In the image, there is one daisy that is under the shadow of a taller daisy.",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 65,
+      "question": "Is the following statement correct: There is no letter D on this image.",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 66,
+      "question": "Is the following statement correct: There is no letter D on this image.",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 67,
+      "question": "Are there any clouds?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 68,
+      "question": "Are there any clouds?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 69,
+      "question": "Did the snake stick out its tongue and touch its skin?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 70,
+      "question": "Did the snake stick out its tongue and touch its skin?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 71,
+      "question": "Is the lock locked or unlocked?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 72,
+      "question": "Is the lock locked or unlocked?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 73,
+      "question": "Is the ground wet?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 74,
+      "question": "Is the ground wet?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 75,
+      "question": "Do you see this flower from the top or the side?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 76,
+      "question": "Do you see this flower from the top or the side?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 77,
+      "question": "Can you see the caudal fin of the shark in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 78,
+      "question": "Can you see the caudal fin of the shark in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 79,
+      "question": "In the image, is the snake's head oriented facing upwards or directed forwards?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 80,
+      "question": "In the image, is the snake's head oriented facing upwards or directed forwards?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 81,
+      "question": "Is this a hammerhead shark?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 82,
+      "question": "Is this a hammerhead shark?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 83,
+      "question": "Is the door of the truck cab open?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 84,
+      "question": "Is the door of the truck cab open?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 85,
+      "question": "Are the ears of the dog erect or drooping?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 86,
+      "question": "Are the ears of the dog erect or drooping?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 87,
+      "question": "Is there a hand using the mouse in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 88,
+      "question": "Is there a hand using the mouse in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 89,
+      "question": "Can you see people in this image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 90,
+      "question": "Can you see people in this image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 91,
+      "question": "Are there any words displayed on the vehicle's lightbar?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 92,
+      "question": "Are there any words displayed on the vehicle's lightbar?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 93,
+      "question": "Is there any accessory on the wrists?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 94,
+      "question": "Is there any accessory on the wrists?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 95,
+      "question": "From the camera's perspective, is the spider web very dense or relatively sparse?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 96,
+      "question": "From the camera's perspective, is the spider web very dense or relatively sparse?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 97,
+      "question": "Does the keyboard have a backlight?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 98,
+      "question": "Does the keyboard have a backlight?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 99,
+      "question": "Does the elephant have long or short tusks?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 100,
+      "question": "Does the elephant have long or short tusks?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 101,
+      "question": "What is the woman more likely to do?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "Based on the image, the woman in the yellow shirt is positioned with her arms extended and hands ready to receive the ball from above, which is the typical posture for a \"set\" in volleyball.\n\n(b)",
+      "correct": false
+    },
+    {
+      "index": 102,
+      "question": "What is the woman more likely to do?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "Based on the image, the woman in the foreground is in a low, ready position with her knees bent, which is the typical stance for receiving a serve or a hard hit. This position is used to perform a \"bump\" (forearm pass) to control the ball.\n\n(a)",
+      "correct": false
+    },
+    {
+      "index": 103,
+      "question": "Is the needle pointing up or down?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 104,
+      "question": "Is the needle pointing up or down?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 105,
+      "question": "Is the camera positioned at eye level or looking down from above?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 106,
+      "question": "Is the camera positioned at eye level or looking down from above?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 107,
+      "question": "Are the butterfly's feet visible?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 108,
+      "question": "Are the butterfly's feet visible?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 109,
+      "question": "Are the bird's wings flapping upward or downward?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Based on the image, the bird's wings are positioned above its body and are moving in an upward trajectory.\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 110,
+      "question": "Are the bird's wings flapping upward or downward?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 111,
+      "question": "Is the end of the elephant's trunk pointing inward or outward?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 112,
+      "question": "Is the end of the elephant's trunk pointing inward or outward?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 113,
+      "question": "Do you see any window in this image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 114,
+      "question": "Do you see any window in this image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 115,
+      "question": "Is the snail in the picture facing the camera or away from the camera?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 116,
+      "question": "Is the snail in the picture facing the camera or away from the camera?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 117,
+      "question": "How many eyes of the cat can you see in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 118,
+      "question": "How many eyes of the cat can you see in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 119,
+      "question": "In this image, how many eyes can you see on the animal?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 120,
+      "question": "In this image, how many eyes can you see on the animal?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 121,
+      "question": "Does this corn have white kernels?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 122,
+      "question": "Does this corn have white kernels?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 123,
+      "question": "Is this duck facing left or right from the camera's perspective?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 124,
+      "question": "Is this duck facing left or right from the camera's perspective?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 125,
+      "question": "Can you see a door in this image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 126,
+      "question": "Can you see a door in this image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 127,
+      "question": "Is the flower's center protruding or indented?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 128,
+      "question": "Is the flower's center protruding or indented?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 129,
+      "question": "From the camera's perspective, are the words \"SCHOOL BUS\" in the picture facing straight or oriented at an angle?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 130,
+      "question": "From the camera's perspective, are the words \"SCHOOL BUS\" in the picture facing straight or oriented at an angle?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 131,
+      "question": "Where is the yellow animal's head lying in this image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 132,
+      "question": "Where is the yellow animal's head lying in this image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 133,
+      "question": "What does the center button say?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 134,
+      "question": "What does the center button say?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 135,
+      "question": "How many cup(s) of drink are there in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 136,
+      "question": "How many cup(s) of drink are there in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 137,
+      "question": "In the picture, how is the snake primarily positioned?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 138,
+      "question": "In the picture, how is the snake primarily positioned?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 139,
+      "question": "Can you see the side windows of the vehicles?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 140,
+      "question": "Can you see the side windows of the vehicles?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 141,
+      "question": "Is the elephant's trunk raised or lowered?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 142,
+      "question": "Is the elephant's trunk raised or lowered?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 143,
+      "question": "Is the ladybug positioned upright or upside down?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 144,
+      "question": "Is the ladybug positioned upright or upside down?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 145,
+      "question": "Is the photo taken looking down from above or looking up from below?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 146,
+      "question": "Is the photo taken looking down from above or looking up from below?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 147,
+      "question": "In the picture, is the snake's head visible or not visible?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 148,
+      "question": "In the picture, is the snake's head visible or not visible?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 149,
+      "question": "Is the piano's back panel on the left or right side?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Based on the image provided, the piano's back panel (the wooden structure extending behind the keyboard) is located on the left side of the frame.\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 150,
+      "question": "Is the piano's back panel on the left or right side?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 151,
+      "question": "The image captures a woman running from:",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 152,
+      "question": "The image captures a woman running from:",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 153,
+      "question": "How many red apples are there in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 154,
+      "question": "How many red apples are there in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 155,
+      "question": "Is the vase beside the bedside table or on the windowsill?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 156,
+      "question": "Is the vase beside the bedside table or on the windowsill?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 157,
+      "question": "Is the frame at the front of the motorcycle primarily silver or black in color?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 158,
+      "question": "Is the frame at the front of the motorcycle primarily silver or black in color?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 159,
+      "question": "For the people operating the machine in the image, can you see one arm or both arms?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 160,
+      "question": "For the people operating the machine in the image, can you see one arm or both arms?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 161,
+      "question": "Is the minute hand of the clock closer to 12 or closer to 1?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Based on the image provided, the minute hand (the longer hand) is pointing almost directly at the 12.\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 162,
+      "question": "Is the minute hand of the clock closer to 12 or closer to 1?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "The minute hand of the clock is pointing towards the 2 o'clock position (approximately 10 minutes past the hour). Therefore, it is closer to 1 than it is to 12.\n\n(b)",
+      "correct": true
+    },
+    {
+      "index": 163,
+      "question": "Is the Christmas tree positioned in front of a large window or in front of a wall situated between two windows?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 164,
+      "question": "Is the Christmas tree positioned in front of a large window or in front of a wall situated between two windows?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 165,
+      "question": "In this image, are the berries placed",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 166,
+      "question": "In this image, are the berries placed",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 167,
+      "question": "Are some fruits cut open or are all the fruits uncut?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 168,
+      "question": "Are some fruits cut open or are all the fruits uncut?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 169,
+      "question": "Is there a knee visible in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 170,
+      "question": "Is there a knee visible in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 171,
+      "question": "Does the snowman in the picture have a mouth?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 172,
+      "question": "Does the snowman in the picture have a mouth?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 173,
+      "question": "Is the decoration on the Easter egg flat or raised?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 174,
+      "question": "Is the decoration on the Easter egg flat or raised?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 175,
+      "question": "In the image, is the nail polish on the toes dark or light in color?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 176,
+      "question": "In the image, is the nail polish on the toes dark or light in color?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 177,
+      "question": "In the picture, is the person facing the ocean or turned sideways to the ocean?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 178,
+      "question": "In the picture, is the person facing the ocean or turned sideways to the ocean?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 179,
+      "question": "How many wheels can you see in the image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 180,
+      "question": "How many wheels can you see in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 181,
+      "question": "Is the stripe in the middle of the car blue or white?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 182,
+      "question": "Is the stripe in the middle of the car blue or white?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 183,
+      "question": "Are the teddy bears holding hands or leaning against each other?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 184,
+      "question": "Are the teddy bears holding hands or leaning against each other?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 185,
+      "question": "Is the person in the picture already standing on the weighing scale?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 186,
+      "question": "Is the person in the picture already standing on the weighing scale?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 187,
+      "question": "In the picture, is the person stretching out one arm or both arms above their head?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 188,
+      "question": "In the picture, is the person stretching out one arm or both arms above their head?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 189,
+      "question": "Is the person in the picture on the grass or on the gravel path?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 190,
+      "question": "Is the person in the picture on the grass or on the gravel path?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 191,
+      "question": "Is there a flower next to the Easter egg in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 192,
+      "question": "Is there a flower next to the Easter egg in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 193,
+      "question": "Are these vegetables placed on the floor or on the soil?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 194,
+      "question": "Are these vegetables placed on the floor or on the soil?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 195,
+      "question": "Are juice and all carrots on the same surface?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 196,
+      "question": "Are juice and all carrots on the same surface?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 197,
+      "question": "Is the person weighing themselves barefoot?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 198,
+      "question": "Is the person weighing themselves barefoot?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 199,
+      "question": "Which type of eggs are in the corner of the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "Based on the size and the speckled pattern of the shells, the eggs in the corner of the picture are quail eggs.\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 200,
+      "question": "Which type of eggs are in the corner of the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 201,
+      "question": "What are the words in the image:",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 202,
+      "question": "What are the words in the image:",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 203,
+      "question": "Are these oranges hanging on the tree?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 204,
+      "question": "Are these oranges hanging on the tree?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 205,
+      "question": "Is the coffee cup made of glass?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 206,
+      "question": "Is the coffee cup made of glass?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 207,
+      "question": "Is the bell pepper in the picture red or yellow?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 208,
+      "question": "Is the bell pepper in the picture red or yellow?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 209,
+      "question": "Is there an orange with leaves next to the cup?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 210,
+      "question": "Is there an orange with leaves next to the cup?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 211,
+      "question": "Is the heart-shaped object resting on the palm or being held by the fingers?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 212,
+      "question": "Is the heart-shaped object resting on the palm or being held by the fingers?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 213,
+      "question": "Does the snowman have arms made of branches?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 214,
+      "question": "Does the snowman have arms made of branches?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 215,
+      "question": "Are there black stripes on the roof of the car?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 216,
+      "question": "Are there black stripes on the roof of the car?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 217,
+      "question": "Is the knife laid flat or standing up?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 218,
+      "question": "Is the knife laid flat or standing up?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 219,
+      "question": "Is the person in the image running towards or away from the camera?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 220,
+      "question": "Is the person in the image running towards or away from the camera?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 221,
+      "question": "In the photo, is one of the man's hands blocked by the woman?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 222,
+      "question": "In the photo, is one of the man's hands blocked by the woman?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 223,
+      "question": "Is there a pomegranate in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 224,
+      "question": "Is there a pomegranate in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 225,
+      "question": "Are all the cups and bottles in the picture the same height?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 226,
+      "question": "Are all the cups and bottles in the picture the same height?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 227,
+      "question": "Does the person in the picture have something in their hand?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 228,
+      "question": "Does the person in the picture have something in their hand?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 229,
+      "question": "Do all the bottles in the picture face the same direction?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 230,
+      "question": "Do all the bottles in the picture face the same direction?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 231,
+      "question": "Are all easter eggs placed in a container (e.g nest, basket)?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 232,
+      "question": "Are all easter eggs placed in a container (e.g nest, basket)?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 233,
+      "question": "Is the sky in the background dark blue or light blue?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 234,
+      "question": "Is the sky in the background dark blue or light blue?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 235,
+      "question": "Do the individuals in the picture face the front or the back?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 236,
+      "question": "Do the individuals in the picture face the front or the back?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 237,
+      "question": "Is the ground completely covered by red fallen leaves?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 238,
+      "question": "Is the ground completely covered by red fallen leaves?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 239,
+      "question": "Are the leather shoes placed side by side or is one on top of the other?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 240,
+      "question": "Are the leather shoes placed side by side or is one on top of the other?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 241,
+      "question": "Is the photo taken directly above the coffee or from the side?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 242,
+      "question": "Is the photo taken directly above the coffee or from the side?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 243,
+      "question": "Is the rabbit in the image facing left or right?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 244,
+      "question": "Is the rabbit in the image facing left or right?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 245,
+      "question": "Is the elderly person in the picture standing or sitting?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 246,
+      "question": "Is the elderly person in the picture standing or sitting?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 247,
+      "question": "Are there any fruits or vegetables in the heart-shaped part of the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 248,
+      "question": "Are there any fruits or vegetables in the heart-shaped part of the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 249,
+      "question": "Is the very top of the cake strawberries or cream?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 250,
+      "question": "Is the very top of the cake strawberries or cream?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 251,
+      "question": "Is the beverage in the picture contained in a mug or a glass?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 252,
+      "question": "Is the beverage in the picture contained in a mug or a glass?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 253,
+      "question": "Is the design in the picture Santa Claus or a snowman?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 254,
+      "question": "Is the design in the picture Santa Claus or a snowman?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 255,
+      "question": "Are there cookies stacked on top of other cookies?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 256,
+      "question": "Are there cookies stacked on top of other cookies?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 257,
+      "question": "Is there a lemon inside the drink in the cup or are all the lemons outside the drink?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 258,
+      "question": "Is there a lemon inside the drink in the cup or are all the lemons outside the drink?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 259,
+      "question": "In the picture, are the elderly people moving to the left or to the right?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 260,
+      "question": "In the picture, are the elderly people moving to the left or to the right?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 261,
+      "question": "Is the person in the picture sitting on a black or white chair?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 262,
+      "question": "Is the person in the picture sitting on a black or white chair?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 263,
+      "question": "Is it a slice of cake or a whole cake in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 264,
+      "question": "Is it a slice of cake or a whole cake in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 265,
+      "question": "Is the shoe in the image tied or untied?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 266,
+      "question": "Is the shoe in the image tied or untied?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 267,
+      "question": "Is the child in the picture facing forward or in profile?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 268,
+      "question": "Is the child in the picture facing forward or in profile?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 269,
+      "question": "Is the wall behind the bed empty or is there a painting hanging on it?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 270,
+      "question": "Is the wall behind the bed empty or is there a painting hanging on it?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 271,
+      "question": "Is the male in the picture wearing a shirt or a T-shirt?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 272,
+      "question": "Is the male in the picture wearing a shirt or a T-shirt?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 273,
+      "question": "What pattern is in the picture?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 274,
+      "question": "What pattern is in the picture?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 275,
+      "question": "How many trees are the treehouse built on?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 276,
+      "question": "How many trees are the treehouse built on?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 277,
+      "question": "What are all the letter in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 278,
+      "question": "What are all the letter in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 279,
+      "question": "Is the elderly person standing or sitting in the picture?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 280,
+      "question": "Is the elderly person standing or sitting in the picture?",
+      "gt": "(b)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": false
+    },
+    {
+      "index": 281,
+      "question": "Are there drinks on the table?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 282,
+      "question": "Are there drinks on the table?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 283,
+      "question": "In the image, is it a salmon fillet or a salmon steak?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 284,
+      "question": "In the image, is it a salmon fillet or a salmon steak?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 285,
+      "question": "Do you see a yellow towel in the image?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 286,
+      "question": "Do you see a yellow towel in the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 287,
+      "question": "Is the cup placed on a surface or being held by hand?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 288,
+      "question": "Is the cup placed on a surface or being held by hand?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 289,
+      "question": "Is the following statement correct: There are different colors of grapes in the image.",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "The image shows green grapes in the center and dark purple/black grapes on the right side. Therefore, there are different colors of grapes present.\n\n(a)",
+      "correct": true
+    },
+    {
+      "index": 290,
+      "question": "Is the following statement correct: There are different colors of grapes in the image.",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 291,
+      "question": "Is the minion in the image smiling with its tongue out?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 292,
+      "question": "Is the minion in the image smiling with its tongue out?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 293,
+      "question": "Is the sports car in the picture facing left or right?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 294,
+      "question": "Is the sports car in the picture facing left or right?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 295,
+      "question": "Is the edge of the heart in the picture white or dark-colored?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 296,
+      "question": "Is the edge of the heart in the picture white or dark-colored?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 297,
+      "question": "Are there patterns on the easter eggs?",
+      "gt": "(a)",
+      "pred": "(a)",
+      "raw": "(a)",
+      "correct": true
+    },
+    {
+      "index": 298,
+      "question": "Are there patterns on the easter eggs?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    },
+    {
+      "index": 299,
+      "question": "How would you describe the background of the image?",
+      "gt": "(a)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": false
+    },
+    {
+      "index": 300,
+      "question": "How would you describe the background of the image?",
+      "gt": "(b)",
+      "pred": "(b)",
+      "raw": "(b)",
+      "correct": true
+    }
+  ]
+}
