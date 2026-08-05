@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "aerial-airport",
+    "ordering": "STI",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 7.378141590381877,
+    "mAP50": 23.11839694792043,
+    "mAP75": 2.133963396339634,
+    "classes": [
+      "airplane"
+    ],
+    "n_images": 34,
+    "n_dets": 366,
+    "complete": true
+  }
+}
