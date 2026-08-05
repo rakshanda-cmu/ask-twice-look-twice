@@ -140,10 +140,20 @@ class HFChatEngine:
             out.append({"role": msg["role"], "content": content})
         return out
 
-    def chat(self, convs, sp, use_tqdm=False):
+    def chat(self, convs, sp, use_tqdm=False, log_every=25):
+        # log_every: this repo's run_order()/run_dataset() functions all call
+        # llm.chat() ONCE with the full item list, then print their own
+        # progress in a loop that only starts once chat() *returns* -- fine
+        # for vLLM's batched engine (fast enough that the wait is short), but
+        # this shim generates one item at a time, so without printing here a
+        # multi-hour benchmark stage would show zero output until it's fully
+        # done. Confirmed via a live run: BLINK (793 items) ran 90+ minutes
+        # completely silent before this was added.
+        import time
         import torch
         results = []
-        for conv in convs:
+        t0 = time.time()
+        for i, conv in enumerate(convs):
             messages = self._to_hf_messages(conv)
             inputs = self.processor.apply_chat_template(
                 messages, add_generation_prompt=True, tokenize=True,
@@ -156,6 +166,11 @@ class HFChatEngine:
             text = self.processor.tokenizer.decode(
                 out_ids[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
             results.append(_HFOut(text))
+            if (i + 1) % log_every == 0 or (i + 1) == len(convs):
+                dt = time.time() - t0
+                rate = (i + 1) / dt if dt > 0 else 0.0
+                print(f"    [local_hf] {i + 1}/{len(convs)} "
+                      f"({rate:.2f} items/s, {dt:.0f}s elapsed)", flush=True)
         return results
 
 
