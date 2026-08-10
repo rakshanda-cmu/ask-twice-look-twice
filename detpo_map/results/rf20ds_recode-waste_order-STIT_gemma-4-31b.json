@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "recode-waste",
+    "ordering": "STIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 19.33629093862944,
+    "mAP50": 27.01507789326384,
+    "mAP75": 21.445027659820944,
+    "classes": [
+      "aggregate",
+      "cardboard",
+      "hard plastic",
+      "metal",
+      "soft plastic",
+      "timber"
+    ],
+    "n_images": 251,
+    "n_dets": 3823,
+    "complete": true
+  }
+}

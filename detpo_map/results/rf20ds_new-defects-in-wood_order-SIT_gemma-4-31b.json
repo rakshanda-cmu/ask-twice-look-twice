@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "new-defects-in-wood",
+    "ordering": "SIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 4.979691046972688,
+    "mAP50": 14.660935283268334,
+    "mAP75": 1.6737316050283748,
+    "classes": [
+      "Crack",
+      "Dead knot",
+      "Holes",
+      "Live knot",
+      "knot with crack"
+    ],
+    "n_images": 128,
+    "n_dets": 242,
+    "complete": true
+  }
+}

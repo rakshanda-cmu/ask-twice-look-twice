@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "orionproducts",
+    "ordering": "SIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 8.880330108126307,
+    "mAP50": 20.07580471595262,
+    "mAP75": 6.069300111619558,
+    "classes": [
+      "Candy Boom",
+      "Chocopie Dark",
+      "Chocopie Nor",
+      "Marine Boy",
+      "OStar Red",
+      "OStar Yellow",
+      "Swing Maxx",
+      "Swing Nor"
+    ],
+    "n_images": 59,
+    "n_dets": 331,
+    "complete": true
+  }
+}

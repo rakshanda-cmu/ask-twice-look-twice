@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "trail-camera",
+    "ordering": "SITIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 49.334949523890124,
+    "mAP50": 87.5161010457731,
+    "mAP75": 47.91423033224652,
+    "classes": [
+      "Deer",
+      "Hog"
+    ],
+    "n_images": 132,
+    "n_dets": 225,
+    "complete": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "defect-detection",
+    "ordering": "STIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 11.637796756662691,
+    "mAP50": 22.77045651507991,
+    "mAP75": 10.793562838970255,
+    "classes": [
+      "defective fishplate",
+      "fastener",
+      "missing fastener",
+      "non defective fishplate"
+    ],
+    "n_images": 188,
+    "n_dets": 768,
+    "complete": true
+  }
+}

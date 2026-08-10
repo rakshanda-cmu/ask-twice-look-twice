@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "flir-camera-objects",
+    "ordering": "STIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 16.342972303639026,
+    "mAP50": 43.41275757966424,
+    "mAP75": 8.621034252262149,
+    "classes": [
+      "bicycle",
+      "car",
+      "dog",
+      "person"
+    ],
+    "n_images": 500,
+    "n_dets": 2180,
+    "complete": true
+  }
+}

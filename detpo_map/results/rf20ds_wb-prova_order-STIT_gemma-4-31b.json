@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "wb-prova",
+    "ordering": "STIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 24.923048792704186,
+    "mAP50": 34.02390838279298,
+    "mAP75": 28.099767294486732,
+    "classes": [
+      "Adult",
+      "Juvenile",
+      "Piglet"
+    ],
+    "n_images": 146,
+    "n_dets": 223,
+    "complete": true
+  }
+}

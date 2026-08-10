@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "lacrosse-object-detection",
+    "ordering": "SIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 18.95950523952354,
+    "mAP50": 42.83960416905212,
+    "mAP75": 13.094568995328595,
+    "classes": [
+      "Goalie",
+      "Longpole",
+      "Referee",
+      "Shortstick"
+    ],
+    "n_images": 50,
+    "n_dets": 336,
+    "complete": true
+  }
+}

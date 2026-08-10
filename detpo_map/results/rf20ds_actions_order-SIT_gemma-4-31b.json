@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "actions",
+    "ordering": "SIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 3.664148650884542,
+    "mAP50": 8.970038962642048,
+    "mAP75": 2.3004353707037457,
+    "classes": [
+      "Attack",
+      "Block",
+      "Defense",
+      "Serve",
+      "Set",
+      "ball"
+    ],
+    "n_images": 409,
+    "n_dets": 1140,
+    "complete": true
+  }
+}

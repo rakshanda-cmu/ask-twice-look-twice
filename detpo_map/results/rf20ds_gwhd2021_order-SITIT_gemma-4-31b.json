@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "gwhd2021",
+    "ordering": "SITIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 4.646380722745231,
+    "mAP50": 15.950875590975564,
+    "mAP75": 1.3539541524174612,
+    "classes": [
+      "Wheat Head"
+    ],
+    "n_images": 500,
+    "n_dets": 8782,
+    "complete": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "all-elements",
+    "ordering": "STIT",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 9.956406269305019,
+    "mAP50": 21.608522252871253,
+    "mAP75": 7.79211335708719,
+    "classes": [
+      "Button",
+      "Check box",
+      "Checked Radio button",
+      "Checked box",
+      "Dropdown box",
+      "Dropdown expand",
+      "Icon",
+      "Radio button",
+      "Scroll bar",
+      "Text box"
+    ],
+    "n_images": 70,
+    "n_dets": 640,
+    "complete": true
+  }
+}
