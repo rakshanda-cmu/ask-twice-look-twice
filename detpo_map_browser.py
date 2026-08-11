@@ -163,6 +163,7 @@ def _rf20_section():
     models_present = [m for m in MODELS if m in mp]
     cat_ds = {c: [d for d in RF20_CATS if RF20_CATS[d] == c] for c in CAT_ORDER}
     all_mean_by_model = {}
+    coverage_by_model = {}
 
     for model in models_present:
         mp_m = mp[model]
@@ -175,21 +176,38 @@ def _rf20_section():
         st.caption("Coverage: " + cov + ".")
 
         st.markdown("**By super-category — mean mAP** (paper layout)")
+        st.caption(
+            "Cells show **n/N** whenever a category or the All-mean is averaged "
+            "over fewer than the full dataset count for that ordering (e.g. a "
+            "still-running sweep) -- an incomplete-coverage mean is NOT "
+            "comparable to a complete one, so it's never shown as a bare number."
+        )
         rows = []
         for o in present_ord:
             row = {"Ordering": o, "What": ORDER_DESC.get(o, "")}
             allvals = []
             for c in CAT_ORDER:
                 vals = [mp_m[o].get(d) for d in cat_ds[c]]
-                row[c] = _fmt(_mean(vals))
-                allvals += [v for v in vals if v is not None]
-            row["All"] = _fmt(_mean(allvals))
+                present = [v for v in vals if v is not None]
+                cell = _fmt(_mean(present))
+                if present and len(present) < len(vals):
+                    cell += f" ({len(present)}/{len(vals)})"
+                row[c] = cell
+                allvals += present
+            n_total = len(RF20_CATS)
+            all_cell = _fmt(_mean(allvals))
+            if allvals and len(allvals) < n_total:
+                all_cell += f" ({len(allvals)}/{n_total})"
+            row["All"] = all_cell
             rows.append(row)
         st.dataframe(pd.DataFrame(rows).astype(str), hide_index=True,
                      use_container_width=True)
         by = {o: _mean([mp_m[o].get(d) for d in RF20_CATS]) for o in present_ord}
+        cov_o = {o: (sum(1 for d in RF20_CATS if mp_m[o].get(d) is not None),
+                    len(RF20_CATS)) for o in present_ord}
         all_mean_by_model[model] = by
-        _delta_caption(by, "mAP (All-mean)")
+        coverage_by_model[model] = cov_o
+        _delta_caption(by, "mAP (All-mean)", coverage=cov_o)
 
         with st.expander(f"Per-dataset mAP breakdown — {_model_label(model)} "
                          "(20 datasets × orderings)"):
@@ -211,7 +229,11 @@ def _rf20_section():
         for o in active:
             row = {"Ordering": o, "What": ORDER_DESC.get(o, "")}
             for model in models_present:
-                row[_model_label(model)] = _fmt(all_mean_by_model[model].get(o))
+                cell = _fmt(all_mean_by_model[model].get(o))
+                cov = coverage_by_model[model].get(o)
+                if cov and cov[0] < cov[1]:
+                    cell += f" ({cov[0]}/{cov[1]})"
+                row[_model_label(model)] = cell
             if any(all_mean_by_model[m].get(o) is not None for m in models_present):
                 comp_rows.append(row)
         st.dataframe(pd.DataFrame(comp_rows).astype(str), hide_index=True,
@@ -240,11 +262,21 @@ def _rf20_section():
                + RF20_RUN + "`")
 
 
-def _delta_caption(by, unit):
-    """by: {ordering_tag: display_value}. State the ordering effect vs STI."""
+def _delta_caption(by, unit, coverage=None):
+    """by: {ordering_tag: display_value}. coverage: optional {tag: (n, total)} --
+    flags a delta term with "(n/total)" when that ordering's mean was averaged
+    over fewer than the full dataset/item count, so a still-partial mean is never
+    silently presented as equivalent to a complete one. State the ordering
+    effect vs STI."""
     if by.get("STI") is not None:
-        parts = [f"{t} {by[t]-by['STI']:+.1f}" for t in ("SIT", "STIT", "SITIT",
-                 "STITI", "SITIT_rev") if by.get(t) is not None]
+        def _term(t):
+            d = f"{by[t]-by['STI']:+.1f}"
+            if coverage and coverage.get(t) and coverage[t][0] < coverage[t][1]:
+                n, total = coverage[t]
+                d += f" ({n}/{total})"
+            return f"{t} {d}"
+        parts = [_term(t) for t in ("SIT", "STIT", "SITIT", "STITI", "SITIT_rev")
+                if by.get(t) is not None]
         if parts:
             st.caption(f"8B ordering Δ vs STI (question-first), {unit}: "
                        + " · ".join(parts) + f"  (STI = {by['STI']:.1f}).")
