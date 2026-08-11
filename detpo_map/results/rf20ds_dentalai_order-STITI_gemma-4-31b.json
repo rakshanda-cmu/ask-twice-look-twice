@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "dentalai",
+    "ordering": "STITI",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 1.4086239939620577,
+    "mAP50": 4.279029876671879,
+    "mAP75": 0.505524662595261,
+    "classes": [
+      "Cavity",
+      "Fillings",
+      "Impacted Tooth",
+      "Implant"
+    ],
+    "n_images": 128,
+    "n_dets": 413,
+    "complete": true
+  }
+}
