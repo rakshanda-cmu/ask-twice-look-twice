@@ -163,10 +163,18 @@ def _build_qwen_messages(system_text, task_text, pil_image, order, image_copies=
     'STIT'): lets the post-image repeat be a short cue instead of the full
     question, to test whether the question *content* (not just a post-image
     prompt) drives the STIT gain.
+
+    pil_image is normally a single PIL.Image, reused at every 'I' occurrence.
+    It may also be a list/tuple of PIL.Image — one per 'I' occurrence in
+    `order` (e.g. [full_res, half_res] for an SITIT echo-resolution ablation).
+    If `order` has more 'I's than the list has entries, the last entry is
+    reused for the extra occurrences.
     """
     order = _parse_order(order)
+    per_occurrence = isinstance(pil_image, (list, tuple))
     content = []
     t_seen = 0
+    i_seen = 0
     for c in order:
         if c == "S" and system_text:
             content.append({"type": "text", "text": system_text})
@@ -175,8 +183,13 @@ def _build_qwen_messages(system_text, task_text, pil_image, order, image_copies=
             txt = task_text if (t_seen == 1 or task2_text is None) else task2_text
             content.append({"type": "text", "text": txt})
         elif c == "I":
+            if per_occurrence:
+                img = pil_image[min(i_seen, len(pil_image) - 1)]
+                i_seen += 1
+            else:
+                img = pil_image
             for _ in range(max(1, int(image_copies))):
-                content.append({"type": "image", "image": pil_image})
+                content.append({"type": "image", "image": img})
     return [{"role": "user", "content": content}]
 
 

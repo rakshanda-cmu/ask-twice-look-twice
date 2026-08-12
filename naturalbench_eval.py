@@ -222,7 +222,8 @@ def _full_tag(order, n_spaces, tag_suffix=""):
 
 def _build_meta(model_manager, order, system_prompt, max_tokens, n_spaces,
                 records, tag_suffix="", resize=None, resize_mode="exact",
-                image_copies=1, cue_mode=False, think=False):
+                image_copies=1, cue_mode=False, think=False,
+                echo_scale=None, echo_which=None):
     return {
         "model": model_manager.model_name,
         "order": order,
@@ -233,6 +234,8 @@ def _build_meta(model_manager, order, system_prompt, max_tokens, n_spaces,
         "image_copies": int(image_copies),
         "cue_mode": bool(cue_mode),
         "think": bool(think),
+        "echo_scale": echo_scale,
+        "echo_which": echo_which,
         "system_prompt": system_prompt,
         "max_tokens": max_tokens,
         **aggregate_metrics(records),
@@ -244,7 +247,7 @@ def run_experiment(model_manager, groups, order, system_prompt,
                    progress_cb=None, log_every=10,
                    n_spaces=0, out_dir=None, checkpoint_every=50,
                    resize=None, resize_mode="exact", tag_suffix="", image_copies=1,
-                   cue_mode=False, think=False):
+                   cue_mode=False, think=False, echo_scale=None, echo_which=None):
     """
     Evaluate `groups` under one prompt `order` (e.g. 'IST' or 'STI').
 
@@ -253,6 +256,12 @@ def run_experiment(model_manager, groups, order, system_prompt,
     resize=(w, h) resizes every image to that fixed size before the model (e.g.
     the dataset mean resolution, to control vision-token count); tag_suffix names
     the output files (e.g. 'meanres').
+
+    echo_scale/echo_which: for orders with TWO 'I' occurrences (e.g. 'SITIT'),
+    scales ONE of the two image occurrences by `echo_scale` (e.g. 0.5) while
+    leaving the other at full resolution — echo_which='first' scales the FIRST
+    occurrence, 'second' scales the SECOND (echoed) occurrence. Requires
+    order.count('I') == 2.
 
     If out_dir is given, the results file is checkpointed every
     `checkpoint_every` groups and the run RESUMES by skipping groups already
@@ -266,6 +275,13 @@ def run_experiment(model_manager, groups, order, system_prompt,
 
     is_qwen = model_manager.model_name in (QWEN_MODELS + INTERNVL_MODELS)
     tag = _full_tag(order, n_spaces, tag_suffix)
+
+    if echo_scale is not None:
+        assert order.count("I") == 2, (
+            f"echo_scale requires an order with exactly 2 'I' occurrences, got "
+            f"order={order!r} ({order.count('I')} I's)")
+        assert echo_which in ("first", "second"), \
+            f"echo_which must be 'first' or 'second', got {echo_which!r}"
 
     records, done, results_path = [], set(), None
     if out_dir:
@@ -283,7 +299,8 @@ def run_experiment(model_manager, groups, order, system_prompt,
         if results_path:
             meta = _build_meta(model_manager, order, system_prompt,
                                max_tokens, n_spaces, records,
-                               tag_suffix=tag_suffix, resize=resize, resize_mode=resize_mode, image_copies=image_copies, cue_mode=cue_mode, think=think)
+                               tag_suffix=tag_suffix, resize=resize, resize_mode=resize_mode, image_copies=image_copies, cue_mode=cue_mode, think=think,
+                               echo_scale=echo_scale, echo_which=echo_which)
             write_experiment_outputs(meta, records, out_dir)
 
     n = len(groups)
@@ -321,14 +338,25 @@ def run_experiment(model_manager, groups, order, system_prompt,
             # after the image, NOT the question content.
             task2 = answer_suffix(qtype).strip() if cue_mode else None
 
+            if echo_scale is not None:
+                base_img = imgs[img_i]
+                w, h = base_img.size
+                scaled_img = base_img.resize(
+                    (max(1, round(w * echo_scale)), max(1, round(h * echo_scale))),
+                    Image.LANCZOS)
+                img_arg = ([scaled_img, base_img] if echo_which == "first"
+                          else [base_img, scaled_img])
+            else:
+                img_arg = imgs[img_i]
+
             if n_spaces and n_spaces > 0:
                 _, input_ids, kwargs = model_manager.prepare_inputs_with_spaces(
-                    [prompt], imgs[img_i], system_prompt=system_prompt,
+                    [prompt], img_arg, system_prompt=system_prompt,
                     order=order, n_spaces=n_spaces,
                 )
             else:
                 _, input_ids, kwargs = model_manager.prepare_inputs_from_pil(
-                    [prompt], imgs[img_i], system_prompt=system_prompt, order=order,
+                    [prompt], img_arg, system_prompt=system_prompt, order=order,
                     image_copies=image_copies, task2_text=task2,
                     enable_thinking=think,
                 )
@@ -390,7 +418,8 @@ def run_experiment(model_manager, groups, order, system_prompt,
 
     meta = _build_meta(model_manager, order, system_prompt,
                        max_tokens, n_spaces, records,
-                       tag_suffix=tag_suffix, resize=resize, resize_mode=resize_mode, image_copies=image_copies, cue_mode=cue_mode, think=think)
+                       tag_suffix=tag_suffix, resize=resize, resize_mode=resize_mode, image_copies=image_copies, cue_mode=cue_mode, think=think,
+                       echo_scale=echo_scale, echo_which=echo_which)
     if results_path:
         _checkpoint()
     return meta, records
@@ -463,6 +492,15 @@ def main():
                          "'think' and bumps max-tokens to 512.")
     ap.add_argument("--tag-suffix", default="", dest="tag_suffix",
                     help="Suffix for output filenames/labels, e.g. 'meanres'.")
+    ap.add_argument("--echo-scale", type=float, default=None, dest="echo_scale",
+                    help="Scale ONE of the two image occurrences (e.g. 0.5 for "
+                         "half res) in a 2-image order like SITIT; requires "
+                         "--echo-which. Auto-tags 'echo1half'/'echo2half'.")
+    ap.add_argument("--echo-which", default=None, dest="echo_which",
+                    choices=["first", "second"],
+                    help="Which image occurrence --echo-scale applies to: "
+                         "'first' (1st occurrence scaled, 2nd full-res) or "
+                         "'second' (1st full-res, 2nd/echoed occurrence scaled).")
     args = ap.parse_args()
 
     resize = None
@@ -475,6 +513,13 @@ def main():
         args.tag_suffix = f"copies{args.image_copies}"
     if args.cue_mode and not args.tag_suffix:
         args.tag_suffix = "cue"
+    if args.echo_scale is not None:
+        if not args.echo_which:
+            ap.error("--echo-scale requires --echo-which {first,second}")
+        if not args.tag_suffix:
+            frac = "half" if args.echo_scale == 0.5 else f"{args.echo_scale:g}x"
+            occ = "1" if args.echo_which == "first" else "2"
+            args.tag_suffix = f"echo{occ}{frac}"
     if args.think:
         if not args.tag_suffix:
             args.tag_suffix = "think"
@@ -510,7 +555,7 @@ def main():
             checkpoint_every=args.checkpoint_every,
             resize=resize, resize_mode=args.resize_mode, tag_suffix=args.tag_suffix,
             image_copies=args.image_copies, cue_mode=args.cue_mode,
-            think=args.think,
+            think=args.think, echo_scale=args.echo_scale, echo_which=args.echo_which,
         )
         paths = write_experiment_outputs(meta, records, args.out_dir)
         print(json.dumps(meta, indent=2))

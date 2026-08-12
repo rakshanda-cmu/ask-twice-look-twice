@@ -423,6 +423,46 @@ def _render_resolution_table(model):
         st.caption("Mean-res vs full-res, Group-Acc — " + " · ".join(mr))
 
 
+def _render_echo_resolution_table(model):
+    """Separate table: SITIT echo-resolution ablation — which image occurrence
+    (1st vs 2nd/echoed) matters more when it's shown at half resolution."""
+    COLS = [("SITIT", "SITIT (both full-res)"),
+            ("SITIT_echo1half", "SITIT (1st half-res, 2nd full-res)"),
+            ("SITIT_echo2half", "SITIT (1st full-res, 2nd half-res)")]
+    comp, metas = {}, {}
+    for tag, label in COLS:
+        p = _results_path(model, tag)
+        if os.path.exists(p):
+            meta = _load_results(p, os.path.getmtime(p))["meta"]
+            metas[tag] = meta
+            comp[label] = _metric_row(meta)
+
+    if "SITIT_echo1half" not in metas and "SITIT_echo2half" not in metas:
+        return  # nothing to show yet
+
+    st.markdown("---")
+    st.markdown("#### 🖼️½ SITIT echo-resolution ablation")
+    st.caption(
+        "SITIT shows the image twice (S·I·T·I·T). Here ONE of the two "
+        "occurrences is downscaled to half width/height while the other stays "
+        "full-res, isolating which occurrence — the first viewing or the "
+        "post-task echo — carries more of the group-accuracy benefit."
+    )
+    st.table(comp)
+
+    mr = []
+    if "SITIT" in metas and "SITIT_echo1half" in metas:
+        dd = (metas["SITIT_echo1half"]["g_acc"] - metas["SITIT"]["g_acc"]) * 100
+        arrow = "▲" if dd > 0 else ("▼" if dd < 0 else "▬")
+        mr.append(f"1st-half {arrow} **{dd:+.1f} pts**")
+    if "SITIT" in metas and "SITIT_echo2half" in metas:
+        dd = (metas["SITIT_echo2half"]["g_acc"] - metas["SITIT"]["g_acc"]) * 100
+        arrow = "▲" if dd > 0 else ("▼" if dd < 0 else "▬")
+        mr.append(f"2nd-half {arrow} **{dd:+.1f} pts**")
+    if mr:
+        st.caption("vs full-res SITIT, Group-Acc — " + " · ".join(mr))
+
+
 def _render_imagecopies_table(model):
     """Separate table: image-copy distance sweep (N=1,2,3) for IST and STI."""
     COLS = [("IST", "IST ×1"), ("IST_copies2", "IST ×2"), ("IST_copies3", "IST ×3"),
@@ -487,6 +527,8 @@ def _results_section():
         ("STITI", "STITI"), ("STITI_rev", "STITI-rev (bidir)"), ("STITIT", "STITIT"),
         ("STSIT", "STSIT"), ("STIST", "STIST"), ("SITI", "SITI"), ("SITIT", "SITIT"),
         ("SITIT_rev", "SITIT-rev (S·I·T·Ī·T)"),
+        ("SITT", "SITT"),
+        ("SITIT_echo1half", "SITIT (1st½)"), ("SITIT_echo2half", "SITIT (2nd½)"),
         ("IST_think", "IST +think"), ("STIT_think", "STIT +think"),
         ("IST_copies2", "IST ×2img"), ("IST_copies3", "IST ×3img"),
         ("STI_copies2", "STI ×2img"), ("STI_copies3", "STI ×3img"),
@@ -596,8 +638,25 @@ def _results_section():
             + ". If StIT ≈ STIT, the pre-image text need not be the question — a generic "
             "instruction suffices as long as the question comes after the image.")
 
+    # SITT: System · Image · Task · Task — image shown once, task stated twice
+    # (no image echo — isolates whether repeating the TASK alone, without a
+    # 2nd image occurrence, recovers STI, vs STIT which repeats task+image).
+    if "SITT" in metas:
+        g = metas["SITT"]["g_acc"] * 100
+        parts = []
+        for ref in ("STIT", "SIT", "STI", "IST"):
+            if ref in metas:
+                parts.append(f"vs {ref} **{g - metas[ref]['g_acc']*100:+.1f}**")
+        st.caption(
+            f"**SITT** (System·Image·Task·Task — image shown once, question "
+            f"repeated twice with *no* 2nd image occurrence): Group-Acc "
+            f"**{g:.1f}%**" + (" — " + " · ".join(parts) if parts else "")
+            + ". If SITT ≈ STIT, repeating the task alone (no image echo) is "
+            "enough for the recovery.")
+
     # ── separate tables: resolution control + image-copy distance sweep ─────────
     _render_resolution_table(model)
+    _render_echo_resolution_table(model)
     _render_imagecopies_table(model)
 
     # ── per-experiment + cross-experiment browsers ─────────────────────────────
