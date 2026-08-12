@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "benchmark": "RF20-VL",
+    "dataset": "water-meter",
+    "ordering": "STITI",
+    "model": "gemma-4-31b",
+    "engine": "local_hf",
+    "prompting": "multi-class",
+    "mAP": 26.132375788805845,
+    "mAP50": 67.72606791975673,
+    "mAP75": 11.033714631846648,
+    "classes": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "n_images": 70,
+    "n_dets": 798,
+    "complete": true
+  }
+}
