@@ -1,0 +1,4576 @@
+{
+  "meta": {
+    "benchmark": "WorldMedQA-V",
+    "ordering": "SITIT",
+    "model": "qwen3-vl-8b",
+    "engine": "vllm",
+    "n": 568,
+    "accuracy": 0.5721830985915493,
+    "by_country": {
+      "brazil": {
+        "n": 89,
+        "accuracy": 0.5842696629213483
+      },
+      "israel": {
+        "n": 186,
+        "accuracy": 0.44086021505376344
+      },
+      "japan": {
+        "n": 168,
+        "accuracy": 0.6785714285714286
+      },
+      "spain": {
+        "n": 125,
+        "accuracy": 0.616
+      }
+    },
+    "runtime_s": 103.41042971611023,
+    "complete": true
+  },
+  "results": [
+    {
+      "index": 1,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) ventricular fibrillation, which may be responsive to defibrillation (shock in synchronized mode).",
+      "correct": false
+    },
+    {
+      "index": 2,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Paracoccidioidomycosis and itraconazole.",
+      "correct": true
+    },
+    {
+      "index": 3,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Multifocal atrial tachycardia and calcium channel blockers.",
+      "correct": true
+    },
+    {
+      "index": 4,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Paracoccidioidomycosis and scraping of the lesion.",
+      "correct": false
+    },
+    {
+      "index": 5,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) In situ antigen-antibody reaction along the glomerular basement membrane.",
+      "correct": true
+    },
+    {
+      "index": 6,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Secondary arrest of descent and cesarean section.",
+      "correct": true
+    },
+    {
+      "index": 7,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) left atrial hypertrophy.",
+      "correct": true
+    },
+    {
+      "index": 8,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) osteogenesis imperfecta.",
+      "correct": false
+    },
+    {
+      "index": 9,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Lung carcinoma.",
+      "correct": true
+    },
+    {
+      "index": 10,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Observe in the Coronary Care Unit and administer symptomatic medications until cardiac catheterization is performed.",
+      "correct": false
+    },
+    {
+      "index": 11,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Elective induction of labor with oxytocin.",
+      "correct": false
+    },
+    {
+      "index": 12,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Secondary descent stop; cesarean section due to cephalopelvic disproportion.",
+      "correct": false
+    },
+    {
+      "index": 13,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "index": 14,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) hypothyroidism and delayed bone age.",
+      "correct": false
+    },
+    {
+      "index": 15,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) inferior wall ST elevation myocardial infarction; right ventricular infarction; hydration with saline solution.",
+      "correct": true
+    },
+    {
+      "index": 17,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) the patient must receive digoxin for heart rate control and low molecular weight heparin for anticoagulation.",
+      "correct": true
+    },
+    {
+      "index": 18,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) stop smoking and observe.",
+      "correct": false
+    },
+    {
+      "index": 19,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Community Health Agents.",
+      "correct": true
+    },
+    {
+      "index": 20,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) pH 7.34; PaCO2 45 mmHg; PaO2 57 mmHg; HCO3 26 mEq/L",
+      "correct": false
+    },
+    {
+      "index": 21,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) secondary stop of dilation; administer oxytocin.",
+      "correct": false
+    },
+    {
+      "index": 22,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) varicella; outpatient monitoring and prescription of symptomatic drugs.",
+      "correct": true
+    },
+    {
+      "index": 23,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Clopidogrel",
+      "correct": false
+    },
+    {
+      "index": 24,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) use of combined hormonal contraception.",
+      "correct": false
+    },
+    {
+      "index": 25,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Severe pre-eclampsia; hospitalization to resolve the pregnancy by induction of labor or cesarean section",
+      "correct": false
+    },
+    {
+      "index": 26,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) intravenous or intramuscular ceftriaxone + oral azithromycin.",
+      "correct": false
+    },
+    {
+      "index": 27,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Suspicious pattern; labor assistance with continuous monitoring of fetal heart rate.",
+      "correct": true
+    },
+    {
+      "index": 28,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) chest x-ray: bulging of the pulmonary artery trunk and reduction of the peripheral pulmonary vascular network; ECG: right bundle branch block, cardiac axis deviation to the right and strain-type ventricular repolarization pattern.",
+      "correct": true
+    },
+    {
+      "index": 29,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Trichomonas vaginalis.",
+      "correct": true
+    },
+    {
+      "index": 30,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) liver abscess; The patient should be referred for abscess drainage as quickly as possible.",
+      "correct": true
+    },
+    {
+      "index": 31,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) culture of secretion from the lesion.",
+      "correct": false
+    },
+    {
+      "index": 32,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) the removal of a segment of the nail with anesthesia of the region performed through digital block with lidocaine with vasoconstrictor.",
+      "correct": false
+    },
+    {
+      "index": 33,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Staphylococcus aureus; ceftriaxone associated with oxacillin.",
+      "correct": true
+    },
+    {
+      "index": 34,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Tuberculosis.",
+      "correct": false
+    },
+    {
+      "index": 35,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) secondary descent stop; cesarean birth.",
+      "correct": true
+    },
+    {
+      "index": 37,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Massive exposure, from a common source, short duration or explosive.",
+      "correct": true
+    },
+    {
+      "index": 38,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Determine hospitalization to start oxygen therapy due to signs of severity.",
+      "correct": true
+    },
+    {
+      "index": 39,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "index": 40,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Start treatment with antiretroviral medication (lamivudine + zidovudine + efavirenz), simultaneously with the structured antituberculosis regimen, with rifabutin, for 6 months.",
+      "correct": false
+    },
+    {
+      "index": 41,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Constitutional",
+      "correct": true
+    },
+    {
+      "index": 42,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D)",
+      "correct": true
+    },
+    {
+      "index": 43,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) use of ice on the site (up to 3 times a day for 30 minutes), non-steroidal anti-inflammatories and use of a splint for analgesic immobilization for 5 to 7 days.",
+      "correct": true
+    },
+    {
+      "index": 44,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Leptospirosis; potassium replacement and early peritoneal dialysis.",
+      "correct": true
+    },
+    {
+      "index": 45,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Clopidogrel, enoxaparin and enalapril.",
+      "correct": true
+    },
+    {
+      "index": 47,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Subdural hematoma.",
+      "correct": false
+    },
+    {
+      "index": 48,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) metoprolol intravenously.",
+      "correct": false
+    },
+    {
+      "index": 49,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) refer the patient to a specialized center for excisional biopsy and subsequent surgical completion according to the results of the histopathological examination.\n\nThe patient presents with a pigmented lesion on the dorsal region that has undergone recent changes (over 2 months), accompanied by symptoms of itching and occasional bleeding. These are red flags for potential malignant transformation, particularly melanoma. The patient\u2019s family history of melanoma (mother at age 45) further increases her risk. The lesion\u2019s appearance, while not perfectly clear from the image alone, shows asymmetry, irregular borders, and varied coloration (blue-green and brown), which are concerning features under the ABCDE criteria for melanoma.\n\nGiven these high-risk clinical features, the appropriate action is not to perform an excision at the UBS level (which may lack the necessary resources or expertise for complex melanoma management) nor to reassure the patient without biopsy. Delaying intervention (option D) is inappropriate given the symptoms and risk factors. While option A might seem reasonable, excisional biopsy under local anesthesia at a UBS is not standard practice for suspected melanoma, especially when the lesion is large or suspicious, and referral to a specialized center ensures proper management, including appropriate surgical margins and multidisciplinary follow-up",
+      "correct": true
+    },
+    {
+      "index": 50,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) increasing incidence rates due to the low rate of adequate treatment for pregnant women during prenatal care, which reflects the maintenance of the vertical transmission chain of the disease.",
+      "correct": true
+    },
+    {
+      "index": 51,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Pancreatic head neoplasm; indicate surgery (gastroduodenopancreatectomy with resection of the superior mesenteric artery and primary anastomosis) and discuss prognosis with the patient.",
+      "correct": false
+    },
+    {
+      "index": 53,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) hemostasis instruments with the tip facing quadrants 1 or 2, facilitating their passage into the hands of surgeons.",
+      "correct": false
+    },
+    {
+      "index": 54,
+      "country": "brazil",
+      "gt": "C",
+      "pred": null,
+      "raw": "The question asks to identify which countries reached the MDG target (reducing TB incidence by 2015) and which had the highest percentage reduction, based on the graph data from 1990 to 2013.\n\nFirst, let's clarify the MDG target: The goal was to reduce the incidence rate by 2015. Since the data goes up to 2013, we assume the target was met if the rate in 2013 was significantly lower than in 1990, and we need to calculate the percentage reduction for each country.\n\nLet\u2019s examine each country\u2019s data:\n\n1.  **Brazil (blue line with stars):**\n    *   1990: 84\n    *   2013: 46\n    *   Reduction: 84 - 46 = 38\n    *   Percentage reduction: (38 / 84) * 100 \u2248 45.2%\n\n2.  **Portugal (orange line with circles):**\n    *   1990: 71\n    *   2013: 26",
+      "correct": false
+    },
+    {
+      "index": 55,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) normal course of labor.",
+      "correct": true
+    },
+    {
+      "index": 56,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) midgut volvulus.",
+      "correct": false
+    },
+    {
+      "index": 57,
+      "country": "brazil",
+      "gt": "A",
+      "pred": null,
+      "raw": "The electrocardiogram (ECG) shows a rapid, irregular rhythm with no discernible P waves and a rate of approximately 200 bpm, consistent with **atrial fibrillation (AFib) with rapid ventricular response**. The patient is hemodynamically unstable (hypotensive: 80/40 mmHg) and symptomatic (fainting, palpitations, dizziness), which indicates that she is experiencing **acute hemodynamic compromise due to AFib**.\n\nIn this scenario, the immediate priority is to **restore sinus rhythm** to alleviate symptoms and improve hemodynamic status. The standard of care for hemodynamically unstable patients with AFib is **immediate electrical cardioversion**.\n\nHowever, since the patient has a history of hypertension (controlled with diuretics) and is now presenting with a new episode of AFib, there is a significant risk of **thromboembolism**. Therefore, **anticoagulation** is required before cardioversion to prevent stroke. The ECG shows no signs of acute ischemia or structural heart disease, so the patient is likely to be a candidate for **oral anticoagulation** (e.g., warfarin or a direct oral anticoagulant)",
+      "correct": false
+    },
+    {
+      "index": 58,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Marked and refractory hyperkalemia.",
+      "correct": true
+    },
+    {
+      "index": 59,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D)",
+      "correct": true
+    },
+    {
+      "index": 60,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) fracture of the distal radius through the growth plate and metaphysis, sparing the epiphysis; closed local reduction, with plaster placement.",
+      "correct": true
+    },
+    {
+      "index": 61,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "M",
+      "raw": "To determine the boy\u2019s nutritional status, we need to calculate his Body Mass Index (BMI) and then compare it to the WHO growth reference curves provided in the chart.\n\n**Step 1: Calculate the BMI**\n\nThe formula for BMI is:\nBMI = weight (kg) / [height (m)]\u00b2\n\nGiven:\n- Weight = 37 kg\n- Height = 130 cm = 1.30 m\n\nBMI = 37 / (1.30)\u00b2 = 37 / 1.69 \u2248 **21.89 kg/m\u00b2**\n\n**Step 2: Locate the child\u2019s age on the chart**\n\nThe child is 8 years old. On the x-axis (Idade), we find the value \"8\".\n\n**Step 3: Find the BMI curve for age 8**\n\nAt age 8, we look at the curve corresponding to the child's BMI of approximately 21.89 kg/m\u00b2.\n\nLooking at the y-axis (IMC), we see that 21.89 kg/m\u00b2 falls between the curves for \"0\" and \"1\". The \"0\" curve represents the 50th percentile (normal weight), and the \"1",
+      "correct": false
+    },
+    {
+      "index": 62,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Ischemic stroke; contraindicate thrombolytic therapy.",
+      "correct": false
+    },
+    {
+      "index": 63,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) There is a large difference in mortality from COVID-19, being higher where the proportion of poorer people, which reinforces the social determination of health.",
+      "correct": true
+    },
+    {
+      "index": 64,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) serial clinical-laboratory control and non-operative treatment.",
+      "correct": false
+    },
+    {
+      "index": 65,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) hemothorax and water seal drainage in the fifth intercostal space.",
+      "correct": false
+    },
+    {
+      "index": 66,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Advise repeat ultrasound after menstruation.",
+      "correct": true
+    },
+    {
+      "index": 67,
+      "country": "brazil",
+      "gt": "A",
+      "pred": null,
+      "raw": "The patient is a 45-year-old woman presenting with asthenia, malaise, persistent dry cough, and bilateral cervical lymphadenopathy. The chest X-ray shows a mediastinal mass (note the widened mediastinum, particularly on the right side, with possible nodular or infiltrative appearance). The biopsy findings are highly specific: giant cells, multinucleated cells with an \u201cowl\u2019s eyes\u201d appearance, and nodular sclerosis subtype.\n\nThese histopathological features are diagnostic of **Hodgkin lymphoma**, specifically the nodular sclerosis subtype, which is the most common subtype in adults. The \u201cowl\u2019s eyes\u201d appearance refers to the characteristic Reed-Sternberg cells, which are large, multinucleated cells with prominent nucleoli that resemble owl eyes under the microscope.\n\nGiven the diagnosis of Hodgkin lymphoma, the appropriate next step is referral to a specialized cancer care network for comprehensive management, including staging, chemotherapy, radiation therapy, and long-term follow-up. In many healthcare systems, this would be managed through a **National Cancer Control Program** or **Cancer Care Network** (e.g., UNACON/CACON in some Latin American countries).\n\nWhile infectious diseases or thoracic surgery might be considered for other conditions, Hodg",
+      "correct": false
+    },
+    {
+      "index": 68,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) chronic hepatitis B; guide cessation of alcohol consumption.",
+      "correct": true
+    },
+    {
+      "index": 69,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "Let's analyze each option based on the provided bar charts.\n\n---\n\n**Option (A): Assaults and external causes of undetermined intent are responsible for at least 50% of deaths occurring in the age group of 15 to 29 years.**\n\n- In the \"15 a 29 anos\" chart, the bar for **AG (Agress\u00f5es)** is the tallest, at approximately 50%.\n- The bar for **ATR (Eventos com inten\u00e7\u00e3o indeterminada)** is the second tallest, at approximately 20%.\n- The total proportional mortality for these two causes is 50% + 20% = 70%, which is **more than 50%**.\n- However, the question asks if they are responsible for **at least 50%**. Since 70% > 50%, this statement is **true**.\n\n---\n\n**Option (B): In the age group of 60 years and over, proportional mortality from ischemic heart disease is lower than in the age group of 30 to 59 years.**\n\n- In the \"30 a 59 anos\" chart, **DIC (Doen\u00e7as Isqu\u00eam",
+      "correct": true
+    },
+    {
+      "index": 70,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) granulomas and rounded structures compatible with amastigote forms; N-methylglucamine.",
+      "correct": true
+    },
+    {
+      "index": 71,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) advanced myocardial infarction and catheterization.",
+      "correct": true
+    },
+    {
+      "index": 72,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) cephalic situation, longitudinal presentation, variety of occiput-right-posterior position.",
+      "correct": false
+    },
+    {
+      "index": 73,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) permanent pacemaker implantation.",
+      "correct": true
+    },
+    {
+      "index": 74,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Emergency exploratory laparotomy.",
+      "correct": false
+    },
+    {
+      "index": 75,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Staphylococcus aureus.",
+      "correct": true
+    },
+    {
+      "index": 76,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "A",
+      "raw": "Let's analyze each option based on the data in the two figures.\n\n**Figure 1: Hospitalizations**\n- White (Branca): 65.1%\n- Mixed (Parda): 26.9%\n- Black (Preta): 5.4%\n- Yellow (Amarela): 2.3%\n- Indigenous (Ind\u00edgena): 0.3%\n\n**Figure 2: Deaths**\n- White (Branca): 56.6%\n- Mixed (Parda): 34.6%\n- Black (Preta): 5.8%\n- Yellow (Amarela): 2.6%\n- Indigenous (Ind\u00edgena): 0.4%\n\n---\n\n**Option (A): There were more deaths of indigenous people than of people of yellow race/ethnicity.**\n- Indigenous deaths: 0.4%\n- Yellow deaths: 2.6%\n\u2192 0.4% < 2.6%, so this is **false**.\n\n---\n\n**Option (B): White people had better survival than people of other races/ethnicities combined.**\n- White deaths: 56.6%\n- Other races combined: 100% -",
+      "correct": false
+    },
+    {
+      "index": 77,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Low intestinal obstruction; colonic distension and competent ileocecal valve.",
+      "correct": true
+    },
+    {
+      "index": 78,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) flexed, occipital",
+      "correct": false
+    },
+    {
+      "index": 79,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) pneumothorax, requiring immediate intervention for drainage and decompression.",
+      "correct": true
+    },
+    {
+      "index": 80,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) understand that individuals and their individual characteristics of age, sex and hereditary factors are at the basis of the model, and individual lifestyles are situated on the threshold between individual factors and the DSS.",
+      "correct": true
+    },
+    {
+      "index": 81,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Cutaneous leishmaniasis; treatment with antimoniate N-methylglucamine.",
+      "correct": true
+    },
+    {
+      "index": 82,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Melanoma",
+      "correct": true
+    },
+    {
+      "index": 83,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) recognize the dynamics of family functioning, detecting dysfunctionalities and planning early interventions in the search for rebalancing this structure of relationships.",
+      "correct": true
+    },
+    {
+      "index": 84,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) accessibility and management, since underfunding and undermanagement can explain the long queues to access the system.",
+      "correct": true
+    },
+    {
+      "index": 85,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) transient tachypnea of \u200b\u200bthe newborn.",
+      "correct": true
+    },
+    {
+      "index": 86,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "A",
+      "raw": "The ECG tracing shows **ventricular fibrillation (VF)** \u2014 a chaotic, irregular waveform with no discernible P waves, QRS complexes, or T waves, indicating ineffective ventricular contraction. This is a life-threatening arrhythmia that requires immediate intervention.\n\nThe patient\u2019s clinical scenario is critical:\n- He had a recent myocardial infarction (MI) and underwent angioplasty.\n- On the second day post-procedure, he experienced a sudden drop in consciousness with a central pulse \u2014 which suggests **pulseless electrical activity (PEA)** or **cardiac arrest**.\n- The ECG confirms **ventricular fibrillation**, which is a specific type of cardiac arrest.\n\nIn ventricular fibrillation, the **immediate and definitive treatment is electrical cardioversion** (defibrillation). This is the only intervention proven to restore a perfusing rhythm quickly and effectively.\n\nLet\u2019s evaluate the options:\n- (A) Perform electrical cardioversion \u2014 **Correct.** This is the first-line, immediate treatment for VF.\n- (B) Perform a new cardiac catheterization \u2014 Not appropriate immediately; this is for ischemic heart disease, not for an ongoing arrhythmia.\n- (C) Administer intravenous metoprolol \u2014 Beta-blockers",
+      "correct": true
+    },
+    {
+      "index": 87,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Detailed clinical examination, associated with abdominal ultrasound confirms the diagnosis.",
+      "correct": false
+    },
+    {
+      "index": 88,
+      "country": "brazil",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) cephalic, back on the left and uterine height appropriate for gestational age.",
+      "correct": true
+    },
+    {
+      "index": 89,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Lung abscess; start empirical antibiotic therapy.",
+      "correct": true
+    },
+    {
+      "index": 90,
+      "country": "brazil",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Abdominoperineal sigmoidectomy with definitive colostomy.",
+      "correct": false
+    },
+    {
+      "index": 91,
+      "country": "brazil",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Congenital syphilis; request serology and start crystalline penicillin.",
+      "correct": true
+    },
+    {
+      "index": 92,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) initiate empirical treatment for pulmonary tuberculosis, considering the high clinical and epidemiological probability.\n\nThe patient\u2019s presentation \u2014 including homelessness, poor hygiene, history of substance abuse, chronic symptoms (3 weeks), productive cough with foul-smelling, blood-streaked sputum, weight loss, and fever \u2014 is highly suggestive of pulmonary tuberculosis (TB), especially in a high-risk population. The chest X-ray shows a cavitary lesion with surrounding consolidation, which is a classic radiographic finding in advanced pulmonary TB. Although the rapid molecular test for mycobacteria was negative, this can occur due to low bacterial load, technical issues, or the use of a test not optimized for this clinical scenario (e.g., not a culture or PCR for *M. tuberculosis*). The clinical picture and epidemiological context strongly support TB as the most likely diagnosis.\n\nThe patient has been treated with Ceftriaxone and Metronidazole, which are antibiotics effective against anaerobes and some gram-negative organisms, but not against *Mycobacterium tuberculosis*. After 20 days, there has been some clinical improvement (reduced fever intensity, reduced hemoptysis), but the chest X-ray shows persistent disease, indicating that the current treatment is not targeting the",
+      "correct": false
+    },
+    {
+      "index": 93,
+      "country": "brazil",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "index": 1,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Reversal of leads (electrodes) between the arms",
+      "correct": true
+    },
+    {
+      "index": 2,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Iron supplementation",
+      "correct": true
+    },
+    {
+      "index": 3,
+      "country": "israel",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Verapamil",
+      "correct": false
+    },
+    {
+      "index": 4,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Proceed to an urgent brain CT scan",
+      "correct": true
+    },
+    {
+      "index": 5,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Mouth ulcers",
+      "correct": true
+    },
+    {
+      "index": 7,
+      "country": "israel",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Myelodysplastic Syndrome (MDS)",
+      "correct": false
+    },
+    {
+      "index": 8,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) CTA lung scan",
+      "correct": false
+    },
+    {
+      "index": 9,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Rifampin should also be added to the antibiotic treatment",
+      "correct": false
+    },
+    {
+      "index": 10,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Q1S3T3",
+      "correct": false
+    },
+    {
+      "index": 11,
+      "country": "israel",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Myelodysplastic syndrome",
+      "correct": false
+    },
+    {
+      "index": 12,
+      "country": "israel",
+      "gt": "B",
+      "pred": "A",
+      "raw": "The ECG shows a **ventricular tachycardia (VT)** with a **wide QRS complex** and **no discernible P waves**, which is consistent with a **monomorphic VT**. The patient is drowsy, hypotensive (BP 110/50 mmHg), and tachycardic (HR 100 bpm), indicating hemodynamic instability.\n\nThe patient has a history of ingestion of **Amitriptyline** (a tricyclic antidepressant, TCA), **Paracetamol**, and **Lorazepam**. TCAs are notorious for causing **cardiotoxicity**, including **ventricular arrhythmias** such as VT and ventricular fibrillation, especially in overdose.\n\nIn the setting of **TCA overdose with hemodynamically unstable VT**, the **initial treatment is sodium bicarbonate**. Sodium bicarbonate works by alkalinizing the blood, which shifts the TCA from the plasma to the intracellular space, thereby reducing its concentration in the plasma and decreasing its cardiotoxic effects. It also helps to correct intracellular acidosis and can improve myocardial contractility.\n\n- **Electrical shock (A)**: Used for pulseless VT or VF",
+      "correct": false
+    },
+    {
+      "index": 13,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Positive C-ANCA in serum",
+      "correct": false
+    },
+    {
+      "index": 14,
+      "country": "israel",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Administration of Amiodarone",
+      "correct": false
+    },
+    {
+      "index": 15,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Warfarin",
+      "correct": true
+    },
+    {
+      "index": 16,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) The patient has COPD and it is advisable to treat with long-acting bronchodilators LABA, LAMA",
+      "correct": true
+    },
+    {
+      "index": 17,
+      "country": "israel",
+      "gt": "C",
+      "pred": "A",
+      "raw": "(A) Amiodarone",
+      "correct": false
+    },
+    {
+      "index": 18,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Repeat the count in the citrate tube",
+      "correct": true
+    },
+    {
+      "index": 19,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "index": 20,
+      "country": "israel",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Glucose level test",
+      "correct": false
+    },
+    {
+      "index": 21,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Reactive arthritis",
+      "correct": true
+    },
+    {
+      "index": 22,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Treatment with Prednisone",
+      "correct": false
+    },
+    {
+      "index": 23,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Brain metastases",
+      "correct": false
+    },
+    {
+      "index": 24,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) It cannot be inferred from the graph about the effectiveness of the treatment",
+      "correct": true
+    },
+    {
+      "index": 25,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Skin biopsy",
+      "correct": true
+    },
+    {
+      "index": 27,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Long radiation (5 weeks) together with capecitabine followed by three months of treatment with the XELOX-cetuximab combination",
+      "correct": false
+    },
+    {
+      "index": 28,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Improvement of function",
+      "correct": true
+    },
+    {
+      "index": 29,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Breast cancer with metastases to the lung and pancreas",
+      "correct": false
+    },
+    {
+      "index": 30,
+      "country": "israel",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) The current sample is insufficient; a repeat sample is required via mediastinoscopy",
+      "correct": false
+    },
+    {
+      "index": 31,
+      "country": "israel",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Babesia",
+      "correct": false
+    },
+    {
+      "index": 32,
+      "country": "israel",
+      "gt": "B",
+      "pred": null,
+      "raw": "The patient is a 56-year-old male presenting with shortness of breath. Key findings include:\n\n- Elevated D-dimer (1570 ng/mL, normal <500) \u2014 suggestive of a hypercoagulable state or thromboembolic event.\n- Elevated troponin (4x normal) \u2014 indicates myocardial injury.\n- ECG: Sinus rhythm, no ischemia.\n- Echocardiogram: Good ventricular function, no atrial enlargement.\n- Pulmonary CTA (shown in the image) \u2014 **this is critical**.\n\nLooking at the pulmonary CTA images, they show **multiple pulmonary emboli** (clots) in the pulmonary arteries. The top image shows a large central embolus, the middle image shows a large embolus in the right pulmonary artery, and the bottom image shows a large embolus in the left pulmonary artery. This is consistent with **massive pulmonary embolism (PE)**.\n\nThe patient\u2019s clinical presentation (shortness of breath, tachypnea, elevated troponin) and imaging findings are highly suggestive of **acute pulmonary embolism**.\n\nThe elevated troponin is concerning for **right ventricular strain** or **myocard",
+      "correct": false
+    },
+    {
+      "index": 33,
+      "country": "israel",
+      "gt": "B",
+      "pred": null,
+      "raw": "The patient presents with fever, a new holosystolic murmur at the mitral valve, and echocardiographic evidence of vegetation \u2014 all classic signs of infective endocarditis (IE). The fundus photograph shows multiple hemorrhages and exudates, which are suggestive of retinal emboli \u2014 a common complication of IE.\n\nAccording to the modified Duke criteria for definite infective endocarditis, **definite IE requires either:**\n\n1.  **Positive blood cultures** for typical IE organisms (e.g., *Staphylococcus aureus*, *Streptococcus viridans*) **plus** evidence of endocardial involvement (e.g., vegetation on echo), **OR**\n2.  **Positive blood cultures** for typical IE organisms **plus** **two major criteria** (e.g., fever, new murmur, vegetation, embolic events, positive serology for IE, or evidence of endocarditis on imaging), **OR**\n3.  **Two major criteria** (e.g., fever, new murmur, vegetation, embolic events, positive serology for IE, or evidence of endocarditis on imaging) **plus** **one minor criterion** (e.g., predisposing condition like un",
+      "correct": false
+    },
+    {
+      "index": 34,
+      "country": "israel",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) These lesions are likely a side effect of the Anti-TNF treatment",
+      "correct": false
+    },
+    {
+      "index": 35,
+      "country": "israel",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Insulin",
+      "correct": false
+    },
+    {
+      "index": 36,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Lactic acidosis",
+      "correct": true
+    },
+    {
+      "index": 37,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Pacemaker implantation",
+      "correct": true
+    },
+    {
+      "index": 38,
+      "country": "israel",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) There is no obstruction but there are hints of restriction",
+      "correct": false
+    },
+    {
+      "index": 39,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Observation and monitoring only",
+      "correct": true
+    },
+    {
+      "index": 40,
+      "country": "israel",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Heparin",
+      "correct": false
+    },
+    {
+      "index": 41,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Hepatotoxicity",
+      "correct": true
+    },
+    {
+      "index": 42,
+      "country": "israel",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) IVIg",
+      "correct": false
+    },
+    {
+      "index": 43,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) The disappearance of pain in the hand",
+      "correct": true
+    },
+    {
+      "index": 44,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Perform intubation and ventilation",
+      "correct": false
+    },
+    {
+      "index": 45,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) In 500 mL of 0.9% saline at a rate of 50 mL/hour through a peripheral vein",
+      "correct": false
+    },
+    {
+      "index": 46,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Acyclovir intravenously at a dose of 10 mg/kg 3 times a day",
+      "correct": true
+    },
+    {
+      "index": 47,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Acute promyelocytic Leukemia",
+      "correct": true
+    },
+    {
+      "index": 48,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) About half of the patients will undergo remission within two years of diagnosis",
+      "correct": true
+    },
+    {
+      "index": 49,
+      "country": "israel",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) A pattern of CRBBB in the ECG chart",
+      "correct": false
+    },
+    {
+      "index": 50,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Jugular vein distention",
+      "correct": true
+    },
+    {
+      "index": 51,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) A high level of digoxin in the blood",
+      "correct": false
+    },
+    {
+      "index": 52,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "The echocardiogram shows a markedly dilated right atrium (RA) and right ventricle (RV), with a small left ventricle (LV) and left atrium (LA). The RV appears thin-walled and dilated, and there is a prominent interventricular septum (IVS) bulging into the LV \u2014 a classic sign of **right ventricular dilation with tricuspid regurgitation** and **right ventricular failure**.\n\nThis patient is a 60-year-old heavy smoker with acute shortness of breath and low blood pressure \u2014 classic presentation of **acute cor pulmonale** (right heart failure secondary to pulmonary hypertension, often from chronic obstructive pulmonary disease or chronic smoking).\n\nIn acute cor pulmonale, the right ventricle is suddenly overloaded, leading to **acute right heart failure**. This results in **reduced cardiac output** and **low blood pressure**. The hallmark physical finding is **pulsus paradoxus** \u2014 an exaggerated drop in systolic blood pressure (>10 mmHg) during inspiration, caused by increased intrathoracic pressure impeding right ventricular filling and reducing stroke volume.\n\nLet\u2019s evaluate the options:\n\n- **(A) Pulsus paradoxus**",
+      "correct": true
+    },
+    {
+      "index": 54,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Cardiac MRI",
+      "correct": true
+    },
+    {
+      "index": 55,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) PO Levofloxacin and IV Ceftriaxone",
+      "correct": true
+    },
+    {
+      "index": 56,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Antiphospholipid syndrome",
+      "correct": true
+    },
+    {
+      "index": 57,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Follow-up only",
+      "correct": true
+    },
+    {
+      "index": 58,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Treatment with anti-fibrotic medication (Nintedanib)",
+      "correct": true
+    },
+    {
+      "index": 59,
+      "country": "israel",
+      "gt": "A",
+      "pred": null,
+      "raw": "The question asks what defines **definite endocarditis** in this patient.\n\nAccording to the **modified Duke criteria** for infective endocarditis (IE), **definite IE** requires:\n\n- **Two major criteria**, OR\n- **One major and three minor criteria**, OR\n- **Five minor criteria**\n\n**Major criteria** include:\n- Positive blood cultures for IE pathogens (e.g., *Staphylococcus aureus*, *Streptococcus viridans*, *Enterococcus*, *Aggregatibacter* spp. \u2014 which is the organism grown here) **with** evidence of endocardial involvement (e.g., echocardiographic vegetation, abscess, new valvular regurgitation, or embolic phenomena).\n- **Positive echocardiogram** showing vegetation, abscess, or new valvular regurgitation.\n\n**Minor criteria** include:\n- Predisposing condition (e.g., HCM \u2014 hypertrophic cardiomyopathy)\n- Fever (>38\u00b0C)\n- Positive blood cultures for IE pathogens (but **without** evidence of endocardial involvement)\n- Embolic phenomena (e.g., stroke, splenic infarction, mycotic aneurysm, etc",
+      "correct": false
+    },
+    {
+      "index": 60,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Rhabdomyolysis",
+      "correct": true
+    },
+    {
+      "index": 61,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Osteoarthritis (OA)",
+      "correct": false
+    },
+    {
+      "index": 62,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Immediate synchronized electrical cardioversion",
+      "correct": true
+    },
+    {
+      "index": 64,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Treatment with N-acetylcysteine",
+      "correct": true
+    },
+    {
+      "index": 65,
+      "country": "israel",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Does the patient or their family have psoriasis?",
+      "correct": false
+    },
+    {
+      "index": 66,
+      "country": "israel",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Aciclovir should be administered",
+      "correct": false
+    },
+    {
+      "index": 67,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "The clinical presentation \u2014 a 40-year-old HIV-positive patient with a widespread rash, fever, and headache \u2014 is highly suggestive of **syphilis**, particularly **secondary syphilis**, which commonly presents with a maculopapular rash (as seen in the image) and systemic symptoms.\n\nIn HIV-positive patients, syphilis can be more severe and may present atypically. The standard treatment for syphilis is **penicillin**, which is the drug of choice.\n\nHowever, the question asks for the appropriate treatment **in the context of penicillin allergy**.\n\n- **Option (C) and (D)** refer to intramuscular penicillin administration. While this is the standard treatment for syphilis, the question specifically asks for the appropriate treatment **for patients allergic to penicillin**, so these options are not correct in that context.\n\n- **Option (A)** suggests **Sulfamethoxazole-Trimethoprim (SMX-TMP)** for penicillin-allergic patients. This is **not** the preferred alternative for syphilis. SMX-TMP is not reliably effective against Treponema pallidum, the causative agent of syphilis.\n\n- **Option (B)** suggests",
+      "correct": false
+    },
+    {
+      "index": 68,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) A secondary event is more life-threatening than a primary event",
+      "correct": true
+    },
+    {
+      "index": 69,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Atrial Fibrillation with RBBB and left anterior fascicular block",
+      "correct": true
+    },
+    {
+      "index": 70,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) rtPCR testing from a pleural biopsy is preferable to testing from pleural fluid",
+      "correct": true
+    },
+    {
+      "index": 71,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "The lab results show a metabolic alkalosis (pH 7.48, pCO\u2082 67 mmHg, HCO\u2083\u207b 46 mEq/L) with hypokalemia (K\u207a 5.3 mEq/L) and hypoalbuminemia (Albumin 3.8 g/dL). The patient has HFrEF with refractory edema despite high-dose furosemide and normal kidney function.\n\nThe key issue is **hypokalemia** in the context of **metabolic alkalosis** and **refractory edema**. In HFrEF, especially with diuretic resistance, adding a potassium-sparing diuretic like **amiloride** can be beneficial. Amiloride helps retain potassium and can enhance the diuretic effect of loop diuretics (like furosemide) by reducing potassium loss, which may help with volume control without worsening hypokalemia.\n\nLet\u2019s evaluate the options:\n\n- **(A) Amiloride**: A potassium-sparing diuretic. It is often added to loop diuretics in HFrEF to prevent hypokalemia and may improve diuresis by enhancing the effect of loop diuretics.",
+      "correct": false
+    },
+    {
+      "index": 72,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Started treatment with Ceftriaxone and Azithromycin",
+      "correct": false
+    },
+    {
+      "index": 73,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "The ECG shown in the image demonstrates **complete heart block (third-degree AV block)**. This is characterized by:\n\n- Absence of relationship between P waves and QRS complexes (P waves occur regularly, QRS complexes occur regularly, but they are not synchronized).\n- A slow, regular ventricular rate (often < 40 bpm).\n- Widened QRS complexes (suggesting a ventricular escape rhythm).\n\nThis is a **conduction block** that can be **acute or chronic**. In the context of the question, we are looking for the patient who is **most likely to require a permanent pacemaker**.\n\nLet\u2019s evaluate each option:\n\n**(A) A 64-year-old male patient on hemodialysis who missed the last 2 dialysis sessions**  \n- Hemodialysis patients can develop conduction abnormalities due to electrolyte imbalances (e.g., hyperkalemia, hypocalcemia), volume overload, or uremic toxins.  \n- However, **acute** conduction blocks in this setting are often reversible with correction of electrolytes or volume status.  \n- **Permanent pacemaker is not typically indicated** unless there is evidence of **chronic** conduction disease or symptomatic bradycardia.\n\n**(",
+      "correct": false
+    },
+    {
+      "index": 75,
+      "country": "israel",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) SIADH",
+      "correct": false
+    },
+    {
+      "index": 76,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Allopurinol",
+      "correct": false
+    },
+    {
+      "index": 77,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Sildenafil",
+      "correct": false
+    },
+    {
+      "index": 78,
+      "country": "israel",
+      "gt": "C",
+      "pred": "A",
+      "raw": "The image shows a hand with prominent, thickened, and enlarged fingertips \u2014 a classic sign known as **clubbing**.\n\nClubbing is characterized by:\n- Enlargement of the distal phalanges.\n- A bulbous, rounded appearance of the fingertips.\n- A change in the angle between the nail bed and the skin (the angle of the nail is increased).\n- Often accompanied by a change in the texture of the skin on the fingertips.\n\nThis physical finding is associated with a variety of chronic diseases, particularly those involving chronic hypoxia, infection, or inflammation. Common conditions include:\n- Chronic lung diseases (e.g., lung cancer, COPD, cystic fibrosis)\n- Cardiovascular diseases (e.g., infective endocarditis, congenital heart disease)\n- Gastrointestinal diseases (e.g., inflammatory bowel disease, liver cirrhosis)\n- Certain cancers\n- Sarcoidosis (a systemic inflammatory disease)\n\nAmong the given options:\n- **(A) Sarcoidosis** \u2014 Clubbing can occur in sarcoidosis, especially in advanced or disseminated disease, often associated with pulmonary involvement.\n- **(B) Endocarditis** \u2014 Clubbing is a well-known sign in infective endocarditis, particularly",
+      "correct": false
+    },
+    {
+      "index": 79,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Rheumatoid Arthritis",
+      "correct": false
+    },
+    {
+      "index": 80,
+      "country": "israel",
+      "gt": "B",
+      "pred": null,
+      "raw": "The clinical scenario describes a 40-year-old male with chronic kidney failure, proteinuria (1.5 g/day), episodic burning sensations in hands and feet, and characteristic skin findings (purpura, petechiae, and possibly livedo reticularis \u2014 consistent with the image). The accentuated second heart sound suggests possible hypertension or aortic stenosis, which can be associated with renal disease.\n\nThese features are highly suggestive of **Takayasu arteritis** or **polyarteritis nodosa**, but given the context of chronic kidney disease and the skin findings, the most likely diagnosis is **Takayasu arteritis** \u2014 especially if the patient is young and has systemic vasculitis affecting large arteries.\n\nHowever, the most critical clue is the **skin findings** \u2014 purpura and petechiae \u2014 which are not typical of Takayasu arteritis but are classic for **systemic lupus erythematosus (SLE)** or **vasculitis**. But in the context of chronic kidney disease and proteinuria, **SLE** is a strong consideration.\n\nBut wait \u2014 the **burning sensation in hands and feet** and **skin purpura** are also classic for **uremic pruritus**",
+      "correct": false
+    },
+    {
+      "index": 81,
+      "country": "israel",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Reassurance",
+      "correct": false
+    },
+    {
+      "index": 82,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Leukopenia with lymphopenia",
+      "correct": true
+    },
+    {
+      "index": 83,
+      "country": "israel",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Hyperkalemia",
+      "correct": false
+    },
+    {
+      "index": 84,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Hypersensitivity Pneumonitis",
+      "correct": true
+    },
+    {
+      "index": 84,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Ablation",
+      "correct": true
+    },
+    {
+      "index": 86,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Hypomagnesemia",
+      "correct": false
+    },
+    {
+      "index": 87,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) ABVD and radiation",
+      "correct": true
+    },
+    {
+      "index": 88,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Follow-up only",
+      "correct": true
+    },
+    {
+      "index": 89,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) The odds are that the nasal culture will be positive",
+      "correct": false
+    },
+    {
+      "index": 90,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) T(15;17)",
+      "correct": true
+    },
+    {
+      "index": 91,
+      "country": "israel",
+      "gt": "C",
+      "pred": null,
+      "raw": "The images provided show findings consistent with pulmonary embolism (PE), including:\n\n- **Image A (CT pulmonary angiogram)**: Demonstrates filling defects in the pulmonary arteries, which are classic for PE.\n- **Image B (Pulmonary angiogram)**: Shows obstruction of the pulmonary arteries, confirming PE.\n- **Image C (Microscopic view)**: Shows thrombi (clots) in the pulmonary arteries, further supporting the diagnosis.\n\nThe patient is a 68-year-old woman with suspected pulmonary hypertension, and the imaging confirms acute pulmonary embolism. The question asks for treatment *in addition to anticoagulation*.\n\nIn acute pulmonary embolism, especially if there is evidence of hemodynamic instability or chronic pulmonary hypertension, treatment often includes:\n\n- **Anticoagulation** (already mentioned)\n- **Thrombolysis** (for massive PE)\n- **Invasive interventions** (e.g., catheter-directed thrombolysis, embolectomy)\n- **Pulmonary vasodilators** for chronic pulmonary hypertension or persistent hypoxemia\n\nHowever, the question specifically asks for treatment *in addition to anticoagulation* for a patient with *suspected pulmonary hypertension* and confirmed PE.\n\nAmong the options:",
+      "correct": false
+    },
+    {
+      "index": 92,
+      "country": "israel",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Azithromycin",
+      "correct": false
+    },
+    {
+      "index": 93,
+      "country": "israel",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Azathioprine + Prednisone",
+      "correct": false
+    },
+    {
+      "index": 94,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Echocardiography",
+      "correct": true
+    },
+    {
+      "index": 95,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) IV Labetalol",
+      "correct": true
+    },
+    {
+      "index": 96,
+      "country": "israel",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Chronic Obstructive Pulmonary Disease",
+      "correct": false
+    },
+    {
+      "index": 97,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Mid systolic murmur",
+      "correct": true
+    },
+    {
+      "index": 98,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Melphalan is accepted as a first-line treatment in transplant candidates",
+      "correct": false
+    },
+    {
+      "index": 99,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Electrical alternans",
+      "correct": true
+    },
+    {
+      "index": 100,
+      "country": "israel",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Liver US",
+      "correct": false
+    },
+    {
+      "index": 101,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Bleeding left Angiomyolipoma",
+      "correct": true
+    },
+    {
+      "index": 102,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) POSTERIOR URETHRAL VALVE",
+      "correct": true
+    },
+    {
+      "index": 103,
+      "country": "israel",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Adult Polycystic Kidney Disease",
+      "correct": false
+    },
+    {
+      "index": 104,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Mesoblastic nephroma",
+      "correct": true
+    },
+    {
+      "index": 105,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) URETERO-URETEROSTOMY",
+      "correct": true
+    },
+    {
+      "index": 106,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Case-control study",
+      "correct": true
+    },
+    {
+      "index": 109,
+      "country": "israel",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D)",
+      "correct": false
+    },
+    {
+      "index": 110,
+      "country": "israel",
+      "gt": "A",
+      "pred": null,
+      "raw": "To calculate the sensitivity and specificity of the screening test, we need to understand the definitions:\n\n- **Sensitivity** = True Positives / (True Positives + False Negatives)\n- **Specificity** = True Negatives / (True Negatives + False Positives)\n\nIn the context of this table, we need to interpret the columns and rows correctly. The table appears to be in Hebrew, but based on standard medical screening tables:\n\n- **Rows**: Likely represent the actual disease status (Disease Present vs. Disease Absent)\n- **Columns**: Likely represent the test result (Positive vs. Negative)\n\nLooking at the table structure:\n\n- The **first row** is \"\u05d1\u05d3\u05d9\u05d9\u05e7\u05ea \u05e1\u05e7\u05e8 \u05d7\u05d9\u05d6\u05d5\u05d9\u05d9\u05ea\" (likely \"Positive screening test\" or \"Screening test positive\")\n- The **second row** is \"\u05d1\u05d3\u05d9\u05d9\u05e7\u05ea \u05e1\u05e7\u05e8 \u05e9\u05dc\u05d9\u05dc\u05d9\u05ea\" (likely \"Screening test negative\")\n- The **third row** is \"\u05e1\"\u05d4\" (likely \"Total\" or \"Overall\")\n\nThe **first column** is \"\u05d7\u05d5\u05dc\u05d4\" (Diseased)\nThe **second column** is \"\u05e0\u05d1\u05d3\u05e7 \u05d1\u05e8\u05d9\u05d9\u05d0\" (Non-diseased or Healthy)\nThe **third column** is \"\u05e1\"\u05d4",
+      "correct": false
+    },
+    {
+      "index": 111,
+      "country": "israel",
+      "gt": "B",
+      "pred": null,
+      "raw": "To calculate the Positive Predictive Value (PPV) and Negative Predictive Value (NPV), we need to understand what these terms mean in the context of diagnostic testing:\n\n*   **Positive Predictive Value (PPV)**: The probability that a person who tests positive actually has the disease. It is calculated as: **True Positives / (True Positives + False Positives)**.\n*   **Negative Predictive Value (NPV)**: The probability that a person who tests negative does not have the disease. It is calculated as: **True Negatives / (True Negatives + False Negatives)**.\n\nLooking at the table, we can identify the following categories:\n\n*   **True Positives (TP)**: People who have the disease and test positive. This corresponds to the \"\u05d7\u05d5\u05dc\u05d4\" (Diseased) row and \"\u05e0\u05d1\u05d3\u05e7 \u05d1\u05e8\u05d9\u05d9\u05d0\" (Tested Positive) column. The value is **2,660,000**.\n*   **False Negatives (FN)**: People who have the disease but test negative. This corresponds to the \"\u05d7\u05d5\u05dc\u05d4\" (Diseased) row and \"\u05e0\u05d1\u05d3\u05e7 \u05d1\u05e8\u05d9\u05d0\u05d5\u05ea\" (Tested Negative) column. The value is **490,",
+      "correct": false
+    },
+    {
+      "index": 114,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) A cohort study",
+      "correct": true
+    },
+    {
+      "index": 115,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Exposure: Body Mass Index, Outcome: Cardiovascular Mortality",
+      "correct": true
+    },
+    {
+      "index": 116,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Prospective follow-up study",
+      "correct": true
+    },
+    {
+      "index": 117,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Indirect standardization and matching",
+      "correct": false
+    },
+    {
+      "index": 118,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Type 1 patients have a higher risk of hospitalization and death due to cardiovascular diseases compared to the general population",
+      "correct": true
+    },
+    {
+      "index": 119,
+      "country": "israel",
+      "gt": "D",
+      "pred": null,
+      "raw": "The question asks what happens to the test statistic and p-value when the mean in the control group changes to 18.0, while the standard deviation remains unchanged.\n\nFirst, let\u2019s understand the context. We are comparing two groups: the intervention group (\u05d4\u05d4\u05ea\u05e2\u05e8\u05d1\u05d5\u05ea) and the control group (\u05d4\u05d1\u05d9\u05d9\u05e7\u05d5\u05e8\u05d8). The table shows:\n- Intervention group: mean = 15, SD = 2, N = 337\n- Control group: mean = 16.5, SD = 2, N = 330\n\nThe intervention group has a lower mean BMI (15) than the control group (16.5), suggesting the intervention may be effective.\n\nNow, the scenario changes: the control group mean is changed to 18.0, while the standard deviation remains 2. This means the control group\u2019s mean increases, making the difference between the groups smaller (15 vs. 18.0, instead of 15 vs. 16.5).\n\nIn a two-sample t-test (which is appropriate here for comparing means of two independent groups), the test statistic is calculated as:\n\nt = (mean1 - mean2) / SE\n\nwhere SE (standard",
+      "correct": false
+    },
+    {
+      "index": 120,
+      "country": "israel",
+      "gt": "A",
+      "pred": null,
+      "raw": "To calculate the **Risk Ratio (RR)**, we need to compare the risk of a low birth weight (defined as \"\u05dc\u05d0\" in the table, meaning \"no\" in Hebrew, which corresponds to low birth weight) in the exposed group (mothers who smoked) to the risk in the unexposed group (mothers who did not smoke).\n\nThe table is structured as follows:\n\n- **Rows**: Newborn's birth weight (low vs. normal)\n- **Columns**: Mother's smoking status (smoked vs. did not smoke)\n\nFrom the table:\n\n- **Exposed group (mother smoked)**:\n  - Low birth weight (\u05dc\u05d0): 42\n  - Normal birth weight (\u05db\u05df): 26\n  - **Total exposed**: 42 + 26 = 68\n\n- **Unexposed group (mother did not smoke)**:\n  - Low birth weight (\u05dc\u05d0): 721\n  - Normal birth weight (\u05db\u05df): 211\n  - **Total unexposed**: 721 + 211 = 932\n\n**Risk in exposed group (smokers)** = P(low birth weight | smoked) = 42 / 68 \u2248",
+      "correct": false
+    },
+    {
+      "index": 121,
+      "country": "israel",
+      "gt": "D",
+      "pred": "M",
+      "raw": "To determine the correct answer, we need to calculate the **median** and **mode** for both men (M) and women (F) based on the given frequency table.\n\n---\n\n### Step 1: Understand the data\n\nThe table shows the **number of hospitalizations** (in the last 5 years) and the **frequency** (number of people) for each group.\n\n- **Total sample size for each group**: 100 (as shown in the \"\u05e1\u05da \u05d4\u05db\u05dc\" row for both M and F).\n\n---\n\n### Step 2: Find the **Mode**\n\nThe **mode** is the value that occurs most frequently.\n\n- **For Men (M)**:\n  - Hospitalizations: 2 \u2192 2 people\n  - 8 \u2192 8 people\n  - 10 \u2192 10 people\n  - 20 \u2192 20 people\n  - 18 \u2192 18 people\n  - 17 \u2192 17 people\n  - 15 \u2192 15 people\n  - 10 \u2192 10 people (again, but this is the same value as above)\n  - 100 \u2192 100 people (this is the total, not a",
+      "correct": false
+    },
+    {
+      "index": 122,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Historical cohort study",
+      "correct": false
+    },
+    {
+      "index": 123,
+      "country": "israel",
+      "gt": "B",
+      "pred": "N",
+      "raw": "The table presents data on cancer incidence across different age groups, with columns showing the number of new cases (n) and the number of person-years at risk (d). The values in the \"n\" columns (e.g., 50, 480, 1,483) represent the count of new cancer diagnoses in each age group during the study period. The values in the \"d\" columns (e.g., 0.2, 1.6, 8.1) represent the total person-years of observation for that age group.\n\nThe incidence rate is calculated as the number of new cases divided by the total person-years at risk. For example, for the 0-14 age group, the rate is 50 / 0.2 = 250 per person-year. This is a rate that accounts for the time each individual was at risk, which is the definition of **density incidence** (also known as incidence rate).\n\n- **Cumulative Incidence** is the proportion of individuals who develop the disease over a specified period, calculated as the number of new cases divided by the total number of individuals at risk at the start of the period. This would require the total population at risk, not person",
+      "correct": false
+    },
+    {
+      "index": 124,
+      "country": "israel",
+      "gt": "D",
+      "pred": null,
+      "raw": "To determine where age is a confounder, we need to compare the **crude incidence rates** with the **age-adjusted incidence rates** for each group. Age is a confounder if the crude rate differs significantly from the age-adjusted rate, indicating that age distribution between the groups is uneven and affects the comparison.\n\nLet\u2019s examine each comparison:\n\n---\n\n**1. Between Country A and Country B in Women:**\n\n- **Crude rate (Country A, women):** 18.2\n- **Age-adjusted rate (Country A, women):** 17.8\n- **Crude rate (Country B, women):** 16.4\n- **Age-adjusted rate (Country B, women):** 16.8\n\nWait \u2014 the table is structured as:\n\nColumns:\n- Column 1: Crude rate for women (Country A)\n- Column 2: Crude rate for men (Country A)\n- Column 3: Age-adjusted rate for women (Country A)\n- Column 4: Age-adjusted rate for men (Country A)\n- Column 5: Country A\n- Column 6: Country B\n\nActually, looking at the table again:\n\nThe table has 5",
+      "correct": false
+    },
+    {
+      "index": 125,
+      "country": "israel",
+      "gt": "C",
+      "pred": null,
+      "raw": "To calculate the Odds Ratio (OR) for the association between Hepatitis C virus (HCV) infection and B-NHL lymphoma in the overall study population, we need to combine the data from both age groups.\n\nThe table provides data for two age groups: \"55 and over\" and \"under 55\". We need to pool the \"cases\" (patients with B-NHL) and \"controls\" (patients without B-NHL) across both groups.\n\n**Step 1: Combine the data for the entire study population.**\n\n- **Cases (HCV-positive with B-NHL):**\n  - Age 55+: 18\n  - Age <55: 52\n  - **Total cases = 18 + 52 = 70**\n\n- **Controls (HCV-positive without B-NHL):**\n  - Age 55+: 163\n  - Age <55: 237\n  - **Total controls = 163 + 237 = 400**\n\n- **Cases (HCV-negative with B-NHL):**\n  - Age 55+: 6\n  - Age <55: 16",
+      "correct": false
+    },
+    {
+      "index": 126,
+      "country": "israel",
+      "gt": "A",
+      "pred": null,
+      "raw": "To calculate the Risk Difference (RD), we need to find the difference in risk (proportion of cases) between the exposed group (with HCV) and the unexposed group (without HCV).\n\nThe table provides data for two age groups: \"55 and over\" and \"under 55\".\n\nLet's calculate the RD for each group:\n\n**For the \"55 and over\" group:**\n- Number of HCV+ cases (exposed): 6\n- Total HCV+ population: 231\n- Risk in exposed group = 6 / 231 \u2248 0.026\n- Number of HCV- cases (unexposed): 18\n- Total HCV- population: 163\n- Risk in unexposed group = 18 / 163 \u2248 0.110\n- RD = Risk(exposed) - Risk(unexposed) = 0.026 - 0.110 = -0.084\n\nWait, this doesn't make sense. The risk difference should be calculated as Risk(exposed) - Risk(unexposed), but the numbers suggest that the unexposed group",
+      "correct": false
+    },
+    {
+      "index": 127,
+      "country": "israel",
+      "gt": "C",
+      "pred": null,
+      "raw": "To determine the association between B-NHL (B-cell non-Hodgkin lymphoma) and viral hepatitis (specifically HCV, as indicated by the columns), we need to look at the **proportion of HCV-positive individuals among those with B-NHL** in each age group.\n\nThe table provides:\n- **Number of HCV-positive individuals with B-NHL** (column 3: \"\u05de\u05e1\u05e4\u05e8 \u05d7\u05d9\u05d5\u05d9\u05d1\u05d9\u05dd HCV-\u05dc\")\n- **Total number of individuals with B-NHL** (column 4: \"\u05de\u05e1\u05e4\u05e8 \u05e9\u05dc\u05d9\u05dc\u05d9\u05d9\u05dd HCV\")\n\nThe association strength can be inferred by the **proportion of HCV-positive cases among B-NHL patients**. A higher proportion indicates a stronger association.\n\nLet's calculate this proportion for each age group:\n\n1.  **Age group over 55 (55+):**\n    - Number of HCV-positive B-NHL patients: 18\n    - Total number of B-NHL patients: 231\n    - Proportion = 18 / 231 \u2248 0.078 (or 7.8%)\n\n2.  **Age group up to 55 (\u226455):**\n    - Number of HCV",
+      "correct": false
+    },
+    {
+      "index": 128,
+      "country": "israel",
+      "gt": "A",
+      "pred": null,
+      "raw": "To calculate the age-standardized mortality rate, we use the formula:\n\n**Age-standardized rate = \u03a3 (Age-specific rate \u00d7 Standard population in that age group) / Total standard population**\n\nFrom the table:\n\n- Age group 0-20: Rate = 2 per 10,000, Standard population = 35,000\n- Age group 21-44: Rate = 10 per 10,000, Standard population = 20,000\n- Age group 45-64: Rate = 30 per 10,000, Standard population = 15,000\n- Age group +65: Rate = 70 per 10,000, Standard population = 5,000\n- Total standard population = 75,000 (given in the last row)\n\nNow, calculate the weighted sum:\n\n= (2 \u00d7 35,000) + (10 \u00d7 20,000) + (30 \u00d7 15,000) + (70 \u00d7 5,000)\n= 7",
+      "correct": false
+    },
+    {
+      "index": 129,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Yes, OR = 1.37",
+      "correct": true
+    },
+    {
+      "index": 131,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Age-standardized incidence rates and age-standardized mortality rates",
+      "correct": true
+    },
+    {
+      "index": 132,
+      "country": "israel",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) There was no change in the fatality rate of thyroid cancer over the years of follow-up",
+      "correct": false
+    },
+    {
+      "index": 133,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Early detection and effective treatment as a result and/or overdiagnosis of cases that would not have been detected or treated without the screening",
+      "correct": true
+    },
+    {
+      "index": 134,
+      "country": "israel",
+      "gt": "B",
+      "pred": null,
+      "raw": "To calculate the overall agreement rate between the two radiologists, we need to determine the proportion of cases where both radiologists agreed on the interpretation.\n\nLooking at the table:\n\n- **Total number of subjects**: 1000 (as given in the bottom right corner).\n\n- **Cases where both radiologists agreed**:\n  - Both classified as \"Normal\" (\u05ea\u05b0\u05bc\u05e7\u05bb\u05d5\u05bc\u05df \u05dc\u05b0\u05d1\u05b7\u05d1): 400 (from the top-left cell, where Radiologist 1 says \"Normal\" and Radiologist 2 says \"Normal\").\n  - Both classified as \"Enlarged\" (\u05de\u05b0\u05d5\u05b8\u05d2\u05b8\u05d3\u05b5\u05dc \u05dc\u05b0\u05d1\u05b7\u05d1): 600 (from the bottom-right cell, where Radiologist 1 says \"Enlarged\" and Radiologist 2 says \"Enlarged\").\n\n  So, total agreements = 400 + 600 = 1000.\n\nWait, that can't be right. Let's re-examine the table structure.\n\nThe table is a 2x2 contingency table for agreement. The rows represent Radiologist 1's interpretation, and the columns represent Radiologist",
+      "correct": false
+    },
+    {
+      "index": 135,
+      "country": "israel",
+      "gt": "B",
+      "pred": null,
+      "raw": "The provided table appears to be a confusion matrix for two raters (Rater 1 and Rater 2) evaluating items into three categories: \"\u05e1\"\u05d4\" (likely \"\u05e1\"\u05d4\" meaning \"\u05e1\"\u05d4\" or \"\u05e1\"\u05d4\" in Hebrew, which could be a category name), \"\u05e6\u05dc \u05dc\u05d1 \u05de\u05d5\u05d2\u05d3\u05d5\u05dc\" (likely \"\u05e6\u05dc \u05dc\u05d1 \u05de\u05d5\u05d2\u05d3\u05d5\u05dc\" meaning \"enlarged left ventricle\"), and \"\u05e6\u05dc \u05dc\u05d1 \u05ea\u05e7\u05df\" (likely \"\u05e6\u05dc \u05dc\u05d1 \u05ea\u05e7\u05df\" meaning \"normal left ventricle\").\n\nTo calculate the Kappa index (Cohen's Kappa), we need to compute the observed agreement and the expected agreement by chance.\n\n**Step 1: Calculate Observed Agreement (P_o)**\n\nThe observed agreement is the proportion of times the raters agreed.\n\nTotal number of observations = 400 + 600 + 1000 = 2000\n\nNumber of agreements:\n- Both rated \"\u05e1\"\u05d4\": 1000\n- Both rated \"\u05e6\u05dc \u05dc\u05d1 \u05de\u05d5\u05d2\u05d3\u05d5\u05dc\": 400\n- Both rated \"\u05e6\u05dc \u05dc\u05d1 \u05ea\u05e7\u05df\": 500\n\nTotal agreements = 1000 +",
+      "correct": false
+    },
+    {
+      "index": 136,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Meta-analysis of cohort studies",
+      "correct": true
+    },
+    {
+      "index": 137,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Due to homogeneity between the studies, the hazard ratio is a weighted average of the studies HR=1.23",
+      "correct": true
+    },
+    {
+      "index": 138,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) temporal relationship, consistency, magnitude of association",
+      "correct": true
+    },
+    {
+      "index": 139,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) The rate of infants born alive and died in their first year per 1000 live births",
+      "correct": true
+    },
+    {
+      "index": 140,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) In 2011, the infant mortality rate of those born at 28-32 weeks was more than a hundred times higher than that of infants born at term (37-42 weeks)",
+      "correct": false
+    },
+    {
+      "index": 141,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Yes, because there is a sharp increase in morbidity within a short period of time and it matches the pathogen",
+      "correct": true
+    },
+    {
+      "index": 142,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Meat and rice as their consumption has been found to indicate a risk of intestinal diseases",
+      "correct": true
+    },
+    {
+      "index": 143,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Ovum of Schistosoma haematobium",
+      "correct": true
+    },
+    {
+      "index": 144,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Plasmodium malariae",
+      "correct": false
+    },
+    {
+      "index": 145,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Eikenella corrodens",
+      "correct": true
+    },
+    {
+      "index": 146,
+      "country": "israel",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) The agent will be stained as fast acid partially",
+      "correct": false
+    },
+    {
+      "index": 147,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Ehrlichia chaffeensis",
+      "correct": true
+    },
+    {
+      "index": 148,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A)",
+      "correct": true
+    },
+    {
+      "index": 149,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Fusobacterium nucleatum",
+      "correct": true
+    },
+    {
+      "index": 150,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Acute epidural hematoma",
+      "correct": false
+    },
+    {
+      "index": 151,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Observation",
+      "correct": false
+    },
+    {
+      "index": 152,
+      "country": "israel",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Brain atrophy",
+      "correct": false
+    },
+    {
+      "index": 153,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "The visual field test results show:\n\n- **Left eye (OS)**: A central scotoma (blind spot) \u2014 this suggests damage to the optic nerve or retina, often due to ischemia or compression.\n- **Right eye (OD)**: A superior temporal quadrant defect \u2014 this is a classic sign of **optic chiasm** or **optic tract** pathology, particularly **temporal lobe lesions**.\n\nThe pattern is **bitemporal hemianopia** \u2014 loss of vision in the temporal (outer) visual fields of both eyes \u2014 which is caused by **compression of the optic chiasm**.\n\nLet\u2019s evaluate the options:\n\n- **(A) Pituitary adenoma**: This is the most common cause of bitemporal hemianopia. A pituitary tumor can compress the optic chiasm, leading to loss of the temporal visual fields in both eyes. This matches the pattern.\n\n- **(B) Temporal lobe oligodendroglioma**: This would typically cause **homonymous hemianopia** (loss of half the visual field in both eyes on the same side), not bitemporal. Also, temporal lobe tumors usually cause visual field defects in the contralateral hemifield, not b",
+      "correct": true
+    },
+    {
+      "index": 154,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Acute disseminated encephalomyelitis",
+      "correct": true
+    },
+    {
+      "index": 155,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Tremor of polyneuropathy",
+      "correct": false
+    },
+    {
+      "index": 156,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Herpes simplex encephalitis",
+      "correct": true
+    },
+    {
+      "index": 157,
+      "country": "israel",
+      "gt": "C",
+      "pred": null,
+      "raw": "The clinical scenario describes a 56-year-old man with a history of subarachnoid hemorrhage (SAH) who now presents with cerebellar syndrome and cognitive slowness, along with MRI findings of low T2 signal in the membranes \u2014 which is highly suggestive of **arachnoiditis** or **arachnoid granulation** due to chronic inflammation or fibrosis following SAH.\n\nThe key point is that **arachnoiditis** (inflammation of the arachnoid membrane) can lead to **sensory disturbances**, particularly **deep sensation disorders** (such as proprioception and vibration sense), due to involvement of the dorsal columns or posterior root entry zones, or more commonly, due to the **compression or irritation of the dorsal root ganglia** or **posterior columns** by inflamed arachnoid membranes.\n\nHowever, in the context of **arachnoiditis following SAH**, the most characteristic and commonly reported sensory impairment is **deep sensation disorder**, which can manifest as **ataxia**, **gait instability**, and **loss of proprioception** \u2014 all of which are consistent with the cerebellar syndrome and sensory ataxia.\n\nLet\u2019s evaluate the options:\n\n- (A",
+      "correct": false
+    },
+    {
+      "index": 158,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) akinetic mutism",
+      "correct": true
+    },
+    {
+      "index": 159,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Difficulty distinguishing words presented to the left ear in listening d",
+      "correct": true
+    },
+    {
+      "index": 160,
+      "country": "israel",
+      "gt": "C",
+      "pred": "A",
+      "raw": "(A) Methylprednisolone",
+      "correct": false
+    },
+    {
+      "index": 161,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Thiamine",
+      "correct": false
+    },
+    {
+      "index": 162,
+      "country": "israel",
+      "gt": "B",
+      "pred": "A",
+      "raw": "(A) They are composed of colors and simple geometric shapes (unformed)",
+      "correct": false
+    },
+    {
+      "index": 163,
+      "country": "israel",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Atrophy and hypotonia of the detrusor",
+      "correct": false
+    },
+    {
+      "index": 164,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Posterior reversible leukoencephalopathy syndrome",
+      "correct": true
+    },
+    {
+      "index": 165,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Idiopathic trigeminal neuropathy",
+      "correct": false
+    },
+    {
+      "index": 166,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Deficiency of the retinal and choroidal tissue",
+      "correct": true
+    },
+    {
+      "index": 167,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "The image displays two pathological views: a gross image on the left showing a lesion with a distinct border and a central area of tissue loss or necrosis, and a microscopic image on the right showing a dense infiltrate of cells with large, irregular nuclei and abundant cytoplasm, consistent with a malignant neoplasm.\n\nThe microscopic view is characteristic of a **malignant melanoma**. Melanomas are cancers that arise from melanocytes, the pigment-producing cells of the skin. The cells in the image show features such as pleomorphism, hyperchromatic nuclei, and high mitotic activity \u2014 hallmarks of malignant melanocytes.\n\nLet\u2019s evaluate the options:\n\n- (A) Diffuse proliferation of melanocytes \u2014 This is correct. The microscopic image shows a proliferation of atypical melanocytes, which is the defining feature of melanoma.\n- (B) Infiltration of lymphocytes \u2014 While lymphocytes may be present in some skin lesions, this is not the primary characteristic shown.\n- (C) Infiltration of inflammatory cells on a bacterial infection background \u2014 There is no evidence of bacterial infection or typical bacterial inflammatory infiltrate.\n- (D) Inflammatory infiltration of viral origin \u2014 No viral etiology is suggested by the histology.\n\nTherefore, the",
+      "correct": true
+    },
+    {
+      "index": 168,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Intravitreal injection of ganciclovir",
+      "correct": false
+    },
+    {
+      "index": 169,
+      "country": "israel",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Seventh decade of life",
+      "correct": false
+    },
+    {
+      "index": 171,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Lattice dystrophy",
+      "correct": true
+    },
+    {
+      "index": 172,
+      "country": "israel",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Fungus",
+      "correct": false
+    },
+    {
+      "index": 174,
+      "country": "israel",
+      "gt": "D",
+      "pred": null,
+      "raw": "The images show a 4-year-old boy with a known hyperopic refractive error of +4.00 D in each eye, confirmed by repeated cycloplegic refraction. The images depict a condition where the eyes are not aligned properly when viewing a target at 6 meters \u2014 specifically, one eye is deviating inward (esotropia) while the other is looking straight ahead. This is a classic presentation of **accommodative esotropia**, which is common in young children with significant hyperopia.\n\nIn accommodative esotropia, the child\u2019s eyes turn inward because the hyperopia forces the eyes to accommodate (converge) to see clearly. When the hyperopia is corrected with glasses, the need for accommodation is reduced, and the esotropia often resolves. However, the decision to treat the strabismus (misalignment) depends on whether the misalignment is present when the child is wearing the glasses and whether it is a constant or intermittent deviation.\n\nThe key diagnostic step is to determine if the strabismus is **covered** (i.e., the misaligned eye is suppressed) or **uncovered** (i.e., the misaligned eye is still visible) when the child is wearing the",
+      "correct": false
+    },
+    {
+      "index": 176,
+      "country": "israel",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) In this condition, it is common to find intorsion",
+      "correct": false
+    },
+    {
+      "index": 177,
+      "country": "israel",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Measurement of the strabismus angle for distance one hour after pupil dilation with 1% cyclopentolate drops",
+      "correct": false
+    },
+    {
+      "index": 178,
+      "country": "israel",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) A similar condition can occur in parents",
+      "correct": true
+    },
+    {
+      "index": 179,
+      "country": "israel",
+      "gt": "B",
+      "pred": "A",
+      "raw": "The image shows a **corectopia** (also known as **corectopia** or **corectopia**), which is a **congenital anomaly** where the pupil is displaced from the center of the iris, often appearing as a vertical slit or misalignment. This is a classic finding in **aniridia** or **congenital cataract**, but more specifically, in the context of a one-month-old child, this finding is most consistent with **congenital cataract** or **corectopia** associated with **aniridia**.\n\nHowever, the most likely diagnosis here is **corectopia** associated with **aniridia**, which is a **congenital condition** characterized by **absence or underdevelopment of the iris**. The finding shown \u2014 a vertical slit or misaligned pupil \u2014 is a **hallmark sign** of **corectopia**.\n\nLet\u2019s evaluate the options:\n\n**(A) The expected visual acuity in adulthood is light perception or worse** \u2014 This is **incorrect**. While aniridia can cause severe visual impairment, many patients with aniridia have **some degree of useful vision**, especially if treated early. Visual acuity can range from light perception to 20",
+      "correct": false
+    },
+    {
+      "index": 180,
+      "country": "israel",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Herpes zoster virus",
+      "correct": false
+    },
+    {
+      "index": 181,
+      "country": "israel",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Intravenous antibiotics",
+      "correct": false
+    },
+    {
+      "index": 182,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Surgery to repair a fracture in the orbital floor as soon as possible",
+      "correct": true
+    },
+    {
+      "index": 183,
+      "country": "israel",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Anti IGF1-R monoclonal antibody",
+      "correct": true
+    },
+    {
+      "index": 184,
+      "country": "israel",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Lymphocytic infiltration in the tarsus",
+      "correct": false
+    },
+    {
+      "index": 185,
+      "country": "israel",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Conjunctivodacryocystorhinostomy tear duct reconstruction",
+      "correct": false
+    },
+    {
+      "index": 186,
+      "country": "israel",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Treatment with steroids according to the EUGOGO protocol",
+      "correct": false
+    },
+    {
+      "index": 187,
+      "country": "israel",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Valve of Hasner",
+      "correct": false
+    },
+    {
+      "index": 188,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "None of the provided options (A) Environment rotation, (B) Visual neglect, (C) Optic ataxia, or (D) Anton syndrome are accurate diagnoses based on the imaging.\n\nThe MRI image shows a brain with a prominent lesion in the posterior fossa, specifically involving the cerebellum and brainstem. This appearance is most consistent with a posterior fossa lesion, such as a tumor (e.g., medulloblastoma, ependymoma), hemorrhage, or abscess.\n\nNone of the listed conditions are neurological syndromes caused by brain lesions. They are all specific cognitive or perceptual disorders:\n\n- (A) \u201cEnvironment rotation\u201d is not a recognized medical term.\n- (B) Visual neglect is a hemispatial neglect syndrome typically caused by lesions in the parietal lobe (e.g., right parietal lobe lesion causing left-sided neglect).\n- (C) Optic ataxia is a visual-motor coordination disorder caused by lesions in the posterior parietal cortex or posterior cerebellum, often affecting reaching and grasping.\n- (D) Anton syndrome is a form of visual anosognosia, where patients deny blindness despite having profound visual impairment, typically due to occipital l",
+      "correct": false
+    },
+    {
+      "index": 189,
+      "country": "israel",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Left occipital lobe",
+      "correct": false
+    },
+    {
+      "index": 190,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) CTA of the head and neck",
+      "correct": true
+    },
+    {
+      "index": 191,
+      "country": "israel",
+      "gt": "B",
+      "pred": null,
+      "raw": "The image shows bilateral ptosis (drooping of the upper eyelids) and limitation of eye movements, which are classic signs of **myasthenia gravis (MG)**. However, the key additional clue is that the patient\u2019s **older brother has identical findings**, indicating a **familial or genetic component**.\n\nWhile myasthenia gravis is often autoimmune and sporadic, there is a rare **familial form** of myasthenia gravis, and more importantly, the **most common inherited disorder causing congenital myasthenic syndromes (CMS)** is **dysferlinopathy** or **mutations in genes like CHRNE, SCN4A, or others** \u2014 but the most relevant systemic investigation in this context is not directly about the eye muscles.\n\nHowever, the **most critical systemic investigation** in a patient with **chronic, bilateral, symmetric eye movement limitation and ptosis** \u2014 especially with a **family history** \u2014 is to evaluate for **autoimmune or genetic disorders affecting neuromuscular transmission**.\n\nBut wait \u2014 the **most classic and relevant systemic investigation** for a patient with **familial ptosis and ophthalmoplegia** is **not** directly listed in the options, but",
+      "correct": false
+    },
+    {
+      "index": 192,
+      "country": "israel",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Tardigrada",
+      "correct": false
+    },
+    {
+      "index": 193,
+      "country": "israel",
+      "gt": "D",
+      "pred": "A",
+      "raw": "The image shows a severe ocular condition characterized by extensive corneal opacity, vascularization, and possible ulceration \u2014 features highly suggestive of **syphilitic keratitis** or **syphilitic interstitial keratitis**, which is a manifestation of tertiary syphilis.\n\nHowever, among the given options, none directly mention syphilis. Let\u2019s evaluate the options:\n\n- (A) HIV carrier \u2014 HIV can cause opportunistic eye infections, but the appearance is not typically this severe or specific.\n- (B) Missense mutation in the TGF\u03b2 gene \u2014 Mutations in TGF\u03b2 genes are associated with **hereditary corneal dystrophies** (e.g., TGF\u03b21-related corneal dystrophy), which can cause corneal opacities and vascularization, but the pattern is usually more diffuse and not typically this acute or ulcerative.\n- (C) Frame-shift mutation in the PAX6 gene \u2014 PAX6 mutations cause **aniridia** and other developmental eye disorders, but not typically this type of acute corneal destruction.\n- (D) UV radiation \u2014 UV exposure can cause **photokeratitis** or **corneal sunburn**, but this usually presents as transient pain, red",
+      "correct": false
+    },
+    {
+      "index": 195,
+      "country": "israel",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Thiel-Benke Corneal dystrophy",
+      "correct": false
+    },
+    {
+      "index": 196,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Deep anterior lamellar keratoplasty",
+      "correct": true
+    },
+    {
+      "index": 197,
+      "country": "israel",
+      "gt": "B",
+      "pred": "A",
+      "raw": "The image shows a slit-lamp view of the cornea with visible corneal opacities and possible Descemet\u2019s membrane folds or stromal changes, which are suggestive of **corneal endothelial dysfunction or disease**. Given the clinical context of a 7-year-old boy with blurred vision and the slit-lamp findings, this is highly suggestive of **Fuchs\u2019 endothelial corneal dystrophy (FECD)**, although FECD is more common in older adults. However, in children, **juvenile Fuchs\u2019 dystrophy** or other endothelial dystrophies can present similarly.\n\nBut more importantly, the question asks about the **characteristic feature of endothelial cells in this disease**.\n\nLet\u2019s evaluate the options:\n\n- **(A) Slow growth in cell culture** \u2014 This is not characteristic of Fuchs\u2019 dystrophy. In fact, Fuchs\u2019 endothelial cells often show **abnormal proliferation** and **reduced function**, but not necessarily slow growth in culture.\n\n- **(B) Presence of microvilli** \u2014 This is **incorrect**. Microvilli are structures found on the apical surface of **epithelial cells**, not endothelial cells. Endothelial cells are **non-polar",
+      "correct": false
+    },
+    {
+      "index": 198,
+      "country": "israel",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Diffuse lamellar keratitis",
+      "correct": true
+    },
+    {
+      "index": 199,
+      "country": "israel",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Pilocarpine",
+      "correct": false
+    },
+    {
+      "index": 200,
+      "country": "israel",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Alport syndrome",
+      "correct": true
+    },
+    {
+      "index": 1,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Administration of coagulation factor IX",
+      "correct": true
+    },
+    {
+      "index": 3,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Administration of pancreatic enzyme inhibitors",
+      "correct": true
+    },
+    {
+      "index": 4,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "index": 5,
+      "country": "japan",
+      "gt": "D",
+      "pred": "A",
+      "raw": "The patient presents with subcutaneous bleeding, thrombocytopenia, and pancytopenia (low white blood cells). The peripheral blood smear shows 9% blasts and 60% promyelocytes, which is highly suggestive of acute promyelocytic leukemia (APL), a subtype of acute myeloid leukemia (AML).\n\nThe bone marrow smear (Supplement No. 5) shows characteristic promyelocytes with abundant granules, which is consistent with APL.\n\nAPL is a medical emergency due to the high risk of disseminated intravascular coagulation (DIC) and bleeding. The treatment of choice for APL is all-trans retinoic acid (ATRA) combined with arsenic trioxide (ATO), or ATRA plus chemotherapy (e.g., idarubicin). However, among the given options, none are ATRA or ATO.\n\nLet\u2019s evaluate the options:\n\n- (A) Imatinib: Used for chronic myeloid leukemia (CML) and some Philadelphia chromosome-positive leukemias. Not indicated for APL.\n- (B) Gefitinib: A tyrosine kinase inhibitor used for non-small cell lung cancer. Not indicated for APL.\n- (",
+      "correct": false
+    },
+    {
+      "index": 6,
+      "country": "japan",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Vocal cord nodule",
+      "correct": false
+    },
+    {
+      "index": 8,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Perform emergency surgery",
+      "correct": true
+    },
+    {
+      "index": 9,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Plasma exchange therapy",
+      "correct": true
+    },
+    {
+      "index": 11,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Antiviral medication",
+      "correct": false
+    },
+    {
+      "index": 12,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Emergency cesarean section",
+      "correct": true
+    },
+    {
+      "index": 15,
+      "country": "japan",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Wilms tumor",
+      "correct": false
+    },
+    {
+      "index": 16,
+      "country": "japan",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Vancomycin",
+      "correct": false
+    },
+    {
+      "index": 17,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Auditory Brainstem Response",
+      "correct": false
+    },
+    {
+      "index": 19,
+      "country": "japan",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Anemia",
+      "correct": false
+    },
+    {
+      "index": 20,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Angiosarcoma",
+      "correct": true
+    },
+    {
+      "index": 21,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Atrial fibrillation",
+      "correct": true
+    },
+    {
+      "index": 28,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Cervical cerclage",
+      "correct": false
+    },
+    {
+      "index": 31,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) EEG (Electroencephalogram)",
+      "correct": true
+    },
+    {
+      "index": 32,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) \u2461",
+      "correct": true
+    },
+    {
+      "index": 33,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) The earlier the birth year, the higher the prevalence rate at the same measured age",
+      "correct": false
+    },
+    {
+      "index": 34,
+      "country": "japan",
+      "gt": "B",
+      "pred": null,
+      "raw": "The diagram illustrates the relationship between the \"loading amount of toxic substances\" (on the y-axis, labeled \u8ca0\u8377\u91cf) and the \"probability of toxicity occurring\" (on the x-axis, labeled \u6bd2\u6027\u8868\u73fe\u78ba\u7387).\n\nThe **acceptable daily intake (ADI)** is a measure of the amount of a substance that can be ingested daily over a lifetime without appreciable health risk. It is typically derived from the **no-observed-adverse-effect level (NOAEL)** or the **lowest-observed-adverse-effect level (LOAEL)**, and is set to be a very conservative estimate, often at a level where the probability of adverse effects is extremely low \u2014 typically **less than 1%**, and often **0.1% or even lower** for regulatory purposes.\n\nLooking at the graph:\n- The x-axis represents the probability of toxicity. The point \u2460 corresponds to a probability of 100% (i.e., toxicity is certain).\n- The point \u2461 corresponds to a probability of 50% (i.e., 50% of the population would experience toxicity).\n- The point \u2462 corresponds to a probability of 0% (i.e., no toxicity is expected",
+      "correct": false
+    },
+    {
+      "index": 36,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Contrast-enhanced chest and abdominal CT",
+      "correct": true
+    },
+    {
+      "index": 37,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Anterior frontal position",
+      "correct": true
+    },
+    {
+      "index": 40,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Normal saline infusion",
+      "correct": true
+    },
+    {
+      "index": 41,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Escherichia coli",
+      "correct": true
+    },
+    {
+      "index": 43,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Ischemic colitis",
+      "correct": true
+    },
+    {
+      "index": 45,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Intermittent exotropia is observed",
+      "correct": true
+    },
+    {
+      "index": 46,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Gallium scintigraphy",
+      "correct": true
+    },
+    {
+      "index": 51,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Fresh frozen plasma transfusion",
+      "correct": true
+    },
+    {
+      "index": 52,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Breast cancer",
+      "correct": true
+    },
+    {
+      "index": 53,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Tracheoesophageal fistula",
+      "correct": true
+    },
+    {
+      "index": 54,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Partial nephrectomy",
+      "correct": true
+    },
+    {
+      "index": 56,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Subacute thyroiditis",
+      "correct": true
+    },
+    {
+      "index": 57,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Interstitial pneumonia",
+      "correct": true
+    },
+    {
+      "index": 60,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Cyst aspiration",
+      "correct": false
+    },
+    {
+      "index": 61,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Heparin administration",
+      "correct": true
+    },
+    {
+      "index": 62,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Superior vena cava",
+      "correct": true
+    },
+    {
+      "index": 63,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Hypercalcemia",
+      "correct": true
+    },
+    {
+      "index": 67,
+      "country": "japan",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Deficiency of GPI-anchored proteins",
+      "correct": false
+    },
+    {
+      "index": 73,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) \u2462",
+      "correct": false
+    },
+    {
+      "index": 74,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Acute cholecystitis",
+      "correct": true
+    },
+    {
+      "index": 76,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Hyposmia",
+      "correct": true
+    },
+    {
+      "index": 81,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Biliary atresia",
+      "correct": true
+    },
+    {
+      "index": 82,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Lumbar spine MRI",
+      "correct": true
+    },
+    {
+      "index": 83,
+      "country": "japan",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Attendance is prohibited for five days after onset",
+      "correct": false
+    },
+    {
+      "index": 84,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Otosclerosis",
+      "correct": true
+    },
+    {
+      "index": 85,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Benzalkonium chloride",
+      "correct": true
+    },
+    {
+      "index": 87,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Review of tools",
+      "correct": true
+    },
+    {
+      "index": 88,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Obstructive jaundice",
+      "correct": true
+    },
+    {
+      "index": 89,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Monitoring",
+      "correct": true
+    },
+    {
+      "index": 90,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Chylothorax",
+      "correct": false
+    },
+    {
+      "index": 91,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Master two-step test",
+      "correct": false
+    },
+    {
+      "index": 93,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Intake of citric acid is effective",
+      "correct": true
+    },
+    {
+      "index": 96,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) \u2463",
+      "correct": true
+    },
+    {
+      "index": 100,
+      "country": "japan",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Transverse colon",
+      "correct": false
+    },
+    {
+      "index": 101,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Endoscopic mucosal resection",
+      "correct": false
+    },
+    {
+      "index": 105,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Bacterial keratitis",
+      "correct": true
+    },
+    {
+      "index": 106,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Pectus excavatum",
+      "correct": true
+    },
+    {
+      "index": 108,
+      "country": "japan",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Coarctation of the aorta",
+      "correct": false
+    },
+    {
+      "index": 109,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Atrial pacing waveform",
+      "correct": true
+    },
+    {
+      "index": 111,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Vitiligo",
+      "correct": true
+    },
+    {
+      "index": 112,
+      "country": "japan",
+      "gt": "C",
+      "pred": "A",
+      "raw": "The patient is a 67-year-old male who underwent right lung lobectomy for stage IA lung adenocarcinoma. Postoperatively, he started eating the day after surgery. However, chest tube drainage suddenly increased after meals, reaching over 2 L by the evening, with no air leak. Vital signs are stable (normal temperature, HR, BP, RR, SpO2).\n\nThe key point is the **sudden increase in drainage after eating**, which suggests **postprandial reflux of gastric contents into the thoracic cavity**. This is a classic presentation of **gastric reflux into the pleural space**, which can occur after thoracic surgery, especially if the patient is eating too early or if there is impaired gastric emptying or reflux.\n\nThe drainage shown in the image (Supplement No. 11) is **serosanguinous**, not purulent or bloody, and the volume is high. The absence of air leak suggests the chest wall is intact, but the drainage is likely due to **gastric reflux**.\n\nLet\u2019s evaluate the options:\n\n- **(A) Pleurodesis**: This is used to prevent recurrent pleural effusion or pneumothorax, often in cases of malignant pleural eff",
+      "correct": false
+    },
+    {
+      "index": 115,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Anti-acetylcholine receptor antibody",
+      "correct": true
+    },
+    {
+      "index": 118,
+      "country": "japan",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) wheezes",
+      "correct": false
+    },
+    {
+      "index": 119,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Ulcerative colitis",
+      "correct": true
+    },
+    {
+      "index": 122,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Demolition worker at a construction site",
+      "correct": true
+    },
+    {
+      "index": 123,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Nursing care certification",
+      "correct": true
+    },
+    {
+      "index": 125,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Enteral nutrition via nasogastric tube",
+      "correct": false
+    },
+    {
+      "index": 129,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Phrenic nerve paralysis",
+      "correct": true
+    },
+    {
+      "index": 133,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Dermatomyositis",
+      "correct": true
+    },
+    {
+      "index": 137,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) It spreads from person to person",
+      "correct": true
+    },
+    {
+      "index": 138,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Infective endocarditis",
+      "correct": true
+    },
+    {
+      "index": 139,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Dexamethasone administration",
+      "correct": true
+    },
+    {
+      "index": 142,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Emergency surgery",
+      "correct": true
+    },
+    {
+      "index": 143,
+      "country": "japan",
+      "gt": "D",
+      "pred": null,
+      "raw": "Looking at the provided bar charts, I need to identify which symptom is labeled as \"A\".\n\nThe charts are divided into two sections:\n- Top chart: \"\u5973\u6027\u306e\u6709\u8a34\u8005\u7387\" (Female complaint rate)\n- Bottom chart: \"\u7537\u6027\u306e\u6709\u8a34\u8005\u7387\" (Male complaint rate)\n\nIn both charts, the symptoms are listed on the right side, and the bars represent the complaint rates per 1,000 people for 2016 (dark bars) and 2019 (light bars).\n\nLooking at the top chart (for females), the symptoms listed from top to bottom are:\n- \u982d\u75db (Headache)\n- \u8eab\u4f53\u304c\u3060\u308b\u3044 (Feel tired)\n- \u624b\u8db3\u306e\u95a2\u7bc0\u304c\u75db\u3080 (Joints in hands and feet hurt)\n- A\n- \u80c3\u3053\u308a (Stomachache)\n\nLooking at the bottom chart (for males), the symptoms listed from top to bottom are:\n- \u982d\u75db (Headache)\n- \u8eab\u4f53\u304c\u3060\u308b\u3044 (Feel tired)\n- \u624b\u8db3\u306e\u95a2\u7bc0\u304c\u75db\u3080 (Joints in hands and feet hurt)\n- A\n- \u80c3\u3053\u308a (Stomachache)\n\nIn",
+      "correct": false
+    },
+    {
+      "index": 144,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Group A beta-hemolytic streptococcus",
+      "correct": true
+    },
+    {
+      "index": 145,
+      "country": "japan",
+      "gt": "D",
+      "pred": null,
+      "raw": "Based on the provided information, let's analyze the family structure to determine the correct family tree.\n\nThe patient is a 49-year-old male. He is married and has three children: the oldest is a boy, then another boy, and then a girl. He lives with his wife and his two younger children (the second son and the daughter).\n\nHis father died of stomach cancer at age 72.\nHis mother died of a stroke at age 60.\n\nHe has four siblings in total: an older sister, himself, and two younger siblings (a younger brother and another sibling, but the text says \"my older sister, myself, and my younger brother,\" which implies there are four siblings total: older sister, patient, younger brother, and one more sibling who is not mentioned by name but must be there to make four).\n\nThe key is to determine the gender and order of the siblings.\n\nThe patient is male. He has an older sister (so she is female). He has a younger brother (so he is male). That accounts for three siblings. The text says \"four brothers and sisters,\" so there must be one more sibling. The text says \"from the oldest to the oldest, my older sister, myself, and my younger brother.\" This",
+      "correct": false
+    },
+    {
+      "index": 147,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Percutaneous drainage of intrahepatic lesions",
+      "correct": true
+    },
+    {
+      "index": 149,
+      "country": "japan",
+      "gt": "C",
+      "pred": "A",
+      "raw": "(A) Suicide",
+      "correct": false
+    },
+    {
+      "index": 151,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) A callus is forming.",
+      "correct": true
+    },
+    {
+      "index": 152,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Positioning change",
+      "correct": true
+    },
+    {
+      "index": 153,
+      "country": "japan",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Cesarean section",
+      "correct": false
+    },
+    {
+      "index": 154,
+      "country": "japan",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Cystostomy procedure",
+      "correct": false
+    },
+    {
+      "index": 155,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) We will start an intravenous infusion of uterotonics",
+      "correct": false
+    },
+    {
+      "index": 159,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Endotracheal intubation",
+      "correct": true
+    },
+    {
+      "index": 161,
+      "country": "japan",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C)",
+      "correct": false
+    },
+    {
+      "index": 167,
+      "country": "japan",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Traffic accident",
+      "correct": false
+    },
+    {
+      "index": 168,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "Based on the clinical presentation, physical examination findings, and imaging, this patient most likely has a **large ovarian tumor** (likely a **serous cystadenoma** or **endometrioma**, given the context of infertility and pelvic pain) with associated **endometriosis**.\n\nKey findings:\n- **Symptoms**: Chronic pelvic pain (including non-menstrual pain), infertility.\n- **Physical exam**: Poor uterine mobility, swollen bilateral adnexa, painful induration in Douglas fossa (classic for endometriosis).\n- **Imaging**: MRI shows a large, well-defined, unilocular cystic mass in the pelvis, likely ovarian.\n- **Lab**: Elevated CA125 (52 U/mL) \u2014 a marker often elevated in endometriosis and ovarian tumors, though not diagnostic alone.\n- **Age**: 32 years \u2014 a common age for endometriosis and ovarian cysts.\n\nThe treatment must address both the **tumor** and the **underlying endometriosis** causing pain and infertility.\n\nLet\u2019s evaluate the options:\n\n- **(A) Tumor excision surgery**: This is the standard treatment for ovarian tumors, especially when they are large and symptomatic. It",
+      "correct": true
+    },
+    {
+      "index": 170,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Insulin Tolerance Test (ITT)",
+      "correct": true
+    },
+    {
+      "index": 171,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Pulmonary hypertension",
+      "correct": true
+    },
+    {
+      "index": 173,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Microscopic polyangiitis",
+      "correct": true
+    },
+    {
+      "index": 176,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Median nerve",
+      "correct": true
+    },
+    {
+      "index": 181,
+      "country": "japan",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Endoscopic ultrasound examination",
+      "correct": false
+    },
+    {
+      "index": 184,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) There is a risk of human infection",
+      "correct": false
+    },
+    {
+      "index": 185,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Adrenal adenoma",
+      "correct": true
+    },
+    {
+      "index": 186,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Trimethoprim-Sulfamethoxazole",
+      "correct": false
+    },
+    {
+      "index": 189,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) No response to verbal stimuli",
+      "correct": true
+    },
+    {
+      "index": 190,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "index": 191,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Ceftriaxone",
+      "correct": true
+    },
+    {
+      "index": 193,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) IgA vasculitis",
+      "correct": true
+    },
+    {
+      "index": 194,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Head MRA",
+      "correct": true
+    },
+    {
+      "index": 197,
+      "country": "japan",
+      "gt": "D",
+      "pred": "E",
+      "raw": "(E)",
+      "correct": false
+    },
+    {
+      "index": 198,
+      "country": "japan",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Adrenaline",
+      "correct": false
+    },
+    {
+      "index": 199,
+      "country": "japan",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) C",
+      "correct": false
+    },
+    {
+      "index": 200,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Red blood cell transfusion",
+      "correct": true
+    },
+    {
+      "index": 201,
+      "country": "japan",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) T12",
+      "correct": false
+    },
+    {
+      "index": 202,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Hip dislocation",
+      "correct": true
+    },
+    {
+      "index": 203,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) The blood flow to the left knee is well maintained",
+      "correct": true
+    },
+    {
+      "index": 204,
+      "country": "japan",
+      "gt": "D",
+      "pred": null,
+      "raw": "Wernicke aphasia results from damage to Wernicke\u2019s area, which is located in the posterior part of the left superior temporal gyrus (Brodmann area 22) in right-handed individuals. This region is critical for language comprehension.\n\nIn the provided FLAIR MRI images, we are looking for a lesion in the left temporal lobe, specifically in the posterior superior temporal gyrus.\n\n- Image A: Shows a lesion in the left frontal lobe (likely the inferior frontal gyrus or Broca\u2019s area), which would be associated with Broca aphasia, not Wernicke.\n- Image B: Shows a lesion in the left temporal lobe, specifically in the posterior superior temporal gyrus \u2014 this is the classic location for Wernicke\u2019s area.\n- Image C: Shows a lesion in the left thalamus or basal ganglia region \u2014 not typically associated with Wernicke aphasia.\n- Image D: Shows a lesion in the left frontal lobe (possibly the superior frontal gyrus or precentral gyrus) \u2014 not Wernicke\u2019s area.\n- Image E: Shows a lesion in the left parietal lobe \u2014 not Wernicke\u2019s area.\n\nTherefore, the image that corresponds",
+      "correct": false
+    },
+    {
+      "index": 205,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Lymphedema",
+      "correct": true
+    },
+    {
+      "index": 206,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Improvement of prognosis",
+      "correct": true
+    },
+    {
+      "index": 207,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Bronchoscopy",
+      "correct": false
+    },
+    {
+      "index": 208,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Rosenstein sign",
+      "correct": true
+    },
+    {
+      "index": 209,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Please only participate in light exercise",
+      "correct": true
+    },
+    {
+      "index": 210,
+      "country": "japan",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Cardiac arrest",
+      "correct": false
+    },
+    {
+      "index": 211,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Emergency pacing",
+      "correct": true
+    },
+    {
+      "index": 214,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Heparin",
+      "correct": true
+    },
+    {
+      "index": 215,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Acute leukemia",
+      "correct": true
+    },
+    {
+      "index": 216,
+      "country": "japan",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Measles",
+      "correct": false
+    },
+    {
+      "index": 217,
+      "country": "japan",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Vitreous hemorrhage",
+      "correct": false
+    },
+    {
+      "index": 221,
+      "country": "japan",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Decrease in active vitamin D",
+      "correct": false
+    },
+    {
+      "index": 222,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Follow-up",
+      "correct": true
+    },
+    {
+      "index": 223,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Uterine adenomyosis",
+      "correct": true
+    },
+    {
+      "index": 226,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Warthin tumor",
+      "correct": true
+    },
+    {
+      "index": 227,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Rhegmatogenous retinal detachment",
+      "correct": true
+    },
+    {
+      "index": 228,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Subconjunctival hemorrhage",
+      "correct": true
+    },
+    {
+      "index": 229,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Packaging of prescribed oral medication",
+      "correct": true
+    },
+    {
+      "index": 230,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Surgical therapy",
+      "correct": true
+    },
+    {
+      "index": 234,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Splenomegaly is observed",
+      "correct": true
+    },
+    {
+      "index": 236,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Rapid intravenous injection",
+      "correct": true
+    },
+    {
+      "index": 238,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Kawasaki disease",
+      "correct": true
+    },
+    {
+      "index": 239,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "index": 240,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Emergency surgery",
+      "correct": true
+    },
+    {
+      "index": 241,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) The weight gain is appropriate",
+      "correct": false
+    },
+    {
+      "index": 242,
+      "country": "japan",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Cesarean section",
+      "correct": false
+    },
+    {
+      "index": 247,
+      "country": "japan",
+      "gt": "D",
+      "pred": null,
+      "raw": "In severe cases of chronic obstructive pulmonary disease (COPD), the heart is often displaced downward and to the left due to hyperinflation of the lungs, which pushes the diaphragm downward and shifts the heart's position.\n\nThe apical heartbeat (also known as the point of maximal impulse or PMI) is typically located at the 5th intercostal space, midclavicular line in a healthy individual. However, in severe COPD, this point is often displaced inferiorly and laterally.\n\nLooking at the diagram:\n- \u2460 is in the upper left chest (2nd intercostal space, left sternal border).\n- \u2461 is in the upper right chest (2nd intercostal space, right sternal border).\n- \u2462 is in the left mid-chest, around the 4th intercostal space.\n- \u2463 is in the right mid-chest, around the 4th intercostal space.\n- \u2464 is in the lower mid-chest, around the 5th intercostal space, midclavicular line.\n\nIn severe COPD, the apical impulse is often found at a lower position than normal, typically around the 5th or 6",
+      "correct": false
+    },
+    {
+      "index": 249,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Miotic eye drops",
+      "correct": true
+    },
+    {
+      "index": 250,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) You may wash your face at home",
+      "correct": true
+    },
+    {
+      "index": 251,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Acute subdural hematoma",
+      "correct": true
+    },
+    {
+      "index": 254,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Spleen",
+      "correct": true
+    },
+    {
+      "index": 255,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) \u2462",
+      "correct": true
+    },
+    {
+      "index": 258,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) \u2463 Positive end-expiratory pressure (PEEP)",
+      "correct": true
+    },
+    {
+      "index": 259,
+      "country": "japan",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Right renal vein embolization",
+      "correct": false
+    },
+    {
+      "index": 263,
+      "country": "japan",
+      "gt": "B",
+      "pred": "A",
+      "raw": "The image shows a close-up of a person's lower face, specifically the chin and jawline area, with multiple red, inflamed lesions and some pustules. This presentation is characteristic of acne vulgaris, which commonly affects the face, especially the chin and jawline, and is often exacerbated by hormonal changes.\n\nThe clinical scenario describes a pregnant woman in active labor. While the question asks for an appropriate response to the dermatological finding, the context of pregnancy and labor is irrelevant to the diagnosis of the skin condition shown. The lesions are consistent with acne vulgaris, which is common during pregnancy due to hormonal fluctuations.\n\nLet\u2019s briefly consider the other options:\n- (A) Prurigo nodularis: Characterized by intensely itchy, firm nodules, typically on the extremities, not the face.\n- (C) Lupus vulgaris: A form of cutaneous tuberculosis, presenting with violaceous, infiltrated plaques, usually on the face, but not typically with the pustular lesions seen here.\n- (D) Rosacea-like dermatitis: Often presents with erythema, papules, and pustules, but typically on the central face (nose, cheeks, forehead), and is associated with flushing and telangiect",
+      "correct": false
+    },
+    {
+      "index": 267,
+      "country": "japan",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Thromboembolism",
+      "correct": false
+    },
+    {
+      "index": 268,
+      "country": "japan",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Bimanual uterine compression",
+      "correct": false
+    },
+    {
+      "index": 269,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Mucinous cystic neoplasm (MCN)",
+      "correct": true
+    },
+    {
+      "index": 271,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) SGLT2 inhibitor",
+      "correct": true
+    },
+    {
+      "index": 274,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Diazepam administration",
+      "correct": true
+    },
+    {
+      "index": 275,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Administration of betamethasone",
+      "correct": true
+    },
+    {
+      "index": 277,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Mature teratoma",
+      "correct": false
+    },
+    {
+      "index": 278,
+      "country": "japan",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Adnexectomy",
+      "correct": false
+    },
+    {
+      "index": 279,
+      "country": "japan",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Bowen's disease",
+      "correct": false
+    },
+    {
+      "index": 280,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Cardiac amyloidosis",
+      "correct": true
+    },
+    {
+      "index": 281,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Facial nerve paralysis",
+      "correct": true
+    },
+    {
+      "index": 282,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Spinal and bulbar muscular atrophy",
+      "correct": true
+    },
+    {
+      "index": 284,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Peritonsillar abscess",
+      "correct": true
+    },
+    {
+      "index": 285,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Walled-off pancreatic necrosis (WON)",
+      "correct": true
+    },
+    {
+      "index": 286,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Acute glomerulonephritis",
+      "correct": true
+    },
+    {
+      "index": 287,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Meckel diverticulum",
+      "correct": true
+    },
+    {
+      "index": 293,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Administration of antibiotics",
+      "correct": true
+    },
+    {
+      "index": 295,
+      "country": "japan",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Occipital posterior position",
+      "correct": false
+    },
+    {
+      "index": 297,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Ultraviolet rays",
+      "correct": true
+    },
+    {
+      "index": 298,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Papilledema",
+      "correct": true
+    },
+    {
+      "index": 300,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Supplement with formula milk",
+      "correct": true
+    },
+    {
+      "index": 302,
+      "country": "japan",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Blood culture",
+      "correct": true
+    },
+    {
+      "index": 303,
+      "country": "japan",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Vancomycin",
+      "correct": true
+    },
+    {
+      "index": 304,
+      "country": "japan",
+      "gt": "A",
+      "pred": "A",
+      "raw": "The question asks which antibiotic should be started, but the provided options (A) Contrast-enhanced chest CT, (B) Echocardiogram, (C) Electrocardiogram, and (D) Spirometry are all diagnostic imaging or functional tests, not antibiotics.\n\nHowever, the context strongly suggests this is a multiple-choice question where the correct answer is implied to be one of these options, likely because the question is misphrased or the options are incorrectly listed. The Gram stain image (Supplement No. 9) shows Gram-positive cocci in clusters, which is highly suggestive of Staphylococcus aureus, a common cause of postoperative infection, including prosthetic joint infections.\n\nGiven the clinical scenario \u2014 a 75-year-old female with a recent total knee replacement, fever, localized pain and swelling at the surgical site, elevated CRP, and Gram-positive cocci in clusters in synovial fluid \u2014 the most appropriate initial antibiotic therapy would be directed against Staphylococcus aureus, typically with a combination of a beta-lactam (like nafcillin or oxacillin) and an anti-staphylococcal agent (like vancomycin if methicillin-resistant is suspected).\n\nSince none of the options",
+      "correct": true
+    },
+    {
+      "index": 305,
+      "country": "japan",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Request for assistance from the supervising physician",
+      "correct": true
+    },
+    {
+      "index": 1,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Steatosis",
+      "correct": true
+    },
+    {
+      "index": 2,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Eosinophilic esophagitis",
+      "correct": true
+    },
+    {
+      "index": 3,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Endomysial inflammatory infiltrate and rimmed vacuoles: Inclusion body myositis",
+      "correct": true
+    },
+    {
+      "index": 4,
+      "country": "spain",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Hepatocarcinoma on cirrhotic liver",
+      "correct": false
+    },
+    {
+      "index": 5,
+      "country": "spain",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Antibodies against desmoglein 3",
+      "correct": false
+    },
+    {
+      "index": 6,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) DRESS syndrome",
+      "correct": true
+    },
+    {
+      "index": 7,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Right scarring nephropathy post-pyelonephritis",
+      "correct": true
+    },
+    {
+      "index": 8,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Stage IV lymphoproliferative syndrome",
+      "correct": true
+    },
+    {
+      "index": 9,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Uterine curettage",
+      "correct": true
+    },
+    {
+      "index": 11,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Fibrous dysplasia",
+      "correct": true
+    },
+    {
+      "index": 12,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Ruptured abdominal aortic aneurysm. It is an emergency and the first option is surgical or endovascular treatment",
+      "correct": true
+    },
+    {
+      "index": 13,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Hematoma in the sheath of the left anterior rectus of the abdomen",
+      "correct": true
+    },
+    {
+      "index": 14,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Place a chest drain in the right pleural cavity",
+      "correct": true
+    },
+    {
+      "index": 15,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Sarcoidosis",
+      "correct": true
+    },
+    {
+      "index": 16,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) CT of the abdomen and pelvis with intravenous contrast using an angio-CT protocol due to suspected mesenteric ischemia",
+      "correct": true
+    },
+    {
+      "index": 17,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Calcific tendinitis",
+      "correct": true
+    },
+    {
+      "index": 18,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Anterior subepicardial necrosis and ischemia",
+      "correct": true
+    },
+    {
+      "index": 19,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Tumor infiltration of the right cavernous sinus",
+      "correct": true
+    },
+    {
+      "index": 20,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Renal angiomyolipoma / tuberous sclerosis",
+      "correct": true
+    },
+    {
+      "index": 21,
+      "country": "spain",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) It is possibly a case of neuromyelitis optica",
+      "correct": false
+    },
+    {
+      "index": 22,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Surgical enterolithotomy",
+      "correct": true
+    },
+    {
+      "index": 23,
+      "country": "spain",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Open reduction and locked plate and screws",
+      "correct": false
+    },
+    {
+      "index": 24,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Normotension and dipper pattern",
+      "correct": true
+    },
+    {
+      "index": 25,
+      "country": "spain",
+      "gt": "A",
+      "pred": null,
+      "raw": "The patient is a 47-year-old man with fever, pleuritic chest pain, and crackles in the left hemithorax, despite being on antibiotics for sinusitis. He has hypertension, mild anemia, leukocytosis with neutrophilia, thrombocytosis, elevated creatinine, and proteinuria with hematuria on urinalysis. The chest X-ray (image 25) shows a left lower lobe infiltrate with possible pleural effusion.\n\nThis clinical picture is highly suggestive of **pyelonephritis** or **renal involvement in a systemic infection**, but the key clue is the **combination of pulmonary infiltrate, renal dysfunction, and systemic symptoms** \u2014 which points toward **vasculitis**.\n\nThe most likely diagnosis is **Granulomatosis with Polyangiitis (GPA)**, formerly known as Wegener\u2019s granulomatosis. GPA is a systemic necrotizing vasculitis that commonly affects the upper and lower respiratory tract, kidneys, and can present with pulmonary infiltrates and renal involvement (glomerulonephritis).\n\nThe hallmark serologic marker for GPA is **anti-proteinase 3 (PR3) antibodies**.\n\nLet\u2019s evaluate the options:\n\n- **(A",
+      "correct": false
+    },
+    {
+      "index": 26,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Acute bronchoalveolar pneumonia",
+      "correct": true
+    },
+    {
+      "index": 27,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Pulmonary thromboembolism",
+      "correct": true
+    },
+    {
+      "index": 28,
+      "country": "spain",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Reports a loss of vision, like a curtain, affecting the upper part of the visual field",
+      "correct": false
+    },
+    {
+      "index": 29,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Vocal nodules",
+      "correct": true
+    },
+    {
+      "index": 30,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Gastrointestinal stromal tumor",
+      "correct": true
+    },
+    {
+      "index": 31,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Pemphigus vulgaris",
+      "correct": true
+    },
+    {
+      "index": 32,
+      "country": "spain",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Acute myeloid leukemia",
+      "correct": false
+    },
+    {
+      "index": 33,
+      "country": "spain",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Amyloidosis",
+      "correct": false
+    },
+    {
+      "index": 34,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Mediastinal metastasis of sarcomatoid carcinoma",
+      "correct": true
+    },
+    {
+      "index": 35,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Immunological analysis: Positive anti-cN1A antibodies. Biopsy: perivascular inflammatory infiltrate and presence of rimmed vacuoles. Diagnosis: inclusion body myositis",
+      "correct": true
+    },
+    {
+      "index": 36,
+      "country": "spain",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Basal cell carcinoma",
+      "correct": false
+    },
+    {
+      "index": 37,
+      "country": "spain",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Rituximab",
+      "correct": false
+    },
+    {
+      "index": 38,
+      "country": "spain",
+      "gt": "B",
+      "pred": "A",
+      "raw": "(A) Pulmonary neoplasia with ipsilateral lymph node metastases",
+      "correct": false
+    },
+    {
+      "index": 39,
+      "country": "spain",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Toxic multinodular goiter",
+      "correct": false
+    },
+    {
+      "index": 40,
+      "country": "spain",
+      "gt": "B",
+      "pred": "A",
+      "raw": "(A) Aortic dissection",
+      "correct": false
+    },
+    {
+      "index": 41,
+      "country": "spain",
+      "gt": "B",
+      "pred": "A",
+      "raw": "(A) Langerhans cell histiocytosis",
+      "correct": false
+    },
+    {
+      "index": 42,
+      "country": "spain",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Mature ovarian teratoma",
+      "correct": false
+    },
+    {
+      "index": 43,
+      "country": "spain",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Invasive aspergillosis",
+      "correct": false
+    },
+    {
+      "index": 44,
+      "country": "spain",
+      "gt": "C",
+      "pred": "A",
+      "raw": "(A) Autosomal dominant polycystic kidney disease",
+      "correct": false
+    },
+    {
+      "index": 45,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) The CURB-65 risk score is 2; the patient should be admitted to the hospital in a general ward and could be treated with a third-generation cephalosporin and azithromycin, as it is necessary to cover resistant pneumococcus and legionella",
+      "correct": true
+    },
+    {
+      "index": 46,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Traumatic epiphysiolysis of the left hip",
+      "correct": true
+    },
+    {
+      "index": 47,
+      "country": "spain",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Bipolar partial hip prosthesis",
+      "correct": false
+    },
+    {
+      "index": 48,
+      "country": "spain",
+      "gt": "C",
+      "pred": "D",
+      "raw": "(D) Modified right hemipelvectomy",
+      "correct": false
+    },
+    {
+      "index": 49,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Atrial fibrillation",
+      "correct": true
+    },
+    {
+      "index": 50,
+      "country": "spain",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) The most commonly used drugs are NSAIDs",
+      "correct": false
+    },
+    {
+      "index": 51,
+      "country": "spain",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Maternal-fetal admission and strict monitoring",
+      "correct": false
+    },
+    {
+      "index": 52,
+      "country": "spain",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) The determination of plasma renin and aldosterone is indicated",
+      "correct": false
+    },
+    {
+      "index": 53,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Granulomatous inflammation",
+      "correct": true
+    },
+    {
+      "index": 54,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Cystic medial necrosis and Marfan syndrome",
+      "correct": true
+    },
+    {
+      "index": 55,
+      "country": "spain",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Mucinous cystic neoplasia",
+      "correct": false
+    },
+    {
+      "index": 56,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) The presence of bridging fibrosis demonstrates the progression of the disease",
+      "correct": true
+    },
+    {
+      "index": 57,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Invasive cutaneous squamous cell carcinoma",
+      "correct": true
+    },
+    {
+      "index": 58,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Cutaneous T-cell non-Hodgkin lymphoma",
+      "correct": true
+    },
+    {
+      "index": 59,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Meckel's diverticulum lined with ectopic gastric mucosa",
+      "correct": true
+    },
+    {
+      "index": 60,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Transthyretin-mediated cardiac amyloidosis",
+      "correct": true
+    },
+    {
+      "index": 61,
+      "country": "spain",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Considering the findings of the PET/CT, this patient has an indication for immediate treatment with glucocorticoids (20 mg/day) and tocilizumab",
+      "correct": false
+    },
+    {
+      "index": 62,
+      "country": "spain",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Laparoscopic chromopertubation",
+      "correct": false
+    },
+    {
+      "index": 63,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Central retinal vein thrombosis",
+      "correct": true
+    },
+    {
+      "index": 64,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Right piriform sinus carcinoma with metastatic adenopathy",
+      "correct": true
+    },
+    {
+      "index": 65,
+      "country": "spain",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Aortic aneurysm",
+      "correct": false
+    },
+    {
+      "index": 66,
+      "country": "spain",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Request a right lateral decubitus X-ray due to suspected encapsulated pleural effusion prior to thoracentesis",
+      "correct": false
+    },
+    {
+      "index": 67,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Subdural hematoma",
+      "correct": true
+    },
+    {
+      "index": 68,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Liver abscess",
+      "correct": true
+    },
+    {
+      "index": 69,
+      "country": "spain",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Emphysematous gastritis",
+      "correct": false
+    },
+    {
+      "index": 70,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Ludwig's angina",
+      "correct": true
+    },
+    {
+      "index": 71,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Primary central nervous system lymphoma",
+      "correct": true
+    },
+    {
+      "index": 72,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Indicate urgent valve replacement surgery and depletive treatment",
+      "correct": true
+    },
+    {
+      "index": 73,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Dermatomyositis",
+      "correct": true
+    },
+    {
+      "index": 74,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Right ventricular involvement",
+      "correct": true
+    },
+    {
+      "index": 75,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) This condition is due to hypertrophy of the septum with dynamic obstruction in the left ventricular outflow tract",
+      "correct": true
+    },
+    {
+      "index": 76,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Incomplete penetrance",
+      "correct": true
+    },
+    {
+      "index": 77,
+      "country": "spain",
+      "gt": "D",
+      "pred": "C",
+      "raw": "(C) Central apnea",
+      "correct": false
+    },
+    {
+      "index": 78,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Cerebellar syndrome due to left otogenic intraparenchymal abscess",
+      "correct": true
+    },
+    {
+      "index": 79,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Left parietal lobe hemorrhage associated with possible amyloid angiopathy",
+      "correct": true
+    },
+    {
+      "index": 80,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Glenohumeral arthroplasty",
+      "correct": true
+    },
+    {
+      "index": 81,
+      "country": "spain",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Acute coronary syndrome without ST-segment elevation, low risk. Should be admitted to a conventional hospitalization ward with a recommendation for an ischemia induction test before hospital discharge and deferred coronary angiography according to the result",
+      "correct": false
+    },
+    {
+      "index": 82,
+      "country": "spain",
+      "gt": "C",
+      "pred": "B",
+      "raw": "(B) Aortic stenosis",
+      "correct": false
+    },
+    {
+      "index": 83,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Add a PCSK9 inhibitor and request a genetic test for familial hypercholesterolemia",
+      "correct": true
+    },
+    {
+      "index": 84,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Bronchiectasis",
+      "correct": true
+    },
+    {
+      "index": 85,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Acute cholecystitis",
+      "correct": true
+    },
+    {
+      "index": 86,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) One of the most important risk factors is tobacco",
+      "correct": true
+    },
+    {
+      "index": 87,
+      "country": "spain",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) It is due to a congenital defect in the proteins of the erythrocyte membrane",
+      "correct": false
+    },
+    {
+      "index": 88,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Monkeypox",
+      "correct": true
+    },
+    {
+      "index": 89,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Hydatid cyst",
+      "correct": true
+    },
+    {
+      "index": 90,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Hyaline membrane disease",
+      "correct": true
+    },
+    {
+      "index": 91,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Chronic inflammatory bowel disease type ulcerative colitis",
+      "correct": true
+    },
+    {
+      "index": 93,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Gonorrhea",
+      "correct": true
+    },
+    {
+      "index": 94,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Histopathology is similar to that of lichen planopilaris",
+      "correct": true
+    },
+    {
+      "index": 95,
+      "country": "spain",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) T1N0M1",
+      "correct": false
+    },
+    {
+      "index": 96,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) The only abnormal finding is the pathological accumulation of the radiotracer in the known rib tumor",
+      "correct": true
+    },
+    {
+      "index": 97,
+      "country": "spain",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Metastasis",
+      "correct": false
+    },
+    {
+      "index": 98,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Appendicitis",
+      "correct": true
+    },
+    {
+      "index": 99,
+      "country": "spain",
+      "gt": "D",
+      "pred": "A",
+      "raw": "(A) Tumor in the pancreatic tail with calcifications and tumor invasion of the splenic artery",
+      "correct": false
+    },
+    {
+      "index": 100,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Blastic metastases from prostate cancer",
+      "correct": true
+    },
+    {
+      "index": 101,
+      "country": "spain",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Food retention due to obstructive submucosal tumor (leiomyoma) in the distal third of the esophagus",
+      "correct": false
+    },
+    {
+      "index": 102,
+      "country": "spain",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Bochdalek hernia or left posterior diaphragmatic defect",
+      "correct": false
+    },
+    {
+      "index": 103,
+      "country": "spain",
+      "gt": "B",
+      "pred": "B",
+      "raw": "(B) Medullary thyroid carcinoma",
+      "correct": true
+    },
+    {
+      "index": 104,
+      "country": "spain",
+      "gt": "D",
+      "pred": "B",
+      "raw": "(B) Le Fort II type panfacial fracture",
+      "correct": false
+    },
+    {
+      "index": 105,
+      "country": "spain",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Psoriasis",
+      "correct": false
+    },
+    {
+      "index": 106,
+      "country": "spain",
+      "gt": "C",
+      "pred": "A",
+      "raw": "(A) Condyloma lata",
+      "correct": false
+    },
+    {
+      "index": 107,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) There is evidence of involvement in the left breast and ipsilateral axilla",
+      "correct": true
+    },
+    {
+      "index": 108,
+      "country": "spain",
+      "gt": "B",
+      "pred": "D",
+      "raw": "(D) Oral corticosteroids are widely used in the management of this condition",
+      "correct": false
+    },
+    {
+      "index": 109,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) MRI with contrast. Vestibular schwannoma",
+      "correct": true
+    },
+    {
+      "index": 110,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Acute ischemic infarction in the territory of the right posterior cerebral artery",
+      "correct": true
+    },
+    {
+      "index": 111,
+      "country": "spain",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Intestinal obstruction due to migration and impaction of the gastrostomy tube",
+      "correct": false
+    },
+    {
+      "index": 112,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Pneumocystis jirovecii pneumonia",
+      "correct": true
+    },
+    {
+      "index": 113,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Stanford type A aortic dissection",
+      "correct": true
+    },
+    {
+      "index": 114,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Severe aortic valve stenosis with indication for valve replacement",
+      "correct": true
+    },
+    {
+      "index": 115,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Alteration of the cardiac conduction system with episodes of high-grade or complete atrioventricular block",
+      "correct": true
+    },
+    {
+      "index": 116,
+      "country": "spain",
+      "gt": "A",
+      "pred": "D",
+      "raw": "(D) Cholecystectomy is not indicated due to being asymptomatic, but periodic follow-up is",
+      "correct": false
+    },
+    {
+      "index": 117,
+      "country": "spain",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Perforation of a hollow viscus",
+      "correct": false
+    },
+    {
+      "index": 118,
+      "country": "spain",
+      "gt": "A",
+      "pred": "B",
+      "raw": "(B) Poikilocytosis",
+      "correct": false
+    },
+    {
+      "index": 119,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) He has bilateral renal artery stenosis, and the administration of enalapril has caused a drop in GFR due to the loss of vasoconstriction of the efferent arteriole",
+      "correct": true
+    },
+    {
+      "index": 120,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Chronic anterior anal fissure",
+      "correct": true
+    },
+    {
+      "index": 121,
+      "country": "spain",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Antibiotic therapy, intravenous fluid therapy, intravenous analgesia, and an oral alpha-blocker, and admission to the Intensive Care Unit",
+      "correct": false
+    },
+    {
+      "index": 122,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C)",
+      "correct": true
+    },
+    {
+      "index": 123,
+      "country": "spain",
+      "gt": "D",
+      "pred": "D",
+      "raw": "(D) Posterior hip dislocation with posterior wall acetabular fracture",
+      "correct": true
+    },
+    {
+      "index": 124,
+      "country": "spain",
+      "gt": "B",
+      "pred": "C",
+      "raw": "(C) Long retrograde locked femoral nail",
+      "correct": false
+    },
+    {
+      "index": 125,
+      "country": "spain",
+      "gt": "A",
+      "pred": "A",
+      "raw": "(A) Ulcerated basal cell carcinoma",
+      "correct": true
+    },
+    {
+      "index": 126,
+      "country": "spain",
+      "gt": "A",
+      "pred": "C",
+      "raw": "(C) Lesion in the piriform sinus suggestive of hypopharyngeal carcinoma",
+      "correct": false
+    },
+    {
+      "index": 127,
+      "country": "spain",
+      "gt": "C",
+      "pred": "C",
+      "raw": "(C) Determine the presence of anti-MDA5 antibodies",
+      "correct": true
+    }
+  ]
+}

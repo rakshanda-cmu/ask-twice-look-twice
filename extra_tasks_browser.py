@@ -1,10 +1,12 @@
 """
-Streamlit page: new CV areas for the STI/SIT/STIT/SITIT ordering ablation --
-open-ended VQA (VQAv2), counting (TallyQA), perception probes (MMVP, BLINK),
-and multi-frame video QA (NExT-QA). Read-only; reads JSON written by the
-extra_tasks/*_eval_vllm.py scripts.
+Streamlit page: extended benchmarks for the STI/SIT/STIT/SITIT ordering
+ablation -- open-ended VQA (VQAv2), counting (TallyQA), perception probes
+(MMVP, BLINK, CV-Bench, MMStar, RealWorldQA, HR-Bench), medical VQA
+(WorldMedQA-V), and multi-frame video QA (NExT-QA, MVBench, MSVD-QA,
+TGIF-QA). Read-only; reads JSON written by the extra_tasks/*_eval_vllm.py
+scripts.
 
-Engine: all five run on the vLLM library (STI/SIT/STIT/SITIT only). SITIT_rev
+Engine: all run on the vLLM library (STI/SIT/STIT/SITIT only). SITIT_rev
 needs the local HF patch-reversal hooks (see detpo_map/PROMPTS.md) and is not
 run for these tasks yet -- a later extension, same as RF20's initial pass.
 """
@@ -333,7 +335,7 @@ def _video_qa_section(dataset, title, caption):
 
 
 def render_extra_tasks_page():
-    st.title("🧪 New CV Areas — extending the ordering ablation beyond yes/no + boxes")
+    st.title("🎬 Extended Benchmarks — VQA, Counting, Perception & Video-QA")
     st.caption(
         "STI / SIT / STIT / SITIT applied to task types not covered elsewhere in "
         "this repo: open-ended text answers (VQA), numeric/counting answers "
@@ -369,6 +371,47 @@ def render_extra_tasks_page():
         "Multi-image subtasks (Jigsaw, correspondence, …) are not run yet.",
         "blink_order-*.json", "blink_eval_vllm.py",
         by_key="by_subtask", by_label="subtask")
+    st.markdown("---")
+    _simple_section(
+        "🧮 CV-Bench — Count/Relation/Depth/Distance (multiple choice) by prompt ordering",
+        "2,638 questions from standard 2D (ADE20K/COCO) and 3D (Omni3D) vision "
+        "annotations reformatted as multiple choice (Tong et al., Cambrian-1, "
+        "2024): Count, Relation (2D), Depth, Distance (3D).",
+        "cvbench_order-*.json", "cvbench_eval_vllm.py",
+        by_key="by_task", by_label="task")
+    st.markdown("---")
+    _simple_section(
+        "⭐ MMStar — Vision-indispensable multiple choice by prompt ordering",
+        "1,500 samples curated for genuine visual dependency and no train/test "
+        "leakage (Chen et al. 2024), spanning 6 core capabilities (coarse/fine "
+        "perception, instance reasoning, logical reasoning, math, science).",
+        "mmstar_order-*.json", "mmstar_eval_vllm.py",
+        by_key="by_category", by_label="category")
+    st.markdown("---")
+    _simple_section(
+        "🌍 RealWorldQA — Real-world spatial understanding by prompt ordering",
+        "765 real-world (often in-vehicle) photos with a mix of multiple-choice "
+        "and free-form single-word/number questions (xAI, 2024). Ground-truth "
+        "letters are graded on the bare/parenthesized letter; free-form answers "
+        "via VQA-style normalized containment.",
+        "realworldqa_order-*.json", "realworldqa_eval_vllm.py")
+    st.markdown("---")
+    _simple_section(
+        "🩺 WorldMedQA-V — Multilingual medical exam VQA (English) by prompt ordering",
+        "568 medical exam questions with clinical images (ECG, X-ray, skin "
+        "lesion, …) across Brazil/Israel/Japan/Spain (He et al. 2024), English-"
+        "translated question text only.",
+        "worldmedqa_order-*.json", "worldmedqa_eval_vllm.py",
+        by_key="by_country", by_label="country")
+    st.markdown("---")
+    _simple_section(
+        "🔎 HR-Bench — Fine-grained perception on 4K/8K images by prompt ordering",
+        "1,600 multiple-choice questions on genuinely high-resolution images "
+        "(4032×4032 / up to 4992×7680) built by pasting a small target crop "
+        "into a large distractor canvas (Wang et al. 2024) — tests whether "
+        "detail survives both downscaling AND the S/T/I ordering manipulation.",
+        "hrbench_order-*.json", "hrbench_eval_vllm.py",
+        by_key="by_subset", by_label="subset (4k/8k)")
     st.markdown("---")
     _nextqa_section()
     st.markdown("---")

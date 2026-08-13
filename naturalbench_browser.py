@@ -425,10 +425,13 @@ def _render_resolution_table(model):
 
 def _render_echo_resolution_table(model):
     """Separate table: SITIT echo-resolution ablation — which image occurrence
-    (1st vs 2nd/echoed) matters more when it's shown at half resolution."""
+    (1st vs 2nd/echoed) matters more when it's shown at reduced resolution,
+    at two scales (half, quarter)."""
     COLS = [("SITIT", "SITIT (both full-res)"),
             ("SITIT_echo1half", "SITIT (1st half-res, 2nd full-res)"),
-            ("SITIT_echo2half", "SITIT (1st full-res, 2nd half-res)")]
+            ("SITIT_echo2half", "SITIT (1st full-res, 2nd half-res)"),
+            ("SITIT_echo1quarter", "SITIT (1st 0.25x, 2nd full-res)"),
+            ("SITIT_echo2quarter", "SITIT (1st full-res, 2nd 0.25x)")]
     comp, metas = {}, {}
     for tag, label in COLS:
         p = _results_path(model, tag)
@@ -437,28 +440,29 @@ def _render_echo_resolution_table(model):
             metas[tag] = meta
             comp[label] = _metric_row(meta)
 
-    if "SITIT_echo1half" not in metas and "SITIT_echo2half" not in metas:
+    if not any(k in metas for k in ("SITIT_echo1half", "SITIT_echo2half",
+                                    "SITIT_echo1quarter", "SITIT_echo2quarter")):
         return  # nothing to show yet
 
     st.markdown("---")
     st.markdown("#### 🖼️½ SITIT echo-resolution ablation")
     st.caption(
         "SITIT shows the image twice (S·I·T·I·T). Here ONE of the two "
-        "occurrences is downscaled to half width/height while the other stays "
-        "full-res, isolating which occurrence — the first viewing or the "
-        "post-task echo — carries more of the group-accuracy benefit."
+        "occurrences is downscaled (to half, or a more aggressive 0.25x, "
+        "width/height) while the other stays full-res, isolating which "
+        "occurrence — the first viewing or the post-task echo — carries more "
+        "of the group-accuracy benefit, and whether that holds as the "
+        "downscaled occurrence loses even more detail."
     )
     st.table(comp)
 
     mr = []
-    if "SITIT" in metas and "SITIT_echo1half" in metas:
-        dd = (metas["SITIT_echo1half"]["g_acc"] - metas["SITIT"]["g_acc"]) * 100
-        arrow = "▲" if dd > 0 else ("▼" if dd < 0 else "▬")
-        mr.append(f"1st-half {arrow} **{dd:+.1f} pts**")
-    if "SITIT" in metas and "SITIT_echo2half" in metas:
-        dd = (metas["SITIT_echo2half"]["g_acc"] - metas["SITIT"]["g_acc"]) * 100
-        arrow = "▲" if dd > 0 else ("▼" if dd < 0 else "▬")
-        mr.append(f"2nd-half {arrow} **{dd:+.1f} pts**")
+    for tag, name in (("SITIT_echo1half", "1st-half"), ("SITIT_echo2half", "2nd-half"),
+                      ("SITIT_echo1quarter", "1st-0.25x"), ("SITIT_echo2quarter", "2nd-0.25x")):
+        if "SITIT" in metas and tag in metas:
+            dd = (metas[tag]["g_acc"] - metas["SITIT"]["g_acc"]) * 100
+            arrow = "▲" if dd > 0 else ("▼" if dd < 0 else "▬")
+            mr.append(f"{name} {arrow} **{dd:+.1f} pts**")
     if mr:
         st.caption("vs full-res SITIT, Group-Acc — " + " · ".join(mr))
 
@@ -529,6 +533,7 @@ def _results_section():
         ("SITIT_rev", "SITIT-rev (S·I·T·Ī·T)"),
         ("SITT", "SITT"),
         ("SITIT_echo1half", "SITIT (1st½)"), ("SITIT_echo2half", "SITIT (2nd½)"),
+        ("SITIT_echo1quarter", "SITIT (1st¼)"), ("SITIT_echo2quarter", "SITIT (2nd¼)"),
         ("IST_think", "IST +think"), ("STIT_think", "STIT +think"),
         ("IST_copies2", "IST ×2img"), ("IST_copies3", "IST ×3img"),
         ("STI_copies2", "STI ×2img"), ("STI_copies3", "STI ×3img"),

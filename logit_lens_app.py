@@ -180,7 +180,7 @@ _page = st.sidebar.radio(
      "␣ Middle-Layer + Spaces", "🔁 STIT vs STI / IST", "🧠 Mechanism Probe",
      "🎯 Decision Layer", "🔷 Gemma 3", "🟣 POPE", "🟩 RF20",
      "🛩️ DetPO mAP (RF20 Aerial + RefCOCO)",
-     "🧪 New CV Areas (VQA/Counting/MMVP/BLINK/NExT-QA)",
+     "🎬 Extended Benchmarks (VQA/Counting/MMVP/BLINK/Video-QA)",
      "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)",
      "🖼️ Patch Perturbation", "🔬 Logit Lens (this image)", "🎞️ SITIT vs STIT",
      "📊 Cross-Dataset Summary"],
@@ -216,7 +216,7 @@ if _page == "🟩 RF20":
 if _page == "🛩️ DetPO mAP (RF20 Aerial + RefCOCO)":
     render_detpo_map_page()
     st.stop()
-if _page == "🧪 New CV Areas (VQA/Counting/MMVP/BLINK/NExT-QA)":
+if _page == "🎬 Extended Benchmarks (VQA/Counting/MMVP/BLINK/Video-QA)":
     render_extra_tasks_page()
     st.stop()
 if _page == "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)":
