@@ -96,6 +96,9 @@ def main():
     ap.add_argument("--vqa-dir", default="/data2/hf_cache/newtasks/vqa",
                     dest="vqa_dir")
     ap.add_argument("--tp", type=int, default=2)
+    ap.add_argument("--gpu-mem", type=float, default=0.85, dest="gpu_mem",
+                    help="vLLM gpu_memory_utilization; lower if another process "
+                         "already holds GPU memory.")
     ap.add_argument("--log-every", type=int, default=200, dest="log_every")
     ap.add_argument("--max-tokens", type=int, default=None, dest="max_tokens",
                     help="override the default (96, or 256 with --no-suffix's "
@@ -120,7 +123,7 @@ def main():
     print(f"[data] {len(pairs)} VQA pairs", flush=True)
 
     from vllm import SamplingParams
-    llm = make_llm(tp=args.tp, model_tag=args.model)
+    llm = make_llm(tp=args.tp, model_tag=args.model, gpu_mem=args.gpu_mem)
     # 32 was fine for Qwen; Gemma-3-27B's verbose-preamble tendency (confirmed
     # on BLINK/MMVP, see mmvp_eval_vllm.py) risks truncating before the answer
     # word ever appears, even though VQA scoring itself is containment-based

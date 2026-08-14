@@ -132,6 +132,9 @@ def main():
                     choices=["qwen3-vl-8b", "gemma-3-27b", "gemma-4-31b"])
     ap.add_argument("--num-samples", type=int, default=2000, dest="num_samples")
     ap.add_argument("--tp", type=int, default=2)
+    ap.add_argument("--gpu-mem", type=float, default=0.85, dest="gpu_mem",
+                    help="vLLM gpu_memory_utilization; lower if another process "
+                         "already holds GPU memory.")
     ap.add_argument("--log-every", type=int, default=200, dest="log_every")
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -146,7 +149,7 @@ def main():
     print(f"[data] {len(rows)} TallyQA rows", flush=True)
 
     from vllm import SamplingParams
-    llm = make_llm(tp=args.tp, model_tag=args.model)
+    llm = make_llm(tp=args.tp, model_tag=args.model, gpu_mem=args.gpu_mem)
     sp = SamplingParams(temperature=0.0, max_tokens=256)  # Gemma-3-27B often
     # emits a verbose reasoning preamble before its final answer -- 48 tokens
     # truncated 16-79% of Gemma's BLINK/MMVP responses before the parseable

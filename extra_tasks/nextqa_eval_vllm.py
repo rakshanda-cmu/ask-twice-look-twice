@@ -181,6 +181,9 @@ def main():
     ap.add_argument("--num-samples", type=int, default=1500, dest="num_samples")
     ap.add_argument("--frames", type=int, default=6)
     ap.add_argument("--tp", type=int, default=2)
+    ap.add_argument("--gpu-mem", type=float, default=0.85, dest="gpu_mem",
+                    help="vLLM gpu_memory_utilization; lower if another process "
+                         "already holds GPU memory.")
     ap.add_argument("--log-every", type=int, default=100, dest="log_every")
     args = ap.parse_args()
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -190,7 +193,8 @@ def main():
 
     from vllm import SamplingParams
     # SITIT doubles the frame block -> 2*frames images per prompt; cap accordingly.
-    llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1, disable_mm_cache=True)
+    llm = make_llm(tp=args.tp, limit_images=args.frames * 2 + 1, disable_mm_cache=True,
+                   gpu_mem=args.gpu_mem)
     sp = SamplingParams(temperature=0.0, max_tokens=256)  # Gemma-3-27B often
     # emits a verbose reasoning preamble before its final answer -- 48 tokens
     # truncated 16-79% of Gemma's BLINK/MMVP responses before the parseable
