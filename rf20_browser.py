@@ -17,7 +17,9 @@ RESULTS_DIR = "./rf20/results"
 MODELS = [("qwen3-vl-8b", "Qwen3-VL (8B)"), ("gemma-3-27b", "Gemma 3 (27B)")]
 ORDERS = [("IST", "IST — Image · System · Task"),
           ("STI", "STI — System · Task · Image"),
-          ("STIT", "STIT — System · Task · Image · Task")]
+          ("STIT", "STIT — System · Task · Image · Task"),
+          ("SITIT", "SITIT — System · Image · Task · Image · Task"),
+          ("SITIT_echo2quarter", "SITIT (2nd¼) — echoed occurrence at 0.25x res")]
 OKEYS = [o for o, _ in ORDERS]
 RUN_CMD = ("CUDA_VISIBLE_DEVICES=0 python rf20_eval.py "
            "--model qwen3-vl-8b --order IST,STI,STIT")
@@ -89,8 +91,8 @@ def render_rf20_page():
         "Object-hallucination generalization test: for each image we ask "
         "\"Is there a <class> in the image?\" (yes/no) across **20 out-of-distribution "
         "RF100-VL domains** (industrial, medical x-ray/dental, aerial, aquatic, "
-        "documents, sport, …), under the same IST / STI / STIT ordering. Headline "
-        "metric is **F1**; **Δ STIT−STI** is the STIT recovery."
+        "documents, sport, …), under the same IST / STI / STIT / SITIT ordering. "
+        "Headline metric is **F1**; **Δ STIT−STI** is the STIT recovery."
     )
 
     present = [(m, lab) for m, lab in MODELS if any(_meta(m, o) for o in OKEYS)]
@@ -112,6 +114,14 @@ def render_rf20_page():
                 msg += (f". STIT **{f1('STIT'):.1f}%** "
                         f"(vs STI **{f1('STIT')-f1('STI'):+.1f}** · "
                         f"vs IST **{f1('STIT')-f1('IST'):+.1f}**)")
+            st.caption(msg)
+        if metas.get("SITIT"):
+            f1 = lambda o: metas[o]["overall"]["f1"] * 100
+            msg = f"SITIT (image echo) F1: **{f1('SITIT'):.1f}%**"
+            if metas.get("SITIT_echo2quarter"):
+                dd = f1("SITIT_echo2quarter") - f1("SITIT")
+                msg += (f"  ·  SITIT with the **echoed occurrence at 0.25x res**: "
+                        f"**{f1('SITIT_echo2quarter'):.1f}%** ({dd:+.1f} vs full-res SITIT)")
             st.caption(msg)
 
         st.markdown("**By super-category (F1)**")
