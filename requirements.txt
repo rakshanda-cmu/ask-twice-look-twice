@@ -1,0 +1,17 @@
+# Core
+torch>=2.4
+transformers>=4.57          # Qwen3-VL / Gemma-3 / InternVL3-hf support
+accelerate>=0.33
+bitsandbytes>=0.43          # 4-bit loading for Gemma-3-27B (single-GPU; see model_manager.py)
+sentencepiece
+protobuf
+
+# Data
+datasets>=2.19              # NaturalBench / POPE / Winoground via the HF Hub
+pillow
+numpy
+
+# Analysis / figures
+scipy                       # paired-bootstrap + McNemar significance (falls back to a
+                             # scipy-free exact binomial test if absent)
+matplotlib
