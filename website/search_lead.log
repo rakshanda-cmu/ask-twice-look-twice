@@ -1,0 +1,22 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 3008.83it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<02:01,  6.16it/s]Loading weights:   1%|          | 6/750 [00:00<00:29, 25.23it/s]Loading weights:   3%|▎         | 26/750 [00:00<00:08, 88.31it/s]Loading weights:   7%|▋         | 50/750 [00:00<00:05, 136.66it/s]Loading weights:   9%|▉         | 71/750 [00:00<00:04, 159.39it/s]Loading weights:  12%|█▏        | 92/750 [00:00<00:03, 175.18it/s]Loading weights:  15%|█▌        | 114/750 [00:00<00:03, 177.92it/s]Loading weights:  18%|█▊        | 136/750 [00:00<00:03, 187.15it/s]Loading weights:  21%|██        | 158/750 [00:01<00:03, 194.26it/s]Loading weights:  24%|██▍       | 180/750 [00:01<00:03, 184.20it/s]Loading weights:  27%|██▋       | 204/750 [00:01<00:02, 195.41it/s]Loading weights:  30%|███       | 226/750 [00:01<00:02, 199.80it/s]Loading weights:  33%|███▎      | 247/750 [00:01<00:02, 201.76it/s]Loading weights:  36%|███▌      | 269/750 [00:01<00:02, 203.31it/s]Loading weights:  39%|███▊      | 290/750 [00:01<00:02, 202.83it/s]Loading weights:  42%|████▏     | 312/750 [00:01<00:02, 195.01it/s]Loading weights:  45%|████▍     | 334/750 [00:01<00:02, 192.53it/s]Loading weights:  47%|████▋     | 356/750 [00:02<00:02, 189.02it/s]Loading weights:  50%|█████     | 375/750 [00:02<00:01, 187.54it/s]Loading weights:  53%|█████▎    | 395/750 [00:02<00:01, 188.35it/s]Loading weights:  91%|█████████ | 681/750 [00:02<00:00, 935.76it/s]Loading weights: 100%|██████████| 750/750 [00:02<00:00, 309.61it/s]
+[1/9] g36 bestL32 STI 2 vs SIT 0 gap 2  tokens=['wheels', 'bike'] | Is someone riding a bicycle?
+[2/9] g978 bestL24 STI 19 vs SIT 15 gap 4 PARADOX tokens=['skateboard', 'ramp'] | Is the man performing on a ramp?
+[3/9] g1264 bestL34 STI 6 vs SIT 0 gap 6  tokens=['face', 'wearing', 'spectacles', 'frames'] | Is the person wearing glasses?
+[4/9] g1479 bestL34 STI 9 vs SIT 3 gap 6  tokens=['child', 'mouth', 'hand'] | Is the child sucking on their finger?
+[5/9] g1803 bestL32 STI 7 vs SIT 1 gap 6  tokens=['hands', 'crossing'] | Is the individual crossing his hands?
+[6/9] g120 bestL34 STI 5 vs SIT 3 gap 2  tokens=['tape', 'measurement', 'tool'] | Is the man actively doing a measurement?
+[7/9] g1058 bestL12 STI 0 vs SIT 0 gap 0 PARADOX tokens=[] | Is the child intending to climb?
+[8/9] g776 bestL32 STI 3 vs SIT 1 gap 2 PARADOX tokens=['fence', 'concrete'] | Is there a concrete fence in the image?
+[9/9] g1188 bestL34 STI 5 vs SIT 2 gap 3  tokens=['dogs', 'four'] | Are there four dogs in the scene?
+
+===== RANKED by best-layer evidence gap (STI - SIT) =====
+  g1479 L34 STI  9 vs SIT  3 (gap  6)   ['child', 'mouth', 'hand'] | Is the child sucking on their finger?
+  g1803 L32 STI  7 vs SIT  1 (gap  6)   ['hands', 'crossing'] | Is the individual crossing his hands?
+  g1264 L34 STI  6 vs SIT  0 (gap  6)   ['face', 'wearing', 'spectacles', 'frames'] | Is the person wearing glasses?
+  g 978 L24 STI 19 vs SIT 15 (gap  4) P ['skateboard', 'ramp'] | Is the man performing on a ramp?
+  g1188 L34 STI  5 vs SIT  2 (gap  3)   ['dogs', 'four'] | Are there four dogs in the scene?
+  g 120 L34 STI  5 vs SIT  3 (gap  2)   ['tape', 'measurement', 'tool'] | Is the man actively doing a measurement?
+  g 776 L32 STI  3 vs SIT  1 (gap  2) P ['fence', 'concrete'] | Is there a concrete fence in the image?
+  g  36 L32 STI  2 vs SIT  0 (gap  2)   ['wheels', 'bike'] | Is someone riding a bicycle?
+  g1058 L12 STI  0 vs SIT  0 (gap  0) P [] | Is the child intending to climb?

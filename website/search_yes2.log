@@ -1,0 +1,40 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 10305.42it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<03:14,  3.85it/s]Loading weights:   3%|▎         | 26/750 [00:00<00:08, 84.70it/s]Loading weights:   6%|▋         | 48/750 [00:00<00:05, 126.41it/s]Loading weights:   9%|▉         | 67/750 [00:00<00:04, 145.40it/s]Loading weights:  12%|█▏        | 87/750 [00:00<00:04, 157.91it/s]Loading weights:  15%|█▍        | 109/750 [00:00<00:03, 171.91it/s]Loading weights:  17%|█▋        | 131/750 [00:00<00:03, 180.07it/s]Loading weights:  20%|██        | 153/750 [00:01<00:03, 187.95it/s]Loading weights:  23%|██▎       | 175/750 [00:01<00:03, 191.33it/s]Loading weights:  26%|██▋       | 197/750 [00:01<00:02, 192.30it/s]Loading weights:  29%|██▉       | 219/750 [00:01<00:02, 195.23it/s]Loading weights:  32%|███▏      | 241/750 [00:01<00:02, 194.58it/s]Loading weights:  35%|███▌      | 263/750 [00:01<00:02, 196.01it/s]Loading weights:  38%|███▊      | 285/750 [00:01<00:02, 192.47it/s]Loading weights:  41%|████      | 307/750 [00:01<00:02, 193.87it/s]Loading weights:  44%|████▍     | 329/750 [00:01<00:02, 190.97it/s]Loading weights:  47%|████▋     | 349/750 [00:02<00:02, 187.67it/s]Loading weights:  49%|████▉     | 368/750 [00:02<00:02, 181.64it/s]Loading weights:  52%|█████▏    | 389/750 [00:02<00:01, 189.38it/s]Loading weights:  80%|███████▉  | 599/750 [00:02<00:00, 724.08it/s]Loading weights: 100%|██████████| 750/750 [00:02<00:00, 306.06it/s]
+[1/18] g22 bestL30 STI 4 vs SIT 0 gap 4 STI-WINS tokens=['tennis', 'racket'] | Is there someone holding a tennis racket?
+[2/18] g994 bestL26 STI 7 vs SIT 3 gap 4  tokens=['guitar', 'electric'] | Is the musician playing a jaguar electric guitar?
+[3/18] g33 bestL34 STI 7 vs SIT 1 gap 6 STI-WINS tokens=['climbing', 'ascending'] | Are the people actively climbing?
+[4/18] g547 bestL12 STI 3 vs SIT 2 gap 1 STI-WINS tokens=['riding', 'scooter', 'wheels'] | Is anyone riding a scooter in the scene?
+[5/18] g189 bestL30 STI 7 vs SIT 4 gap 3  tokens=['trick', 'wheels', 'wall', 'stunt'] | Is the bicycle trick being performed on a wall?
+[6/18] g1729 bestL34 STI 6 vs SIT 1 gap 5  tokens=['mouth', 'dog', 'fetch'] | Is the dog in the picture chewing on a ball?
+[7/18] g203 bestL32 STI 6 vs SIT 5 gap 1  tokens=['horse', 'saddle', 'riding', 'cowboy'] | Is the man on the horse wearing plaid?
+[8/18] g1270 bestL34 STI 6 vs SIT 3 gap 3  tokens=['running', 'dog'] | Is the dog running away from the man?
+[9/18] g357 bestL30 STI 4 vs SIT 1 gap 3  tokens=['eating'] | Is anyone eating something?
+[10/18] g763 bestL30 STI 4 vs SIT 2 gap 2  tokens=['hands', 'rope', 'holding'] | Is the man holding onto a rope?
+[11/18] g354 bestL12 STI 2 vs SIT 0 gap 2  tokens=['sprint'] | Are the individuals depicted running?
+[12/18] g913 bestL22 STI 1 vs SIT 0 gap 1 STI-WINS tokens=['cat'] | Is the cat playfully crouching on a pet bed?
+[13/18] g1246 bestL20 STI 1 vs SIT 0 gap 1  tokens=['group'] | Is there a group of three women under an umbrella?
+[14/18] g1651 bestL24 STI 2 vs SIT 1 gap 1  tokens=['bird', 'feeder'] | Is the bird perched on a green and orange bird feeder?
+[15/18] g423 bestL30 STI 8 vs SIT 6 gap 2 STI-WINS tokens=['water', 'fish', 'school'] | Are there mackerel swimming among the other fish?
+[16/18] g1077 bestL28 STI 10 vs SIT 3 gap 7  tokens=['ground', 'pawing', 'dog'] | Is the main action of the dog pawing at something on the ground?
+[17/18] g1159 bestL14 STI 1 vs SIT 0 gap 1  tokens=['leading'] | Is there a woman holding a sign leading a group of men?
+[18/18] g373 bestL34 STI 11 vs SIT 3 gap 8 STI-WINS tokens=['standing', 'salt', 'bird'] | Is the bird in the image surrounded by salt grass?
+
+===== RANKED by best-layer evidence gap (STI - SIT) =====
+  g 373 L34 STI 11 vs SIT  3 (gap  8)   ['standing', 'salt', 'bird'] | Is the bird in the image surrounded by salt grass?
+  g1077 L28 STI 10 vs SIT  3 (gap  7)   ['ground', 'pawing', 'dog'] | Is the main action of the dog pawing at something on the ground?
+  g  33 L34 STI  7 vs SIT  1 (gap  6)   ['climbing', 'ascending'] | Are the people actively climbing?
+  g1729 L34 STI  6 vs SIT  1 (gap  5)   ['mouth', 'dog', 'fetch'] | Is the dog in the picture chewing on a ball?
+  g 994 L26 STI  7 vs SIT  3 (gap  4)   ['guitar', 'electric'] | Is the musician playing a jaguar electric guitar?
+  g  22 L30 STI  4 vs SIT  0 (gap  4)   ['tennis', 'racket'] | Is there someone holding a tennis racket?
+  g 189 L30 STI  7 vs SIT  4 (gap  3)   ['trick', 'wheels', 'wall', 'stunt'] | Is the bicycle trick being performed on a wall?
+  g1270 L34 STI  6 vs SIT  3 (gap  3)   ['running', 'dog'] | Is the dog running away from the man?
+  g 357 L30 STI  4 vs SIT  1 (gap  3)   ['eating'] | Is anyone eating something?
+  g 423 L30 STI  8 vs SIT  6 (gap  2)   ['water', 'fish', 'school'] | Are there mackerel swimming among the other fish?
+  g 763 L30 STI  4 vs SIT  2 (gap  2)   ['hands', 'rope', 'holding'] | Is the man holding onto a rope?
+  g 354 L12 STI  2 vs SIT  0 (gap  2)   ['sprint'] | Are the individuals depicted running?
+  g 203 L32 STI  6 vs SIT  5 (gap  1)   ['horse', 'saddle', 'riding', 'cowboy'] | Is the man on the horse wearing plaid?
+  g 547 L12 STI  3 vs SIT  2 (gap  1)   ['riding', 'scooter', 'wheels'] | Is anyone riding a scooter in the scene?
+  g1651 L24 STI  2 vs SIT  1 (gap  1)   ['bird', 'feeder'] | Is the bird perched on a green and orange bird feeder?
+  g 913 L22 STI  1 vs SIT  0 (gap  1)   ['cat'] | Is the cat playfully crouching on a pet bed?
+  g1246 L20 STI  1 vs SIT  0 (gap  1)   ['group'] | Is there a group of three women under an umbrella?
+  g1159 L14 STI  1 vs SIT  0 (gap  1)   ['leading'] | Is there a woman holding a sign leading a group of men?

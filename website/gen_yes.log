@@ -1,0 +1,26 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 25575.02it/s]
+Traceback (most recent call last):
+  File "/home/grg/Research/ask-twice-look-twice-supp/website/gen_new_examples.py", line 117, in <module>
+    main()
+    ~~~~^^
+  File "/home/grg/Research/ask-twice-look-twice-supp/website/gen_new_examples.py", line 70, in main
+    mm = ModelManager("qwen3-vl-8b", attn_implementation="eager")
+  File "/home/grg/Research/middle_layers_indicating_hallucinations/model_manager.py", line 398, in __init__
+    self.load_model()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/grg/Research/middle_layers_indicating_hallucinations/model_manager.py", line 414, in load_model
+    load_qwen_vl_model(model_path, self.model_name,
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       attn_implementation=self.attn_implementation)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/grg/Research/middle_layers_indicating_hallucinations/model_manager.py", line 149, in load_qwen_vl_model
+    model     = MC.from_pretrained(model_path, **kw)
+  File "/home/grg/anaconda3/envs/logitlens/lib/python3.13/site-packages/transformers/modeling_utils.py", line 4130, in from_pretrained
+    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/grg/anaconda3/envs/logitlens/lib/python3.13/site-packages/transformers/modeling_utils.py", line 4210, in _load_pretrained_model
+    caching_allocator_warmup(model, expanded_device_map, load_config.hf_quantizer)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/grg/anaconda3/envs/logitlens/lib/python3.13/site-packages/transformers/modeling_utils.py", line 4827, in caching_allocator_warmup
+    _ = torch.empty(int(byte_count // 2), dtype=torch.float16, device=device, requires_grad=False)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.33 GiB. GPU 0 has a total capacity of 47.40 GiB of which 15.55 GiB is free. Process 110417 has 31.17 GiB memory in use. Including non-PyTorch memory, this process has 260.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

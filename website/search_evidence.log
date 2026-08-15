@@ -1,0 +1,44 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 27413.75it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<02:52,  4.33it/s]Loading weights:   0%|          | 2/750 [00:00<01:56,  6.40it/s]Loading weights:   3%|▎         | 26/750 [00:00<00:08, 86.63it/s]Loading weights:   6%|▋         | 48/750 [00:00<00:05, 124.18it/s]Loading weights:   9%|▉         | 67/750 [00:00<00:04, 138.84it/s]Loading weights:  11%|█         | 83/750 [00:00<00:04, 141.54it/s]Loading weights:  14%|█▎        | 103/750 [00:00<00:04, 157.16it/s]Loading weights:  17%|█▋        | 125/750 [00:00<00:03, 173.05it/s]Loading weights:  19%|█▉        | 143/750 [00:01<00:03, 174.78it/s]Loading weights:  22%|██▏       | 164/750 [00:01<00:03, 181.30it/s]Loading weights:  25%|██▍       | 186/750 [00:01<00:03, 187.48it/s]Loading weights:  28%|██▊       | 208/750 [00:01<00:02, 190.21it/s]Loading weights:  31%|███       | 230/750 [00:01<00:02, 193.98it/s]Loading weights:  34%|███▎      | 252/750 [00:01<00:02, 196.81it/s]Loading weights:  37%|███▋      | 274/750 [00:01<00:02, 194.87it/s]Loading weights:  40%|███▉      | 298/750 [00:01<00:02, 199.99it/s]Loading weights:  43%|████▎     | 319/750 [00:01<00:02, 191.43it/s]Loading weights:  45%|████▌     | 340/750 [00:02<00:02, 187.09it/s]Loading weights:  48%|████▊     | 362/750 [00:02<00:02, 190.16it/s]Loading weights:  51%|█████     | 382/750 [00:02<00:01, 191.92it/s]Loading weights:  67%|██████▋   | 501/750 [00:02<00:00, 468.95it/s]Loading weights:  97%|█████████▋| 725/750 [00:02<00:00, 956.05it/s]Loading weights: 100%|██████████| 750/750 [00:02<00:00, 294.17it/s]
+[1/20] g217 bestL32 STI 12 vs SIT 4 gap 8 PARADOX tokens=['shaking', 'splash', 'swimming', 'bath', 'fur'] | Is the dog shaking off water?
+[2/20] g232 bestL24 STI 9 vs SIT 2 gap 7 PARADOX tokens=['ball', 'catching', 'glove'] | Is the main action about catching a ball?
+[3/20] g263 bestL34 STI 5 vs SIT 2 gap 3 PARADOX tokens=['trick', 'grind', 'performing', 'wheels'] | Is the person performing a trick on inline skates?
+[4/20] g454 bestL30 STI 4 vs SIT 1 gap 3 PARADOX tokens=['farm', 'soil', 'seed'] | Are the individuals planting crops?
+[5/20] g1319 bestL34 STI 17 vs SIT 8 gap 9 PARADOX tokens=['court', 'hoop', 'ball', 'backboard', 'basketball', 'net'] | Does the basketball court have six nets?
+[6/20] g879 bestL26 STI 5 vs SIT 1 gap 4 PARADOX tokens=['spectators'] | Are there multiple spectators present?
+[7/20] g1422 bestL26 STI 7 vs SIT 4 gap 3 PARADOX tokens=['feathers', 'dirt'] | Is the peacock walking on twig-littered dirt?
+[8/20] g478 bestL30 STI 4 vs SIT 0 gap 4 PARADOX tokens=['eating', 'sharing'] | Are there some people sharing food?
+[9/20] g58 bestL22 STI 5 vs SIT 1 gap 4 PARADOX tokens=['waiting', 'commuter'] | Are the people waiting by track 17?
+[10/20] g769 bestL32 STI 5 vs SIT 2 gap 3 PARADOX tokens=['grass', 'sitting'] | Is there a child sitting on the grass?
+[11/20] g717 bestL30 STI 5 vs SIT 0 gap 5 PARADOX tokens=['seated', 'sitting', 'bench'] | Are there several people sitting on a bench?
+[12/20] g1007 bestL32 STI 7 vs SIT 1 gap 6 PARADOX tokens=['chasing', 'running', 'pursuing'] | Is the adult in the image chasing a child?
+[13/20] g759 bestL30 STI 24 vs SIT 14 gap 10 PARADOX tokens=['stream', 'water', 'splitting'] | Is the water splitting into three sections?
+[14/20] g570 bestL32 STI 8 vs SIT 7 gap 1 PARADOX tokens=['mid-air', 'over', 'jumping'] | Are the dogs jumping over a wall?
+[15/20] g1550 bestL32 STI 3 vs SIT 1 gap 2  tokens=['balancing', 'lifted'] | Are the boys balancing on one foot?
+[16/20] g1032 bestL26 STI 4 vs SIT 2 gap 2 PARADOX tokens=['street', 'pedestrian', 'walking'] | Is the man walking down the street?
+[17/20] g922 bestL18 STI 12 vs SIT 3 gap 9 PARADOX tokens=['parked'] | Is the firetruck parked in a driveway outside the garage?
+[18/20] g834 bestL34 STI 15 vs SIT 7 gap 8 PARADOX tokens=['tag', 'boxcar', 'railcar'] | Does the scene include a beige boxcar with graffiti?
+[19/20] g111 bestL34 STI 5 vs SIT 1 gap 4 PARADOX tokens=['cast', 'wagon'] | Is there a shadow of a man on a wagon's wheel?
+[20/20] g1036 bestL26 STI 4 vs SIT 2 gap 2 PARADOX tokens=['trunk', 'bark', 'stump'] | Is there a tree stump near the bench?
+
+===== RANKED by best-layer evidence gap (STI - SIT) =====
+  g 759 L30 STI 24 vs SIT 14 (gap 10) P ['stream', 'water', 'splitting'] | Is the water splitting into three sections?
+  g1319 L34 STI 17 vs SIT  8 (gap  9) P ['court', 'hoop', 'ball', 'backboard', 'basketball', 'net'] | Does the basketball court have six nets?
+  g 922 L18 STI 12 vs SIT  3 (gap  9) P ['parked'] | Is the firetruck parked in a driveway outside the garage?
+  g 834 L34 STI 15 vs SIT  7 (gap  8) P ['tag', 'boxcar', 'railcar'] | Does the scene include a beige boxcar with graffiti?
+  g 217 L32 STI 12 vs SIT  4 (gap  8) P ['shaking', 'splash', 'swimming', 'bath', 'fur'] | Is the dog shaking off water?
+  g 232 L24 STI  9 vs SIT  2 (gap  7) P ['ball', 'catching', 'glove'] | Is the main action about catching a ball?
+  g1007 L32 STI  7 vs SIT  1 (gap  6) P ['chasing', 'running', 'pursuing'] | Is the adult in the image chasing a child?
+  g 717 L30 STI  5 vs SIT  0 (gap  5) P ['seated', 'sitting', 'bench'] | Are there several people sitting on a bench?
+  g 879 L26 STI  5 vs SIT  1 (gap  4) P ['spectators'] | Are there multiple spectators present?
+  g  58 L22 STI  5 vs SIT  1 (gap  4) P ['waiting', 'commuter'] | Are the people waiting by track 17?
+  g 111 L34 STI  5 vs SIT  1 (gap  4) P ['cast', 'wagon'] | Is there a shadow of a man on a wagon's wheel?
+  g 478 L30 STI  4 vs SIT  0 (gap  4) P ['eating', 'sharing'] | Are there some people sharing food?
+  g1422 L26 STI  7 vs SIT  4 (gap  3) P ['feathers', 'dirt'] | Is the peacock walking on twig-littered dirt?
+  g 263 L34 STI  5 vs SIT  2 (gap  3) P ['trick', 'grind', 'performing', 'wheels'] | Is the person performing a trick on inline skates?
+  g 769 L32 STI  5 vs SIT  2 (gap  3) P ['grass', 'sitting'] | Is there a child sitting on the grass?
+  g 454 L30 STI  4 vs SIT  1 (gap  3) P ['farm', 'soil', 'seed'] | Are the individuals planting crops?
+  g1032 L26 STI  4 vs SIT  2 (gap  2) P ['street', 'pedestrian', 'walking'] | Is the man walking down the street?
+  g1036 L26 STI  4 vs SIT  2 (gap  2) P ['trunk', 'bark', 'stump'] | Is there a tree stump near the bench?
+  g1550 L32 STI  3 vs SIT  1 (gap  2)   ['balancing', 'lifted'] | Are the boys balancing on one foot?
+  g 570 L32 STI  8 vs SIT  7 (gap  1) P ['mid-air', 'over', 'jumping'] | Are the dogs jumping over a wall?

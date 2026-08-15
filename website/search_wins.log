@@ -1,0 +1,20 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 54827.50it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<04:07,  3.03it/s]Loading weights:   3%|▎         | 26/750 [00:00<00:09, 72.65it/s]Loading weights:   6%|▋         | 48/750 [00:00<00:06, 113.77it/s]Loading weights:   9%|▉         | 70/750 [00:00<00:04, 143.57it/s]Loading weights:  12%|█▏        | 92/750 [00:00<00:04, 148.99it/s]Loading weights:  15%|█▌        | 115/750 [00:00<00:03, 169.51it/s]Loading weights:  18%|█▊        | 136/750 [00:01<00:03, 178.73it/s]Loading weights:  21%|██        | 158/750 [00:01<00:03, 182.02it/s]Loading weights:  24%|██▍       | 180/750 [00:01<00:03, 185.54it/s]Loading weights:  27%|██▋       | 202/750 [00:01<00:02, 190.11it/s]Loading weights:  30%|██▉       | 224/750 [00:01<00:02, 190.86it/s]Loading weights:  33%|███▎      | 246/750 [00:01<00:02, 194.84it/s]Loading weights:  35%|███▌      | 266/750 [00:01<00:02, 196.21it/s]Loading weights:  38%|███▊      | 287/750 [00:01<00:02, 195.48it/s]Loading weights:  41%|████      | 307/750 [00:01<00:02, 190.70it/s]Loading weights:  44%|████▍     | 329/750 [00:01<00:02, 195.59it/s]Loading weights:  47%|████▋     | 349/750 [00:02<00:02, 195.38it/s]Loading weights:  49%|████▉     | 369/750 [00:02<00:02, 182.77it/s]Loading weights:  52%|█████▏    | 391/750 [00:02<00:01, 190.20it/s]Loading weights:  76%|███████▌  | 567/750 [00:02<00:00, 628.04it/s]Loading weights:  97%|█████████▋| 725/750 [00:02<00:00, 872.12it/s]Loading weights: 100%|██████████| 750/750 [00:02<00:00, 291.10it/s]
+[1/8] g22 bestL30 STI 4 vs SIT 1 gap 3 STI-WINS tokens=['tennis', 'racket'] | Is there someone holding a tennis racket?
+[2/8] g33 bestL34 STI 7 vs SIT 1 gap 6 STI-WINS tokens=['climbing', 'ascending'] | Are the people actively climbing?
+[3/8] g354 bestL12 STI 2 vs SIT 0 gap 2  tokens=['sprint'] | Are the individuals depicted running?
+[4/8] g357 bestL30 STI 4 vs SIT 1 gap 3  tokens=['eating'] | Is anyone eating something?
+[5/8] g763 bestL30 STI 4 vs SIT 2 gap 2  tokens=['hands', 'rope', 'holding'] | Is the man holding onto a rope?
+[6/8] g1231 bestL34 STI 12 vs SIT 6 gap 6 STI-WINS tokens=['water', 'entering', 'pool'] | Is the girl entering the water?
+[7/8] g1821 bestL12 STI 2 vs SIT 0 gap 2  tokens=['seated'] | Is the woman sitting?
+[8/8] g1831 bestL32 STI 4 vs SIT 3 gap 1 STI-WINS tokens=['bicycle'] | Is there a single bicyclist in the image?
+
+===== RANKED by best-layer evidence gap (STI - SIT) =====
+  g1231 L34 STI 12 vs SIT  6 (gap  6)   ['water', 'entering', 'pool'] | Is the girl entering the water?
+  g  33 L34 STI  7 vs SIT  1 (gap  6)   ['climbing', 'ascending'] | Are the people actively climbing?
+  g  22 L30 STI  4 vs SIT  1 (gap  3)   ['tennis', 'racket'] | Is there someone holding a tennis racket?
+  g 357 L30 STI  4 vs SIT  1 (gap  3)   ['eating'] | Is anyone eating something?
+  g 763 L30 STI  4 vs SIT  2 (gap  2)   ['hands', 'rope', 'holding'] | Is the man holding onto a rope?
+  g 354 L12 STI  2 vs SIT  0 (gap  2)   ['sprint'] | Are the individuals depicted running?
+  g1821 L12 STI  2 vs SIT  0 (gap  2)   ['seated'] | Is the woman sitting?
+  g1831 L32 STI  4 vs SIT  3 (gap  1)   ['bicycle'] | Is there a single bicyclist in the image?

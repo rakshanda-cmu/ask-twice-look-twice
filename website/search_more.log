@@ -1,0 +1,30 @@
+[watch] GPU 0 free; searching Mon Jul 20 05:30:14 PM EDT 2026
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 53092.46it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<02:53,  4.32it/s]Loading weights:   0%|          | 2/750 [00:00<02:06,  5.89it/s]Loading weights:   4%|▎         | 27/750 [00:00<00:08, 86.38it/s]Loading weights:   6%|▋         | 48/750 [00:00<00:05, 124.98it/s]Loading weights:   9%|▉         | 70/750 [00:00<00:04, 149.80it/s]Loading weights:  12%|█▏        | 92/750 [00:00<00:03, 165.72it/s]Loading weights:  15%|█▌        | 114/750 [00:00<00:03, 175.66it/s]Loading weights:  18%|█▊        | 136/750 [00:01<00:03, 177.46it/s]Loading weights:  21%|██        | 158/750 [00:01<00:03, 188.62it/s]Loading weights:  24%|██▍       | 180/750 [00:01<00:02, 191.53it/s]Loading weights:  27%|██▋       | 200/750 [00:01<00:02, 192.63it/s]Loading weights:  29%|██▉       | 220/750 [00:01<00:02, 190.73it/s]Loading weights:  32%|███▏      | 241/750 [00:01<00:02, 184.36it/s]Loading weights:  35%|███▌      | 263/750 [00:01<00:02, 193.27it/s]Loading weights:  38%|███▊      | 283/750 [00:01<00:02, 188.20it/s]Loading weights:  40%|████      | 303/750 [00:01<00:02, 185.53it/s]Loading weights:  43%|████▎     | 325/750 [00:01<00:02, 191.22it/s]Loading weights:  46%|████▌     | 345/750 [00:02<00:02, 191.03it/s]Loading weights:  49%|████▊     | 365/750 [00:02<00:02, 191.22it/s]Loading weights:  51%|█████▏    | 385/750 [00:02<00:01, 185.89it/s]Loading weights:  73%|███████▎  | 547/750 [00:02<00:00, 587.16it/s]Loading weights:  98%|█████████▊| 737/750 [00:02<00:00, 940.26it/s]Loading weights: 100%|██████████| 750/750 [00:02<00:00, 295.97it/s]
+[1/12] g887 bestL30 STI 22 vs SIT 14 gap 8 PARADOX tokens=['forest', 'central', 'wood', 'tree', 'bark', 'trunk', 'branches'] | Does the central tree have four trunks?
+[2/12] g1032 bestL26 STI 4 vs SIT 2 gap 2 PARADOX tokens=['street', 'pedestrian', 'walking'] | Is the man walking down the street?
+[3/12] g1557 bestL34 STI 6 vs SIT 0 gap 6 PARADOX tokens=['hijab', 'traditional', 'wardrobe'] | Is there a woman in traditional Muslim wardrobe?
+[4/12] g96 bestL32 STI 11 vs SIT 4 gap 7 PARADOX tokens=['sky', 'night', 'moon', 'moonlight'] | Is the moon visible in the sky?
+[5/12] g737 bestL32 STI 6 vs SIT 4 gap 2 PARADOX tokens=['looking', 'sidewalk', 'down'] | Are they looking at something on the sidewalk?
+[6/12] g1255 bestL24 STI 8 vs SIT 0 gap 8 PARADOX tokens=['form', 'structure', 'skull', 'resembles', 'face'] | Is there a structure that resembles a skull?
+[7/12] g834 bestL34 STI 15 vs SIT 7 gap 8 PARADOX tokens=['tag', 'boxcar', 'railcar'] | Does the scene include a beige boxcar with graffiti?
+[8/12] g922 bestL18 STI 12 vs SIT 3 gap 9 PARADOX tokens=['parked'] | Is the firetruck parked in a driveway outside the garage?
+[9/12] g1422 bestL26 STI 7 vs SIT 4 gap 3 PARADOX tokens=['feathers', 'dirt'] | Is the peacock walking on twig-littered dirt?
+[10/12] g570 bestL32 STI 5 vs SIT 2 gap 3 PARADOX tokens=['dogs', 'over', 'jumping'] | Are the dogs jumping over a wall?
+[11/12] g1550 bestL32 STI 3 vs SIT 1 gap 2  tokens=['balancing', 'lifted'] | Are the boys balancing on one foot?
+[12/12] g263 bestL34 STI 6 vs SIT 3 gap 3 PARADOX tokens=['trick', 'grind', 'rail', 'performing', 'wheels'] | Is the person performing a trick on inline skates?
+
+===== RANKED by best-layer evidence gap (STI - SIT) =====
+  g 922 L18 STI 12 vs SIT  3 (gap  9) P ['parked'] | Is the firetruck parked in a driveway outside the garage?
+  g 887 L30 STI 22 vs SIT 14 (gap  8) P ['forest', 'central', 'wood', 'tree', 'bark', 'trunk', 'branches'] | Does the central tree have four trunks?
+  g 834 L34 STI 15 vs SIT  7 (gap  8) P ['tag', 'boxcar', 'railcar'] | Does the scene include a beige boxcar with graffiti?
+  g1255 L24 STI  8 vs SIT  0 (gap  8) P ['form', 'structure', 'skull', 'resembles', 'face'] | Is there a structure that resembles a skull?
+  g  96 L32 STI 11 vs SIT  4 (gap  7) P ['sky', 'night', 'moon', 'moonlight'] | Is the moon visible in the sky?
+  g1557 L34 STI  6 vs SIT  0 (gap  6) P ['hijab', 'traditional', 'wardrobe'] | Is there a woman in traditional Muslim wardrobe?
+  g1422 L26 STI  7 vs SIT  4 (gap  3) P ['feathers', 'dirt'] | Is the peacock walking on twig-littered dirt?
+  g 263 L34 STI  6 vs SIT  3 (gap  3) P ['trick', 'grind', 'rail', 'performing', 'wheels'] | Is the person performing a trick on inline skates?
+  g 570 L32 STI  5 vs SIT  2 (gap  3) P ['dogs', 'over', 'jumping'] | Are the dogs jumping over a wall?
+  g 737 L32 STI  6 vs SIT  4 (gap  2) P ['looking', 'sidewalk', 'down'] | Are they looking at something on the sidewalk?
+  g1032 L26 STI  4 vs SIT  2 (gap  2) P ['street', 'pedestrian', 'walking'] | Is the man walking down the street?
+  g1550 L32 STI  3 vs SIT  1 (gap  2)   ['balancing', 'lifted'] | Are the boys balancing on one foot?
+[watch] search exited 0 Mon Jul 20 05:30:39 PM EDT 2026

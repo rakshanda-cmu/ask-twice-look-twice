@@ -1,0 +1,224 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 26800.66it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<04:10,  3.00it/s]Loading weights:   3%|▎         | 26/750 [00:00<00:10, 71.49it/s]Loading weights:   6%|▋         | 48/750 [00:00<00:06, 109.94it/s]Loading weights:   9%|▉         | 67/750 [00:00<00:05, 125.41it/s]Loading weights:  11%|█         | 83/750 [00:00<00:05, 129.83it/s]Loading weights:  14%|█▎        | 103/750 [00:00<00:04, 141.42it/s]Loading weights:  16%|█▋        | 122/750 [00:01<00:04, 152.64it/s]Loading weights:  19%|█▊        | 139/750 [00:01<00:03, 153.01it/s]Loading weights:  21%|██        | 158/750 [00:01<00:03, 162.16it/s]Loading weights:  23%|██▎       | 175/750 [00:01<00:03, 155.85it/s]Loading weights:  26%|██▌       | 192/750 [00:01<00:03, 153.93it/s]Loading weights:  29%|██▊       | 214/750 [00:01<00:03, 167.16it/s]Loading weights:  31%|███       | 232/750 [00:01<00:03, 167.29it/s]Loading weights:  34%|███▎      | 252/750 [00:01<00:02, 167.14it/s]Loading weights:  37%|███▋      | 274/750 [00:01<00:02, 175.68it/s]Loading weights:  39%|███▉      | 292/750 [00:02<00:02, 169.21it/s]Loading weights:  42%|████▏     | 312/750 [00:02<00:02, 172.94it/s]Loading weights:  44%|████▍     | 330/750 [00:02<00:02, 169.00it/s]Loading weights:  46%|████▋     | 347/750 [00:02<00:02, 162.91it/s]Loading weights:  49%|████▉     | 367/750 [00:02<00:02, 171.60it/s]Loading weights:  51%|█████▏    | 386/750 [00:02<00:02, 172.36it/s]Loading weights:  58%|█████▊    | 432/750 [00:02<00:01, 252.86it/s]Loading weights:  66%|██████▋   | 497/750 [00:02<00:00, 365.63it/s]Loading weights:  76%|███████▌  | 571/750 [00:02<00:00, 467.99it/s]Loading weights:  85%|████████▌ | 638/750 [00:02<00:00, 526.54it/s]Loading weights:  94%|█████████▍| 707/750 [00:03<00:00, 573.31it/s]Loading weights: 100%|██████████| 750/750 [00:03<00:00, 235.43it/s]
+[1/200] g638 'Is the person walking?' key='walking' | STI key=30 ans='Yes'X | SIT key=24 ans='No'ok | gap=6 peakL30 <PARADOX>
+[2/200] g129 'Is there no suds in the water?' key='water' | STI key=7 ans='No'X | SIT key=6 ans='Yes'ok | gap=1 peakL26 <PARADOX>
+[3/200] g1700 "Is there an excavator with 'CAT' on it?" key='excavator' | STI key=10 ans='Yes'X | SIT key=15 ans='No'ok | gap=-5 peakL30 <PARADOX>
+[4/200] g22 'Is the person running in the image?' key='running' | STI key=2 ans='Yes'X | SIT key=0 ans='Yes'X | gap=2 peakL32 
+[5/200] g36 'Is someone riding a bicycle?' key='riding' | STI key=1 ans='No'X | SIT key=1 ans='No'X | gap=0 peakL34 
+[6/200] g58 'Are the people waiting by track 17?' key='waiting' | STI key=21 ans='Yes'X | SIT key=6 ans='No'ok | gap=15 peakL26 <PARADOX>
+[7/200] g96 'Is the moon visible in the sky?' key='visible' | STI key=5 ans='Yes'X | SIT key=0 ans='No'ok | gap=5 peakL16 <PARADOX>
+[8/200] g229 'Is the dog chasing a person?' key='chasing' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL34 <PARADOX>
+[9/200] g354 'Are the individuals depicted running?' key='running' | STI key=1 ans='No'ok | SIT key=1 ans='No'ok | gap=0 peakL26 
+[10/200] g454 'Are the individuals planting crops?' key='planting' | STI key=10 ans='Yes'X | SIT key=1 ans='No'ok | gap=9 peakL16 <PARADOX>
+[11/200] g735 'Is the sky completely cloudless?' key='completely' | STI key=1 ans='No'X | SIT key=0 ans='Yes'ok | gap=1 peakL34 <PARADOX>
+[12/200] g978 'Is the man performing on a ramp?' key='performing' | STI key=3 ans='No'X | SIT key=2 ans='Yes'ok | gap=1 peakL28 <PARADOX>
+[13/200] g1058 'Is the child intending to climb?' key='intending' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL34 <PARADOX>
+[14/200] g1231 'Is the girl entering the water?' key='entering' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL32 <PARADOX>
+[15/200] g1264 'Is the person wearing glasses?' key='wearing' | STI key=6 ans='No'X | SIT key=0 ans='No'X | gap=6 peakL30 
+[16/200] g1298 'Are the men performing on a stage?' key='performing' | STI key=5 ans='No'ok | SIT key=0 ans='No'ok | gap=5 peakL26 
+[17/200] g1342 'Is the fan angled to the left?' key='angled' | STI key=3 ans='No'X | SIT key=0 ans='Yes'ok | gap=3 peakL30 <PARADOX>
+[18/200] g1479 'Is the child sucking on their finger?' key='sucking' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL32 
+[19/200] g1550 'Are the boys preparing to go outside?' key='preparing' | STI key=6 ans='Yes'X | SIT key=0 ans='No'ok | gap=6 peakL18 <PARADOX>
+[20/200] g1663 'Is someone shaving the beard?' key='shaving' | STI key=3 ans='Yes'X | SIT key=0 ans='No'ok | gap=3 peakL24 <PARADOX>
+[21/200] g1734 'Is anyone left out?' key='anyone' | STI key=0 ans='No'ok | SIT key=0 ans='No'ok | gap=0 peakL28 
+[22/200] g1803 'Is the individual crossing his hands?' key='crossing' | STI key=7 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=7 peakL30 
+[23/200] g1875 'Is nobody standing in this image?' key='standing' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL16 <PARADOX>
+[24/200] g193 'Are there altocumulus clouds in the sky?' key='altocumulus' | STI key=6 ans='Yes'X | SIT key=7 ans='No'ok | gap=-1 peakL34 <PARADOX>
+[25/200] g275 'Is there debris visible on the street?' key='visible' | STI key=1 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=1 peakL28 
+[26/200] g737 'Are they looking at something on the sidewalk?' key='something' | STI key=5 ans='Yes'X | SIT key=0 ans='No'ok | gap=5 peakL26 <PARADOX>
+[27/200] g769 'Is there a child sitting on the grass?' key='sitting' | STI key=7 ans='Yes'X | SIT key=0 ans='No'ok | gap=7 peakL30 <PARADOX>
+[28/200] g776 'Is there a concrete fence in the image?' key='concrete' | STI key=8 ans='No'X | SIT key=4 ans='Yes'ok | gap=4 peakL30 <PARADOX>
+[29/200] g879 'Are there multiple spectators present?' key='spectators' | STI key=21 ans='Yes'X | SIT key=3 ans='No'ok | gap=18 peakL26 <PARADOX>
+[30/200] g884 'Is the work being conducted in a hallway?' key='conducted' | STI key=0 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=0 peakL32 
+[31/200] g884 'Is the work being conducted in a hallway?' key='conducted' | STI key=2 ans='Yes'X | SIT key=1 ans='Yes'X | gap=1 peakL32 
+[32/200] g936 'Are there four boys in the image?' key='image' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL22 <PARADOX>
+[33/200] g997 'Are there people using an iPad?' key='using' | STI key=2 ans='Yes'X | SIT key=0 ans='No'ok | gap=2 peakL34 <PARADOX>
+[34/200] g1188 'Are there four dogs in the scene?' key='scene' | STI key=0 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=0 peakL34 
+[35/200] g1219 'Is there a small boy in the image?' key='small' | STI key=0 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=0 peakL16 
+[36/200] g1255 'Is there a structure that resembles a skull?' key='structure' | STI key=6 ans='Yes'X | SIT key=0 ans='No'ok | gap=6 peakL24 <PARADOX>
+[37/200] g1344 'Are there visitors watching in the background?' key='watching' | STI key=0 ans='Yes'X | SIT key=0 ans='Yes'X | gap=0 peakL34 
+[38/200] g1379 'Are there three individuals in the image?' key='individuals' | STI key=0 ans='No'ok | SIT key=0 ans='No'ok | gap=0 peakL16 
+[39/200] g1718 'Is there  a girl sitting alone?' key='sitting' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL32 <PARADOX>
+[40/200] g1723 'Are the bicycles being carried by the cyclists?' key='bicycles' | STI key=26 ans='No'X | SIT key=20 ans='Yes'ok | gap=6 peakL32 <PARADOX>
+[41/200] g1861 'Are there two adults in the image?' key='adults' | STI key=3 ans='No'X | SIT key=1 ans='Yes'ok | gap=2 peakL30 <PARADOX>
+[42/200] g1879 'Is there a transaction involving a wallet?' key='involving' | STI key=0 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=0 peakL32 
+[43/200] g1893 'Is there someone rowing in the watercraft?' key='rowing' | STI key=2 ans='Yes'X | SIT key=0 ans='No'ok | gap=2 peakL32 <PARADOX>
+[44/200] g359 'Is there a vehicle being driven in the scene?' key='vehicle' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL26 <PARADOX>
+[45/200] g478 'Are there some people sharing food?' key='sharing' | STI key=19 ans='Yes'X | SIT key=0 ans='No'ok | gap=19 peakL28 <PARADOX>
+[46/200] g1625 'Are the letters "J" and "G" carved into the fence?' key='letters' | STI key=20 ans='No'X | SIT key=14 ans='No'X | gap=6 peakL32 
+[47/200] g120 'Is the man actively doing a measurement?' key='doing' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL34 
+[48/200] g140 'Are yellow bees visible in the image?' key='visible' | STI key=1 ans='No'X | SIT key=0 ans='Yes'ok | gap=1 peakL34 <PARADOX>
+[49/200] g148 'Is someone in white wearing sunglasses?' key='wearing' | STI key=3 ans='No'ok | SIT key=2 ans='No'ok | gap=1 peakL30 
+[50/200] g149 'Does the poster only feature a woman?' key='feature' | STI key=0 ans='Yes'X | SIT key=0 ans='Yes'X | gap=0 peakL32 
+[51/200] g182 'Is the Sahara hotel in the middle of the frame?' key='sahara' | STI key=2 ans='No'X | SIT key=0 ans='No'X | gap=2 peakL32 
+[52/200] g195 'Is the person in contact with the bike seat' key='contact' | STI key=3 ans='Yes'X | SIT key=0 ans='No'ok | gap=3 peakL32 <PARADOX>
+[53/200] g196 'Are the streetcar tracks curving to the right?' key='curving' | STI key=6 ans='Yes'X | SIT key=0 ans='Yes'X | gap=6 peakL30 
+[54/200] g217 'Is the dog shaking off water?' key='shaking' | STI key=11 ans='Yes'X | SIT key=0 ans='No'ok | gap=11 peakL32 <PARADOX>
+[55/200] g311 'Is someone wearing sunglasses on their forehead?' key='wearing' | STI key=0 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=0 peakL24 
+[56/200] g326 'Is the BMW in the image facing to the right?' key='facing' | STI key=2 ans='Yes'X | SIT key=1 ans='Yes'X | gap=1 peakL30 
+[57/200] g434 'Is the focus a man kicking a board?' key='kicking' | STI key=15 ans='No'X | SIT key=9 ans='No'X | gap=6 peakL30 
+[58/200] g439 'Is the jumper dressed in bright red?' key='dressed' | STI key=0 ans='No'ok | SIT key=0 ans='Yes'X | gap=0 peakL28 
+[59/200] g465 'Is the cat sitting on a hardwood floor?' key='sitting' | STI key=4 ans='Yes'X | SIT key=7 ans='No'ok | gap=-3 peakL24 <PARADOX>
+[60/200] g570 'Are the dogs jumping over a wall?' key='jumping' | STI key=4 ans='No'X | SIT key=3 ans='Yes'ok | gap=1 peakL30 <PARADOX>
+[61/200] g613 'Is the scene illuminated by a street lamp?' key='illuminated' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL28 <PARADOX>
+[62/200] g638 'Is the person stationary, possibly posing?' key='posing' | STI key=9 ans='Yes'X | SIT key=2 ans='Yes'X | gap=7 peakL34 
+[63/200] g662 'Is the dog running on flat ground?' key='running' | STI key=3 ans='Yes'ok | SIT key=7 ans='Yes'ok | gap=-4 peakL34 
+[64/200] g679 'Is the activity a game with a specific target?' key='activity' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL16 <PARADOX>
+[65/200] g697 'Does the person have greasy hair?' key='person' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL30 
+[66/200] g757 'Is the group composed only of adults?' key='composed' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL26 <PARADOX>
+[67/200] g777 'Is the person holding a brown stick?' key='holding' | STI key=5 ans='Yes'X | SIT key=3 ans='No'ok | gap=2 peakL34 <PARADOX>
+[68/200] g847 'Are the individuals in the parade carrying rifles?' key='carrying' | STI key=6 ans='No'X | SIT key=0 ans='No'X | gap=6 peakL32 
+[69/200] g873 'Is the child preparing to slide down?' key='preparing' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL32 <PARADOX>
+[70/200] g886 'Is the dog wearing two collars?' key='wearing' | STI key=3 ans='Yes'X | SIT key=3 ans='Yes'X | gap=0 peakL34 
+[71/200] g935 "Is the worker's left leg straightened?" key='straightened' | STI key=5 ans='No'X | SIT key=0 ans='Yes'ok | gap=5 peakL28 <PARADOX>
+[72/200] g1007 'Is the adult in the image chasing a child?' key='chasing' | STI key=6 ans='No'X | SIT key=2 ans='Yes'ok | gap=4 peakL34 <PARADOX>
+[73/200] g1015 'Are all the dogs of different colors?' key='different' | STI key=7 ans='No'X | SIT key=0 ans='Yes'ok | gap=7 peakL26 <PARADOX>
+[74/200] g1032 'Is the man walking down the street?' key='walking' | STI key=5 ans='Yes'X | SIT key=0 ans='No'ok | gap=5 peakL34 <PARADOX>
+[75/200] g1058 'Is the child wearing blue shoes?' key='wearing' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL30 <PARADOX>
+[76/200] g1134 'Is the woman observing something in the distance?' key='observing' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL28 <PARADOX>
+[77/200] g1256 'Is the pig facing diagonally to the right?' key='facing' | STI key=2 ans='No'X | SIT key=0 ans='Yes'ok | gap=2 peakL30 <PARADOX>
+[78/200] g1315 'Are the cyclists primarily navigating a corner?' key='navigating' | STI key=1 ans='No'ok | SIT key=0 ans='No'ok | gap=1 peakL32 
+[79/200] g1341 'Is the person in the image standing on the board?' key='standing' | STI key=2 ans='No'ok | SIT key=1 ans='No'ok | gap=1 peakL30 
+[80/200] g1400 'Is the underwater image an inverted display?' key='underwater' | STI key=9 ans='No'X | SIT key=0 ans='No'X | gap=9 peakL24 
+[81/200] g1412 'Is the boy shaving without supervision?' key='shaving' | STI key=34 ans='Yes'ok | SIT key=42 ans='Yes'ok | gap=-8 peakL32 
+[82/200] g1467 'Are the people on the bridge engaging in a conversation?' key='engaging' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL30 <PARADOX>
+[83/200] g1473 'Is the person engaged in manually climbing?' key='climbing' | STI key=7 ans='Yes'ok | SIT key=16 ans='Yes'ok | gap=-9 peakL32 
+[84/200] g1473 'Is the person engaged in manually climbing?' key='climbing' | STI key=4 ans='Yes'X | SIT key=5 ans='Yes'X | gap=-1 peakL32 
+[85/200] g1496 'Are the women standing arm-in-arm?' key='standing' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL32 <PARADOX>
+[86/200] g1550 'Are the boys balancing on one foot?' key='balancing' | STI key=6 ans='No'X | SIT key=3 ans='No'X | gap=3 peakL32 
+[87/200] g1581 'Is the man wearing a gray suit?' key='wearing' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL32 
+[88/200] g1667 "Is the object in the dog's mouth spherical?" key='spherical' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL28 <PARADOX>
+[89/200] g1678 'Does someone wear a chef’s hat?' key='someone' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL32 <PARADOX>
+[90/200] g1707 'Is anyone in line to enter the bus?' key='anyone' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL30 <PARADOX>
+[91/200] g1729 'Is the dog in motion chasing a ball?' key='chasing' | STI key=1 ans='No'X | SIT key=0 ans='Yes'ok | gap=1 peakL34 <PARADOX>
+[92/200] g1737 'Is the woman wearing a brown jacket?' key='wearing' | STI key=1 ans='No'ok | SIT key=0 ans='No'ok | gap=1 peakL30 
+[93/200] g1750 'Are the horse figurines adjusted to the left?' key='figurines' | STI key=4 ans='No'ok | SIT key=0 ans='Yes'X | gap=4 peakL30 
+[94/200] g1751 'Does the scene take place at a booth?' key='scene' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL30 <PARADOX>
+[95/200] g1840 'Are the pumpkins in the picture in various colors?' key='pumpkins' | STI key=18 ans='No'ok | SIT key=17 ans='No'ok | gap=1 peakL32 
+[96/200] g1880 'Is the person hiking down the hill?' key='hiking' | STI key=0 ans='No'ok | SIT key=0 ans='No'ok | gap=0 peakL26 
+[97/200] g1889 'Does the reflection in the building show vehicles?' key='building' | STI key=20 ans='Yes'X | SIT key=16 ans='No'ok | gap=4 peakL34 <PARADOX>
+[98/200] g55 'Is the window viewed from a dark interior?' key='interior' | STI key=2 ans='Yes'X | SIT key=0 ans='Yes'X | gap=2 peakL26 
+[99/200] g82 'Are there several large containers on the table?' key='containers' | STI key=1 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=1 peakL24 
+[100/200] g84 'Is there a surfer sitting on the board in the image?' key='sitting' | STI key=2 ans='Yes'X | SIT key=0 ans='No'ok | gap=2 peakL32 <PARADOX>
+[101/200] g111 "Is there a shadow of a man on a wagon's wheel?" key='shadow' | STI key=6 ans='Yes'X | SIT key=1 ans='No'ok | gap=5 peakL24 <PARADOX>
+[102/200] g150 'Is there a red plastic fence in the background?' key='background' | STI key=1 ans='Yes'X | SIT key=1 ans='No'ok | gap=0 peakL18 <PARADOX>
+[103/200] g183 'Are there people standing close by the bench?' key='standing' | STI key=2 ans='Yes'X | SIT key=0 ans='No'ok | gap=2 peakL32 <PARADOX>
+[104/200] g188 'Is there a small waterfall in the center of the view?' key='waterfall' | STI key=20 ans='Yes'ok | SIT key=28 ans='Yes'ok | gap=-8 peakL34 
+[105/200] g318 'Are there red lights attached to columns?' key='attached' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL34 <PARADOX>
+[106/200] g338 'Is there no red SUV driving in the background?' key='driving' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL30 <PARADOX>
+[107/200] g338 'Is there no red SUV driving in the background?' key='driving' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL16 
+[108/200] g428 'Is the man hiding his face from the camera?' key='hiding' | STI key=0 ans='No'ok | SIT key=0 ans='No'ok | gap=0 peakL34 
+[109/200] g508 'Are there multiple children playing in the background?' key='playing' | STI key=4 ans='No'ok | SIT key=2 ans='No'ok | gap=2 peakL34 
+[110/200] g518 'Is there a person pointing at someone else?' key='pointing' | STI key=3 ans='No'ok | SIT key=0 ans='No'ok | gap=3 peakL34 
+[111/200] g627 'Is there exactly one person in the image?' key='exactly' | STI key=2 ans='Yes'ok | SIT key=3 ans='Yes'ok | gap=-1 peakL20 
+[112/200] g637 'Is one of the dogs black and white?' key='black' | STI key=0 ans='Yes'X | SIT key=1 ans='Yes'X | gap=-1 peakL34 
+[113/200] g677 'Are there exactly five members in the band?' key='exactly' | STI key=1 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=1 peakL30 
+[114/200] g686 'Are there men walking down the tracks?' key='walking' | STI key=1 ans='Yes'X | SIT key=2 ans='No'ok | gap=-1 peakL30 <PARADOX>
+[115/200] g717 'Are there several people sitting on a bench?' key='sitting' | STI key=7 ans='Yes'X | SIT key=0 ans='No'ok | gap=7 peakL30 <PARADOX>
+[116/200] g759 'Is the water splitting into three sections?' key='splitting' | STI key=8 ans='No'X | SIT key=3 ans='Yes'ok | gap=5 peakL30 <PARADOX>
+[117/200] g828 'Is the work being conducted above ground?' key='conducted' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL34 <PARADOX>
+[118/200] g847 'Is the band in the parade not carrying rifles?' key='carrying' | STI key=4 ans='Yes'X | SIT key=0 ans='Yes'X | gap=4 peakL32 
+[119/200] g875 'Is the ball being played with by a single child?' key='played' | STI key=2 ans='No'X | SIT key=0 ans='Yes'ok | gap=2 peakL30 <PARADOX>
+[120/200] g1036 'Is there a tree stump near the bench?' key='stump' | STI key=6 ans='Yes'X | SIT key=1 ans='No'ok | gap=5 peakL28 <PARADOX>
+[121/200] g1239 'Are there only children in the practice session?' key='children' | STI key=6 ans='No'X | SIT key=7 ans='Yes'ok | gap=-1 peakL32 <PARADOX>
+[122/200] g1243 'Is there no one reading a newspaper in the image?' key='reading' | STI key=6 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=6 peakL30 
+[123/200] g1296 'Are there exactly three people in the image?' key='exactly' | STI key=1 ans='No'X | SIT key=0 ans='No'X | gap=1 peakL30 
+[124/200] g1317 'Are there three ants on the tiled wall?' key='three' | STI key=1 ans='Yes'ok | SIT key=1 ans='No'X | gap=0 peakL22 
+[125/200] g1394 'Is the dog carrying something in its mouth?' key='something' | STI key=1 ans='No'ok | SIT key=0 ans='No'ok | gap=1 peakL22 
+[126/200] g1397 'Are they all men running in the race?' key='running' | STI key=16 ans='No'X | SIT key=22 ans='Yes'ok | gap=-6 peakL34 <PARADOX>
+[127/200] g1450 'Are there multiple people in the foreground of the image?' key='foreground' | STI key=16 ans='Yes'X | SIT key=13 ans='No'ok | gap=3 peakL26 <PARADOX>
+[128/200] g1520 'Is there a lady vendor selling things?' key='selling' | STI key=0 ans='Yes'X | SIT key=0 ans='Yes'X | gap=0 peakL34 
+[129/200] g1557 'Is there a woman in traditional Muslim wardrobe?' key='traditional' | STI key=6 ans='Yes'X | SIT key=0 ans='No'ok | gap=6 peakL32 <PARADOX>
+[130/200] g1639 'Is there no human hand pinching the catapult?' key='pinching' | STI key=1 ans='Yes'X | SIT key=0 ans='Yes'X | gap=1 peakL34 
+[131/200] g1675 'Are any of the people in the photo performing lifts?' key='performing' | STI key=2 ans='No'X | SIT key=5 ans='Yes'ok | gap=-3 peakL32 <PARADOX>
+[132/200] g1682 'Are there double yellow lines on the road?' key='double' | STI key=4 ans='Yes'X | SIT key=0 ans='No'ok | gap=4 peakL32 <PARADOX>
+[133/200] g1749 "Is there a soccer ball with 'SEL' markings?" key='markings' | STI key=5 ans='No'X | SIT key=0 ans='Yes'ok | gap=5 peakL26 <PARADOX>
+[134/200] g1749 "Is there a soccer ball with 'SEL' markings?" key='markings' | STI key=6 ans='No'ok | SIT key=0 ans='Yes'X | gap=6 peakL24 
+[135/200] g1749 'Are there two soccer balls in the scene?' key='soccer' | STI key=37 ans='No'ok | SIT key=53 ans='No'ok | gap=-16 peakL32 
+[136/200] g1789 'Are there 10 artificial green apples in the image?' key='artificial' | STI key=13 ans='Yes'ok | SIT key=4 ans='Yes'ok | gap=9 peakL32 
+[137/200] g1793 'Is there a bright yellow wall in the background?' key='background' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL30 
+[138/200] g1800 'Are there construction lights standing in darkness?' key='standing' | STI key=2 ans='Yes'X | SIT key=0 ans='Yes'X | gap=2 peakL26 
+[139/200] g1846 'Is the wetsuit cutoff at the elbows and knees?' key='wetsuit' | STI key=2 ans='No'X | SIT key=1 ans='Yes'ok | gap=1 peakL32 <PARADOX>
+[140/200] g300 'Is there just a boy and a girl in the scene?' key='scene' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL16 <PARADOX>
+[141/200] g637 'Is the dog being chased brown and white?' key='chased' | STI key=6 ans='No'X | SIT key=0 ans='No'X | gap=6 peakL30 
+[142/200] g765 'Is there a single dog not involved in the chase?' key='involved' | STI key=2 ans='No'X | SIT key=0 ans='Yes'ok | gap=2 peakL32 <PARADOX>
+[143/200] g971 'Are there any drinks on the table closest to the camera?' key='closest' | STI key=4 ans='Yes'X | SIT key=0 ans='No'ok | gap=4 peakL34 <PARADOX>
+[144/200] g1512 'Are there individuals specifically looking into the water?' key='looking' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL34 <PARADOX>
+[145/200] g28 'Does the image show exactly four men?' key='exactly' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL30 <PARADOX>
+[146/200] g30 'Is one competitor kicking another in the face?' key='kicking' | STI key=10 ans='No'X | SIT key=16 ans='Yes'ok | gap=-6 peakL30 <PARADOX>
+[147/200] g115 'Is the photograph taken with a self-held camera?' key='photograph' | STI key=1 ans='Yes'X | SIT key=3 ans='No'ok | gap=-2 peakL34 <PARADOX>
+[148/200] g118 'Are the people standing in a large pool of water?' key='standing' | STI key=7 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=7 peakL32 
+[149/200] g180 'Is the graffiti spray-painted on a cement wall?' key='graffiti' | STI key=13 ans='No'ok | SIT key=7 ans='No'ok | gap=6 peakL24 
+[150/200] g202 'Are all individuals wearing costume hats?' key='wearing' | STI key=4 ans='No'X | SIT key=0 ans='No'X | gap=4 peakL32 
+[151/200] g232 'Is the main action about catching a ball?' key='catching' | STI key=10 ans='No'X | SIT key=2 ans='Yes'ok | gap=8 peakL26 <PARADOX>
+[152/200] g255 'Is the white egret facing to the left in the image?' key='facing' | STI key=5 ans='Yes'X | SIT key=0 ans='Yes'X | gap=5 peakL32 
+[153/200] g263 'Is the person performing a trick on inline skates?' key='performing' | STI key=6 ans='Yes'X | SIT key=0 ans='No'ok | gap=6 peakL32 <PARADOX>
+[154/200] g285 'Are the cactus plants in cube-shaped pots?' key='cactus' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL32 
+[155/200] g335 'Is the man doing something on top of the cart?' key='something' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL34 <PARADOX>
+[156/200] g427 'Does the image show only two people?' key='people' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL20 <PARADOX>
+[157/200] g460 'Is the girl blowing bubbles with her eyes closed?' key='blowing' | STI key=2 ans='No'X | SIT key=1 ans='No'X | gap=1 peakL34 
+[158/200] g463 'Is the heart spray painted with a tilted "A" inside?' key='painted' | STI key=5 ans='Yes'ok | SIT key=5 ans='Yes'ok | gap=0 peakL30 
+[159/200] g506 'Is a referee present in the scenes to intervene or mediate?' key='intervene' | STI key=1 ans='Yes'X | SIT key=2 ans='No'ok | gap=-1 peakL34 <PARADOX>
+[160/200] g633 'Is the focus on a group mainly consisting of sellers?' key='consisting' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL34 <PARADOX>
+[161/200] g641 'Is this person standing while creating the artwork?' key='standing' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL34 <PARADOX>
+[162/200] g652 'Are the bikers primarily trying to ascend a hill?' key='trying' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL32 
+[163/200] g670 'Are people on the sidewalk involved in distinct activities?' key='activities' | STI key=4 ans='Yes'X | SIT key=0 ans='No'ok | gap=4 peakL24 <PARADOX>
+[164/200] g691 'Is someone wearing a blue shirt featured?' key='wearing' | STI key=5 ans='No'ok | SIT key=0 ans='No'ok | gap=5 peakL30 
+[165/200] g738 'Is the man alone with just one bicycle?' key='bicycle' | STI key=7 ans='No'X | SIT key=5 ans='Yes'ok | gap=2 peakL32 <PARADOX>
+[166/200] g757 'Is the woman wearing multiple beaded necklaces?' key='wearing' | STI key=4 ans='No'ok | SIT key=0 ans='No'ok | gap=4 peakL32 
+[167/200] g760 'Is the water body calm with no cloud in the sky?' key='water' | STI key=2 ans='Yes'ok | SIT key=1 ans='Yes'ok | gap=1 peakL32 
+[168/200] g810 'Are the cement bricks lying horizontally on the board?' key='lying' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL30 <PARADOX>
+[169/200] g834 'Does the scene include a beige boxcar with graffiti?' key='graffiti' | STI key=31 ans='Yes'X | SIT key=23 ans='No'ok | gap=8 peakL26 <PARADOX>
+[170/200] g887 'Does the central tree have four trunks?' key='central' | STI key=21 ans='Yes'X | SIT key=0 ans='No'ok | gap=21 peakL30 <PARADOX>
+[171/200] g888 'Is the star on a tan, shell-marked pillar?' key='marked' | STI key=2 ans='Yes'X | SIT key=0 ans='Yes'X | gap=2 peakL34 
+[172/200] g901 'Is the alligator facing the left side of the image?' key='facing' | STI key=6 ans='Yes'X | SIT key=6 ans='No'ok | gap=0 peakL32 <PARADOX>
+[173/200] g922 'Is the firetruck parked in a driveway outside the garage?' key='firetruck' | STI key=10 ans='No'X | SIT key=5 ans='Yes'ok | gap=5 peakL34 <PARADOX>
+[174/200] g994 'Is the musician playing a jaguar electric guitar?' key='playing' | STI key=3 ans='Yes'X | SIT key=0 ans='No'ok | gap=3 peakL30 <PARADOX>
+[175/200] g1045 'Are multiple people interacting with the fire directly?' key='interacting' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL34 <PARADOX>
+[176/200] g1067 'Is the highway loop surrounded by a thick forest?' key='surrounded' | STI key=78 ans='No'X | SIT key=63 ans='No'X | gap=15 peakL18 
+[177/200] g1084 'Is the person interacting primarily with boxed items?' key='interacting' | STI key=0 ans='Yes'X | SIT key=0 ans='No'ok | gap=0 peakL18 <PARADOX>
+[178/200] g1088 'Is the word "toxic" spray-painted on the ground?' key='painted' | STI key=3 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=3 peakL26 
+[179/200] g1115 'Is a street performer using a pogo stick?' key='using' | STI key=0 ans='No'X | SIT key=0 ans='No'X | gap=0 peakL30 
+[180/200] g1178 'Are the solar panels attached to a metal fence?' key='attached' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL30 <PARADOX>
+[181/200] g1268 'Is the sculpture placed on a gray stone platform?' key='sculpture' | STI key=27 ans='Yes'ok | SIT key=29 ans='Yes'ok | gap=-2 peakL30 
+[182/200] g1297 'Is coal the primary element the man is handling?' key='handling' | STI key=1 ans='No'X | SIT key=1 ans='Yes'ok | gap=0 peakL32 <PARADOX>
+[183/200] g1315 'Are all the cyclists racing straight ahead?' key='racing' | STI key=3 ans='No'X | SIT key=5 ans='Yes'ok | gap=-2 peakL34 <PARADOX>
+[184/200] g1319 'Does the basketball court have six nets?' key='basketball' | STI key=14 ans='No'X | SIT key=10 ans='Yes'ok | gap=4 peakL32 <PARADOX>
+[185/200] g1324 'Is the person in the image sitting while reading?' key='sitting' | STI key=3 ans='No'ok | SIT key=1 ans='No'ok | gap=2 peakL30 
+[186/200] g1334 "Does the graffiti art include the word 'SHAKE'?" key='graffiti' | STI key=57 ans='Yes'ok | SIT key=64 ans='Yes'ok | gap=-7 peakL24 
+[187/200] g1357 'Is the jump likely to end on a hard surface?' key='surface' | STI key=3 ans='Yes'ok | SIT key=0 ans='Yes'ok | gap=3 peakL34 
+[188/200] g1415 'Is the man depicted walking down the steps?' key='walking' | STI key=1 ans='Yes'X | SIT key=3 ans='No'ok | gap=-2 peakL30 <PARADOX>
+[189/200] g1422 'Is the peacock walking on twig-littered dirt?' key='walking' | STI key=8 ans='Yes'X | SIT key=2 ans='No'ok | gap=6 peakL30 <PARADOX>
+[190/200] g1444 'Is the man playing only one instrument?' key='playing' | STI key=14 ans='No'X | SIT key=11 ans='Yes'ok | gap=3 peakL34 <PARADOX>
+[191/200] g1458 'Is the landscape more than one mountain?' key='landscape' | STI key=15 ans='Yes'X | SIT key=15 ans='No'ok | gap=0 peakL26 <PARADOX>
+[192/200] g1564 'Are all performers using string instruments?' key='string' | STI key=4 ans='No'X | SIT key=0 ans='No'X | gap=4 peakL34 
+[193/200] g1583 'Is the man holding a tool in each hand?' key='holding' | STI key=0 ans='No'X | SIT key=1 ans='No'X | gap=-1 peakL34 
+[194/200] g1631 'Is the bright sun visible through a sunroof?' key='visible' | STI key=1 ans='Yes'X | SIT key=0 ans='No'ok | gap=1 peakL24 <PARADOX>
+[195/200] g1635 'Is everyone depicted inside a confined area?' key='everyone' | STI key=0 ans='No'X | SIT key=0 ans='Yes'ok | gap=0 peakL28 <PARADOX>
+[196/200] g1713 'Is the Volkswagen Microbus gray with black tires?' key='volkswagen' | STI key=9 ans='Yes'ok | SIT key=14 ans='Yes'ok | gap=-5 peakL30 
+[197/200] g1766 'Is the horse leaning over a maroon gate?' key='leaning' | STI key=7 ans='No'X | SIT key=1 ans='No'X | gap=6 peakL30 
+[198/200] g1836 'Are the two parallel roads divided by cement?' key='parallel' | STI key=8 ans='No'X | SIT key=0 ans='No'X | gap=8 peakL34 
+[199/200] g1838 'Are the clouds in the sky mainly dark cumulus?' key='cumulus' | STI key=6 ans='No'X | SIT key=5 ans='Yes'ok | gap=1 peakL30 <PARADOX>
+[200/200] g1867 'Are all individuals facing the same direction?' key='facing' | STI key=5 ans='No'X | SIT key=0 ans='No'X | gap=5 peakL32 
+
+===== 109/200 hold the paradox at low res. TOP by (paradox, key-word steering gap) =====
+  P g887 key='central' keygap=21 (STI 21 vs SIT 0) peakL30 | STI='Yes' SIT='No' | 'Does the central tree have four trunks?' [images/nb_887_0.jpg]
+  P g478 key='sharing' keygap=19 (STI 19 vs SIT 0) peakL28 | STI='Yes' SIT='No' | 'Are there some people sharing food?' [images/nb_478_0.jpg]
+  P g879 key='spectators' keygap=18 (STI 21 vs SIT 3) peakL26 | STI='Yes' SIT='No' | 'Are there multiple spectators present?' [images/nb_879_1.jpg]
+  P g58 key='waiting' keygap=15 (STI 21 vs SIT 6) peakL26 | STI='Yes' SIT='No' | 'Are the people waiting by track 17?' [images/nb_58_0.jpg]
+  P g217 key='shaking' keygap=11 (STI 11 vs SIT 0) peakL32 | STI='Yes' SIT='No' | 'Is the dog shaking off water?' [images/nb_217_1.jpg]
+  P g454 key='planting' keygap=9 (STI 10 vs SIT 1) peakL16 | STI='Yes' SIT='No' | 'Are the individuals planting crops?' [images/nb_454_1.jpg]
+  P g232 key='catching' keygap=8 (STI 10 vs SIT 2) peakL26 | STI='No' SIT='Yes' | 'Is the main action about catching a ball?' [images/nb_232_1.jpg]
+  P g834 key='graffiti' keygap=8 (STI 31 vs SIT 23) peakL26 | STI='Yes' SIT='No' | 'Does the scene include a beige boxcar with graffiti?' [images/nb_834_0.jpg]
+  P g1015 key='different' keygap=7 (STI 7 vs SIT 0) peakL26 | STI='No' SIT='Yes' | 'Are all the dogs of different colors?' [images/nb_1015_0.jpg]
+  P g717 key='sitting' keygap=7 (STI 7 vs SIT 0) peakL30 | STI='Yes' SIT='No' | 'Are there several people sitting on a bench?' [images/nb_717_1.jpg]
+  P g769 key='sitting' keygap=7 (STI 7 vs SIT 0) peakL30 | STI='Yes' SIT='No' | 'Is there a child sitting on the grass?' [images/nb_769_1.jpg]
+  P g1550 key='preparing' keygap=6 (STI 6 vs SIT 0) peakL18 | STI='Yes' SIT='No' | 'Are the boys preparing to go outside?' [images/nb_1550_1.jpg]
+  P g1255 key='structure' keygap=6 (STI 6 vs SIT 0) peakL24 | STI='Yes' SIT='No' | 'Is there a structure that resembles a skull?' [images/nb_1255_0.jpg]
+  P g1723 key='bicycles' keygap=6 (STI 26 vs SIT 20) peakL32 | STI='No' SIT='Yes' | 'Are the bicycles being carried by the cyclists?' [images/nb_1723_1.jpg]
+  P g1557 key='traditional' keygap=6 (STI 6 vs SIT 0) peakL32 | STI='Yes' SIT='No' | 'Is there a woman in traditional Muslim wardrobe?' [images/nb_1557_1.jpg]
+  P g263 key='performing' keygap=6 (STI 6 vs SIT 0) peakL32 | STI='Yes' SIT='No' | 'Is the person performing a trick on inline skates?' [images/nb_263_1.jpg]
+  P g638 key='walking' keygap=6 (STI 30 vs SIT 24) peakL30 | STI='Yes' SIT='No' | 'Is the person walking?' [images/nb_638_1.jpg]
+  P g1422 key='walking' keygap=6 (STI 8 vs SIT 2) peakL30 | STI='Yes' SIT='No' | 'Is the peacock walking on twig-littered dirt?' [images/nb_1422_0.jpg]
+  P g1749 key='markings' keygap=5 (STI 5 vs SIT 0) peakL26 | STI='No' SIT='Yes' | "Is there a soccer ball with 'SEL' markings?" [images/nb_1749_0.jpg]
+  P g922 key='firetruck' keygap=5 (STI 10 vs SIT 5) peakL34 | STI='No' SIT='Yes' | 'Is the firetruck parked in a driveway outside the garage?' [images/nb_922_0.jpg]
