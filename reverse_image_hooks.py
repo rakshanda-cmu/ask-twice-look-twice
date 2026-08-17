@@ -8,14 +8,19 @@ Model-agnostic "reverse the 2nd image block's patches" hooks, for the SITIT-reve
   Gemma-3  : reverse the 2nd image's projected tokens. Gemma uses plain 1D positions
              and has no DeepStack, so nothing else needs reversing.
 
-get_image_features()'s return shape is transformers-version-dependent: older
-versions returned a ModelOutput-style object (`.pooler_output`/
-`.deepstack_features` attributes); the version this repo now runs against
-returns plain tuples/tensors instead (Qwen3VLModel.get_image_features ->
-`(image_embeds, deepstack_image_embeds)` where image_embeds is itself a
-per-image-split tuple; Gemma3Model.get_image_features -> a bare
-[num_images, tokens, hidden] tensor). Both branches below are handled so this
-survives either transformers API shape.
+get_image_features()'s return shape is both transformers-version- and
+architecture-dependent: older versions returned a ModelOutput-style object
+(`.pooler_output`/`.deepstack_features` attributes); the version this repo
+now runs against returns plain tuples/tensors instead --
+Qwen3VLModel.get_image_features -> `(image_embeds, deepstack_image_embeds)`
+where image_embeds is itself a per-image-split tuple (DeepStack is a
+Qwen3-VL-only architecture feature); Qwen2_5_VLModel.get_image_features ->
+just the per-image-split tuple directly, no DeepStack wrapper at all (qwen2.5-vl-7b
+has no `deepstack_merger_list` on its visual tower -- naively unpacking its
+2-image output as `(image_embeds, deepstack) = out` silently assigns image 1's
+embeds to `deepstack`, corrupting shapes downstream); Gemma3Model.get_image_features
+-> a bare [num_images, tokens, hidden] tensor. All three shapes are handled
+below so this survives either transformers API era or Qwen generation.
 
 Nothing here modifies existing modules; the runners import install_reverse_hooks +
 REVERSE and flip REVERSE['on'] = True.
@@ -30,6 +35,7 @@ def _install_qwen(mm):
     orig_feat = base.get_image_features
     orig_rope = base.get_rope_index
     merge = base.visual.spatial_merge_size ** 2
+    has_deepstack = hasattr(base.visual, "deepstack_merger_list")
 
     def flip2(seq):
         if seq is None or len(seq) < 2:
@@ -56,15 +62,21 @@ def _install_qwen(mm):
         out = orig_feat(*a, **k)
         if REVERSE["on"]:
             grid = k.get("image_grid_thw", a[1] if len(a) > 1 else None)
-            if isinstance(out, tuple) and not hasattr(out, "pooler_output"):
-                # current transformers: (image_embeds, deepstack_image_embeds)
+            is_bare_tuple = isinstance(out, tuple) and not hasattr(out, "pooler_output")
+            if is_bare_tuple and has_deepstack:
+                # Qwen3-VL: (image_embeds, deepstack_image_embeds)
                 image_embeds, deepstack_image_embeds = out
                 image_embeds = flip2(image_embeds)
                 deepstack_image_embeds = _flip_deepstack(deepstack_image_embeds, grid)
                 return image_embeds, deepstack_image_embeds
+            if is_bare_tuple:
+                # Qwen2.5-VL (and earlier): just the per-image-split tuple,
+                # no DeepStack wrapper -- do NOT unpack as a 2-tuple.
+                return flip2(out)
             out.pooler_output = flip2(out.pooler_output)
-            out.deepstack_features = _flip_deepstack(
-                getattr(out, "deepstack_features", None), grid)
+            if has_deepstack:
+                out.deepstack_features = _flip_deepstack(
+                    getattr(out, "deepstack_features", None), grid)
         return out
 
     def patched_rope(*a, **k):
