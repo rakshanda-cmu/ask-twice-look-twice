@@ -27,60 +27,88 @@ OUT_DIR = os.path.join(HERE, "results")
 IMG_CAP = 1024
 
 
+CHUNK_SIZE = 10000  # cap on in-memory conversations (each embeds a base64 image) --
+# building all ~214k VQAv2-val conversations upfront was observed to OOM-kill the
+# vLLM EngineCore process at ~93GB host RAM (verified via journalctl); chunking
+# keeps at most one chunk's images resident at a time. Checkpointed between
+# chunks so a later crash resumes instead of restarting from zero.
+
+
 def run_order(llm, sp, tag, letters, pairs, data_dir, log_every, use_suffix=True,
              out_tag=""):
     out = os.path.join(OUT_DIR, f"vqa_order-{tag}_{MODEL_TAG}{out_tag}.json")
+    results, by_type, done_qids = [], {}, set()
+    n_correct, score_sum = 0, 0.0
     if os.path.exists(out):
         try:
-            m = json.load(open(out))["meta"]
+            existing = json.load(open(out))
+            m = existing["meta"]
             if m.get("complete"):
                 print(f"  [{tag}] cached (acc={m.get('accuracy'):.3f})", flush=True)
                 return
+            results = existing["results"]
+            done_qids = {r["question_id"] for r in results}
+            for r in results:
+                n_correct += int(r["correct"]); score_sum += r["vqa_score"]
+                t = r["answer_type"]
+                bt = by_type.setdefault(t, {"n": 0, "correct": 0, "score_sum": 0.0})
+                bt["n"] += 1; bt["correct"] += int(r["correct"]); bt["score_sum"] += r["vqa_score"]
+            print(f"  [resume] {tag}: {len(done_qids)} pairs already done", flush=True)
         except Exception:
-            pass
+            results, by_type, done_qids = [], {}, set()
+            n_correct, score_sum = 0, 0.0
 
-    convs, meta = [], []
-    for q, a in pairs:
-        fname, path = coco_image_path(data_dir, q["image_id"])
-        if not os.path.isfile(path):
-            continue
-        pil = downscale(Image.open(path).convert("RGB"), IMG_CAP)
-        task = q["question"] + (SHORT_ANSWER_SUFFIX if use_suffix else "")
-        convs.append(build_conversation(letters, task, data_uri(pil)))
-        gts = [ans["answer"] for ans in a["answers"]]
-        meta.append({"question_id": q["question_id"], "question": q["question"],
-                     "answer_type": a["answer_type"], "gt_answers": gts,
-                     "gt_most_common": a["multiple_choice_answer"]})
+    remaining = [(q, a) for q, a in pairs if q["question_id"] not in done_qids]
+
+    def _checkpoint(dt_so_far, complete):
+        by_type_summary = {t: {"n": v["n"], "accuracy": v["correct"] / v["n"],
+                               "vqa_score": v["score_sum"] / v["n"]}
+                           for t, v in by_type.items()}
+        meta_out = {"benchmark": "VQAv2-val", "ordering": tag, "model": MODEL_TAG,
+                    "engine": "vllm", "n": len(results),
+                    "accuracy": n_correct / max(1, len(results)),
+                    "vqa_score": score_sum / max(1, len(results)),
+                    "by_answer_type": by_type_summary, "runtime_s": dt_so_far,
+                    "complete": complete}
+        json.dump({"meta": meta_out, "results": results}, open(out, "w"), indent=2)
+        return meta_out
 
     t0 = time.time()
-    outputs = llm.chat(convs, sp, use_tqdm=False)
+    for ci in range(0, len(remaining), CHUNK_SIZE):
+        chunk = remaining[ci:ci + CHUNK_SIZE]
+        convs, meta = [], []
+        for q, a in chunk:
+            fname, path = coco_image_path(data_dir, q["image_id"])
+            if not os.path.isfile(path):
+                continue
+            pil = downscale(Image.open(path).convert("RGB"), IMG_CAP)
+            task = q["question"] + (SHORT_ANSWER_SUFFIX if use_suffix else "")
+            convs.append(build_conversation(letters, task, data_uri(pil)))
+            gts = [ans["answer"] for ans in a["answers"]]
+            meta.append({"question_id": q["question_id"], "question": q["question"],
+                         "answer_type": a["answer_type"], "gt_answers": gts,
+                         "gt_most_common": a["multiple_choice_answer"]})
+
+        outputs = llm.chat(convs, sp, use_tqdm=False)
+        del convs
+
+        for o, m in zip(outputs, meta):
+            text = o.outputs[0].text.strip()
+            correct, vqa_score, norm, matched = score_example(text, m["gt_answers"])
+            n_correct += int(correct); score_sum += vqa_score
+            t = m["answer_type"]
+            bt = by_type.setdefault(t, {"n": 0, "correct": 0, "score_sum": 0.0})
+            bt["n"] += 1; bt["correct"] += int(correct); bt["score_sum"] += vqa_score
+            results.append({**m, "model_answer_raw": text, "model_answer_norm": norm,
+                            "correct": correct, "vqa_score": round(vqa_score, 4)})
+            if len(results) % log_every == 0:
+                print(f"    [{tag}] {len(results)}/{len(pairs)} "
+                      f"acc={n_correct/len(results):.3f} score={score_sum/len(results):.3f}",
+                      flush=True)
+        _checkpoint(time.time() - t0, complete=False)
+
     dt = time.time() - t0
-
-    results, by_type = [], {}
-    n_correct, score_sum = 0, 0.0
-    for o, m in zip(outputs, meta):
-        text = o.outputs[0].text.strip()
-        correct, vqa_score, norm, matched = score_example(text, m["gt_answers"])
-        n_correct += int(correct); score_sum += vqa_score
-        t = m["answer_type"]
-        bt = by_type.setdefault(t, {"n": 0, "correct": 0, "score_sum": 0.0})
-        bt["n"] += 1; bt["correct"] += int(correct); bt["score_sum"] += vqa_score
-        results.append({**m, "model_answer_raw": text, "model_answer_norm": norm,
-                        "correct": correct, "vqa_score": round(vqa_score, 4)})
-        if len(results) % log_every == 0:
-            print(f"    [{tag}] {len(results)}/{len(convs)} "
-                  f"acc={n_correct/len(results):.3f} score={score_sum/len(results):.3f}",
-                  flush=True)
-
-    by_type_summary = {t: {"n": v["n"], "accuracy": v["correct"] / v["n"],
-                           "vqa_score": v["score_sum"] / v["n"]}
-                       for t, v in by_type.items()}
-    meta_out = {"benchmark": "VQAv2-val", "ordering": tag, "model": MODEL_TAG,
-                "engine": "vllm", "n": len(results),
-                "accuracy": n_correct / max(1, len(results)),
-                "vqa_score": score_sum / max(1, len(results)),
-                "by_answer_type": by_type_summary, "runtime_s": dt, "complete": True}
-    json.dump({"meta": meta_out, "results": results}, open(out, "w"), indent=2)
+    meta_out = _checkpoint(dt, complete=True)
     print(f"  [{tag}] n={len(results)} acc={meta_out['accuracy']:.3f} "
           f"vqa_score={meta_out['vqa_score']:.3f} ({dt:.0f}s) -> {out}", flush=True)
 

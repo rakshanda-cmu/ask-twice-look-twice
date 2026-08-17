@@ -8,6 +8,15 @@ Model-agnostic "reverse the 2nd image block's patches" hooks, for the SITIT-reve
   Gemma-3  : reverse the 2nd image's projected tokens. Gemma uses plain 1D positions
              and has no DeepStack, so nothing else needs reversing.
 
+get_image_features()'s return shape is transformers-version-dependent: older
+versions returned a ModelOutput-style object (`.pooler_output`/
+`.deepstack_features` attributes); the version this repo now runs against
+returns plain tuples/tensors instead (Qwen3VLModel.get_image_features ->
+`(image_embeds, deepstack_image_embeds)` where image_embeds is itself a
+per-image-split tuple; Gemma3Model.get_image_features -> a bare
+[num_images, tokens, hidden] tensor). Both branches below are handled so this
+survives either transformers API shape.
+
 Nothing here modifies existing modules; the runners import install_reverse_hooks +
 REVERSE and flip REVERSE['on'] = True.
 """
@@ -28,24 +37,34 @@ def _install_qwen(mm):
         lst = list(seq); lst[1] = torch.flip(lst[1], dims=[0])
         return tuple(lst) if isinstance(seq, tuple) else lst
 
+    def _flip_deepstack(ds, grid):
+        if ds is None or grid is None:
+            return ds
+        sizes = (grid.prod(-1) // merge).tolist()
+        new = []
+        for layer in ds:
+            if torch.is_tensor(layer):
+                parts = list(torch.split(layer, sizes))
+                if len(parts) >= 2:
+                    parts[1] = torch.flip(parts[1], dims=[0])
+                new.append(torch.cat(parts, dim=0))
+            else:
+                new.append(flip2(layer))
+        return type(ds)(new)
+
     def patched_feat(*a, **k):
         out = orig_feat(*a, **k)
         if REVERSE["on"]:
             grid = k.get("image_grid_thw", a[1] if len(a) > 1 else None)
+            if isinstance(out, tuple) and not hasattr(out, "pooler_output"):
+                # current transformers: (image_embeds, deepstack_image_embeds)
+                image_embeds, deepstack_image_embeds = out
+                image_embeds = flip2(image_embeds)
+                deepstack_image_embeds = _flip_deepstack(deepstack_image_embeds, grid)
+                return image_embeds, deepstack_image_embeds
             out.pooler_output = flip2(out.pooler_output)
-            ds = getattr(out, "deepstack_features", None)
-            if ds is not None and grid is not None:
-                sizes = (grid.prod(-1) // merge).tolist()
-                new = []
-                for layer in ds:
-                    if torch.is_tensor(layer):
-                        parts = list(torch.split(layer, sizes))
-                        if len(parts) >= 2:
-                            parts[1] = torch.flip(parts[1], dims=[0])
-                        new.append(torch.cat(parts, dim=0))
-                    else:
-                        new.append(flip2(layer))
-                out.deepstack_features = type(ds)(new)
+            out.deepstack_features = _flip_deepstack(
+                getattr(out, "deepstack_features", None), grid)
         return out
 
     def patched_rope(*a, **k):
@@ -76,10 +95,15 @@ def _install_gemma(mm):
     def patched_feat(*a, **k):
         out = orig_feat(*a, **k)
         if REVERSE["on"]:
-            po = out.pooler_output          # [num_images, tokens_per_image, hidden]
+            # current transformers: bare [num_images, tokens_per_image, hidden]
+            # tensor; older versions wrapped it as out.pooler_output.
+            is_bare_tensor = torch.is_tensor(out)
+            po = out if is_bare_tensor else out.pooler_output
             if torch.is_tensor(po) and po.shape[0] >= 2:
                 po = po.clone()
                 po[1] = torch.flip(po[1], dims=[0])   # reverse 2nd image's tokens
+                if is_bare_tensor:
+                    return po
                 out.pooler_output = po
         return out
 
