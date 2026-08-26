@@ -265,7 +265,7 @@ python -m stats.make_sig_table        # LaTeX body for the supplementary signifi
 @inproceedings{abhinandan2026asktwice,
   title     = {Ask Twice, Look Twice: Prompt Echoing Resolves the Question-First Paradox in Vision-Language Models},
   author    = {Abhinandan, Rakshanda Hassan and Galeotti, John and Ramanan, Deva and Gare, Gautam Rajendrakumar},
-  booktitle = {European Conference on Computer Vision (ECCV)},
+  booktitle = {ECCV Workshops},
   year      = {2026}
 }
 ```
