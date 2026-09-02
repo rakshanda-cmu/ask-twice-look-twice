@@ -27,7 +27,8 @@ import cv2
 import pandas as pd
 from PIL import Image
 from common import (ORDER_LIST, ORDER_LETTERS, MODEL_TAG, downscale, data_uri,
-                    build_conversation, make_llm)
+                    build_conversation, make_llm, add_echo_args, echo_tag_suffix,
+                    echo_occurrence_uris)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
@@ -99,7 +100,8 @@ def parse_choice(text):
 CHUNK_SIZE = 100
 
 
-def run_order(llm, sp, tag, letters, rows, k_frames, log_every):
+def run_order(llm, sp, tag, letters, rows, k_frames, log_every,
+             echo_scale=None, echo_which=None):
     out = os.path.join(OUT_DIR, f"nextqa_order-{tag}_{MODEL_TAG}.json")
     results, done = [], set()
     if os.path.exists(out):
@@ -126,10 +128,16 @@ def run_order(llm, sp, tag, letters, rows, k_frames, log_every):
         frames = sample_frames(vpath, k_frames)
         if not frames:
             continue
-        uris = [data_uri(downscale(f, IMG_CAP)) for f in frames]
+        dframes = [downscale(f, IMG_CAP) for f in frames]
         opts = "\n".join(f"{i}: {r[f'a{i}']}" for i in range(5))
         task = f"{r['question']}\nOptions:\n{opts}{MC_SUFFIX}"
-        convs.append(build_conversation(letters, task, uris))
+        if echo_scale is not None:
+            occ_uris = echo_occurrence_uris(dframes, echo_scale, echo_which)
+            convs.append(build_conversation(letters, task, None,
+                                            per_occurrence_uris=occ_uris))
+        else:
+            uris = [data_uri(f) for f in dframes]
+            convs.append(build_conversation(letters, task, uris))
         meta.append({"qid": int(r["qid"]), "video": str(r["video"]),
                      "type": r["type"], "answer": int(r["answer"]),
                      "question": r["question"]})
@@ -185,7 +193,10 @@ def main():
                     help="vLLM gpu_memory_utilization; lower if another process "
                          "already holds GPU memory.")
     ap.add_argument("--log-every", type=int, default=100, dest="log_every")
+    add_echo_args(ap)
     args = ap.parse_args()
+    if args.echo_scale is not None and not args.echo_which:
+        ap.error("--echo-scale requires --echo-which {first,second}")
     os.makedirs(OUT_DIR, exist_ok=True)
 
     rows = load_nextqa(args.num_samples)
@@ -206,8 +217,15 @@ def main():
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
             print(f"  skip {tag} (not hook-free)"); continue
-        print(f"=== NExT-QA · ordering {tag} ===", flush=True)
-        run_order(llm, sp, tag, ORDER_LETTERS[tag], rows, args.frames, args.log_every)
+        if args.echo_scale is not None:
+            assert tag.count("I") == 2, \
+                f"--echo-scale requires a 2-image order, got {tag!r}"
+            out_tag_name = echo_tag_suffix(tag, args.echo_scale, args.echo_which)
+        else:
+            out_tag_name = tag
+        print(f"=== NExT-QA · ordering {out_tag_name} ===", flush=True)
+        run_order(llm, sp, out_tag_name, ORDER_LETTERS[tag], rows, args.frames,
+                  args.log_every, echo_scale=args.echo_scale, echo_which=args.echo_which)
     print("[done]", flush=True)
 
 

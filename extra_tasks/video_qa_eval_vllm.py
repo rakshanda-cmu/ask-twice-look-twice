@@ -28,7 +28,8 @@ sys.path.insert(0, SUPP)
 import cv2
 from PIL import Image
 from common import (ORDER_LIST, ORDER_LETTERS, downscale, data_uri,
-                    build_conversation, make_llm)
+                    build_conversation, make_llm, add_echo_args, echo_tag_suffix,
+                    echo_occurrence_uris)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
@@ -104,7 +105,8 @@ def scored_contains(pred_text, gt):
     return re.search(r"(?<!\w)" + re.escape(gn) + r"(?!\w)", pn) is not None
 
 
-def run_order(llm, sp, dataset, tag, letters, rows, k_frames, model_tag, log_every):
+def run_order(llm, sp, dataset, tag, letters, rows, k_frames, model_tag, log_every,
+             echo_scale=None, echo_which=None):
     out = os.path.join(OUT_DIR, f"{dataset}qa_order-{tag}_{model_tag}.json")
     results, done = [], set()
     if os.path.exists(out):
@@ -126,9 +128,15 @@ def run_order(llm, sp, dataset, tag, letters, rows, k_frames, model_tag, log_eve
         frames = sample_frames(r["video_path"], k_frames)
         if not frames:
             continue
-        uris = [data_uri(downscale(f, IMG_CAP)) for f in frames]
+        dframes = [downscale(f, IMG_CAP) for f in frames]
         task = r["question"] + MC_SUFFIX
-        convs.append(build_conversation(letters, task, uris))
+        if echo_scale is not None:
+            occ_uris = echo_occurrence_uris(dframes, echo_scale, echo_which)
+            convs.append(build_conversation(letters, task, None,
+                                            per_occurrence_uris=occ_uris))
+        else:
+            uris = [data_uri(f) for f in dframes]
+            convs.append(build_conversation(letters, task, uris))
         meta.append({"qid": r["qid"], "video": r["video"], "answer": r["answer"],
                      "question": r["question"]})
 
@@ -175,7 +183,10 @@ def main():
                     help="vLLM gpu_memory_utilization; lower if another process "
                          "already holds GPU memory.")
     ap.add_argument("--log-every", type=int, default=100, dest="log_every")
+    add_echo_args(ap)
     args = ap.parse_args()
+    if args.echo_scale is not None and not args.echo_which:
+        ap.error("--echo-scale requires --echo-which {first,second}")
     os.makedirs(OUT_DIR, exist_ok=True)
     if args.model in ("gemma-3-27b", "gemma-4-31b") and args.tp != 1:
         print(f"  [note] forcing --tp 1 for {args.model} (bnb 4-bit, single GPU only)")
@@ -206,9 +217,16 @@ def main():
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
             print(f"  skip {tag} (not hook-free)"); continue
-        print(f"=== {args.dataset} · ordering {tag} ===", flush=True)
-        run_order(llm, sp, args.dataset, tag, ORDER_LETTERS[tag], rows, args.frames,
-                  args.model, args.log_every)
+        if args.echo_scale is not None:
+            assert tag.count("I") == 2, \
+                f"--echo-scale requires a 2-image order, got {tag!r}"
+            out_tag_name = echo_tag_suffix(tag, args.echo_scale, args.echo_which)
+        else:
+            out_tag_name = tag
+        print(f"=== {args.dataset} · ordering {out_tag_name} ===", flush=True)
+        run_order(llm, sp, args.dataset, out_tag_name, ORDER_LETTERS[tag], rows,
+                  args.frames, args.model, args.log_every,
+                  echo_scale=args.echo_scale, echo_which=args.echo_which)
     print("[done]", flush=True)
 
 
