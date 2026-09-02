@@ -75,52 +75,80 @@ def parse_count(text):
     return None
 
 
+CHUNK_SIZE = 10000  # see vqa_eval_vllm.py's CHUNK_SIZE comment -- same host-RAM
+# OOM risk from holding all conversations (each embedding a base64 image) in
+# memory at once before a single llm.chat() call; confirmed via journalctl
+# (gemma-3-27b TallyQA full run OOM-killed at ~109GB anon-RSS). Checkpointed
+# between chunks so a crash resumes instead of restarting from zero.
+
+
 def run_order(llm, sp, tag, letters, rows, log_every):
     out = os.path.join(OUT_DIR, f"tallyqa_order-{tag}_{MODEL_TAG}.json")
+    results, n_correct, abs_err_sum, n_parsed, done_idx = [], 0, 0.0, 0, set()
     if os.path.exists(out):
         try:
-            m = json.load(open(out))["meta"]
+            existing = json.load(open(out))
+            m = existing["meta"]
             if m.get("complete"):
                 print(f"  [{tag}] cached (acc={m.get('accuracy'):.3f})", flush=True)
                 return
+            results = existing["results"]
+            done_idx = {r["row_idx"] for r in results}
+            for r in results:
+                n_correct += int(r["correct"])
+                if r["pred"] is not None:
+                    n_parsed += 1
+                    abs_err_sum += abs(r["pred"] - r["gt"])
+            print(f"  [resume] {tag}: {len(done_idx)} rows already done", flush=True)
         except Exception:
-            pass
+            results, n_correct, abs_err_sum, n_parsed, done_idx = [], 0, 0.0, 0, set()
 
-    convs, gts = [], []
-    for r in rows:
-        try:
-            pil = Image.open(io.BytesIO(base64.b64decode(r["image"]))).convert("RGB")
-        except Exception:
-            continue
-        pil = downscale(pil, IMG_CAP)
-        task = r["question"].strip() + COUNT_SUFFIX
-        convs.append(build_conversation(letters, task, data_uri(pil)))
-        gts.append(int(r["answer"]))
+    remaining = [(i, r) for i, r in enumerate(rows) if i not in done_idx]
+
+    def _checkpoint(dt_so_far, complete):
+        meta_out = {"benchmark": "TallyQA", "ordering": tag, "model": MODEL_TAG,
+                    "engine": "vllm", "n": len(results),
+                    "accuracy": n_correct / max(1, len(results)),
+                    "mae": abs_err_sum / max(1, n_parsed), "parsed": n_parsed,
+                    "runtime_s": dt_so_far, "complete": complete}
+        json.dump({"meta": meta_out, "results": results}, open(out, "w"), indent=2)
+        return meta_out
 
     t0 = time.time()
-    outputs = llm.chat(convs, sp, use_tqdm=False)
+    for ci in range(0, len(remaining), CHUNK_SIZE):
+        chunk = remaining[ci:ci + CHUNK_SIZE]
+        convs, idxs, gts = [], [], []
+        for i, r in chunk:
+            try:
+                pil = Image.open(io.BytesIO(base64.b64decode(r["image"]))).convert("RGB")
+            except Exception:
+                continue
+            pil = downscale(pil, IMG_CAP)
+            task = r["question"].strip() + COUNT_SUFFIX
+            convs.append(build_conversation(letters, task, data_uri(pil)))
+            idxs.append(i)
+            gts.append(int(r["answer"]))
+
+        outputs = llm.chat(convs, sp, use_tqdm=False)
+        del convs
+
+        for o, i, gt in zip(outputs, idxs, gts):
+            text = o.outputs[0].text.strip()
+            pred = parse_count(text)
+            correct = pred == gt
+            n_correct += int(correct)
+            if pred is not None:
+                n_parsed += 1
+                abs_err_sum += abs(pred - gt)
+            results.append({"row_idx": i, "gt": gt, "pred": pred, "raw": text,
+                            "correct": correct})
+            if len(results) % log_every == 0:
+                print(f"    [{tag}] {len(results)}/{len(rows)} "
+                      f"acc={n_correct/len(results):.3f}", flush=True)
+        _checkpoint(time.time() - t0, complete=False)
+
     dt = time.time() - t0
-
-    results, n_correct, abs_err_sum, n_parsed = [], 0, 0.0, 0
-    for o, gt in zip(outputs, gts):
-        text = o.outputs[0].text.strip()
-        pred = parse_count(text)
-        correct = pred == gt
-        n_correct += int(correct)
-        if pred is not None:
-            n_parsed += 1
-            abs_err_sum += abs(pred - gt)
-        results.append({"gt": gt, "pred": pred, "raw": text, "correct": correct})
-        if len(results) % log_every == 0:
-            print(f"    [{tag}] {len(results)}/{len(convs)} "
-                  f"acc={n_correct/len(results):.3f}", flush=True)
-
-    meta = {"benchmark": "TallyQA", "ordering": tag, "model": MODEL_TAG,
-            "engine": "vllm", "n": len(results),
-            "accuracy": n_correct / max(1, len(results)),
-            "mae": abs_err_sum / max(1, n_parsed), "parsed": n_parsed,
-            "runtime_s": dt, "complete": True}
-    json.dump({"meta": meta, "results": results}, open(out, "w"), indent=2)
+    meta = _checkpoint(dt, complete=True)
     print(f"  [{tag}] n={len(results)} acc={meta['accuracy']:.3f} mae={meta['mae']:.2f} "
           f"({dt:.0f}s) -> {out}", flush=True)
 

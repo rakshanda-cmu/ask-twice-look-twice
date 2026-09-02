@@ -51,6 +51,7 @@ from patchcos_browser import render_patchcos_page
 from sitit_compare_browser import render_sitit_compare_page
 from logitlens_demo_browser import render_logitlens_demo_page
 from summary_browser import render_summary_page
+from new_experiments_browser import render_new_experiments_page
 
 
 # ── model cache ───────────────────────────────────────────────────────────────
@@ -183,7 +184,7 @@ _page = st.sidebar.radio(
      "🎬 Extended Benchmarks (VQA/Counting/MMVP/BLINK/Video-QA)",
      "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)",
      "🖼️ Patch Perturbation", "🔬 Logit Lens (this image)", "🎞️ SITIT vs STIT",
-     "📊 Cross-Dataset Summary"],
+     "📊 Cross-Dataset Summary", "🆕 New Experiments"],
     key="app_page",
 )
 if _page == "🧪 NaturalBench Experiments":
@@ -233,6 +234,9 @@ if _page == "🎞️ SITIT vs STIT":
     st.stop()
 if _page == "📊 Cross-Dataset Summary":
     render_summary_page()
+    st.stop()
+if _page == "🆕 New Experiments":
+    render_new_experiments_page()
     st.stop()
 
 # ── sidebar ───────────────────────────────────────────────────────────────────
