@@ -19,7 +19,8 @@ SUPP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, SUPP)
 from PIL import Image
 from common import (ORDER_LIST, ORDER_LETTERS, MODEL_TAG, downscale, data_uri,
-                    build_conversation, make_llm)
+                    build_conversation, make_llm, add_echo_args, echo_tag_suffix,
+                    echo_occurrence_uris)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
@@ -82,7 +83,7 @@ CHUNK_SIZE = 10000  # see vqa_eval_vllm.py's CHUNK_SIZE comment -- same host-RAM
 # between chunks so a crash resumes instead of restarting from zero.
 
 
-def run_order(llm, sp, tag, letters, rows, log_every):
+def run_order(llm, sp, tag, letters, rows, log_every, echo_scale=None, echo_which=None):
     out = os.path.join(OUT_DIR, f"tallyqa_order-{tag}_{MODEL_TAG}.json")
     results, n_correct, abs_err_sum, n_parsed, done_idx = [], 0, 0.0, 0, set()
     if os.path.exists(out):
@@ -125,7 +126,12 @@ def run_order(llm, sp, tag, letters, rows, log_every):
                 continue
             pil = downscale(pil, IMG_CAP)
             task = r["question"].strip() + COUNT_SUFFIX
-            convs.append(build_conversation(letters, task, data_uri(pil)))
+            if echo_scale is not None:
+                occ_uris = echo_occurrence_uris(pil, echo_scale, echo_which)
+                convs.append(build_conversation(letters, task, None,
+                                                per_occurrence_uris=occ_uris))
+            else:
+                convs.append(build_conversation(letters, task, data_uri(pil)))
             idxs.append(i)
             gts.append(int(r["answer"]))
 
@@ -164,7 +170,10 @@ def main():
                     help="vLLM gpu_memory_utilization; lower if another process "
                          "already holds GPU memory.")
     ap.add_argument("--log-every", type=int, default=200, dest="log_every")
+    add_echo_args(ap)
     args = ap.parse_args()
+    if args.echo_scale is not None and not args.echo_which:
+        ap.error("--echo-scale requires --echo-which {first,second}")
     os.makedirs(OUT_DIR, exist_ok=True)
 
     global MODEL_TAG
@@ -189,8 +198,15 @@ def main():
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
             print(f"  skip {tag} (not hook-free)"); continue
-        print(f"=== TallyQA · ordering {tag} ===", flush=True)
-        run_order(llm, sp, tag, ORDER_LETTERS[tag], rows, args.log_every)
+        if args.echo_scale is not None:
+            assert tag.count("I") == 2, \
+                f"--echo-scale requires a 2-image order, got {tag!r}"
+            out_tag_name = echo_tag_suffix(tag, args.echo_scale, args.echo_which)
+        else:
+            out_tag_name = tag
+        print(f"=== TallyQA · ordering {out_tag_name} ===", flush=True)
+        run_order(llm, sp, out_tag_name, ORDER_LETTERS[tag], rows, args.log_every,
+                  echo_scale=args.echo_scale, echo_which=args.echo_which)
     print("[done]", flush=True)
 
 

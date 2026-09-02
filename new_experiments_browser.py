@@ -82,6 +82,16 @@ def _rf20_resolution_section():
         st.caption("Half/quarter runs in progress — showing baseline only so far.")
 
 
+TOKEN_COST_PATH = "./token_cost_results.json"
+TOKEN_COST_VARIANTS = [
+    ("STI", "STI (baseline: 1 image, 1 task)"),
+    ("STIT", "STIT (text repetition: task x2)"),
+    ("SITIT_full", "SITIT (image repetition, full-res echo)"),
+    ("SITIT_half", "SITIT (image repetition, ½-res echo)"),
+    ("SITIT_quarter", "SITIT (image repetition, ¼-res echo)"),
+]
+
+
 def _token_cost_section():
     st.subheader("🔢 Token-cost Delta — text repetition vs image repetition")
     st.caption(
@@ -89,8 +99,42 @@ def _token_cost_section():
         "baseline: repeating the TASK text (STIT) vs repeating the IMAGE "
         "(SITIT), at full/½/¼ resolution for the echoed occurrence."
     )
-    st.info("Not computed yet — planned next (no GPU generation needed, just "
-            "processor/tokenizer introspection on a representative image sample).")
+    if not os.path.exists(TOKEN_COST_PATH):
+        st.info("Not computed yet — run token_cost_analysis.py (CPU-only, no "
+                "GPU generation needed).")
+        return
+    d = json.load(open(TOKEN_COST_PATH))
+    st.caption(
+        f"Mean over **{d['n_images']}** representative RF20 images (one per "
+        f"dataset), **{d['model']}** tokenizer/processor. Task text: "
+        f"\"{d['task_text']}\""
+    )
+    rows = []
+    for key, label in TOKEN_COST_VARIANTS:
+        s, delta = d["summary"][key], d["delta_vs_STI"][key]
+        rows.append({
+            "Variant": label,
+            "Image tokens": f"{s['image']:.0f}",
+            "Text tokens": f"{s['text']:.0f}",
+            "Total tokens": f"{s['total']:.0f}",
+            "Δ total vs STI": f"{delta['delta_total']:+.0f}",
+            "Δ image vs STI": f"{delta['delta_image']:+.0f}",
+            "Δ text vs STI": f"{delta['delta_text']:+.0f}",
+        })
+    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+    stit_d = d["delta_vs_STI"]["STIT"]["delta_total"]
+    full_d = d["delta_vs_STI"]["SITIT_full"]["delta_total"]
+    half_d = d["delta_vs_STI"]["SITIT_half"]["delta_total"]
+    quarter_d = d["delta_vs_STI"]["SITIT_quarter"]["delta_total"]
+    st.caption(
+        f"Text repetition (STIT) costs only **+{stit_d:.0f} tokens** vs STI "
+        f"(the repeated task text is short); image repetition (SITIT) costs "
+        f"far more, and scales with the echoed image's resolution: "
+        f"**+{full_d:.0f}** at full res, **+{half_d:.0f}** at half "
+        f"(~{100*half_d/full_d:.0f}% of full), **+{quarter_d:.0f}** at quarter "
+        f"(~{100*quarter_d/full_d:.0f}% of full) — consistent with vision "
+        f"tokens scaling with pixel count (quadratically in linear scale)."
+    )
 
 
 def _gepa_section():
