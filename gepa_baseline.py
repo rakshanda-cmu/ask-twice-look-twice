@@ -79,6 +79,17 @@ EVAL_ORDER = "STI"  # fixed; GEPA optimizes the prompt TEXT, not ordering
 #  wiring, token/cost accounting, train/val/eval split) is dataset-agnostic.
 # ═══════════════════════════════════════════════════════════════════════════
 
+def _get_image(ex):
+    """Adapters store either a decoded PIL under 'image' (small datasets like
+    POPE, whose HF dataset already embeds images inline -- eager decode is
+    fine at 9000 rows) or a path under 'image_path' (large datasets like VQA,
+    whose 200K+-row pool would waste huge memory if eagerly decoded when only
+    a few hundred/thousand rows actually get sampled into train/val/eval)."""
+    if "image" in ex:
+        return ex["image"]
+    return Image.open(ex["image_path"]).convert("RGB")
+
+
 def _pope_loader():
     from pope_eval import load_pope_samples
     rows = load_pope_samples()  # full 9000, category-stratified already
@@ -99,9 +110,38 @@ def _pope_score(raw, ex):
     return correct, 1.0 if correct else 0.0, pred
 
 
+def _vqa_loader():
+    from vqa_eval import load_vqa, coco_image_path
+    vqa_dir = "/data2/hf_cache/newtasks/vqa"
+    data_dir = "/data2/hf_cache/newtasks/vqa/val2014"
+    pairs = load_vqa(vqa_dir)
+    rows = []
+    for q, a in pairs:
+        _, path = coco_image_path(data_dir, q["image_id"])
+        if not os.path.isfile(path):
+            continue
+        rows.append({"id": q["question_id"], "image_path": path,
+                     "question": q["question"],
+                     "gt_answers": [x["answer"] for x in a["answers"]]})
+    return rows
+
+
+def _vqa_task_text(ex):
+    from vqa_eval import SHORT_ANSWER_SUFFIX
+    return ex["question"] + SHORT_ANSWER_SUFFIX
+
+
+def _vqa_score(raw, ex):
+    from vqa_eval import score_example
+    correct, vqa_score, norm, _ = score_example(raw, ex["gt_answers"])
+    return correct, vqa_score, norm
+
+
 DATASET_ADAPTERS = {
     "pope": {"loader": _pope_loader, "task_text": _pope_task_text,
             "score": _pope_score, "img_cap": 1024},
+    "vqa": {"loader": _vqa_loader, "task_text": _vqa_task_text,
+           "score": _vqa_score, "img_cap": 1024},
 }
 
 
@@ -147,15 +187,19 @@ class MeteredEngine:
 
 def make_evaluator(engine, adapter, img_cap):
     def evaluator(candidate, example):
-        pil = downscale(example["image"], img_cap)
+        pil = downscale(_get_image(example), img_cap)
         task = adapter["task_text"](example)
         conv = build_conversation(EVAL_ORDER, task, data_uri(pil),
                                   system_text=candidate["prompt"])
         raw = engine.run_task(conv)
         correct, score, pred = adapter["score"](raw, example)
+        # ground truth field name varies by adapter -- POPE stores a single
+        # 'gt' string, VQA stores 'gt_answers' (10 human annotations); fall
+        # back to whichever is present rather than hardcoding one.
+        gt_display = example.get("gt", example.get("gt_answers"))
         side_info = {
             "Question": task,
-            "GroundTruth": str(example["gt"]),
+            "GroundTruth": str(gt_display),
             "ModelPrediction": str(pred),
             "ModelRawOutput": raw,
             "Correct": correct,
@@ -165,7 +209,7 @@ def make_evaluator(engine, adapter, img_cap):
 
 
 def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
-            seed, out_dir, tp, gpu_mem):
+            seed, out_dir, tp, gpu_mem, eval_size):
     import gepa
     import gepa.optimize_anything as oa
 
@@ -179,12 +223,13 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     rng.shuffle(idx)
     train_idx = idx[:train_size]
     val_idx = idx[train_size:train_size + val_size]
-    eval_idx = idx[train_size + val_size:]
+    eval_idx = idx[train_size + val_size:train_size + val_size + eval_size]
     trainset = [pool[i] for i in train_idx]
     valset = [pool[i] for i in val_idx]
     evalset = [pool[i] for i in eval_idx]
     print(f"[split] train={len(trainset)} val={len(valset)} "
-          f"held-out-eval={len(evalset)} (seeded, distinct index sets)", flush=True)
+          f"held-out-eval={len(evalset)} (seeded, distinct index sets; pool={len(pool)})",
+          flush=True)
 
     print(f"[load] vLLM model = {model_tag}", flush=True)
     from vllm import SamplingParams
@@ -225,14 +270,23 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     print(f"[gepa] best prompt:\n{best['prompt']}\n", flush=True)
 
     # ── held-out eval: baseline SYSTEM_MESSAGE vs GEPA-optimized prompt ──────
+    # Batched through vLLM (unlike the one-at-a-time task_lm calls GEPA's
+    # evaluator makes during optimization, which must stay serial -- see
+    # MeteredEngine/EngineConfig(parallel=False) above) -- this eval isn't
+    # part of the metered optimization loop, so there's no reason not to use
+    # vLLM's normal batched .chat(), matching every other eval script in
+    # this repo (vqa_eval_vllm.py etc.) instead of looping one item at a time.
     def _eval_prompt(prompt_text, tag):
-        n_correct = 0
+        convs = []
         for ex in evalset:
-            pil = downscale(ex["image"], adapter["img_cap"])
+            pil = downscale(_get_image(ex), adapter["img_cap"])
             task = adapter["task_text"](ex)
-            conv = build_conversation(EVAL_ORDER, task, data_uri(pil),
-                                      system_text=prompt_text)
-            raw = engine.run_task(conv)
+            convs.append(build_conversation(EVAL_ORDER, task, data_uri(pil),
+                                            system_text=prompt_text))
+        outputs = engine.llm.chat(convs, engine.task_sp, use_tqdm=False)
+        n_correct = 0
+        for o, ex in zip(outputs, evalset):
+            raw = o.outputs[0].text.strip()
             correct, _, _ = adapter["score"](raw, ex)
             n_correct += int(correct)
         acc = n_correct / max(1, len(evalset))
@@ -251,7 +305,7 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     hf_id = MODEL_REGISTRY[model_tag]["hf"]
     processor = AutoProcessor.from_pretrained(hf_id)
     hf_config = AutoConfig.from_pretrained(hf_id)
-    sample_img = evalset[0]["image"] if evalset else pool[0]["image"]
+    sample_img = _get_image(evalset[0] if evalset else pool[0])
     sample_task = adapter["task_text"](evalset[0] if evalset else pool[0])
 
     def _count_tokens(prompt_text):
@@ -316,6 +370,10 @@ def main():
     ap.add_argument("--train-size", type=int, default=60, dest="train_size")
     ap.add_argument("--val-size", type=int, default=40, dest="val_size")
     ap.add_argument("--max-metric-calls", type=int, default=150, dest="max_metric_calls")
+    ap.add_argument("--eval-size", type=int, default=500, dest="eval_size",
+                    help="held-out eval subset size (capped, not 'everything left "
+                         "in the pool' -- the full pool is already used by the "
+                         "production STI/SIT/STIT/SITIT baseline for this dataset).")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out-dir", default=OUT_DIR, dest="out_dir")
     ap.add_argument("--tp", type=int, default=1)
@@ -323,7 +381,8 @@ def main():
     args = ap.parse_args()
 
     run_gepa(args.dataset, args.model_tag, args.train_size, args.val_size,
-             args.max_metric_calls, args.seed, args.out_dir, args.tp, args.gpu_mem)
+             args.max_metric_calls, args.seed, args.out_dir, args.tp, args.gpu_mem,
+             args.eval_size)
 
 
 if __name__ == "__main__":
