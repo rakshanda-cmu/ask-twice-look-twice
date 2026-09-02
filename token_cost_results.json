@@ -1,0 +1,702 @@
+{
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "n_images": 20,
+  "task_text": "Is there a car in the image? Answer yes or no.",
+  "system_text": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions.",
+  "per_image": [
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/ball/train/image107_jpg.rf.38613e11259555d4a49f2319e2a9238a.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "STI": {
+        "total": 3650,
+        "image": 3600,
+        "text": 50
+      },
+      "STIT": {
+        "total": 3663,
+        "image": 3600,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 7266,
+        "image": 7200,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 4586,
+        "image": 4520,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 3886,
+        "image": 3820,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/fruitjes/train/MER2-503-23GC-P-192-168-41-1-00-21-49-04-A1-45-_2024-12-12_15_13_11_855-1189_jpg.rf.97fa13fc340c6742f57895b57ee00101.jpg",
+      "size": [
+        2448,
+        2048
+      ],
+      "STI": {
+        "total": 4914,
+        "image": 4864,
+        "text": 50
+      },
+      "STIT": {
+        "total": 4927,
+        "image": 4864,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 9794,
+        "image": 9728,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 6146,
+        "image": 6080,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 5234,
+        "image": 5168,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/paper-parts/train/179494_115_jpg.rf.e7798d735f0c8202ba59c4cb6581833c.jpg",
+      "size": [
+        1700,
+        2200
+      ],
+      "STI": {
+        "total": 3707,
+        "image": 3657,
+        "text": 50
+      },
+      "STIT": {
+        "total": 3720,
+        "image": 3657,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 7380,
+        "image": 7314,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 4607,
+        "image": 4541,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 3957,
+        "image": 3891,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/clashroyalechardetector/train/pic5926_png.rf.f54b222fd1b86ac02c03c9cbaa0220ef.jpg",
+      "size": [
+        555,
+        805
+      ],
+      "STI": {
+        "total": 500,
+        "image": 450,
+        "text": 50
+      },
+      "STIT": {
+        "total": 513,
+        "image": 450,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 966,
+        "image": 900,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 624,
+        "image": 558,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 586,
+        "image": 520,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/smd-components/train/WIN_20240614_19_03_10_Pro_jpg.rf.f0ada4788694b9da98cc854470a49fe5.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "STI": {
+        "total": 970,
+        "image": 920,
+        "text": 50
+      },
+      "STIT": {
+        "total": 983,
+        "image": 920,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 1906,
+        "image": 1840,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 1206,
+        "image": 1140,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 1052,
+        "image": 986,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/into-the-vale/train/DSCF0100_JPG.rf.d6971e86c7d7025d75db8adbdc019601.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "STI": {
+        "total": 3650,
+        "image": 3600,
+        "text": 50
+      },
+      "STIT": {
+        "total": 3663,
+        "image": 3600,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 7266,
+        "image": 7200,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 4586,
+        "image": 4520,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 3886,
+        "image": 3820,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/thermal-cheetah/train/PIR-206_8_mov-8_jpg.rf.f1b5bfbc642becf38ac059e3ccf4ce09.jpg",
+      "size": [
+        640,
+        640
+      ],
+      "STI": {
+        "total": 450,
+        "image": 400,
+        "text": 50
+      },
+      "STIT": {
+        "total": 463,
+        "image": 400,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 866,
+        "image": 800,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 566,
+        "image": 500,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 530,
+        "image": 464,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/the-dreidel-project/train/IMG_1385_jpeg.rf.e53fb018c98aae4574c7dfb38c8adc45.jpg",
+      "size": [
+        3024,
+        4032
+      ],
+      "STI": {
+        "total": 11894,
+        "image": 11844,
+        "text": 50
+      },
+      "STIT": {
+        "total": 11907,
+        "image": 11844,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 23754,
+        "image": 23688,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 14871,
+        "image": 14805,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 12678,
+        "image": 12612,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/buoy-onboarding/train/screenshot_770s_png.rf.18ae4a8722ff313f17fbc704b651fda4.jpg",
+      "size": [
+        640,
+        480
+      ],
+      "STI": {
+        "total": 350,
+        "image": 300,
+        "text": 50
+      },
+      "STIT": {
+        "total": 363,
+        "image": 300,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 666,
+        "image": 600,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 446,
+        "image": 380,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 436,
+        "image": 370,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/everdaynew/train/3-66-_jpeg.rf.1569e1b4e0e3a3fe46df589a6e62636b.jpg",
+      "size": [
+        1600,
+        719
+      ],
+      "STI": {
+        "total": 1200,
+        "image": 1150,
+        "text": 50
+      },
+      "STIT": {
+        "total": 1213,
+        "image": 1150,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 2366,
+        "image": 2300,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 1491,
+        "image": 1425,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 1294,
+        "image": 1228,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/canalstenosis/train/S0405_07_png.rf.6d8695ceb00b2f0dc5c90cbb8f63713d.jpg",
+      "size": [
+        384,
+        384
+      ],
+      "STI": {
+        "total": 194,
+        "image": 144,
+        "text": 50
+      },
+      "STIT": {
+        "total": 207,
+        "image": 144,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 354,
+        "image": 288,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 274,
+        "image": 208,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 274,
+        "image": 208,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/liver-disease/train/15_242_208_26_19_jpg.rf.9865b9ec6ff39a3333d547fb42eeee06.jpg",
+      "size": [
+        299,
+        299
+      ],
+      "STI": {
+        "total": 150,
+        "image": 100,
+        "text": 50
+      },
+      "STIT": {
+        "total": 163,
+        "image": 100,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 266,
+        "image": 200,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 230,
+        "image": 164,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 230,
+        "image": 164,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/asphaltdistressdetection/train/0006_1_3_JPG.rf.588fbc3b2f94c72979a8b1dd9bc57aa7.jpg",
+      "size": [
+        512,
+        512
+      ],
+      "STI": {
+        "total": 306,
+        "image": 256,
+        "text": 50
+      },
+      "STIT": {
+        "total": 319,
+        "image": 256,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 578,
+        "image": 512,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 386,
+        "image": 320,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 386,
+        "image": 320,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/aquarium-combined/train/IMG_8407_jpg.rf.bb27f2e6e4c01f600c84c8d32a296b6e.jpg",
+      "size": [
+        4032,
+        3024
+      ],
+      "STI": {
+        "total": 11894,
+        "image": 11844,
+        "text": 50
+      },
+      "STIT": {
+        "total": 11907,
+        "image": 11844,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 23754,
+        "image": 23688,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 14871,
+        "image": 14805,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 12678,
+        "image": 12612,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/water-meter/train/id_194_value_153_434_jpg.rf.1cbf4daa9a5b669cd8c8a49fe6a1194a.jpg",
+      "size": [
+        265,
+        265
+      ],
+      "STI": {
+        "total": 114,
+        "image": 64,
+        "text": 50
+      },
+      "STIT": {
+        "total": 127,
+        "image": 64,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/taco-trash-annotations-in-context/train/000018_jpg.rf.ef5dac87c77529224ec48ea52e059042.jpg",
+      "size": [
+        4000,
+        1824
+      ],
+      "STI": {
+        "total": 7175,
+        "image": 7125,
+        "text": 50
+      },
+      "STIT": {
+        "total": 7188,
+        "image": 7125,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 14316,
+        "image": 14250,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 8989,
+        "image": 8923,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 7639,
+        "image": 7573,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/ism-band-packet-detection/train/drone04_1016_miam16_n2_e12_1016_r500_png.rf.7d4b06aa55adb18d44d2c93d91bb2502.jpg",
+      "size": [
+        256,
+        256
+      ],
+      "STI": {
+        "total": 114,
+        "image": 64,
+        "text": 50
+      },
+      "STIT": {
+        "total": 127,
+        "image": 64,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/all-elements/train/85e3b133417abf7f7995a5ec992b612c_png.rf.9287a8f930e4f862f1a21e300691108e.jpg",
+      "size": [
+        1600,
+        1199
+      ],
+      "STI": {
+        "total": 1950,
+        "image": 1900,
+        "text": 50
+      },
+      "STIT": {
+        "total": 1963,
+        "image": 1900,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 3866,
+        "image": 3800,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 2416,
+        "image": 2350,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 2086,
+        "image": 2020,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/truck-movement/train/20211007_143316_A95A_B8A44F18664E_mp4-13_jpg.rf.f75782606a0c7d4730e49e4184f62f37.jpg",
+      "size": [
+        8192,
+        1728
+      ],
+      "STI": {
+        "total": 12443,
+        "image": 12393,
+        "text": 50
+      },
+      "STIT": {
+        "total": 12456,
+        "image": 12393,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 24852,
+        "image": 24786,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 15915,
+        "image": 15849,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 13291,
+        "image": 13225,
+        "text": 66
+      }
+    },
+    {
+      "path": "/home/grg/Research/rf-20-vl-benchmark/datasets/rf100-vl-fsod/uavdet-small/train/5965_jpg.rf.1e5040da56b227da0761919570462458.jpg",
+      "size": [
+        1920,
+        1080
+      ],
+      "STI": {
+        "total": 2090,
+        "image": 2040,
+        "text": 50
+      },
+      "STIT": {
+        "total": 2103,
+        "image": 2040,
+        "text": 63
+      },
+      "SITIT_full": {
+        "total": 4146,
+        "image": 4080,
+        "text": 66
+      },
+      "SITIT_half": {
+        "total": 2616,
+        "image": 2550,
+        "text": 66
+      },
+      "SITIT_quarter": {
+        "total": 2241,
+        "image": 2175,
+        "text": 66
+      }
+    }
+  ],
+  "summary": {
+    "STI": {
+      "total": 3385.75,
+      "image": 3335.75,
+      "text": 50.0
+    },
+    "STIT": {
+      "total": 3398.75,
+      "image": 3335.75,
+      "text": 63.0
+    },
+    "SITIT_full": {
+      "total": 6737.5,
+      "image": 6671.5,
+      "text": 66.0
+    },
+    "SITIT_half": {
+      "total": 4260.7,
+      "image": 4194.7,
+      "text": 66.0
+    },
+    "SITIT_quarter": {
+      "total": 3637.6,
+      "image": 3571.6,
+      "text": 66.0
+    }
+  },
+  "delta_vs_STI": {
+    "STI": {
+      "delta_total": 0.0,
+      "delta_image": 0.0,
+      "delta_text": 0.0
+    },
+    "STIT": {
+      "delta_total": 13.0,
+      "delta_image": 0.0,
+      "delta_text": 13.0
+    },
+    "SITIT_full": {
+      "delta_total": 3351.75,
+      "delta_image": 3335.75,
+      "delta_text": 16.0
+    },
+    "SITIT_half": {
+      "delta_total": 874.9499999999998,
+      "delta_image": 858.9499999999998,
+      "delta_text": 16.0
+    },
+    "SITIT_quarter": {
+      "delta_total": 251.8499999999999,
+      "delta_image": 235.8499999999999,
+      "delta_text": 16.0
+    }
+  }
+}

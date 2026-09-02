@@ -20,7 +20,8 @@ from PIL import Image
 from vqa_eval import (load_vqa, coco_image_path, score_example,
                       SHORT_ANSWER_SUFFIX)
 from common import (ORDER_LIST, ORDER_LETTERS, MODEL_TAG, downscale, data_uri,
-                    build_conversation, make_llm)
+                    build_conversation, make_llm, add_echo_args, echo_tag_suffix,
+                    echo_occurrence_uris)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "results")
@@ -35,7 +36,7 @@ CHUNK_SIZE = 10000  # cap on in-memory conversations (each embeds a base64 image
 
 
 def run_order(llm, sp, tag, letters, pairs, data_dir, log_every, use_suffix=True,
-             out_tag=""):
+             out_tag="", echo_scale=None, echo_which=None):
     out = os.path.join(OUT_DIR, f"vqa_order-{tag}_{MODEL_TAG}{out_tag}.json")
     results, by_type, done_qids = [], {}, set()
     n_correct, score_sum = 0, 0.0
@@ -83,7 +84,12 @@ def run_order(llm, sp, tag, letters, pairs, data_dir, log_every, use_suffix=True
                 continue
             pil = downscale(Image.open(path).convert("RGB"), IMG_CAP)
             task = q["question"] + (SHORT_ANSWER_SUFFIX if use_suffix else "")
-            convs.append(build_conversation(letters, task, data_uri(pil)))
+            if echo_scale is not None:
+                occ_uris = echo_occurrence_uris(pil, echo_scale, echo_which)
+                convs.append(build_conversation(letters, task, None,
+                                                per_occurrence_uris=occ_uris))
+            else:
+                convs.append(build_conversation(letters, task, data_uri(pil)))
             gts = [ans["answer"] for ans in a["answers"]]
             meta.append({"question_id": q["question_id"], "question": q["question"],
                          "answer_type": a["answer_type"], "gt_answers": gts,
@@ -138,7 +144,10 @@ def main():
                     help="appended to the output filename's model tag, e.g. "
                          "'_paperconfig', so a diagnostic re-run doesn't "
                          "overwrite the existing production result file")
+    add_echo_args(ap)
     args = ap.parse_args()
+    if args.echo_scale is not None and not args.echo_which:
+        ap.error("--echo-scale requires --echo-which {first,second}")
     os.makedirs(OUT_DIR, exist_ok=True)
 
     global MODEL_TAG
@@ -162,9 +171,16 @@ def main():
     for tag in [o.strip() for o in args.orders.split(",") if o.strip()]:
         if tag not in ORDER_LIST:
             print(f"  skip {tag} (not hook-free)"); continue
-        print(f"=== VQA · ordering {tag} ===", flush=True)
-        run_order(llm, sp, tag, ORDER_LETTERS[tag], pairs, args.data_dir, args.log_every,
-                  use_suffix=not args.no_suffix, out_tag=args.out_tag)
+        if args.echo_scale is not None:
+            assert tag.count("I") == 2, \
+                f"--echo-scale requires a 2-image order, got {tag!r}"
+            out_tag_name = echo_tag_suffix(tag, args.echo_scale, args.echo_which)
+        else:
+            out_tag_name = tag
+        print(f"=== VQA · ordering {out_tag_name} ===", flush=True)
+        run_order(llm, sp, out_tag_name, ORDER_LETTERS[tag], pairs, args.data_dir,
+                  args.log_every, use_suffix=not args.no_suffix, out_tag=args.out_tag,
+                  echo_scale=args.echo_scale, echo_which=args.echo_which)
     print("[done]", flush=True)
 
 

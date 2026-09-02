@@ -28,6 +28,8 @@ import json
 import os
 import time
 
+from PIL import Image
+
 from constants import SYSTEM_MESSAGE
 # model-agnostic helpers shared with the Qwen/NB pipeline (no NB logic pulled in)
 from naturalbench_eval import _first_yes_no, YESNO_SUFFIX
@@ -79,12 +81,16 @@ def pope_metrics(records):
     }
 
 
-def _build_meta(model_name, order, system_prompt, max_tokens, records):
+def _build_meta(model_name, order, system_prompt, max_tokens, records,
+                order_tag=None, echo_scale=None, echo_which=None):
     by_cat = {c: pope_metrics([r for r in records if r["category"] == c])
               for c in CATEGORIES}
     return {
         "model": model_name,
         "order": order,
+        "order_tag": order_tag or order,
+        "echo_scale": echo_scale,
+        "echo_which": echo_which,
         "system_prompt": system_prompt,
         "max_tokens": max_tokens,
         "overall": pope_metrics(records),
@@ -118,15 +124,27 @@ def load_pope_samples(max_per_category=None, cache_dir=None):
 
 def run_pope_experiment(mm, samples, order, system_prompt,
                         max_tokens=16, out_dir="./pope/results",
-                        checkpoint_every=200, log_every=100):
+                        checkpoint_every=200, log_every=100,
+                        order_tag=None, echo_scale=None, echo_which=None):
     """Evaluate POPE `samples` under one ordering. Resumes from an existing results
-    file in out_dir (skips done question_ids)."""
+    file in out_dir (skips done question_ids).
+
+    echo_scale/echo_which: see rf20_eval.py's run_rf20_experiment -- identical
+    2-image echo-resolution ablation, same img_arg construction."""
     import torch
+
+    tag = order_tag or order
+    if echo_scale is not None:
+        assert order.count("I") == 2, (
+            f"echo_scale requires an order with exactly 2 'I' occurrences, got "
+            f"order={order!r} ({order.count('I')} I's)")
+        assert echo_which in ("first", "second"), \
+            f"echo_which must be 'first' or 'second', got {echo_which!r}"
 
     records, done, results_path = [], set(), None
     if out_dir:
         os.makedirs(out_dir, exist_ok=True)
-        results_path = os.path.join(out_dir, f"{mm.model_name}__{order}__results.json")
+        results_path = os.path.join(out_dir, f"{mm.model_name}__{tag}__results.json")
         if os.path.exists(results_path):
             try:
                 records = json.load(open(results_path))["results"]
@@ -137,7 +155,8 @@ def run_pope_experiment(mm, samples, order, system_prompt,
 
     def _checkpoint():
         if results_path:
-            meta = _build_meta(mm.model_name, order, system_prompt, max_tokens, records)
+            meta = _build_meta(mm.model_name, order, system_prompt, max_tokens, records,
+                       order_tag=tag, echo_scale=echo_scale, echo_which=echo_which)
             with open(results_path, "w") as f:
                 json.dump({"meta": meta, "results": records}, f, indent=2)
 
@@ -149,8 +168,17 @@ def run_pope_experiment(mm, samples, order, system_prompt,
         img = s["image"].convert("RGB")
         prompt = s["question"] + YESNO_SUFFIX
 
+        if echo_scale is not None:
+            w, h = img.size
+            scaled = img.resize(
+                (max(1, round(w * echo_scale)), max(1, round(h * echo_scale))),
+                Image.LANCZOS)
+            img_arg = [scaled, img] if echo_which == "first" else [img, scaled]
+        else:
+            img_arg = img
+
         _, input_ids, kwargs = mm.prepare_inputs_from_pil(
-            [prompt], img, system_prompt=system_prompt, order=order,
+            [prompt], img_arg, system_prompt=system_prompt, order=order,
         )
         with torch.inference_mode():
             out = mm.llm_model.generate(
@@ -179,7 +207,8 @@ def run_pope_experiment(mm, samples, order, system_prompt,
         if results_path and (si + 1) % checkpoint_every == 0:
             _checkpoint()
 
-    meta = _build_meta(mm.model_name, order, system_prompt, max_tokens, records)
+    meta = _build_meta(mm.model_name, order, system_prompt, max_tokens, records,
+                       order_tag=tag, echo_scale=echo_scale, echo_which=echo_which)
     if out_dir:
         _checkpoint()
     return meta, records
@@ -196,7 +225,22 @@ def main():
     ap.add_argument("--max-tokens", type=int, default=16, dest="max_tokens")
     ap.add_argument("--out-dir", default="./pope/results", dest="out_dir")
     ap.add_argument("--checkpoint-every", type=int, default=200, dest="checkpoint_every")
+    ap.add_argument("--echo-scale", type=float, default=None, dest="echo_scale",
+                    help="Scale ONE of the two image occurrences (e.g. 0.5) in a "
+                         "2-image order like SITIT; requires --echo-which.")
+    ap.add_argument("--echo-which", default=None, dest="echo_which",
+                    choices=["first", "second"],
+                    help="Which occurrence --echo-scale applies to.")
+    ap.add_argument("--tag-suffix", default="", dest="tag_suffix",
+                    help="Suffix for the output filename, e.g. 'echo2half'.")
     args = ap.parse_args()
+
+    if args.echo_scale is not None and not args.echo_which:
+        ap.error("--echo-scale requires --echo-which {first,second}")
+    if args.echo_scale is not None and not args.tag_suffix:
+        frac = "half" if args.echo_scale == 0.5 else f"{args.echo_scale:g}x"
+        occ = "1" if args.echo_which == "first" else "2"
+        args.tag_suffix = f"echo{occ}{frac}"
 
     from model_manager import ModelManager
     from utils import setup_seeds, disable_torch_init
@@ -214,13 +258,15 @@ def main():
     mm = ModelManager(args.model)
 
     for order in orders:
-        print(f"\n=== {order} ===")
+        tag = f"{order}_{args.tag_suffix}" if args.tag_suffix else order
+        print(f"\n=== {tag} ===")
         meta, _ = run_pope_experiment(
             mm, samples, order, SYSTEM_MESSAGE, max_tokens=args.max_tokens,
             out_dir=args.out_dir, checkpoint_every=args.checkpoint_every,
+            order_tag=tag, echo_scale=args.echo_scale, echo_which=args.echo_which,
         )
         o = meta["overall"]
-        print(f"  [done] {order}: acc={o['acc']:.3f} f1={o['f1']:.3f} "
+        print(f"  [done] {tag}: acc={o['acc']:.3f} f1={o['f1']:.3f} "
               f"yes_ratio={o['yes_ratio']:.3f}")
 
 

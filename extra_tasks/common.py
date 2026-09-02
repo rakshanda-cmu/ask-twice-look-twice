@@ -70,20 +70,73 @@ def data_uri(pil, quality=90):
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
-def build_conversation(letters, task_text, image_uris, system_text=SYSTEM_MESSAGE):
+def add_echo_args(ap):
+    """Shared --echo-scale/--echo-which CLI args for the 2-image echo-resolution
+    ablation (mirrors rf20_eval.py / naturalbench_eval.py), for any run_order()
+    that calls echo_occurrence_uris() below."""
+    ap.add_argument("--echo-scale", type=float, default=None, dest="echo_scale",
+                    help="Scale ONE of the two image occurrences (e.g. 0.5) in a "
+                         "2-image order like SITIT; requires --echo-which.")
+    ap.add_argument("--echo-which", default=None, dest="echo_which",
+                    choices=["first", "second"],
+                    help="Which occurrence --echo-scale applies to.")
+
+
+def echo_tag_suffix(order_tag, echo_scale, echo_which):
+    frac = "half" if echo_scale == 0.5 else f"{echo_scale:g}x"
+    occ = "1" if echo_which == "first" else "2"
+    return f"{order_tag}_echo{occ}{frac}"
+
+
+def echo_occurrence_uris(imgs, echo_scale, echo_which):
+    """Build the per_occurrence_uris list for build_conversation()'s 2-image
+    echo ablation: one occurrence stays at full res (from `imgs`, already
+    downscaled to the caller's IMG_CAP), the other is scaled by echo_scale on
+    top of that. `imgs` is a single PIL.Image for single-image tasks, or a
+    list of PIL.Image for a video's K-frame block (SITIT then echoes the
+    WHOLE block at the scaled resolution, not just one frame)."""
+    if not isinstance(imgs, (list, tuple)):
+        imgs = [imgs]
+
+    def _scaled_uri(im):
+        w, h = im.size
+        scaled = im.resize((max(1, round(w * echo_scale)), max(1, round(h * echo_scale))),
+                           Image.LANCZOS)
+        return data_uri(scaled)
+
+    full_uris = [data_uri(im) for im in imgs]
+    scaled_uris = [_scaled_uri(im) for im in imgs]
+    return [scaled_uris, full_uris] if echo_which == "first" else [full_uris, scaled_uris]
+
+
+def build_conversation(letters, task_text, image_uris, system_text=SYSTEM_MESSAGE,
+                       per_occurrence_uris=None):
     """image_uris: list of data-URI strings, ALL inserted (in order) at every 'I'
     in the ordering. A single-image task passes a 1-element list; SITIT with a
-    K-frame video repeats the whole K-frame block at each 'I' (image echo)."""
+    K-frame video repeats the whole K-frame block at each 'I' (image echo).
+
+    per_occurrence_uris: optional list of uri-lists, one per 'I' occurrence in
+    `letters` (e.g. [[full_uri], [half_res_uri]] for a 2-image order's echo-
+    resolution ablation, mirroring model_manager.py's _build_qwen_messages
+    per-occurrence image list). When given, overrides image_uris and is
+    indexed by occurrence order; if there are more 'I's than entries, the
+    last entry is reused."""
     if isinstance(image_uris, str):
         image_uris = [image_uris]
     parts = []
+    i_seen = 0
     for c in letters:
         if c == "S":
             parts.append({"type": "text", "text": system_text})
         elif c == "T":
             parts.append({"type": "text", "text": task_text})
         elif c == "I":
-            for uri in image_uris:
+            if per_occurrence_uris:
+                uris = per_occurrence_uris[min(i_seen, len(per_occurrence_uris) - 1)]
+            else:
+                uris = image_uris
+            i_seen += 1
+            for uri in uris:
                 parts.append({"type": "image_url", "image_url": {"url": uri}})
     return [{"role": "user", "content": parts}]
 
