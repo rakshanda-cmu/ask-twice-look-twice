@@ -137,19 +137,79 @@ def _token_cost_section():
     )
 
 
+GEPA_RESULTS_DIR = "./gepa_results"
+GEPA_MODEL = "qwen3-vl-8b"
+GEPA_DATASETS = ["pope", "vqa"]
+
+
+def _gepa_result(dataset):
+    p = os.path.join(GEPA_RESULTS_DIR, f"{dataset}__{GEPA_MODEL}__gepa.json")
+    if not os.path.exists(p):
+        return None
+    try:
+        return json.load(open(p))
+    except Exception:
+        return None
+
+
 def _gepa_section():
     st.subheader("🧬 GEPA baseline — prompt optimization")
     st.caption(
         "GEPA (Reflective Prompt Evolution, arxiv.org/abs/2507.19457) as an "
         "automated prompt-optimization baseline, run on datasets other than "
-        "RF20. Training-time cost (wall-clock, # calls, # tokens) and "
-        "inference-time token overhead for the optimized prompt, tracked "
-        "alongside accuracy."
+        "RF20. One in-process vLLM engine (qwen3-vl-8b) serves as both the "
+        "task model (answering under a fixed STI order) and the reflection "
+        "model (proposing improved prompt text from failure feedback). "
+        "Train/val subsets are carved out of each benchmark's existing full "
+        "pool (seeded, disjoint from each other); the held-out eval subset "
+        "is scored for both the baseline SYSTEM_MESSAGE and the GEPA-"
+        "optimized prompt on identical examples."
     )
-    st.info("Integration in progress — GEPA supports wrapping this repo's local "
-            "vLLM/HF models directly via custom Python callables (no API keys "
-            "needed), confirmed via the official repo source. Scope (which "
-            "dataset(s), train/val split) still being finalized.")
+    results = {d: _gepa_result(d) for d in GEPA_DATASETS}
+    if not any(results.values()):
+        st.info("Not run yet.")
+        return
+
+    rows = []
+    for d in GEPA_DATASETS:
+        r = results.get(d)
+        if not r:
+            rows.append({"Dataset": d, "N (train/val/eval)": "—",
+                        "Baseline acc": "—", "GEPA acc": "—", "Δ acc": "—",
+                        "Train wall-clock": "—", "Metric calls": "—",
+                        "Train tokens": "—", "Δ inference tokens": "—"})
+            continue
+        sp, tr, ic, ac = r["split"], r["training"], r["inference_cost"], r["accuracy"]
+        rows.append({
+            "Dataset": d,
+            "N (train/val/eval)": f"{sp['train']}/{sp['val']}/{sp['held_out_eval']}",
+            "Baseline acc": f"{ac['baseline_system_message']['acc']*100:.2f}%",
+            "GEPA acc": f"{ac['gepa_optimized']['acc']*100:.2f}%",
+            "Δ acc": f"{ac['delta']*100:+.2f} pts",
+            "Train wall-clock": f"{tr['wall_clock_s']:.0f}s",
+            "Metric calls": str(tr["total_metric_calls"]),
+            "Train tokens": f"{tr['total_tokens']:,}",
+            "Δ inference tokens": f"{ic['delta_tokens']:+d}",
+        })
+    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+
+    for d in GEPA_DATASETS:
+        r = results.get(d)
+        if not r:
+            continue
+        with st.expander(f"{d}: optimized prompt + cost breakdown"):
+            tr = r["training"]
+            st.caption(
+                f"Training calls: **{tr['task_calls']}** task_lm "
+                f"({tr['task_tokens_in']:,} in / {tr['task_tokens_out']:,} out tok) + "
+                f"**{tr['reflect_calls']}** reflection ({tr['reflect_tokens_in']:,} in / "
+                f"{tr['reflect_tokens_out']:,} out tok) = **{tr['total_tokens']:,}** total "
+                f"tokens over **{tr['wall_clock_s']:.0f}s**."
+            )
+            st.markdown("**Baseline SYSTEM_MESSAGE:**")
+            st.code(r["baseline_prompt"], language=None)
+            st.markdown("**GEPA-optimized prompt:**")
+            st.code(r["gepa_optimized_prompt"], language=None)
 
 
 def _logit_lens_diff_section():
