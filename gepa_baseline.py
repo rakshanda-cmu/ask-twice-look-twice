@@ -276,19 +276,35 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     # part of the metered optimization loop, so there's no reason not to use
     # vLLM's normal batched .chat(), matching every other eval script in
     # this repo (vqa_eval_vllm.py etc.) instead of looping one item at a time.
+    # CHUNK_SIZE: cap on in-memory conversations (each embeds a base64 image)
+    # before one llm.chat() call -- same host-RAM OOM risk documented in
+    # vqa_eval_vllm.py/tallyqa_eval_vllm.py (confirmed via journalctl:
+    # gemma-3-27b's full-scale VQA run OOM-killed at ~93GB anon-RSS building
+    # ~214K conversations upfront). --eval-size can be scaled up to a
+    # dataset's full remaining pool (tens/hundreds of thousands for VQA), so
+    # this eval needs the same chunking, not just the small-N smoke-test path
+    # that worked fine at eval-size<=1000.
+    EVAL_CHUNK_SIZE = 5000
+
     def _eval_prompt(prompt_text, tag):
-        convs = []
-        for ex in evalset:
-            pil = downscale(_get_image(ex), adapter["img_cap"])
-            task = adapter["task_text"](ex)
-            convs.append(build_conversation(EVAL_ORDER, task, data_uri(pil),
-                                            system_text=prompt_text))
-        outputs = engine.llm.chat(convs, engine.task_sp, use_tqdm=False)
         n_correct = 0
-        for o, ex in zip(outputs, evalset):
-            raw = o.outputs[0].text.strip()
-            correct, _, _ = adapter["score"](raw, ex)
-            n_correct += int(correct)
+        t0 = time.time()
+        for ci in range(0, len(evalset), EVAL_CHUNK_SIZE):
+            chunk = evalset[ci:ci + EVAL_CHUNK_SIZE]
+            convs = []
+            for ex in chunk:
+                pil = downscale(_get_image(ex), adapter["img_cap"])
+                task = adapter["task_text"](ex)
+                convs.append(build_conversation(EVAL_ORDER, task, data_uri(pil),
+                                                system_text=prompt_text))
+            outputs = engine.llm.chat(convs, engine.task_sp, use_tqdm=False)
+            del convs
+            for o, ex in zip(outputs, chunk):
+                raw = o.outputs[0].text.strip()
+                correct, _, _ = adapter["score"](raw, ex)
+                n_correct += int(correct)
+            print(f"    [{tag}] {min(ci + EVAL_CHUNK_SIZE, len(evalset))}/{len(evalset)} "
+                  f"({time.time() - t0:.0f}s)", flush=True)
         acc = n_correct / max(1, len(evalset))
         print(f"[eval] {tag}: acc={acc:.3f} (n={len(evalset)})", flush=True)
         return acc
