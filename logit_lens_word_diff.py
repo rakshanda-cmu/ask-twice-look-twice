@@ -44,6 +44,35 @@ def _normalize(w):
     return re.sub(r"^\W+|\W+$", "", (w or "").strip().lower())
 
 
+_WORDLIKE = re.compile(r"^[a-z][a-z'-]*$")
+_ENGLISH_WORDS = None  # lazy-loaded, cached (nltk's 'words' corpus, ~235K entries)
+
+
+def _english_words():
+    global _ENGLISH_WORDS
+    if _ENGLISH_WORDS is None:
+        from nltk.corpus import words
+        _ENGLISH_WORDS = set(w.lower() for w in words.words())
+    return _ENGLISH_WORDS
+
+
+def looks_like_word(w):
+    """Early/mid-layer logit lens frequently projects onto incoherent
+    tokens (subword fragments, unrelated CJK characters, punctuation-only
+    tokens) rather than real words -- this is expected logit-lens behavior
+    (intermediate residual-stream states aren't yet 'read out' into the
+    output vocabulary the way late layers are), not a bug. Diffing two such
+    fragments isn't a meaningful word CHANGE in the sense the task asks for
+    ("what word changes to what"), so require both sides of a diff to be a
+    real dictionary word (checked against nltk's 'words' corpus, not just
+    "looks alphabetic" -- a plain alphabetic regex still let subword
+    fragments like "theless" through, confirmed on a real smoke-test diff)
+    before keeping it -- this is a stricter filter than the synonym check,
+    applied first."""
+    n = _normalize(w)
+    return len(n) >= 2 and bool(_WORDLIKE.match(n)) and n in _english_words()
+
+
 def is_same_or_synonym(w1, w2):
     """True if w1/w2 are identical (after normalizing case/punctuation) or
     are WordNet synonyms of each other -- either direction counts, since
@@ -70,6 +99,8 @@ def diff_generated_words(words_sti, words_ist, layer_range):
         n_steps = min(len(row_sti), len(row_ist))
         for si in range(n_steps):
             w_sti, w_ist = row_sti[si], row_ist[si]
+            if not looks_like_word(w_sti) or not looks_like_word(w_ist):
+                continue
             if not is_same_or_synonym(w_sti, w_ist):
                 diffs.append({"layer": layer_range[li], "step": si,
                              "sti_word": w_sti, "ist_word": w_ist})
