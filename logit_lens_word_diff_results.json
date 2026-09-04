@@ -1,0 +1,684 @@
+{
+  "model": "qwen3-vl-8b",
+  "n_samples": 100,
+  "layer_range": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    27
+  ],
+  "max_tokens": 16,
+  "total_genuine_diffs": 8,
+  "diffs_by_layer": {
+    "0": 0,
+    "4": 0,
+    "8": 1,
+    "12": 0,
+    "16": 6,
+    "20": 1,
+    "24": 0,
+    "27": 0
+  },
+  "per_example": [
+    {
+      "query": "Is there a subsubsection in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Radio button in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a timber in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a table caption in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Defense in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a soft plastic in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": [
+        {
+          "layer": 16,
+          "step": 0,
+          "sti_word": "yes",
+          "ist_word": " THREAD"
+        }
+      ]
+    },
+    {
+      "query": "Is there a Referee in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Text box in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an Adult in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": [
+        {
+          "layer": 20,
+          "step": 1,
+          "sti_word": "/non",
+          "ist_word": "/no"
+        }
+      ]
+    },
+    {
+      "query": "Is there a paragraph in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a person in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": [
+        {
+          "layer": 16,
+          "step": 0,
+          "sti_word": "statement",
+          "ist_word": " THREAD"
+        }
+      ]
+    },
+    {
+      "query": "Is there a 0 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Dropdown box in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a list of content text in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Serve in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Radio button in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a table in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a 6 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a fastener in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there an Impacted Tooth in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there an author in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an Icon in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a puffin in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a chapter in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a footnote in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Cavity in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Chocopie Nor in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Scroll bar in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a 4 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Holes in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a footnote in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a 8 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a puffin in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a knot with crack in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Chocopie Dark in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a 9 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Check box in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Checked box in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Dreidel in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Deer in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a DIP in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a missing fastener in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a PIP in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Gimel in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": [
+        {
+          "layer": 16,
+          "step": 0,
+          "sti_word": "yes",
+          "ist_word": " THREAD"
+        }
+      ]
+    },
+    {
+      "query": "Is there an Impacted Tooth in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Shin in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an equation in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a 3 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Text box in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Swing Maxx in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a figure in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a title in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Nun in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": [
+        {
+          "layer": 16,
+          "step": 0,
+          "sti_word": "yes",
+          "ist_word": " THREAD"
+        }
+      ]
+    },
+    {
+      "query": "Is there a penguin in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a paragraph in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Check box in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Candy Boom in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Longpole in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Swing Nor in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Deer in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a jellyfish in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a list of content text in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an OStar Red in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an Icon in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a 3 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Button in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a shark in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a section in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there an OStar Yellow in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a dog in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an Implant in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Piglet in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Wrist in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Longpole in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a 8 in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a reference text in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there an OStar Red in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a reference text in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": [
+        {
+          "layer": 16,
+          "step": 1,
+          "sti_word": "/no",
+          "ist_word": "/not"
+        }
+      ]
+    },
+    {
+      "query": "Is there a penguin in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Hog in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a hard plastic in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Block in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there an OStar Red in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an OStar Red in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a metal in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there an author in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a list of content text in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Serve in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "No",
+      "diffs": [
+        {
+          "layer": 8,
+          "step": 1,
+          "sti_word": "/not",
+          "ist_word": "/no"
+        }
+      ]
+    },
+    {
+      "query": "Is there a Shortstick in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a penguin in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a table of contents text in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a Fillings in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a subsection in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there an aggregate in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a knot with crack in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a metal in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a figure caption in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "No",
+      "diffs": []
+    },
+    {
+      "query": "Is there a section in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    },
+    {
+      "query": "Is there a section in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "No",
+      "answer_ist": "Yes",
+      "diffs": [
+        {
+          "layer": 16,
+          "step": 1,
+          "sti_word": "/no",
+          "ist_word": "/not"
+        }
+      ]
+    },
+    {
+      "query": "Is there a fastener in the image?\nAnswer the question using only Yes or No.",
+      "answer_sti": "Yes",
+      "answer_ist": "Yes",
+      "diffs": []
+    }
+  ]
+}
