@@ -1,10 +1,11 @@
 """
-Streamlit page: "New Experiments" — a dedicated, additive tab for the newest
-round of ablations (RF20 half-vs-quarter resolution, token-cost accounting,
-GEPA prompt-optimization baseline, logit-lens STI/IST word-diff), kept
-SEPARATE from the existing per-dataset tabs so nothing there is touched.
-Purely additive and read-only; reads whatever result JSONs each sub-section
-needs and renders "not run yet" placeholders for anything still pending.
+Streamlit page: "Echo Ablations & GEPA" — a dedicated, additive tab for the
+echo-resolution ablation (RF20's half-vs-quarter sweep, extended to all other
+benchmarks), token-cost accounting, GEPA prompt-optimization baseline, and
+logit-lens STI/IST word-diff, kept SEPARATE from the existing per-dataset
+tabs so nothing there is touched. Purely additive and read-only; reads
+whatever result JSONs each sub-section needs and renders "not run yet"
+placeholders for anything still pending.
 """
 import json
 import os
@@ -343,7 +344,7 @@ def _echo2half_extension_section():
 
 
 def render_new_experiments_page():
-    st.title("🆕 New Experiments")
+    st.title("🔬 Echo Ablations & GEPA")
     st.caption(
         "A separate tab for the newest round of ablations, kept apart from "
         "the existing per-dataset tabs so nothing there is modified."

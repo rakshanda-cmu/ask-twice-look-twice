@@ -184,7 +184,7 @@ _page = st.sidebar.radio(
      "🎬 Extended Benchmarks (VQA/Counting/MMVP/BLINK/Video-QA)",
      "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)",
      "🖼️ Patch Perturbation", "🔬 Logit Lens (this image)", "🎞️ SITIT vs STIT",
-     "📊 Cross-Dataset Summary", "🆕 New Experiments"],
+     "📊 Cross-Dataset Summary", "🔬 Echo Ablations & GEPA"],
     key="app_page",
 )
 if _page == "🧪 NaturalBench Experiments":
@@ -235,7 +235,7 @@ if _page == "🎞️ SITIT vs STIT":
 if _page == "📊 Cross-Dataset Summary":
     render_summary_page()
     st.stop()
-if _page == "🆕 New Experiments":
+if _page == "🔬 Echo Ablations & GEPA":
     render_new_experiments_page()
     st.stop()
 
