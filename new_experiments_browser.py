@@ -158,13 +158,19 @@ def _gepa_section():
     st.caption(
         "GEPA (Reflective Prompt Evolution, arxiv.org/abs/2507.19457) as an "
         "automated prompt-optimization baseline, run on datasets other than "
-        "RF20. One in-process vLLM engine (qwen3-vl-8b) serves as both the "
-        "task model (answering under a fixed STI order) and the reflection "
-        "model (proposing improved prompt text from failure feedback). "
-        "Train/val subsets are carved out of each benchmark's existing full "
-        "pool (seeded, disjoint from each other); the held-out eval subset "
-        "is scored for both the baseline SYSTEM_MESSAGE and the GEPA-"
-        "optimized prompt on identical examples."
+        "RF20. Qwen3-VL-8B (via vLLM) answers under a fixed STI order; "
+        "Gemma-3-27B, on a separate GPU via reflection_server.py, serves as "
+        "the reflection model that proposes improved prompt text from "
+        "failure feedback -- deliberately a different, stronger model than "
+        "the task model, matching GEPA's own intended design. (An earlier "
+        "version reused the SAME 8B model for both roles and also passed a "
+        "hardcoded 'yes/no question-answering' objective to GEPA regardless "
+        "of dataset -- wrong for VQA's open-ended answers; both were real "
+        "bugs, not just a null result, and are fixed now.) Train/val subsets "
+        "are carved out of each benchmark's existing full pool (seeded, "
+        "disjoint from each other); the held-out eval subset is scored for "
+        "both the baseline SYSTEM_MESSAGE and the GEPA-optimized prompt on "
+        "identical examples."
     )
     results = {d: _gepa_result(d) for d in GEPA_DATASETS}
     if not any(results.values()):

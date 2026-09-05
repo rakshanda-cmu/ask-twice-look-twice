@@ -4,37 +4,38 @@
   "eval_order": "STI",
   "seed": 0,
   "split": {
-    "train": 60,
-    "val": 40,
+    "train": 100,
+    "val": 60,
     "held_out_eval": 10000
   },
   "training": {
-    "wall_clock_s": 51.3,
-    "total_metric_calls": 192,
-    "task_calls": 192,
-    "task_tokens_in": 63915,
-    "task_tokens_out": 453,
-    "reflect_calls": 12,
-    "reflect_tokens_in": 7548,
-    "reflect_tokens_out": 765,
-    "total_tokens": 72681,
-    "best_val_score": 0.8874999999999998
+    "wall_clock_s": 93.6,
+    "total_metric_calls": 400,
+    "task_calls": 400,
+    "task_tokens_in": 137679,
+    "task_tokens_out": 1013,
+    "reflect_calls": 10,
+    "reflect_tokens_in": 8913,
+    "reflect_tokens_out": 678,
+    "reflector": "remote:/tmp/claude-1000/-home-grg-Research-ask-twice-look-twice-supp/873eb924-61f3-4169-9a36-e6f2390cabf0/scratchpad/gepa_reflection_ipc",
+    "total_tokens": 148283,
+    "best_val_score": 0.83
   },
   "inference_cost": {
-    "baseline_prompt_tokens": 316,
-    "gepa_prompt_tokens": 316,
+    "baseline_prompt_tokens": 353,
+    "gepa_prompt_tokens": 353,
     "delta_tokens": 0
   },
   "accuracy": {
     "baseline_system_message": {
-      "acc": 0.8613,
+      "acc": 0.8622,
       "n": 10000
     },
     "gepa_optimized": {
-      "acc": 0.8614,
+      "acc": 0.862,
       "n": 10000
     },
-    "delta": 0.00010000000000010001
+    "delta": -0.00019999999999997797
   },
   "baseline_prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions.",
   "gepa_optimized_prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions."
