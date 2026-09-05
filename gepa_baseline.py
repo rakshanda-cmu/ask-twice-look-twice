@@ -139,9 +139,31 @@ def _vqa_score(raw, ex):
 
 DATASET_ADAPTERS = {
     "pope": {"loader": _pope_loader, "task_text": _pope_task_text,
-            "score": _pope_score, "img_cap": 1024},
+            "score": _pope_score, "img_cap": 1024,
+            "objective": "Maximize POPE yes/no object-presence question-answering "
+                        "accuracy for a vision-language model, given an image and a "
+                        "question of the form 'Is there a <object> in the image?'.",
+            "background": "The 'prompt' parameter is a SYSTEM prompt shown to the "
+                         "model before the image and question. The question itself "
+                         "already ends with an instruction to answer using only "
+                         "Yes or No. The system prompt should help the model give "
+                         "accurate, well-calibrated Yes/No answers -- not verbose "
+                         "or hedging ones."},
     "vqa": {"loader": _vqa_loader, "task_text": _vqa_task_text,
-           "score": _vqa_score, "img_cap": 1024},
+           "score": _vqa_score, "img_cap": 1024,
+           "objective": "Maximize VQAv2 open-ended visual question answering "
+                       "accuracy for a vision-language model. Questions are NOT "
+                       "yes/no -- they ask about objects, counts, colors, actions, "
+                       "etc., and are scored by whether the model's short-answer "
+                       "response matches (or contains) any of several human "
+                       "reference answers.",
+           "background": "The 'prompt' parameter is a SYSTEM prompt shown to the "
+                        "model before the image and question. The question itself "
+                        "already ends with an instruction to answer using a single "
+                        "word or short phrase. The system prompt should help the "
+                        "model give concise, accurate short answers that match how "
+                        "a human would naturally answer -- not full sentences, "
+                        "explanations, or hedging."},
 }
 
 
@@ -181,6 +203,54 @@ class MeteredEngine:
         return out.outputs[0].text.strip()
 
 
+class RemoteReflectionClient:
+    """reflection_lm callable that delegates to a SEPARATE reflection_server.py
+    process (a different, stronger model on a different GPU -- see that
+    file's docstring for why this fix exists) via simple file-based IPC.
+    Tracks token stats into the same shape MeteredEngine.stats uses, so
+    run_gepa()'s accounting code doesn't need to care which backend served
+    the reflection calls."""
+
+    def __init__(self, ipc_dir, temperature=0.7, max_tokens=1024, timeout_s=300):
+        self.req_dir = os.path.join(ipc_dir, "requests")
+        self.resp_dir = os.path.join(ipc_dir, "responses")
+        os.makedirs(self.req_dir, exist_ok=True)
+        os.makedirs(self.resp_dir, exist_ok=True)
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.timeout_s = timeout_s
+        self._counter = 0
+        self.stats = {"reflect_calls": 0, "reflect_tokens_in": 0, "reflect_tokens_out": 0}
+
+    def __call__(self, prompt):
+        if isinstance(prompt, str):
+            messages = [{"role": "user", "content": prompt}]
+        else:
+            messages = prompt
+        self._counter += 1
+        req_id = f"{os.getpid()}_{self._counter}_{int(time.time()*1000)}"
+        req_path = os.path.join(self.req_dir, f"{req_id}.json")
+        resp_path = os.path.join(self.resp_dir, f"{req_id}.json")
+        tmp = req_path + ".tmp"
+        json.dump({"messages": messages, "temperature": self.temperature,
+                  "max_tokens": self.max_tokens}, open(tmp, "w"))
+        os.rename(tmp, req_path)  # atomic -- server never sees a partial write
+
+        t0 = time.time()
+        while not os.path.exists(resp_path):
+            if time.time() - t0 > self.timeout_s:
+                raise TimeoutError(
+                    f"reflection_server.py did not respond within {self.timeout_s}s "
+                    f"(request {req_id}) -- is it running? "
+                    f"(CUDA_VISIBLE_DEVICES=1 python reflection_server.py --dir {os.path.dirname(self.req_dir)})")
+            time.sleep(0.3)
+        resp = json.load(open(resp_path))
+        self.stats["reflect_calls"] += 1
+        self.stats["reflect_tokens_in"] += resp.get("tokens_in", 0)
+        self.stats["reflect_tokens_out"] += resp.get("tokens_out", 0)
+        return resp["text"]
+
+
 # ═══════════════════════════════════════════════════════════════════════════
 #  GEPA wiring
 # ═══════════════════════════════════════════════════════════════════════════
@@ -209,7 +279,8 @@ def make_evaluator(engine, adapter, img_cap):
 
 
 def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
-            seed, out_dir, tp, gpu_mem, eval_size):
+            seed, out_dir, tp, gpu_mem, eval_size, reflection_ipc_dir=None,
+            reflection_minibatch_size=5, task_max_tokens=32):
     import gepa
     import gepa.optimize_anything as oa
 
@@ -234,31 +305,49 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     print(f"[load] vLLM model = {model_tag}", flush=True)
     from vllm import SamplingParams
     llm = make_llm(tp=tp, model_tag=model_tag, gpu_mem=gpu_mem)
-    task_sp = SamplingParams(temperature=0.0, max_tokens=16)
+    # task_max_tokens=32 (not the original 16): VQA's short-answer scoring
+    # is containment-based against human reference answers, so truncating a
+    # genuinely-correct-but-slightly-longer answer costs real accuracy for
+    # no reason; 32 covers this with margin while staying cheap. POPE's
+    # yes/no answers are unaffected either way (they emit well under 16).
+    task_sp = SamplingParams(temperature=0.0, max_tokens=task_max_tokens)
     reflect_sp = SamplingParams(temperature=0.7, max_tokens=1024)
     engine = MeteredEngine(llm, task_sp, reflect_sp)
 
     evaluator = make_evaluator(engine, adapter, adapter["img_cap"])
 
+    # reflection_lm: by default (reflection_ipc_dir=None) falls back to the
+    # ORIGINAL same-model behavior (engine.run_reflection). Passing
+    # reflection_ipc_dir routes reflection to a separately-launched, stronger
+    # reflection_server.py process instead -- see that file's docstring and
+    # RemoteReflectionClient above for why this is the actual fix, not a
+    # cosmetic option: GEPA's own design pairs a capable reflector with a
+    # cheaper task model, and reusing the SAME 8B model for both roles was
+    # the likely cause of every proposed candidate failing GEPA's
+    # strict-improvement test in both the POPE and VQA runs.
+    reflection_client = (RemoteReflectionClient(reflection_ipc_dir)
+                        if reflection_ipc_dir else None)
+    reflection_lm = reflection_client if reflection_client else engine.run_reflection
+
     config = oa.GEPAConfig(
         engine=oa.EngineConfig(max_metric_calls=max_metric_calls, parallel=False,
                                display_progress_bar=True, seed=seed),
-        reflection=oa.ReflectionConfig(reflection_lm=engine.run_reflection,
-                                       reflection_minibatch_size=3),
+        reflection=oa.ReflectionConfig(reflection_lm=reflection_lm,
+                                       reflection_minibatch_size=reflection_minibatch_size),
     )
 
-    print(f"[gepa] optimizing (max_metric_calls={max_metric_calls}) …", flush=True)
+    print(f"[gepa] optimizing (max_metric_calls={max_metric_calls}, "
+          f"reflection_minibatch_size={reflection_minibatch_size}, "
+          f"reflector={'remote/' + str(reflection_ipc_dir) if reflection_client else model_tag + ' (same model)'}) …",
+          flush=True)
     t0 = time.time()
     result = oa.optimize_anything(
         seed_candidate={"prompt": SYSTEM_MESSAGE},
         evaluator=evaluator,
         dataset=trainset,
         valset=valset,
-        objective=f"Maximize {dataset} yes/no question-answering accuracy for a "
-                  f"vision-language model, given an image and a question.",
-        background="The 'prompt' parameter is a SYSTEM prompt shown to the model "
-                   "before the image and question. It should elicit accurate, "
-                   "well-calibrated yes/no answers.",
+        objective=adapter["objective"],
+        background=adapter["background"],
         config=config,
     )
     train_wall_s = time.time() - t0
@@ -342,6 +431,8 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     baseline_tokens = _count_tokens(SYSTEM_MESSAGE)
     gepa_tokens = _count_tokens(best["prompt"])
 
+    reflect_stats = reflection_client.stats if reflection_client else engine.stats
+
     out = {
         "dataset": dataset, "model": model_tag, "eval_order": EVAL_ORDER,
         "seed": seed, "split": {"train": len(trainset), "val": len(valset),
@@ -352,11 +443,12 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
             "task_calls": engine.stats["task_calls"],
             "task_tokens_in": engine.stats["task_tokens_in"],
             "task_tokens_out": engine.stats["task_tokens_out"],
-            "reflect_calls": engine.stats["reflect_calls"],
-            "reflect_tokens_in": engine.stats["reflect_tokens_in"],
-            "reflect_tokens_out": engine.stats["reflect_tokens_out"],
+            "reflect_calls": reflect_stats["reflect_calls"],
+            "reflect_tokens_in": reflect_stats["reflect_tokens_in"],
+            "reflect_tokens_out": reflect_stats["reflect_tokens_out"],
+            "reflector": (f"remote:{reflection_ipc_dir}" if reflection_client else model_tag),
             "total_tokens": (engine.stats["task_tokens_in"] + engine.stats["task_tokens_out"]
-                            + engine.stats["reflect_tokens_in"] + engine.stats["reflect_tokens_out"]),
+                            + reflect_stats["reflect_tokens_in"] + reflect_stats["reflect_tokens_out"]),
             "best_val_score": result.val_aggregate_scores[result.best_idx],
         },
         "inference_cost": {
@@ -394,11 +486,23 @@ def main():
     ap.add_argument("--out-dir", default=OUT_DIR, dest="out_dir")
     ap.add_argument("--tp", type=int, default=1)
     ap.add_argument("--gpu-mem", type=float, default=0.8, dest="gpu_mem")
+    ap.add_argument("--reflection-ipc-dir", default=None, dest="reflection_ipc_dir",
+                    help="if set, route reflection_lm calls to a separately-"
+                         "launched reflection_server.py through this shared "
+                         "directory instead of reusing --model for reflection "
+                         "(see reflection_server.py's docstring for why this "
+                         "matters -- a stronger/different reflector, not the "
+                         "same 8B model judging its own failures).")
+    ap.add_argument("--reflection-minibatch-size", type=int, default=5,
+                    dest="reflection_minibatch_size")
+    ap.add_argument("--task-max-tokens", type=int, default=32, dest="task_max_tokens")
     args = ap.parse_args()
 
     run_gepa(args.dataset, args.model_tag, args.train_size, args.val_size,
              args.max_metric_calls, args.seed, args.out_dir, args.tp, args.gpu_mem,
-             args.eval_size)
+             args.eval_size, reflection_ipc_dir=args.reflection_ipc_dir,
+             reflection_minibatch_size=args.reflection_minibatch_size,
+             task_max_tokens=args.task_max_tokens)
 
 
 if __name__ == "__main__":
