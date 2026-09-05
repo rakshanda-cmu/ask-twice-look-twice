@@ -215,13 +215,131 @@ def _gepa_section():
 def _logit_lens_diff_section():
     st.subheader("🧠 Logit-lens word-diff — STI vs IST")
     st.caption(
-        "Per layer/position, diff the top-predicted word between STI and IST "
-        "orderings on the same (image, question) pairs, keeping only genuine "
-        "word changes (synonym-only differences filtered out)."
+        "Per (layer, generation-step), diff the top-predicted word between "
+        "STI and IST orderings on the same (image, question) pairs, on "
+        "**generated-answer positions only** (the one part of the logit-lens "
+        "machinery directly comparable between the two orderings, since the "
+        "input-text token layout itself differs entirely). Two filters strip "
+        "out non-signal before reporting a diff: both words must be real "
+        "dictionary words (early/mid-layer logit lens frequently projects "
+        "onto subword fragments or unrelated tokens, not real words) and "
+        "must not be WordNet synonyms of each other."
     )
-    st.info("Not computed yet — will reuse logit_lens_runner.run_logit_lens() "
-            "and logit_lens_overlay.py's per-layer word extraction, which "
-            "already exist in this repo.")
+    path = "./logit_lens_word_diff_results.json"
+    if not os.path.exists(path):
+        st.info("Not run yet.")
+        return
+    d = json.load(open(path))
+    st.caption(
+        f"**{d['model']}**, n={d['n_samples']} RF20 samples, layers "
+        f"{d['layer_range']}: **{d['total_genuine_diffs']}** genuine "
+        f"word-diffs survived filtering."
+    )
+    by_layer = pd.DataFrame(
+        [{"Layer": k, "Genuine diffs": v} for k, v in d["diffs_by_layer"].items()])
+    st.dataframe(by_layer, hide_index=True, use_container_width=True)
+    rows = [{"Question": e["query"][:60], "STI answer": e["answer_sti"],
+            "IST answer": e["answer_ist"], "Layer": diff["layer"],
+            "Step": diff["step"], "STI word": diff["sti_word"],
+            "IST word": diff["ist_word"]}
+           for e in d["per_example"] for diff in e["diffs"]]
+    if rows:
+        st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+        st.caption(
+            "Several diffs show STI's logit lens already predicting the "
+            "eventual answer word at a given layer while IST predicts an "
+            "unrelated word at the same layer/step -- i.e. STI's residual "
+            "stream commits to its answer earlier in the network than IST's "
+            "does, for the same (image, question) pair."
+        )
+
+
+ECHO2HALF_DATASETS = [
+    # (label, results_dir, file_prefix, sitit_tag, echo_tag, metric_fn)
+    ("BLINK", "extra_tasks/results", "blink_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("CV-Bench", "extra_tasks/results", "cvbench_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("HR-Bench", "extra_tasks/results", "hrbench_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("MMStar", "extra_tasks/results", "mmstar_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("RealWorldQA", "extra_tasks/results", "realworldqa_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("WorldMedQA-V", "extra_tasks/results", "worldmedqa_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("MVBench", "extra_tasks/results", "mvbench_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("NExT-QA", "extra_tasks/results", "nextqa_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("MSVD-QA", "extra_tasks/results", "msvdqa_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("TGIF-QA", "extra_tasks/results", "tgifqa_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("TallyQA", "extra_tasks/results", "tallyqa_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("acc", m["accuracy"])),
+    ("VQAv2", "extra_tasks/results", "vqa_order", "SITIT", "SITIT_echo2half",
+     lambda m: ("vqa_score", m["vqa_score"])),
+]
+
+
+def _echo2half_extension_section():
+    st.subheader("📐 Echo-resolution extension — half-res echo across every benchmark")
+    st.caption(
+        "RF20's echo-resolution sweep (above) found half beats quarter "
+        "clearly, so per that branch decision this extends the half-res "
+        "echo ablation (2nd/echoed SITIT occurrence at 0.5x) to every other "
+        "benchmark in the repo -- all at full production scale, matching "
+        "each dataset's existing SITIT baseline N exactly. RF20 itself is "
+        "excluded (it's what drove this decision, not a target of it)."
+    )
+    rows = []
+    for label, rdir, prefix, sitit_tag, echo_tag, metric_fn in ECHO2HALF_DATASETS:
+        base_p = os.path.join(rdir, f"{prefix}-{sitit_tag}_{RF20_MODEL}.json")
+        echo_p = os.path.join(rdir, f"{prefix}-{echo_tag}_{RF20_MODEL}.json")
+        base_m = json.load(open(base_p))["meta"] if os.path.exists(base_p) else None
+        echo_m = json.load(open(echo_p))["meta"] if os.path.exists(echo_p) else None
+        if not (base_m and echo_m):
+            rows.append({"Benchmark": label, "N": "—", "Metric": "—",
+                        "SITIT baseline": "—", "SITIT echo2half": "—", "Δ": "—"})
+            continue
+        metric_name, base_v = metric_fn(base_m)
+        _, echo_v = metric_fn(echo_m)
+        rows.append({
+            "Benchmark": label, "N": echo_m.get("n"), "Metric": metric_name,
+            "SITIT baseline": f"{base_v*100:.2f}%", "SITIT echo2half": f"{echo_v*100:.2f}%",
+            "Δ": f"{(echo_v-base_v)*100:+.2f} pts",
+        })
+
+    def _pope_row():
+        p = "pope/results/qwen3-vl-8b__SITIT__results.json"
+        pe = "pope/results/qwen3-vl-8b__SITIT_echo2half__results.json"
+        if not (os.path.exists(p) and os.path.exists(pe)):
+            return {"Benchmark": "POPE", "N": "—", "Metric": "—",
+                   "SITIT baseline": "—", "SITIT echo2half": "—", "Δ": "—"}
+        b, e = json.load(open(p))["meta"]["overall"], json.load(open(pe))["meta"]["overall"]
+        return {"Benchmark": "POPE", "N": e["n"], "Metric": "f1",
+                "SITIT baseline": f"{b['f1']*100:.2f}%",
+                "SITIT echo2half": f"{e['f1']*100:.2f}%",
+                "Δ": f"{(e['f1']-b['f1'])*100:+.2f} pts"}
+
+    def _winoground_row():
+        p = "winoground/results/qwen3-vl-8b__SITIT__results.json"
+        pe = "winoground/results/qwen3-vl-8b__SITIT_echo2half__results.json"
+        if not (os.path.exists(p) and os.path.exists(pe)):
+            return {"Benchmark": "Winoground", "N": "—", "Metric": "—",
+                   "SITIT baseline": "—", "SITIT echo2half": "—", "Δ": "—"}
+        b, e = json.load(open(p))["meta"]["overall"], json.load(open(pe))["meta"]["overall"]
+        return {"Benchmark": "Winoground", "N": e["n"], "Metric": "group_acc",
+                "SITIT baseline": f"{b['group_acc']*100:.2f}%",
+                "SITIT echo2half": f"{e['group_acc']*100:.2f}%",
+                "Δ": f"{(e['group_acc']-b['group_acc'])*100:+.2f} pts"}
+
+    rows.append(_pope_row())
+    rows.append(_winoground_row())
+    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+    n_done = sum(1 for r in rows if r["Δ"] != "—")
+    st.caption(f"{n_done}/{len(rows)} benchmarks complete.")
 
 
 def render_new_experiments_page():
@@ -231,6 +349,8 @@ def render_new_experiments_page():
         "the existing per-dataset tabs so nothing there is modified."
     )
     _rf20_resolution_section()
+    st.markdown("---")
+    _echo2half_extension_section()
     st.markdown("---")
     _token_cost_section()
     st.markdown("---")
