@@ -140,7 +140,7 @@ def _token_cost_section():
 
 GEPA_RESULTS_DIR = "./gepa_results"
 GEPA_MODEL = "qwen3-vl-8b"
-GEPA_DATASETS = ["pope", "vqa"]
+GEPA_DATASETS = ["pope", "vqa", "naturalbench"]
 
 
 def _gepa_result(dataset):
@@ -294,15 +294,38 @@ ECHO2HALF_DATASETS = [
 ]
 
 
+EMPTY_ECHO_ROW = {"Benchmark": None, "N": "—", "Metric": "—",
+                 "SITIT baseline": "—", "SITIT echo2half": "—", "Δ half": "—",
+                 "SITIT echo2quarter": "—", "Δ quarter": "—"}
+
+
+def _echo_row(label, metric_name, base_v, half_v, quarter_v, n):
+    row = dict(EMPTY_ECHO_ROW)
+    row["Benchmark"] = label
+    row["N"] = n
+    row["Metric"] = metric_name
+    row["SITIT baseline"] = f"{base_v*100:.2f}%"
+    if half_v is not None:
+        row["SITIT echo2half"] = f"{half_v*100:.2f}%"
+        row["Δ half"] = f"{(half_v-base_v)*100:+.2f} pts"
+    if quarter_v is not None:
+        row["SITIT echo2quarter"] = f"{quarter_v*100:.2f}%"
+        row["Δ quarter"] = f"{(quarter_v-base_v)*100:+.2f} pts"
+    return row
+
+
 def _echo2half_extension_section():
-    st.subheader("📐 Echo-resolution extension — half-res echo across every benchmark")
+    st.subheader("📐 Echo-resolution extension — half (and quarter, where run) across every benchmark")
     st.caption(
         "RF20's echo-resolution sweep (above) found half beats quarter "
         "clearly, so per that branch decision this extends the half-res "
         "echo ablation (2nd/echoed SITIT occurrence at 0.5x) to every other "
         "benchmark in the repo -- all at full production scale, matching "
         "each dataset's existing SITIT baseline N exactly. RF20 itself is "
-        "excluded (it's what drove this decision, not a target of it)."
+        "excluded (it's what drove this decision, not a target of it). "
+        "POPE, Winoground, and NaturalBench additionally have the "
+        "quarter-res (0.25x) variant run too, for a direct 3-way comparison "
+        "matching RF20's own half-vs-quarter framing."
     )
     rows = []
     for label, rdir, prefix, sitit_tag, echo_tag, metric_fn in ECHO2HALF_DATASETS:
@@ -311,46 +334,55 @@ def _echo2half_extension_section():
         base_m = json.load(open(base_p))["meta"] if os.path.exists(base_p) else None
         echo_m = json.load(open(echo_p))["meta"] if os.path.exists(echo_p) else None
         if not (base_m and echo_m):
-            rows.append({"Benchmark": label, "N": "—", "Metric": "—",
-                        "SITIT baseline": "—", "SITIT echo2half": "—", "Δ": "—"})
+            row = dict(EMPTY_ECHO_ROW); row["Benchmark"] = label
+            rows.append(row)
             continue
         metric_name, base_v = metric_fn(base_m)
-        _, echo_v = metric_fn(echo_m)
-        rows.append({
-            "Benchmark": label, "N": echo_m.get("n"), "Metric": metric_name,
-            "SITIT baseline": f"{base_v*100:.2f}%", "SITIT echo2half": f"{echo_v*100:.2f}%",
-            "Δ": f"{(echo_v-base_v)*100:+.2f} pts",
-        })
+        _, half_v = metric_fn(echo_m)
+        rows.append(_echo_row(label, metric_name, base_v, half_v, None, echo_m.get("n")))
 
     def _pope_row():
         p = "pope/results/qwen3-vl-8b__SITIT__results.json"
-        pe = "pope/results/qwen3-vl-8b__SITIT_echo2half__results.json"
-        if not (os.path.exists(p) and os.path.exists(pe)):
-            return {"Benchmark": "POPE", "N": "—", "Metric": "—",
-                   "SITIT baseline": "—", "SITIT echo2half": "—", "Δ": "—"}
-        b, e = json.load(open(p))["meta"]["overall"], json.load(open(pe))["meta"]["overall"]
-        return {"Benchmark": "POPE", "N": e["n"], "Metric": "f1",
-                "SITIT baseline": f"{b['f1']*100:.2f}%",
-                "SITIT echo2half": f"{e['f1']*100:.2f}%",
-                "Δ": f"{(e['f1']-b['f1'])*100:+.2f} pts"}
+        ph = "pope/results/qwen3-vl-8b__SITIT_echo2half__results.json"
+        pq = "pope/results/qwen3-vl-8b__SITIT_echo2quarter__results.json"
+        if not os.path.exists(p):
+            row = dict(EMPTY_ECHO_ROW); row["Benchmark"] = "POPE"; return row
+        b = json.load(open(p))["meta"]["overall"]
+        h = json.load(open(ph))["meta"]["overall"]["f1"] if os.path.exists(ph) else None
+        q = json.load(open(pq))["meta"]["overall"]["f1"] if os.path.exists(pq) else None
+        return _echo_row("POPE", "f1", b["f1"], h, q, b["n"])
 
     def _winoground_row():
         p = "winoground/results/qwen3-vl-8b__SITIT__results.json"
-        pe = "winoground/results/qwen3-vl-8b__SITIT_echo2half__results.json"
-        if not (os.path.exists(p) and os.path.exists(pe)):
-            return {"Benchmark": "Winoground", "N": "—", "Metric": "—",
-                   "SITIT baseline": "—", "SITIT echo2half": "—", "Δ": "—"}
-        b, e = json.load(open(p))["meta"]["overall"], json.load(open(pe))["meta"]["overall"]
-        return {"Benchmark": "Winoground", "N": e["n"], "Metric": "group_acc",
-                "SITIT baseline": f"{b['group_acc']*100:.2f}%",
-                "SITIT echo2half": f"{e['group_acc']*100:.2f}%",
-                "Δ": f"{(e['group_acc']-b['group_acc'])*100:+.2f} pts"}
+        ph = "winoground/results/qwen3-vl-8b__SITIT_echo2half__results.json"
+        pq = "winoground/results/qwen3-vl-8b__SITIT_echo2quarter__results.json"
+        if not os.path.exists(p):
+            row = dict(EMPTY_ECHO_ROW); row["Benchmark"] = "Winoground"; return row
+        b = json.load(open(p))["meta"]["overall"]
+        h = json.load(open(ph))["meta"]["overall"]["group_acc"] if os.path.exists(ph) else None
+        q = json.load(open(pq))["meta"]["overall"]["group_acc"] if os.path.exists(pq) else None
+        return _echo_row("Winoground", "group_acc", b["group_acc"], h, q, b["n"])
+
+    def _naturalbench_row():
+        d = "naturalbench/results"
+        p = os.path.join(d, "qwen3-vl-8b__SITIT__results.json")
+        ph = os.path.join(d, "qwen3-vl-8b__SITIT_echo2half__results.json")
+        pq = os.path.join(d, "qwen3-vl-8b__SITIT_echo2quarter__results.json")
+        if not os.path.exists(p):
+            row = dict(EMPTY_ECHO_ROW); row["Benchmark"] = "NaturalBench"; return row
+        b = json.load(open(p))["meta"]  # metrics live directly in meta, no "overall" nesting
+        h = json.load(open(ph))["meta"]["pair_acc"] if os.path.exists(ph) else None
+        q = json.load(open(pq))["meta"]["pair_acc"] if os.path.exists(pq) else None
+        return _echo_row("NaturalBench", "pair_acc", b["pair_acc"], h, q, b["num_groups"] * 4)
 
     rows.append(_pope_row())
     rows.append(_winoground_row())
+    rows.append(_naturalbench_row())
     st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
-    n_done = sum(1 for r in rows if r["Δ"] != "—")
-    st.caption(f"{n_done}/{len(rows)} benchmarks complete.")
+    n_done = sum(1 for r in rows if r["Δ half"] != "—")
+    n_quarter_done = sum(1 for r in rows if r["Δ quarter"] != "—")
+    st.caption(f"{n_done}/{len(rows)} benchmarks have half-res echo; "
+              f"{n_quarter_done} also have quarter-res echo for direct comparison.")
 
 
 def render_new_experiments_page():
