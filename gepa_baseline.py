@@ -302,11 +302,11 @@ class RemoteReflectionClient:
 #  GEPA wiring
 # ═══════════════════════════════════════════════════════════════════════════
 
-def make_evaluator(engine, adapter, img_cap):
+def make_evaluator(engine, adapter, img_cap, eval_order=EVAL_ORDER):
     def evaluator(candidate, example):
         pil = downscale(_get_image(example), img_cap)
         task = adapter["task_text"](example)
-        conv = build_conversation(EVAL_ORDER, task, data_uri(pil),
+        conv = build_conversation(eval_order, task, data_uri(pil),
                                   system_text=candidate["prompt"])
         raw = engine.run_task(conv)
         correct, score, pred = adapter["score"](raw, example)
@@ -327,7 +327,7 @@ def make_evaluator(engine, adapter, img_cap):
 
 def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
             seed, out_dir, tp, gpu_mem, eval_size, reflection_ipc_dir=None,
-            reflection_minibatch_size=5, task_max_tokens=32):
+            reflection_minibatch_size=5, task_max_tokens=32, eval_order=EVAL_ORDER):
     import gepa
     import gepa.optimize_anything as oa
 
@@ -361,7 +361,7 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     reflect_sp = SamplingParams(temperature=0.7, max_tokens=1024)
     engine = MeteredEngine(llm, task_sp, reflect_sp)
 
-    evaluator = make_evaluator(engine, adapter, adapter["img_cap"])
+    evaluator = make_evaluator(engine, adapter, adapter["img_cap"], eval_order=eval_order)
 
     # reflection_lm: by default (reflection_ipc_dir=None) falls back to the
     # ORIGINAL same-model behavior (engine.run_reflection). Passing
@@ -431,7 +431,7 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
             for ex in chunk:
                 pil = downscale(_get_image(ex), adapter["img_cap"])
                 task = adapter["task_text"](ex)
-                convs.append(build_conversation(EVAL_ORDER, task, data_uri(pil),
+                convs.append(build_conversation(eval_order, task, data_uri(pil),
                                                 system_text=prompt_text))
             outputs = engine.llm.chat(convs, engine.task_sp, use_tqdm=False)
             del convs
@@ -465,7 +465,7 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
         from qwen_vl_utils import process_vision_info
         messages = _build_qwen_messages(prompt_text, sample_task,
                                         downscale(sample_img, adapter["img_cap"]),
-                                        EVAL_ORDER)
+                                        eval_order)
         text = processor.apply_chat_template(messages, tokenize=False,
                                              add_generation_prompt=True,
                                              enable_thinking=False)
@@ -481,7 +481,7 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
     reflect_stats = reflection_client.stats if reflection_client else engine.stats
 
     out = {
-        "dataset": dataset, "model": model_tag, "eval_order": EVAL_ORDER,
+        "dataset": dataset, "model": model_tag, "eval_order": eval_order,
         "seed": seed, "split": {"train": len(trainset), "val": len(valset),
                                 "held_out_eval": len(evalset)},
         "training": {
@@ -512,7 +512,10 @@ def run_gepa(dataset, model_tag, train_size, val_size, max_metric_calls,
         "gepa_optimized_prompt": best["prompt"],
     }
     os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, f"{dataset}__{model_tag}__gepa.json")
+    # keep the original STI filename unchanged (no existing STI result is
+    # renamed/touched) -- only non-STI orderings get a suffixed filename.
+    tag = "" if eval_order == "STI" else f"__{eval_order}"
+    out_path = os.path.join(out_dir, f"{dataset}__{model_tag}{tag}__gepa.json")
     json.dump(out, open(out_path, "w"), indent=2)
     print(f"[saved] {out_path}", flush=True)
     return out
@@ -543,13 +546,22 @@ def main():
     ap.add_argument("--reflection-minibatch-size", type=int, default=5,
                     dest="reflection_minibatch_size")
     ap.add_argument("--task-max-tokens", type=int, default=32, dest="task_max_tokens")
+    ap.add_argument("--eval-order", default="STI", dest="eval_order",
+                    choices=["STI", "SIT", "IST", "ITS", "TSI", "TIS"],
+                    help="S/I/T order used for BOTH task_lm calls (training and "
+                         "held-out eval) and the inference-token count -- GEPA "
+                         "still only optimizes the prompt TEXT, never the "
+                         "ordering itself, this just fixes which ordering it's "
+                         "optimized/evaluated under. Non-STI orders get a "
+                         "distinct output filename so they don't touch the "
+                         "existing STI results.")
     args = ap.parse_args()
 
     run_gepa(args.dataset, args.model_tag, args.train_size, args.val_size,
              args.max_metric_calls, args.seed, args.out_dir, args.tp, args.gpu_mem,
              args.eval_size, reflection_ipc_dir=args.reflection_ipc_dir,
              reflection_minibatch_size=args.reflection_minibatch_size,
-             task_max_tokens=args.task_max_tokens)
+             task_max_tokens=args.task_max_tokens, eval_order=args.eval_order)
 
 
 if __name__ == "__main__":
