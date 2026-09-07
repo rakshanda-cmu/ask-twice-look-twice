@@ -143,8 +143,12 @@ GEPA_MODEL = "qwen3-vl-8b"
 GEPA_DATASETS = ["pope", "vqa", "naturalbench"]
 
 
-def _gepa_result(dataset):
-    p = os.path.join(GEPA_RESULTS_DIR, f"{dataset}__{GEPA_MODEL}__gepa.json")
+GEPA_ORDERS = ["STI", "SIT"]
+
+
+def _gepa_result(dataset, order="STI"):
+    suffix = "" if order == "STI" else f"__{order}"
+    p = os.path.join(GEPA_RESULTS_DIR, f"{dataset}__{GEPA_MODEL}{suffix}__gepa.json")
     if not os.path.exists(p):
         return None
     try:
@@ -174,53 +178,70 @@ def _gepa_section():
         "token cost. Train/val subsets are carved out of each benchmark's "
         "existing full pool (seeded, disjoint from each other); the "
         "held-out eval subset is scored for both the baseline SYSTEM_"
-        "MESSAGE and the GEPA-optimized prompt on identical examples."
+        "MESSAGE and the GEPA-optimized prompt on identical examples. Run "
+        "under both STI and SIT orderings (same train/val/eval split, same "
+        "budget each) to see whether the optimization itself is order-"
+        "specific -- GEPA never touches the ordering, only the prompt text, "
+        "so any difference in outcome reflects how much room each ordering "
+        "leaves for prompt-level improvement, not a change in what's being "
+        "optimized."
     )
-    results = {d: _gepa_result(d) for d in GEPA_DATASETS}
+    results = {(d, o): _gepa_result(d, o) for d in GEPA_DATASETS for o in GEPA_ORDERS}
     if not any(results.values()):
         st.info("Not run yet.")
         return
 
     rows = []
     for d in GEPA_DATASETS:
-        r = results.get(d)
-        if not r:
-            rows.append({"Dataset": d, "N (train/val/eval)": "—",
-                        "Baseline acc": "—", "GEPA acc": "—", "Δ acc": "—",
-                        "Train wall-clock": "—", "Metric calls": "—",
-                        "Train tokens": "—", "Δ inference tokens": "—"})
-            continue
-        sp, tr, ic, ac = r["split"], r["training"], r["inference_cost"], r["accuracy"]
-        rows.append({
-            "Dataset": d,
-            "N (train/val/eval)": f"{sp['train']}/{sp['val']}/{sp['held_out_eval']}",
-            "Baseline acc": f"{ac['baseline_system_message']['acc']*100:.2f}%",
-            "GEPA acc": f"{ac['gepa_optimized']['acc']*100:.2f}%",
-            "Δ acc": f"{ac['delta']*100:+.2f} pts",
-            "Train wall-clock": f"{tr['wall_clock_s']:.0f}s",
-            "Metric calls": str(tr["total_metric_calls"]),
-            "Train tokens": f"{tr['total_tokens']:,}",
-            "Δ inference tokens": f"{ic['delta_tokens']:+d}",
-        })
+        for o in GEPA_ORDERS:
+            r = results.get((d, o))
+            if not r:
+                rows.append({"Dataset": d, "Order": o, "N (train/val/eval)": "—",
+                            "Baseline acc": "—", "GEPA acc": "—", "Δ acc": "—",
+                            "Train wall-clock": "—", "Metric calls": "—",
+                            "Train tokens": "—", "Δ inference tokens": "—"})
+                continue
+            sp, tr, ic, ac = r["split"], r["training"], r["inference_cost"], r["accuracy"]
+            rows.append({
+                "Dataset": d, "Order": o,
+                "N (train/val/eval)": f"{sp['train']}/{sp['val']}/{sp['held_out_eval']}",
+                "Baseline acc": f"{ac['baseline_system_message']['acc']*100:.2f}%",
+                "GEPA acc": f"{ac['gepa_optimized']['acc']*100:.2f}%",
+                "Δ acc": f"{ac['delta']*100:+.2f} pts",
+                "Train wall-clock": f"{tr['wall_clock_s']:.0f}s",
+                "Metric calls": str(tr["total_metric_calls"]),
+                "Train tokens": f"{tr['total_tokens']:,}",
+                "Δ inference tokens": f"{ic['delta_tokens']:+d}",
+            })
     st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+    st.caption(
+        "STI finds a genuine improvement on all three datasets; SIT does "
+        "not -- POPE and VQA tie exactly under SIT (best_candidate == seed, "
+        "GEPA found nothing worth accepting), and NaturalBench's SIT run "
+        "actually regresses slightly (-0.41 pts) despite accepting a much "
+        "longer prompt (+164 tokens) that scored better on the validation "
+        "subset but didn't generalize to the held-out set -- a genuine "
+        "overfitting case, not a bug."
+    )
 
     for d in GEPA_DATASETS:
-        r = results.get(d)
-        if not r:
-            continue
-        with st.expander(f"{d}: optimized prompt + cost breakdown"):
-            tr = r["training"]
-            st.caption(
-                f"Training calls: **{tr['task_calls']}** task_lm "
-                f"({tr['task_tokens_in']:,} in / {tr['task_tokens_out']:,} out tok) + "
-                f"**{tr['reflect_calls']}** reflection ({tr['reflect_tokens_in']:,} in / "
-                f"{tr['reflect_tokens_out']:,} out tok) = **{tr['total_tokens']:,}** total "
-                f"tokens over **{tr['wall_clock_s']:.0f}s**."
-            )
-            st.markdown("**Baseline SYSTEM_MESSAGE:**")
-            st.code(r["baseline_prompt"], language=None)
-            st.markdown("**GEPA-optimized prompt:**")
-            st.code(r["gepa_optimized_prompt"], language=None)
+        for o in GEPA_ORDERS:
+            r = results.get((d, o))
+            if not r:
+                continue
+            with st.expander(f"{d} ({o}): optimized prompt + cost breakdown"):
+                tr = r["training"]
+                st.caption(
+                    f"Training calls: **{tr['task_calls']}** task_lm "
+                    f"({tr['task_tokens_in']:,} in / {tr['task_tokens_out']:,} out tok) + "
+                    f"**{tr['reflect_calls']}** reflection ({tr['reflect_tokens_in']:,} in / "
+                    f"{tr['reflect_tokens_out']:,} out tok) = **{tr['total_tokens']:,}** total "
+                    f"tokens over **{tr['wall_clock_s']:.0f}s**."
+                )
+                st.markdown("**Baseline SYSTEM_MESSAGE:**")
+                st.code(r["baseline_prompt"], language=None)
+                st.markdown("**GEPA-optimized prompt:**")
+                st.code(r["gepa_optimized_prompt"], language=None)
 
 
 def _logit_lens_diff_section():
