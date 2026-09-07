@@ -137,6 +137,34 @@ def _vqa_score(raw, ex):
     return correct, vqa_score, norm
 
 
+def _naturalbench_loader():
+    from naturalbench_eval import load_groups
+    groups = load_groups("./naturalbench")
+    rows = []
+    for g in groups:
+        for img_idx in (0, 1):
+            for q_idx in (0, 1):
+                rows.append({
+                    "id": f"{g['index']}_{img_idx}_{q_idx}",
+                    "image_path": os.path.join("./naturalbench", g[f"image_{img_idx}"]),
+                    "question": g[f"question_{q_idx}"],
+                    "question_type": g["question_type"],
+                    "gt": g[f"image_{img_idx}_question_{q_idx}"],
+                })
+    return rows
+
+
+def _naturalbench_task_text(ex):
+    from naturalbench_eval import answer_suffix
+    return ex["question"] + answer_suffix(ex["question_type"])
+
+
+def _naturalbench_score(raw, ex):
+    from naturalbench_eval import judge_pair
+    correct, pred = judge_pair(raw, ex["gt"], ex["question_type"], ex["question"])
+    return correct, 1.0 if correct else 0.0, pred
+
+
 DATASET_ADAPTERS = {
     "pope": {"loader": _pope_loader, "task_text": _pope_task_text,
             "score": _pope_score, "img_cap": 1024,
@@ -164,6 +192,25 @@ DATASET_ADAPTERS = {
                         "model give concise, accurate short answers that match how "
                         "a human would naturally answer -- not full sentences, "
                         "explanations, or hedging."},
+    "naturalbench": {"loader": _naturalbench_loader, "task_text": _naturalbench_task_text,
+                    "score": _naturalbench_score, "img_cap": 1024,
+                    "objective": "Maximize NaturalBench visual question-answering "
+                                "accuracy for a vision-language model. Questions are "
+                                "either yes/no or 2-option multiple-choice (A/B), "
+                                "about natural images specifically curated to be hard "
+                                "for vision-language models -- adversarially selected "
+                                "so that guessing from text priors or common sense "
+                                "alone fails; the model must actually look at the "
+                                "specific image.",
+                    "background": "The 'prompt' parameter is a SYSTEM prompt shown "
+                                 "to the model before the image and question. The "
+                                 "question itself already ends with an instruction "
+                                 "on the exact answer format (Yes/No, or the option "
+                                 "letter A/B). The system prompt should help the "
+                                 "model examine the actual image content carefully "
+                                 "and avoid answering from guesses or generic priors, "
+                                 "since these questions are specifically designed to "
+                                 "defeat that kind of shortcut."},
 }
 
 
