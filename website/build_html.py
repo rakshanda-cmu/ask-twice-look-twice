@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 ASSETS = os.path.join(HERE, "assets")
 OUT = os.path.join(HERE, "index.html")
-SELECT = [1264, 22, 33, 373, 994, 189, 232, 1007, 1077]
+SELECT = [1007, 1264, 22, 33, 373, 994, 189, 232, 1077]
 # Section 4 (the fix) needs cases where STI errs and image-echoing (SITIT) recovers
 # the correct answer -- a different, fix-valid subset from the perception panels.
 SELECT_FIX = [1007, 978, 922, 229]

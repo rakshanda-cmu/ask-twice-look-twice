@@ -1,0 +1,4170 @@
+[
+  {
+    "file": "COCO_val2014_000000004916.jpg",
+    "A": "bed",
+    "B": "chair",
+    "q1": "What does the bed look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      23,
+      28
+    ],
+    "n_perfect": 7,
+    "hits": [
+      {
+        "rc": [
+          1,
+          23
+        ],
+        "sit": [
+          "parental",
+          "discipline",
+          "parents"
+        ],
+        "sti1": [
+          "bed",
+          "beds",
+          "Bed"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "chair"
+        ]
+      },
+      {
+        "rc": [
+          4,
+          25
+        ],
+        "sit": [
+          "older",
+          "younger",
+          "larger"
+        ],
+        "sti1": [
+          "mattress",
+          "bed",
+          "mattresses"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          6,
+          18
+        ],
+        "sit": [
+          "mother",
+          "mother",
+          "women"
+        ],
+        "sti1": [
+          "bed",
+          "located",
+          "positioned"
+        ],
+        "sti2": [
+          "chair",
+          "visible",
+          "sitting"
+        ]
+      },
+      {
+        "rc": [
+          16,
+          26
+        ],
+        "sit": [
+          "attention",
+          "gaze",
+          "toward"
+        ],
+        "sti1": [
+          "bed",
+          "beds",
+          "mattress"
+        ],
+        "sti2": [
+          "seat",
+          "seats",
+          "Seat"
+        ]
+      },
+      {
+        "rc": [
+          19,
+          8
+        ],
+        "sit": [
+          "roles",
+          "relationship",
+          "relationships"
+        ],
+        "sti1": [
+          "bed",
+          "beds",
+          "typical"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          19,
+          17
+        ],
+        "sit": [
+          "trust",
+          "trusting",
+          "awe"
+        ],
+        "sti1": [
+          "bed",
+          "rectangular",
+          "typical"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "design"
+        ]
+      },
+      {
+        "rc": [
+          20,
+          23
+        ],
+        "sit": [
+          "window",
+          "Window",
+          "window"
+        ],
+        "sti1": [
+          "bed",
+          "beds",
+          "mattress"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "desk"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          11,
+          10
+        ],
+        "toks": [
+          "sleeve",
+          "shirt",
+          "sleeves"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          14,
+          22
+        ],
+        "toks": [
+          "\u5e8a",
+          "bed",
+          "beds"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      }
+    ],
+    "steered": 0.3339
+  },
+  {
+    "file": "COCO_val2014_000000097696.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 6,
+    "hits": [
+      {
+        "rc": [
+          2,
+          9
+        ],
+        "sit": [
+          "chat",
+          "chats",
+          "fascinating"
+        ],
+        "sti1": [
+          "television",
+          "TVs",
+          "televis"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboards",
+          "visible"
+        ]
+      },
+      {
+        "rc": [
+          4,
+          23
+        ],
+        "sit": [
+          "Photoshop",
+          "editing",
+          "editing"
+        ],
+        "sti1": [
+          "television",
+          "computer",
+          "computers"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboards",
+          "keyboard"
+        ]
+      },
+      {
+        "rc": [
+          4,
+          27
+        ],
+        "sit": [
+          "nerd",
+          "nostalgic",
+          "geek"
+        ],
+        "sti1": [
+          "screen",
+          "screens",
+          "displaying"
+        ],
+        "sti2": [
+          "keys",
+          "buttons",
+          "keyboard"
+        ]
+      },
+      {
+        "rc": [
+          15,
+          20
+        ],
+        "sit": [
+          "promotional",
+          "poster",
+          "advertisement"
+        ],
+        "sti1": [
+          "displaying",
+          "displayed",
+          "display"
+        ],
+        "sti2": [
+          "keys",
+          "keyboard",
+          "keys"
+        ]
+      },
+      {
+        "rc": [
+          16,
+          21
+        ],
+        "sit": [
+          "editing",
+          "editing",
+          "Photoshop"
+        ],
+        "sti1": [
+          "displayed",
+          "displaying",
+          "display"
+        ],
+        "sti2": [
+          "typing",
+          "keyst",
+          "productivity"
+        ]
+      },
+      {
+        "rc": [
+          16,
+          22
+        ],
+        "sit": [
+          "preview",
+          "preview",
+          "viewing"
+        ],
+        "sti1": [
+          "televis",
+          "television",
+          "airing"
+        ],
+        "sti2": [
+          "typing",
+          "keyst",
+          "commands"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          16
+        ],
+        "toks": [
+          "prominently",
+          "prominent",
+          "displayed"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          6,
+          3
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "portable",
+          "laptop"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          17,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "standalone",
+          "ypad"
+        ]
+      }
+    ],
+    "steered": 0.4286
+  },
+  {
+    "file": "COCO_val2014_000000486114.jpg",
+    "A": "potted plant",
+    "B": "chair",
+    "q1": "What does the plant look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      23,
+      28
+    ],
+    "n_perfect": 5,
+    "hits": [
+      {
+        "rc": [
+          2,
+          7
+        ],
+        "sit": [
+          "aesthetics",
+          "decor",
+          "aesthetic"
+        ],
+        "sti1": [
+          "plants",
+          "plant",
+          "plants"
+        ],
+        "sti2": [
+          "chairs",
+          "chair",
+          "seating"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          5
+        ],
+        "sit": [
+          "contents",
+          "items",
+          "clutter"
+        ],
+        "sti1": [
+          "plants",
+          "plant",
+          "plants"
+        ],
+        "sti2": [
+          "chairs",
+          "chair",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          5,
+          16
+        ],
+        "sit": [
+          "lighting",
+          "Lighting",
+          "light"
+        ],
+        "sti1": [
+          "leaves",
+          "leaf",
+          "Leaves"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          8,
+          22
+        ],
+        "sit": [
+          "decorative",
+          "utens",
+          "artifacts"
+        ],
+        "sti1": [
+          "foliage",
+          "native",
+          "leaves"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          10,
+          27
+        ],
+        "sit": [
+          "space",
+          "espacio",
+          "SPACE"
+        ],
+        "sti1": [
+          "plant",
+          "plants",
+          "plants"
+        ],
+        "sti2": [
+          "chairs",
+          "chair",
+          "visible"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          22,
+          6
+        ],
+        "toks": [
+          "tabletop",
+          "acie",
+          "ukan"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          13,
+          3
+        ],
+        "toks": [
+          "foliage",
+          "\u8302",
+          "lush"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          20,
+          15
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "seat"
+        ]
+      }
+    ],
+    "steered": 0.3121
+  },
+  {
+    "file": "COCO_val2014_000000232376.jpg",
+    "A": "keyboard",
+    "B": "laptop",
+    "q1": "What does the keyboard look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 5,
+    "hits": [
+      {
+        "rc": [
+          1,
+          23
+        ],
+        "sit": [
+          "productivity",
+          "work",
+          "workspace"
+        ],
+        "sti1": [
+          "keyboard",
+          "Keyboard",
+          "keyboard"
+        ],
+        "sti2": [
+          "MacBook",
+          "sleek",
+          "portable"
+        ]
+      },
+      {
+        "rc": [
+          2,
+          16
+        ],
+        "sit": [
+          "work",
+          "tasks",
+          "tasks"
+        ],
+        "sti1": [
+          "keyboard",
+          "keys",
+          "keyboards"
+        ],
+        "sti2": [
+          "MacBook",
+          "laptops",
+          "sleek"
+        ]
+      },
+      {
+        "rc": [
+          5,
+          14
+        ],
+        "sit": [
+          "work",
+          "tasks",
+          "intensive"
+        ],
+        "sti1": [
+          "keys",
+          "keys",
+          "Keys"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboard",
+          "Keyboard"
+        ]
+      },
+      {
+        "rc": [
+          6,
+          27
+        ],
+        "sit": [
+          "editing",
+          "photography",
+          "editing"
+        ],
+        "sti1": [
+          "keys",
+          "keys",
+          "keyboard"
+        ],
+        "sti2": [
+          "MacBook",
+          "sleek",
+          "beige"
+        ]
+      },
+      {
+        "rc": [
+          16,
+          22
+        ],
+        "sit": [
+          "Wikipedia",
+          "Flickr",
+          "Wiki"
+        ],
+        "sti1": [
+          "keyboard",
+          "ypad",
+          "visible"
+        ],
+        "sti2": [
+          "Laptop",
+          "MacBook",
+          "computers"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          26
+        ],
+        "toks": [
+          "keyboard",
+          "\u5e74\u5e74\u5e95",
+          "abbo"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          22
+        ],
+        "toks": [
+          "browser",
+          "desktop",
+          "displaying"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          14
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ],
+    "steered": 0.3095
+  },
+  {
+    "file": "COCO_val2014_000000379310.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 4,
+    "hits": [
+      {
+        "rc": [
+          1,
+          10
+        ],
+        "sit": [
+          "Warren",
+          "complying",
+          "oss"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "TVs"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboards",
+          "keyboard"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          26
+        ],
+        "sit": [
+          "work",
+          "tasks",
+          "trabalho"
+        ],
+        "sti1": [
+          "television",
+          "TVs",
+          "televis"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboards",
+          "whereabouts"
+        ]
+      },
+      {
+        "rc": [
+          16,
+          12
+        ],
+        "sit": [
+          "work",
+          "editing",
+          "browsing"
+        ],
+        "sti1": [
+          "displayed",
+          "screen",
+          "screens"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboards",
+          "Keyboard"
+        ]
+      },
+      {
+        "rc": [
+          18,
+          3
+        ],
+        "sit": [
+          "dual",
+          "augment",
+          "desktop"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "TVs"
+        ],
+        "sti2": [
+          "keyboard",
+          "Keyboard",
+          "standalone"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          24
+        ],
+        "toks": [
+          "pantalla",
+          "creen",
+          "screen"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "undra",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          9
+        ],
+        "toks": [
+          "standalone",
+          "\u72ec\u7acb",
+          "keyboard"
+        ]
+      }
+    ],
+    "steered": 0.3844
+  },
+  {
+    "file": "COCO_val2014_000000246999.jpg",
+    "A": "couch",
+    "B": "potted plant",
+    "q1": "What does the couch look like?",
+    "q2": "What does the plant look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 4,
+    "hits": [
+      {
+        "rc": [
+          0,
+          24
+        ],
+        "sit": [
+          "avad",
+          "innen",
+          "Sacred"
+        ],
+        "sti1": [
+          "uphol",
+          "seating",
+          "positioned"
+        ],
+        "sti2": [
+          "plants",
+          "plant",
+          "mentioned"
+        ]
+      },
+      {
+        "rc": [
+          6,
+          21
+        ],
+        "sit": [
+          "previous",
+          "previous",
+          "occup"
+        ],
+        "sti1": [
+          "uphol",
+          "upholstery",
+          "sofa"
+        ],
+        "sti2": [
+          "foliage",
+          "flowering",
+          "flowers"
+        ]
+      },
+      {
+        "rc": [
+          6,
+          22
+        ],
+        "sit": [
+          "vintage",
+          "outdated",
+          "Victorian"
+        ],
+        "sti1": [
+          "couch",
+          "seating",
+          "sofa"
+        ],
+        "sti2": [
+          "Pot",
+          "decorative",
+          "Pot"
+        ]
+      },
+      {
+        "rc": [
+          20,
+          3
+        ],
+        "sit": [
+          "uniform",
+          "Uniform",
+          "cohesive"
+        ],
+        "sti1": [
+          "sofa",
+          "couch",
+          "seating"
+        ],
+        "sti2": [
+          "plants",
+          "Pot",
+          "plant"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "chair",
+          "chair",
+          "chairs"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          17,
+          5
+        ],
+        "toks": [
+          "cushion",
+          "cushions",
+          "\u6551\u6d4e"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          17,
+          25
+        ],
+        "toks": [
+          "foliage",
+          "leaf",
+          "leaves"
+        ]
+      }
+    ],
+    "steered": 0.381
+  },
+  {
+    "file": "COCO_val2014_000000226220.jpg",
+    "A": "couch",
+    "B": "potted plant",
+    "q1": "What does the couch look like?",
+    "q2": "What does the plant look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 4,
+    "hits": [
+      {
+        "rc": [
+          1,
+          12
+        ],
+        "sit": [
+          "Animals",
+          "anthrop",
+          "Personality"
+        ],
+        "sti1": [
+          "couch",
+          "furniture",
+          "sofa"
+        ],
+        "sti2": [
+          "plants",
+          "species",
+          "plant"
+        ]
+      },
+      {
+        "rc": [
+          2,
+          8
+        ],
+        "sit": [
+          "sunlight",
+          "light",
+          "light"
+        ],
+        "sti1": [
+          "upholstery",
+          "fabric",
+          "uphol"
+        ],
+        "sti2": [
+          "leaf",
+          "leaves",
+          "Leaf"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          18
+        ],
+        "sit": [
+          "sovereignty",
+          "rulers",
+          "throne"
+        ],
+        "sti1": [
+          "sofa",
+          "couch",
+          "chair"
+        ],
+        "sti2": [
+          "plants",
+          "plants",
+          "plant"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          24
+        ],
+        "sit": [
+          "comfort",
+          "cozy",
+          "comfort"
+        ],
+        "sti1": [
+          "upholstery",
+          "cushions",
+          "padding"
+        ],
+        "sti2": [
+          "leaf",
+          "foliage",
+          "leaves"
+        ]
+      }
+    ],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          15,
+          24
+        ],
+        "toks": [
+          "apult",
+          "sleeping",
+          "nip"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          16,
+          27
+        ],
+        "toks": [
+          "seat",
+          "\u5ea7\u6905",
+          "chair"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          1,
+          7
+        ],
+        "toks": [
+          "trees",
+          "tree",
+          "leaves"
+        ]
+      }
+    ],
+    "steered": 0.4643
+  },
+  {
+    "file": "COCO_val2014_000000460208.jpg",
+    "A": "dining table",
+    "B": "oven",
+    "q1": "What does the table look like?",
+    "q2": "What does the oven look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 4,
+    "hits": [
+      {
+        "rc": [
+          2,
+          26
+        ],
+        "sit": [
+          "Warren",
+          "complying",
+          "oss"
+        ],
+        "sti1": [
+          "table",
+          "tableName",
+          "tables"
+        ],
+        "sti2": [
+          "appliance",
+          "sleek",
+          "installed"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          20
+        ],
+        "sit": [
+          "pantry",
+          "groceries",
+          "stored"
+        ],
+        "sti1": [
+          "table",
+          "tables",
+          "tableName"
+        ],
+        "sti2": [
+          "oven",
+          "Oven",
+          "Bake"
+        ]
+      },
+      {
+        "rc": [
+          8,
+          21
+        ],
+        "sit": [
+          "groceries",
+          "grocery",
+          "perish"
+        ],
+        "sti1": [
+          "tableName",
+          "table",
+          "cloth"
+        ],
+        "sti2": [
+          "oven",
+          "built",
+          "oven"
+        ]
+      },
+      {
+        "rc": [
+          18,
+          25
+        ],
+        "sit": [
+          "alone",
+          "relaxing",
+          "casually"
+        ],
+        "sti1": [
+          "tables",
+          "table",
+          "tableName"
+        ],
+        "sti2": [
+          "oven",
+          "Oven",
+          "appliance"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          14,
+          9
+        ],
+        "toks": [
+          "countert",
+          "desk",
+          "\u53a8\u623f"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          7,
+          14
+        ],
+        "toks": [
+          "dual",
+          "\u51b0\u7bb1",
+          "refrigerator"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          5,
+          26
+        ],
+        "toks": [
+          "oven",
+          "Microwave",
+          "toaster"
+        ]
+      }
+    ],
+    "steered": 0.3452
+  },
+  {
+    "file": "COCO_val2014_000000430238.jpg",
+    "A": "dining table",
+    "B": "chair",
+    "q1": "What does the table look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      20,
+      28
+    ],
+    "n_perfect": 4,
+    "hits": [
+      {
+        "rc": [
+          2,
+          3
+        ],
+        "sit": [
+          "wildlife",
+          "birds",
+          "unexpected"
+        ],
+        "sti1": [
+          "table",
+          "cloth",
+          "tableName"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          2,
+          14
+        ],
+        "sit": [
+          "spilled",
+          "leftovers",
+          "spills"
+        ],
+        "sti1": [
+          "table",
+          "cloth",
+          "tableName"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "seating"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          22
+        ],
+        "sit": [
+          "ledge",
+          "perch",
+          "platforms"
+        ],
+        "sti1": [
+          "table",
+          "tables",
+          "tableName"
+        ],
+        "sti2": [
+          "chair",
+          "seat",
+          "cushion"
+        ]
+      },
+      {
+        "rc": [
+          5,
+          26
+        ],
+        "sit": [
+          "cautiously",
+          "lookout",
+          "cautious"
+        ],
+        "sti1": [
+          "table",
+          "tables",
+          "tableName"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "Chair"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          16,
+          21
+        ],
+        "toks": [
+          "breakfast",
+          "\u7528\u9910",
+          "dining"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          2,
+          22
+        ],
+        "toks": [
+          "chair",
+          "ihu",
+          "uden"
+        ]
+      },
+      {
+        "name": "bird",
+        "rc": [
+          8,
+          5
+        ],
+        "toks": [
+          "\u7fc5\u8180",
+          "wings",
+          "feathers"
+        ]
+      }
+    ],
+    "steered": 0.4268
+  },
+  {
+    "file": "COCO_val2014_000000360951.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 4,
+    "hits": [
+      {
+        "rc": [
+          1,
+          14
+        ],
+        "sit": [
+          "computers",
+          "computer",
+          "Computers"
+        ],
+        "sti1": [
+          "television",
+          "TVs",
+          "televis"
+        ],
+        "sti2": [
+          "keyboard",
+          "peripherals",
+          "keyboard"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          25
+        ],
+        "sit": [
+          "work",
+          "work",
+          "trabalho"
+        ],
+        "sti1": [
+          "television",
+          "traditional",
+          "televis"
+        ],
+        "sti2": [
+          "keyboard",
+          "associated",
+          "attached"
+        ]
+      },
+      {
+        "rc": [
+          5,
+          24
+        ],
+        "sit": [
+          "Windows",
+          "awake",
+          "uptime"
+        ],
+        "sti1": [
+          "displayed",
+          "display",
+          "screen"
+        ],
+        "sti2": [
+          "keyboard",
+          "Keyboard",
+          "keyboards"
+        ]
+      },
+      {
+        "rc": [
+          15,
+          23
+        ],
+        "sit": [
+          "macOS",
+          "Apple",
+          "MacOS"
+        ],
+        "sti1": [
+          "displaying",
+          "display",
+          "screen"
+        ],
+        "sti2": [
+          "keys",
+          "keyboard",
+          "Keyboard"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          1,
+          9
+        ],
+        "toks": [
+          "displayed",
+          "\u663e\u793a",
+          "display"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          23
+        ],
+        "toks": [
+          "MacBook",
+          "Apple",
+          "intosh"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          13,
+          9
+        ],
+        "toks": [
+          "\u952e\u76d8",
+          "keyboard",
+          "keys"
+        ]
+      }
+    ],
+    "steered": 0.4048
+  },
+  {
+    "file": "COCO_val2014_000000253665.jpg",
+    "A": "laptop",
+    "B": "couch",
+    "q1": "What does the laptop look like?",
+    "q2": "What does the couch look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 3,
+    "hits": [
+      {
+        "rc": [
+          2,
+          24
+        ],
+        "sit": [
+          "sunlight",
+          "daylight",
+          "daytime"
+        ],
+        "sti1": [
+          "laptop",
+          "computers",
+          "MacBook"
+        ],
+        "sti2": [
+          "couch",
+          "seating",
+          "sofa"
+        ]
+      },
+      {
+        "rc": [
+          4,
+          4
+        ],
+        "sit": [
+          "favorite",
+          "favourite",
+          "favorite"
+        ],
+        "sti1": [
+          "laptop",
+          "portable",
+          "laptops"
+        ],
+        "sti2": [
+          "couch",
+          "sofa",
+          "seating"
+        ]
+      },
+      {
+        "rc": [
+          11,
+          23
+        ],
+        "sit": [
+          "humans",
+          "human",
+          "modern"
+        ],
+        "sti1": [
+          "screen",
+          "screens",
+          "browser"
+        ],
+        "sti2": [
+          "upholstery",
+          "color",
+          "Color"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          9,
+          25
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "computers",
+          "computer"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          16,
+          7
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "\u5ea7\u6905"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          10,
+          15
+        ],
+        "toks": [
+          "whisk",
+          "inux",
+          "agues"
+        ]
+      }
+    ],
+    "steered": 0.4337
+  },
+  {
+    "file": "COCO_val2014_000000088436.jpg",
+    "A": "chair",
+    "B": "laptop",
+    "q1": "What does the chair look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 3,
+    "hits": [
+      {
+        "rc": [
+          11,
+          25
+        ],
+        "sit": [
+          "discussion",
+          "discussions",
+          "intense"
+        ],
+        "sti1": [
+          "chairs",
+          "chair",
+          "seats"
+        ],
+        "sti2": [
+          "laptops",
+          "laptop",
+          "MacBook"
+        ]
+      },
+      {
+        "rc": [
+          13,
+          23
+        ],
+        "sit": [
+          "tech",
+          "developers",
+          "technical"
+        ],
+        "sti1": [
+          "chairs",
+          "chair",
+          "Chairs"
+        ],
+        "sti2": [
+          "laptops",
+          "aptops",
+          "computers"
+        ]
+      },
+      {
+        "rc": [
+          20,
+          19
+        ],
+        "sit": [
+          "four",
+          "four",
+          "FOUR"
+        ],
+        "sti1": [
+          "seat",
+          "chair",
+          "seats"
+        ],
+        "sti2": [
+          "keyboard",
+          "screen",
+          "laptop"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          6,
+          21
+        ],
+        "toks": [
+          "shirts",
+          "shirt",
+          "\u886b"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "ergonomic"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          19,
+          23
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "laptops",
+          "laptop"
+        ]
+      }
+    ],
+    "steered": 0.3673
+  },
+  {
+    "file": "COCO_val2014_000000458549.jpg",
+    "A": "couch",
+    "B": "dining table",
+    "q1": "What does the couch look like?",
+    "q2": "What does the table look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 3,
+    "hits": [
+      {
+        "rc": [
+          3,
+          25
+        ],
+        "sit": [
+          "rhet",
+          "Amateur",
+          "Okay"
+        ],
+        "sti1": [
+          "couch",
+          "sofa",
+          "chairs"
+        ],
+        "sti2": [
+          "table",
+          "tableName",
+          "tables"
+        ]
+      },
+      {
+        "rc": [
+          11,
+          5
+        ],
+        "sit": [
+          "occupants",
+          "inhabitants",
+          "occup"
+        ],
+        "sti1": [
+          "uphol",
+          "cushions",
+          "seating"
+        ],
+        "sti2": [
+          "table",
+          "tables",
+          "tableName"
+        ]
+      },
+      {
+        "rc": [
+          20,
+          1
+        ],
+        "sit": [
+          "children",
+          "person",
+          "two"
+        ],
+        "sti1": [
+          "couch",
+          "sofa",
+          "seating"
+        ],
+        "sti2": [
+          "table",
+          "tableName",
+          "tables"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          12,
+          6
+        ],
+        "toks": [
+          "cushions",
+          "bedding",
+          "cushion"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          12,
+          13
+        ],
+        "toks": [
+          "table",
+          "\u4e2d\u592e",
+          "central"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          11
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      }
+    ],
+    "steered": 0.3588
+  },
+  {
+    "file": "COCO_val2014_000000087567.jpg",
+    "A": "oven",
+    "B": "potted plant",
+    "q1": "What does the oven look like?",
+    "q2": "What does the plant look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 3,
+    "hits": [
+      {
+        "rc": [
+          2,
+          23
+        ],
+        "sit": [
+          "cooking",
+          "Cooking",
+          "meal"
+        ],
+        "sti1": [
+          "appliance",
+          "cooking",
+          "oven"
+        ],
+        "sti2": [
+          "plant",
+          "plants",
+          "named"
+        ]
+      },
+      {
+        "rc": [
+          5,
+          4
+        ],
+        "sit": [
+          "safety",
+          "Safety",
+          "Safety"
+        ],
+        "sti1": [
+          "appliance",
+          "visible",
+          "installed"
+        ],
+        "sti2": [
+          "foliage",
+          "leaf",
+          "leaves"
+        ]
+      },
+      {
+        "rc": [
+          16,
+          4
+        ],
+        "sit": [
+          "reference",
+          "inspiration",
+          "referencing"
+        ],
+        "sti1": [
+          "appliance",
+          "lectric",
+          "lando"
+        ],
+        "sti2": [
+          "plants",
+          "Pot",
+          "iful"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "oven",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "stove",
+          "\u7089",
+          "burner"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          2,
+          20
+        ],
+        "toks": [
+          "\u4e00\u9875",
+          "pages",
+          "page"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          3,
+          26
+        ],
+        "toks": [
+          "\u690d\u7269",
+          "plants",
+          "plant"
+        ]
+      }
+    ],
+    "steered": 0.3274
+  },
+  {
+    "file": "COCO_val2014_000000069224.jpg",
+    "A": "dining table",
+    "B": "chair",
+    "q1": "What does the table look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 3,
+    "hits": [
+      {
+        "rc": [
+          6,
+          27
+        ],
+        "sit": [
+          "expression",
+          "expression",
+          "mouth"
+        ],
+        "sti1": [
+          "tabletop",
+          "table",
+          "TableRow"
+        ],
+        "sti2": [
+          "chairs",
+          "chair",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          9,
+          22
+        ],
+        "sit": [
+          "conversation",
+          "casual",
+          "dining"
+        ],
+        "sti1": [
+          "dining",
+          "meal",
+          "conversation"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "seating"
+        ]
+      },
+      {
+        "rc": [
+          18,
+          1
+        ],
+        "sit": [
+          "meal",
+          "meals",
+          "breakfast"
+        ],
+        "sti1": [
+          "dining",
+          "meal",
+          "eating"
+        ],
+        "sti2": [
+          "seated",
+          "seating",
+          "sit"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          14,
+          8
+        ],
+        "toks": [
+          "woman",
+          "foreground",
+          "\u5973\u5b50"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          20,
+          23
+        ],
+        "toks": [
+          "tabletop",
+          "reb",
+          "exas"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u51f3"
+        ]
+      }
+    ],
+    "steered": 0.3895
+  },
+  {
+    "file": "COCO_val2014_000000440455.jpg",
+    "A": "tv",
+    "B": "dog",
+    "q1": "What does the television look like?",
+    "q2": "What does the dog look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 3,
+    "hits": [
+      {
+        "rc": [
+          2,
+          26
+        ],
+        "sit": [
+          "dogs",
+          "canine",
+          "companion"
+        ],
+        "sti1": [
+          "television",
+          "TVs",
+          "televis"
+        ],
+        "sti2": [
+          "breeds",
+          "breed",
+          "dogs"
+        ]
+      },
+      {
+        "rc": [
+          3,
+          27
+        ],
+        "sit": [
+          "paw",
+          "leash",
+          "licking"
+        ],
+        "sti1": [
+          "televis",
+          "television",
+          "TVs"
+        ],
+        "sti2": [
+          "breed",
+          "breeds",
+          "dogs"
+        ]
+      },
+      {
+        "rc": [
+          9,
+          2
+        ],
+        "sit": [
+          "work",
+          "work",
+          "Work"
+        ],
+        "sti1": [
+          "television",
+          "TVs",
+          "televis"
+        ],
+        "sti2": [
+          "breed",
+          "characteristics",
+          "breeds"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          7
+        ],
+        "toks": [
+          "casually",
+          "shirt",
+          "Shirt"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          11,
+          3
+        ],
+        "toks": [
+          "-screen",
+          "Caucus",
+          "screen"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          10,
+          18
+        ],
+        "toks": [
+          "retrie",
+          "breed",
+          "rador"
+        ]
+      }
+    ],
+    "steered": 0.375
+  },
+  {
+    "file": "COCO_val2014_000000406534.jpg",
+    "A": "person",
+    "B": "potted plant",
+    "q1": "What does the person look like?",
+    "q2": "What does the plant look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 3,
+    "hits": [
+      {
+        "rc": [
+          1,
+          26
+        ],
+        "sit": [
+          "inferred",
+          "interpreting",
+          "interpret"
+        ],
+        "sti1": [
+          "Personen",
+          "individuals",
+          "persons"
+        ],
+        "sti2": [
+          "plants",
+          "Seeds",
+          "seeds"
+        ]
+      },
+      {
+        "rc": [
+          6,
+          10
+        ],
+        "sit": [
+          "explain",
+          "explained",
+          "fascinating"
+        ],
+        "sti1": [
+          "person",
+          "individuals",
+          "men"
+        ],
+        "sti2": [
+          "plants",
+          "growing",
+          "plant"
+        ]
+      },
+      {
+        "rc": [
+          8,
+          9
+        ],
+        "sit": [
+          "attendees",
+          "events",
+          "happening"
+        ],
+        "sti1": [
+          "person",
+          "persons",
+          "individuals"
+        ],
+        "sti2": [
+          "plants",
+          "plant",
+          "Plants"
+        ]
+      }
+    ],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          13,
+          8
+        ],
+        "toks": [
+          "hands",
+          "\u53cc\u624b",
+          "Hands"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          10,
+          5
+        ],
+        "toks": [
+          "displayed",
+          "\u663e\u793a\u5c4f",
+          "screen"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          4,
+          15
+        ],
+        "toks": [
+          "\u690d\u7269",
+          "plants",
+          "plant"
+        ]
+      }
+    ],
+    "steered": 0.4821
+  },
+  {
+    "file": "COCO_val2014_000000068198.jpg",
+    "A": "bed",
+    "B": "bicycle",
+    "q1": "What does the bed look like?",
+    "q2": "What does the bicycle look like?",
+    "grid": [
+      19,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          2,
+          12
+        ],
+        "sit": [
+          "curtains",
+          "windows",
+          "curtain"
+        ],
+        "sti1": [
+          "bed",
+          "mattress",
+          "frame"
+        ],
+        "sti2": [
+          "wheels",
+          "bike",
+          "pedals"
+        ]
+      },
+      {
+        "rc": [
+          17,
+          6
+        ],
+        "sit": [
+          "draped",
+          "towels",
+          "blanket"
+        ],
+        "sti1": [
+          "blankets",
+          "blanket",
+          "quilt"
+        ],
+        "sti2": [
+          "handle",
+          "handles",
+          "pedals"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          8,
+          13
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          10,
+          8
+        ],
+        "toks": [
+          "\u6bef",
+          "blanket",
+          "blankets"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          14,
+          23
+        ],
+        "toks": [
+          "spokes",
+          "rims",
+          "wheels"
+        ]
+      }
+    ],
+    "steered": 0.3929
+  },
+  {
+    "file": "COCO_val2014_000000431495.jpg",
+    "A": "person",
+    "B": "dining table",
+    "q1": "What does the person look like?",
+    "q2": "What does the table look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          4,
+          26
+        ],
+        "sit": [
+          "pairing",
+          "wine",
+          "paired"
+        ],
+        "sti1": [
+          "person",
+          "seated",
+          "persons"
+        ],
+        "sti2": [
+          "table",
+          "tables",
+          "tableName"
+        ]
+      },
+      {
+        "rc": [
+          19,
+          3
+        ],
+        "sit": [
+          "cork",
+          "closures",
+          "Cork"
+        ],
+        "sti1": [
+          "wearing",
+          "dressed",
+          "partially"
+        ],
+        "sti2": [
+          "table",
+          "tables",
+          "tableName"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "bottle",
+        "rc": [
+          5,
+          10
+        ],
+        "toks": [
+          "glass",
+          "bottles",
+          "bottle"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          1
+        ],
+        "toks": [
+          "seated",
+          "person",
+          "Personen"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          4,
+          22
+        ],
+        "toks": [
+          "tabletop",
+          "tables",
+          "TableView"
+        ]
+      }
+    ],
+    "steered": 0.3673
+  },
+  {
+    "file": "COCO_val2014_000000450391.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          1,
+          13
+        ],
+        "sit": [
+          "work",
+          "productivity",
+          "work"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "TVs"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboards",
+          "Keyboard"
+        ]
+      },
+      {
+        "rc": [
+          18,
+          1
+        ],
+        "sit": [
+          "identify",
+          "interesting",
+          "fascinating"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "Television"
+        ],
+        "sti2": [
+          "keyboard",
+          "Keyboard",
+          "uish"
+        ]
+      }
+    ],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          23
+        ],
+        "toks": [
+          "iams",
+          "ipsis",
+          "broadcast"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          12
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          7,
+          8
+        ],
+        "toks": [
+          "stainless",
+          "bottle",
+          "Stainless"
+        ]
+      }
+    ],
+    "steered": 0.3316
+  },
+  {
+    "file": "COCO_val2014_000000353300.jpg",
+    "A": "keyboard",
+    "B": "book",
+    "q1": "What does the keyboard look like?",
+    "q2": "What does the book look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          15,
+          23
+        ],
+        "sit": [
+          "procrast",
+          "programmers",
+          "coder"
+        ],
+        "sti1": [
+          "keyboard",
+          "keyboards",
+          "Keyboard"
+        ],
+        "sti2": [
+          "book",
+          "books",
+          "book"
+        ]
+      },
+      {
+        "rc": [
+          16,
+          4
+        ],
+        "sit": [
+          "overturned",
+          "resting",
+          "undo"
+        ],
+        "sti1": [
+          "keyboard",
+          "standard",
+          "Keyboard"
+        ],
+        "sti2": [
+          "book",
+          "paperback",
+          "book"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "keyboard",
+        "rc": [
+          11,
+          19
+        ],
+        "toks": [
+          "keys",
+          "numeric",
+          "keys"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          5,
+          2
+        ],
+        "toks": [
+          "\u5f88\u957f\u65f6\u95f4",
+          "pageTitle",
+          "ICS"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          1,
+          14
+        ],
+        "toks": [
+          "laptop",
+          "\u7535\u8111",
+          "laptops"
+        ]
+      }
+    ],
+    "steered": 0.4544
+  },
+  {
+    "file": "COCO_val2014_000000516248.jpg",
+    "A": "tv",
+    "B": "person",
+    "q1": "What does the television look like?",
+    "q2": "What does the person look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          8,
+          2
+        ],
+        "sit": [
+          "tasks",
+          "computer",
+          "work"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "TVs"
+        ],
+        "sti2": [
+          "person",
+          "person",
+          "personne"
+        ]
+      },
+      {
+        "rc": [
+          13,
+          24
+        ],
+        "sit": [
+          "another",
+          "another",
+          "behind"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "Television"
+        ],
+        "sti2": [
+          "person",
+          "whose",
+          "entire"
+        ]
+      }
+    ],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          11,
+          4
+        ],
+        "toks": [
+          "acie",
+          "screen",
+          "\u266a"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          12,
+          26
+        ],
+        "toks": [
+          "keyboard",
+          "undra",
+          "presses"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          8,
+          27
+        ],
+        "toks": [
+          "\u89c6\u89d2",
+          "focus",
+          "perspective"
+        ]
+      }
+    ],
+    "steered": 0.4541
+  },
+  {
+    "file": "COCO_val2014_000000562507.jpg",
+    "A": "pizza",
+    "B": "chair",
+    "q1": "What does the pizza look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          5,
+          24
+        ],
+        "sit": [
+          "MenuItem",
+          "staple",
+          "menuItem"
+        ],
+        "sti1": [
+          "Pizza",
+          "pizza",
+          "Pizza"
+        ],
+        "sti2": [
+          "seating",
+          "chair",
+          "seat"
+        ]
+      },
+      {
+        "rc": [
+          20,
+          21
+        ],
+        "sit": [
+          "Chicago",
+          "Chicago",
+          "layers"
+        ],
+        "sti1": [
+          "toppings",
+          "Pizza",
+          "Pizza"
+        ],
+        "sti2": [
+          "seating",
+          "chairs",
+          "chair"
+        ]
+      }
+    ],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          23
+        ],
+        "toks": [
+          "thick",
+          "pizza",
+          "Italian"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          1,
+          22
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "seat"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          4,
+          16
+        ],
+        "toks": [
+          "tables",
+          "\u8bf4\u5230\u8fd9\u91cc",
+          "tabletop"
+        ]
+      }
+    ],
+    "steered": 0.3861
+  },
+  {
+    "file": "COCO_val2014_000000063040.jpg",
+    "A": "tv",
+    "B": "chair",
+    "q1": "What does the television look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          7,
+          15
+        ],
+        "sit": [
+          "unique",
+          "special",
+          "unusual"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "TVs"
+        ],
+        "sti2": [
+          "chairs",
+          "chair",
+          "Chair"
+        ]
+      },
+      {
+        "rc": [
+          8,
+          17
+        ],
+        "sit": [
+          "storytelling",
+          "story",
+          "stories"
+        ],
+        "sti1": [
+          "television",
+          "televis",
+          "DTV"
+        ],
+        "sti2": [
+          "chair",
+          "chairs",
+          "seat"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "dog",
+        "rc": [
+          14,
+          12
+        ],
+        "toks": [
+          "\u72ac",
+          "breed",
+          "dogs"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          0,
+          10
+        ],
+        "toks": [
+          "\u5728\u5f53\u5730",
+          "chan",
+          "oso"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          26
+        ],
+        "toks": [
+          "\u51f3",
+          "chairs",
+          "desks"
+        ]
+      }
+    ],
+    "steered": 0.2925
+  },
+  {
+    "file": "COCO_val2014_000000371749.jpg",
+    "A": "person",
+    "B": "couch",
+    "q1": "What does the person look like?",
+    "q2": "What does the couch look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          2,
+          26
+        ],
+        "sit": [
+          "Nintendo",
+          "Wii",
+          "Xbox"
+        ],
+        "sti1": [
+          "person",
+          "woman",
+          "unnamed"
+        ],
+        "sti2": [
+          "couch",
+          "sofa",
+          "furniture"
+        ]
+      },
+      {
+        "rc": [
+          14,
+          7
+        ],
+        "sit": [
+          "competitive",
+          "competition",
+          "gameplay"
+        ],
+        "sti1": [
+          "person",
+          "woman",
+          "one"
+        ],
+        "sti2": [
+          "uphol",
+          "sleek",
+          "seemingly"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          5,
+          23
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "sleeves"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          17,
+          11
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "chairs"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          3,
+          10
+        ],
+        "toks": [
+          "retrie",
+          "rador",
+          "puppies"
+        ]
+      }
+    ],
+    "steered": 0.4337
+  },
+  {
+    "file": "COCO_val2014_000000045746.jpg",
+    "A": "refrigerator",
+    "B": "dining table",
+    "q1": "What does the refrigerator look like?",
+    "q2": "What does the table look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 2,
+    "hits": [
+      {
+        "rc": [
+          2,
+          27
+        ],
+        "sit": [
+          "cooking",
+          "culinary",
+          "Cooking"
+        ],
+        "sti1": [
+          "appliance",
+          "placement",
+          "appliances"
+        ],
+        "sti2": [
+          "table",
+          "tables",
+          "tableName"
+        ]
+      },
+      {
+        "rc": [
+          6,
+          26
+        ],
+        "sit": [
+          "cooking",
+          "heating",
+          "Heating"
+        ],
+        "sti1": [
+          "freezer",
+          "refrigerator",
+          "refriger"
+        ],
+        "sti2": [
+          "tableName",
+          "tables",
+          "table"
+        ]
+      }
+    ],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          5,
+          20
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "freezer"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          20,
+          19
+        ],
+        "toks": [
+          "tabletop",
+          "haul",
+          "reb"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          10,
+          9
+        ],
+        "toks": [
+          "cooking",
+          "heating",
+          "stove"
+        ]
+      }
+    ],
+    "steered": 0.4099
+  },
+  {
+    "file": "COCO_val2014_000000216944.jpg",
+    "A": "person",
+    "B": "cat",
+    "q1": "What does the person look like?",
+    "q2": "What does the cat look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          12,
+          14
+        ],
+        "sit": [
+          "beside",
+          "sleeping",
+          "asleep"
+        ],
+        "sti1": [
+          "girl",
+          "Girl",
+          "asleep"
+        ],
+        "sti2": [
+          "sleeping",
+          "asleep",
+          "beside"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          9,
+          24
+        ],
+        "toks": [
+          "hands",
+          "fists",
+          "\u62f3\u5934"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "\u6795\u5934",
+          "pillow",
+          "pillows"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          14,
+          3
+        ],
+        "toks": [
+          "sleep",
+          "\u7761",
+          "asleep"
+        ]
+      }
+    ],
+    "steered": 0.4643
+  },
+  {
+    "file": "COCO_val2014_000000186788.jpg",
+    "A": "person",
+    "B": "skateboard",
+    "q1": "What does the person look like?",
+    "q2": "What does the skateboard look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          16,
+          4
+        ],
+        "sit": [
+          "colored",
+          "unique",
+          "colorful"
+        ],
+        "sti1": [
+          "wears",
+          "wearing",
+          "atleast"
+        ],
+        "sti2": [
+          "Skate",
+          "skateboard",
+          "fiberglass"
+        ]
+      }
+    ],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          2,
+          10
+        ],
+        "toks": [
+          "\u89c6\u89d2",
+          "perspective",
+          "Perspective"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          5,
+          20
+        ],
+        "toks": [
+          "\u8f7f\u8f66",
+          "SUV",
+          "sedan"
+        ]
+      },
+      {
+        "name": "skateboard",
+        "rc": [
+          14,
+          8
+        ],
+        "toks": [
+          "Skate",
+          "skate",
+          "board"
+        ]
+      }
+    ],
+    "steered": 0.373
+  },
+  {
+    "file": "COCO_val2014_000000374782.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          5,
+          5
+        ],
+        "sit": [
+          "remotely",
+          "video",
+          "remote"
+        ],
+        "sti1": [
+          "displayed",
+          "displaying",
+          "display"
+        ],
+        "sti2": [
+          "keys",
+          "keys",
+          "alphanumeric"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          5,
+          27
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "preview"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          19
+        ],
+        "toks": [
+          "MacBook",
+          "intosh",
+          "portable"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          12
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ],
+    "steered": 0.3889
+  },
+  {
+    "file": "COCO_val2014_000000516503.jpg",
+    "A": "person",
+    "B": "chair",
+    "q1": "What does the person look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          20,
+          16
+        ],
+        "sit": [
+          "gameplay",
+          "couple",
+          "others"
+        ],
+        "sti1": [
+          "woman",
+          "women",
+          "female"
+        ],
+        "sti2": [
+          "chairs",
+          "chair",
+          "another"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          6
+        ],
+        "toks": [
+          "woman",
+          "partially",
+          "\u5750\u5728"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          15,
+          21
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          15,
+          2
+        ],
+        "toks": [
+          "pillows",
+          "cushions",
+          "\u6bef"
+        ]
+      }
+    ],
+    "steered": 0.3997
+  },
+  {
+    "file": "COCO_val2014_000000499842.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      23,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          1,
+          4
+        ],
+        "sit": [
+          "computers",
+          "computer",
+          "setup"
+        ],
+        "sti1": [
+          "screen",
+          "CRT",
+          "televis"
+        ],
+        "sti2": [
+          "keyboard",
+          "keyboard",
+          "Keyboard"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          6
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "both"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          20,
+          18
+        ],
+        "toks": [
+          "ergonomic",
+          "keyboard",
+          "shaped"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          9,
+          20
+        ],
+        "toks": [
+          "laptop",
+          "Laptop",
+          "laptops"
+        ]
+      }
+    ],
+    "steered": 0.4363
+  },
+  {
+    "file": "COCO_val2014_000000523454.jpg",
+    "A": "potted plant",
+    "B": "car",
+    "q1": "What does the plant look like?",
+    "q2": "What does the car look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          20,
+          20
+        ],
+        "sit": [
+          "deterioration",
+          "degradation",
+          "deterior"
+        ],
+        "sti1": [
+          "leaf",
+          "leaves",
+          "distinctive"
+        ],
+        "sti2": [
+          "sedan",
+          "sleek",
+          "SUV"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "bench",
+        "rc": [
+          18,
+          19
+        ],
+        "toks": [
+          "cars",
+          "parked",
+          "vehicles"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          17,
+          4
+        ],
+        "toks": [
+          "\u690d\u7269",
+          "plants",
+          "plant"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "\u8f7f\u8f66",
+          "carro",
+          "sedan"
+        ]
+      }
+    ],
+    "steered": 0.3963
+  },
+  {
+    "file": "COCO_val2014_000000263323.jpg",
+    "A": "person",
+    "B": "tv",
+    "q1": "What does the person look like?",
+    "q2": "What does the television look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          5,
+          26
+        ],
+        "sit": [
+          "enjoying",
+          "entertainment",
+          "enjoyment"
+        ],
+        "sti1": [
+          "person",
+          "seated",
+          "sitting"
+        ],
+        "sti2": [
+          "television",
+          "televis",
+          "TVs"
+        ]
+      }
+    ],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          23
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          5
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "creen",
+          "screen"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          13
+        ],
+        "toks": [
+          "\u51f3",
+          "chair",
+          "chairs"
+        ]
+      }
+    ],
+    "steered": 0.3707
+  },
+  {
+    "file": "COCO_val2014_000000512276.jpg",
+    "A": "couch",
+    "B": "tv",
+    "q1": "What does the couch look like?",
+    "q2": "What does the television look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 1,
+    "hits": [
+      {
+        "rc": [
+          17,
+          19
+        ],
+        "sit": [
+          "brand",
+          "brands",
+          "manufacturer"
+        ],
+        "sti1": [
+          "uphol",
+          "chair",
+          "stoff"
+        ],
+        "sti2": [
+          "screen",
+          "inactive",
+          "screens"
+        ]
+      }
+    ],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          13,
+          5
+        ],
+        "toks": [
+          "cushions",
+          "\u6c99\u53d1\u4e0a",
+          "upholstery"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          13
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          21
+        ],
+        "toks": [
+          "creen",
+          "\u96fb\u8996",
+          "screens"
+        ]
+      }
+    ],
+    "steered": 0.3591
+  },
+  {
+    "file": "COCO_val2014_000000473237.jpg",
+    "A": "person",
+    "B": "chair",
+    "q1": "What does the person look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "n_perfect": 0,
+    "hits": [],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "fingers",
+          "\u624b\u6307",
+          "hands"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          10
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "Italian"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          22
+        ],
+        "toks": [
+          "chair",
+          "\u6905\u5b50",
+          "chairs"
+        ]
+      }
+    ],
+    "steered": 0.4306
+  },
+  {
+    "file": "COCO_val2014_000000490964.jpg",
+    "A": "book",
+    "B": "bicycle",
+    "q1": "What does the book look like?",
+    "q2": "What does the bicycle look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 0,
+    "hits": [],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "sandwich",
+        "rc": [
+          16,
+          19
+        ],
+        "toks": [
+          "sand",
+          "pter",
+          "Industries"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "-colored",
+          "pages",
+          "getColor"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          4,
+          21
+        ],
+        "toks": [
+          "wheels",
+          "wheel",
+          "Wheels"
+        ]
+      }
+    ],
+    "steered": 0.3588
+  },
+  {
+    "file": "COCO_val2014_000000142386.jpg",
+    "A": "person",
+    "B": "chair",
+    "q1": "What does the person look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 0,
+    "hits": [],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          11,
+          22
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          7,
+          13
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886b"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          19,
+          15
+        ],
+        "toks": [
+          "ened",
+          "chair",
+          "chairs"
+        ]
+      }
+    ],
+    "steered": 0.2721
+  },
+  {
+    "file": "COCO_val2014_000000368510.jpg",
+    "A": "laptop",
+    "B": "book",
+    "q1": "What does the laptop look like?",
+    "q2": "What does the book look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 0,
+    "hits": [],
+    "localized": 3,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          13,
+          23
+        ],
+        "toks": [
+          "chair",
+          "acie",
+          "chair"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          13
+        ],
+        "toks": [
+          "keyboard",
+          "Challenger",
+          "ACA"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          19,
+          9
+        ],
+        "toks": [
+          "\u4e66\u7c4d",
+          "books",
+          "magazines"
+        ]
+      }
+    ],
+    "steered": 0.2874
+  },
+  {
+    "file": "COCO_val2014_000000514504.jpg",
+    "A": "chair",
+    "B": "tv",
+    "q1": "What does the chair look like?",
+    "q2": "What does the television look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 0,
+    "hits": [],
+    "localized": 1,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          6
+        ],
+        "toks": [
+          "cushion",
+          "padding",
+          "seat"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          5,
+          13
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "displayed"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          6,
+          6
+        ],
+        "toks": [
+          "-screen",
+          "screen",
+          "Snackbar"
+        ]
+      }
+    ],
+    "steered": 0.3061
+  },
+  {
+    "file": "COCO_val2014_000000211825.jpg",
+    "A": "person",
+    "B": "oven",
+    "q1": "What does the person look like?",
+    "q2": "What does the oven look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "n_perfect": 0,
+    "hits": [],
+    "localized": 2,
+    "n_anchors": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          9
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          4,
+          26
+        ],
+        "toks": [
+          "\u53a8\u623f",
+          "appliance",
+          "countert"
+        ]
+      },
+      {
+        "name": "cake",
+        "rc": [
+          13,
+          13
+        ],
+        "toks": [
+          "cake",
+          "\u5bf9\u5979",
+          "ght"
+        ]
+      }
+    ],
+    "steered": 0.4235
+  }
+]

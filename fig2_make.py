@@ -25,7 +25,7 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
+from matplotlib.patches import Rectangle, ConnectionPatch
 from matplotlib import cm, colors as mcolors
 from PIL import Image
 
@@ -75,6 +75,17 @@ def main():
                     help="translucent pale shading over the COLOUR photo, as on the site")
     ap.add_argument("--alpha", type=float, default=None,
                     help="cell fill opacity (default 0.44, or 0.45 with --wash)")
+    ap.add_argument("--extra", default="",
+                    help="extra words to ring alongside the question's own words")
+    ap.add_argument("--cell-fontsize", type=float, default=4.0, dest="cell_fontsize",
+                    help="font size inside each patch cell")
+    ap.add_argument("--cell-chars", type=int, default=8, dest="cell_chars",
+                    help="max characters shown per cell before truncation")
+    ap.add_argument("--link", default="",
+                    help='cells to trace from SIT to STI, e.g. "3,1;2,3;1,5"; each is '
+                         'boxed in the SIT panel with a dotted arrow to the SAME patch '
+                         'in the STI panel, showing what that one patch decoded to before '
+                         'and after the question moved in front')
     ap.add_argument("--mm", default=None, help=argparse.SUPPRESS)
     args = ap.parse_args()
 
@@ -100,6 +111,10 @@ def render(mm, hits, group, args):
     # them is not evidence that the question steered perception
     DROP = VAGUE | STOP | {"visible", "present", "depicted", "shown"}
     targets = [t for t in rec["targets"] if t not in DROP]
+    # words worth ringing that the question does not contain (e.g. "ahead", which
+    # reports the spatial relation the question is about without naming it)
+    extra = [w.strip() for w in args.extra.split(",") if w.strip()]
+    ring_on = targets + extra
 
     pil = Image.open(os.path.join(NB_ROOT, rec["image_file"])).convert("RGB")
     s = LOW_MAX / max(pil.size)
@@ -140,8 +155,10 @@ def render(mm, hits, group, args):
     # legible text colour flips between them
     dark_at_high = args.cmap.lower().startswith("blues")
 
+    panel_ax = {}
     for k, o in enumerate(ORDERS):
         ax = fig.add_subplot(gs[0, k + 1])
+        panel_ax[o] = ax
         crop = disp.crop((c0 * cell, r0 * cell, c1 * cell, r1 * cell))
         if dark_at_high and not args.wash:
             # a Blues field over a colour photo reads teal where the photo is green;
@@ -153,7 +170,7 @@ def render(mm, hits, group, args):
             for c in range(c0, c1):
                 i = r * gw + c
                 w, p = W[o][i], float(P[o][i])
-                hit = any(matches(w, t) for t in targets)
+                hit = any(matches(w, t) for t in ring_on)
                 if args.wash:
                     # translucent light-blue wash: compress the ramp into the pale
                     # half of Blues and stay see-through, so the colour photo reads
@@ -171,14 +188,38 @@ def render(mm, hits, group, args):
                                            lw=1.8 if hit else 0))
                     txt = ("white" if p > 0.55 else "black") if dark_at_high \
                         else ("white" if p < 0.55 else "black")
-                ax.text(c + 0.5, r + 0.5, w[:9], ha="center", va="center",
-                        fontsize=4.5, color=txt, zorder=4,
+                ax.text(c + 0.5, r + 0.5, w[:args.cell_chars],
+                        ha="center", va="center",
+                        fontsize=args.cell_fontsize, color=txt, zorder=4,
                         fontweight="bold" if hit else "normal")
         ax.set_xlim(c0, c1); ax.set_ylim(r1, r0); ax.axis("off")
         mark = "✓" if right else "✗"
         col = "#1b7a35" if right else "#c62828"
         ax.set_title(f"{TITLE[o]}\n→ “{A[o]}” {mark}", fontsize=8.4, pad=4,
                      color=col, fontweight="bold", linespacing=1.35)
+
+    # ── trace individual patches from question-last to question-first
+    if args.link:
+        LINK = "#00344d"
+        cells_ = []
+        for spec in args.link.split(";"):
+            spec = spec.strip()
+            if spec:
+                r, c = [int(v) for v in spec.split(",")]
+                cells_.append((r, c))
+        # deeper rows bow further, so the arcs nest instead of crossing each other
+        cells_.sort(key=lambda rc: rc[0])
+        a, b = panel_ax["SIT"], panel_ax["STI"]
+        for k_, (r, c) in enumerate(cells_):
+            # box only the source cell: the destination already carries its red ring,
+            # and a second outline there would compete with it
+            a.add_patch(Rectangle((c, r), 1, 1, fill=False, ec=LINK, lw=1.6, zorder=5))
+            fig.add_artist(ConnectionPatch(
+                xyA=(c + 1.0, r + 0.5), coordsA=a.transData,
+                xyB=(c + 0.0, r + 0.5), coordsB=b.transData,
+                arrowstyle="-|>", mutation_scale=8, linewidth=1.1,
+                linestyle=(0, (2.2, 1.8)), color=LINK, zorder=11,
+                connectionstyle=f"arc3,rad={-(0.20 + 0.14 * k_):.2f}"))
 
     cax = fig.add_subplot(gs[0, 4])
     fig.colorbar(sm, cax=cax)
@@ -189,8 +230,10 @@ def render(mm, hits, group, args):
              f"Q: “{rec['question']}”   (ground truth: {rec['gt']})",
              ha="center", va="top", fontsize=9.4, fontweight="bold")
     fig.text(0.5, 0.925,
-             f"ringed cells decode to a word from the question "
-             f"({', '.join(targets)});  Qwen3-VL-8B, layer {layer}",
+             (f"ringed cells decode to a word from the question "
+              f"({', '.join(targets)})"
+              + (f" or to “{', '.join(extra)}”" if extra else "")
+              + f";  Qwen3-VL-8B, layer {layer}"),
              ha="center", va="top", fontsize=6.6, color="#444444")
 
     out = args.out if not args.groups else f"{args.out}_g{group}"

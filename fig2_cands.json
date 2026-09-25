@@ -1,0 +1,10031 @@
+[
+  {
+    "key": [
+      129,
+      1,
+      1
+    ],
+    "question": "Is there no suds in the water?",
+    "gt": "Yes",
+    "image_file": "images/nb_129_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 2,
+    "content": [
+      "suds",
+      "water"
+    ]
+  },
+  {
+    "key": [
+      638,
+      1,
+      0
+    ],
+    "question": "Is the person walking?",
+    "gt": "No",
+    "image_file": "images/nb_638_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 2,
+    "content": [
+      "person",
+      "walking"
+    ]
+  },
+  {
+    "key": [
+      1700,
+      1,
+      0
+    ],
+    "question": "Is there an excavator with 'CAT' on it?",
+    "gt": "No",
+    "image_file": "images/nb_1700_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 2,
+    "content": [
+      "excavator",
+      "cat"
+    ]
+  },
+  {
+    "key": [
+      22,
+      0,
+      1
+    ],
+    "question": "Is the person running in the image?",
+    "gt": "No",
+    "image_file": "images/nb_22_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "person",
+      "running",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      36,
+      0,
+      0
+    ],
+    "question": "Is someone riding a bicycle?",
+    "gt": "Yes",
+    "image_file": "images/nb_36_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "someone",
+      "riding",
+      "bicycle"
+    ]
+  },
+  {
+    "key": [
+      96,
+      0,
+      1
+    ],
+    "question": "Is the moon visible in the sky?",
+    "gt": "No",
+    "image_file": "images/nb_96_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "moon",
+      "visible",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      229,
+      0,
+      0
+    ],
+    "question": "Is the dog chasing a person?",
+    "gt": "Yes",
+    "image_file": "images/nb_229_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "dog",
+      "chasing",
+      "person"
+    ]
+  },
+  {
+    "key": [
+      354,
+      0,
+      1
+    ],
+    "question": "Are the individuals depicted running?",
+    "gt": "No",
+    "image_file": "images/nb_354_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "individuals",
+      "depicted",
+      "running"
+    ]
+  },
+  {
+    "key": [
+      359,
+      1,
+      0
+    ],
+    "question": "Is there a vehicle being driven in the scene?",
+    "gt": "No",
+    "image_file": "images/nb_359_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "vehicle",
+      "driven",
+      "scene"
+    ]
+  },
+  {
+    "key": [
+      735,
+      1,
+      1
+    ],
+    "question": "Is the sky completely cloudless?",
+    "gt": "Yes",
+    "image_file": "images/nb_735_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "sky",
+      "completely",
+      "cloudless"
+    ]
+  },
+  {
+    "key": [
+      769,
+      1,
+      0
+    ],
+    "question": "Is there a child sitting on the grass?",
+    "gt": "No",
+    "image_file": "images/nb_769_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "child",
+      "sitting",
+      "grass"
+    ]
+  },
+  {
+    "key": [
+      776,
+      0,
+      0
+    ],
+    "question": "Is there a concrete fence in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_776_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "concrete",
+      "fence",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      884,
+      0,
+      0
+    ],
+    "question": "Is the work being conducted in a hallway?",
+    "gt": "Yes",
+    "image_file": "images/nb_884_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "work",
+      "conducted",
+      "hallway"
+    ]
+  },
+  {
+    "key": [
+      884,
+      1,
+      0
+    ],
+    "question": "Is the work being conducted in a hallway?",
+    "gt": "No",
+    "image_file": "images/nb_884_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "work",
+      "conducted",
+      "hallway"
+    ]
+  },
+  {
+    "key": [
+      936,
+      0,
+      1
+    ],
+    "question": "Are there four boys in the image?",
+    "gt": "No",
+    "image_file": "images/nb_936_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "four",
+      "boys",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      978,
+      0,
+      0
+    ],
+    "question": "Is the man performing on a ramp?",
+    "gt": "Yes",
+    "image_file": "images/nb_978_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "man",
+      "performing",
+      "ramp"
+    ]
+  },
+  {
+    "key": [
+      997,
+      1,
+      0
+    ],
+    "question": "Are there people using an iPad?",
+    "gt": "No",
+    "image_file": "images/nb_997_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "people",
+      "using",
+      "ipad"
+    ]
+  },
+  {
+    "key": [
+      1058,
+      1,
+      1
+    ],
+    "question": "Is the child intending to climb?",
+    "gt": "Yes",
+    "image_file": "images/nb_1058_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "child",
+      "intending",
+      "climb"
+    ]
+  },
+  {
+    "key": [
+      1188,
+      0,
+      0
+    ],
+    "question": "Are there four dogs in the scene?",
+    "gt": "Yes",
+    "image_file": "images/nb_1188_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "four",
+      "dogs",
+      "scene"
+    ]
+  },
+  {
+    "key": [
+      1231,
+      0,
+      1
+    ],
+    "question": "Is the girl entering the water?",
+    "gt": "No",
+    "image_file": "images/nb_1231_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "girl",
+      "entering",
+      "water"
+    ]
+  },
+  {
+    "key": [
+      1264,
+      1,
+      1
+    ],
+    "question": "Is the person wearing glasses?",
+    "gt": "Yes",
+    "image_file": "images/nb_1264_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "person",
+      "wearing",
+      "glasses"
+    ]
+  },
+  {
+    "key": [
+      1342,
+      1,
+      1
+    ],
+    "question": "Is the fan angled to the left?",
+    "gt": "Yes",
+    "image_file": "images/nb_1342_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "fan",
+      "angled",
+      "left"
+    ]
+  },
+  {
+    "key": [
+      1379,
+      1,
+      0
+    ],
+    "question": "Are there three individuals in the image?",
+    "gt": "No",
+    "image_file": "images/nb_1379_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "three",
+      "individuals",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1718,
+      1,
+      0
+    ],
+    "question": "Is there  a girl sitting alone?",
+    "gt": "No",
+    "image_file": "images/nb_1718_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "girl",
+      "sitting",
+      "alone"
+    ]
+  },
+  {
+    "key": [
+      1723,
+      1,
+      1
+    ],
+    "question": "Are the bicycles being carried by the cyclists?",
+    "gt": "Yes",
+    "image_file": "images/nb_1723_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "bicycles",
+      "carried",
+      "cyclists"
+    ]
+  },
+  {
+    "key": [
+      1803,
+      0,
+      0
+    ],
+    "question": "Is the individual crossing his hands?",
+    "gt": "Yes",
+    "image_file": "images/nb_1803_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "individual",
+      "crossing",
+      "hands"
+    ]
+  },
+  {
+    "key": [
+      1861,
+      1,
+      1
+    ],
+    "question": "Are there two adults in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1861_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 3,
+    "content": [
+      "two",
+      "adults",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1893,
+      1,
+      0
+    ],
+    "question": "Is there someone rowing in the watercraft?",
+    "gt": "No",
+    "image_file": "images/nb_1893_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 3,
+    "content": [
+      "someone",
+      "rowing",
+      "watercraft"
+    ]
+  },
+  {
+    "key": [
+      82,
+      1,
+      1
+    ],
+    "question": "Are there several large containers on the table?",
+    "gt": "Yes",
+    "image_file": "images/nb_82_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "several",
+      "large",
+      "containers",
+      "table"
+    ]
+  },
+  {
+    "key": [
+      84,
+      0,
+      1
+    ],
+    "question": "Is there a surfer sitting on the board in the image?",
+    "gt": "No",
+    "image_file": "images/nb_84_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "surfer",
+      "sitting",
+      "board",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      111,
+      1,
+      0
+    ],
+    "question": "Is there a shadow of a man on a wagon's wheel?",
+    "gt": "No",
+    "image_file": "images/nb_111_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "shadow",
+      "man",
+      "wagon",
+      "wheel"
+    ]
+  },
+  {
+    "key": [
+      120,
+      0,
+      0
+    ],
+    "question": "Is the man actively doing a measurement?",
+    "gt": "Yes",
+    "image_file": "images/nb_120_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "man",
+      "actively",
+      "doing",
+      "measurement"
+    ]
+  },
+  {
+    "key": [
+      140,
+      0,
+      0
+    ],
+    "question": "Are yellow bees visible in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_140_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "yellow",
+      "bees",
+      "visible",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      148,
+      1,
+      0
+    ],
+    "question": "Is someone in white wearing sunglasses?",
+    "gt": "No",
+    "image_file": "images/nb_148_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "someone",
+      "white",
+      "wearing",
+      "sunglasses"
+    ]
+  },
+  {
+    "key": [
+      149,
+      0,
+      1
+    ],
+    "question": "Does the poster only feature a woman?",
+    "gt": "No",
+    "image_file": "images/nb_149_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "poster",
+      "only",
+      "feature",
+      "woman"
+    ]
+  },
+  {
+    "key": [
+      150,
+      1,
+      0
+    ],
+    "question": "Is there a red plastic fence in the background?",
+    "gt": "No",
+    "image_file": "images/nb_150_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "red",
+      "plastic",
+      "fence",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      183,
+      1,
+      0
+    ],
+    "question": "Are there people standing close by the bench?",
+    "gt": "No",
+    "image_file": "images/nb_183_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "people",
+      "standing",
+      "close",
+      "bench"
+    ]
+  },
+  {
+    "key": [
+      188,
+      0,
+      0
+    ],
+    "question": "Is there a small waterfall in the center of the view?",
+    "gt": "Yes",
+    "image_file": "images/nb_188_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "small",
+      "waterfall",
+      "center",
+      "view"
+    ]
+  },
+  {
+    "key": [
+      311,
+      1,
+      1
+    ],
+    "question": "Is someone wearing sunglasses on their forehead?",
+    "gt": "Yes",
+    "image_file": "images/nb_311_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "someone",
+      "wearing",
+      "sunglasses",
+      "forehead"
+    ]
+  },
+  {
+    "key": [
+      318,
+      0,
+      1
+    ],
+    "question": "Are there red lights attached to columns?",
+    "gt": "No",
+    "image_file": "images/nb_318_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "red",
+      "lights",
+      "attached",
+      "columns"
+    ]
+  },
+  {
+    "key": [
+      338,
+      0,
+      1
+    ],
+    "question": "Is there no red SUV driving in the background?",
+    "gt": "No",
+    "image_file": "images/nb_338_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "red",
+      "suv",
+      "driving",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      338,
+      1,
+      1
+    ],
+    "question": "Is there no red SUV driving in the background?",
+    "gt": "Yes",
+    "image_file": "images/nb_338_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "red",
+      "suv",
+      "driving",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      439,
+      1,
+      0
+    ],
+    "question": "Is the jumper dressed in bright red?",
+    "gt": "No",
+    "image_file": "images/nb_439_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "jumper",
+      "dressed",
+      "bright",
+      "red"
+    ]
+  },
+  {
+    "key": [
+      465,
+      1,
+      0
+    ],
+    "question": "Is the cat sitting on a hardwood floor?",
+    "gt": "No",
+    "image_file": "images/nb_465_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "cat",
+      "sitting",
+      "hardwood",
+      "floor"
+    ]
+  },
+  {
+    "key": [
+      508,
+      0,
+      1
+    ],
+    "question": "Are there multiple children playing in the background?",
+    "gt": "No",
+    "image_file": "images/nb_508_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "multiple",
+      "children",
+      "playing",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      613,
+      1,
+      0
+    ],
+    "question": "Is the scene illuminated by a street lamp?",
+    "gt": "No",
+    "image_file": "images/nb_613_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "scene",
+      "illuminated",
+      "street",
+      "lamp"
+    ]
+  },
+  {
+    "key": [
+      637,
+      0,
+      0
+    ],
+    "question": "Is the dog being chased brown and white?",
+    "gt": "Yes",
+    "image_file": "images/nb_637_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "dog",
+      "chased",
+      "brown",
+      "white"
+    ]
+  },
+  {
+    "key": [
+      638,
+      0,
+      1
+    ],
+    "question": "Is the person stationary, possibly posing?",
+    "gt": "No",
+    "image_file": "images/nb_638_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "person",
+      "stationary",
+      "possibly",
+      "posing"
+    ]
+  },
+  {
+    "key": [
+      677,
+      0,
+      0
+    ],
+    "question": "Are there exactly five members in the band?",
+    "gt": "Yes",
+    "image_file": "images/nb_677_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "exactly",
+      "five",
+      "members",
+      "band"
+    ]
+  },
+  {
+    "key": [
+      679,
+      1,
+      0
+    ],
+    "question": "Is the activity a game with a specific target?",
+    "gt": "No",
+    "image_file": "images/nb_679_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "activity",
+      "game",
+      "specific",
+      "target"
+    ]
+  },
+  {
+    "key": [
+      686,
+      0,
+      1
+    ],
+    "question": "Are there men walking down the tracks?",
+    "gt": "No",
+    "image_file": "images/nb_686_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "men",
+      "walking",
+      "down",
+      "tracks"
+    ]
+  },
+  {
+    "key": [
+      717,
+      1,
+      0
+    ],
+    "question": "Are there several people sitting on a bench?",
+    "gt": "No",
+    "image_file": "images/nb_717_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "several",
+      "people",
+      "sitting",
+      "bench"
+    ]
+  },
+  {
+    "key": [
+      759,
+      0,
+      0
+    ],
+    "question": "Is the water splitting into three sections?",
+    "gt": "Yes",
+    "image_file": "images/nb_759_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "water",
+      "splitting",
+      "three",
+      "sections"
+    ]
+  },
+  {
+    "key": [
+      777,
+      0,
+      1
+    ],
+    "question": "Is the person holding a brown stick?",
+    "gt": "No",
+    "image_file": "images/nb_777_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "person",
+      "holding",
+      "brown",
+      "stick"
+    ]
+  },
+  {
+    "key": [
+      828,
+      1,
+      0
+    ],
+    "question": "Is the work being conducted above ground?",
+    "gt": "No",
+    "image_file": "images/nb_828_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "work",
+      "conducted",
+      "above",
+      "ground"
+    ]
+  },
+  {
+    "key": [
+      886,
+      0,
+      1
+    ],
+    "question": "Is the dog wearing two collars?",
+    "gt": "No",
+    "image_file": "images/nb_886_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "dog",
+      "wearing",
+      "two",
+      "collars"
+    ]
+  },
+  {
+    "key": [
+      971,
+      0,
+      1
+    ],
+    "question": "Are there any drinks on the table closest to the camera?",
+    "gt": "No",
+    "image_file": "images/nb_971_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "drinks",
+      "table",
+      "closest",
+      "camera"
+    ]
+  },
+  {
+    "key": [
+      1007,
+      0,
+      0
+    ],
+    "question": "Is the adult in the image chasing a child?",
+    "gt": "Yes",
+    "image_file": "images/nb_1007_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "adult",
+      "image",
+      "chasing",
+      "child"
+    ]
+  },
+  {
+    "key": [
+      1015,
+      0,
+      0
+    ],
+    "question": "Are all the dogs of different colors?",
+    "gt": "Yes",
+    "image_file": "images/nb_1015_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "all",
+      "dogs",
+      "different",
+      "colors"
+    ]
+  },
+  {
+    "key": [
+      1058,
+      1,
+      0
+    ],
+    "question": "Is the child wearing blue shoes?",
+    "gt": "No",
+    "image_file": "images/nb_1058_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "child",
+      "wearing",
+      "blue",
+      "shoes"
+    ]
+  },
+  {
+    "key": [
+      1243,
+      0,
+      0
+    ],
+    "question": "Is there no one reading a newspaper in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1243_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "one",
+      "reading",
+      "newspaper",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1256,
+      1,
+      1
+    ],
+    "question": "Is the pig facing diagonally to the right?",
+    "gt": "Yes",
+    "image_file": "images/nb_1256_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "pig",
+      "facing",
+      "diagonally",
+      "right"
+    ]
+  },
+  {
+    "key": [
+      1315,
+      1,
+      0
+    ],
+    "question": "Are the cyclists primarily navigating a corner?",
+    "gt": "No",
+    "image_file": "images/nb_1315_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "cyclists",
+      "primarily",
+      "navigating",
+      "corner"
+    ]
+  },
+  {
+    "key": [
+      1317,
+      1,
+      1
+    ],
+    "question": "Are there three ants on the tiled wall?",
+    "gt": "Yes",
+    "image_file": "images/nb_1317_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "three",
+      "ants",
+      "tiled",
+      "wall"
+    ]
+  },
+  {
+    "key": [
+      1341,
+      1,
+      0
+    ],
+    "question": "Is the person in the image standing on the board?",
+    "gt": "No",
+    "image_file": "images/nb_1341_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "person",
+      "image",
+      "standing",
+      "board"
+    ]
+  },
+  {
+    "key": [
+      1397,
+      1,
+      1
+    ],
+    "question": "Are they all men running in the race?",
+    "gt": "Yes",
+    "image_file": "images/nb_1397_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "all",
+      "men",
+      "running",
+      "race"
+    ]
+  },
+  {
+    "key": [
+      1412,
+      1,
+      1
+    ],
+    "question": "Is the boy shaving without supervision?",
+    "gt": "Yes",
+    "image_file": "images/nb_1412_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "boy",
+      "shaving",
+      "without",
+      "supervision"
+    ]
+  },
+  {
+    "key": [
+      1450,
+      0,
+      1
+    ],
+    "question": "Are there multiple people in the foreground of the image?",
+    "gt": "No",
+    "image_file": "images/nb_1450_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "multiple",
+      "people",
+      "foreground",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1473,
+      0,
+      0
+    ],
+    "question": "Is the person engaged in manually climbing?",
+    "gt": "Yes",
+    "image_file": "images/nb_1473_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "person",
+      "engaged",
+      "manually",
+      "climbing"
+    ]
+  },
+  {
+    "key": [
+      1557,
+      1,
+      0
+    ],
+    "question": "Is there a woman in traditional Muslim wardrobe?",
+    "gt": "No",
+    "image_file": "images/nb_1557_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "woman",
+      "traditional",
+      "muslim",
+      "wardrobe"
+    ]
+  },
+  {
+    "key": [
+      1581,
+      0,
+      0
+    ],
+    "question": "Is the man wearing a gray suit?",
+    "gt": "Yes",
+    "image_file": "images/nb_1581_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "man",
+      "wearing",
+      "gray",
+      "suit"
+    ]
+  },
+  {
+    "key": [
+      1639,
+      0,
+      1
+    ],
+    "question": "Is there no human hand pinching the catapult?",
+    "gt": "No",
+    "image_file": "images/nb_1639_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "human",
+      "hand",
+      "pinching",
+      "catapult"
+    ]
+  },
+  {
+    "key": [
+      1667,
+      0,
+      0
+    ],
+    "question": "Is the object in the dog's mouth spherical?",
+    "gt": "Yes",
+    "image_file": "images/nb_1667_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "object",
+      "dog",
+      "mouth",
+      "spherical"
+    ]
+  },
+  {
+    "key": [
+      1675,
+      1,
+      1
+    ],
+    "question": "Are any of the people in the photo performing lifts?",
+    "gt": "Yes",
+    "image_file": "images/nb_1675_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "people",
+      "photo",
+      "performing",
+      "lifts"
+    ]
+  },
+  {
+    "key": [
+      1682,
+      1,
+      0
+    ],
+    "question": "Are there double yellow lines on the road?",
+    "gt": "No",
+    "image_file": "images/nb_1682_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "double",
+      "yellow",
+      "lines",
+      "road"
+    ]
+  },
+  {
+    "key": [
+      1707,
+      1,
+      0
+    ],
+    "question": "Is anyone in line to enter the bus?",
+    "gt": "No",
+    "image_file": "images/nb_1707_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "anyone",
+      "line",
+      "enter",
+      "bus"
+    ]
+  },
+  {
+    "key": [
+      1737,
+      0,
+      1
+    ],
+    "question": "Is the woman wearing a brown jacket?",
+    "gt": "No",
+    "image_file": "images/nb_1737_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "woman",
+      "wearing",
+      "brown",
+      "jacket"
+    ]
+  },
+  {
+    "key": [
+      1749,
+      0,
+      1
+    ],
+    "question": "Are there two soccer balls in the scene?",
+    "gt": "No",
+    "image_file": "images/nb_1749_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 4,
+    "content": [
+      "two",
+      "soccer",
+      "balls",
+      "scene"
+    ]
+  },
+  {
+    "key": [
+      1789,
+      1,
+      1
+    ],
+    "question": "Are there 10 artificial green apples in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1789_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 4,
+    "content": [
+      "artificial",
+      "green",
+      "apples",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      8,
+      0,
+      1
+    ],
+    "question": "Does the musician have blonde and curly hair?",
+    "gt": "No",
+    "image_file": "images/nb_8_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "musician",
+      "have",
+      "blonde",
+      "curly",
+      "hair"
+    ]
+  },
+  {
+    "key": [
+      28,
+      1,
+      0
+    ],
+    "question": "Does the image show exactly four men?",
+    "gt": "No",
+    "image_file": "images/nb_28_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "image",
+      "show",
+      "exactly",
+      "four",
+      "men"
+    ]
+  },
+  {
+    "key": [
+      30,
+      0,
+      0
+    ],
+    "question": "Is one competitor kicking another in the face?",
+    "gt": "Yes",
+    "image_file": "images/nb_30_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "one",
+      "competitor",
+      "kicking",
+      "another",
+      "face"
+    ]
+  },
+  {
+    "key": [
+      115,
+      1,
+      0
+    ],
+    "question": "Is the photograph taken with a self-held camera?",
+    "gt": "No",
+    "image_file": "images/nb_115_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "photograph",
+      "taken",
+      "self",
+      "held",
+      "camera"
+    ]
+  },
+  {
+    "key": [
+      118,
+      1,
+      1
+    ],
+    "question": "Are the people standing in a large pool of water?",
+    "gt": "Yes",
+    "image_file": "images/nb_118_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "people",
+      "standing",
+      "large",
+      "pool",
+      "water"
+    ]
+  },
+  {
+    "key": [
+      146,
+      1,
+      0
+    ],
+    "question": "Are there adults standing in a circle with children in the middle?",
+    "gt": "No",
+    "image_file": "images/nb_146_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "adults",
+      "standing",
+      "circle",
+      "children",
+      "middle"
+    ]
+  },
+  {
+    "key": [
+      159,
+      0,
+      1
+    ],
+    "question": "Is there a swamp tour boat navigating the water?",
+    "gt": "No",
+    "image_file": "images/nb_159_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "swamp",
+      "tour",
+      "boat",
+      "navigating",
+      "water"
+    ]
+  },
+  {
+    "key": [
+      232,
+      1,
+      1
+    ],
+    "question": "Is the main action about catching a ball?",
+    "gt": "Yes",
+    "image_file": "images/nb_232_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "main",
+      "action",
+      "about",
+      "catching",
+      "ball"
+    ]
+  },
+  {
+    "key": [
+      249,
+      1,
+      0
+    ],
+    "question": "Is there a moon in a first quarter phase in the sky?",
+    "gt": "No",
+    "image_file": "images/nb_249_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "moon",
+      "first",
+      "quarter",
+      "phase",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      263,
+      1,
+      0
+    ],
+    "question": "Is the person performing a trick on inline skates?",
+    "gt": "No",
+    "image_file": "images/nb_263_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "person",
+      "performing",
+      "trick",
+      "inline",
+      "skates"
+    ]
+  },
+  {
+    "key": [
+      279,
+      0,
+      1
+    ],
+    "question": "Is there a blue object with a distinct reflection in the picture?",
+    "gt": "No",
+    "image_file": "images/nb_279_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "blue",
+      "object",
+      "distinct",
+      "reflection",
+      "picture"
+    ]
+  },
+  {
+    "key": [
+      285,
+      0,
+      0
+    ],
+    "question": "Are the cactus plants in cube-shaped pots?",
+    "gt": "Yes",
+    "image_file": "images/nb_285_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "cactus",
+      "plants",
+      "cube",
+      "shaped",
+      "pots"
+    ]
+  },
+  {
+    "key": [
+      319,
+      1,
+      0
+    ],
+    "question": "Is anyone wearing red and black stockings?",
+    "gt": "No",
+    "image_file": "images/nb_319_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "anyone",
+      "wearing",
+      "red",
+      "black",
+      "stockings"
+    ]
+  },
+  {
+    "key": [
+      335,
+      1,
+      1
+    ],
+    "question": "Is the man doing something on top of the cart?",
+    "gt": "Yes",
+    "image_file": "images/nb_335_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "man",
+      "doing",
+      "something",
+      "top",
+      "cart"
+    ]
+  },
+  {
+    "key": [
+      427,
+      1,
+      1
+    ],
+    "question": "Does the image show only two people?",
+    "gt": "Yes",
+    "image_file": "images/nb_427_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "image",
+      "show",
+      "only",
+      "two",
+      "people"
+    ]
+  },
+  {
+    "key": [
+      463,
+      0,
+      0
+    ],
+    "question": "Is the heart spray painted with a tilted \"A\" inside?",
+    "gt": "Yes",
+    "image_file": "images/nb_463_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "heart",
+      "spray",
+      "painted",
+      "tilted",
+      "inside"
+    ]
+  },
+  {
+    "key": [
+      466,
+      0,
+      1
+    ],
+    "question": "Is there a small portion of the moon visible in the sky?",
+    "gt": "No",
+    "image_file": "images/nb_466_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "small",
+      "portion",
+      "moon",
+      "visible",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      533,
+      0,
+      0
+    ],
+    "question": "Is the wrestler on the bottom wearing gray and red?",
+    "gt": "Yes",
+    "image_file": "images/nb_533_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "wrestler",
+      "bottom",
+      "wearing",
+      "gray",
+      "red"
+    ]
+  },
+  {
+    "key": [
+      581,
+      0,
+      1
+    ],
+    "question": "Is there a fighter wearing flame-themed shorts?",
+    "gt": "No",
+    "image_file": "images/nb_581_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "fighter",
+      "wearing",
+      "flame",
+      "themed",
+      "shorts"
+    ]
+  },
+  {
+    "key": [
+      622,
+      0,
+      1
+    ],
+    "question": "Is there a participant wearing a black and red jersey?",
+    "gt": "No",
+    "image_file": "images/nb_622_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "participant",
+      "wearing",
+      "black",
+      "red",
+      "jersey"
+    ]
+  },
+  {
+    "key": [
+      652,
+      1,
+      1
+    ],
+    "question": "Are the bikers primarily trying to ascend a hill?",
+    "gt": "Yes",
+    "image_file": "images/nb_652_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "bikers",
+      "primarily",
+      "trying",
+      "ascend",
+      "hill"
+    ]
+  },
+  {
+    "key": [
+      657,
+      0,
+      1
+    ],
+    "question": "Is there exactly one shirtless man in the image?",
+    "gt": "No",
+    "image_file": "images/nb_657_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "exactly",
+      "one",
+      "shirtless",
+      "man",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      657,
+      1,
+      1
+    ],
+    "question": "Is there exactly one shirtless man in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_657_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "exactly",
+      "one",
+      "shirtless",
+      "man",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      685,
+      0,
+      1
+    ],
+    "question": "Are there two ladies talking to a man on the street?",
+    "gt": "No",
+    "image_file": "images/nb_685_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "two",
+      "ladies",
+      "talking",
+      "man",
+      "street"
+    ]
+  },
+  {
+    "key": [
+      691,
+      1,
+      0
+    ],
+    "question": "Is someone wearing a blue shirt featured?",
+    "gt": "No",
+    "image_file": "images/nb_691_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "someone",
+      "wearing",
+      "blue",
+      "shirt",
+      "featured"
+    ]
+  },
+  {
+    "key": [
+      704,
+      0,
+      0
+    ],
+    "question": "Is there an overhead night view of glowing charcoals?",
+    "gt": "Yes",
+    "image_file": "images/nb_704_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "overhead",
+      "night",
+      "view",
+      "glowing",
+      "charcoals"
+    ]
+  },
+  {
+    "key": [
+      738,
+      0,
+      0
+    ],
+    "question": "Is the man alone with just one bicycle?",
+    "gt": "Yes",
+    "image_file": "images/nb_738_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "man",
+      "alone",
+      "just",
+      "one",
+      "bicycle"
+    ]
+  },
+  {
+    "key": [
+      757,
+      0,
+      1
+    ],
+    "question": "Is the woman wearing multiple beaded necklaces?",
+    "gt": "No",
+    "image_file": "images/nb_757_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "woman",
+      "wearing",
+      "multiple",
+      "beaded",
+      "necklaces"
+    ]
+  },
+  {
+    "key": [
+      760,
+      0,
+      0
+    ],
+    "question": "Is the water body calm with no cloud in the sky?",
+    "gt": "Yes",
+    "image_file": "images/nb_760_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "water",
+      "body",
+      "calm",
+      "cloud",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      810,
+      0,
+      0
+    ],
+    "question": "Are the cement bricks lying horizontally on the board?",
+    "gt": "Yes",
+    "image_file": "images/nb_810_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "cement",
+      "bricks",
+      "lying",
+      "horizontally",
+      "board"
+    ]
+  },
+  {
+    "key": [
+      887,
+      0,
+      1
+    ],
+    "question": "Does the central tree have four trunks?",
+    "gt": "No",
+    "image_file": "images/nb_887_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "central",
+      "tree",
+      "have",
+      "four",
+      "trunks"
+    ]
+  },
+  {
+    "key": [
+      888,
+      1,
+      0
+    ],
+    "question": "Is the star on a tan, shell-marked pillar?",
+    "gt": "No",
+    "image_file": "images/nb_888_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "star",
+      "tan",
+      "shell",
+      "marked",
+      "pillar"
+    ]
+  },
+  {
+    "key": [
+      901,
+      0,
+      1
+    ],
+    "question": "Is the alligator facing the left side of the image?",
+    "gt": "No",
+    "image_file": "images/nb_901_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "alligator",
+      "facing",
+      "left",
+      "side",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      940,
+      0,
+      1
+    ],
+    "question": "Are there more than two people in the image?",
+    "gt": "No",
+    "image_file": "images/nb_940_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "more",
+      "than",
+      "two",
+      "people",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      944,
+      1,
+      0
+    ],
+    "question": "Are there accessories specifically around their necks being featured?",
+    "gt": "No",
+    "image_file": "images/nb_944_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "accessories",
+      "specifically",
+      "around",
+      "necks",
+      "featured"
+    ]
+  },
+  {
+    "key": [
+      1011,
+      0,
+      1
+    ],
+    "question": "Is there a person wearing a green button up shirt?",
+    "gt": "No",
+    "image_file": "images/nb_1011_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "person",
+      "wearing",
+      "green",
+      "button",
+      "shirt"
+    ]
+  },
+  {
+    "key": [
+      1028,
+      0,
+      0
+    ],
+    "question": "Is the car being worked on by exactly three people?",
+    "gt": "Yes",
+    "image_file": "images/nb_1028_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "car",
+      "worked",
+      "exactly",
+      "three",
+      "people"
+    ]
+  },
+  {
+    "key": [
+      1042,
+      1,
+      0
+    ],
+    "question": "Are there three people visibly watching the skateboarder?",
+    "gt": "No",
+    "image_file": "images/nb_1042_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "three",
+      "people",
+      "visibly",
+      "watching",
+      "skateboarder"
+    ]
+  },
+  {
+    "key": [
+      1047,
+      1,
+      0
+    ],
+    "question": "Is there a brown iron guard in front of the window?",
+    "gt": "No",
+    "image_file": "images/nb_1047_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "brown",
+      "iron",
+      "guard",
+      "front",
+      "window"
+    ]
+  },
+  {
+    "key": [
+      1066,
+      1,
+      0
+    ],
+    "question": "Are there two men fishing beside a dam?",
+    "gt": "No",
+    "image_file": "images/nb_1066_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "two",
+      "men",
+      "fishing",
+      "beside",
+      "dam"
+    ]
+  },
+  {
+    "key": [
+      1084,
+      1,
+      0
+    ],
+    "question": "Is the person interacting primarily with boxed items?",
+    "gt": "No",
+    "image_file": "images/nb_1084_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "person",
+      "interacting",
+      "primarily",
+      "boxed",
+      "items"
+    ]
+  },
+  {
+    "key": [
+      1086,
+      0,
+      0
+    ],
+    "question": "Is the statue holding onto an orange half circle?",
+    "gt": "Yes",
+    "image_file": "images/nb_1086_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "statue",
+      "holding",
+      "orange",
+      "half",
+      "circle"
+    ]
+  },
+  {
+    "key": [
+      1175,
+      1,
+      1
+    ],
+    "question": "Is there an empty parking spot in front of the BMW?",
+    "gt": "Yes",
+    "image_file": "images/nb_1175_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "empty",
+      "parking",
+      "spot",
+      "front",
+      "bmw"
+    ]
+  },
+  {
+    "key": [
+      1185,
+      1,
+      1
+    ],
+    "question": "Are there no clouds in the upper left corner of the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1185_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "clouds",
+      "upper",
+      "left",
+      "corner",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1239,
+      1,
+      1
+    ],
+    "question": "Is there a peer or teacher grading session in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1239_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "peer",
+      "teacher",
+      "grading",
+      "session",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1268,
+      0,
+      0
+    ],
+    "question": "Is the sculpture placed on a gray stone platform?",
+    "gt": "Yes",
+    "image_file": "images/nb_1268_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "sculpture",
+      "placed",
+      "gray",
+      "stone",
+      "platform"
+    ]
+  },
+  {
+    "key": [
+      1297,
+      0,
+      0
+    ],
+    "question": "Is coal the primary element the man is handling?",
+    "gt": "Yes",
+    "image_file": "images/nb_1297_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "coal",
+      "primary",
+      "element",
+      "man",
+      "handling"
+    ]
+  },
+  {
+    "key": [
+      1315,
+      1,
+      1
+    ],
+    "question": "Are all the cyclists racing straight ahead?",
+    "gt": "Yes",
+    "image_file": "images/nb_1315_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "all",
+      "cyclists",
+      "racing",
+      "straight",
+      "ahead"
+    ]
+  },
+  {
+    "key": [
+      1324,
+      1,
+      0
+    ],
+    "question": "Is the person in the image sitting while reading?",
+    "gt": "No",
+    "image_file": "images/nb_1324_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "person",
+      "image",
+      "sitting",
+      "while",
+      "reading"
+    ]
+  },
+  {
+    "key": [
+      1325,
+      1,
+      0
+    ],
+    "question": "Are there cars on a three-lane highway under the clouds?",
+    "gt": "No",
+    "image_file": "images/nb_1325_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "cars",
+      "three",
+      "lane",
+      "highway",
+      "clouds"
+    ]
+  },
+  {
+    "key": [
+      1352,
+      0,
+      1
+    ],
+    "question": "Is there an American Quarter Horse grazing in the field?",
+    "gt": "No",
+    "image_file": "images/nb_1352_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "american",
+      "quarter",
+      "horse",
+      "grazing",
+      "field"
+    ]
+  },
+  {
+    "key": [
+      1415,
+      0,
+      1
+    ],
+    "question": "Is the man depicted walking down the steps?",
+    "gt": "No",
+    "image_file": "images/nb_1415_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "man",
+      "depicted",
+      "walking",
+      "down",
+      "steps"
+    ]
+  },
+  {
+    "key": [
+      1422,
+      0,
+      1
+    ],
+    "question": "Is the peacock walking on twig-littered dirt?",
+    "gt": "No",
+    "image_file": "images/nb_1422_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "peacock",
+      "walking",
+      "twig",
+      "littered",
+      "dirt"
+    ]
+  },
+  {
+    "key": [
+      1444,
+      0,
+      0
+    ],
+    "question": "Is the man playing only one instrument?",
+    "gt": "Yes",
+    "image_file": "images/nb_1444_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "man",
+      "playing",
+      "only",
+      "one",
+      "instrument"
+    ]
+  },
+  {
+    "key": [
+      1448,
+      0,
+      1
+    ],
+    "question": "Is there any chef flipping something in a frying pan?",
+    "gt": "No",
+    "image_file": "images/nb_1448_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "chef",
+      "flipping",
+      "something",
+      "frying",
+      "pan"
+    ]
+  },
+  {
+    "key": [
+      1531,
+      1,
+      0
+    ],
+    "question": "Are there multiple people playing instruments in the background?",
+    "gt": "No",
+    "image_file": "images/nb_1531_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "multiple",
+      "people",
+      "playing",
+      "instruments",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      1583,
+      0,
+      0
+    ],
+    "question": "Is the man holding a tool in each hand?",
+    "gt": "Yes",
+    "image_file": "images/nb_1583_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "man",
+      "holding",
+      "tool",
+      "each",
+      "hand"
+    ]
+  },
+  {
+    "key": [
+      1688,
+      1,
+      0
+    ],
+    "question": "Are there two black Rhinoceros beetles on the arm?",
+    "gt": "No",
+    "image_file": "images/nb_1688_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "two",
+      "black",
+      "rhinoceros",
+      "beetles",
+      "arm"
+    ]
+  },
+  {
+    "key": [
+      1751,
+      0,
+      0
+    ],
+    "question": "Are there more people sitting than standing?",
+    "gt": "Yes",
+    "image_file": "images/nb_1751_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "more",
+      "people",
+      "sitting",
+      "than",
+      "standing"
+    ]
+  },
+  {
+    "key": [
+      1751,
+      1,
+      0
+    ],
+    "question": "Are there more people sitting than standing?",
+    "gt": "No",
+    "image_file": "images/nb_1751_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 5,
+    "content": [
+      "more",
+      "people",
+      "sitting",
+      "than",
+      "standing"
+    ]
+  },
+  {
+    "key": [
+      1836,
+      0,
+      0
+    ],
+    "question": "Are the two parallel roads divided by cement?",
+    "gt": "Yes",
+    "image_file": "images/nb_1836_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "two",
+      "parallel",
+      "roads",
+      "divided",
+      "cement"
+    ]
+  },
+  {
+    "key": [
+      1892,
+      0,
+      0
+    ],
+    "question": "Does the image show someone looking into a window?",
+    "gt": "Yes",
+    "image_file": "images/nb_1892_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 5,
+    "content": [
+      "image",
+      "show",
+      "someone",
+      "looking",
+      "window"
+    ]
+  },
+  {
+    "key": [
+      48,
+      1,
+      1
+    ],
+    "question": "Is a large canyon stretching through the center of the land?",
+    "gt": "Yes",
+    "image_file": "images/nb_48_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "large",
+      "canyon",
+      "stretching",
+      "through",
+      "center",
+      "land"
+    ]
+  },
+  {
+    "key": [
+      49,
+      0,
+      0
+    ],
+    "question": "Is anyone in the crowd also holding a musical instrument?",
+    "gt": "Yes",
+    "image_file": "images/nb_49_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "anyone",
+      "crowd",
+      "also",
+      "holding",
+      "musical",
+      "instrument"
+    ]
+  },
+  {
+    "key": [
+      87,
+      1,
+      1
+    ],
+    "question": "Is the main activity of the girl in the image related to swinging?",
+    "gt": "Yes",
+    "image_file": "images/nb_87_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "main",
+      "activity",
+      "girl",
+      "image",
+      "related",
+      "swinging"
+    ]
+  },
+  {
+    "key": [
+      147,
+      1,
+      1
+    ],
+    "question": "Is there a blue house with a crape myrtle tree in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_147_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "blue",
+      "house",
+      "crape",
+      "myrtle",
+      "tree",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      160,
+      0,
+      1
+    ],
+    "question": "Is the ceiling colored gray and composed of square panels?",
+    "gt": "No",
+    "image_file": "images/nb_160_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "ceiling",
+      "colored",
+      "gray",
+      "composed",
+      "square",
+      "panels"
+    ]
+  },
+  {
+    "key": [
+      208,
+      1,
+      0
+    ],
+    "question": "Are there players wearing both blue and white uniforms?",
+    "gt": "No",
+    "image_file": "images/nb_208_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "players",
+      "wearing",
+      "both",
+      "blue",
+      "white",
+      "uniforms"
+    ]
+  },
+  {
+    "key": [
+      245,
+      0,
+      0
+    ],
+    "question": "Is the depicted horse without any white spots on its forehead?",
+    "gt": "Yes",
+    "image_file": "images/nb_245_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "depicted",
+      "horse",
+      "without",
+      "white",
+      "spots",
+      "forehead"
+    ]
+  },
+  {
+    "key": [
+      245,
+      1,
+      0
+    ],
+    "question": "Is the depicted horse without any white spots on its forehead?",
+    "gt": "No",
+    "image_file": "images/nb_245_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "depicted",
+      "horse",
+      "without",
+      "white",
+      "spots",
+      "forehead"
+    ]
+  },
+  {
+    "key": [
+      298,
+      1,
+      1
+    ],
+    "question": "Is the inside of the pumpkin filled with dried leaves and dirt?",
+    "gt": "Yes",
+    "image_file": "images/nb_298_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "inside",
+      "pumpkin",
+      "filled",
+      "dried",
+      "leaves",
+      "dirt"
+    ]
+  },
+  {
+    "key": [
+      310,
+      0,
+      0
+    ],
+    "question": "Are there glowing neon-colored tetra fish in the scene?",
+    "gt": "Yes",
+    "image_file": "images/nb_310_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "glowing",
+      "neon",
+      "colored",
+      "tetra",
+      "fish",
+      "scene"
+    ]
+  },
+  {
+    "key": [
+      345,
+      1,
+      1
+    ],
+    "question": "Is the container from which the child is drinking made of glass?",
+    "gt": "Yes",
+    "image_file": "images/nb_345_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "container",
+      "which",
+      "child",
+      "drinking",
+      "made",
+      "glass"
+    ]
+  },
+  {
+    "key": [
+      354,
+      0,
+      0
+    ],
+    "question": "Are most people wearing similarly colored clothing?",
+    "gt": "Yes",
+    "image_file": "images/nb_354_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "most",
+      "people",
+      "wearing",
+      "similarly",
+      "colored",
+      "clothing"
+    ]
+  },
+  {
+    "key": [
+      357,
+      1,
+      0
+    ],
+    "question": "Are there any two individuals directly interacting with each other?",
+    "gt": "No",
+    "image_file": "images/nb_357_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "two",
+      "individuals",
+      "directly",
+      "interacting",
+      "each",
+      "other"
+    ]
+  },
+  {
+    "key": [
+      358,
+      0,
+      0
+    ],
+    "question": "Is there a person performing an action on someone else's clothing?",
+    "gt": "Yes",
+    "image_file": "images/nb_358_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "person",
+      "performing",
+      "action",
+      "someone",
+      "else",
+      "clothing"
+    ]
+  },
+  {
+    "key": [
+      361,
+      1,
+      0
+    ],
+    "question": "Are the contrails in the sky slightly curved at several points?",
+    "gt": "No",
+    "image_file": "images/nb_361_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "contrails",
+      "sky",
+      "slightly",
+      "curved",
+      "several",
+      "points"
+    ]
+  },
+  {
+    "key": [
+      361,
+      0,
+      1
+    ],
+    "question": "Are there two separate small contrails in the sky in the picture?",
+    "gt": "No",
+    "image_file": "images/nb_361_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "two",
+      "separate",
+      "small",
+      "contrails",
+      "sky",
+      "picture"
+    ]
+  },
+  {
+    "key": [
+      362,
+      0,
+      1
+    ],
+    "question": "Is there a reflection of the blue sky and white clouds in the water?",
+    "gt": "No",
+    "image_file": "images/nb_362_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "reflection",
+      "blue",
+      "sky",
+      "white",
+      "clouds",
+      "water"
+    ]
+  },
+  {
+    "key": [
+      453,
+      0,
+      1
+    ],
+    "question": "Is there a young girl wearing a backpack present in the image?",
+    "gt": "No",
+    "image_file": "images/nb_453_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "young",
+      "girl",
+      "wearing",
+      "backpack",
+      "present",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      458,
+      0,
+      1
+    ],
+    "question": "Does the image show a cheer dancer being thrown into the air?",
+    "gt": "No",
+    "image_file": "images/nb_458_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "image",
+      "show",
+      "cheer",
+      "dancer",
+      "thrown",
+      "air"
+    ]
+  },
+  {
+    "key": [
+      463,
+      1,
+      1
+    ],
+    "question": "Does the heart have the letters 'E / + / M' drawn with chalk in its center?",
+    "gt": "Yes",
+    "image_file": "images/nb_463_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "heart",
+      "have",
+      "letters",
+      "drawn",
+      "chalk",
+      "center"
+    ]
+  },
+  {
+    "key": [
+      523,
+      0,
+      0
+    ],
+    "question": "Is the object leaning against a telephone pole a canoe?",
+    "gt": "Yes",
+    "image_file": "images/nb_523_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "object",
+      "leaning",
+      "against",
+      "telephone",
+      "pole",
+      "canoe"
+    ]
+  },
+  {
+    "key": [
+      555,
+      1,
+      0
+    ],
+    "question": "Are the two dogs licking each other directly?",
+    "gt": "No",
+    "image_file": "images/nb_555_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "two",
+      "dogs",
+      "licking",
+      "each",
+      "other",
+      "directly"
+    ]
+  },
+  {
+    "key": [
+      563,
+      1,
+      1
+    ],
+    "question": "Are the tree trunks wrapped with yellow LED lights?",
+    "gt": "Yes",
+    "image_file": "images/nb_563_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "tree",
+      "trunks",
+      "wrapped",
+      "yellow",
+      "led",
+      "lights"
+    ]
+  },
+  {
+    "key": [
+      602,
+      1,
+      1
+    ],
+    "question": "What are the women doing?\nOption: A:Walking; B:Talking;",
+    "gt": "A",
+    "image_file": "images/nb_602_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 6,
+    "content": [
+      "what",
+      "women",
+      "doing",
+      "option",
+      "walking",
+      "talking"
+    ]
+  },
+  {
+    "key": [
+      629,
+      0,
+      0
+    ],
+    "question": "Is the main focus of the person using their hands for support?",
+    "gt": "Yes",
+    "image_file": "images/nb_629_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "main",
+      "focus",
+      "person",
+      "using",
+      "hands",
+      "support"
+    ]
+  },
+  {
+    "key": [
+      665,
+      0,
+      0
+    ],
+    "question": "Is the white tiger standing on a gray cement surface?",
+    "gt": "Yes",
+    "image_file": "images/nb_665_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "white",
+      "tiger",
+      "standing",
+      "gray",
+      "cement",
+      "surface"
+    ]
+  },
+  {
+    "key": [
+      677,
+      0,
+      1
+    ],
+    "question": "Is there any musician wearing brown pants and a white shirt?",
+    "gt": "No",
+    "image_file": "images/nb_677_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "musician",
+      "wearing",
+      "brown",
+      "pants",
+      "white",
+      "shirt"
+    ]
+  },
+  {
+    "key": [
+      716,
+      0,
+      1
+    ],
+    "question": "Are people in the image relaxing in front of a working fountain?",
+    "gt": "No",
+    "image_file": "images/nb_716_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "people",
+      "image",
+      "relaxing",
+      "front",
+      "working",
+      "fountain"
+    ]
+  },
+  {
+    "key": [
+      734,
+      1,
+      0
+    ],
+    "question": "Does the image show a person receiving information from others?",
+    "gt": "No",
+    "image_file": "images/nb_734_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "image",
+      "show",
+      "person",
+      "receiving",
+      "information",
+      "others"
+    ]
+  },
+  {
+    "key": [
+      790,
+      1,
+      1
+    ],
+    "question": "Are the green fake apples arranged in a 3x3 pattern in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_790_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "green",
+      "fake",
+      "apples",
+      "arranged",
+      "pattern",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      796,
+      0,
+      0
+    ],
+    "question": "Is the interaction between the two people mainly aggressive?",
+    "gt": "Yes",
+    "image_file": "images/nb_796_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "interaction",
+      "between",
+      "two",
+      "people",
+      "mainly",
+      "aggressive"
+    ]
+  },
+  {
+    "key": [
+      824,
+      1,
+      0
+    ],
+    "question": "Is the bird sitting on a light brown wooden patio?",
+    "gt": "No",
+    "image_file": "images/nb_824_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "bird",
+      "sitting",
+      "light",
+      "brown",
+      "wooden",
+      "patio"
+    ]
+  },
+  {
+    "key": [
+      844,
+      0,
+      1
+    ],
+    "question": "Is there a man in a blue shirt smiling at the center of the group?",
+    "gt": "No",
+    "image_file": "images/nb_844_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "man",
+      "blue",
+      "shirt",
+      "smiling",
+      "center",
+      "group"
+    ]
+  },
+  {
+    "key": [
+      924,
+      1,
+      1
+    ],
+    "question": "Is there a brick platform on sand resting on a concrete slab?",
+    "gt": "Yes",
+    "image_file": "images/nb_924_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "brick",
+      "platform",
+      "sand",
+      "resting",
+      "concrete",
+      "slab"
+    ]
+  },
+  {
+    "key": [
+      942,
+      1,
+      1
+    ],
+    "question": "Are there several tree trunks stacked on a shelf indoors?",
+    "gt": "Yes",
+    "image_file": "images/nb_942_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "several",
+      "tree",
+      "trunks",
+      "stacked",
+      "shelf",
+      "indoors"
+    ]
+  },
+  {
+    "key": [
+      1032,
+      0,
+      1
+    ],
+    "question": "Is the man in a white shirt waiting to cross the street?",
+    "gt": "No",
+    "image_file": "images/nb_1032_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "man",
+      "white",
+      "shirt",
+      "waiting",
+      "cross",
+      "street"
+    ]
+  },
+  {
+    "key": [
+      1083,
+      0,
+      1
+    ],
+    "question": "Is there a rocky cliff stretching from the left to the right of the image?",
+    "gt": "No",
+    "image_file": "images/nb_1083_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "rocky",
+      "cliff",
+      "stretching",
+      "left",
+      "right",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1084,
+      0,
+      1
+    ],
+    "question": "Is the main activity related to organizing canned goods?",
+    "gt": "No",
+    "image_file": "images/nb_1084_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "main",
+      "activity",
+      "related",
+      "organizing",
+      "canned",
+      "goods"
+    ]
+  },
+  {
+    "key": [
+      1096,
+      1,
+      0
+    ],
+    "question": "Are the two women engaged in a textile-related activity?",
+    "gt": "No",
+    "image_file": "images/nb_1096_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "two",
+      "women",
+      "engaged",
+      "textile",
+      "related",
+      "activity"
+    ]
+  },
+  {
+    "key": [
+      1115,
+      1,
+      1
+    ],
+    "question": "Is the man in the image attempting to break free from a straitjacket?",
+    "gt": "Yes",
+    "image_file": "images/nb_1115_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "man",
+      "image",
+      "attempting",
+      "break",
+      "free",
+      "straitjacket"
+    ]
+  },
+  {
+    "key": [
+      1147,
+      1,
+      1
+    ],
+    "question": "Are the kids waiting rather than playing or sitting?",
+    "gt": "Yes",
+    "image_file": "images/nb_1147_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "kids",
+      "waiting",
+      "rather",
+      "than",
+      "playing",
+      "sitting"
+    ]
+  },
+  {
+    "key": [
+      1162,
+      1,
+      1
+    ],
+    "question": "Are many people predominantly wearing green shirts?",
+    "gt": "Yes",
+    "image_file": "images/nb_1162_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "many",
+      "people",
+      "predominantly",
+      "wearing",
+      "green",
+      "shirts"
+    ]
+  },
+  {
+    "key": [
+      1165,
+      0,
+      0
+    ],
+    "question": "Is the image portraying a play scene without any toys?",
+    "gt": "Yes",
+    "image_file": "images/nb_1165_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "image",
+      "portraying",
+      "play",
+      "scene",
+      "without",
+      "toys"
+    ]
+  },
+  {
+    "key": [
+      1167,
+      1,
+      0
+    ],
+    "question": "Is the athlete wearing a shirt with a two-digit number?",
+    "gt": "No",
+    "image_file": "images/nb_1167_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "athlete",
+      "wearing",
+      "shirt",
+      "two",
+      "digit",
+      "number"
+    ]
+  },
+  {
+    "key": [
+      1185,
+      0,
+      0
+    ],
+    "question": "Are the clouds in the sky showing a yellow glow from sunlight?",
+    "gt": "Yes",
+    "image_file": "images/nb_1185_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "clouds",
+      "sky",
+      "showing",
+      "yellow",
+      "glow",
+      "sunlight"
+    ]
+  },
+  {
+    "key": [
+      1263,
+      1,
+      0
+    ],
+    "question": "Can we see part of an adult's hand in the image?",
+    "gt": "No",
+    "image_file": "images/nb_1263_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "can",
+      "see",
+      "part",
+      "adult",
+      "hand",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1289,
+      1,
+      1
+    ],
+    "question": "Are both cats looking away on a wooden floor?",
+    "gt": "Yes",
+    "image_file": "images/nb_1289_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "both",
+      "cats",
+      "looking",
+      "away",
+      "wooden",
+      "floor"
+    ]
+  },
+  {
+    "key": [
+      1299,
+      0,
+      0
+    ],
+    "question": "Is the plant with white flowers in front of the rock collection?",
+    "gt": "Yes",
+    "image_file": "images/nb_1299_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "plant",
+      "white",
+      "flowers",
+      "front",
+      "rock",
+      "collection"
+    ]
+  },
+  {
+    "key": [
+      1329,
+      1,
+      0
+    ],
+    "question": "Are there more than seven pink flowers in the garden?",
+    "gt": "No",
+    "image_file": "images/nb_1329_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "more",
+      "than",
+      "seven",
+      "pink",
+      "flowers",
+      "garden"
+    ]
+  },
+  {
+    "key": [
+      1354,
+      0,
+      1
+    ],
+    "question": "Is the scene taking place under a partly cloudy sky?",
+    "gt": "No",
+    "image_file": "images/nb_1354_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "scene",
+      "taking",
+      "place",
+      "partly",
+      "cloudy",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      1375,
+      0,
+      1
+    ],
+    "question": "Is the leading skater wearing a black and red uniform?",
+    "gt": "No",
+    "image_file": "images/nb_1375_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "leading",
+      "skater",
+      "wearing",
+      "black",
+      "red",
+      "uniform"
+    ]
+  },
+  {
+    "key": [
+      1376,
+      0,
+      0
+    ],
+    "question": "Does the image depict an object at the upper edge of the frame?",
+    "gt": "Yes",
+    "image_file": "images/nb_1376_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "image",
+      "depict",
+      "object",
+      "upper",
+      "edge",
+      "frame"
+    ]
+  },
+  {
+    "key": [
+      1387,
+      0,
+      1
+    ],
+    "question": "Are there exactly two women walking side by side?",
+    "gt": "No",
+    "image_file": "images/nb_1387_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "exactly",
+      "two",
+      "women",
+      "walking",
+      "side",
+      "side"
+    ]
+  },
+  {
+    "key": [
+      1393,
+      0,
+      0
+    ],
+    "question": "Is the person in the image just coming out of the water?",
+    "gt": "Yes",
+    "image_file": "images/nb_1393_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "person",
+      "image",
+      "just",
+      "coming",
+      "out",
+      "water"
+    ]
+  },
+  {
+    "key": [
+      1400,
+      1,
+      0
+    ],
+    "question": "Is the underwater image displayed on a four-part screen?",
+    "gt": "No",
+    "image_file": "images/nb_1400_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "underwater",
+      "image",
+      "displayed",
+      "four",
+      "part",
+      "screen"
+    ]
+  },
+  {
+    "key": [
+      1418,
+      0,
+      1
+    ],
+    "question": "Is the skyline reflected in the water beneath a clear sky?",
+    "gt": "No",
+    "image_file": "images/nb_1418_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "skyline",
+      "reflected",
+      "water",
+      "beneath",
+      "clear",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      1490,
+      0,
+      1
+    ],
+    "question": "Is there someone using tools on a makeshift table in the image?",
+    "gt": "No",
+    "image_file": "images/nb_1490_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "someone",
+      "using",
+      "tools",
+      "makeshift",
+      "table",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1507,
+      1,
+      1
+    ],
+    "question": "Is there a man with his left hand stretched out to the side?",
+    "gt": "Yes",
+    "image_file": "images/nb_1507_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "man",
+      "left",
+      "hand",
+      "stretched",
+      "out",
+      "side"
+    ]
+  },
+  {
+    "key": [
+      1594,
+      1,
+      0
+    ],
+    "question": "Is there a dead tree framing a crescent moon in the image?",
+    "gt": "No",
+    "image_file": "images/nb_1594_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "dead",
+      "tree",
+      "framing",
+      "crescent",
+      "moon",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1736,
+      1,
+      0
+    ],
+    "question": "Is the person in the image posing rather than climbing?",
+    "gt": "No",
+    "image_file": "images/nb_1736_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "person",
+      "image",
+      "posing",
+      "rather",
+      "than",
+      "climbing"
+    ]
+  },
+  {
+    "key": [
+      1740,
+      1,
+      0
+    ],
+    "question": "Are multiple people walking away from a body of water?",
+    "gt": "No",
+    "image_file": "images/nb_1740_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "multiple",
+      "people",
+      "walking",
+      "away",
+      "body",
+      "water"
+    ]
+  },
+  {
+    "key": [
+      1796,
+      1,
+      0
+    ],
+    "question": "Is the view from the perspective of inside an airplane looking at the horizon?",
+    "gt": "No",
+    "image_file": "images/nb_1796_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "view",
+      "perspective",
+      "inside",
+      "airplane",
+      "looking",
+      "horizon"
+    ]
+  },
+  {
+    "key": [
+      1835,
+      1,
+      1
+    ],
+    "question": "Is there only one person and one animal in the scene?",
+    "gt": "Yes",
+    "image_file": "images/nb_1835_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 6,
+    "content": [
+      "only",
+      "one",
+      "person",
+      "one",
+      "animal",
+      "scene"
+    ]
+  },
+  {
+    "key": [
+      1839,
+      0,
+      1
+    ],
+    "question": "Is there a person wearing orange and yellow shirt and jacket?",
+    "gt": "No",
+    "image_file": "images/nb_1839_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 6,
+    "content": [
+      "person",
+      "wearing",
+      "orange",
+      "yellow",
+      "shirt",
+      "jacket"
+    ]
+  },
+  {
+    "key": [
+      1850,
+      0,
+      0
+    ],
+    "question": "How many people are working on the car?\nOption: A:3; B:2;",
+    "gt": "A",
+    "image_file": "images/nb_1850_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 6,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "working",
+      "car",
+      "option"
+    ]
+  },
+  {
+    "key": [
+      50,
+      0,
+      1
+    ],
+    "question": "Is there a long horizontal rock formation completely submerged underwater?",
+    "gt": "No",
+    "image_file": "images/nb_50_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "long",
+      "horizontal",
+      "rock",
+      "formation",
+      "completely",
+      "submerged",
+      "underwater"
+    ]
+  },
+  {
+    "key": [
+      81,
+      0,
+      0
+    ],
+    "question": "What is the squirrel facing in the image?\nOption: A:Forward; B:Right;",
+    "gt": "A",
+    "image_file": "images/nb_81_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 7,
+    "content": [
+      "what",
+      "squirrel",
+      "facing",
+      "image",
+      "option",
+      "forward",
+      "right"
+    ]
+  },
+  {
+    "key": [
+      202,
+      0,
+      0
+    ],
+    "question": "Are there two people on stage performing complex dance moves?",
+    "gt": "Yes",
+    "image_file": "images/nb_202_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "two",
+      "people",
+      "stage",
+      "performing",
+      "complex",
+      "dance",
+      "moves"
+    ]
+  },
+  {
+    "key": [
+      432,
+      0,
+      0
+    ],
+    "question": "What color is the person's jacket?\nOption: A:Blue; B:Red;",
+    "gt": "A",
+    "image_file": "images/nb_432_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 7,
+    "content": [
+      "what",
+      "color",
+      "person",
+      "jacket",
+      "option",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "key": [
+      458,
+      1,
+      0
+    ],
+    "question": "Are the cheerleaders performing a move that does not involve throwing anyone in the air?",
+    "gt": "No",
+    "image_file": "images/nb_458_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "cheerleaders",
+      "performing",
+      "move",
+      "involve",
+      "throwing",
+      "anyone",
+      "air"
+    ]
+  },
+  {
+    "key": [
+      612,
+      0,
+      0
+    ],
+    "question": "Are the people likely dressed in professional or semi-formal attire?",
+    "gt": "Yes",
+    "image_file": "images/nb_612_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "people",
+      "likely",
+      "dressed",
+      "professional",
+      "semi",
+      "formal",
+      "attire"
+    ]
+  },
+  {
+    "key": [
+      699,
+      0,
+      0
+    ],
+    "question": "Does the image show small twigs inside a hole in the rock?",
+    "gt": "Yes",
+    "image_file": "images/nb_699_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "image",
+      "show",
+      "small",
+      "twigs",
+      "inside",
+      "hole",
+      "rock"
+    ]
+  },
+  {
+    "key": [
+      712,
+      0,
+      0
+    ],
+    "question": "Are black focus lights visible along the walkway in the cave?",
+    "gt": "Yes",
+    "image_file": "images/nb_712_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "black",
+      "focus",
+      "lights",
+      "visible",
+      "along",
+      "walkway",
+      "cave"
+    ]
+  },
+  {
+    "key": [
+      751,
+      0,
+      0
+    ],
+    "question": "Is the Lego construction mainly in the shape of a cone-shaped rocket?",
+    "gt": "Yes",
+    "image_file": "images/nb_751_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "lego",
+      "construction",
+      "mainly",
+      "shape",
+      "cone",
+      "shaped",
+      "rocket"
+    ]
+  },
+  {
+    "key": [
+      838,
+      1,
+      1
+    ],
+    "question": "Is the bench made of rakes sitting on leaf-strewn grass?",
+    "gt": "Yes",
+    "image_file": "images/nb_838_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "bench",
+      "made",
+      "rakes",
+      "sitting",
+      "leaf",
+      "strewn",
+      "grass"
+    ]
+  },
+  {
+    "key": [
+      840,
+      0,
+      0
+    ],
+    "question": "Is the glowing orange pumpkin illuminated by neon pink light?",
+    "gt": "Yes",
+    "image_file": "images/nb_840_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "glowing",
+      "orange",
+      "pumpkin",
+      "illuminated",
+      "neon",
+      "pink",
+      "light"
+    ]
+  },
+  {
+    "key": [
+      972,
+      1,
+      1
+    ],
+    "question": "Are there four downward hanging glass lights on a wooden panel?",
+    "gt": "Yes",
+    "image_file": "images/nb_972_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "four",
+      "downward",
+      "hanging",
+      "glass",
+      "lights",
+      "wooden",
+      "panel"
+    ]
+  },
+  {
+    "key": [
+      1067,
+      0,
+      0
+    ],
+    "question": "Is the highway intersection in the shape of a cross and supported by concrete pillars?",
+    "gt": "Yes",
+    "image_file": "images/nb_1067_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "highway",
+      "intersection",
+      "shape",
+      "cross",
+      "supported",
+      "concrete",
+      "pillars"
+    ]
+  },
+  {
+    "key": [
+      1195,
+      1,
+      1
+    ],
+    "question": "Is there a vintage mustard-yellow Porsche seen on a platform in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1195_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "vintage",
+      "mustard",
+      "yellow",
+      "porsche",
+      "seen",
+      "platform",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1216,
+      1,
+      0
+    ],
+    "question": "How many dogs are in the image?\nOption: A:Three; B:Two;",
+    "gt": "B",
+    "image_file": "images/nb_1216_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 7,
+    "content": [
+      "how",
+      "many",
+      "dogs",
+      "image",
+      "option",
+      "three",
+      "two"
+    ]
+  },
+  {
+    "key": [
+      1217,
+      0,
+      0
+    ],
+    "question": "How many dogs are in the image?\nOption: A:One; B:Two;",
+    "gt": "A",
+    "image_file": "images/nb_1217_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 7,
+    "content": [
+      "how",
+      "many",
+      "dogs",
+      "image",
+      "option",
+      "one",
+      "two"
+    ]
+  },
+  {
+    "key": [
+      1235,
+      0,
+      0
+    ],
+    "question": "What is the gender of the person in the foreground?\nOption: A:Female; B:Male;",
+    "gt": "A",
+    "image_file": "images/nb_1235_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 7,
+    "content": [
+      "what",
+      "gender",
+      "person",
+      "foreground",
+      "option",
+      "female",
+      "male"
+    ]
+  },
+  {
+    "key": [
+      1235,
+      1,
+      1
+    ],
+    "question": "How many people are in the image?\nOption: A:Three; B:Two;",
+    "gt": "A",
+    "image_file": "images/nb_1235_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 7,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "image",
+      "option",
+      "three",
+      "two"
+    ]
+  },
+  {
+    "key": [
+      1238,
+      1,
+      1
+    ],
+    "question": "Is the man appears to be an intimate interaction with a female in a brown coat?",
+    "gt": "Yes",
+    "image_file": "images/nb_1238_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "man",
+      "appears",
+      "intimate",
+      "interaction",
+      "female",
+      "brown",
+      "coat"
+    ]
+  },
+  {
+    "key": [
+      1272,
+      0,
+      1
+    ],
+    "question": "Is the image predominantly set in a busy street with decorative businesses?",
+    "gt": "No",
+    "image_file": "images/nb_1272_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "image",
+      "predominantly",
+      "set",
+      "busy",
+      "street",
+      "decorative",
+      "businesses"
+    ]
+  },
+  {
+    "key": [
+      1313,
+      1,
+      0
+    ],
+    "question": "Is the gray tabby kitten resting its paw on a cage bar?",
+    "gt": "No",
+    "image_file": "images/nb_1313_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "gray",
+      "tabby",
+      "kitten",
+      "resting",
+      "paw",
+      "cage",
+      "bar"
+    ]
+  },
+  {
+    "key": [
+      1318,
+      1,
+      0
+    ],
+    "question": "Does the image show two people without physical contact?",
+    "gt": "No",
+    "image_file": "images/nb_1318_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "image",
+      "show",
+      "two",
+      "people",
+      "without",
+      "physical",
+      "contact"
+    ]
+  },
+  {
+    "key": [
+      1318,
+      0,
+      1
+    ],
+    "question": "Is there a man who has his arm around a woman's shoulder?",
+    "gt": "No",
+    "image_file": "images/nb_1318_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "man",
+      "who",
+      "has",
+      "arm",
+      "around",
+      "woman",
+      "shoulder"
+    ]
+  },
+  {
+    "key": [
+      1368,
+      1,
+      1
+    ],
+    "question": "Is there a ceiling fan with red-brown blades in the decorated space?",
+    "gt": "Yes",
+    "image_file": "images/nb_1368_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "ceiling",
+      "fan",
+      "red",
+      "brown",
+      "blades",
+      "decorated",
+      "space"
+    ]
+  },
+  {
+    "key": [
+      1370,
+      1,
+      0
+    ],
+    "question": "Is the worker wearing a yellow vest digging in front of the car?",
+    "gt": "No",
+    "image_file": "images/nb_1370_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "worker",
+      "wearing",
+      "yellow",
+      "vest",
+      "digging",
+      "front",
+      "car"
+    ]
+  },
+  {
+    "key": [
+      1405,
+      1,
+      1
+    ],
+    "question": "Is there a tan boot hanging on the wire next to the cowboy boot?",
+    "gt": "Yes",
+    "image_file": "images/nb_1405_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "tan",
+      "boot",
+      "hanging",
+      "wire",
+      "next",
+      "cowboy",
+      "boot"
+    ]
+  },
+  {
+    "key": [
+      1445,
+      0,
+      0
+    ],
+    "question": "Does the eighteen wheeler carry large black tires on its flatbed?",
+    "gt": "Yes",
+    "image_file": "images/nb_1445_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "eighteen",
+      "wheeler",
+      "carry",
+      "large",
+      "black",
+      "tires",
+      "flatbed"
+    ]
+  },
+  {
+    "key": [
+      1524,
+      0,
+      1
+    ],
+    "question": "Is there a focus on a single man performing bicycle tricks in the image?",
+    "gt": "No",
+    "image_file": "images/nb_1524_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "focus",
+      "single",
+      "man",
+      "performing",
+      "bicycle",
+      "tricks",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1536,
+      1,
+      1
+    ],
+    "question": "Are the dogs shown moving away from a non-grassy area?",
+    "gt": "Yes",
+    "image_file": "images/nb_1536_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "dogs",
+      "shown",
+      "moving",
+      "away",
+      "non",
+      "grassy",
+      "area"
+    ]
+  },
+  {
+    "key": [
+      1553,
+      0,
+      0
+    ],
+    "question": "How many people are involved?\nOption: A:A dozen; B:Four;",
+    "gt": "A",
+    "image_file": "images/nb_1553_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 7,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "involved",
+      "option",
+      "dozen",
+      "four"
+    ]
+  },
+  {
+    "key": [
+      1572,
+      1,
+      0
+    ],
+    "question": "Is the person wearing a hat in the image also wearing glasses?",
+    "gt": "No",
+    "image_file": "images/nb_1572_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "person",
+      "wearing",
+      "hat",
+      "image",
+      "also",
+      "wearing",
+      "glasses"
+    ]
+  },
+  {
+    "key": [
+      1595,
+      0,
+      1
+    ],
+    "question": "Is there a tripod in the scene?\nOption: A:Yes, there is a camera on a tripod.; B:No, there is no tripod.;",
+    "gt": "B",
+    "image_file": "images/nb_1595_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 7,
+    "content": [
+      "tripod",
+      "scene",
+      "option",
+      "yes",
+      "camera",
+      "tripod",
+      "tripod"
+    ]
+  },
+  {
+    "key": [
+      1662,
+      1,
+      1
+    ],
+    "question": "Are there more than three individuals actively playing in the game?",
+    "gt": "Yes",
+    "image_file": "images/nb_1662_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "more",
+      "than",
+      "three",
+      "individuals",
+      "actively",
+      "playing",
+      "game"
+    ]
+  },
+  {
+    "key": [
+      1743,
+      0,
+      1
+    ],
+    "question": "Is someone posing alone while others take their photo?",
+    "gt": "No",
+    "image_file": "images/nb_1743_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "someone",
+      "posing",
+      "alone",
+      "while",
+      "others",
+      "take",
+      "photo"
+    ]
+  },
+  {
+    "key": [
+      1752,
+      1,
+      1
+    ],
+    "question": "Are the electric scooters parked facing the upper left with kickstands?",
+    "gt": "Yes",
+    "image_file": "images/nb_1752_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 7,
+    "content": [
+      "electric",
+      "scooters",
+      "parked",
+      "facing",
+      "upper",
+      "left",
+      "kickstands"
+    ]
+  },
+  {
+    "key": [
+      1824,
+      0,
+      1
+    ],
+    "question": "Are there at least two people observing someone working with clay?",
+    "gt": "No",
+    "image_file": "images/nb_1824_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "least",
+      "two",
+      "people",
+      "observing",
+      "someone",
+      "working",
+      "clay"
+    ]
+  },
+  {
+    "key": [
+      1853,
+      1,
+      0
+    ],
+    "question": "Is the dog making contact with the counter but not standing upright?",
+    "gt": "No",
+    "image_file": "images/nb_1853_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "dog",
+      "making",
+      "contact",
+      "counter",
+      "but",
+      "standing",
+      "upright"
+    ]
+  },
+  {
+    "key": [
+      1858,
+      1,
+      0
+    ],
+    "question": "Is the person working on a reclining patient dressed in a gown and gloves?",
+    "gt": "No",
+    "image_file": "images/nb_1858_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 7,
+    "content": [
+      "person",
+      "working",
+      "reclining",
+      "patient",
+      "dressed",
+      "gown",
+      "gloves"
+    ]
+  },
+  {
+    "key": [
+      6,
+      1,
+      1
+    ],
+    "question": "Does the pumpkin have one triangular eye and a tooth on its carved smile?",
+    "gt": "Yes",
+    "image_file": "images/nb_6_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 8,
+    "content": [
+      "pumpkin",
+      "have",
+      "one",
+      "triangular",
+      "eye",
+      "tooth",
+      "carved",
+      "smile"
+    ]
+  },
+  {
+    "key": [
+      104,
+      1,
+      1
+    ],
+    "question": "What shape do the patterns on the table create?\nOption: A:Rhombuses; B:Trapezoids;",
+    "gt": "A",
+    "image_file": "images/nb_104_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "what",
+      "shape",
+      "patterns",
+      "table",
+      "create",
+      "option",
+      "rhombuses",
+      "trapezoids"
+    ]
+  },
+  {
+    "key": [
+      137,
+      0,
+      1
+    ],
+    "question": "Is the cat laying down on its stomach behind a wire shelving container?",
+    "gt": "No",
+    "image_file": "images/nb_137_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "cat",
+      "laying",
+      "down",
+      "stomach",
+      "behind",
+      "wire",
+      "shelving",
+      "container"
+    ]
+  },
+  {
+    "key": [
+      212,
+      1,
+      1
+    ],
+    "question": "Is there only one apple at the center surrounded by other apples in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_212_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 8,
+    "content": [
+      "only",
+      "one",
+      "apple",
+      "center",
+      "surrounded",
+      "other",
+      "apples",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      222,
+      0,
+      1
+    ],
+    "question": "Does the mural feature a gray sailing ship with a small rectangular window?",
+    "gt": "No",
+    "image_file": "images/nb_222_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "mural",
+      "feature",
+      "gray",
+      "sailing",
+      "ship",
+      "small",
+      "rectangular",
+      "window"
+    ]
+  },
+  {
+    "key": [
+      347,
+      1,
+      1
+    ],
+    "question": "How many people in pink are there in the image?\nOption: A:One; B:Two;",
+    "gt": "A",
+    "image_file": "images/nb_347_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "pink",
+      "image",
+      "option",
+      "one",
+      "two"
+    ]
+  },
+  {
+    "key": [
+      374,
+      1,
+      1
+    ],
+    "question": " Is there more than one person holding an ice cream together?",
+    "gt": "Yes",
+    "image_file": "images/nb_374_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 8,
+    "content": [
+      "more",
+      "than",
+      "one",
+      "person",
+      "holding",
+      "ice",
+      "cream",
+      "together"
+    ]
+  },
+  {
+    "key": [
+      408,
+      1,
+      0
+    ],
+    "question": "Is the 1950s Chevrolet Bel Air showing reflections on its door and rear panel?",
+    "gt": "No",
+    "image_file": "images/nb_408_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "chevrolet",
+      "bel",
+      "air",
+      "showing",
+      "reflections",
+      "door",
+      "rear",
+      "panel"
+    ]
+  },
+  {
+    "key": [
+      422,
+      1,
+      1
+    ],
+    "question": "Is the person in the image using a bodyboard or a surfboard?\nOption: A:A surfboard; B:A bodyboard;",
+    "gt": "A",
+    "image_file": "images/nb_422_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "person",
+      "image",
+      "using",
+      "bodyboard",
+      "surfboard",
+      "option",
+      "surfboard",
+      "bodyboard"
+    ]
+  },
+  {
+    "key": [
+      489,
+      0,
+      0
+    ],
+    "question": "How many men are engaged in the activity?\nOption: A:One; B:Two;",
+    "gt": "A",
+    "image_file": "images/nb_489_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "men",
+      "engaged",
+      "activity",
+      "option",
+      "one",
+      "two"
+    ]
+  },
+  {
+    "key": [
+      690,
+      0,
+      1
+    ],
+    "question": "Is the man with the ball wearing a black tank top and black shorts?",
+    "gt": "No",
+    "image_file": "images/nb_690_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "man",
+      "ball",
+      "wearing",
+      "black",
+      "tank",
+      "top",
+      "black",
+      "shorts"
+    ]
+  },
+  {
+    "key": [
+      770,
+      1,
+      1
+    ],
+    "question": "Is the moon creating a light gray aura against a dark sky?",
+    "gt": "Yes",
+    "image_file": "images/nb_770_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 8,
+    "content": [
+      "moon",
+      "creating",
+      "light",
+      "gray",
+      "aura",
+      "against",
+      "dark",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      784,
+      0,
+      0
+    ],
+    "question": "How many people are present at the table?\nOption: A:Six; B:Five;",
+    "gt": "A",
+    "image_file": "images/nb_784_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "present",
+      "table",
+      "option",
+      "six",
+      "five"
+    ]
+  },
+  {
+    "key": [
+      792,
+      1,
+      0
+    ],
+    "question": "Is there a single child dancer giving a strange look to another in the image?",
+    "gt": "No",
+    "image_file": "images/nb_792_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "single",
+      "child",
+      "dancer",
+      "giving",
+      "strange",
+      "look",
+      "another",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      890,
+      0,
+      0
+    ],
+    "question": "What is the color of the primary structure in the image?\nOption: A:White; B:Red;",
+    "gt": "A",
+    "image_file": "images/nb_890_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "what",
+      "color",
+      "primary",
+      "structure",
+      "image",
+      "option",
+      "white",
+      "red"
+    ]
+  },
+  {
+    "key": [
+      967,
+      0,
+      1
+    ],
+    "question": "Is there a white cat with a black tail on a tan queen-sized bed?",
+    "gt": "No",
+    "image_file": "images/nb_967_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "white",
+      "cat",
+      "black",
+      "tail",
+      "tan",
+      "queen",
+      "sized",
+      "bed"
+    ]
+  },
+  {
+    "key": [
+      981,
+      0,
+      0
+    ],
+    "question": "How many people are preparing food?\nOption: A:Two; B:Three;",
+    "gt": "A",
+    "image_file": "images/nb_981_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "preparing",
+      "food",
+      "option",
+      "two",
+      "three"
+    ]
+  },
+  {
+    "key": [
+      988,
+      0,
+      0
+    ],
+    "question": "How many people are present in the image?\nOption: A:Two; B:Three;",
+    "gt": "A",
+    "image_file": "images/nb_988_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "present",
+      "image",
+      "option",
+      "two",
+      "three"
+    ]
+  },
+  {
+    "key": [
+      1119,
+      0,
+      0
+    ],
+    "question": "How many containers are shown in the scene?\nOption: A:Three; B:Four;",
+    "gt": "A",
+    "image_file": "images/nb_1119_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "containers",
+      "shown",
+      "scene",
+      "option",
+      "three",
+      "four"
+    ]
+  },
+  {
+    "key": [
+      1121,
+      1,
+      0
+    ],
+    "question": "How many street lamps are visible?\nOption: A:Two; B:One;",
+    "gt": "B",
+    "image_file": "images/nb_1121_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "street",
+      "lamps",
+      "visible",
+      "option",
+      "two",
+      "one"
+    ]
+  },
+  {
+    "key": [
+      1129,
+      0,
+      0
+    ],
+    "question": "Is the cat sitting facing sideways with its head turned towards the camera?",
+    "gt": "Yes",
+    "image_file": "images/nb_1129_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 8,
+    "content": [
+      "cat",
+      "sitting",
+      "facing",
+      "sideways",
+      "head",
+      "turned",
+      "towards",
+      "camera"
+    ]
+  },
+  {
+    "key": [
+      1278,
+      0,
+      0
+    ],
+    "question": "How many workers are visible in the image?\nOption: A:Two; B:Three;",
+    "gt": "A",
+    "image_file": "images/nb_1278_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "workers",
+      "visible",
+      "image",
+      "option",
+      "two",
+      "three"
+    ]
+  },
+  {
+    "key": [
+      1300,
+      1,
+      0
+    ],
+    "question": "Are the trash bins located on the walkway's side with the recycling bin on the left?",
+    "gt": "No",
+    "image_file": "images/nb_1300_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "trash",
+      "bins",
+      "located",
+      "walkway",
+      "side",
+      "recycling",
+      "bin",
+      "left"
+    ]
+  },
+  {
+    "key": [
+      1380,
+      1,
+      0
+    ],
+    "question": "How many people are sitting under the umbrella?\nOption: A:Two; B:One;",
+    "gt": "B",
+    "image_file": "images/nb_1380_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 8,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "sitting",
+      "umbrella",
+      "option",
+      "two",
+      "one"
+    ]
+  },
+  {
+    "key": [
+      1462,
+      0,
+      0
+    ],
+    "question": "Is the cypress tree's trunk adorned with branching twigs and a bird's nest?",
+    "gt": "Yes",
+    "image_file": "images/nb_1462_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 8,
+    "content": [
+      "cypress",
+      "tree",
+      "trunk",
+      "adorned",
+      "branching",
+      "twigs",
+      "bird",
+      "nest"
+    ]
+  },
+  {
+    "key": [
+      1569,
+      1,
+      0
+    ],
+    "question": "Is the chalk drawing of a geometrical heart with an 'x' above it seen on a weathered sidewalk?",
+    "gt": "No",
+    "image_file": "images/nb_1569_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "chalk",
+      "drawing",
+      "geometrical",
+      "heart",
+      "above",
+      "seen",
+      "weathered",
+      "sidewalk"
+    ]
+  },
+  {
+    "key": [
+      1657,
+      1,
+      0
+    ],
+    "question": "What shape is the main sign in the image?\nOption: A:Diamond; B:Pentagon;",
+    "gt": "B",
+    "image_file": "images/nb_1657_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 8,
+    "content": [
+      "what",
+      "shape",
+      "main",
+      "sign",
+      "image",
+      "option",
+      "diamond",
+      "pentagon"
+    ]
+  },
+  {
+    "key": [
+      1767,
+      1,
+      0
+    ],
+    "question": "Is the wooden swing backed by a green tree line and a grassy field?",
+    "gt": "No",
+    "image_file": "images/nb_1767_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "wooden",
+      "swing",
+      "backed",
+      "green",
+      "tree",
+      "line",
+      "grassy",
+      "field"
+    ]
+  },
+  {
+    "key": [
+      1807,
+      1,
+      1
+    ],
+    "question": "What is the appearance of the flames?\nOption: A:Contained fire; B:Bursting flames;",
+    "gt": "A",
+    "image_file": "images/nb_1807_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "what",
+      "appearance",
+      "flames",
+      "option",
+      "contained",
+      "fire",
+      "bursting",
+      "flames"
+    ]
+  },
+  {
+    "key": [
+      1845,
+      1,
+      1
+    ],
+    "question": "Is there a person standing on the sidewalk near the bike riders?\nOption: A:No; B:Yes;",
+    "gt": "A",
+    "image_file": "images/nb_1845_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 8,
+    "content": [
+      "person",
+      "standing",
+      "sidewalk",
+      "near",
+      "bike",
+      "riders",
+      "option",
+      "yes"
+    ]
+  },
+  {
+    "key": [
+      1872,
+      1,
+      1
+    ],
+    "question": "Are there three small tanks with different colors and patterns on display under an awning?",
+    "gt": "Yes",
+    "image_file": "images/nb_1872_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 8,
+    "content": [
+      "three",
+      "small",
+      "tanks",
+      "different",
+      "colors",
+      "patterns",
+      "display",
+      "awning"
+    ]
+  },
+  {
+    "key": [
+      1885,
+      0,
+      1
+    ],
+    "question": "Is the primary focus on an individual dressed in khaki shorts and a yellow shirt?",
+    "gt": "No",
+    "image_file": "images/nb_1885_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 8,
+    "content": [
+      "primary",
+      "focus",
+      "individual",
+      "dressed",
+      "khaki",
+      "shorts",
+      "yellow",
+      "shirt"
+    ]
+  },
+  {
+    "key": [
+      1887,
+      1,
+      0
+    ],
+    "question": "What is in the catapult's bucket?\nOption: A:A yellow golf ball; B:Nothing;",
+    "gt": "B",
+    "image_file": "images/nb_1887_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 8,
+    "content": [
+      "what",
+      "catapult",
+      "bucket",
+      "option",
+      "yellow",
+      "golf",
+      "ball",
+      "nothing"
+    ]
+  },
+  {
+    "key": [
+      13,
+      0,
+      0
+    ],
+    "question": "Are there three rows of motorcycles with a tan building featuring graffiti art in the background?",
+    "gt": "Yes",
+    "image_file": "images/nb_13_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "three",
+      "rows",
+      "motorcycles",
+      "tan",
+      "building",
+      "featuring",
+      "graffiti",
+      "art",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      231,
+      0,
+      0
+    ],
+    "question": "How many people are in the field?\nOption: A:Three people; B:Two people;",
+    "gt": "A",
+    "image_file": "images/nb_231_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "field",
+      "option",
+      "three",
+      "people",
+      "two",
+      "people"
+    ]
+  },
+  {
+    "key": [
+      264,
+      1,
+      0
+    ],
+    "question": "How many people are sitting in the scene?\nOption: A:Three; B:Several women;",
+    "gt": "B",
+    "image_file": "images/nb_264_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 9,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "sitting",
+      "scene",
+      "option",
+      "three",
+      "several",
+      "women"
+    ]
+  },
+  {
+    "key": [
+      264,
+      1,
+      1
+    ],
+    "question": "Where are the people seated in the scene?\nOption: A:On benches facing the aisle; B:On a bus;",
+    "gt": "A",
+    "image_file": "images/nb_264_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "where",
+      "people",
+      "seated",
+      "scene",
+      "option",
+      "benches",
+      "facing",
+      "aisle",
+      "bus"
+    ]
+  },
+  {
+    "key": [
+      278,
+      0,
+      0
+    ],
+    "question": "How many main blocks or bricks are in the image?\nOption: A:Four; B:Three;",
+    "gt": "A",
+    "image_file": "images/nb_278_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "how",
+      "many",
+      "main",
+      "blocks",
+      "bricks",
+      "image",
+      "option",
+      "four",
+      "three"
+    ]
+  },
+  {
+    "key": [
+      313,
+      0,
+      1
+    ],
+    "question": "Does the girl on the left look happy while the girl on the right look sad?",
+    "gt": "No",
+    "image_file": "images/nb_313_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 9,
+    "content": [
+      "girl",
+      "left",
+      "look",
+      "happy",
+      "while",
+      "girl",
+      "right",
+      "look",
+      "sad"
+    ]
+  },
+  {
+    "key": [
+      334,
+      1,
+      1
+    ],
+    "question": "How many bags are on the bicycle handlebars?\nOption: A:No bags; B:Two bags;",
+    "gt": "A",
+    "image_file": "images/nb_334_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "how",
+      "many",
+      "bags",
+      "bicycle",
+      "handlebars",
+      "option",
+      "bags",
+      "two",
+      "bags"
+    ]
+  },
+  {
+    "key": [
+      350,
+      0,
+      0
+    ],
+    "question": "How many black symbols are visible on the cardboard?\nOption: A:Two; B:Three;",
+    "gt": "A",
+    "image_file": "images/nb_350_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "how",
+      "many",
+      "black",
+      "symbols",
+      "visible",
+      "cardboard",
+      "option",
+      "two",
+      "three"
+    ]
+  },
+  {
+    "key": [
+      377,
+      0,
+      0
+    ],
+    "question": "Is the picture showing three brown bricks stacked in the middle of a sandy area?",
+    "gt": "Yes",
+    "image_file": "images/nb_377_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "picture",
+      "showing",
+      "three",
+      "brown",
+      "bricks",
+      "stacked",
+      "middle",
+      "sandy",
+      "area"
+    ]
+  },
+  {
+    "key": [
+      541,
+      1,
+      0
+    ],
+    "question": "Is the scene described surrounded by trees, shrubs, and hanging branches under a blue sky?",
+    "gt": "No",
+    "image_file": "images/nb_541_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 9,
+    "content": [
+      "scene",
+      "described",
+      "surrounded",
+      "trees",
+      "shrubs",
+      "hanging",
+      "branches",
+      "blue",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      561,
+      1,
+      1
+    ],
+    "question": "How many workers in uniforms are visible in the image?\nOption: A:Two; B:One;",
+    "gt": "A",
+    "image_file": "images/nb_561_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "how",
+      "many",
+      "workers",
+      "uniforms",
+      "visible",
+      "image",
+      "option",
+      "two",
+      "one"
+    ]
+  },
+  {
+    "key": [
+      693,
+      1,
+      1
+    ],
+    "question": "Is there a see-through wooden fence made up of crossed wooden slats in the background?",
+    "gt": "Yes",
+    "image_file": "images/nb_693_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "see",
+      "through",
+      "wooden",
+      "fence",
+      "made",
+      "crossed",
+      "wooden",
+      "slats",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      700,
+      0,
+      1
+    ],
+    "question": "Are there green bushes on the left side of the rock with petroglyphs of a person with wavy arms?",
+    "gt": "No",
+    "image_file": "images/nb_700_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 9,
+    "content": [
+      "green",
+      "bushes",
+      "left",
+      "side",
+      "rock",
+      "petroglyphs",
+      "person",
+      "wavy",
+      "arms"
+    ]
+  },
+  {
+    "key": [
+      799,
+      0,
+      1
+    ],
+    "question": "Is there a cat sitting on a grey cabinet in front of another cat sitting on the stairs?",
+    "gt": "No",
+    "image_file": "images/nb_799_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 9,
+    "content": [
+      "cat",
+      "sitting",
+      "grey",
+      "cabinet",
+      "front",
+      "another",
+      "cat",
+      "sitting",
+      "stairs"
+    ]
+  },
+  {
+    "key": [
+      916,
+      1,
+      1
+    ],
+    "question": "Does the image depict a stone with three bears lightly carved and oriented to the right?",
+    "gt": "Yes",
+    "image_file": "images/nb_916_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "image",
+      "depict",
+      "stone",
+      "three",
+      "bears",
+      "lightly",
+      "carved",
+      "oriented",
+      "right"
+    ]
+  },
+  {
+    "key": [
+      1198,
+      0,
+      0
+    ],
+    "question": "How many children are wearing life jackets?\nOption: A: Five;  B: Eight;",
+    "gt": "A",
+    "image_file": "images/nb_1198_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "how",
+      "many",
+      "children",
+      "wearing",
+      "life",
+      "jackets",
+      "option",
+      "five",
+      "eight"
+    ]
+  },
+  {
+    "key": [
+      1211,
+      0,
+      0
+    ],
+    "question": "What is the woman holding in her hand?\nOption: A:A coconut drink; B:This detail is not mentioned;",
+    "gt": "A",
+    "image_file": "images/nb_1211_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "what",
+      "woman",
+      "holding",
+      "hand",
+      "option",
+      "coconut",
+      "drink",
+      "detail",
+      "mentioned"
+    ]
+  },
+  {
+    "key": [
+      1373,
+      0,
+      0
+    ],
+    "question": "What type of surface is the snowboarder interacting with?\nOption: A:A wooden box.; B:A ramp.;",
+    "gt": "A",
+    "image_file": "images/nb_1373_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "what",
+      "type",
+      "surface",
+      "snowboarder",
+      "interacting",
+      "option",
+      "wooden",
+      "box",
+      "ramp"
+    ]
+  },
+  {
+    "key": [
+      1456,
+      0,
+      0
+    ],
+    "question": "What is parked on the cement?\nOption: A:A white plane; B:An airplane fuel truck;",
+    "gt": "A",
+    "image_file": "images/nb_1456_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 9,
+    "content": [
+      "what",
+      "parked",
+      "cement",
+      "option",
+      "white",
+      "plane",
+      "airplane",
+      "fuel",
+      "truck"
+    ]
+  },
+  {
+    "key": [
+      1669,
+      1,
+      1
+    ],
+    "question": "Is the tree trunk decorated as an aged wooden fairy house with three sections?",
+    "gt": "Yes",
+    "image_file": "images/nb_1669_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "tree",
+      "trunk",
+      "decorated",
+      "aged",
+      "wooden",
+      "fairy",
+      "house",
+      "three",
+      "sections"
+    ]
+  },
+  {
+    "key": [
+      1709,
+      1,
+      0
+    ],
+    "question": "Is there a man wearing a blue shirt sitting beside a woman in a red dress?",
+    "gt": "No",
+    "image_file": "images/nb_1709_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 9,
+    "content": [
+      "man",
+      "wearing",
+      "blue",
+      "shirt",
+      "sitting",
+      "beside",
+      "woman",
+      "red",
+      "dress"
+    ]
+  },
+  {
+    "key": [
+      1717,
+      0,
+      0
+    ],
+    "question": "Do the displayed jeeps have a white star and \"AAA 752CA\" painted on their left bumper?",
+    "gt": "Yes",
+    "image_file": "images/nb_1717_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "displayed",
+      "jeeps",
+      "have",
+      "white",
+      "star",
+      "aaa",
+      "painted",
+      "left",
+      "bumper"
+    ]
+  },
+  {
+    "key": [
+      1825,
+      1,
+      1
+    ],
+    "question": "Is the tennis court within a stadium featuring aluminum benches and distant trees?",
+    "gt": "Yes",
+    "image_file": "images/nb_1825_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "tennis",
+      "court",
+      "within",
+      "stadium",
+      "featuring",
+      "aluminum",
+      "benches",
+      "distant",
+      "trees"
+    ]
+  },
+  {
+    "key": [
+      1842,
+      0,
+      0
+    ],
+    "question": "Is the moon in a clear, light blue sky framed by green tree crowns?",
+    "gt": "Yes",
+    "image_file": "images/nb_1842_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 9,
+    "content": [
+      "moon",
+      "clear",
+      "light",
+      "blue",
+      "sky",
+      "framed",
+      "green",
+      "tree",
+      "crowns"
+    ]
+  },
+  {
+    "key": [
+      75,
+      0,
+      0
+    ],
+    "question": "What is the position of the left leg of the rider?\nOption: A:Touching the floor; B:On the foot peg;",
+    "gt": "A",
+    "image_file": "images/nb_75_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "position",
+      "left",
+      "leg",
+      "rider",
+      "option",
+      "touching",
+      "floor",
+      "foot",
+      "peg"
+    ]
+  },
+  {
+    "key": [
+      102,
+      0,
+      0
+    ],
+    "question": "What object is the dog carrying in its mouth?\nOption: A:A ball; B:A piece of yellow rope;",
+    "gt": "A",
+    "image_file": "images/nb_102_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "object",
+      "dog",
+      "carrying",
+      "mouth",
+      "option",
+      "ball",
+      "piece",
+      "yellow",
+      "rope"
+    ]
+  },
+  {
+    "key": [
+      122,
+      1,
+      1
+    ],
+    "question": "What is the person wearing in the image?\nOption: A:Yellow and orange clothes; B:A colorful shirt;",
+    "gt": "A",
+    "image_file": "images/nb_122_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "person",
+      "wearing",
+      "image",
+      "option",
+      "yellow",
+      "orange",
+      "clothes",
+      "colorful",
+      "shirt"
+    ]
+  },
+  {
+    "key": [
+      435,
+      0,
+      0
+    ],
+    "question": "How many people are mentioned in the image?\nOption: A:Multiple men; B:One man;",
+    "gt": "A",
+    "image_file": "images/nb_435_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "mentioned",
+      "image",
+      "option",
+      "multiple",
+      "men",
+      "one",
+      "man"
+    ]
+  },
+  {
+    "key": [
+      440,
+      0,
+      0
+    ],
+    "question": "What are the workers wearing?\nOption: A:Orange clothes; B:Green clothes and orange cloth;",
+    "gt": "A",
+    "image_file": "images/nb_440_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "workers",
+      "wearing",
+      "option",
+      "orange",
+      "clothes",
+      "green",
+      "clothes",
+      "orange",
+      "cloth"
+    ]
+  },
+  {
+    "key": [
+      513,
+      1,
+      1
+    ],
+    "question": "Where is the man located in the image?\nOption: A:In a nighttime entertainment area; B:In the middle of the crowd;",
+    "gt": "A",
+    "image_file": "images/nb_513_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "where",
+      "man",
+      "located",
+      "image",
+      "option",
+      "nighttime",
+      "entertainment",
+      "area",
+      "middle",
+      "crowd"
+    ]
+  },
+  {
+    "key": [
+      729,
+      0,
+      0
+    ],
+    "question": "What is the man wearing?\nOption: A:A navy jacket in pure blue; B:Army camouflage;",
+    "gt": "A",
+    "image_file": "images/nb_729_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "man",
+      "wearing",
+      "option",
+      "navy",
+      "jacket",
+      "pure",
+      "blue",
+      "army",
+      "camouflage"
+    ]
+  },
+  {
+    "key": [
+      974,
+      1,
+      1
+    ],
+    "question": "What is the person wearing?\nOption: A:White swim trunks.; B:Black swim trunks.;",
+    "gt": "A",
+    "image_file": "images/nb_974_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "person",
+      "wearing",
+      "option",
+      "white",
+      "swim",
+      "trunks",
+      "black",
+      "swim",
+      "trunks"
+    ]
+  },
+  {
+    "key": [
+      990,
+      0,
+      1
+    ],
+    "question": "What is the texture or appearance of the vegetable?\nOption: A:Lumpy and warty with black spots; B:Smooth;",
+    "gt": "B",
+    "image_file": "images/nb_990_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 10,
+    "content": [
+      "what",
+      "texture",
+      "appearance",
+      "vegetable",
+      "option",
+      "lumpy",
+      "warty",
+      "black",
+      "spots",
+      "smooth"
+    ]
+  },
+  {
+    "key": [
+      1038,
+      0,
+      0
+    ],
+    "question": "How many people are running in the images?\nOption: A:Two people; B:Three people;",
+    "gt": "A",
+    "image_file": "images/nb_1038_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "running",
+      "images",
+      "option",
+      "two",
+      "people",
+      "three",
+      "people"
+    ]
+  },
+  {
+    "key": [
+      1039,
+      1,
+      1
+    ],
+    "question": "Does the wall have varying size holes more compact in the middle and spreading upwards?",
+    "gt": "Yes",
+    "image_file": "images/nb_1039_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 10,
+    "content": [
+      "wall",
+      "have",
+      "varying",
+      "size",
+      "holes",
+      "more",
+      "compact",
+      "middle",
+      "spreading",
+      "upwards"
+    ]
+  },
+  {
+    "key": [
+      1053,
+      0,
+      0
+    ],
+    "question": "What is the man doing with his hands?\nOption: A:Arms spread wide; B:Hands on his hips;",
+    "gt": "A",
+    "image_file": "images/nb_1053_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "man",
+      "doing",
+      "hands",
+      "option",
+      "arms",
+      "spread",
+      "wide",
+      "hands",
+      "hips"
+    ]
+  },
+  {
+    "key": [
+      1065,
+      1,
+      1
+    ],
+    "question": "What is the primary action being performed by the hands?\nOption: A:Carrying the cat; B:Caressing the kitten;",
+    "gt": "A",
+    "image_file": "images/nb_1065_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "primary",
+      "action",
+      "performed",
+      "hands",
+      "option",
+      "carrying",
+      "cat",
+      "caressing",
+      "kitten"
+    ]
+  },
+  {
+    "key": [
+      1110,
+      0,
+      1
+    ],
+    "question": "What are the people doing at the table?\nOption: A:Talking and having drinks; B:Clowning around;",
+    "gt": "B",
+    "image_file": "images/nb_1110_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 10,
+    "content": [
+      "what",
+      "people",
+      "doing",
+      "table",
+      "option",
+      "talking",
+      "having",
+      "drinks",
+      "clowning",
+      "around"
+    ]
+  },
+  {
+    "key": [
+      1223,
+      1,
+      0
+    ],
+    "question": "What is the man doing in the image?\nOption: A:The man is seated and looking on.; B:There is no man in the image.;",
+    "gt": "B",
+    "image_file": "images/nb_1223_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 10,
+    "content": [
+      "what",
+      "man",
+      "doing",
+      "image",
+      "option",
+      "man",
+      "seated",
+      "looking",
+      "man",
+      "image"
+    ]
+  },
+  {
+    "key": [
+      1295,
+      1,
+      1
+    ],
+    "question": "Is there a large glass sphere light fixture hanging near a screen glass door?",
+    "gt": "Yes",
+    "image_file": "images/nb_1295_1.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 10,
+    "content": [
+      "large",
+      "glass",
+      "sphere",
+      "light",
+      "fixture",
+      "hanging",
+      "near",
+      "screen",
+      "glass",
+      "door"
+    ]
+  },
+  {
+    "key": [
+      1426,
+      0,
+      0
+    ],
+    "question": "Who is preparing or operating something?\nOption: A:A European man; B:A woman in a black shirt;",
+    "gt": "A",
+    "image_file": "images/nb_1426_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "who",
+      "preparing",
+      "operating",
+      "something",
+      "option",
+      "european",
+      "man",
+      "woman",
+      "black",
+      "shirt"
+    ]
+  },
+  {
+    "key": [
+      1464,
+      0,
+      0
+    ],
+    "question": "What type of structure is visible in the body of water?\nOption: A:A gray tube; B:A canal;",
+    "gt": "A",
+    "image_file": "images/nb_1464_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "type",
+      "structure",
+      "visible",
+      "body",
+      "water",
+      "option",
+      "gray",
+      "tube",
+      "canal"
+    ]
+  },
+  {
+    "key": [
+      1494,
+      0,
+      0
+    ],
+    "question": "What type of footprints are on the sand?\nOption: A:Raccoon footprints; B:Two distinct footprints;",
+    "gt": "A",
+    "image_file": "images/nb_1494_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 10,
+    "content": [
+      "what",
+      "type",
+      "footprints",
+      "sand",
+      "option",
+      "raccoon",
+      "footprints",
+      "two",
+      "distinct",
+      "footprints"
+    ]
+  },
+  {
+    "key": [
+      1856,
+      1,
+      0
+    ],
+    "question": "How many workers are at work in the picture?\nOption: A:Four; B:Less than four;",
+    "gt": "B",
+    "image_file": "images/nb_1856_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 10,
+    "content": [
+      "how",
+      "many",
+      "workers",
+      "work",
+      "picture",
+      "option",
+      "four",
+      "less",
+      "than",
+      "four"
+    ]
+  },
+  {
+    "key": [
+      161,
+      1,
+      1
+    ],
+    "question": "Which part of the leaf is pointing to the right side of the image?\nOption: A:The jagged edge; B:The stem;",
+    "gt": "A",
+    "image_file": "images/nb_161_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "which",
+      "part",
+      "leaf",
+      "pointing",
+      "right",
+      "side",
+      "image",
+      "option",
+      "jagged",
+      "edge",
+      "stem"
+    ]
+  },
+  {
+    "key": [
+      201,
+      0,
+      1
+    ],
+    "question": "Is the kitten and cat engaged in play, facing each other while sitting on a workout bench?",
+    "gt": "No",
+    "image_file": "images/nb_201_0.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 11,
+    "content": [
+      "kitten",
+      "cat",
+      "engaged",
+      "play",
+      "facing",
+      "each",
+      "other",
+      "while",
+      "sitting",
+      "workout",
+      "bench"
+    ]
+  },
+  {
+    "key": [
+      207,
+      1,
+      1
+    ],
+    "question": "Toward which direction is the shadow of the onion extending?\nOption: A:Bottom right; B:Bottom left;",
+    "gt": "A",
+    "image_file": "images/nb_207_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "toward",
+      "which",
+      "direction",
+      "shadow",
+      "onion",
+      "extending",
+      "option",
+      "bottom",
+      "right",
+      "bottom",
+      "left"
+    ]
+  },
+  {
+    "key": [
+      274,
+      1,
+      1
+    ],
+    "question": "What is the orientation of the insect's head?\nOption: A:Pointed toward the left; B:Facing towards the right;",
+    "gt": "A",
+    "image_file": "images/nb_274_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "what",
+      "orientation",
+      "insect",
+      "head",
+      "option",
+      "pointed",
+      "toward",
+      "left",
+      "facing",
+      "towards",
+      "right"
+    ]
+  },
+  {
+    "key": [
+      290,
+      0,
+      0
+    ],
+    "question": "How many men are playing guitars in the image?\nOption: A:One man; B:Two men;",
+    "gt": "A",
+    "image_file": "images/nb_290_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "how",
+      "many",
+      "men",
+      "playing",
+      "guitars",
+      "image",
+      "option",
+      "one",
+      "man",
+      "two",
+      "men"
+    ]
+  },
+  {
+    "key": [
+      456,
+      1,
+      0
+    ],
+    "question": "Is there a partial tree visible at the bottom with large cumulus formations dominating the right side of the sky?",
+    "gt": "No",
+    "image_file": "images/nb_456_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 11,
+    "content": [
+      "partial",
+      "tree",
+      "visible",
+      "bottom",
+      "large",
+      "cumulus",
+      "formations",
+      "dominating",
+      "right",
+      "side",
+      "sky"
+    ]
+  },
+  {
+    "key": [
+      747,
+      0,
+      0
+    ],
+    "question": "What type of material are the bordering bricks made of?\nOption: A:Concrete sacks; B:Stone slabs;",
+    "gt": "A",
+    "image_file": "images/nb_747_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "what",
+      "type",
+      "material",
+      "bordering",
+      "bricks",
+      "made",
+      "option",
+      "concrete",
+      "sacks",
+      "stone",
+      "slabs"
+    ]
+  },
+  {
+    "key": [
+      878,
+      1,
+      1
+    ],
+    "question": "What direction is the alligator facing?\nOption: A:Toward the bottom left; B:Forward at an angle to the right;",
+    "gt": "A",
+    "image_file": "images/nb_878_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "what",
+      "direction",
+      "alligator",
+      "facing",
+      "option",
+      "toward",
+      "bottom",
+      "left",
+      "forward",
+      "angle",
+      "right"
+    ]
+  },
+  {
+    "key": [
+      1197,
+      0,
+      0
+    ],
+    "question": "How many players in white and purple uniforms are involved in the tackle?\nOption: A:Two; B:One;",
+    "gt": "A",
+    "image_file": "images/nb_1197_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "how",
+      "many",
+      "players",
+      "white",
+      "purple",
+      "uniforms",
+      "involved",
+      "tackle",
+      "option",
+      "two",
+      "one"
+    ]
+  },
+  {
+    "key": [
+      1236,
+      1,
+      1
+    ],
+    "question": "Is the baseball player fully airborne?\nOption: A:No, the player is partially on the ground.; B:No, the player is running and reaching.;",
+    "gt": "A",
+    "image_file": "images/nb_1236_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "baseball",
+      "player",
+      "fully",
+      "airborne",
+      "option",
+      "player",
+      "partially",
+      "ground",
+      "player",
+      "running",
+      "reaching"
+    ]
+  },
+  {
+    "key": [
+      1408,
+      1,
+      1
+    ],
+    "question": "How many mountains or cliffs are depicted in the image?\nOption: A:Two mountains; B:One cliff;",
+    "gt": "A",
+    "image_file": "images/nb_1408_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "how",
+      "many",
+      "mountains",
+      "cliffs",
+      "depicted",
+      "image",
+      "option",
+      "two",
+      "mountains",
+      "one",
+      "cliff"
+    ]
+  },
+  {
+    "key": [
+      1612,
+      1,
+      0
+    ],
+    "question": "Does the image show one man casting a line while another adjusts equipment in the background?",
+    "gt": "No",
+    "image_file": "images/nb_1612_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 11,
+    "content": [
+      "image",
+      "show",
+      "one",
+      "man",
+      "casting",
+      "line",
+      "while",
+      "another",
+      "adjusts",
+      "equipment",
+      "background"
+    ]
+  },
+  {
+    "key": [
+      1643,
+      0,
+      0
+    ],
+    "question": "How many rows of motorcycles are there in the parking lot?\nOption: A:Three rows; B:Two rows;",
+    "gt": "A",
+    "image_file": "images/nb_1643_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "how",
+      "many",
+      "rows",
+      "motorcycles",
+      "parking",
+      "lot",
+      "option",
+      "three",
+      "rows",
+      "two",
+      "rows"
+    ]
+  },
+  {
+    "key": [
+      1805,
+      1,
+      1
+    ],
+    "question": "What is the setting of the image?\nOption: A:A woman at an event; B:People congregated around a street sign;",
+    "gt": "A",
+    "image_file": "images/nb_1805_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "what",
+      "setting",
+      "image",
+      "option",
+      "woman",
+      "event",
+      "people",
+      "congregated",
+      "around",
+      "street",
+      "sign"
+    ]
+  },
+  {
+    "key": [
+      1868,
+      0,
+      0
+    ],
+    "question": "What is the action of the people in the image?\nOption: A:They are marching.; B:They are walking down the street greeting the crowd.;",
+    "gt": "A",
+    "image_file": "images/nb_1868_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 11,
+    "content": [
+      "what",
+      "action",
+      "people",
+      "image",
+      "option",
+      "marching",
+      "walking",
+      "down",
+      "street",
+      "greeting",
+      "crowd"
+    ]
+  },
+  {
+    "key": [
+      128,
+      1,
+      1
+    ],
+    "question": "What are the primary colors visible on the object?\nOption: A:Blue; B:Black, blue, white, bronze, and copper;",
+    "gt": "A",
+    "image_file": "images/nb_128_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "what",
+      "primary",
+      "colors",
+      "visible",
+      "object",
+      "option",
+      "blue",
+      "black",
+      "blue",
+      "white",
+      "bronze",
+      "copper"
+    ]
+  },
+  {
+    "key": [
+      595,
+      1,
+      0
+    ],
+    "question": "Is the image showing a large seven story office building partially covered with glass windows and panels?",
+    "gt": "No",
+    "image_file": "images/nb_595_1.jpg",
+    "sti_pred": "Yes",
+    "sit_pred": "No",
+    "stit_pred": "No",
+    "n_content": 12,
+    "content": [
+      "image",
+      "showing",
+      "large",
+      "seven",
+      "story",
+      "office",
+      "building",
+      "partially",
+      "covered",
+      "glass",
+      "windows",
+      "panels"
+    ]
+  },
+  {
+    "key": [
+      781,
+      1,
+      1
+    ],
+    "question": "What is the person in the image doing?\nOption: A:Heating up some glass to make something.; B:Working with a glass bottle.;",
+    "gt": "A",
+    "image_file": "images/nb_781_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "what",
+      "person",
+      "image",
+      "doing",
+      "option",
+      "heating",
+      "glass",
+      "make",
+      "something",
+      "working",
+      "glass",
+      "bottle"
+    ]
+  },
+  {
+    "key": [
+      837,
+      0,
+      1
+    ],
+    "question": "What type of cat is visible in the image?\nOption: A:Gray tabby kitten; B:Dark brown cat;",
+    "gt": "B",
+    "image_file": "images/nb_837_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 12,
+    "content": [
+      "what",
+      "type",
+      "cat",
+      "visible",
+      "image",
+      "option",
+      "gray",
+      "tabby",
+      "kitten",
+      "dark",
+      "brown",
+      "cat"
+    ]
+  },
+  {
+    "key": [
+      862,
+      1,
+      1
+    ],
+    "question": "What type of trail is the person on?\nOption: A:A path at the foot of some snowcapped mountains.; B:A high mountain trail.;",
+    "gt": "A",
+    "image_file": "images/nb_862_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "what",
+      "type",
+      "trail",
+      "person",
+      "option",
+      "path",
+      "foot",
+      "snowcapped",
+      "mountains",
+      "high",
+      "mountain",
+      "trail"
+    ]
+  },
+  {
+    "key": [
+      1017,
+      0,
+      0
+    ],
+    "question": "How many individuals are present in the image?\nOption: A:A half dozen construction workers; B:Three men;",
+    "gt": "A",
+    "image_file": "images/nb_1017_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "how",
+      "many",
+      "individuals",
+      "present",
+      "image",
+      "option",
+      "half",
+      "dozen",
+      "construction",
+      "workers",
+      "three",
+      "men"
+    ]
+  },
+  {
+    "key": [
+      1095,
+      0,
+      0
+    ],
+    "question": "What kind of stunt is being performed?\nOption: A:A stunt on a skateboarding surface; B:Hanging off the edge of a bowl;",
+    "gt": "A",
+    "image_file": "images/nb_1095_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "what",
+      "kind",
+      "stunt",
+      "performed",
+      "option",
+      "stunt",
+      "skateboarding",
+      "surface",
+      "hanging",
+      "off",
+      "edge",
+      "bowl"
+    ]
+  },
+  {
+    "key": [
+      1150,
+      0,
+      0
+    ],
+    "question": "What safety equipment is the man using?\nOption: A:Mask; B:Hard-hat and orange safety vest;",
+    "gt": "A",
+    "image_file": "images/nb_1150_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "what",
+      "safety",
+      "equipment",
+      "man",
+      "using",
+      "option",
+      "mask",
+      "hard",
+      "hat",
+      "orange",
+      "safety",
+      "vest"
+    ]
+  },
+  {
+    "key": [
+      1314,
+      0,
+      0
+    ],
+    "question": "How many people are riding bicycles?\nOption: A:Two people; B:More than two people;",
+    "gt": "A",
+    "image_file": "images/nb_1314_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "how",
+      "many",
+      "people",
+      "riding",
+      "bicycles",
+      "option",
+      "two",
+      "people",
+      "more",
+      "than",
+      "two",
+      "people"
+    ]
+  },
+  {
+    "key": [
+      1478,
+      0,
+      0
+    ],
+    "question": "Is the person holding the handle bars of the motor bike with the bike's front tire almost straight upward?",
+    "gt": "Yes",
+    "image_file": "images/nb_1478_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 12,
+    "content": [
+      "person",
+      "holding",
+      "handle",
+      "bars",
+      "motor",
+      "bike",
+      "bike",
+      "front",
+      "tire",
+      "almost",
+      "straight",
+      "upward"
+    ]
+  },
+  {
+    "key": [
+      1596,
+      1,
+      1
+    ],
+    "question": "What is the girl trying to mimic or achieve?\nOption: A:Performing a jump from the swing; B:Trying to be like Spiderman;",
+    "gt": "A",
+    "image_file": "images/nb_1596_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 12,
+    "content": [
+      "what",
+      "girl",
+      "trying",
+      "mimic",
+      "achieve",
+      "option",
+      "performing",
+      "jump",
+      "swing",
+      "trying",
+      "like",
+      "spiderman"
+    ]
+  },
+  {
+    "key": [
+      1703,
+      0,
+      0
+    ],
+    "question": "Does the image show a sculpture of a face made of shiny enamelled clay with spindles coming out of the top?",
+    "gt": "Yes",
+    "image_file": "images/nb_1703_0.jpg",
+    "sti_pred": "No",
+    "sit_pred": "Yes",
+    "stit_pred": "Yes",
+    "n_content": 12,
+    "content": [
+      "image",
+      "show",
+      "sculpture",
+      "face",
+      "made",
+      "shiny",
+      "enamelled",
+      "clay",
+      "spindles",
+      "coming",
+      "out",
+      "top"
+    ]
+  },
+  {
+    "key": [
+      416,
+      0,
+      0
+    ],
+    "question": "What colors are the pillars or walls near the resting man?\nOption: A:Red and blue wars.; B:Tan wall.;",
+    "gt": "A",
+    "image_file": "images/nb_416_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "colors",
+      "pillars",
+      "walls",
+      "near",
+      "resting",
+      "man",
+      "option",
+      "red",
+      "blue",
+      "wars",
+      "tan",
+      "wall"
+    ]
+  },
+  {
+    "key": [
+      654,
+      0,
+      0
+    ],
+    "question": "What kind of fence is present in the image?\nOption: A:A wooden fence; B:A chain-link fence with privacy mesh;",
+    "gt": "A",
+    "image_file": "images/nb_654_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "kind",
+      "fence",
+      "present",
+      "image",
+      "option",
+      "wooden",
+      "fence",
+      "chain",
+      "link",
+      "fence",
+      "privacy",
+      "mesh"
+    ]
+  },
+  {
+    "key": [
+      787,
+      0,
+      0
+    ],
+    "question": "What is the setting of the event in the image?\nOption: A: and crowded with people; B:In front of a group of people with a man playing his guitar;",
+    "gt": "A",
+    "image_file": "images/nb_787_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "setting",
+      "event",
+      "image",
+      "option",
+      "crowded",
+      "people",
+      "front",
+      "group",
+      "people",
+      "man",
+      "playing",
+      "guitar"
+    ]
+  },
+  {
+    "key": [
+      826,
+      1,
+      1
+    ],
+    "question": "Where are the little boys located in the image?\nOption: A:Watching performers on a stage at a sideshow; B:Behind a seated woman;",
+    "gt": "A",
+    "image_file": "images/nb_826_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "where",
+      "little",
+      "boys",
+      "located",
+      "image",
+      "option",
+      "watching",
+      "performers",
+      "stage",
+      "sideshow",
+      "behind",
+      "seated",
+      "woman"
+    ]
+  },
+  {
+    "key": [
+      903,
+      0,
+      1
+    ],
+    "question": "What is the woman offering to help with?\nOption: A:Helping a perplexed woman; B:A person taking a picture of a piece of art;",
+    "gt": "B",
+    "image_file": "images/nb_903_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 13,
+    "content": [
+      "what",
+      "woman",
+      "offering",
+      "help",
+      "option",
+      "helping",
+      "perplexed",
+      "woman",
+      "person",
+      "taking",
+      "picture",
+      "piece",
+      "art"
+    ]
+  },
+  {
+    "key": [
+      918,
+      0,
+      0
+    ],
+    "question": "What is the color of the sky in the image?\nOption: A:Gloomy and covered in clouds; B:Blue and filled with large white clouds;",
+    "gt": "A",
+    "image_file": "images/nb_918_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "color",
+      "sky",
+      "image",
+      "option",
+      "gloomy",
+      "covered",
+      "clouds",
+      "blue",
+      "filled",
+      "large",
+      "white",
+      "clouds"
+    ]
+  },
+  {
+    "key": [
+      1093,
+      1,
+      1
+    ],
+    "question": "What age group do the people in the image most likely belong to?\nOption: A:Young friends; B:A mix of adults;",
+    "gt": "A",
+    "image_file": "images/nb_1093_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "age",
+      "group",
+      "people",
+      "image",
+      "most",
+      "likely",
+      "belong",
+      "option",
+      "young",
+      "friends",
+      "mix",
+      "adults"
+    ]
+  },
+  {
+    "key": [
+      1180,
+      0,
+      0
+    ],
+    "question": "What is the dog doing in the image?\nOption: A:Carrying a ball.; B:Running to catch a ball while stirring up dirt.;",
+    "gt": "A",
+    "image_file": "images/nb_1180_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "dog",
+      "doing",
+      "image",
+      "option",
+      "carrying",
+      "ball",
+      "running",
+      "catch",
+      "ball",
+      "while",
+      "stirring",
+      "dirt"
+    ]
+  },
+  {
+    "key": [
+      1232,
+      1,
+      0
+    ],
+    "question": "What fruits are present in the image?\nOption: A:Two avocados, a banana, and a melon; B:Two cantaloupes, a banana, and an avocado;",
+    "gt": "B",
+    "image_file": "images/nb_1232_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 13,
+    "content": [
+      "what",
+      "fruits",
+      "present",
+      "image",
+      "option",
+      "two",
+      "avocados",
+      "banana",
+      "melon",
+      "two",
+      "cantaloupes",
+      "banana",
+      "avocado"
+    ]
+  },
+  {
+    "key": [
+      1273,
+      1,
+      1
+    ],
+    "question": "What activity is the person in the image engaged in?\nOption: A:Working with some sort of dirty material; B:Working with something to his left;",
+    "gt": "A",
+    "image_file": "images/nb_1273_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "activity",
+      "person",
+      "image",
+      "engaged",
+      "option",
+      "working",
+      "sort",
+      "dirty",
+      "material",
+      "working",
+      "something",
+      "left"
+    ]
+  },
+  {
+    "key": [
+      1278,
+      1,
+      1
+    ],
+    "question": "What type of work are the individuals in the image performing?\nOption: A:Performing construction work; B:Repairing electrical lines;",
+    "gt": "A",
+    "image_file": "images/nb_1278_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "type",
+      "work",
+      "individuals",
+      "image",
+      "performing",
+      "option",
+      "performing",
+      "construction",
+      "work",
+      "repairing",
+      "electrical",
+      "lines"
+    ]
+  },
+  {
+    "key": [
+      1291,
+      1,
+      1
+    ],
+    "question": "How many men are prominently featured in the image?\nOption: A:More than three men; B:Three men;",
+    "gt": "A",
+    "image_file": "images/nb_1291_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "how",
+      "many",
+      "men",
+      "prominently",
+      "featured",
+      "image",
+      "option",
+      "more",
+      "than",
+      "three",
+      "men",
+      "three",
+      "men"
+    ]
+  },
+  {
+    "key": [
+      1320,
+      1,
+      1
+    ],
+    "question": "Where are the children located?\nOption: A:The children are outdoors near a play set.; B:The child is underneath some playground equipment.;",
+    "gt": "A",
+    "image_file": "images/nb_1320_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "where",
+      "children",
+      "located",
+      "option",
+      "children",
+      "outdoors",
+      "near",
+      "play",
+      "set",
+      "child",
+      "underneath",
+      "playground",
+      "equipment"
+    ]
+  },
+  {
+    "key": [
+      1364,
+      1,
+      1
+    ],
+    "question": "What additional piece of safety equipment is the person wearing or holding?\nOption: A:Yellow hard hat; B:Rope;",
+    "gt": "A",
+    "image_file": "images/nb_1364_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "additional",
+      "piece",
+      "safety",
+      "equipment",
+      "person",
+      "wearing",
+      "holding",
+      "option",
+      "yellow",
+      "hard",
+      "hat",
+      "rope"
+    ]
+  },
+  {
+    "key": [
+      1426,
+      1,
+      1
+    ],
+    "question": "What type of activity is taking place?\nOption: A:Operating a beverage machine; B:Preparing food in a street cafe;",
+    "gt": "A",
+    "image_file": "images/nb_1426_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "type",
+      "activity",
+      "taking",
+      "place",
+      "option",
+      "operating",
+      "beverage",
+      "machine",
+      "preparing",
+      "food",
+      "street",
+      "cafe"
+    ]
+  },
+  {
+    "key": [
+      1646,
+      0,
+      0
+    ],
+    "question": "What is the setting or background for the interaction?\nOption: A:Outside of a building; B:A busy street with many people and decorative businesses;",
+    "gt": "A",
+    "image_file": "images/nb_1646_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "setting",
+      "background",
+      "interaction",
+      "option",
+      "outside",
+      "building",
+      "busy",
+      "street",
+      "many",
+      "people",
+      "decorative",
+      "businesses"
+    ]
+  },
+  {
+    "key": [
+      1731,
+      1,
+      0
+    ],
+    "question": "How many towers does the church have?\nOption: A:Twin towers with pointed tips; B:Single cement tower;",
+    "gt": "B",
+    "image_file": "images/nb_1731_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 13,
+    "content": [
+      "how",
+      "many",
+      "towers",
+      "church",
+      "have",
+      "option",
+      "twin",
+      "towers",
+      "pointed",
+      "tips",
+      "single",
+      "cement",
+      "tower"
+    ]
+  },
+  {
+    "key": [
+      1807,
+      0,
+      0
+    ],
+    "question": "What is the size of the stove or structure the man is dealing with?\nOption: A:Large stove; B:Medium-sized metal structure;",
+    "gt": "A",
+    "image_file": "images/nb_1807_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "size",
+      "stove",
+      "structure",
+      "man",
+      "dealing",
+      "option",
+      "large",
+      "stove",
+      "medium",
+      "sized",
+      "metal",
+      "structure"
+    ]
+  },
+  {
+    "key": [
+      1827,
+      0,
+      0
+    ],
+    "question": "What is the relationship between the coconut and the waves?\nOption: A:There is some distance between the coconut and the waves; B:The coconut is being hit by the waves;",
+    "gt": "A",
+    "image_file": "images/nb_1827_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 13,
+    "content": [
+      "what",
+      "relationship",
+      "between",
+      "coconut",
+      "waves",
+      "option",
+      "distance",
+      "between",
+      "coconut",
+      "waves",
+      "coconut",
+      "hit",
+      "waves"
+    ]
+  },
+  {
+    "key": [
+      101,
+      1,
+      1
+    ],
+    "question": "What kind of interaction is the man having?\nOption: A:The man is talking to a woman and an ambiguous individual.; B:The man is pointing at a woman.;",
+    "gt": "A",
+    "image_file": "images/nb_101_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 14,
+    "content": [
+      "what",
+      "kind",
+      "interaction",
+      "man",
+      "having",
+      "option",
+      "man",
+      "talking",
+      "woman",
+      "ambiguous",
+      "individual",
+      "man",
+      "pointing",
+      "woman"
+    ]
+  },
+  {
+    "key": [
+      127,
+      0,
+      0
+    ],
+    "question": "Who is walking in the image?\nOption: A:Two Muslim men wearing head wraps.; B:Two men and a small child.;",
+    "gt": "A",
+    "image_file": "images/nb_127_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 14,
+    "content": [
+      "who",
+      "walking",
+      "image",
+      "option",
+      "two",
+      "muslim",
+      "men",
+      "wearing",
+      "head",
+      "wraps",
+      "two",
+      "men",
+      "small",
+      "child"
+    ]
+  },
+  {
+    "key": [
+      174,
+      1,
+      1
+    ],
+    "question": "What instructions or signs are present in the image?\nOption: A:Word clouds and yellow arrows; B:Take, read, or leave a book;",
+    "gt": "A",
+    "image_file": "images/nb_174_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 14,
+    "content": [
+      "what",
+      "instructions",
+      "signs",
+      "present",
+      "image",
+      "option",
+      "word",
+      "clouds",
+      "yellow",
+      "arrows",
+      "take",
+      "read",
+      "leave",
+      "book"
+    ]
+  },
+  {
+    "key": [
+      230,
+      0,
+      1
+    ],
+    "question": "What is the name of the record shop?\nOption: A:The name of the shop is Bleecker Street Records.; B:The name of the record shop is not mentioned.;",
+    "gt": "B",
+    "image_file": "images/nb_230_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 14,
+    "content": [
+      "what",
+      "name",
+      "record",
+      "shop",
+      "option",
+      "name",
+      "shop",
+      "bleecker",
+      "street",
+      "records",
+      "name",
+      "record",
+      "shop",
+      "mentioned"
+    ]
+  },
+  {
+    "key": [
+      234,
+      1,
+      0
+    ],
+    "question": "What are the individuals wearing?\nOption: A:A man in a white shirt and a man in a black jacket.; B:Two males in black jackets.;",
+    "gt": "B",
+    "image_file": "images/nb_234_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 14,
+    "content": [
+      "what",
+      "individuals",
+      "wearing",
+      "option",
+      "man",
+      "white",
+      "shirt",
+      "man",
+      "black",
+      "jacket",
+      "two",
+      "males",
+      "black",
+      "jackets"
+    ]
+  },
+  {
+    "key": [
+      606,
+      1,
+      1
+    ],
+    "question": "Where are the groups of young people located?\nOption: A:Near a Pabst Blue Ribbon beer display inside; B:At a bar;",
+    "gt": "A",
+    "image_file": "images/nb_606_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 14,
+    "content": [
+      "where",
+      "groups",
+      "young",
+      "people",
+      "located",
+      "option",
+      "near",
+      "pabst",
+      "blue",
+      "ribbon",
+      "beer",
+      "display",
+      "inside",
+      "bar"
+    ]
+  },
+  {
+    "key": [
+      620,
+      0,
+      0
+    ],
+    "question": "What is the shape of the central lighting fixture?\nOption: A:Many bars with LED light bulbs; B:Bell-shaped pendant;",
+    "gt": "A",
+    "image_file": "images/nb_620_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 14,
+    "content": [
+      "what",
+      "shape",
+      "central",
+      "lighting",
+      "fixture",
+      "option",
+      "many",
+      "bars",
+      "led",
+      "light",
+      "bulbs",
+      "bell",
+      "shaped",
+      "pendant"
+    ]
+  },
+  {
+    "key": [
+      1271,
+      1,
+      1
+    ],
+    "question": "What are the people around the man on the bicycle doing?\nOption: A:They are looking on as he attempts tricks.; B:They seem to be in picture-taking mode.;",
+    "gt": "A",
+    "image_file": "images/nb_1271_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 14,
+    "content": [
+      "what",
+      "people",
+      "around",
+      "man",
+      "bicycle",
+      "doing",
+      "option",
+      "looking",
+      "attempts",
+      "tricks",
+      "seem",
+      "picture",
+      "taking",
+      "mode"
+    ]
+  },
+  {
+    "key": [
+      1332,
+      0,
+      0
+    ],
+    "question": "What type of sculpture is in focus in the background?\nOption: A:A wooden tree branch; B:An earth sculpture with graffiti and raised continents;",
+    "gt": "A",
+    "image_file": "images/nb_1332_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 14,
+    "content": [
+      "what",
+      "type",
+      "sculpture",
+      "focus",
+      "background",
+      "option",
+      "wooden",
+      "tree",
+      "branch",
+      "earth",
+      "sculpture",
+      "graffiti",
+      "raised",
+      "continents"
+    ]
+  },
+  {
+    "key": [
+      167,
+      0,
+      1
+    ],
+    "question": "What is the orientation of the shadows cast by the bricks?\nOption: A:Behind the tower and slightly to the left.; B:Upward and toward the right, not very long.;",
+    "gt": "B",
+    "image_file": "images/nb_167_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 15,
+    "content": [
+      "what",
+      "orientation",
+      "shadows",
+      "cast",
+      "bricks",
+      "option",
+      "behind",
+      "tower",
+      "slightly",
+      "left",
+      "upward",
+      "toward",
+      "right",
+      "very",
+      "long"
+    ]
+  },
+  {
+    "key": [
+      230,
+      0,
+      0
+    ],
+    "question": "What is the posture of the person taking the photo in the picture?\nOption: A:Sitting next to a shop; B:There is no apparent person taking the photo in the picture.;",
+    "gt": "A",
+    "image_file": "images/nb_230_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 15,
+    "content": [
+      "what",
+      "posture",
+      "person",
+      "taking",
+      "photo",
+      "picture",
+      "option",
+      "sitting",
+      "next",
+      "shop",
+      "apparent",
+      "person",
+      "taking",
+      "photo",
+      "picture"
+    ]
+  },
+  {
+    "key": [
+      421,
+      0,
+      0
+    ],
+    "question": "What position is the cat in?\nOption: A:Lying on the left inside of the open luggage bag; B:Sitting with his back legs out on the suitcase;",
+    "gt": "A",
+    "image_file": "images/nb_421_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 15,
+    "content": [
+      "what",
+      "position",
+      "cat",
+      "option",
+      "lying",
+      "left",
+      "inside",
+      "open",
+      "luggage",
+      "bag",
+      "sitting",
+      "back",
+      "legs",
+      "out",
+      "suitcase"
+    ]
+  },
+  {
+    "key": [
+      659,
+      0,
+      1
+    ],
+    "question": "Are the women in the images of the same age group?\nOption: A:No, one is old and one is young.; B:Yes, they appear to be of the same age group.;",
+    "gt": "B",
+    "image_file": "images/nb_659_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 15,
+    "content": [
+      "women",
+      "images",
+      "same",
+      "age",
+      "group",
+      "option",
+      "one",
+      "old",
+      "one",
+      "young",
+      "yes",
+      "appear",
+      "same",
+      "age",
+      "group"
+    ]
+  },
+  {
+    "key": [
+      1634,
+      0,
+      0
+    ],
+    "question": "Who is leading the parade?\nOption: A:A worker wearing a hazard cone on his head and holding a flare.; B:It does not specify who is leading the parade.;",
+    "gt": "A",
+    "image_file": "images/nb_1634_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 15,
+    "content": [
+      "who",
+      "leading",
+      "parade",
+      "option",
+      "worker",
+      "wearing",
+      "hazard",
+      "cone",
+      "head",
+      "holding",
+      "flare",
+      "specify",
+      "who",
+      "leading",
+      "parade"
+    ]
+  },
+  {
+    "key": [
+      1731,
+      1,
+      1
+    ],
+    "question": "What is surrounding the church?\nOption: A:Four cars parked on the street in front; B:A cityscape with buildings of different sizes, shapes, and colors;",
+    "gt": "A",
+    "image_file": "images/nb_1731_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 15,
+    "content": [
+      "what",
+      "surrounding",
+      "church",
+      "option",
+      "four",
+      "cars",
+      "parked",
+      "street",
+      "front",
+      "cityscape",
+      "buildings",
+      "different",
+      "sizes",
+      "shapes",
+      "colors"
+    ]
+  },
+  {
+    "key": [
+      9,
+      1,
+      0
+    ],
+    "question": "What materials and colors are used in the creations on the surfaces?\nOption: A:Gray and beige cement, white spray paint; B:Concrete, white chalk;",
+    "gt": "B",
+    "image_file": "images/nb_9_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 16,
+    "content": [
+      "what",
+      "materials",
+      "colors",
+      "used",
+      "creations",
+      "surfaces",
+      "option",
+      "gray",
+      "beige",
+      "cement",
+      "white",
+      "spray",
+      "paint",
+      "concrete",
+      "white",
+      "chalk"
+    ]
+  },
+  {
+    "key": [
+      348,
+      0,
+      0
+    ],
+    "question": "What color lights are surrounding the lady?\nOption: A:Yellow, blue, and orange; B:There are no lights specifically around them, just neon signs;",
+    "gt": "A",
+    "image_file": "images/nb_348_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 16,
+    "content": [
+      "what",
+      "color",
+      "lights",
+      "surrounding",
+      "lady",
+      "option",
+      "yellow",
+      "blue",
+      "orange",
+      "lights",
+      "specifically",
+      "around",
+      "them",
+      "just",
+      "neon",
+      "signs"
+    ]
+  },
+  {
+    "key": [
+      648,
+      1,
+      1
+    ],
+    "question": "Is the child in the image alone or among other people?\nOption: A:The boy is in the middle of a crowd.; B:The little girl is alone, sitting on a set of steps.;",
+    "gt": "A",
+    "image_file": "images/nb_648_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 16,
+    "content": [
+      "child",
+      "image",
+      "alone",
+      "among",
+      "other",
+      "people",
+      "option",
+      "boy",
+      "middle",
+      "crowd",
+      "little",
+      "girl",
+      "alone",
+      "sitting",
+      "set",
+      "steps"
+    ]
+  },
+  {
+    "key": [
+      703,
+      1,
+      1
+    ],
+    "question": "How are the cats' heads positioned relative to each other?\nOption: A:Touching each other, pointed toward the right; B:In opposite directions;",
+    "gt": "A",
+    "image_file": "images/nb_703_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 16,
+    "content": [
+      "how",
+      "cats",
+      "heads",
+      "positioned",
+      "relative",
+      "each",
+      "other",
+      "option",
+      "touching",
+      "each",
+      "other",
+      "pointed",
+      "toward",
+      "right",
+      "opposite",
+      "directions"
+    ]
+  },
+  {
+    "key": [
+      747,
+      1,
+      1
+    ],
+    "question": "What is found on the ground in front of the stacked material?\nOption: A:Wet concrete road with reflections; B:Damp dirt with branches and dried leaves;",
+    "gt": "A",
+    "image_file": "images/nb_747_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 16,
+    "content": [
+      "what",
+      "found",
+      "ground",
+      "front",
+      "stacked",
+      "material",
+      "option",
+      "wet",
+      "concrete",
+      "road",
+      "reflections",
+      "damp",
+      "dirt",
+      "branches",
+      "dried",
+      "leaves"
+    ]
+  },
+  {
+    "key": [
+      787,
+      1,
+      1
+    ],
+    "question": "Is there a single focus or multiple focuses in the image?\nOption: A:Single focus - a man playing his guitar; B:Multiple focuses - a large group of people;",
+    "gt": "A",
+    "image_file": "images/nb_787_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 16,
+    "content": [
+      "single",
+      "focus",
+      "multiple",
+      "focuses",
+      "image",
+      "option",
+      "single",
+      "focus",
+      "man",
+      "playing",
+      "guitar",
+      "multiple",
+      "focuses",
+      "large",
+      "group",
+      "people"
+    ]
+  },
+  {
+    "key": [
+      1061,
+      1,
+      0
+    ],
+    "question": "What unfortunate event occurs in the soccer game?\nOption: A:A boy accidentally kicks his opponent in the face with his soccer cleats.; B:No specific incidents.;",
+    "gt": "B",
+    "image_file": "images/nb_1061_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 16,
+    "content": [
+      "what",
+      "unfortunate",
+      "event",
+      "occurs",
+      "soccer",
+      "game",
+      "option",
+      "boy",
+      "accidentally",
+      "kicks",
+      "opponent",
+      "face",
+      "soccer",
+      "cleats",
+      "specific",
+      "incidents"
+    ]
+  },
+  {
+    "key": [
+      1209,
+      0,
+      0
+    ],
+    "question": "What is the general mood depicted in the image?\nOption: A:Happy, having a good time; B:Potentially tense or sad, as the toddler is starting to cry;",
+    "gt": "A",
+    "image_file": "images/nb_1209_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 16,
+    "content": [
+      "what",
+      "general",
+      "mood",
+      "depicted",
+      "image",
+      "option",
+      "happy",
+      "having",
+      "good",
+      "time",
+      "potentially",
+      "tense",
+      "sad",
+      "toddler",
+      "starting",
+      "cry"
+    ]
+  },
+  {
+    "key": [
+      1464,
+      0,
+      1
+    ],
+    "question": "What can be seen on the hillside or near the grassy area?\nOption: A:White pebbles next to a green grass patch; B:An orange umbrella;",
+    "gt": "B",
+    "image_file": "images/nb_1464_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 16,
+    "content": [
+      "what",
+      "can",
+      "seen",
+      "hillside",
+      "near",
+      "grassy",
+      "area",
+      "option",
+      "white",
+      "pebbles",
+      "next",
+      "green",
+      "grass",
+      "patch",
+      "orange",
+      "umbrella"
+    ]
+  },
+  {
+    "key": [
+      1560,
+      0,
+      1
+    ],
+    "question": "Where are the individuals located in relation to the water?\nOption: A:At the end of a stone jetty that looks out over the ocean; B:Within a cloudy waterfront setting;",
+    "gt": "B",
+    "image_file": "images/nb_1560_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 16,
+    "content": [
+      "where",
+      "individuals",
+      "located",
+      "relation",
+      "water",
+      "option",
+      "end",
+      "stone",
+      "jetty",
+      "looks",
+      "out",
+      "ocean",
+      "within",
+      "cloudy",
+      "waterfront",
+      "setting"
+    ]
+  },
+  {
+    "key": [
+      1584,
+      0,
+      1
+    ],
+    "question": "What is the primary focus of the people's protest?\nOption: A:Criticism of big companies for caring only about money and not people; B:Political signs;",
+    "gt": "B",
+    "image_file": "images/nb_1584_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 16,
+    "content": [
+      "what",
+      "primary",
+      "focus",
+      "people",
+      "protest",
+      "option",
+      "criticism",
+      "big",
+      "companies",
+      "caring",
+      "only",
+      "about",
+      "money",
+      "people",
+      "political",
+      "signs"
+    ]
+  },
+  {
+    "key": [
+      1862,
+      1,
+      1
+    ],
+    "question": "What is the primary feature covering the surface of the body of water?\nOption: A:Light brown tree branch; B:Small, green lily pads;",
+    "gt": "A",
+    "image_file": "images/nb_1862_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 16,
+    "content": [
+      "what",
+      "primary",
+      "feature",
+      "covering",
+      "surface",
+      "body",
+      "water",
+      "option",
+      "light",
+      "brown",
+      "tree",
+      "branch",
+      "small",
+      "green",
+      "lily",
+      "pads"
+    ]
+  },
+  {
+    "key": [
+      1054,
+      1,
+      0
+    ],
+    "question": "What is the man from the image doing?\nOption: A:The man is directing a construction site where a large object is being lifted.; B:The man is standing on top of a roof.;",
+    "gt": "B",
+    "image_file": "images/nb_1054_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 17,
+    "content": [
+      "what",
+      "man",
+      "image",
+      "doing",
+      "option",
+      "man",
+      "directing",
+      "construction",
+      "site",
+      "where",
+      "large",
+      "object",
+      "lifted",
+      "man",
+      "standing",
+      "top",
+      "roof"
+    ]
+  },
+  {
+    "key": [
+      1403,
+      0,
+      0
+    ],
+    "question": "What kind of objects can be seen in the background?\nOption: A:Various pots and crafts are scattered behind the man.; B:The background contains some clutter and a mirror.;",
+    "gt": "A",
+    "image_file": "images/nb_1403_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 17,
+    "content": [
+      "what",
+      "kind",
+      "objects",
+      "can",
+      "seen",
+      "background",
+      "option",
+      "various",
+      "pots",
+      "crafts",
+      "scattered",
+      "behind",
+      "man",
+      "background",
+      "contains",
+      "clutter",
+      "mirror"
+    ]
+  },
+  {
+    "key": [
+      1506,
+      0,
+      0
+    ],
+    "question": "What event are the people in the image gathered to watch?\nOption: A:A soccer game; B:An event with men in white jackets and black pants on a raised platform;",
+    "gt": "A",
+    "image_file": "images/nb_1506_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 17,
+    "content": [
+      "what",
+      "event",
+      "people",
+      "image",
+      "gathered",
+      "watch",
+      "option",
+      "soccer",
+      "game",
+      "event",
+      "men",
+      "white",
+      "jackets",
+      "black",
+      "pants",
+      "raised",
+      "platform"
+    ]
+  },
+  {
+    "key": [
+      1563,
+      0,
+      1
+    ],
+    "question": "What type of structure is visible in the left background?\nOption: A:A white building with a dark green roof; B:A larger green structure with white trim;",
+    "gt": "B",
+    "image_file": "images/nb_1563_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 17,
+    "content": [
+      "what",
+      "type",
+      "structure",
+      "visible",
+      "left",
+      "background",
+      "option",
+      "white",
+      "building",
+      "dark",
+      "green",
+      "roof",
+      "larger",
+      "green",
+      "structure",
+      "white",
+      "trim"
+    ]
+  },
+  {
+    "key": [
+      421,
+      1,
+      1
+    ],
+    "question": "Where is the suitcase's location?\nOption: A:On a blonde wood plank floor without any visible wall molding; B:On a wood floor with white molding on the wall behind it;",
+    "gt": "A",
+    "image_file": "images/nb_421_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 18,
+    "content": [
+      "where",
+      "suitcase",
+      "location",
+      "option",
+      "blonde",
+      "wood",
+      "plank",
+      "floor",
+      "without",
+      "visible",
+      "wall",
+      "molding",
+      "wood",
+      "floor",
+      "white",
+      "molding",
+      "wall",
+      "behind"
+    ]
+  },
+  {
+    "key": [
+      502,
+      1,
+      1
+    ],
+    "question": "Are there other children in the image besides the girl?\nOption: A:Yes, there are three other children in the background.; B:Yes, there is only a boy in a blue shirt bouncing on his stomach.;",
+    "gt": "A",
+    "image_file": "images/nb_502_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 18,
+    "content": [
+      "other",
+      "children",
+      "image",
+      "besides",
+      "girl",
+      "option",
+      "yes",
+      "three",
+      "other",
+      "children",
+      "background",
+      "yes",
+      "only",
+      "boy",
+      "blue",
+      "shirt",
+      "bouncing",
+      "stomach"
+    ]
+  },
+  {
+    "key": [
+      1619,
+      0,
+      0
+    ],
+    "question": "What is the person doing?\nOption: A:The person is waiting for the man to scoop her ice cream.; B:The person is holding an ice cream cone up to the mouth of another man.;",
+    "gt": "A",
+    "image_file": "images/nb_1619_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 18,
+    "content": [
+      "what",
+      "person",
+      "doing",
+      "option",
+      "person",
+      "waiting",
+      "man",
+      "scoop",
+      "ice",
+      "cream",
+      "person",
+      "holding",
+      "ice",
+      "cream",
+      "cone",
+      "mouth",
+      "another",
+      "man"
+    ]
+  },
+  {
+    "key": [
+      1830,
+      1,
+      1
+    ],
+    "question": "What is visible in the background of the image?\nOption: A:A school of fish; B:Large boulders mixed into an algae covered coral reef with another large window on the left;",
+    "gt": "A",
+    "image_file": "images/nb_1830_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 18,
+    "content": [
+      "what",
+      "visible",
+      "background",
+      "image",
+      "option",
+      "school",
+      "fish",
+      "large",
+      "boulders",
+      "mixed",
+      "algae",
+      "covered",
+      "coral",
+      "reef",
+      "another",
+      "large",
+      "window",
+      "left"
+    ]
+  },
+  {
+    "key": [
+      1883,
+      0,
+      0
+    ],
+    "question": "Where is the bus in relation to the people?\nOption: A:The bus is beside the man and the woman.; B:The bus is not visible; people are waiting at the bus stop on the upper deck of the structure.;",
+    "gt": "A",
+    "image_file": "images/nb_1883_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 18,
+    "content": [
+      "where",
+      "bus",
+      "relation",
+      "people",
+      "option",
+      "bus",
+      "beside",
+      "man",
+      "woman",
+      "bus",
+      "visible",
+      "people",
+      "waiting",
+      "bus",
+      "stop",
+      "upper",
+      "deck",
+      "structure"
+    ]
+  },
+  {
+    "key": [
+      327,
+      0,
+      0
+    ],
+    "question": "What are the men doing in the image?\nOption: A:Looking down from ledges on the side of a gray structure.; B:Putting together rafters at a construction site using ladders and a screwdriver.;",
+    "gt": "A",
+    "image_file": "images/nb_327_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 19,
+    "content": [
+      "what",
+      "men",
+      "doing",
+      "image",
+      "option",
+      "looking",
+      "down",
+      "ledges",
+      "side",
+      "gray",
+      "structure",
+      "putting",
+      "together",
+      "rafters",
+      "construction",
+      "site",
+      "using",
+      "ladders",
+      "screwdriver"
+    ]
+  },
+  {
+    "key": [
+      603,
+      1,
+      1
+    ],
+    "question": "What is in the backdrop of the image?\nOption: A:Green-covered mountains and an overcast sky with the sun glowing behind the clouds; B:Green treetops, a large hill, and dark clouds;",
+    "gt": "A",
+    "image_file": "images/nb_603_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 19,
+    "content": [
+      "what",
+      "backdrop",
+      "image",
+      "option",
+      "green",
+      "covered",
+      "mountains",
+      "overcast",
+      "sky",
+      "sun",
+      "glowing",
+      "behind",
+      "clouds",
+      "green",
+      "treetops",
+      "large",
+      "hill",
+      "dark",
+      "clouds"
+    ]
+  },
+  {
+    "key": [
+      398,
+      0,
+      0
+    ],
+    "question": "What activity is the woman in the image engaged in?\nOption: A:She is sitting at an outside stand with several handmade crafts for sale.; B:She is not depicted alone; instead, a group of women are meeting by a table.;",
+    "gt": "A",
+    "image_file": "images/nb_398_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 20,
+    "content": [
+      "what",
+      "activity",
+      "woman",
+      "image",
+      "engaged",
+      "option",
+      "sitting",
+      "outside",
+      "stand",
+      "several",
+      "handmade",
+      "crafts",
+      "sale",
+      "depicted",
+      "alone",
+      "instead",
+      "group",
+      "women",
+      "meeting",
+      "table"
+    ]
+  },
+  {
+    "key": [
+      1054,
+      0,
+      1
+    ],
+    "question": "What specific clothing is the man wearing?\nOption: A:The man is wearing a white hard hat, gray vest, and long-sleeve shirt.; B:The man is wearing a tool belt.;",
+    "gt": "B",
+    "image_file": "images/nb_1054_0.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 20,
+    "content": [
+      "what",
+      "specific",
+      "clothing",
+      "man",
+      "wearing",
+      "option",
+      "man",
+      "wearing",
+      "white",
+      "hard",
+      "hat",
+      "gray",
+      "vest",
+      "long",
+      "sleeve",
+      "shirt",
+      "man",
+      "wearing",
+      "tool",
+      "belt"
+    ]
+  },
+  {
+    "key": [
+      1690,
+      1,
+      1
+    ],
+    "question": "What additional features are on the beach?\nOption: A:Two shoe prints, scattered small stones, darker dirt smears; B:Patterned sole, sea foam, strip of seawater;",
+    "gt": "A",
+    "image_file": "images/nb_1690_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 20,
+    "content": [
+      "what",
+      "additional",
+      "features",
+      "beach",
+      "option",
+      "two",
+      "shoe",
+      "prints",
+      "scattered",
+      "small",
+      "stones",
+      "darker",
+      "dirt",
+      "smears",
+      "patterned",
+      "sole",
+      "sea",
+      "foam",
+      "strip",
+      "seawater"
+    ]
+  },
+  {
+    "key": [
+      399,
+      1,
+      0
+    ],
+    "question": "What is placed in the front center of the frame?\nOption: A:An orange safety cone with white stripes and fabric tool pouches; B:A strip of grass with dirt and two silver fire hydrants;",
+    "gt": "B",
+    "image_file": "images/nb_399_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 21,
+    "content": [
+      "what",
+      "placed",
+      "front",
+      "center",
+      "frame",
+      "option",
+      "orange",
+      "safety",
+      "cone",
+      "white",
+      "stripes",
+      "fabric",
+      "tool",
+      "pouches",
+      "strip",
+      "grass",
+      "dirt",
+      "two",
+      "silver",
+      "fire",
+      "hydrants"
+    ]
+  },
+  {
+    "key": [
+      540,
+      0,
+      0
+    ],
+    "question": "Where is the lion statue located?\nOption: A:In front of a cityscape with a glass panel reflecting blue sky and clouds; B:At the MGM Grand Casino with a lit, stylized barrier with a blue glow;",
+    "gt": "A",
+    "image_file": "images/nb_540_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 21,
+    "content": [
+      "where",
+      "lion",
+      "statue",
+      "located",
+      "option",
+      "front",
+      "cityscape",
+      "glass",
+      "panel",
+      "reflecting",
+      "blue",
+      "sky",
+      "clouds",
+      "mgm",
+      "grand",
+      "casino",
+      "lit",
+      "stylized",
+      "barrier",
+      "blue",
+      "glow"
+    ]
+  },
+  {
+    "key": [
+      1408,
+      1,
+      0
+    ],
+    "question": "What are the elements that indicate human presence in the image?\nOption: A:A person standing on the top of a cliff and another attempting to climb it; B:A person trying to climb one of the two large mountains;",
+    "gt": "B",
+    "image_file": "images/nb_1408_1.jpg",
+    "sti_pred": "A",
+    "sit_pred": "B",
+    "stit_pred": "B",
+    "n_content": 21,
+    "content": [
+      "what",
+      "elements",
+      "indicate",
+      "human",
+      "presence",
+      "image",
+      "option",
+      "person",
+      "standing",
+      "top",
+      "cliff",
+      "another",
+      "attempting",
+      "climb",
+      "person",
+      "trying",
+      "climb",
+      "one",
+      "two",
+      "large",
+      "mountains"
+    ]
+  },
+  {
+    "key": [
+      711,
+      0,
+      0
+    ],
+    "question": "What type of background setting is the sculpture located in?\nOption: A:An outdoor area with dead grass surrounded by thick trees.; B:In front of a bush line with a dark green cover and tree branches.;",
+    "gt": "A",
+    "image_file": "images/nb_711_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 22,
+    "content": [
+      "what",
+      "type",
+      "background",
+      "setting",
+      "sculpture",
+      "located",
+      "option",
+      "outdoor",
+      "area",
+      "dead",
+      "grass",
+      "surrounded",
+      "thick",
+      "trees",
+      "front",
+      "bush",
+      "line",
+      "dark",
+      "green",
+      "cover",
+      "tree",
+      "branches"
+    ]
+  },
+  {
+    "key": [
+      398,
+      1,
+      1
+    ],
+    "question": "What varieties of attire are visible in the image?\nOption: A:The women are wearing different colored hats.; B:there are two women: one is sitting and wearing white clothes, and the other is bending over and wearing a black dress.;",
+    "gt": "A",
+    "image_file": "images/nb_398_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 23,
+    "content": [
+      "what",
+      "varieties",
+      "attire",
+      "visible",
+      "image",
+      "option",
+      "women",
+      "wearing",
+      "different",
+      "colored",
+      "hats",
+      "two",
+      "women",
+      "one",
+      "sitting",
+      "wearing",
+      "white",
+      "clothes",
+      "other",
+      "bending",
+      "wearing",
+      "black",
+      "dress"
+    ]
+  },
+  {
+    "key": [
+      843,
+      1,
+      1
+    ],
+    "question": "What is the attire of the people in the image?\nOption: A:One of them is wearing a dark-colored top and the others are wearing light-colored tops.; B:They are all wearing light-colored tops and dark pants.;",
+    "gt": "A",
+    "image_file": "images/nb_843_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 23,
+    "content": [
+      "what",
+      "attire",
+      "people",
+      "image",
+      "option",
+      "one",
+      "them",
+      "wearing",
+      "dark",
+      "colored",
+      "top",
+      "others",
+      "wearing",
+      "light",
+      "colored",
+      "tops",
+      "all",
+      "wearing",
+      "light",
+      "colored",
+      "tops",
+      "dark",
+      "pants"
+    ]
+  },
+  {
+    "key": [
+      532,
+      0,
+      0
+    ],
+    "question": "What color shirts are the dogs wearing?\nOption: A:The white dog is wearing a blue shirt, and the black dog is wearing a yellow shirt.; B:The black greyhound dog is wearing a yellow jacket with the number six on it.;",
+    "gt": "A",
+    "image_file": "images/nb_532_0.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 24,
+    "content": [
+      "what",
+      "color",
+      "shirts",
+      "dogs",
+      "wearing",
+      "option",
+      "white",
+      "dog",
+      "wearing",
+      "blue",
+      "shirt",
+      "black",
+      "dog",
+      "wearing",
+      "yellow",
+      "shirt",
+      "black",
+      "greyhound",
+      "dog",
+      "wearing",
+      "yellow",
+      "jacket",
+      "number",
+      "six"
+    ]
+  },
+  {
+    "key": [
+      494,
+      1,
+      1
+    ],
+    "question": "How many dogs are there in the image?\nOption: A:Two, both with black and white patterned backs.; B:Two, one has a completely black back with a white belly, and the other is a white dog with black and brown spots.;",
+    "gt": "A",
+    "image_file": "images/nb_494_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 25,
+    "content": [
+      "how",
+      "many",
+      "dogs",
+      "image",
+      "option",
+      "two",
+      "both",
+      "black",
+      "white",
+      "patterned",
+      "backs",
+      "two",
+      "one",
+      "has",
+      "completely",
+      "black",
+      "back",
+      "white",
+      "belly",
+      "other",
+      "white",
+      "dog",
+      "black",
+      "brown",
+      "spots"
+    ]
+  },
+  {
+    "key": [
+      231,
+      1,
+      1
+    ],
+    "question": "What is distinctive about the hat one person is wearing?\nOption: A:Both people are wearing hats, but no distinctive feature like a red bow is mentioned; B:One of them has a big hat with a red bow;",
+    "gt": "A",
+    "image_file": "images/nb_231_1.jpg",
+    "sti_pred": "B",
+    "sit_pred": "A",
+    "stit_pred": "A",
+    "n_content": 26,
+    "content": [
+      "what",
+      "distinctive",
+      "about",
+      "hat",
+      "one",
+      "person",
+      "wearing",
+      "option",
+      "both",
+      "people",
+      "wearing",
+      "hats",
+      "but",
+      "distinctive",
+      "feature",
+      "like",
+      "red",
+      "bow",
+      "mentioned",
+      "one",
+      "them",
+      "has",
+      "big",
+      "hat",
+      "red",
+      "bow"
+    ]
+  }
+]

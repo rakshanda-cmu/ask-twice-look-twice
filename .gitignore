@@ -53,6 +53,20 @@ website/wait_and_search.sh
 detpo_map/results/_detpo_run/
 detpo_map/results/_rf20cache/
 
+# ---- Figure-search scratch: regenerable from the fig2_*/fig3_* scripts ----
+# Contact sheets and candidate dumps, tens of MB each. web.zip is a 373MB
+# zipped copy of website/ and exceeds GitHub's 100MB per-file limit.
+web.zip
+fig3_coco350.png
+fig3_candidates.png
+fig3_stimulus_candidates.png
+*_sheet.png
+fig3_scan/
+fig3_scan2/
+
+# Local agent settings
+.claude/
+
 # ---- LaTeX build artifacts (paper/main.tex is the source; .pdf is committed) ----
 paper/*.aux
 paper/*.bbl

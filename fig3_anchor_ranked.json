@@ -1,0 +1,7358 @@
+[
+  {
+    "file": "COCO_val2014_000000397268.jpg",
+    "score": 17.44,
+    "sep": 0.288,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 4,
+    "anchors": [
+      {
+        "name": "potted plant",
+        "rc": [
+          10,
+          2
+        ],
+        "toks": [
+          "plants",
+          "\u690d\u7269",
+          "plants"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          13,
+          18
+        ],
+        "toks": [
+          "gears",
+          "gear",
+          "wheels"
+        ]
+      },
+      {
+        "name": "bench",
+        "rc": [
+          16,
+          7
+        ],
+        "toks": [
+          "seat",
+          "seating",
+          "\u5ea7\u4f4d"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          25
+        ],
+        "toks": [
+          "chair",
+          "chair",
+          "chairs"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000019544.jpg",
+    "score": 16.829,
+    "sep": 0.086,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 4,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          19,
+          5
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "ergonomic"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          10,
+          12
+        ],
+        "toks": [
+          "overlays",
+          "Disposable",
+          "nick"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          23
+        ],
+        "toks": [
+          "keyboard",
+          "anne",
+          "akan"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          11,
+          14
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000092602.jpg",
+    "score": 16.693,
+    "sep": 0.219,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 4,
+    "anchors": [
+      {
+        "name": "cake",
+        "rc": [
+          9,
+          15
+        ],
+        "toks": [
+          "layers",
+          "Layers",
+          "layers"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          11
+        ],
+        "toks": [
+          "person",
+          "\u4e00\u4e2a\u4eba",
+          "person"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          10,
+          7
+        ],
+        "toks": [
+          "\u684c\u9762",
+          "tabletop",
+          "desk"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000556462.jpg",
+    "score": 16.524,
+    "sep": 0.185,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 4,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          13
+        ],
+        "toks": [
+          "shirt",
+          "shirt",
+          "-shirt"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          20,
+          15
+        ],
+        "toks": [
+          "restaurant",
+          "\u9910\u9986",
+          "dining"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          16,
+          23
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          2,
+          8
+        ],
+        "toks": [
+          "chair",
+          "ness",
+          "table"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000575020.jpg",
+    "score": 16.372,
+    "sep": 0.154,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 4,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          7,
+          19
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          12,
+          1
+        ],
+        "toks": [
+          "\u684c\u5b50",
+          "tabletop",
+          "table"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          13,
+          11
+        ],
+        "toks": [
+          "sandwiches",
+          "oversized",
+          "loaf"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          9,
+          22
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "labels",
+          "label"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000470364.jpg",
+    "score": 15.236,
+    "sep": 0.607,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          20,
+          12
+        ],
+        "toks": [
+          "tabletop",
+          "peater",
+          "ennon"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          3,
+          6
+        ],
+        "toks": [
+          "woman",
+          "\u5973\u6027",
+          "women"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          3,
+          23
+        ],
+        "toks": [
+          "chair",
+          "richt",
+          "japan"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000516916.jpg",
+    "score": 15.203,
+    "sep": 0.601,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          18,
+          9
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "seat"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          10,
+          22
+        ],
+        "toks": [
+          "cord",
+          "keyboard",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          2
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "blank",
+          "screen"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000430238.jpg",
+    "score": 15.186,
+    "sep": 0.677,
+    "grid": [
+      20,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          16,
+          21
+        ],
+        "toks": [
+          "breakfast",
+          "\u7528\u9910",
+          "dining"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          2,
+          22
+        ],
+        "toks": [
+          "chair",
+          "ihu",
+          "uden"
+        ]
+      },
+      {
+        "name": "bird",
+        "rc": [
+          8,
+          5
+        ],
+        "toks": [
+          "\u7fc5\u8180",
+          "wings",
+          "feathers"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000321866.jpg",
+    "score": 15.106,
+    "sep": 0.501,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          0,
+          6
+        ],
+        "toks": [
+          "woman",
+          "oard",
+          "frau"
+        ]
+      },
+      {
+        "name": "sink",
+        "rc": [
+          16,
+          20
+        ],
+        "toks": [
+          "faucet",
+          "Fauc",
+          "fauc"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          7,
+          19
+        ],
+        "toks": [
+          "labels",
+          "Labels",
+          "itto"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000580953.jpg",
+    "score": 15.067,
+    "sep": 0.573,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          2,
+          22
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "screen",
+          "pantalla"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          3,
+          6
+        ],
+        "toks": [
+          "fact",
+          "creen",
+          "ScreenState"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          18,
+          14
+        ],
+        "toks": [
+          "standalone",
+          "keyboard",
+          "separate"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000108193.jpg",
+    "score": 15.051,
+    "sep": 0.57,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          17
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "pizzas"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          5,
+          6
+        ],
+        "toks": [
+          "glass",
+          "glass",
+          "wine"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          6,
+          27
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "barcode",
+          "label"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000333772.jpg",
+    "score": 14.982,
+    "sep": 0.636,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          17,
+          13
+        ],
+        "toks": [
+          "whisk",
+          "\u5c3e\u5df4",
+          "hairs"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          0,
+          9
+        ],
+        "toks": [
+          "oard",
+          "chan",
+          "yth"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          4,
+          26
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000088436.jpg",
+    "score": 14.916,
+    "sep": 0.623,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          6,
+          21
+        ],
+        "toks": [
+          "shirts",
+          "shirt",
+          "\u886b"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "ergonomic"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          19,
+          23
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "laptops",
+          "laptop"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000063740.jpg",
+    "score": 14.825,
+    "sep": 0.525,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          8,
+          25
+        ],
+        "toks": [
+          "loy",
+          "Opened",
+          "laptop"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          6,
+          10
+        ],
+        "toks": [
+          "displayed",
+          "webpage",
+          "\u7f51\u9875"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          17,
+          11
+        ],
+        "toks": [
+          "standalone",
+          "keyboard",
+          "ypad"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000360951.jpg",
+    "score": 14.805,
+    "sep": 0.601,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          1,
+          9
+        ],
+        "toks": [
+          "displayed",
+          "\u663e\u793a",
+          "display"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          23
+        ],
+        "toks": [
+          "MacBook",
+          "Apple",
+          "intosh"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          13,
+          9
+        ],
+        "toks": [
+          "\u952e\u76d8",
+          "keyboard",
+          "keys"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000465718.jpg",
+    "score": 14.666,
+    "sep": 0.493,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          6,
+          23
+        ],
+        "toks": [
+          "appy",
+          "screen",
+          "animation"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          3
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "laptop",
+          "Laptop"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          16
+        ],
+        "toks": [
+          "keyboard",
+          "keyboards",
+          "peripherals"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000499842.jpg",
+    "score": 14.618,
+    "sep": 0.484,
+    "grid": [
+      23,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          6
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "both"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          20,
+          18
+        ],
+        "toks": [
+          "ergonomic",
+          "keyboard",
+          "shaped"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          9,
+          20
+        ],
+        "toks": [
+          "laptop",
+          "Laptop",
+          "laptops"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000371749.jpg",
+    "score": 14.57,
+    "sep": 0.474,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          5,
+          23
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "sleeves"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          17,
+          11
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "chairs"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          3,
+          10
+        ],
+        "toks": [
+          "retrie",
+          "rador",
+          "puppies"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000097696.jpg",
+    "score": 14.57,
+    "sep": 0.474,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          16
+        ],
+        "toks": [
+          "prominently",
+          "prominent",
+          "displayed"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          6,
+          3
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "portable",
+          "laptop"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          17,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "standalone",
+          "ypad"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000023446.jpg",
+    "score": 14.569,
+    "sep": 0.554,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          2,
+          12
+        ],
+        "toks": [
+          "lace",
+          "wearable",
+          "\u5e3d\u5b50"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          15,
+          25
+        ],
+        "toks": [
+          "MacBook",
+          "aluminum",
+          "Apple"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          20,
+          11
+        ],
+        "toks": [
+          "tabletop",
+          "undra",
+          ".getTable"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000198612.jpg",
+    "score": 14.553,
+    "sep": 0.391,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          8,
+          10
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "chairs"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          15,
+          11
+        ],
+        "toks": [
+          "leash",
+          "collar",
+          "rope"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          6,
+          22
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "Seats"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000141828.jpg",
+    "score": 14.538,
+    "sep": 0.388,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          8,
+          13
+        ],
+        "toks": [
+          "Apple",
+          "MacBook",
+          "Apple"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          11
+        ],
+        "toks": [
+          "keys",
+          "Keys",
+          "keys"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          23
+        ],
+        "toks": [
+          "behind",
+          "person",
+          "seated"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000021365.jpg",
+    "score": 14.536,
+    "sep": 0.547,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          11,
+          3
+        ],
+        "toks": [
+          "person",
+          "woman",
+          "individuals"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          0,
+          19
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "computers",
+          "computer"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          15,
+          17
+        ],
+        "toks": [
+          "\u6bef",
+          "blankets",
+          "blanket"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000138086.jpg",
+    "score": 14.499,
+    "sep": 0.46,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          12,
+          14
+        ],
+        "toks": [
+          "toppings",
+          "topping",
+          "topped"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          1,
+          14
+        ],
+        "toks": [
+          "chair",
+          "\u6905",
+          "chairs"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          9,
+          2
+        ],
+        "toks": [
+          "opaque",
+          "bottles",
+          "bottle"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000045746.jpg",
+    "score": 14.497,
+    "sep": 0.459,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          5,
+          20
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "freezer"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          20,
+          19
+        ],
+        "toks": [
+          "tabletop",
+          "haul",
+          "reb"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          10,
+          9
+        ],
+        "toks": [
+          "cooking",
+          "heating",
+          "stove"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000368510.jpg",
+    "score": 14.487,
+    "sep": 0.457,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          13,
+          23
+        ],
+        "toks": [
+          "chair",
+          "acie",
+          "chair"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          13
+        ],
+        "toks": [
+          "keyboard",
+          "Challenger",
+          "ACA"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          19,
+          9
+        ],
+        "toks": [
+          "\u4e66\u7c4d",
+          "books",
+          "magazines"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000089549.jpg",
+    "score": 14.476,
+    "sep": 0.615,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bottle",
+        "rc": [
+          8,
+          21
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          13,
+          4
+        ],
+        "toks": [
+          "contents",
+          "sandwich",
+          "\u9985"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          2,
+          6
+        ],
+        "toks": [
+          "\ud83c\udf77",
+          "vinegar",
+          "wine"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000450391.jpg",
+    "score": 14.459,
+    "sep": 0.452,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          23
+        ],
+        "toks": [
+          "iams",
+          "ipsis",
+          "broadcast"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          12
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          7,
+          8
+        ],
+        "toks": [
+          "stainless",
+          "bottle",
+          "Stainless"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000140122.jpg",
+    "score": 14.395,
+    "sep": 0.439,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          19
+        ],
+        "toks": [
+          "\u8fd9\u4e9b\u4e1c\u897f",
+          "graphics",
+          "Screens"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          17,
+          9
+        ],
+        "toks": [
+          "computers",
+          "laptops",
+          "outdated"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          21
+        ],
+        "toks": [
+          "ened",
+          "buttons",
+          "keys"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000431495.jpg",
+    "score": 14.359,
+    "sep": 0.352,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bottle",
+        "rc": [
+          5,
+          10
+        ],
+        "toks": [
+          "glass",
+          "bottles",
+          "bottle"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          1
+        ],
+        "toks": [
+          "seated",
+          "person",
+          "Personen"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          4,
+          22
+        ],
+        "toks": [
+          "tabletop",
+          "tables",
+          "TableView"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000245971.jpg",
+    "score": 14.356,
+    "sep": 0.431,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          2,
+          8
+        ],
+        "toks": [
+          "Xperia",
+          "laptop",
+          "laptops"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          20,
+          13
+        ],
+        "toks": [
+          "keys",
+          "SDLK",
+          "keys"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          1,
+          20
+        ],
+        "toks": [
+          "\u74f6",
+          "bottle",
+          "bottles"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000516503.jpg",
+    "score": 14.345,
+    "sep": 0.589,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          6
+        ],
+        "toks": [
+          "woman",
+          "partially",
+          "\u5750\u5728"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          15,
+          21
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          15,
+          2
+        ],
+        "toks": [
+          "pillows",
+          "cushions",
+          "\u6bef"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000254240.jpg",
+    "score": 14.34,
+    "sep": 0.428,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          5
+        ],
+        "toks": [
+          "thin",
+          "thicker",
+          "crust"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          7,
+          10
+        ],
+        "toks": [
+          "andas",
+          "isbn",
+          "labels"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          4,
+          22
+        ],
+        "toks": [
+          "glass",
+          "glass",
+          "-shaped"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000229688.jpg",
+    "score": 14.325,
+    "sep": 0.505,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          15
+        ],
+        "toks": [
+          "elbow",
+          "elbows",
+          "hands"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          17,
+          17
+        ],
+        "toks": [
+          "\u4f38\u624b",
+          "ght",
+          "tabletop"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          3
+        ],
+        "toks": [
+          "chair",
+          "\u6905",
+          "chairs"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000281533.jpg",
+    "score": 14.314,
+    "sep": 0.503,
+    "grid": [
+      19,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          16
+        ],
+        "toks": [
+          "backdrop",
+          "backgrounds",
+          "Screens"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          15,
+          15
+        ],
+        "toks": [
+          "breed",
+          "breeds",
+          "dogs"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          2,
+          2
+        ],
+        "toks": [
+          "plants",
+          "\u690d\u7269",
+          "plant"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000475906.jpg",
+    "score": 14.307,
+    "sep": 0.581,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          2,
+          25
+        ],
+        "toks": [
+          "\u5ba2\u5385",
+          "room",
+          "television"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          9,
+          4
+        ],
+        "toks": [
+          "seat",
+          "chair",
+          "\u5ea7\u6905"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          18,
+          15
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u51f3"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000533129.jpg",
+    "score": 14.306,
+    "sep": 0.501,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          10,
+          25
+        ],
+        "toks": [
+          "chair",
+          "\u5e10\u7bf7",
+          "couch"
+        ]
+      },
+      {
+        "name": "clock",
+        "rc": [
+          1,
+          24
+        ],
+        "toks": [
+          "\u949f",
+          "clock",
+          "clocks"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          10,
+          6
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "Chair"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000035827.jpg",
+    "score": 14.266,
+    "sep": 0.493,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          15,
+          22
+        ],
+        "toks": [
+          "chair",
+          "ergonomic",
+          "chairs"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          12,
+          9
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886c\u886b"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          6,
+          25
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000146489.jpg",
+    "score": 14.221,
+    "sep": 0.404,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "wine glass",
+        "rc": [
+          15,
+          5
+        ],
+        "toks": [
+          "upright",
+          "elegant",
+          "wine"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          5,
+          9
+        ],
+        "toks": [
+          "intosh",
+          "ellaneous",
+          "Label"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          7,
+          20
+        ],
+        "toks": [
+          "toppings",
+          "topped",
+          "topping"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000141821.jpg",
+    "score": 14.22,
+    "sep": 0.404,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          13,
+          15
+        ],
+        "toks": [
+          "toppings",
+          "contents",
+          "topping"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          8
+        ],
+        "toks": [
+          "person",
+          "torso",
+          "personne"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          19,
+          23
+        ],
+        "toks": [
+          "\u74f6",
+          "bottle",
+          "bottles"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000353300.jpg",
+    "score": 14.214,
+    "sep": 0.483,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "keyboard",
+        "rc": [
+          11,
+          19
+        ],
+        "toks": [
+          "keys",
+          "numeric",
+          "keys"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          5,
+          2
+        ],
+        "toks": [
+          "\u5f88\u957f\u65f6\u95f4",
+          "pageTitle",
+          "ICS"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          1,
+          14
+        ],
+        "toks": [
+          "laptop",
+          "\u7535\u8111",
+          "laptops"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000095062.jpg",
+    "score": 14.121,
+    "sep": 0.464,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          12,
+          9
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "Pizza"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          6,
+          22
+        ],
+        "toks": [
+          "branding",
+          "label",
+          "\u54c1\u724c\u7684"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          3,
+          4
+        ],
+        "toks": [
+          "chair",
+          "\u6905",
+          "chairs"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000283064.jpg",
+    "score": 14.112,
+    "sep": 0.462,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          17,
+          20
+        ],
+        "toks": [
+          "acie",
+          "ukan",
+          "tabletop"
+        ]
+      },
+      {
+        "name": "vase",
+        "rc": [
+          8,
+          10
+        ],
+        "toks": [
+          "vase",
+          "tall",
+          "\u5bb9\u5668"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          15,
+          3
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000011149.jpg",
+    "score": 14.098,
+    "sep": 0.38,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bicycle",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "wheels",
+          "wheel",
+          "Wheels"
+        ]
+      },
+      {
+        "name": "motorcycle",
+        "rc": [
+          16,
+          1
+        ],
+        "toks": [
+          "helmet",
+          "helmets",
+          "Helmet"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          4,
+          26
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886b"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000226171.jpg",
+    "score": 14.068,
+    "sep": 0.374,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          7,
+          12
+        ],
+        "toks": [
+          "browser",
+          "displaying",
+          "\u663e\u793a"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          14,
+          25
+        ],
+        "toks": [
+          "ergonomic",
+          "foreground",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          11,
+          3
+        ],
+        "toks": [
+          "keyboard",
+          "acie",
+          "presses"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000336232.jpg",
+    "score": 14.062,
+    "sep": 0.452,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "car",
+        "rc": [
+          15,
+          17
+        ],
+        "toks": [
+          "stripes",
+          "accents",
+          "bumper"
+        ]
+      },
+      {
+        "name": "motorcycle",
+        "rc": [
+          9,
+          6
+        ],
+        "toks": [
+          "helmet",
+          "\u5e3d\u5b50",
+          "helmets"
+        ]
+      },
+      {
+        "name": "bus",
+        "rc": [
+          4,
+          16
+        ],
+        "toks": [
+          "\u516c\u4ea4\u8f66",
+          "buses",
+          "bus"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000437412.jpg",
+    "score": 14.029,
+    "sep": 0.446,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          7,
+          12
+        ],
+        "toks": [
+          "Italians",
+          "toppings",
+          "melted"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          23
+        ],
+        "toks": [
+          "shirt",
+          "-shirt",
+          "shirt"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          10,
+          24
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000403995.jpg",
+    "score": 14.029,
+    "sep": 0.446,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          10,
+          18
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "umbrella",
+        "rc": [
+          2,
+          19
+        ],
+        "toks": [
+          "parade",
+          "procession",
+          "Parade"
+        ]
+      },
+      {
+        "name": "motorcycle",
+        "rc": [
+          14,
+          1
+        ],
+        "toks": [
+          "\u6469\u6258\u8f66",
+          "scooter",
+          "motorcycle"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000031043.jpg",
+    "score": 14.02,
+    "sep": 0.444,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          12,
+          23
+        ],
+        "toks": [
+          "\u5ea7\u4f4d",
+          "seat",
+          "seats"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          13,
+          3
+        ],
+        "toks": [
+          "chair",
+          "chair",
+          "chairs"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          6,
+          9
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000318346.jpg",
+    "score": 14.002,
+    "sep": 0.36,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "sandwich",
+        "rc": [
+          15,
+          11
+        ],
+        "toks": [
+          "tacos",
+          "taco",
+          "sandwiches"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          10
+        ],
+        "toks": [
+          "laptop",
+          "Laptop",
+          "laptops"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          8,
+          0
+        ],
+        "toks": [
+          "foreground",
+          "\u4e00\u53ea\u624b",
+          "hands"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000063040.jpg",
+    "score": 14.0,
+    "sep": 0.52,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dog",
+        "rc": [
+          14,
+          12
+        ],
+        "toks": [
+          "\u72ac",
+          "breed",
+          "dogs"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          0,
+          10
+        ],
+        "toks": [
+          "\u5728\u5f53\u5730",
+          "chan",
+          "oso"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          26
+        ],
+        "toks": [
+          "\u51f3",
+          "chairs",
+          "desks"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000036484.jpg",
+    "score": 13.956,
+    "sep": 0.431,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          13,
+          18
+        ],
+        "toks": [
+          "breeds",
+          "breed",
+          "kittens"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          5,
+          9
+        ],
+        "toks": [
+          "\u5c4f\u5e55\u4e0a",
+          "screen",
+          "pantalla"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          14,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000497855.jpg",
+    "score": 13.954,
+    "sep": 0.351,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "apple",
+        "rc": [
+          7,
+          14
+        ],
+        "toks": [
+          "emon",
+          "apple",
+          "stration"
+        ]
+      },
+      {
+        "name": "banana",
+        "rc": [
+          12,
+          8
+        ],
+        "toks": [
+          "ripe",
+          "\u4e00\u6761",
+          "bananas"
+        ]
+      },
+      {
+        "name": "orange",
+        "rc": [
+          16,
+          25
+        ],
+        "toks": [
+          "citrus",
+          "hues",
+          "shades"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000263828.jpg",
+    "score": 13.951,
+    "sep": 0.35,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "motorcycle",
+        "rc": [
+          6,
+          24
+        ],
+        "toks": [
+          "motorcycles",
+          "celebrated",
+          "athlon"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          1
+        ],
+        "toks": [
+          "shirts",
+          "shirt",
+          "shirt"
+        ]
+      },
+      {
+        "name": "truck",
+        "rc": [
+          0,
+          21
+        ],
+        "toks": [
+          "\u8d27\u8f66",
+          "truck",
+          "trucks"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000222842.jpg",
+    "score": 13.943,
+    "sep": 0.429,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          2,
+          12
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      },
+      {
+        "name": "cake",
+        "rc": [
+          14,
+          15
+        ],
+        "toks": [
+          "Czech",
+          "Prague",
+          "chocolate"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          24
+        ],
+        "toks": [
+          "hands",
+          "\u4e00\u53ea\u624b",
+          "hands"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000521427.jpg",
+    "score": 13.903,
+    "sep": 0.421,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          9,
+          5
+        ],
+        "toks": [
+          "\u5fd7\u613f\u8005",
+          "volunteer",
+          "person"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          13,
+          15
+        ],
+        "toks": [
+          "breeds",
+          "breed",
+          "Australian"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          6,
+          20
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000486114.jpg",
+    "score": 13.865,
+    "sep": 0.333,
+    "grid": [
+      23,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          22,
+          6
+        ],
+        "toks": [
+          "tabletop",
+          "acie",
+          "ukan"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          13,
+          3
+        ],
+        "toks": [
+          "foliage",
+          "\u8302",
+          "lush"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          20,
+          15
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "seat"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000096832.jpg",
+    "score": 13.829,
+    "sep": 0.486,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          16,
+          17
+        ],
+        "toks": [
+          "keyboard",
+          "touch",
+          "\u952e\u76d8"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          7,
+          10
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirt"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          23
+        ],
+        "toks": [
+          "\u5c4f\u5e55\u4e0a",
+          "caffe",
+          "screen"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000246999.jpg",
+    "score": 13.825,
+    "sep": 0.325,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "chair",
+          "chair",
+          "chairs"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          17,
+          5
+        ],
+        "toks": [
+          "cushion",
+          "cushions",
+          "\u6551\u6d4e"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          17,
+          25
+        ],
+        "toks": [
+          "foliage",
+          "leaf",
+          "leaves"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000544451.jpg",
+    "score": 13.82,
+    "sep": 0.404,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          13
+        ],
+        "toks": [
+          "\u58c1\u7eb8",
+          "screen",
+          "wallpaper"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          17,
+          21
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "chair"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          14,
+          5
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "laptop",
+          "Laptop"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000157960.jpg",
+    "score": 13.82,
+    "sep": 0.404,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          10,
+          12
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          16,
+          4
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "\u5ea7\u6905"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          14,
+          26
+        ],
+        "toks": [
+          "LinearGradient",
+          "screenHeight",
+          "visibility"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000490964.jpg",
+    "score": 13.807,
+    "sep": 0.321,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "sandwich",
+        "rc": [
+          16,
+          19
+        ],
+        "toks": [
+          "sand",
+          "pter",
+          "Industries"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "-colored",
+          "pages",
+          "getColor"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          4,
+          21
+        ],
+        "toks": [
+          "wheels",
+          "wheel",
+          "Wheels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000145318.jpg",
+    "score": 13.802,
+    "sep": 0.32,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          6,
+          26
+        ],
+        "toks": [
+          "table",
+          "table",
+          "tables"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          1,
+          20
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      },
+      {
+        "name": "vase",
+        "rc": [
+          5,
+          10
+        ],
+        "toks": [
+          "centerpiece",
+          "vase",
+          "containing"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000015567.jpg",
+    "score": 13.798,
+    "sep": 0.48,
+    "grid": [
+      23,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          20,
+          18
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          12,
+          5
+        ],
+        "toks": [
+          "patterns",
+          "pattern",
+          "stripes"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          1,
+          6
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "door"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000227851.jpg",
+    "score": 13.796,
+    "sep": 0.479,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          13,
+          7
+        ],
+        "toks": [
+          "woman",
+          "\u5973\u58eb",
+          "women"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          4,
+          17
+        ],
+        "toks": [
+          "\u5145\u65a5",
+          "TableView",
+          "Pages"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          13,
+          23
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000526801.jpg",
+    "score": 13.796,
+    "sep": 0.479,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "book",
+        "rc": [
+          1,
+          7
+        ],
+        "toks": [
+          "books",
+          "\u4e66\u7c4d",
+          "books"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          16,
+          18
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "ypad"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          10,
+          1
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "screen",
+          "screens"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000435003.jpg",
+    "score": 13.784,
+    "sep": 0.397,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          22
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "ergonomic"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          8,
+          1
+        ],
+        "toks": [
+          "portable",
+          "\u7b14\u8bb0\u672c",
+          "laptop"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          7,
+          12
+        ],
+        "toks": [
+          "displayed",
+          "\u5c55\u793a",
+          "central"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000186788.jpg",
+    "score": 13.771,
+    "sep": 0.394,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          2,
+          10
+        ],
+        "toks": [
+          "\u89c6\u89d2",
+          "perspective",
+          "Perspective"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          5,
+          20
+        ],
+        "toks": [
+          "\u8f7f\u8f66",
+          "SUV",
+          "sedan"
+        ]
+      },
+      {
+        "name": "skateboard",
+        "rc": [
+          14,
+          8
+        ],
+        "toks": [
+          "Skate",
+          "skate",
+          "board"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000581450.jpg",
+    "score": 13.725,
+    "sep": 0.225,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          13,
+          4
+        ],
+        "toks": [
+          "pillows",
+          "pillow",
+          "cushions"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          11,
+          17
+        ],
+        "toks": [
+          "avra",
+          "structuring",
+          "Blanc"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          15,
+          16
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "chair"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000480015.jpg",
+    "score": 13.707,
+    "sep": 0.221,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          21
+        ],
+        "toks": [
+          "ergonomic",
+          "keyboard",
+          "padded"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          25
+        ],
+        "toks": [
+          "acie",
+          "Screening",
+          "caffe"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          14,
+          15
+        ],
+        "toks": [
+          "book",
+          "volumes",
+          "manga"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000523454.jpg",
+    "score": 13.705,
+    "sep": 0.381,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bench",
+        "rc": [
+          18,
+          19
+        ],
+        "toks": [
+          "cars",
+          "parked",
+          "vehicles"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          17,
+          4
+        ],
+        "toks": [
+          "\u690d\u7269",
+          "plants",
+          "plant"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "\u8f7f\u8f66",
+          "carro",
+          "sedan"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000460208.jpg",
+    "score": 13.691,
+    "sep": 0.378,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          14,
+          9
+        ],
+        "toks": [
+          "countert",
+          "desk",
+          "\u53a8\u623f"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          7,
+          14
+        ],
+        "toks": [
+          "dual",
+          "\u51b0\u7bb1",
+          "refrigerator"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          5,
+          26
+        ],
+        "toks": [
+          "oven",
+          "Microwave",
+          "toaster"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000263323.jpg",
+    "score": 13.687,
+    "sep": 0.457,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          23
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          5
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "creen",
+          "screen"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          13
+        ],
+        "toks": [
+          "\u51f3",
+          "chair",
+          "chairs"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000422654.jpg",
+    "score": 13.687,
+    "sep": 0.457,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          9,
+          23
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          15,
+          13
+        ],
+        "toks": [
+          "table",
+          "\u9910\u684c",
+          "dining"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1\u4e0a"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000142386.jpg",
+    "score": 13.668,
+    "sep": 0.374,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          11,
+          22
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          7,
+          13
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886b"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          19,
+          15
+        ],
+        "toks": [
+          "ened",
+          "chair",
+          "chairs"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000270570.jpg",
+    "score": 13.66,
+    "sep": 0.372,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          9,
+          3
+        ],
+        "toks": [
+          "portable",
+          "\u7b14\u8bb0\u672c",
+          "laptop"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          11,
+          20
+        ],
+        "toks": [
+          "standalone",
+          "keyboard",
+          "separate"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          11
+        ],
+        "toks": [
+          "\u7535\u8bdd",
+          "telephone",
+          "phone"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000195538.jpg",
+    "score": 13.634,
+    "sep": 0.287,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          18
+        ],
+        "toks": [
+          "Screens",
+          "screen",
+          "caffe"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          8,
+          24
+        ],
+        "toks": [
+          "OSX",
+          "MacBook",
+          "Apple"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          12,
+          11
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000303626.jpg",
+    "score": 13.62,
+    "sep": 0.444,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          11,
+          20
+        ],
+        "toks": [
+          "6",
+          "tabletop",
+          "pull"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          14,
+          4
+        ],
+        "toks": [
+          "woman",
+          "women",
+          "\u5973\u5b50"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          4,
+          14
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000340894.jpg",
+    "score": 13.613,
+    "sep": 0.363,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          11,
+          8
+        ],
+        "toks": [
+          "ened",
+          "ish",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          13
+        ],
+        "toks": [
+          "displayed",
+          "displaying",
+          "\u663e\u793a"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          18,
+          12
+        ],
+        "toks": [
+          "standalone",
+          "keyboard",
+          "\u9f20\u6807"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000264155.jpg",
+    "score": 13.61,
+    "sep": 0.362,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          5,
+          9
+        ],
+        "toks": [
+          "shirt",
+          "shirt",
+          "-shirt"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          8,
+          18
+        ],
+        "toks": [
+          "crust",
+          "Italians",
+          "toppings"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          15,
+          23
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000232376.jpg",
+    "score": 13.61,
+    "sep": 0.362,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          26
+        ],
+        "toks": [
+          "keyboard",
+          "\u5e74\u5e74\u5e95",
+          "abbo"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          22
+        ],
+        "toks": [
+          "browser",
+          "desktop",
+          "displaying"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          14
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000284375.jpg",
+    "score": 13.602,
+    "sep": 0.36,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          11,
+          14
+        ],
+        "toks": [
+          "keyboard",
+          "ened",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          10,
+          4
+        ],
+        "toks": [
+          "\u4e00\u9875",
+          "pages",
+          "sheets"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          1,
+          21
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u5ea7\u6905"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000346207.jpg",
+    "score": 13.602,
+    "sep": 0.36,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          14,
+          20
+        ],
+        "toks": [
+          "stripes",
+          "pattern",
+          "patterns"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          6,
+          16
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "mainWindow"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "touch",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000253665.jpg",
+    "score": 13.602,
+    "sep": 0.36,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          9,
+          25
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "computers",
+          "computer"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          16,
+          7
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "\u5ea7\u6905"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          10,
+          15
+        ],
+        "toks": [
+          "whisk",
+          "inux",
+          "agues"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000280819.jpg",
+    "score": 13.595,
+    "sep": 0.439,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          6,
+          17
+        ],
+        "toks": [
+          "tables",
+          "\u684c\u5b50",
+          "table"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          13,
+          25
+        ],
+        "toks": [
+          "6",
+          "erguson",
+          "pers"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          16,
+          12
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000042685.jpg",
+    "score": 13.551,
+    "sep": 0.35,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          9,
+          17
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirts",
+          "shirt"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          15,
+          14
+        ],
+        "toks": [
+          "peppers",
+          "onions",
+          "vegetables"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "pillows",
+          "pillow",
+          "\u6795\u5934"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000025846.jpg",
+    "score": 13.505,
+    "sep": 0.261,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          9
+        ],
+        "toks": [
+          "sticky",
+          "notes",
+          "adhesive"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          17,
+          26
+        ],
+        "toks": [
+          "portable",
+          "detach",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          17,
+          6
+        ],
+        "toks": [
+          "fingers",
+          "\u4e00\u53ea\u624b",
+          "hands"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000387850.jpg",
+    "score": 13.505,
+    "sep": 0.341,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          19,
+          2
+        ],
+        "toks": [
+          "hands",
+          "\u53cc\u624b",
+          "Hands"
+        ]
+      },
+      {
+        "name": "bus",
+        "rc": [
+          6,
+          19
+        ],
+        "toks": [
+          "buses",
+          "\u5df4\u58eb",
+          "bus"
+        ]
+      },
+      {
+        "name": "bench",
+        "rc": [
+          13,
+          21
+        ],
+        "toks": [
+          "chairs",
+          "chair",
+          "seats"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000405657.jpg",
+    "score": 13.505,
+    "sep": 0.341,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          9,
+          11
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          16,
+          9
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "laptop",
+          "indows"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          18,
+          24
+        ],
+        "toks": [
+          "seat",
+          "chair",
+          "markings"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000562507.jpg",
+    "score": 13.488,
+    "sep": 0.258,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          23
+        ],
+        "toks": [
+          "thick",
+          "pizza",
+          "Italian"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          1,
+          22
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "seat"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          4,
+          16
+        ],
+        "toks": [
+          "tables",
+          "\u8bf4\u5230\u8fd9\u91cc",
+          "tabletop"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000453001.jpg",
+    "score": 13.485,
+    "sep": 0.337,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          6,
+          7
+        ],
+        "toks": [
+          "facing",
+          "faced",
+          "upright"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          12,
+          2
+        ],
+        "toks": [
+          "foliage",
+          "\u53f6\u5b50",
+          "leaves"
+        ]
+      },
+      {
+        "name": "bench",
+        "rc": [
+          17,
+          21
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "seating"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000533206.jpg",
+    "score": 13.454,
+    "sep": 0.331,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "sandwich",
+        "rc": [
+          5,
+          9
+        ],
+        "toks": [
+          "sandwiches",
+          "sandwich",
+          "wich"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          2,
+          17
+        ],
+        "toks": [
+          "glass",
+          "\u900f\u660e",
+          "Lens"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          2,
+          0
+        ],
+        "toks": [
+          "\u74f6",
+          "bottles",
+          "bottle"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000073973.jpg",
+    "score": 13.443,
+    "sep": 0.249,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          8,
+          4
+        ],
+        "toks": [
+          "cushion",
+          "Placement",
+          "inations"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          12,
+          22
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          3,
+          2
+        ],
+        "toks": [
+          "fern",
+          "leaves",
+          "leaf"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000216944.jpg",
+    "score": 13.441,
+    "sep": 0.408,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          9,
+          24
+        ],
+        "toks": [
+          "hands",
+          "fists",
+          "\u62f3\u5934"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "\u6795\u5934",
+          "pillow",
+          "pillows"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          14,
+          3
+        ],
+        "toks": [
+          "sleep",
+          "\u7761",
+          "asleep"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000404944.jpg",
+    "score": 13.414,
+    "sep": 0.403,
+    "grid": [
+      19,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          5,
+          25
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "laptop",
+          "computer"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "woman",
+          "person",
+          "\u5973\u6027"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          5,
+          8
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000004916.jpg",
+    "score": 13.407,
+    "sep": 0.321,
+    "grid": [
+      23,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          11,
+          10
+        ],
+        "toks": [
+          "sleeve",
+          "shirt",
+          "sleeves"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          14,
+          22
+        ],
+        "toks": [
+          "\u5e8a",
+          "bed",
+          "beds"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000514990.jpg",
+    "score": 13.371,
+    "sep": 0.394,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          15,
+          23
+        ],
+        "toks": [
+          "meal",
+          "\u70b9\u4e86",
+          "dining"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirts",
+          "shirt"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          14
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000459428.jpg",
+    "score": 13.362,
+    "sep": 0.312,
+    "grid": [
+      22,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          11,
+          14
+        ],
+        "toks": [
+          "acie",
+          "cki",
+          "Disposable"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          17,
+          22
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "portable",
+          "laptop"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          8
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "keyboards"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000507782.jpg",
+    "score": 13.325,
+    "sep": 0.225,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          12,
+          20
+        ],
+        "toks": [
+          "\u773c\u955c",
+          "glasses",
+          "wearing"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          11,
+          10
+        ],
+        "toks": [
+          "portable",
+          "laptop",
+          "laptops"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          7,
+          11
+        ],
+        "toks": [
+          "tall",
+          "foliage",
+          "cko"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000058886.jpg",
+    "score": 13.323,
+    "sep": 0.385,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          23
+        ],
+        "toks": [
+          "pantalla",
+          ".....",
+          "screen"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          13
+        ],
+        "toks": [
+          "portable",
+          "laptop",
+          "\u7b14\u8bb0\u672c"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          18,
+          6
+        ],
+        "toks": [
+          "\u9ed1\u8272",
+          "ergonomic",
+          "keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000363736.jpg",
+    "score": 13.311,
+    "sep": 0.222,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          7,
+          15
+        ],
+        "toks": [
+          "pillows",
+          "cushions",
+          "cushion"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          2
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "chair"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          5,
+          2
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "inactive",
+          "screen"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000041438.jpg",
+    "score": 13.302,
+    "sep": 0.3,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "banana",
+        "rc": [
+          9,
+          14
+        ],
+        "toks": [
+          "ripe",
+          "\u9999\u8549",
+          "bananas"
+        ]
+      },
+      {
+        "name": "orange",
+        "rc": [
+          12,
+          21
+        ],
+        "toks": [
+          "oranges",
+          "citrus",
+          "orange"
+        ]
+      },
+      {
+        "name": "apple",
+        "rc": [
+          16,
+          7
+        ],
+        "toks": [
+          "apple",
+          "\u82f9\u679c",
+          "apples"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000374782.jpg",
+    "score": 13.302,
+    "sep": 0.3,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          5,
+          27
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "preview"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          19
+        ],
+        "toks": [
+          "MacBook",
+          "intosh",
+          "portable"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          12
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000440455.jpg",
+    "score": 13.298,
+    "sep": 0.22,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          7
+        ],
+        "toks": [
+          "casually",
+          "shirt",
+          "Shirt"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          11,
+          3
+        ],
+        "toks": [
+          "-screen",
+          "Caucus",
+          "screen"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          10,
+          18
+        ],
+        "toks": [
+          "retrie",
+          "breed",
+          "rador"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000379310.jpg",
+    "score": 13.293,
+    "sep": 0.219,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          24
+        ],
+        "toks": [
+          "pantalla",
+          "creen",
+          "screen"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "undra",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          9
+        ],
+        "toks": [
+          "standalone",
+          "\u72ec\u7acb",
+          "keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000535602.jpg",
+    "score": 13.273,
+    "sep": 0.295,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          7,
+          22
+        ],
+        "toks": [
+          "apult",
+          "kittens",
+          "\ud83d\udc08"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          1,
+          20
+        ],
+        "toks": [
+          "wheels",
+          "Wheels",
+          "wheel"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          5,
+          10
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "laptop",
+          "computers"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000523526.jpg",
+    "score": 13.268,
+    "sep": 0.374,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          5
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "browser",
+          "screen"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          7,
+          24
+        ],
+        "toks": [
+          "\u74f6",
+          "bottles",
+          "bottle"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          4,
+          14
+        ],
+        "toks": [
+          "books",
+          "\u4e66\u7c4d",
+          "books"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000509577.jpg",
+    "score": 13.253,
+    "sep": 0.211,
+    "grid": [
+      19,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          9
+        ],
+        "toks": [
+          "person",
+          "seated",
+          "behind"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          8,
+          21
+        ],
+        "toks": [
+          "\u676f",
+          "glasses",
+          "glass"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          7,
+          9
+        ],
+        "toks": [
+          "thickness",
+          "Sandwich",
+          "sandwich"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000261116.jpg",
+    "score": 13.248,
+    "sep": 0.37,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bench",
+        "rc": [
+          17,
+          11
+        ],
+        "toks": [
+          "benches",
+          "\u51f3",
+          "bench"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          15,
+          1
+        ],
+        "toks": [
+          "\u4eba\u7fa4\u4e2d",
+          "person",
+          "torso"
+        ]
+      },
+      {
+        "name": "cake",
+        "rc": [
+          2,
+          2
+        ],
+        "toks": [
+          "\u86cb\u7cd5",
+          "cake",
+          "cake"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000267694.jpg",
+    "score": 13.24,
+    "sep": 0.288,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          8,
+          18
+        ],
+        "toks": [
+          "toppings",
+          "topped",
+          "topping"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          3,
+          7
+        ],
+        "toks": [
+          "label",
+          "labels",
+          "\u6807\u7b7e"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          0,
+          14
+        ],
+        "toks": [
+          "hands",
+          "\u4e00\u53ea\u624b",
+          "Hands"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000466838.jpg",
+    "score": 13.24,
+    "sep": 0.288,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          11,
+          5
+        ],
+        "toks": [
+          "wearing",
+          "wears",
+          "worn"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          18,
+          18
+        ],
+        "toks": [
+          "tabletop",
+          "/table",
+          "mate"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          17,
+          6
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "\ud83c\udf55"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000531178.jpg",
+    "score": 13.24,
+    "sep": 0.288,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          11
+        ],
+        "toks": [
+          "person",
+          "seated",
+          "\u4eba\u5927"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "tabletop",
+          "-screen",
+          "foreground"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          13,
+          23
+        ],
+        "toks": [
+          "crust",
+          "thick",
+          "bread"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000535569.jpg",
+    "score": 13.24,
+    "sep": 0.288,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          9,
+          15
+        ],
+        "toks": [
+          "pizzas",
+          "izza",
+          "Italian"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          4,
+          3
+        ],
+        "toks": [
+          "\u51f3",
+          "caffe",
+          "seat"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          6,
+          22
+        ],
+        "toks": [
+          "\u4e00\u74f6",
+          "wine",
+          "bottles"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000069224.jpg",
+    "score": 13.24,
+    "sep": 0.288,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          14,
+          8
+        ],
+        "toks": [
+          "woman",
+          "foreground",
+          "\u5973\u5b50"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          20,
+          23
+        ],
+        "toks": [
+          "tabletop",
+          "reb",
+          "exas"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u51f3"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000570548.jpg",
+    "score": 13.24,
+    "sep": 0.288,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "sandwich",
+        "rc": [
+          11,
+          16
+        ],
+        "toks": [
+          "sandwiches",
+          "\u4e00\u5757",
+          "sandwich"
+        ]
+      },
+      {
+        "name": "banana",
+        "rc": [
+          12,
+          5
+        ],
+        "toks": [
+          "bananas",
+          "fruit",
+          "banana"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "hands",
+          "hand",
+          "\u624b"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000013177.jpg",
+    "score": 13.225,
+    "sep": 0.285,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "motorcycle",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "\u6469\u6258\u8f66",
+          "motorcycle",
+          "motorcycles"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "sleeves",
+          "sleeve",
+          "shirts"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          6,
+          14
+        ],
+        "toks": [
+          "\u81ea\u884c\u8f66",
+          "bicycle",
+          "wheels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000325838.jpg",
+    "score": 13.212,
+    "sep": 0.202,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          9
+        ],
+        "toks": [
+          "shirt",
+          "\u8863\u670d",
+          "shirts"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          10,
+          4
+        ],
+        "toks": [
+          "computers",
+          "computer",
+          "classroom"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          6,
+          20
+        ],
+        "toks": [
+          "ish",
+          "textured",
+          "chair"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000512276.jpg",
+    "score": 13.21,
+    "sep": 0.362,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          13,
+          5
+        ],
+        "toks": [
+          "cushions",
+          "\u6c99\u53d1\u4e0a",
+          "upholstery"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          13
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          21
+        ],
+        "toks": [
+          "creen",
+          "\u96fb\u8996",
+          "screens"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000523807.jpg",
+    "score": 13.159,
+    "sep": 0.352,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "hot dog",
+        "rc": [
+          16,
+          13
+        ],
+        "toks": [
+          "hot",
+          "delicious",
+          "\u6c49\u5821"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          7,
+          27
+        ],
+        "toks": [
+          ".....",
+          "Personen",
+          "Persons"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          19,
+          4
+        ],
+        "toks": [
+          "markings",
+          "\u6807\u7b7e",
+          "label"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000098927.jpg",
+    "score": 13.159,
+    "sep": 0.352,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          19,
+          27
+        ],
+        "toks": [
+          "\u89c6\u89d2",
+          "perspective",
+          "Perspective"
+        ]
+      },
+      {
+        "name": "umbrella",
+        "rc": [
+          1,
+          2
+        ],
+        "toks": [
+          "\u4f1e",
+          "shading",
+          "umbrella"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          4,
+          11
+        ],
+        "toks": [
+          "chair",
+          "folding",
+          "colorful"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000166565.jpg",
+    "score": 13.105,
+    "sep": 0.261,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          21
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "desk"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          10,
+          1
+        ],
+        "toks": [
+          "blank",
+          "\u5c4f\u5e55",
+          "screen"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          4
+        ],
+        "toks": [
+          "keys",
+          "keyboard",
+          "\u94a5\u5319"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000211260.jpg",
+    "score": 13.076,
+    "sep": 0.335,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          15,
+          23
+        ],
+        "toks": [
+          "pillows",
+          "pillow",
+          "\u6795\u5934"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          10,
+          9
+        ],
+        "toks": [
+          "MacBook",
+          "Apple",
+          "\u7b14\u8bb0\u672c"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000514504.jpg",
+    "score": 13.072,
+    "sep": 0.254,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          6
+        ],
+        "toks": [
+          "cushion",
+          "padding",
+          "seat"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          5,
+          13
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "displayed"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          6,
+          6
+        ],
+        "toks": [
+          "-screen",
+          "screen",
+          "Snackbar"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000486034.jpg",
+    "score": 13.009,
+    "sep": 0.162,
+    "grid": [
+      19,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bed",
+        "rc": [
+          7,
+          12
+        ],
+        "toks": [
+          "blankets",
+          "\u6bef",
+          "blanket"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          13,
+          24
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "chair"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          16,
+          25
+        ],
+        "toks": [
+          "desk",
+          "captain",
+          "captains"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000189241.jpg",
+    "score": 13.004,
+    "sep": 0.241,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          12,
+          25
+        ],
+        "toks": [
+          "tabletop",
+          "\u684c\u9762",
+          "countert"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "ville",
+          "shire",
+          "town"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          17,
+          24
+        ],
+        "toks": [
+          "jars",
+          "labeled",
+          "\u5bc6\u5c01"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000498997.jpg",
+    "score": 12.962,
+    "sep": 0.312,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          7,
+          4
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "jersey"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          22
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "keyboards"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          10,
+          26
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "computer",
+          "computers"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000148620.jpg",
+    "score": 12.953,
+    "sep": 0.151,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          21
+        ],
+        "toks": [
+          "displayed",
+          "\u663e\u793a",
+          "display"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          13,
+          9
+        ],
+        "toks": [
+          "laptops",
+          "laptop",
+          "Laptop"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          14,
+          13
+        ],
+        "toks": [
+          "keyboard",
+          "ypad",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000507951.jpg",
+    "score": 12.925,
+    "sep": 0.225,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          15,
+          5
+        ],
+        "toks": [
+          "\ud83e\udd55",
+          "cake",
+          "wood"
+        ]
+      },
+      {
+        "name": "cake",
+        "rc": [
+          5,
+          13
+        ],
+        "toks": [
+          "frosting",
+          "\u6d82\u62b9",
+          "icing"
+        ]
+      },
+      {
+        "name": "vase",
+        "rc": [
+          11,
+          6
+        ],
+        "toks": [
+          "bouquet",
+          "vase",
+          "centerpiece"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000081315.jpg",
+    "score": 12.893,
+    "sep": 0.219,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          9,
+          22
+        ],
+        "toks": [
+          "dual",
+          "\u51b0\u7bb1",
+          "refrigerator"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          18,
+          8
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          14,
+          11
+        ],
+        "toks": [
+          "dishwasher",
+          "washing",
+          "appliance"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000333998.jpg",
+    "score": 12.893,
+    "sep": 0.219,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          10,
+          13
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      },
+      {
+        "name": "sink",
+        "rc": [
+          15,
+          22
+        ],
+        "toks": [
+          "faucet",
+          "umbing",
+          "shower"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          11,
+          25
+        ],
+        "toks": [
+          "-hot",
+          "countert",
+          "stove"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000068198.jpg",
+    "score": 12.836,
+    "sep": 0.207,
+    "grid": [
+      19,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          8,
+          13
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          10,
+          8
+        ],
+        "toks": [
+          "\u6bef",
+          "blanket",
+          "blankets"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          14,
+          23
+        ],
+        "toks": [
+          "spokes",
+          "rims",
+          "wheels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000252927.jpg",
+    "score": 12.817,
+    "sep": 0.203,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          4,
+          3
+        ],
+        "toks": [
+          "toppings",
+          "sprink",
+          "poured"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          9
+        ],
+        "toks": [
+          "person",
+          "person",
+          "\u4e00\u4e2a\u4eba"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          8,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000416668.jpg",
+    "score": 12.81,
+    "sep": 0.202,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          8,
+          19
+        ],
+        "toks": [
+          "whisk",
+          "hairs",
+          "strands"
+        ]
+      },
+      {
+        "name": "sink",
+        "rc": [
+          8,
+          7
+        ],
+        "toks": [
+          "faucet",
+          "\u9f99\u5934",
+          "knobs"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          5,
+          11
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000037728.jpg",
+    "score": 12.789,
+    "sep": 0.278,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          6
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirt"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          23
+        ],
+        "toks": [
+          "\u51f3",
+          "seat",
+          "chair"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          14,
+          23
+        ],
+        "toks": [
+          "\u9910\u9986",
+          "dining",
+          "restaurant"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000211825.jpg",
+    "score": 12.788,
+    "sep": 0.278,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          9
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          4,
+          26
+        ],
+        "toks": [
+          "\u53a8\u623f",
+          "appliance",
+          "countert"
+        ]
+      },
+      {
+        "name": "cake",
+        "rc": [
+          13,
+          13
+        ],
+        "toks": [
+          "cake",
+          "\u5bf9\u5979",
+          "ght"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000226220.jpg",
+    "score": 12.786,
+    "sep": 0.117,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          15,
+          24
+        ],
+        "toks": [
+          "apult",
+          "sleeping",
+          "nip"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          16,
+          27
+        ],
+        "toks": [
+          "seat",
+          "\u5ea7\u6905",
+          "chair"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          1,
+          7
+        ],
+        "toks": [
+          "trees",
+          "tree",
+          "leaves"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000516248.jpg",
+    "score": 12.769,
+    "sep": 0.194,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          11,
+          4
+        ],
+        "toks": [
+          "acie",
+          "screen",
+          "\u266a"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          12,
+          26
+        ],
+        "toks": [
+          "keyboard",
+          "undra",
+          "presses"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          8,
+          27
+        ],
+        "toks": [
+          "\u89c6\u89d2",
+          "focus",
+          "perspective"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000389458.jpg",
+    "score": 12.752,
+    "sep": 0.19,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          16,
+          18
+        ],
+        "toks": [
+          "wearing",
+          "\u4f69\u6234",
+          "woman"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          10,
+          6
+        ],
+        "toks": [
+          "wheels",
+          "spokes",
+          "wheel"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          14,
+          6
+        ],
+        "toks": [
+          "sandwiches",
+          "\u6c49\u5821",
+          "burger"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000422424.jpg",
+    "score": 12.707,
+    "sep": 0.181,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          5
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "screen",
+          "screens"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          5,
+          18
+        ],
+        "toks": [
+          "apult",
+          "kittens",
+          "nip"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          2,
+          20
+        ],
+        "toks": [
+          "\u74f6",
+          "bottles",
+          "bottle"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000307573.jpg",
+    "score": 12.705,
+    "sep": 0.181,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          12,
+          9
+        ],
+        "toks": [
+          "\u51b7\u85cf",
+          "dual",
+          "refriger"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          13
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "cushions",
+          "cushion",
+          "apas"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000416795.jpg",
+    "score": 12.652,
+    "sep": 0.17,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          9,
+          6
+        ],
+        "toks": [
+          "pizza",
+          "portion",
+          "slice"
+        ]
+      },
+      {
+        "name": "bench",
+        "rc": [
+          6,
+          5
+        ],
+        "toks": [
+          "seating",
+          "chairs",
+          "\u5ea7\u6905"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          26
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886b"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000458549.jpg",
+    "score": 12.599,
+    "sep": 0.16,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          12,
+          6
+        ],
+        "toks": [
+          "cushions",
+          "bedding",
+          "cushion"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          12,
+          13
+        ],
+        "toks": [
+          "table",
+          "\u4e2d\u592e",
+          "central"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          11
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000505728.jpg",
+    "score": 12.566,
+    "sep": 0.153,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          5,
+          7
+        ],
+        "toks": [
+          "woman",
+          "\u53a8\u5e08",
+          "women"
+        ]
+      },
+      {
+        "name": "oven",
+        "rc": [
+          6,
+          3
+        ],
+        "toks": [
+          "Oven",
+          "cooker",
+          "craft"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          4,
+          20
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000251639.jpg",
+    "score": 12.514,
+    "sep": 0.143,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bicycle",
+        "rc": [
+          5,
+          19
+        ],
+        "toks": [
+          "wheels",
+          "wheel",
+          "Wheels"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          17,
+          8
+        ],
+        "toks": [
+          "\u5c0f\u578b",
+          "kittens",
+          "breed"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          5,
+          23
+        ],
+        "toks": [
+          "chair",
+          "\u51f3",
+          "desk"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000087567.jpg",
+    "score": 12.507,
+    "sep": 0.221,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "oven",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "stove",
+          "\u7089",
+          "burner"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          2,
+          20
+        ],
+        "toks": [
+          "\u4e00\u9875",
+          "pages",
+          "page"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          3,
+          26
+        ],
+        "toks": [
+          "\u690d\u7269",
+          "plants",
+          "plant"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000162362.jpg",
+    "score": 12.498,
+    "sep": 0.22,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "umbrella",
+        "rc": [
+          5,
+          23
+        ],
+        "toks": [
+          "umbrella",
+          "triangular",
+          "\u5706\u5f62"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          12,
+          12
+        ],
+        "toks": [
+          "\u4e1b",
+          "foliage",
+          "vegetation"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          8,
+          19
+        ],
+        "toks": [
+          "shirts",
+          "\u886b",
+          "shirt"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000537506.jpg",
+    "score": 12.471,
+    "sep": 0.214,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          6,
+          2
+        ],
+        "toks": [
+          "\u8fab",
+          "Caucus",
+          "pers"
+        ]
+      },
+      {
+        "name": "apple",
+        "rc": [
+          12,
+          21
+        ],
+        "toks": [
+          "apple",
+          "apple",
+          "\u82f9\u679c"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          6,
+          8
+        ],
+        "toks": [
+          "\u8f7f\u8f66",
+          "SUV",
+          "sedan"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000205676.jpg",
+    "score": 12.471,
+    "sep": 0.214,
+    "grid": [
+      20,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bus",
+        "rc": [
+          7,
+          17
+        ],
+        "toks": [
+          "Bus",
+          "Kyoto",
+          "\u516c\u4ea4"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          7,
+          23
+        ],
+        "toks": [
+          "\u8f7f\u8f66",
+          "SUV",
+          "vehicle"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          15,
+          5
+        ],
+        "toks": [
+          "girl",
+          "woman",
+          "\u5973\u5b50"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000406534.jpg",
+    "score": 12.391,
+    "sep": 0.198,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          13,
+          8
+        ],
+        "toks": [
+          "hands",
+          "\u53cc\u624b",
+          "Hands"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          10,
+          5
+        ],
+        "toks": [
+          "displayed",
+          "\u663e\u793a\u5c4f",
+          "screen"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          4,
+          15
+        ],
+        "toks": [
+          "\u690d\u7269",
+          "plants",
+          "plant"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000473237.jpg",
+    "score": 12.356,
+    "sep": 0.111,
+    "grid": [
+      18,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "fingers",
+          "\u624b\u6307",
+          "hands"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          10
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "Italian"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          22
+        ],
+        "toks": [
+          "chair",
+          "\u6905\u5b50",
+          "chairs"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000194790.jpg",
+    "score": 12.117,
+    "sep": 0.143,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          11
+        ],
+        "toks": [
+          "shirt",
+          "\u886b",
+          "sleeves"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          17,
+          16
+        ],
+        "toks": [
+          "toppings",
+          "\u6df7\u5408",
+          "mixed"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          1,
+          14
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "door"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000233660.jpg",
+    "score": 11.909,
+    "sep": 0.102,
+    "grid": [
+      21,
+      28
+    ],
+    "n_named": 3,
+    "anchors": [
+      {
+        "name": "bicycle",
+        "rc": [
+          18,
+          14
+        ],
+        "toks": [
+          "\u81ea\u884c\u8f66",
+          "bicycle",
+          "bike"
+        ]
+      },
+      {
+        "name": "dog",
+        "rc": [
+          5,
+          19
+        ],
+        "toks": [
+          "\u72ac",
+          "breed",
+          "breeds"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          3,
+          20
+        ],
+        "toks": [
+          "cars",
+          "\u8f66\u8f86",
+          "vehicles"
+        ]
+      }
+    ]
+  }
+]

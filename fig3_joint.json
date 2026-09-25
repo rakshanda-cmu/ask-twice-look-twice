@@ -1,0 +1,2820 @@
+[
+  {
+    "file": "COCO_val2014_000000473237.jpg",
+    "A": "person",
+    "B": "chair",
+    "q1": "What does the person look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "pizza",
+      "chair"
+    ],
+    "strengths": [
+      3,
+      3,
+      3
+    ],
+    "loc": 1.0,
+    "steered": 0.431,
+    "joint": 1.431,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "fingers",
+          "\u624b\u6307",
+          "hands"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          10
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "Italian"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          11,
+          22
+        ],
+        "toks": [
+          "chair",
+          "\u6905\u5b50",
+          "chairs"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000011149.jpg",
+    "A": "motorcycle",
+    "B": "person",
+    "q1": "What does the motorcycle look like?",
+    "q2": "What does the person look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "bicycle",
+      "motorcycle",
+      "person"
+    ],
+    "strengths": [
+      3,
+      3,
+      3
+    ],
+    "loc": 1.0,
+    "steered": 0.374,
+    "joint": 1.374,
+    "anchors": [
+      {
+        "name": "bicycle",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "wheels",
+          "wheel",
+          "Wheels"
+        ]
+      },
+      {
+        "name": "motorcycle",
+        "rc": [
+          16,
+          1
+        ],
+        "toks": [
+          "helmet",
+          "helmets",
+          "Helmet"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          4,
+          26
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886b"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000416795.jpg",
+    "A": "pizza",
+    "B": "person",
+    "q1": "What does the pizza look like?",
+    "q2": "What does the person look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "pizza",
+      "bench",
+      "person"
+    ],
+    "strengths": [
+      3,
+      2,
+      3
+    ],
+    "loc": 0.889,
+    "steered": 0.444,
+    "joint": 1.333,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          9,
+          6
+        ],
+        "toks": [
+          "pizza",
+          "portion",
+          "slice"
+        ]
+      },
+      {
+        "name": "bench",
+        "rc": [
+          6,
+          5
+        ],
+        "toks": [
+          "seating",
+          "chairs",
+          "\u5ea7\u6905"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          26
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886b"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000216944.jpg",
+    "A": "person",
+    "B": "cat",
+    "q1": "What does the person look like?",
+    "q2": "What does the cat look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "bed",
+      "cat"
+    ],
+    "strengths": [
+      1,
+      3,
+      3
+    ],
+    "loc": 0.778,
+    "steered": 0.464,
+    "joint": 1.242,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          9,
+          24
+        ],
+        "toks": [
+          "hands",
+          "fists",
+          "\u62f3\u5934"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "\u6795\u5934",
+          "pillow",
+          "pillows"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          14,
+          3
+        ],
+        "toks": [
+          "sleep",
+          "\u7761",
+          "asleep"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000092602.jpg",
+    "A": "cake",
+    "B": "chair",
+    "q1": "What does the cake look like?",
+    "q2": "What does the chair look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "cake",
+      "person",
+      "dining table",
+      "chair"
+    ],
+    "strengths": [
+      3,
+      2,
+      3,
+      2
+    ],
+    "loc": 0.833,
+    "steered": 0.335,
+    "joint": 1.218,
+    "anchors": [
+      {
+        "name": "cake",
+        "rc": [
+          9,
+          15
+        ],
+        "toks": [
+          "layers",
+          "Layers",
+          "layers"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          11
+        ],
+        "toks": [
+          "person",
+          "\u4e00\u4e2a\u4eba",
+          "person"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          10,
+          7
+        ],
+        "toks": [
+          "\u684c\u9762",
+          "tabletop",
+          "desk"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000245971.jpg",
+    "A": "keyboard",
+    "B": "bottle",
+    "q1": "What does the keyboard look like?",
+    "q2": "What does the bottle look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "laptop",
+      "keyboard",
+      "bottle"
+    ],
+    "strengths": [
+      2,
+      3,
+      2
+    ],
+    "loc": 0.778,
+    "steered": 0.423,
+    "joint": 1.201,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          2,
+          8
+        ],
+        "toks": [
+          "Xperia",
+          "laptop",
+          "laptops"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          20,
+          13
+        ],
+        "toks": [
+          "keys",
+          "SDLK",
+          "keys"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          1,
+          20
+        ],
+        "toks": [
+          "\u74f6",
+          "bottle",
+          "bottles"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000073973.jpg",
+    "A": "chair",
+    "B": "potted plant",
+    "q1": "What does the chair look like?",
+    "q2": "What does the plant look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "couch",
+      "chair",
+      "potted plant"
+    ],
+    "strengths": [
+      1,
+      3,
+      3
+    ],
+    "loc": 0.778,
+    "steered": 0.398,
+    "joint": 1.176,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          8,
+          4
+        ],
+        "toks": [
+          "cushion",
+          "Placement",
+          "inations"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          12,
+          22
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          3,
+          2
+        ],
+        "toks": [
+          "fern",
+          "leaves",
+          "leaf"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000211260.jpg",
+    "A": "bed",
+    "B": "laptop",
+    "q1": "What does the bed look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "chair",
+      "bed",
+      "laptop"
+    ],
+    "strengths": [
+      2,
+      3,
+      2
+    ],
+    "loc": 0.778,
+    "steered": 0.389,
+    "joint": 1.167,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905\u5b50"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          15,
+          23
+        ],
+        "toks": [
+          "pillows",
+          "pillow",
+          "\u6795\u5934"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          10,
+          9
+        ],
+        "toks": [
+          "MacBook",
+          "Apple",
+          "\u7b14\u8bb0\u672c"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000523526.jpg",
+    "A": "tv",
+    "B": "bottle",
+    "q1": "What does the television look like?",
+    "q2": "What does the bottle look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "tv",
+      "bottle",
+      "book"
+    ],
+    "strengths": [
+      1,
+      3,
+      3
+    ],
+    "loc": 0.778,
+    "steered": 0.379,
+    "joint": 1.157,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          8,
+          5
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "browser",
+          "screen"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          7,
+          24
+        ],
+        "toks": [
+          "\u74f6",
+          "bottles",
+          "bottle"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          4,
+          14
+        ],
+        "toks": [
+          "books",
+          "\u4e66\u7c4d",
+          "books"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000263828.jpg",
+    "A": "motorcycle",
+    "B": "person",
+    "q1": "What does the motorcycle look like?",
+    "q2": "What does the person look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "motorcycle",
+      "person",
+      "truck"
+    ],
+    "strengths": [
+      2,
+      3,
+      2
+    ],
+    "loc": 0.778,
+    "steered": 0.373,
+    "joint": 1.151,
+    "anchors": [
+      {
+        "name": "motorcycle",
+        "rc": [
+          6,
+          24
+        ],
+        "toks": [
+          "motorcycles",
+          "celebrated",
+          "athlon"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          1
+        ],
+        "toks": [
+          "shirts",
+          "shirt",
+          "shirt"
+        ]
+      },
+      {
+        "name": "truck",
+        "rc": [
+          0,
+          21
+        ],
+        "toks": [
+          "\u8d27\u8f66",
+          "truck",
+          "trucks"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000145318.jpg",
+    "A": "dining table",
+    "B": "vase",
+    "q1": "What does the table look like?",
+    "q2": "What does the vase look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "dining table",
+      "chair",
+      "vase"
+    ],
+    "strengths": [
+      3,
+      3,
+      1
+    ],
+    "loc": 0.778,
+    "steered": 0.372,
+    "joint": 1.15,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          6,
+          26
+        ],
+        "toks": [
+          "table",
+          "table",
+          "tables"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          1,
+          20
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      },
+      {
+        "name": "vase",
+        "rc": [
+          5,
+          10
+        ],
+        "toks": [
+          "centerpiece",
+          "vase",
+          "containing"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000422424.jpg",
+    "A": "tv",
+    "B": "bottle",
+    "q1": "What does the television look like?",
+    "q2": "What does the bottle look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "tv",
+      "cat",
+      "bottle"
+    ],
+    "strengths": [
+      3,
+      1,
+      2
+    ],
+    "loc": 0.667,
+    "steered": 0.478,
+    "joint": 1.145,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          5
+        ],
+        "toks": [
+          "\u5c4f\u5e55",
+          "screen",
+          "screens"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          5,
+          18
+        ],
+        "toks": [
+          "apult",
+          "kittens",
+          "nip"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          2,
+          20
+        ],
+        "toks": [
+          "\u74f6",
+          "bottles",
+          "bottle"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000498997.jpg",
+    "A": "person",
+    "B": "laptop",
+    "q1": "What does the person look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "keyboard",
+      "laptop"
+    ],
+    "strengths": [
+      2,
+      3,
+      2
+    ],
+    "loc": 0.778,
+    "steered": 0.363,
+    "joint": 1.141,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          7,
+          4
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "jersey"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          15,
+          22
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "keyboards"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          10,
+          26
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "computer",
+          "computers"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000037728.jpg",
+    "A": "person",
+    "B": "dining table",
+    "q1": "What does the person look like?",
+    "q2": "What does the table look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "chair",
+      "dining table"
+    ],
+    "strengths": [
+      3,
+      3,
+      1
+    ],
+    "loc": 0.778,
+    "steered": 0.361,
+    "joint": 1.139,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          8,
+          6
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirt"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          23
+        ],
+        "toks": [
+          "\u51f3",
+          "seat",
+          "chair"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          14,
+          23
+        ],
+        "toks": [
+          "\u9910\u9986",
+          "dining",
+          "restaurant"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000458549.jpg",
+    "A": "couch",
+    "B": "dining table",
+    "q1": "What does the couch look like?",
+    "q2": "What does the table look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "couch",
+      "dining table",
+      "chair"
+    ],
+    "strengths": [
+      3,
+      1,
+      3
+    ],
+    "loc": 0.778,
+    "steered": 0.359,
+    "joint": 1.137,
+    "anchors": [
+      {
+        "name": "couch",
+        "rc": [
+          12,
+          6
+        ],
+        "toks": [
+          "cushions",
+          "bedding",
+          "cushion"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          12,
+          13
+        ],
+        "toks": [
+          "table",
+          "\u4e2d\u592e",
+          "central"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          9,
+          11
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000013177.jpg",
+    "A": "motorcycle",
+    "B": "person",
+    "q1": "What does the motorcycle look like?",
+    "q2": "What does the person look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "motorcycle",
+      "person",
+      "bicycle"
+    ],
+    "strengths": [
+      2,
+      1,
+      3
+    ],
+    "loc": 0.667,
+    "steered": 0.456,
+    "joint": 1.123,
+    "anchors": [
+      {
+        "name": "motorcycle",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "\u6469\u6258\u8f66",
+          "motorcycle",
+          "motorcycles"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "sleeves",
+          "sleeve",
+          "shirts"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          6,
+          14
+        ],
+        "toks": [
+          "\u81ea\u884c\u8f66",
+          "bicycle",
+          "wheels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000403995.jpg",
+    "A": "umbrella",
+    "B": "motorcycle",
+    "q1": "What does the umbrella look like?",
+    "q2": "What does the motorcycle look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "umbrella",
+      "motorcycle"
+    ],
+    "strengths": [
+      2,
+      2,
+      2
+    ],
+    "loc": 0.667,
+    "steered": 0.437,
+    "joint": 1.103,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          10,
+          18
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "umbrella",
+        "rc": [
+          2,
+          19
+        ],
+        "toks": [
+          "parade",
+          "procession",
+          "Parade"
+        ]
+      },
+      {
+        "name": "motorcycle",
+        "rc": [
+          14,
+          1
+        ],
+        "toks": [
+          "\u6469\u6258\u8f66",
+          "scooter",
+          "motorcycle"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000575020.jpg",
+    "A": "dining table",
+    "B": "bottle",
+    "q1": "What does the table look like?",
+    "q2": "What does the bottle look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "dining table",
+      "sandwich",
+      "bottle"
+    ],
+    "strengths": [
+      2,
+      3,
+      1,
+      2
+    ],
+    "loc": 0.667,
+    "steered": 0.357,
+    "joint": 1.074,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          7,
+          19
+        ],
+        "toks": [
+          "\u886b",
+          "shirt",
+          "shirts"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          12,
+          1
+        ],
+        "toks": [
+          "\u684c\u5b50",
+          "tabletop",
+          "table"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          13,
+          11
+        ],
+        "toks": [
+          "sandwiches",
+          "oversized",
+          "loaf"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          9,
+          22
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "labels",
+          "label"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000021365.jpg",
+    "A": "person",
+    "B": "laptop",
+    "q1": "What does the person look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "laptop",
+      "bed"
+    ],
+    "strengths": [
+      1,
+      3,
+      2
+    ],
+    "loc": 0.667,
+    "steered": 0.403,
+    "joint": 1.069,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          11,
+          3
+        ],
+        "toks": [
+          "person",
+          "woman",
+          "individuals"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          0,
+          19
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "computers",
+          "computer"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          15,
+          17
+        ],
+        "toks": [
+          "\u6bef",
+          "blankets",
+          "blanket"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000068198.jpg",
+    "A": "bed",
+    "B": "bicycle",
+    "q1": "What does the bed look like?",
+    "q2": "What does the bicycle look like?",
+    "grid": [
+      19,
+      28
+    ],
+    "regions": [
+      "refrigerator",
+      "bed",
+      "bicycle"
+    ],
+    "strengths": [
+      3,
+      2,
+      1
+    ],
+    "loc": 0.667,
+    "steered": 0.393,
+    "joint": 1.06,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          8,
+          13
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          10,
+          8
+        ],
+        "toks": [
+          "\u6bef",
+          "blanket",
+          "blankets"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          14,
+          23
+        ],
+        "toks": [
+          "spokes",
+          "rims",
+          "wheels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000531178.jpg",
+    "A": "dining table",
+    "B": "pizza",
+    "q1": "What does the table look like?",
+    "q2": "What does the pizza look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "person",
+      "dining table",
+      "pizza"
+    ],
+    "strengths": [
+      2,
+      3,
+      1
+    ],
+    "loc": 0.667,
+    "steered": 0.383,
+    "joint": 1.049,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          11
+        ],
+        "toks": [
+          "person",
+          "seated",
+          "\u4eba\u5927"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "tabletop",
+          "-screen",
+          "foreground"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          13,
+          23
+        ],
+        "toks": [
+          "crust",
+          "thick",
+          "bread"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000246999.jpg",
+    "A": "couch",
+    "B": "potted plant",
+    "q1": "What does the couch look like?",
+    "q2": "What does the plant look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "chair",
+      "couch",
+      "potted plant"
+    ],
+    "strengths": [
+      2,
+      1,
+      3
+    ],
+    "loc": 0.667,
+    "steered": 0.381,
+    "joint": 1.048,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          16,
+          14
+        ],
+        "toks": [
+          "chair",
+          "chair",
+          "chairs"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          17,
+          5
+        ],
+        "toks": [
+          "cushion",
+          "cushions",
+          "\u6551\u6d4e"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          17,
+          25
+        ],
+        "toks": [
+          "foliage",
+          "leaf",
+          "leaves"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000307573.jpg",
+    "A": "refrigerator",
+    "B": "couch",
+    "q1": "What does the refrigerator look like?",
+    "q2": "What does the couch look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "refrigerator",
+      "chair",
+      "couch"
+    ],
+    "strengths": [
+      2,
+      3,
+      1
+    ],
+    "loc": 0.667,
+    "steered": 0.379,
+    "joint": 1.046,
+    "anchors": [
+      {
+        "name": "refrigerator",
+        "rc": [
+          12,
+          9
+        ],
+        "toks": [
+          "\u51b7\u85cf",
+          "dual",
+          "refriger"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          13
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6c99\u53d1"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          10,
+          19
+        ],
+        "toks": [
+          "cushions",
+          "cushion",
+          "apas"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000186788.jpg",
+    "A": "person",
+    "B": "skateboard",
+    "q1": "What does the person look like?",
+    "q2": "What does the skateboard look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "car",
+      "skateboard"
+    ],
+    "strengths": [
+      2,
+      1,
+      3
+    ],
+    "loc": 0.667,
+    "steered": 0.373,
+    "joint": 1.04,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          2,
+          10
+        ],
+        "toks": [
+          "\u89c6\u89d2",
+          "perspective",
+          "Perspective"
+        ]
+      },
+      {
+        "name": "car",
+        "rc": [
+          5,
+          20
+        ],
+        "toks": [
+          "\u8f7f\u8f66",
+          "SUV",
+          "sedan"
+        ]
+      },
+      {
+        "name": "skateboard",
+        "rc": [
+          14,
+          8
+        ],
+        "toks": [
+          "Skate",
+          "skate",
+          "board"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000509577.jpg",
+    "A": "person",
+    "B": "wine glass",
+    "q1": "What does the person look like?",
+    "q2": "What does the wine glass look like?",
+    "grid": [
+      19,
+      28
+    ],
+    "regions": [
+      "person",
+      "wine glass",
+      "sandwich"
+    ],
+    "strengths": [
+      2,
+      3,
+      1
+    ],
+    "loc": 0.667,
+    "steered": 0.37,
+    "joint": 1.037,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          3,
+          9
+        ],
+        "toks": [
+          "person",
+          "seated",
+          "behind"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          8,
+          21
+        ],
+        "toks": [
+          "\u676f",
+          "glasses",
+          "glass"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          7,
+          9
+        ],
+        "toks": [
+          "thickness",
+          "Sandwich",
+          "sandwich"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000404944.jpg",
+    "A": "laptop",
+    "B": "person",
+    "q1": "What does the laptop look like?",
+    "q2": "What does the person look like?",
+    "grid": [
+      19,
+      28
+    ],
+    "regions": [
+      "laptop",
+      "person",
+      "chair"
+    ],
+    "strengths": [
+      3,
+      1,
+      2
+    ],
+    "loc": 0.667,
+    "steered": 0.368,
+    "joint": 1.035,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          5,
+          25
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "laptop",
+          "computer"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          11,
+          1
+        ],
+        "toks": [
+          "woman",
+          "person",
+          "\u5973\u6027"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          5,
+          8
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "\u6905"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000303626.jpg",
+    "A": "person",
+    "B": "refrigerator",
+    "q1": "What does the person look like?",
+    "q2": "What does the refrigerator look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "dining table",
+      "person",
+      "refrigerator"
+    ],
+    "strengths": [
+      3,
+      1,
+      2
+    ],
+    "loc": 0.667,
+    "steered": 0.367,
+    "joint": 1.034,
+    "anchors": [
+      {
+        "name": "dining table",
+        "rc": [
+          11,
+          20
+        ],
+        "toks": [
+          "6",
+          "tabletop",
+          "pull"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          14,
+          4
+        ],
+        "toks": [
+          "woman",
+          "women",
+          "\u5973\u5b50"
+        ]
+      },
+      {
+        "name": "refrigerator",
+        "rc": [
+          4,
+          14
+        ],
+        "toks": [
+          "\u51b0\u7bb1",
+          "refrigerator",
+          "fridge"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000108193.jpg",
+    "A": "wine glass",
+    "B": "bottle",
+    "q1": "What does the wine glass look like?",
+    "q2": "What does the bottle look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "pizza",
+      "wine glass",
+      "bottle"
+    ],
+    "strengths": [
+      3,
+      1,
+      2
+    ],
+    "loc": 0.667,
+    "steered": 0.359,
+    "joint": 1.026,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          14,
+          17
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "pizzas"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          5,
+          6
+        ],
+        "toks": [
+          "glass",
+          "glass",
+          "wine"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          6,
+          27
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "barcode",
+          "label"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000253665.jpg",
+    "A": "laptop",
+    "B": "couch",
+    "q1": "What does the laptop look like?",
+    "q2": "What does the couch look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "laptop",
+      "couch",
+      "cat"
+    ],
+    "strengths": [
+      3,
+      1,
+      1
+    ],
+    "loc": 0.556,
+    "steered": 0.434,
+    "joint": 0.989,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          9,
+          25
+        ],
+        "toks": [
+          "\u7535\u8111",
+          "computers",
+          "computer"
+        ]
+      },
+      {
+        "name": "couch",
+        "rc": [
+          16,
+          7
+        ],
+        "toks": [
+          "chair",
+          "seat",
+          "\u5ea7\u6905"
+        ]
+      },
+      {
+        "name": "cat",
+        "rc": [
+          10,
+          15
+        ],
+        "toks": [
+          "whisk",
+          "inux",
+          "agues"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000340894.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "laptop",
+      "tv",
+      "keyboard"
+    ],
+    "strengths": [
+      3,
+      1,
+      1
+    ],
+    "loc": 0.556,
+    "steered": 0.412,
+    "joint": 0.967,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          11,
+          8
+        ],
+        "toks": [
+          "ened",
+          "ish",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          3,
+          13
+        ],
+        "toks": [
+          "displayed",
+          "displaying",
+          "\u663e\u793a"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          18,
+          12
+        ],
+        "toks": [
+          "standalone",
+          "keyboard",
+          "\u9f20\u6807"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000267694.jpg",
+    "A": "pizza",
+    "B": "bottle",
+    "q1": "What does the pizza look like?",
+    "q2": "What does the bottle look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "pizza",
+      "bottle",
+      "person"
+    ],
+    "strengths": [
+      1,
+      1,
+      3
+    ],
+    "loc": 0.556,
+    "steered": 0.396,
+    "joint": 0.952,
+    "anchors": [
+      {
+        "name": "pizza",
+        "rc": [
+          8,
+          18
+        ],
+        "toks": [
+          "toppings",
+          "topped",
+          "topping"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          3,
+          7
+        ],
+        "toks": [
+          "label",
+          "labels",
+          "\u6807\u7b7e"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          0,
+          14
+        ],
+        "toks": [
+          "hands",
+          "\u4e00\u53ea\u624b",
+          "Hands"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000042685.jpg",
+    "A": "pizza",
+    "B": "bed",
+    "q1": "What does the pizza look like?",
+    "q2": "What does the bed look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "pizza",
+      "bed"
+    ],
+    "strengths": [
+      2,
+      1,
+      2
+    ],
+    "loc": 0.556,
+    "steered": 0.385,
+    "joint": 0.94,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          9,
+          17
+        ],
+        "toks": [
+          "\u886c\u886b",
+          "shirts",
+          "shirt"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          15,
+          14
+        ],
+        "toks": [
+          "peppers",
+          "onions",
+          "vegetables"
+        ]
+      },
+      {
+        "name": "bed",
+        "rc": [
+          6,
+          4
+        ],
+        "toks": [
+          "pillows",
+          "pillow",
+          "\u6795\u5934"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000379310.jpg",
+    "A": "tv",
+    "B": "keyboard",
+    "q1": "What does the television look like?",
+    "q2": "What does the keyboard look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "tv",
+      "laptop",
+      "keyboard"
+    ],
+    "strengths": [
+      1,
+      3,
+      1
+    ],
+    "loc": 0.556,
+    "steered": 0.384,
+    "joint": 0.94,
+    "anchors": [
+      {
+        "name": "tv",
+        "rc": [
+          4,
+          24
+        ],
+        "toks": [
+          "pantalla",
+          "creen",
+          "screen"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "undra",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          16,
+          9
+        ],
+        "toks": [
+          "standalone",
+          "\u72ec\u7acb",
+          "keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000416668.jpg",
+    "A": "cat",
+    "B": "sink",
+    "q1": "What does the cat look like?",
+    "q2": "What does the sink look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "cat",
+      "sink",
+      "bottle"
+    ],
+    "strengths": [
+      1,
+      1,
+      2
+    ],
+    "loc": 0.444,
+    "steered": 0.495,
+    "joint": 0.939,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          8,
+          19
+        ],
+        "toks": [
+          "whisk",
+          "hairs",
+          "strands"
+        ]
+      },
+      {
+        "name": "sink",
+        "rc": [
+          8,
+          7
+        ],
+        "toks": [
+          "faucet",
+          "\u9f99\u5934",
+          "knobs"
+        ]
+      },
+      {
+        "name": "bottle",
+        "rc": [
+          5,
+          11
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000389458.jpg",
+    "A": "person",
+    "B": "bicycle",
+    "q1": "What does the person look like?",
+    "q2": "What does the bicycle look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "person",
+      "bicycle",
+      "sandwich"
+    ],
+    "strengths": [
+      2,
+      1,
+      1
+    ],
+    "loc": 0.444,
+    "steered": 0.481,
+    "joint": 0.926,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          16,
+          18
+        ],
+        "toks": [
+          "wearing",
+          "\u4f69\u6234",
+          "woman"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          10,
+          6
+        ],
+        "toks": [
+          "wheels",
+          "spokes",
+          "wheel"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          14,
+          6
+        ],
+        "toks": [
+          "sandwiches",
+          "\u6c49\u5821",
+          "burger"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000035827.jpg",
+    "A": "person",
+    "B": "laptop",
+    "q1": "What does the person look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "chair",
+      "person",
+      "laptop"
+    ],
+    "strengths": [
+      2,
+      2,
+      1
+    ],
+    "loc": 0.556,
+    "steered": 0.369,
+    "joint": 0.925,
+    "anchors": [
+      {
+        "name": "chair",
+        "rc": [
+          15,
+          22
+        ],
+        "toks": [
+          "chair",
+          "ergonomic",
+          "chairs"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          12,
+          9
+        ],
+        "toks": [
+          "shirt",
+          "shirts",
+          "\u886c\u886b"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          6,
+          25
+        ],
+        "toks": [
+          "keyboard",
+          "\u952e\u76d8",
+          "Keyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000088436.jpg",
+    "A": "chair",
+    "B": "laptop",
+    "q1": "What does the chair look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "person",
+      "chair",
+      "laptop"
+    ],
+    "strengths": [
+      1,
+      2,
+      2
+    ],
+    "loc": 0.556,
+    "steered": 0.367,
+    "joint": 0.923,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          6,
+          21
+        ],
+        "toks": [
+          "shirts",
+          "shirt",
+          "\u886b"
+        ]
+      },
+      {
+        "name": "chair",
+        "rc": [
+          14,
+          1
+        ],
+        "toks": [
+          "chair",
+          "chairs",
+          "ergonomic"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          19,
+          23
+        ],
+        "toks": [
+          "\u7b14\u8bb0\u672c",
+          "laptops",
+          "laptop"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000431495.jpg",
+    "A": "person",
+    "B": "dining table",
+    "q1": "What does the person look like?",
+    "q2": "What does the table look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "bottle",
+      "person",
+      "dining table"
+    ],
+    "strengths": [
+      1,
+      1,
+      3
+    ],
+    "loc": 0.556,
+    "steered": 0.367,
+    "joint": 0.923,
+    "anchors": [
+      {
+        "name": "bottle",
+        "rc": [
+          5,
+          10
+        ],
+        "toks": [
+          "glass",
+          "bottles",
+          "bottle"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          2,
+          1
+        ],
+        "toks": [
+          "seated",
+          "person",
+          "Personen"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          4,
+          22
+        ],
+        "toks": [
+          "tabletop",
+          "tables",
+          "TableView"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000490964.jpg",
+    "A": "book",
+    "B": "bicycle",
+    "q1": "What does the book look like?",
+    "q2": "What does the bicycle look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "sandwich",
+      "book",
+      "bicycle"
+    ],
+    "strengths": [
+      1,
+      1,
+      3
+    ],
+    "loc": 0.556,
+    "steered": 0.359,
+    "joint": 0.914,
+    "anchors": [
+      {
+        "name": "sandwich",
+        "rc": [
+          16,
+          19
+        ],
+        "toks": [
+          "sand",
+          "pter",
+          "Industries"
+        ]
+      },
+      {
+        "name": "book",
+        "rc": [
+          16,
+          10
+        ],
+        "toks": [
+          "-colored",
+          "pages",
+          "getColor"
+        ]
+      },
+      {
+        "name": "bicycle",
+        "rc": [
+          4,
+          21
+        ],
+        "toks": [
+          "wheels",
+          "wheel",
+          "Wheels"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000041438.jpg",
+    "A": "orange",
+    "B": "apple",
+    "q1": "What does the orange look like?",
+    "q2": "What does the apple look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "banana",
+      "orange",
+      "apple"
+    ],
+    "strengths": [
+      1,
+      2,
+      2
+    ],
+    "loc": 0.556,
+    "steered": 0.353,
+    "joint": 0.909,
+    "anchors": [
+      {
+        "name": "banana",
+        "rc": [
+          9,
+          14
+        ],
+        "toks": [
+          "ripe",
+          "\u9999\u8549",
+          "bananas"
+        ]
+      },
+      {
+        "name": "orange",
+        "rc": [
+          12,
+          21
+        ],
+        "toks": [
+          "oranges",
+          "citrus",
+          "orange"
+        ]
+      },
+      {
+        "name": "apple",
+        "rc": [
+          16,
+          7
+        ],
+        "toks": [
+          "apple",
+          "\u82f9\u679c",
+          "apples"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000466838.jpg",
+    "A": "person",
+    "B": "dining table",
+    "q1": "What does the person look like?",
+    "q2": "What does the table look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "person",
+      "dining table",
+      "pizza"
+    ],
+    "strengths": [
+      1,
+      2,
+      1
+    ],
+    "loc": 0.444,
+    "steered": 0.386,
+    "joint": 0.83,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          11,
+          5
+        ],
+        "toks": [
+          "wearing",
+          "wears",
+          "worn"
+        ]
+      },
+      {
+        "name": "dining table",
+        "rc": [
+          18,
+          18
+        ],
+        "toks": [
+          "tabletop",
+          "/table",
+          "mate"
+        ]
+      },
+      {
+        "name": "pizza",
+        "rc": [
+          17,
+          6
+        ],
+        "toks": [
+          "pizza",
+          "Pizza",
+          "\ud83c\udf55"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000025846.jpg",
+    "A": "keyboard",
+    "B": "person",
+    "q1": "What does the keyboard look like?",
+    "q2": "What does the person look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "laptop",
+      "keyboard",
+      "person"
+    ],
+    "strengths": [
+      1,
+      1,
+      1
+    ],
+    "loc": 0.333,
+    "steered": 0.466,
+    "joint": 0.799,
+    "anchors": [
+      {
+        "name": "laptop",
+        "rc": [
+          12,
+          9
+        ],
+        "toks": [
+          "sticky",
+          "notes",
+          "adhesive"
+        ]
+      },
+      {
+        "name": "keyboard",
+        "rc": [
+          17,
+          26
+        ],
+        "toks": [
+          "portable",
+          "detach",
+          "keyboard"
+        ]
+      },
+      {
+        "name": "person",
+        "rc": [
+          17,
+          6
+        ],
+        "toks": [
+          "fingers",
+          "\u4e00\u53ea\u624b",
+          "hands"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000089549.jpg",
+    "A": "bottle",
+    "B": "sandwich",
+    "q1": "What does the bottle look like?",
+    "q2": "What does the sandwich look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "bottle",
+      "sandwich",
+      "wine glass"
+    ],
+    "strengths": [
+      1,
+      1,
+      1
+    ],
+    "loc": 0.333,
+    "steered": 0.417,
+    "joint": 0.75,
+    "anchors": [
+      {
+        "name": "bottle",
+        "rc": [
+          8,
+          21
+        ],
+        "toks": [
+          "\u6807\u7b7e",
+          "label",
+          "labels"
+        ]
+      },
+      {
+        "name": "sandwich",
+        "rc": [
+          13,
+          4
+        ],
+        "toks": [
+          "contents",
+          "sandwich",
+          "\u9985"
+        ]
+      },
+      {
+        "name": "wine glass",
+        "rc": [
+          2,
+          6
+        ],
+        "toks": [
+          "\ud83c\udf77",
+          "vinegar",
+          "wine"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000507782.jpg",
+    "A": "person",
+    "B": "potted plant",
+    "q1": "What does the person look like?",
+    "q2": "What does the plant look like?",
+    "grid": [
+      18,
+      28
+    ],
+    "regions": [
+      "person",
+      "laptop",
+      "potted plant"
+    ],
+    "strengths": [
+      1,
+      1,
+      1
+    ],
+    "loc": 0.333,
+    "steered": 0.397,
+    "joint": 0.73,
+    "anchors": [
+      {
+        "name": "person",
+        "rc": [
+          12,
+          20
+        ],
+        "toks": [
+          "\u773c\u955c",
+          "glasses",
+          "wearing"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          11,
+          10
+        ],
+        "toks": [
+          "portable",
+          "laptop",
+          "laptops"
+        ]
+      },
+      {
+        "name": "potted plant",
+        "rc": [
+          7,
+          11
+        ],
+        "toks": [
+          "tall",
+          "foliage",
+          "cko"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "COCO_val2014_000000346207.jpg",
+    "A": "cat",
+    "B": "laptop",
+    "q1": "What does the cat look like?",
+    "q2": "What does the laptop look like?",
+    "grid": [
+      21,
+      28
+    ],
+    "regions": [
+      "cat",
+      "tv",
+      "laptop"
+    ],
+    "strengths": [
+      1,
+      1,
+      1
+    ],
+    "loc": 0.333,
+    "steered": 0.364,
+    "joint": 0.697,
+    "anchors": [
+      {
+        "name": "cat",
+        "rc": [
+          14,
+          20
+        ],
+        "toks": [
+          "stripes",
+          "pattern",
+          "patterns"
+        ]
+      },
+      {
+        "name": "tv",
+        "rc": [
+          6,
+          16
+        ],
+        "toks": [
+          "\u663e\u793a",
+          "displaying",
+          "mainWindow"
+        ]
+      },
+      {
+        "name": "laptop",
+        "rc": [
+          7,
+          6
+        ],
+        "toks": [
+          "keyboard",
+          "touch",
+          "Keyboard"
+        ]
+      }
+    ]
+  }
+]

@@ -218,13 +218,13 @@
   showing the effect comes from a second <em>look</em>, not from copying tokens.</p>
 
   <h3 class="sub">2.1&ensp;Qwen3-VL-8B</h3>
-  <div class="table-wrapper"><table class="booktabs"><thead><tr><th class="rowname">Benchmark</th><th class="unit">metric</th><th>STI</th><th>SIT</th><th>STIT</th><th>SITIT</th><th>SITIT<sub>rev</sub></th></tr></thead><tbody><tr><td class='rowname'>NaturalBench</td><td class='unit'>group acc.</td><td class="worst">0.270</td><td>0.350</td><td>0.350</td><td class="best">0.374</td><td class="best">0.374</td></tr><tr><td class='rowname'>Winoground</td><td class='unit'>group acc.</td><td class="worst">0.223</td><td>0.318</td><td>0.375</td><td>0.403</td><td class="best">0.410</td></tr><tr><td class='rowname'>POPE</td><td class='unit'>acc.</td><td class="worst">0.870</td><td class="best">0.891</td><td>0.884</td><td>0.889</td><td>0.889</td></tr><tr><td class='rowname'>RF20</td><td class='unit'>acc.</td><td class="worst">0.713</td><td>0.796</td><td>0.793</td><td class="best">0.807</td><td>0.794</td></tr></tbody></table></div>
+  <div class="table-wrapper"><table class="booktabs"><thead><tr><th class="rowname">Benchmark</th><th class="unit">metric</th><th>STI</th><th>SIT</th><th>STIT</th><th>SITIT</th><th>SITIT<sub>rev</sub></th></tr></thead><tbody><tr><td class='rowname'>NaturalBench</td><td class='unit'>group acc.</td><td class="worst">0.270</td><td>0.350</td><td>0.350</td><td class="best">0.374</td><td class="best">0.374</td></tr><tr><td class='rowname'>Winoground</td><td class='unit'>group acc.</td><td class="worst">0.223</td><td>0.318</td><td>0.375</td><td>0.403</td><td class="best">0.410</td></tr><tr><td class='rowname'>POPE</td><td class='unit'>acc.</td><td class="worst">0.870</td><td class="best">0.891</td><td>0.884</td><td>0.889</td><td>0.889</td></tr><tr><td class='rowname'>RF20</td><td class='unit'>acc.</td><td class="worst">0.713</td><td>0.808</td><td>0.793</td><td class="best">0.816</td><td>0.794</td></tr></tbody></table></div>
   <p class="caption"><strong>Table 2:</strong> Qwen3-VL-8B. STI trails SIT by
   8&ndash;10 points on NaturalBench and Winoground with identical content; echoing
   recovers and exceeds the baseline.</p>
 
   <h3 class="sub">2.2&ensp;Gemma-3-27B</h3>
-  <div class="table-wrapper"><table class="booktabs"><thead><tr><th class="rowname">Benchmark</th><th class="unit">metric</th><th>STI</th><th>SIT</th><th>STIT</th><th>SITIT</th><th>SITIT<sub>rev</sub></th></tr></thead><tbody><tr><td class='rowname'>NaturalBench</td><td class='unit'>group acc.</td><td class="worst">0.232</td><td>0.226</td><td>0.253</td><td class="best">0.255</td><td>0.252</td></tr><tr><td class='rowname'>Winoground</td><td class='unit'>group acc.</td><td class="worst">0.212</td><td>0.207</td><td>0.253</td><td class="best">0.318</td><td>0.297</td></tr><tr><td class='rowname'>POPE</td><td class='unit'>acc.</td><td class="worst">0.840</td><td class="best">0.845</td><td>0.838</td><td>0.834</td><td>0.835</td></tr><tr><td class='rowname'>RF20</td><td class='unit'>acc.</td><td class="worst">0.679</td><td>0.694</td><td class="best">0.709</td><td>0.702</td><td>0.696</td></tr></tbody></table></div>
+  <div class="table-wrapper"><table class="booktabs"><thead><tr><th class="rowname">Benchmark</th><th class="unit">metric</th><th>STI</th><th>SIT</th><th>STIT</th><th>SITIT</th><th>SITIT<sub>rev</sub></th></tr></thead><tbody><tr><td class='rowname'>NaturalBench</td><td class='unit'>group acc.</td><td class="worst">0.232</td><td>0.226</td><td>0.253</td><td class="best">0.255</td><td>0.252</td></tr><tr><td class='rowname'>Winoground</td><td class='unit'>group acc.</td><td class="worst">0.212</td><td>0.207</td><td>0.253</td><td class="best">0.318</td><td>0.297</td></tr><tr><td class='rowname'>POPE</td><td class='unit'>acc.</td><td class="worst">0.840</td><td class="best">0.845</td><td>0.838</td><td>0.834</td><td>0.835</td></tr><tr><td class='rowname'>RF20</td><td class='unit'>acc.</td><td class="worst">0.679</td><td>0.651</td><td class="best">0.709</td><td>0.702</td><td>0.696</td></tr></tbody></table></div>
   <p class="caption"><strong>Table 3:</strong> Gemma-3-27B (4-bit, single GPU).
   The ordering effect and the echoing fix reproduce in a second model family.</p>
 
@@ -247,6 +247,52 @@
   two per-layer animations for that same image side by side: each frame decodes one
   transformer layer.</p>
   
+      <div class="unit">
+        
+      <div class="qrow">
+        <button class="rawbtn" type="button" data-full="assets/ex1007_image.png"
+                aria-label="Enlarge raw image" title="Click to enlarge">
+          <img src="assets/ex1007_image.png" alt="raw image" loading="lazy">
+        </button>
+        <h3 class="qhead qside">&ldquo;Is the adult in the image chasing a child?&rdquo;
+          <span class="gt-yes">ground truth: Yes</span></h3>
+      </div>
+        
+        <figure class="panelfig">
+          <img src="assets/ex1007_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
+        </figure>
+        
+      <div class="reveal">
+        <button class="revealbtn" type="button">
+          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
+        <div class="playarea">
+          <div class="gifs two-col">
+            
+        <figure class="giffig">
+          <figcaption class="gcap-top">STI (question-first) answers
+            &ldquo;no&rdquo; <span class="bad">&#10007;</span></figcaption>
+          <img class="lazygif" data-gif="assets/ex1007_STI.gif"
+               alt="STI (question-first) per-layer logit lens">
+        </figure>
+            
+        <figure class="giffig">
+          <figcaption class="gcap-top">SIT (question-last) answers
+            &ldquo;yes&rdquo; <span class="ok">&#10003;</span></figcaption>
+          <img class="lazygif" data-gif="assets/ex1007_SIT.gif"
+               alt="SIT (question-last) per-layer logit lens">
+        </figure>
+          </div>
+          
+      <div class="vcbar" title="logit-lens confidence (per-patch top-token probability)">
+        <div class="vcbar-ticks"><span>1</span><span>0.75</span><span>0.5</span>
+          <span>0.25</span><span>0</span></div>
+        <div class="vcbar-bar"></div>
+      </div>
+        </div>
+        <button class="minbtn" type="button">
+          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
+      </div>
+      </div>
       <div class="unit">
         
       <div class="qrow">
@@ -555,52 +601,6 @@
           <figcaption class="gcap-top">SIT (question-last) answers
             &ldquo;yes&rdquo; <span class="ok">&#10003;</span></figcaption>
           <img class="lazygif" data-gif="assets/ex232_SIT.gif"
-               alt="SIT (question-last) per-layer logit lens">
-        </figure>
-          </div>
-          
-      <div class="vcbar" title="logit-lens confidence (per-patch top-token probability)">
-        <div class="vcbar-ticks"><span>1</span><span>0.75</span><span>0.5</span>
-          <span>0.25</span><span>0</span></div>
-        <div class="vcbar-bar"></div>
-      </div>
-        </div>
-        <button class="minbtn" type="button">
-          <span class="tri">&#9650;</span>&nbsp;Minimize</button>
-      </div>
-      </div>
-      <div class="unit">
-        
-      <div class="qrow">
-        <button class="rawbtn" type="button" data-full="assets/ex1007_image.png"
-                aria-label="Enlarge raw image" title="Click to enlarge">
-          <img src="assets/ex1007_image.png" alt="raw image" loading="lazy">
-        </button>
-        <h3 class="qhead qside">&ldquo;Is the adult in the image chasing a child?&rdquo;
-          <span class="gt-yes">ground truth: Yes</span></h3>
-      </div>
-        
-        <figure class="panelfig">
-          <img src="assets/ex1007_cmp.png" alt="STI vs. SIT per-patch logit lens" loading="lazy">
-        </figure>
-        
-      <div class="reveal">
-        <button class="revealbtn" type="button">
-          <span class="tri">&#9654;</span>&nbsp;Play STI vs. SIT for this image</button>
-        <div class="playarea">
-          <div class="gifs two-col">
-            
-        <figure class="giffig">
-          <figcaption class="gcap-top">STI (question-first) answers
-            &ldquo;no&rdquo; <span class="bad">&#10007;</span></figcaption>
-          <img class="lazygif" data-gif="assets/ex1007_STI.gif"
-               alt="STI (question-first) per-layer logit lens">
-        </figure>
-            
-        <figure class="giffig">
-          <figcaption class="gcap-top">SIT (question-last) answers
-            &ldquo;yes&rdquo; <span class="ok">&#10003;</span></figcaption>
-          <img class="lazygif" data-gif="assets/ex1007_SIT.gif"
                alt="SIT (question-last) per-layer logit lens">
         </figure>
           </div>
