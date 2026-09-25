@@ -1,0 +1,5310 @@
+[
+  {
+    "key": [
+      140,
+      0,
+      0
+    ],
+    "question": "Are yellow bees visible in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_140_0.jpg",
+    "targets": [
+      "yellow",
+      "bees",
+      "visible",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 10,
+    "hits": {
+      "SIT": 4,
+      "STI": 14,
+      "STIT": 14
+    }
+  },
+  {
+    "key": [
+      1007,
+      0,
+      0
+    ],
+    "question": "Is the adult in the image chasing a child?",
+    "gt": "Yes",
+    "image_file": "images/nb_1007_0.jpg",
+    "targets": [
+      "adult",
+      "image",
+      "chasing",
+      "child"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      10
+    ],
+    "layer": 32,
+    "gap": 10,
+    "hits": {
+      "SIT": 2,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      357,
+      1,
+      0
+    ],
+    "question": "Are there any two individuals directly interacting with each other?",
+    "gt": "No",
+    "image_file": "images/nb_357_1.jpg",
+    "targets": [
+      "two",
+      "directly",
+      "interacting",
+      "each",
+      "other"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 26,
+    "gap": 10,
+    "hits": {
+      "SIT": 2,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      1175,
+      1,
+      1
+    ],
+    "question": "Is there an empty parking spot in front of the BMW?",
+    "gt": "Yes",
+    "image_file": "images/nb_1175_1.jpg",
+    "targets": [
+      "empty",
+      "parking",
+      "spot",
+      "front",
+      "bmw"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 24,
+    "gap": 8,
+    "hits": {
+      "SIT": 14,
+      "STI": 22,
+      "STIT": 22
+    }
+  },
+  {
+    "key": [
+      1297,
+      0,
+      0
+    ],
+    "question": "Is coal the primary element the man is handling?",
+    "gt": "Yes",
+    "image_file": "images/nb_1297_0.jpg",
+    "targets": [
+      "coal",
+      "primary",
+      "element",
+      "man",
+      "handling"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 8,
+    "hits": {
+      "SIT": 1,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      1231,
+      0,
+      1
+    ],
+    "question": "Is the girl entering the water?",
+    "gt": "No",
+    "image_file": "images/nb_1231_0.jpg",
+    "targets": [
+      "girl",
+      "entering",
+      "water"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      8
+    ],
+    "layer": 34,
+    "gap": 7,
+    "hits": {
+      "SIT": 0,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      318,
+      0,
+      1
+    ],
+    "question": "Are there red lights attached to columns?",
+    "gt": "No",
+    "image_file": "images/nb_318_0.jpg",
+    "targets": [
+      "red",
+      "lights",
+      "attached",
+      "columns"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 30,
+    "gap": 7,
+    "hits": {
+      "SIT": 3,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      1066,
+      1,
+      0
+    ],
+    "question": "Are there two men fishing beside a dam?",
+    "gt": "No",
+    "image_file": "images/nb_1066_1.jpg",
+    "targets": [
+      "two",
+      "men",
+      "fishing",
+      "beside",
+      "dam"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 7,
+    "hits": {
+      "SIT": 6,
+      "STI": 13,
+      "STIT": 13
+    }
+  },
+  {
+    "key": [
+      777,
+      0,
+      1
+    ],
+    "question": "Is the person holding a brown stick?",
+    "gt": "No",
+    "image_file": "images/nb_777_0.jpg",
+    "targets": [
+      "holding",
+      "brown",
+      "stick"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 34,
+    "gap": 6,
+    "hits": {
+      "SIT": 0,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      1557,
+      1,
+      0
+    ],
+    "question": "Is there a woman in traditional Muslim wardrobe?",
+    "gt": "No",
+    "image_file": "images/nb_1557_1.jpg",
+    "targets": [
+      "woman",
+      "traditional",
+      "muslim",
+      "wardrobe"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 6,
+    "hits": {
+      "SIT": 1,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      1675,
+      1,
+      1
+    ],
+    "question": "Are any of the people in the photo performing lifts?",
+    "gt": "Yes",
+    "image_file": "images/nb_1675_1.jpg",
+    "targets": [
+      "photo",
+      "performing",
+      "lifts"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      8
+    ],
+    "layer": 28,
+    "gap": 6,
+    "hits": {
+      "SIT": 3,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      8,
+      0,
+      1
+    ],
+    "question": "Does the musician have blonde and curly hair?",
+    "gt": "No",
+    "image_file": "images/nb_8_0.jpg",
+    "targets": [
+      "musician",
+      "have",
+      "blonde",
+      "curly",
+      "hair"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 32,
+    "gap": 6,
+    "hits": {
+      "SIT": 4,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      146,
+      1,
+      0
+    ],
+    "question": "Are there adults standing in a circle with children in the middle?",
+    "gt": "No",
+    "image_file": "images/nb_146_1.jpg",
+    "targets": [
+      "adults",
+      "standing",
+      "circle",
+      "children",
+      "middle"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 6,
+    "hits": {
+      "SIT": 5,
+      "STI": 11,
+      "STIT": 11
+    }
+  },
+  {
+    "key": [
+      249,
+      1,
+      0
+    ],
+    "question": "Is there a moon in a first quarter phase in the sky?",
+    "gt": "No",
+    "image_file": "images/nb_249_1.jpg",
+    "targets": [
+      "moon",
+      "first",
+      "quarter",
+      "phase",
+      "sky"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 6,
+    "hits": {
+      "SIT": 8,
+      "STI": 14,
+      "STIT": 15
+    }
+  },
+  {
+    "key": [
+      735,
+      1,
+      1
+    ],
+    "question": "Is the sky completely cloudless?",
+    "gt": "Yes",
+    "image_file": "images/nb_735_1.jpg",
+    "targets": [
+      "sky",
+      "completely",
+      "cloudless"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 30,
+    "gap": 5,
+    "hits": {
+      "SIT": 1,
+      "STI": 6,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      884,
+      1,
+      0
+    ],
+    "question": "Is the work being conducted in a hallway?",
+    "gt": "No",
+    "image_file": "images/nb_884_1.jpg",
+    "targets": [
+      "work",
+      "conducted",
+      "hallway"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 5,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      936,
+      0,
+      1
+    ],
+    "question": "Are there four boys in the image?",
+    "gt": "No",
+    "image_file": "images/nb_936_0.jpg",
+    "targets": [
+      "four",
+      "boys",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 0,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1723,
+      1,
+      1
+    ],
+    "question": "Are the bicycles being carried by the cyclists?",
+    "gt": "Yes",
+    "image_file": "images/nb_1723_1.jpg",
+    "targets": [
+      "bicycles",
+      "carried",
+      "cyclists"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 26,
+    "gap": 5,
+    "hits": {
+      "SIT": 8,
+      "STI": 13,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      1893,
+      1,
+      0
+    ],
+    "question": "Is there someone rowing in the watercraft?",
+    "gt": "No",
+    "image_file": "images/nb_1893_1.jpg",
+    "targets": [
+      "rowing",
+      "watercraft"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 0,
+      "STI": 5,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      828,
+      1,
+      0
+    ],
+    "question": "Is the work being conducted above ground?",
+    "gt": "No",
+    "image_file": "images/nb_828_1.jpg",
+    "targets": [
+      "work",
+      "conducted",
+      "above",
+      "ground"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 5,
+    "hits": {
+      "SIT": 4,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      657,
+      0,
+      1
+    ],
+    "question": "Is there exactly one shirtless man in the image?",
+    "gt": "No",
+    "image_file": "images/nb_657_0.jpg",
+    "targets": [
+      "exactly",
+      "one",
+      "shirtless",
+      "man",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 1,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      760,
+      0,
+      0
+    ],
+    "question": "Is the water body calm with no cloud in the sky?",
+    "gt": "Yes",
+    "image_file": "images/nb_760_0.jpg",
+    "targets": [
+      "water",
+      "body",
+      "calm",
+      "cloud",
+      "sky"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 5,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      944,
+      1,
+      0
+    ],
+    "question": "Are there accessories specifically around their necks being featured?",
+    "gt": "No",
+    "image_file": "images/nb_944_1.jpg",
+    "targets": [
+      "accessories",
+      "specifically",
+      "around",
+      "necks",
+      "featured"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 5,
+    "hits": {
+      "SIT": 0,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1352,
+      0,
+      1
+    ],
+    "question": "Is there an American Quarter Horse grazing in the field?",
+    "gt": "No",
+    "image_file": "images/nb_1352_0.jpg",
+    "targets": [
+      "american",
+      "quarter",
+      "horse",
+      "grazing",
+      "field"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 7,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      1751,
+      0,
+      0
+    ],
+    "question": "Are there more people sitting than standing?",
+    "gt": "Yes",
+    "image_file": "images/nb_1751_0.jpg",
+    "targets": [
+      "more",
+      "sitting",
+      "than",
+      "standing"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 0,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      160,
+      0,
+      1
+    ],
+    "question": "Is the ceiling colored gray and composed of square panels?",
+    "gt": "No",
+    "image_file": "images/nb_160_0.jpg",
+    "targets": [
+      "ceiling",
+      "colored",
+      "gray",
+      "composed",
+      "square",
+      "panels"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 2,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      354,
+      0,
+      1
+    ],
+    "question": "Are the individuals depicted running?",
+    "gt": "No",
+    "image_file": "images/nb_354_0.jpg",
+    "targets": [
+      "depicted",
+      "running"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 4,
+    "hits": {
+      "SIT": 1,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1256,
+      1,
+      1
+    ],
+    "question": "Is the pig facing diagonally to the right?",
+    "gt": "Yes",
+    "image_file": "images/nb_1256_1.jpg",
+    "targets": [
+      "pig",
+      "facing",
+      "diagonally",
+      "right"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 4,
+    "hits": {
+      "SIT": 4,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      319,
+      1,
+      0
+    ],
+    "question": "Is anyone wearing red and black stockings?",
+    "gt": "No",
+    "image_file": "images/nb_319_1.jpg",
+    "targets": [
+      "wearing",
+      "red",
+      "black",
+      "stockings"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 32,
+    "gap": 4,
+    "hits": {
+      "SIT": 4,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      1028,
+      0,
+      0
+    ],
+    "question": "Is the car being worked on by exactly three people?",
+    "gt": "Yes",
+    "image_file": "images/nb_1028_0.jpg",
+    "targets": [
+      "car",
+      "worked",
+      "exactly",
+      "three"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 30,
+    "gap": 4,
+    "hits": {
+      "SIT": 2,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      1239,
+      1,
+      1
+    ],
+    "question": "Is there a peer or teacher grading session in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1239_1.jpg",
+    "targets": [
+      "peer",
+      "teacher",
+      "grading",
+      "session",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 16,
+    "gap": 4,
+    "hits": {
+      "SIT": 0,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1751,
+      1,
+      0
+    ],
+    "question": "Are there more people sitting than standing?",
+    "gt": "No",
+    "image_file": "images/nb_1751_1.jpg",
+    "targets": [
+      "more",
+      "sitting",
+      "than",
+      "standing"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 26,
+    "gap": 4,
+    "hits": {
+      "SIT": 0,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      245,
+      0,
+      0
+    ],
+    "question": "Is the depicted horse without any white spots on its forehead?",
+    "gt": "Yes",
+    "image_file": "images/nb_245_0.jpg",
+    "targets": [
+      "depicted",
+      "horse",
+      "without",
+      "white",
+      "spots",
+      "forehead"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 30,
+    "gap": 4,
+    "hits": {
+      "SIT": 3,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      1397,
+      1,
+      1
+    ],
+    "question": "Are they all men running in the race?",
+    "gt": "Yes",
+    "image_file": "images/nb_1397_1.jpg",
+    "targets": [
+      "all",
+      "men",
+      "running",
+      "race"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 3,
+    "hits": {
+      "SIT": 16,
+      "STI": 19,
+      "STIT": 19
+    }
+  },
+  {
+    "key": [
+      1450,
+      0,
+      1
+    ],
+    "question": "Are there multiple people in the foreground of the image?",
+    "gt": "No",
+    "image_file": "images/nb_1450_0.jpg",
+    "targets": [
+      "multiple",
+      "foreground",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 3,
+    "hits": {
+      "SIT": 1,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      30,
+      0,
+      0
+    ],
+    "question": "Is one competitor kicking another in the face?",
+    "gt": "Yes",
+    "image_file": "images/nb_30_0.jpg",
+    "targets": [
+      "one",
+      "competitor",
+      "kicking",
+      "another",
+      "face"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 26,
+    "gap": 3,
+    "hits": {
+      "SIT": 3,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      901,
+      0,
+      1
+    ],
+    "question": "Is the alligator facing the left side of the image?",
+    "gt": "No",
+    "image_file": "images/nb_901_0.jpg",
+    "targets": [
+      "alligator",
+      "facing",
+      "left",
+      "side",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 30,
+    "gap": 3,
+    "hits": {
+      "SIT": 1,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1084,
+      1,
+      0
+    ],
+    "question": "Is the person interacting primarily with boxed items?",
+    "gt": "No",
+    "image_file": "images/nb_1084_1.jpg",
+    "targets": [
+      "interacting",
+      "primarily",
+      "boxed",
+      "items"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      6,
+      11
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 1,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1448,
+      0,
+      1
+    ],
+    "question": "Is there any chef flipping something in a frying pan?",
+    "gt": "No",
+    "image_file": "images/nb_1448_0.jpg",
+    "targets": [
+      "chef",
+      "flipping",
+      "something",
+      "frying",
+      "pan"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      1836,
+      0,
+      0
+    ],
+    "question": "Are the two parallel roads divided by cement?",
+    "gt": "Yes",
+    "image_file": "images/nb_1836_0.jpg",
+    "targets": [
+      "two",
+      "parallel",
+      "roads",
+      "divided",
+      "cement"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 30,
+    "gap": 3,
+    "hits": {
+      "SIT": 1,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      208,
+      1,
+      0
+    ],
+    "question": "Are there players wearing both blue and white uniforms?",
+    "gt": "No",
+    "image_file": "images/nb_208_1.jpg",
+    "targets": [
+      "players",
+      "wearing",
+      "both",
+      "blue",
+      "white",
+      "uniforms"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 11,
+      "STI": 14,
+      "STIT": 15
+    }
+  },
+  {
+    "key": [
+      310,
+      0,
+      0
+    ],
+    "question": "Are there glowing neon-colored tetra fish in the scene?",
+    "gt": "Yes",
+    "image_file": "images/nb_310_0.jpg",
+    "targets": [
+      "glowing",
+      "neon",
+      "colored",
+      "tetra",
+      "fish",
+      "scene"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 6,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      354,
+      0,
+      0
+    ],
+    "question": "Are most people wearing similarly colored clothing?",
+    "gt": "Yes",
+    "image_file": "images/nb_354_0.jpg",
+    "targets": [
+      "most",
+      "wearing",
+      "similarly",
+      "colored",
+      "clothing"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      361,
+      1,
+      0
+    ],
+    "question": "Are the contrails in the sky slightly curved at several points?",
+    "gt": "No",
+    "image_file": "images/nb_361_1.jpg",
+    "targets": [
+      "contrails",
+      "sky",
+      "slightly",
+      "curved",
+      "several",
+      "points"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 3,
+    "hits": {
+      "SIT": 12,
+      "STI": 15,
+      "STIT": 15
+    }
+  },
+  {
+    "key": [
+      362,
+      0,
+      1
+    ],
+    "question": "Is there a reflection of the blue sky and white clouds in the water?",
+    "gt": "No",
+    "image_file": "images/nb_362_0.jpg",
+    "targets": [
+      "reflection",
+      "blue",
+      "sky",
+      "white",
+      "clouds",
+      "water"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 16,
+    "gap": 3,
+    "hits": {
+      "SIT": 2,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1700,
+      1,
+      0
+    ],
+    "question": "Is there an excavator with 'CAT' on it?",
+    "gt": "No",
+    "image_file": "images/nb_1700_1.jpg",
+    "targets": [
+      "excavator",
+      "cat"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 2,
+    "hits": {
+      "SIT": 2,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      769,
+      1,
+      0
+    ],
+    "question": "Is there a child sitting on the grass?",
+    "gt": "No",
+    "image_file": "images/nb_769_1.jpg",
+    "targets": [
+      "child",
+      "sitting",
+      "grass"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 18,
+    "gap": 2,
+    "hits": {
+      "SIT": 2,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      776,
+      0,
+      0
+    ],
+    "question": "Is there a concrete fence in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_776_0.jpg",
+    "targets": [
+      "concrete",
+      "fence",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 26,
+    "gap": 2,
+    "hits": {
+      "SIT": 1,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      1718,
+      1,
+      0
+    ],
+    "question": "Is there  a girl sitting alone?",
+    "gt": "No",
+    "image_file": "images/nb_1718_1.jpg",
+    "targets": [
+      "girl",
+      "sitting",
+      "alone"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      9,
+      10
+    ],
+    "layer": 22,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      111,
+      1,
+      0
+    ],
+    "question": "Is there a shadow of a man on a wagon's wheel?",
+    "gt": "No",
+    "image_file": "images/nb_111_1.jpg",
+    "targets": [
+      "shadow",
+      "man",
+      "wagon",
+      "wheel"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 24,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      717,
+      1,
+      0
+    ],
+    "question": "Are there several people sitting on a bench?",
+    "gt": "No",
+    "image_file": "images/nb_717_1.jpg",
+    "targets": [
+      "several",
+      "sitting",
+      "bench"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      6,
+      11
+    ],
+    "layer": 30,
+    "gap": 2,
+    "hits": {
+      "SIT": 2,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1341,
+      1,
+      0
+    ],
+    "question": "Is the person in the image standing on the board?",
+    "gt": "No",
+    "image_file": "images/nb_1341_1.jpg",
+    "targets": [
+      "image",
+      "standing",
+      "board"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 30,
+    "gap": 2,
+    "hits": {
+      "SIT": 3,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1682,
+      1,
+      0
+    ],
+    "question": "Are there double yellow lines on the road?",
+    "gt": "No",
+    "image_file": "images/nb_1682_1.jpg",
+    "targets": [
+      "double",
+      "yellow",
+      "lines",
+      "road"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 34,
+    "gap": 2,
+    "hits": {
+      "SIT": 2,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      28,
+      1,
+      0
+    ],
+    "question": "Does the image show exactly four men?",
+    "gt": "No",
+    "image_file": "images/nb_28_1.jpg",
+    "targets": [
+      "image",
+      "show",
+      "exactly",
+      "four",
+      "men"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      9,
+      10
+    ],
+    "layer": 32,
+    "gap": 2,
+    "hits": {
+      "SIT": 1,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      810,
+      0,
+      0
+    ],
+    "question": "Are the cement bricks lying horizontally on the board?",
+    "gt": "Yes",
+    "image_file": "images/nb_810_0.jpg",
+    "targets": [
+      "cement",
+      "bricks",
+      "lying",
+      "horizontally",
+      "board"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 2,
+    "hits": {
+      "SIT": 2,
+      "STI": 4,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      940,
+      0,
+      1
+    ],
+    "question": "Are there more than two people in the image?",
+    "gt": "No",
+    "image_file": "images/nb_940_0.jpg",
+    "targets": [
+      "more",
+      "than",
+      "two",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 20,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      1315,
+      1,
+      1
+    ],
+    "question": "Are all the cyclists racing straight ahead?",
+    "gt": "Yes",
+    "image_file": "images/nb_1315_1.jpg",
+    "targets": [
+      "all",
+      "cyclists",
+      "racing",
+      "straight",
+      "ahead"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 16,
+    "gap": 2,
+    "hits": {
+      "SIT": 2,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1422,
+      0,
+      1
+    ],
+    "question": "Is the peacock walking on twig-littered dirt?",
+    "gt": "No",
+    "image_file": "images/nb_1422_0.jpg",
+    "targets": [
+      "peacock",
+      "walking",
+      "twig",
+      "littered",
+      "dirt"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 26,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      1379,
+      1,
+      0
+    ],
+    "question": "Are there three individuals in the image?",
+    "gt": "No",
+    "image_file": "images/nb_1379_1.jpg",
+    "targets": [
+      "three",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      6,
+      11
+    ],
+    "layer": 34,
+    "gap": 1,
+    "hits": {
+      "SIT": 1,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      84,
+      0,
+      1
+    ],
+    "question": "Is there a surfer sitting on the board in the image?",
+    "gt": "No",
+    "image_file": "images/nb_84_0.jpg",
+    "targets": [
+      "surfer",
+      "sitting",
+      "board",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 20,
+    "gap": 1,
+    "hits": {
+      "SIT": 2,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      183,
+      1,
+      0
+    ],
+    "question": "Are there people standing close by the bench?",
+    "gt": "No",
+    "image_file": "images/nb_183_1.jpg",
+    "targets": [
+      "standing",
+      "close",
+      "bench"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 26,
+    "gap": 1,
+    "hits": {
+      "SIT": 0,
+      "STI": 1,
+      "STIT": 1
+    }
+  },
+  {
+    "key": [
+      338,
+      0,
+      1
+    ],
+    "question": "Is there no red SUV driving in the background?",
+    "gt": "No",
+    "image_file": "images/nb_338_0.jpg",
+    "targets": [
+      "red",
+      "suv",
+      "driving",
+      "background"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 16,
+    "gap": 1,
+    "hits": {
+      "SIT": 0,
+      "STI": 1,
+      "STIT": 1
+    }
+  },
+  {
+    "key": [
+      686,
+      0,
+      1
+    ],
+    "question": "Are there men walking down the tracks?",
+    "gt": "No",
+    "image_file": "images/nb_686_0.jpg",
+    "targets": [
+      "men",
+      "walking",
+      "down",
+      "tracks"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 28,
+    "gap": 1,
+    "hits": {
+      "SIT": 1,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      1243,
+      0,
+      0
+    ],
+    "question": "Is there no one reading a newspaper in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1243_0.jpg",
+    "targets": [
+      "one",
+      "reading",
+      "newspaper",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 24,
+    "gap": 1,
+    "hits": {
+      "SIT": 0,
+      "STI": 1,
+      "STIT": 1
+    }
+  },
+  {
+    "key": [
+      1707,
+      1,
+      0
+    ],
+    "question": "Is anyone in line to enter the bus?",
+    "gt": "No",
+    "image_file": "images/nb_1707_1.jpg",
+    "targets": [
+      "line",
+      "enter",
+      "bus"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 1,
+    "hits": {
+      "SIT": 5,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      652,
+      1,
+      1
+    ],
+    "question": "Are the bikers primarily trying to ascend a hill?",
+    "gt": "Yes",
+    "image_file": "images/nb_652_1.jpg",
+    "targets": [
+      "bikers",
+      "primarily",
+      "trying",
+      "ascend",
+      "hill"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 24,
+    "gap": 1,
+    "hits": {
+      "SIT": 3,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      738,
+      0,
+      0
+    ],
+    "question": "Is the man alone with just one bicycle?",
+    "gt": "Yes",
+    "image_file": "images/nb_738_0.jpg",
+    "targets": [
+      "man",
+      "alone",
+      "just",
+      "one",
+      "bicycle"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 18,
+    "gap": 1,
+    "hits": {
+      "SIT": 0,
+      "STI": 1,
+      "STIT": 1
+    }
+  },
+  {
+    "key": [
+      887,
+      0,
+      1
+    ],
+    "question": "Does the central tree have four trunks?",
+    "gt": "No",
+    "image_file": "images/nb_887_0.jpg",
+    "targets": [
+      "central",
+      "tree",
+      "have",
+      "four",
+      "trunks"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": true,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 20,
+    "gap": 0,
+    "hits": {
+      "SIT": 5,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1639,
+      0,
+      1
+    ],
+    "question": "Is there no human hand pinching the catapult?",
+    "gt": "No",
+    "image_file": "images/nb_1639_0.jpg",
+    "targets": [
+      "human",
+      "hand",
+      "pinching",
+      "catapult"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 26,
+    "gap": 10,
+    "hits": {
+      "SIT": 2,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      637,
+      0,
+      0
+    ],
+    "question": "Is the dog being chased brown and white?",
+    "gt": "Yes",
+    "image_file": "images/nb_637_0.jpg",
+    "targets": [
+      "dog",
+      "chased",
+      "brown",
+      "white"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 9,
+    "hits": {
+      "SIT": 2,
+      "STI": 11,
+      "STIT": 11
+    }
+  },
+  {
+    "key": [
+      704,
+      0,
+      0
+    ],
+    "question": "Is there an overhead night view of glowing charcoals?",
+    "gt": "Yes",
+    "image_file": "images/nb_704_0.jpg",
+    "targets": [
+      "overhead",
+      "night",
+      "view",
+      "glowing",
+      "charcoals"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 9,
+    "hits": {
+      "SIT": 9,
+      "STI": 18,
+      "STIT": 18
+    }
+  },
+  {
+    "key": [
+      49,
+      0,
+      0
+    ],
+    "question": "Is anyone in the crowd also holding a musical instrument?",
+    "gt": "Yes",
+    "image_file": "images/nb_49_0.jpg",
+    "targets": [
+      "crowd",
+      "also",
+      "holding",
+      "musical",
+      "instrument"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 9,
+    "hits": {
+      "SIT": 4,
+      "STI": 13,
+      "STIT": 13
+    }
+  },
+  {
+    "key": [
+      87,
+      1,
+      1
+    ],
+    "question": "Is the main activity of the girl in the image related to swinging?",
+    "gt": "Yes",
+    "image_file": "images/nb_87_1.jpg",
+    "targets": [
+      "main",
+      "activity",
+      "girl",
+      "image",
+      "related",
+      "swinging"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 28,
+    "gap": 9,
+    "hits": {
+      "SIT": 4,
+      "STI": 13,
+      "STIT": 13
+    }
+  },
+  {
+    "key": [
+      1058,
+      1,
+      1
+    ],
+    "question": "Is the child intending to climb?",
+    "gt": "Yes",
+    "image_file": "images/nb_1058_1.jpg",
+    "targets": [
+      "child",
+      "intending",
+      "climb"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 32,
+    "gap": 8,
+    "hits": {
+      "SIT": 2,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      1015,
+      0,
+      0
+    ],
+    "question": "Are all the dogs of different colors?",
+    "gt": "Yes",
+    "image_file": "images/nb_1015_0.jpg",
+    "targets": [
+      "all",
+      "dogs",
+      "different",
+      "colors"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 8,
+    "hits": {
+      "SIT": 4,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      463,
+      0,
+      0
+    ],
+    "question": "Is the heart spray painted with a tilted \"A\" inside?",
+    "gt": "Yes",
+    "image_file": "images/nb_463_0.jpg",
+    "targets": [
+      "heart",
+      "spray",
+      "painted",
+      "tilted",
+      "inside"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 30,
+    "gap": 8,
+    "hits": {
+      "SIT": 11,
+      "STI": 19,
+      "STIT": 19
+    }
+  },
+  {
+    "key": [
+      466,
+      0,
+      1
+    ],
+    "question": "Is there a small portion of the moon visible in the sky?",
+    "gt": "No",
+    "image_file": "images/nb_466_0.jpg",
+    "targets": [
+      "small",
+      "portion",
+      "moon",
+      "visible",
+      "sky"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 8,
+    "hits": {
+      "SIT": 1,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      757,
+      0,
+      1
+    ],
+    "question": "Is the woman wearing multiple beaded necklaces?",
+    "gt": "No",
+    "image_file": "images/nb_757_0.jpg",
+    "targets": [
+      "woman",
+      "wearing",
+      "multiple",
+      "beaded",
+      "necklaces"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 8,
+    "hits": {
+      "SIT": 2,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      1325,
+      1,
+      0
+    ],
+    "question": "Are there cars on a three-lane highway under the clouds?",
+    "gt": "No",
+    "image_file": "images/nb_1325_1.jpg",
+    "targets": [
+      "cars",
+      "three",
+      "lane",
+      "highway",
+      "clouds"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 8,
+    "hits": {
+      "SIT": 7,
+      "STI": 15,
+      "STIT": 15
+    }
+  },
+  {
+    "key": [
+      1688,
+      1,
+      0
+    ],
+    "question": "Are there two black Rhinoceros beetles on the arm?",
+    "gt": "No",
+    "image_file": "images/nb_1688_1.jpg",
+    "targets": [
+      "two",
+      "black",
+      "rhinoceros",
+      "beetles",
+      "arm"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 8,
+    "hits": {
+      "SIT": 9,
+      "STI": 17,
+      "STIT": 17
+    }
+  },
+  {
+    "key": [
+      129,
+      1,
+      1
+    ],
+    "question": "Is there no suds in the water?",
+    "gt": "Yes",
+    "image_file": "images/nb_129_1.jpg",
+    "targets": [
+      "suds",
+      "water"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 26,
+    "gap": 7,
+    "hits": {
+      "SIT": 2,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      533,
+      0,
+      0
+    ],
+    "question": "Is the wrestler on the bottom wearing gray and red?",
+    "gt": "Yes",
+    "image_file": "images/nb_533_0.jpg",
+    "targets": [
+      "wrestler",
+      "bottom",
+      "wearing",
+      "gray",
+      "red"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 7,
+    "hits": {
+      "SIT": 7,
+      "STI": 14,
+      "STIT": 14
+    }
+  },
+  {
+    "key": [
+      1047,
+      1,
+      0
+    ],
+    "question": "Is there a brown iron guard in front of the window?",
+    "gt": "No",
+    "image_file": "images/nb_1047_1.jpg",
+    "targets": [
+      "brown",
+      "iron",
+      "guard",
+      "front",
+      "window"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 34,
+    "gap": 7,
+    "hits": {
+      "SIT": 4,
+      "STI": 11,
+      "STIT": 11
+    }
+  },
+  {
+    "key": [
+      1185,
+      1,
+      1
+    ],
+    "question": "Are there no clouds in the upper left corner of the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1185_1.jpg",
+    "targets": [
+      "clouds",
+      "upper",
+      "left",
+      "corner",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 7,
+    "hits": {
+      "SIT": 5,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      48,
+      1,
+      1
+    ],
+    "question": "Is a large canyon stretching through the center of the land?",
+    "gt": "Yes",
+    "image_file": "images/nb_48_1.jpg",
+    "targets": [
+      "large",
+      "canyon",
+      "stretching",
+      "through",
+      "center",
+      "land"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 26,
+    "gap": 7,
+    "hits": {
+      "SIT": 2,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      359,
+      1,
+      0
+    ],
+    "question": "Is there a vehicle being driven in the scene?",
+    "gt": "No",
+    "image_file": "images/nb_359_1.jpg",
+    "targets": [
+      "vehicle",
+      "driven",
+      "scene"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 32,
+    "gap": 6,
+    "hits": {
+      "SIT": 0,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      149,
+      0,
+      1
+    ],
+    "question": "Does the poster only feature a woman?",
+    "gt": "No",
+    "image_file": "images/nb_149_0.jpg",
+    "targets": [
+      "poster",
+      "only",
+      "feature",
+      "woman"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 6,
+    "hits": {
+      "SIT": 3,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      1058,
+      1,
+      0
+    ],
+    "question": "Is the child wearing blue shoes?",
+    "gt": "No",
+    "image_file": "images/nb_1058_1.jpg",
+    "targets": [
+      "child",
+      "wearing",
+      "blue",
+      "shoes"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 30,
+    "gap": 6,
+    "hits": {
+      "SIT": 0,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      159,
+      0,
+      1
+    ],
+    "question": "Is there a swamp tour boat navigating the water?",
+    "gt": "No",
+    "image_file": "images/nb_159_0.jpg",
+    "targets": [
+      "swamp",
+      "tour",
+      "boat",
+      "navigating",
+      "water"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 24,
+    "gap": 6,
+    "hits": {
+      "SIT": 5,
+      "STI": 11,
+      "STIT": 11
+    }
+  },
+  {
+    "key": [
+      581,
+      0,
+      1
+    ],
+    "question": "Is there a fighter wearing flame-themed shorts?",
+    "gt": "No",
+    "image_file": "images/nb_581_0.jpg",
+    "targets": [
+      "fighter",
+      "wearing",
+      "flame",
+      "themed",
+      "shorts"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 30,
+    "gap": 6,
+    "hits": {
+      "SIT": 3,
+      "STI": 9,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      147,
+      1,
+      1
+    ],
+    "question": "Is there a blue house with a crape myrtle tree in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_147_1.jpg",
+    "targets": [
+      "blue",
+      "house",
+      "crape",
+      "myrtle",
+      "tree",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 32,
+    "gap": 6,
+    "hits": {
+      "SIT": 6,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      245,
+      1,
+      0
+    ],
+    "question": "Is the depicted horse without any white spots on its forehead?",
+    "gt": "No",
+    "image_file": "images/nb_245_1.jpg",
+    "targets": [
+      "depicted",
+      "horse",
+      "without",
+      "white",
+      "spots",
+      "forehead"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      8
+    ],
+    "layer": 32,
+    "gap": 6,
+    "hits": {
+      "SIT": 3,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      361,
+      0,
+      1
+    ],
+    "question": "Are there two separate small contrails in the sky in the picture?",
+    "gt": "No",
+    "image_file": "images/nb_361_0.jpg",
+    "targets": [
+      "two",
+      "separate",
+      "small",
+      "contrails",
+      "sky",
+      "picture"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 20,
+    "gap": 6,
+    "hits": {
+      "SIT": 1,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      638,
+      1,
+      0
+    ],
+    "question": "Is the person walking?",
+    "gt": "No",
+    "image_file": "images/nb_638_1.jpg",
+    "targets": [
+      "walking"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 2,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      96,
+      0,
+      1
+    ],
+    "question": "Is the moon visible in the sky?",
+    "gt": "No",
+    "image_file": "images/nb_96_0.jpg",
+    "targets": [
+      "moon",
+      "visible",
+      "sky"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 2,
+      "STI": 7,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      1264,
+      1,
+      1
+    ],
+    "question": "Is the person wearing glasses?",
+    "gt": "Yes",
+    "image_file": "images/nb_1264_1.jpg",
+    "targets": [
+      "wearing",
+      "glasses"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 26,
+    "gap": 5,
+    "hits": {
+      "SIT": 1,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      120,
+      0,
+      0
+    ],
+    "question": "Is the man actively doing a measurement?",
+    "gt": "Yes",
+    "image_file": "images/nb_120_0.jpg",
+    "targets": [
+      "man",
+      "actively",
+      "doing",
+      "measurement"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 20,
+    "gap": 5,
+    "hits": {
+      "SIT": 0,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      439,
+      1,
+      0
+    ],
+    "question": "Is the jumper dressed in bright red?",
+    "gt": "No",
+    "image_file": "images/nb_439_1.jpg",
+    "targets": [
+      "jumper",
+      "dressed",
+      "bright",
+      "red"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 1,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      465,
+      1,
+      0
+    ],
+    "question": "Is the cat sitting on a hardwood floor?",
+    "gt": "No",
+    "image_file": "images/nb_465_1.jpg",
+    "targets": [
+      "cat",
+      "sitting",
+      "hardwood",
+      "floor"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 2,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      759,
+      0,
+      0
+    ],
+    "question": "Is the water splitting into three sections?",
+    "gt": "Yes",
+    "image_file": "images/nb_759_0.jpg",
+    "targets": [
+      "water",
+      "splitting",
+      "three",
+      "sections"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 28,
+    "gap": 5,
+    "hits": {
+      "SIT": 7,
+      "STI": 12,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      1789,
+      1,
+      1
+    ],
+    "question": "Are there 10 artificial green apples in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1789_1.jpg",
+    "targets": [
+      "artificial",
+      "green",
+      "apples",
+      "image"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 12,
+      "STI": 17,
+      "STIT": 17
+    }
+  },
+  {
+    "key": [
+      118,
+      1,
+      1
+    ],
+    "question": "Are the people standing in a large pool of water?",
+    "gt": "Yes",
+    "image_file": "images/nb_118_1.jpg",
+    "targets": [
+      "standing",
+      "large",
+      "pool",
+      "water"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 4,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      263,
+      1,
+      0
+    ],
+    "question": "Is the person performing a trick on inline skates?",
+    "gt": "No",
+    "image_file": "images/nb_263_1.jpg",
+    "targets": [
+      "performing",
+      "trick",
+      "inline",
+      "skates"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 2,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      279,
+      0,
+      1
+    ],
+    "question": "Is there a blue object with a distinct reflection in the picture?",
+    "gt": "No",
+    "image_file": "images/nb_279_0.jpg",
+    "targets": [
+      "blue",
+      "object",
+      "distinct",
+      "reflection",
+      "picture"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 5,
+    "hits": {
+      "SIT": 2,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      285,
+      0,
+      0
+    ],
+    "question": "Are the cactus plants in cube-shaped pots?",
+    "gt": "Yes",
+    "image_file": "images/nb_285_0.jpg",
+    "targets": [
+      "cactus",
+      "plants",
+      "cube",
+      "shaped",
+      "pots"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 5,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      427,
+      1,
+      1
+    ],
+    "question": "Does the image show only two people?",
+    "gt": "Yes",
+    "image_file": "images/nb_427_1.jpg",
+    "targets": [
+      "image",
+      "show",
+      "only",
+      "two"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 24,
+    "gap": 5,
+    "hits": {
+      "SIT": 1,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      1086,
+      0,
+      0
+    ],
+    "question": "Is the statue holding onto an orange half circle?",
+    "gt": "Yes",
+    "image_file": "images/nb_1086_0.jpg",
+    "targets": [
+      "statue",
+      "holding",
+      "orange",
+      "half",
+      "circle"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 32,
+    "gap": 5,
+    "hits": {
+      "SIT": 0,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      298,
+      1,
+      1
+    ],
+    "question": "Is the inside of the pumpkin filled with dried leaves and dirt?",
+    "gt": "Yes",
+    "image_file": "images/nb_298_1.jpg",
+    "targets": [
+      "inside",
+      "pumpkin",
+      "filled",
+      "dried",
+      "leaves",
+      "dirt"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 16,
+    "gap": 5,
+    "hits": {
+      "SIT": 2,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      458,
+      0,
+      1
+    ],
+    "question": "Does the image show a cheer dancer being thrown into the air?",
+    "gt": "No",
+    "image_file": "images/nb_458_0.jpg",
+    "targets": [
+      "image",
+      "show",
+      "cheer",
+      "dancer",
+      "thrown",
+      "air"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 34,
+    "gap": 5,
+    "hits": {
+      "SIT": 5,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      22,
+      0,
+      1
+    ],
+    "question": "Is the person running in the image?",
+    "gt": "No",
+    "image_file": "images/nb_22_0.jpg",
+    "targets": [
+      "running",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 32,
+    "gap": 4,
+    "hits": {
+      "SIT": 3,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      1188,
+      0,
+      0
+    ],
+    "question": "Are there four dogs in the scene?",
+    "gt": "Yes",
+    "image_file": "images/nb_1188_0.jpg",
+    "targets": [
+      "four",
+      "dogs",
+      "scene"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 4,
+    "hits": {
+      "SIT": 2,
+      "STI": 6,
+      "STIT": 6
+    }
+  },
+  {
+    "key": [
+      1803,
+      0,
+      0
+    ],
+    "question": "Is the individual crossing his hands?",
+    "gt": "Yes",
+    "image_file": "images/nb_1803_0.jpg",
+    "targets": [
+      "crossing",
+      "hands"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 34,
+    "gap": 4,
+    "hits": {
+      "SIT": 1,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1861,
+      1,
+      1
+    ],
+    "question": "Are there two adults in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_1861_1.jpg",
+    "targets": [
+      "two",
+      "adults",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 28,
+    "gap": 4,
+    "hits": {
+      "SIT": 0,
+      "STI": 4,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      188,
+      0,
+      0
+    ],
+    "question": "Is there a small waterfall in the center of the view?",
+    "gt": "Yes",
+    "image_file": "images/nb_188_0.jpg",
+    "targets": [
+      "small",
+      "waterfall",
+      "center",
+      "view"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 32,
+    "gap": 4,
+    "hits": {
+      "SIT": 4,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      232,
+      1,
+      1
+    ],
+    "question": "Is the main action about catching a ball?",
+    "gt": "Yes",
+    "image_file": "images/nb_232_1.jpg",
+    "targets": [
+      "main",
+      "action",
+      "about",
+      "catching",
+      "ball"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 4,
+    "hits": {
+      "SIT": 1,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      657,
+      1,
+      1
+    ],
+    "question": "Is there exactly one shirtless man in the image?",
+    "gt": "Yes",
+    "image_file": "images/nb_657_1.jpg",
+    "targets": [
+      "exactly",
+      "one",
+      "shirtless",
+      "man",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 28,
+    "gap": 4,
+    "hits": {
+      "SIT": 0,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      685,
+      0,
+      1
+    ],
+    "question": "Are there two ladies talking to a man on the street?",
+    "gt": "No",
+    "image_file": "images/nb_685_0.jpg",
+    "targets": [
+      "two",
+      "ladies",
+      "talking",
+      "man",
+      "street"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 24,
+    "gap": 4,
+    "hits": {
+      "SIT": 3,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      888,
+      1,
+      0
+    ],
+    "question": "Is the star on a tan, shell-marked pillar?",
+    "gt": "No",
+    "image_file": "images/nb_888_1.jpg",
+    "targets": [
+      "star",
+      "tan",
+      "shell",
+      "marked",
+      "pillar"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 4,
+    "hits": {
+      "SIT": 5,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      1011,
+      0,
+      1
+    ],
+    "question": "Is there a person wearing a green button up shirt?",
+    "gt": "No",
+    "image_file": "images/nb_1011_0.jpg",
+    "targets": [
+      "wearing",
+      "green",
+      "button",
+      "shirt"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 34,
+    "gap": 4,
+    "hits": {
+      "SIT": 0,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1324,
+      1,
+      0
+    ],
+    "question": "Is the person in the image sitting while reading?",
+    "gt": "No",
+    "image_file": "images/nb_1324_1.jpg",
+    "targets": [
+      "image",
+      "sitting",
+      "while",
+      "reading"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 24,
+    "gap": 4,
+    "hits": {
+      "SIT": 0,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1444,
+      0,
+      0
+    ],
+    "question": "Is the man playing only one instrument?",
+    "gt": "Yes",
+    "image_file": "images/nb_1444_0.jpg",
+    "targets": [
+      "man",
+      "playing",
+      "only",
+      "one",
+      "instrument"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      10
+    ],
+    "layer": 24,
+    "gap": 4,
+    "hits": {
+      "SIT": 4,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      1892,
+      0,
+      0
+    ],
+    "question": "Does the image show someone looking into a window?",
+    "gt": "Yes",
+    "image_file": "images/nb_1892_0.jpg",
+    "targets": [
+      "image",
+      "show",
+      "looking",
+      "window"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 32,
+    "gap": 4,
+    "hits": {
+      "SIT": 1,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      358,
+      0,
+      0
+    ],
+    "question": "Is there a person performing an action on someone else's clothing?",
+    "gt": "Yes",
+    "image_file": "images/nb_358_0.jpg",
+    "targets": [
+      "performing",
+      "action",
+      "else",
+      "clothing"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 24,
+    "gap": 4,
+    "hits": {
+      "SIT": 3,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      36,
+      0,
+      0
+    ],
+    "question": "Is someone riding a bicycle?",
+    "gt": "Yes",
+    "image_file": "images/nb_36_0.jpg",
+    "targets": [
+      "riding",
+      "bicycle"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      229,
+      0,
+      0
+    ],
+    "question": "Is the dog chasing a person?",
+    "gt": "Yes",
+    "image_file": "images/nb_229_0.jpg",
+    "targets": [
+      "dog",
+      "chasing"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 26,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      978,
+      0,
+      0
+    ],
+    "question": "Is the man performing on a ramp?",
+    "gt": "Yes",
+    "image_file": "images/nb_978_0.jpg",
+    "targets": [
+      "man",
+      "performing",
+      "ramp"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 34,
+    "gap": 3,
+    "hits": {
+      "SIT": 5,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      82,
+      1,
+      1
+    ],
+    "question": "Are there several large containers on the table?",
+    "gt": "Yes",
+    "image_file": "images/nb_82_1.jpg",
+    "targets": [
+      "several",
+      "large",
+      "containers",
+      "table"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 26,
+    "gap": 3,
+    "hits": {
+      "SIT": 4,
+      "STI": 7,
+      "STIT": 7
+    }
+  },
+  {
+    "key": [
+      148,
+      1,
+      0
+    ],
+    "question": "Is someone in white wearing sunglasses?",
+    "gt": "No",
+    "image_file": "images/nb_148_1.jpg",
+    "targets": [
+      "white",
+      "wearing",
+      "sunglasses"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 24,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      311,
+      1,
+      1
+    ],
+    "question": "Is someone wearing sunglasses on their forehead?",
+    "gt": "Yes",
+    "image_file": "images/nb_311_1.jpg",
+    "targets": [
+      "wearing",
+      "sunglasses",
+      "forehead"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 30,
+    "gap": 3,
+    "hits": {
+      "SIT": 1,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      508,
+      0,
+      1
+    ],
+    "question": "Are there multiple children playing in the background?",
+    "gt": "No",
+    "image_file": "images/nb_508_0.jpg",
+    "targets": [
+      "multiple",
+      "children",
+      "playing",
+      "background"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      9,
+      10
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 5,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      613,
+      1,
+      0
+    ],
+    "question": "Is the scene illuminated by a street lamp?",
+    "gt": "No",
+    "image_file": "images/nb_613_1.jpg",
+    "targets": [
+      "scene",
+      "illuminated",
+      "street",
+      "lamp"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 28,
+    "gap": 3,
+    "hits": {
+      "SIT": 1,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      638,
+      0,
+      1
+    ],
+    "question": "Is the person stationary, possibly posing?",
+    "gt": "No",
+    "image_file": "images/nb_638_0.jpg",
+    "targets": [
+      "stationary",
+      "possibly",
+      "posing"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 28,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      1317,
+      1,
+      1
+    ],
+    "question": "Are there three ants on the tiled wall?",
+    "gt": "Yes",
+    "image_file": "images/nb_1317_1.jpg",
+    "targets": [
+      "three",
+      "ants",
+      "tiled",
+      "wall"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 11,
+      "STI": 14,
+      "STIT": 14
+    }
+  },
+  {
+    "key": [
+      1581,
+      0,
+      0
+    ],
+    "question": "Is the man wearing a gray suit?",
+    "gt": "Yes",
+    "image_file": "images/nb_1581_0.jpg",
+    "targets": [
+      "man",
+      "wearing",
+      "gray",
+      "suit"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      1667,
+      0,
+      0
+    ],
+    "question": "Is the object in the dog's mouth spherical?",
+    "gt": "Yes",
+    "image_file": "images/nb_1667_0.jpg",
+    "targets": [
+      "object",
+      "dog",
+      "mouth",
+      "spherical"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 28,
+    "gap": 3,
+    "hits": {
+      "SIT": 5,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      1737,
+      0,
+      1
+    ],
+    "question": "Is the woman wearing a brown jacket?",
+    "gt": "No",
+    "image_file": "images/nb_1737_0.jpg",
+    "targets": [
+      "woman",
+      "wearing",
+      "brown",
+      "jacket"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 1,
+      "STI": 4,
+      "STIT": 4
+    }
+  },
+  {
+    "key": [
+      1749,
+      0,
+      1
+    ],
+    "question": "Are there two soccer balls in the scene?",
+    "gt": "No",
+    "image_file": "images/nb_1749_0.jpg",
+    "targets": [
+      "two",
+      "soccer",
+      "balls",
+      "scene"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 3,
+    "hits": {
+      "SIT": 8,
+      "STI": 11,
+      "STIT": 11
+    }
+  },
+  {
+    "key": [
+      115,
+      1,
+      0
+    ],
+    "question": "Is the photograph taken with a self-held camera?",
+    "gt": "No",
+    "image_file": "images/nb_115_1.jpg",
+    "targets": [
+      "photograph",
+      "taken",
+      "self",
+      "held",
+      "camera"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 26,
+    "gap": 3,
+    "hits": {
+      "SIT": 6,
+      "STI": 9,
+      "STIT": 9
+    }
+  },
+  {
+    "key": [
+      691,
+      1,
+      0
+    ],
+    "question": "Is someone wearing a blue shirt featured?",
+    "gt": "No",
+    "image_file": "images/nb_691_1.jpg",
+    "targets": [
+      "wearing",
+      "blue",
+      "shirt",
+      "featured"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      9,
+      10
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 2,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      1042,
+      1,
+      0
+    ],
+    "question": "Are there three people visibly watching the skateboarder?",
+    "gt": "No",
+    "image_file": "images/nb_1042_1.jpg",
+    "targets": [
+      "three",
+      "visibly",
+      "watching",
+      "skateboarder"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 24,
+    "gap": 3,
+    "hits": {
+      "SIT": 7,
+      "STI": 10,
+      "STIT": 10
+    }
+  },
+  {
+    "key": [
+      1415,
+      0,
+      1
+    ],
+    "question": "Is the man depicted walking down the steps?",
+    "gt": "No",
+    "image_file": "images/nb_1415_0.jpg",
+    "targets": [
+      "man",
+      "depicted",
+      "walking",
+      "down",
+      "steps"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 18,
+    "gap": 3,
+    "hits": {
+      "SIT": 5,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      1583,
+      0,
+      0
+    ],
+    "question": "Is the man holding a tool in each hand?",
+    "gt": "Yes",
+    "image_file": "images/nb_1583_0.jpg",
+    "targets": [
+      "man",
+      "holding",
+      "tool",
+      "each",
+      "hand"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 26,
+    "gap": 3,
+    "hits": {
+      "SIT": 0,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      345,
+      1,
+      1
+    ],
+    "question": "Is the container from which the child is drinking made of glass?",
+    "gt": "Yes",
+    "image_file": "images/nb_345_1.jpg",
+    "targets": [
+      "container",
+      "which",
+      "child",
+      "drinking",
+      "made",
+      "glass"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 32,
+    "gap": 3,
+    "hits": {
+      "SIT": 2,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      884,
+      0,
+      0
+    ],
+    "question": "Is the work being conducted in a hallway?",
+    "gt": "Yes",
+    "image_file": "images/nb_884_0.jpg",
+    "targets": [
+      "work",
+      "conducted",
+      "hallway"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 18,
+    "gap": 2,
+    "hits": {
+      "SIT": 1,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      997,
+      1,
+      0
+    ],
+    "question": "Are there people using an iPad?",
+    "gt": "No",
+    "image_file": "images/nb_997_1.jpg",
+    "targets": [
+      "using",
+      "ipad"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 26,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      1342,
+      1,
+      1
+    ],
+    "question": "Is the fan angled to the left?",
+    "gt": "Yes",
+    "image_file": "images/nb_1342_1.jpg",
+    "targets": [
+      "fan",
+      "angled",
+      "left"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 30,
+    "gap": 2,
+    "hits": {
+      "SIT": 1,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      677,
+      0,
+      0
+    ],
+    "question": "Are there exactly five members in the band?",
+    "gt": "Yes",
+    "image_file": "images/nb_677_0.jpg",
+    "targets": [
+      "exactly",
+      "five",
+      "members",
+      "band"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      886,
+      0,
+      1
+    ],
+    "question": "Is the dog wearing two collars?",
+    "gt": "No",
+    "image_file": "images/nb_886_0.jpg",
+    "targets": [
+      "dog",
+      "wearing",
+      "two",
+      "collars"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 34,
+    "gap": 2,
+    "hits": {
+      "SIT": 3,
+      "STI": 5,
+      "STIT": 5
+    }
+  },
+  {
+    "key": [
+      971,
+      0,
+      1
+    ],
+    "question": "Are there any drinks on the table closest to the camera?",
+    "gt": "No",
+    "image_file": "images/nb_971_0.jpg",
+    "targets": [
+      "drinks",
+      "table",
+      "closest",
+      "camera"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      10
+    ],
+    "layer": 34,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      1412,
+      1,
+      1
+    ],
+    "question": "Is the boy shaving without supervision?",
+    "gt": "Yes",
+    "image_file": "images/nb_1412_1.jpg",
+    "targets": [
+      "boy",
+      "shaving",
+      "without",
+      "supervision"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 16,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      1473,
+      0,
+      0
+    ],
+    "question": "Is the person engaged in manually climbing?",
+    "gt": "Yes",
+    "image_file": "images/nb_1473_0.jpg",
+    "targets": [
+      "engaged",
+      "manually",
+      "climbing"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 28,
+    "gap": 2,
+    "hits": {
+      "SIT": 9,
+      "STI": 11,
+      "STIT": 12
+    }
+  },
+  {
+    "key": [
+      622,
+      0,
+      1
+    ],
+    "question": "Is there a participant wearing a black and red jersey?",
+    "gt": "No",
+    "image_file": "images/nb_622_0.jpg",
+    "targets": [
+      "participant",
+      "wearing",
+      "black",
+      "red",
+      "jersey"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 32,
+    "gap": 2,
+    "hits": {
+      "SIT": 1,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      1268,
+      0,
+      0
+    ],
+    "question": "Is the sculpture placed on a gray stone platform?",
+    "gt": "Yes",
+    "image_file": "images/nb_1268_0.jpg",
+    "targets": [
+      "sculpture",
+      "placed",
+      "gray",
+      "stone",
+      "platform"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 24,
+    "gap": 2,
+    "hits": {
+      "SIT": 6,
+      "STI": 8,
+      "STIT": 8
+    }
+  },
+  {
+    "key": [
+      453,
+      0,
+      1
+    ],
+    "question": "Is there a young girl wearing a backpack present in the image?",
+    "gt": "No",
+    "image_file": "images/nb_453_0.jpg",
+    "targets": [
+      "young",
+      "girl",
+      "wearing",
+      "backpack",
+      "present",
+      "image"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "Yes",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 20,
+    "gap": 2,
+    "hits": {
+      "SIT": 0,
+      "STI": 2,
+      "STIT": 2
+    }
+  },
+  {
+    "key": [
+      150,
+      1,
+      0
+    ],
+    "question": "Is there a red plastic fence in the background?",
+    "gt": "No",
+    "image_file": "images/nb_150_1.jpg",
+    "targets": [
+      "red",
+      "plastic",
+      "fence",
+      "background"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      7,
+      11
+    ],
+    "layer": 30,
+    "gap": 1,
+    "hits": {
+      "SIT": 2,
+      "STI": 3,
+      "STIT": 3
+    }
+  },
+  {
+    "key": [
+      679,
+      1,
+      0
+    ],
+    "question": "Is the activity a game with a specific target?",
+    "gt": "No",
+    "image_file": "images/nb_679_1.jpg",
+    "targets": [
+      "activity",
+      "game",
+      "specific",
+      "target"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "Yes",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      8,
+      10
+    ],
+    "layer": 32,
+    "gap": 1,
+    "hits": {
+      "SIT": 0,
+      "STI": 1,
+      "STIT": 1
+    }
+  },
+  {
+    "key": [
+      1531,
+      1,
+      0
+    ],
+    "question": "Are there multiple people playing instruments in the background?",
+    "gt": "No",
+    "image_file": "images/nb_1531_1.jpg",
+    "targets": [
+      "multiple",
+      "playing",
+      "instruments",
+      "background"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 28,
+    "gap": 1,
+    "hits": {
+      "SIT": 0,
+      "STI": 1,
+      "STIT": 1
+    }
+  },
+  {
+    "key": [
+      338,
+      1,
+      1
+    ],
+    "question": "Is there no red SUV driving in the background?",
+    "gt": "Yes",
+    "image_file": "images/nb_338_1.jpg",
+    "targets": [
+      "red",
+      "suv",
+      "driving",
+      "background"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "Yes"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 16,
+    "gap": 0,
+    "hits": {
+      "SIT": 0,
+      "STI": 0,
+      "STIT": 0
+    }
+  },
+  {
+    "key": [
+      1315,
+      1,
+      0
+    ],
+    "question": "Are the cyclists primarily navigating a corner?",
+    "gt": "No",
+    "image_file": "images/nb_1315_1.jpg",
+    "targets": [
+      "cyclists",
+      "primarily",
+      "navigating",
+      "corner"
+    ],
+    "answers": {
+      "SIT": "No",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      11,
+      7
+    ],
+    "layer": 16,
+    "gap": 0,
+    "hits": {
+      "SIT": 1,
+      "STI": 1,
+      "STIT": 1
+    }
+  },
+  {
+    "key": [
+      335,
+      1,
+      1
+    ],
+    "question": "Is the man doing something on top of the cart?",
+    "gt": "Yes",
+    "image_file": "images/nb_335_1.jpg",
+    "targets": [
+      "man",
+      "doing",
+      "something",
+      "top",
+      "cart"
+    ],
+    "answers": {
+      "SIT": "Yes",
+      "STI": "No",
+      "STIT": "No"
+    },
+    "holds": false,
+    "grid": [
+      10,
+      7
+    ],
+    "layer": 16,
+    "gap": 0,
+    "hits": {
+      "SIT": 0,
+      "STI": 0,
+      "STIT": 0
+    }
+  }
+]
