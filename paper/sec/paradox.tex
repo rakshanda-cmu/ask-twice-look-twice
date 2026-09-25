@@ -59,12 +59,12 @@ makes $6.975$ patches per image decode a question word, against $2.800$ for
 question-last, a factor of $2.49$ and a mean gap of $+4.175$ patches. The effect
 peaks late: 76 of 160 candidates peak at layer 30 or beyond.
 Figure~\ref{fig:steering} shows what this looks like patch by patch. Asking
-``Is the adult chasing a child?'' before the image turns \emph{throws} into
-\emph{chase}, \emph{boy} into \emph{toddler} and \emph{woman} into \emph{adult},
-so the patches now decode the question's own words, including its answer word.
-The model then answers ``No'' to a question whose ground truth is Yes, while
-question-last, whose patches still say \emph{throws} and \emph{boy}, answers
-``Yes''.
+``Is the adult in the image chasing a child?'' before the image turns
+\emph{running} into \emph{chase}, \emph{boy} into \emph{ahead} and
+\emph{baseball} into \emph{child}, taking the count of patches decoding a
+question word from 1 to 12. The model then answers ``No'' to a question whose
+ground truth is Yes, while question-last, whose patches still say
+\emph{running} and \emph{boy}, answers ``Yes''.
 
 So the question does reach the image, and it reaches it more strongly in
 precisely the ordering that scores worst. The model that looks more like it
@@ -72,16 +72,18 @@ found the answer is the model that gets it wrong.
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=\linewidth]{figs/fig_steering_words.pdf}
+\includegraphics[width=\linewidth]{figs/fig1_chase.pdf}
 \end{center}
-\caption{The question rewrites what the image patches say, and the model still
-answers wrong. NaturalBench example 1007, logit-lens top-1 token per patch at
-layer 32 over a $9\times9$ grid; question-first changes 46 of the 81 patch words
-and four are called out. Scene vocabulary (\emph{boy}, \emph{hand},
-\emph{throws}, \emph{woman}) becomes the question's own vocabulary
-(\emph{toddler}, \emph{ahead}, \emph{chase}, \emph{adult}), including the
-answer word, yet question-first answers ``No'' to a question whose ground truth
-is Yes. Patch decodes are not localized to the object they name.}
+\caption{Steering happens, and is not read out. Every image patch is shown:
+each cell holds the vocabulary token that patch's layer-32 hidden state decodes
+to under the logit lens, shaded by that token's probability. Red rings mark
+patches decoding a word from the question. Question-last leaves the patches
+generic (1 ringed patch) and answers correctly; question-first steers the same
+patches onto the question's vocabulary (12 ringed patches) and answers wrong.
+Dashed arrows trace three individual patches from question-last to
+question-first, where \emph{running} becomes \emph{chase}, \emph{boy} becomes
+\emph{ahead}, and \emph{baseball} becomes \emph{child}. Echoing keeps the
+steering and recovers the answer.}
 \label{fig:steering}
 \end{figure}
 
