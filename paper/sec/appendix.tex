@@ -1,40 +1,27 @@
-\section{Full ordering ladder across 13 benchmarks}
-\label{app:breadth}
+\section{Attention knockout in full}
+\label{app:knockout}
 
-\begin{table}[h]
-\caption{Full ordering ladder for Qwen3-VL-8B across 13 benchmarks (video QA
-below the rule). Best of the four orderings in bold. The echo column gives
-\sitit{} with the second image copy at half resolution. Question-first costs
-$7.01$ points on average; image echoing recovers all of it and adds $1.18$.}
-\label{tab:breadth}
+Qwen3-VL-8B, 250 NaturalBench pairs, query side restricted to the answer
+position. \texttt{ko\_question} severs the attention edges from the answer
+position to the question span, \texttt{ko\_image} to the image span, and
+\texttt{ko\_random} to an equal-length random span of pre-image text as a
+span-size control.
+
+\begin{figure}[h]
 \begin{center}
-\small
-\begin{tabular}{lrrrrrrrr}
-\toprule
- & & \multicolumn{4}{c}{Ordering} & Echo $\tfrac{1}{2}$ & \multicolumn{2}{c}{$\Delta$ vs \sit{}} \\
-\cmidrule(lr){3-6}\cmidrule(lr){8-9}
-Benchmark & $N$ & \sit{} & \sti{} & \stit{} & \sitit{} & \sitit{} & \sti{} & \sitit{} \\
-\midrule
-BLINK         &         793 & 53.09 & 44.51 & 52.21 & \best{53.97} & 50.44 & $-8.58$ & $+0.88$ \\
-CV-Bench      &     2{,}638 & 81.35 & 63.34 & 79.98 & \best{83.55} & 83.70 & $-18.01$ & $+2.20$ \\
-HR-Bench      &     1{,}600 & 67.81 & 59.25 & 63.94 & \best{69.75} & 68.44 & $-8.56$ & $+1.94$ \\
-MMStar        &     1{,}500 & 53.33 & 41.93 & 51.47 & \best{55.13} & 56.07 & $-11.40$ & $+1.80$ \\
-MMVP          &         300 & 73.00 & 64.00 & 72.33 & \best{77.67} & 76.00 & $-9.00$ & $+4.67$ \\
-RealWorldQA   &         765 & 69.28 & 63.92 & 67.19 & \best{70.33} & 70.33 & $-5.36$ & $+1.05$ \\
-WorldMedQA-V  &         568 & 53.35 & 54.40 & 56.87 & \best{57.22} & 57.57 & $+1.06$ & $+3.87$ \\
-TallyQA       &    38{,}589 & 79.14 & 74.15 & 77.85 & \best{79.99} & 79.36 & $-5.00$ & $+0.84$ \\
-VQAv2         &   214{,}354 & \best{81.66} & 78.72 & 80.49 & 81.30 & 81.38 & $-2.94$ & $-0.36$ \\
-\midrule
-MVBench       &     2{,}600 & 64.08 & 55.88 & 62.23 & \best{64.62} & 66.08 & $-8.19$ & $+0.54$ \\
-NExT-QA       &     8{,}564 & \best{78.21} & 69.30 & 76.05 & 77.95 & 78.11 & $-8.91$ & $-0.26$ \\
-MSVD-QA       &    13{,}157 & \best{40.05} & 35.52 & 36.61 & 39.27 & 39.51 & $-4.53$ & $-0.78$ \\
-TGIF-QA       &    25{,}751 & \best{36.32} & 34.59 & 33.62 & 35.26 & 35.50 & $-1.74$ & $-1.06$ \\
-\midrule
-\multicolumn{2}{l}{\emph{Mean over 13}} & & & & & & $\mathbf{-7.01}$ & $\mathbf{+1.18}$ \\
-\bottomrule
-\end{tabular}
+\includegraphics[width=0.52\textwidth]{figs/fig_knockout.pdf}
 \end{center}
-\end{table}
+\caption{Each ordering answers through a different path. Bars are the change in
+accuracy against the unmodified run ($57.6$ for question-first, $58.8$ for
+question-last). Severing answer-to-question hurts only question-last; severing
+answer-to-image hurts only question-first; the random span-size control moves
+both by at most $0.8$ points.}
+\label{fig:knockout}
+\end{figure}
+
+The paired bootstrap on the question-last question knockout gives
+$\Delta = 0.056$ with a 95\% CI of $[+0.0199, +0.096]$, so the interval excludes
+zero.
 
 \section{Cross-model ladders in full}
 \label{app:models}
@@ -232,31 +219,6 @@ Prompt & Total & Image & Text & $\Delta$ total & $\Delta$ image & $\Delta$ text 
 \section{GEPA configuration and training cost}
 \label{app:gepa}
 
-\begin{table}[h]
-\caption{GEPA prompt optimization under two orderings, Qwen3-VL-8B, on held-out
-evaluation sets. GEPA finds real gains under \sti{} and nothing under \sit{},
-as the read-out diagnosis predicts. It never reaches the \sit{} baseline it is
-competing with.}
-\label{tab:gepa}
-\begin{center}
-\begin{tabular}{llrrrrr}
-\toprule
- & & & \multicolumn{2}{c}{Accuracy} & & Gap \\
-\cmidrule(lr){4-5}
-Benchmark & Order & $N$ & Seed & GEPA & $\Delta$ & closed \\
-\midrule
-\multirow{2}{*}{POPE}         & \sti{} & 8{,}800 & 86.41 & 87.25 & $+0.84$ & $45\%$ \\
-                              & \sit{} & 8{,}800 & 88.27 & 88.27 & $+0.00$ & n/a \\
-\midrule
-\multirow{2}{*}{VQAv2}        & \sti{} & 10{,}000 & 86.11 & 88.13 & $+2.02$ & $83\%$ \\
-                              & \sit{} & 10{,}000 & 88.55 & 88.55 & $+0.00$ & n/a \\
-\midrule
-\multirow{2}{*}{NaturalBench} & \sti{} & 7{,}000 & 74.74 & 75.79 & $+1.04$ & $26\%$ \\
-                              & \sit{} & 7{,}000 & 78.80 & 78.39 & $-0.41$ & n/a \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
 
 GEPA \citep{gepa2025} optimizes the system message only. The task model is
 Qwen3-VL-8B; the reflection model is Gemma-3-27B on a separate GPU, since
@@ -317,7 +279,7 @@ Genuine word changes are rare and concentrated: $8$ across 100 samples, of which
 $6$ occur at layer 16, one at layer 8 and one at layer 20, with none at layers
 0, 4, 12, 24 or 27. Divergence at the level of decoded output words is therefore
 sparse and mid-network, consistent with the read-out account in
-Section~\ref{sec:anatomy-readout}, where the two orderings are indistinguishable
+Section~\ref{sec:background-readout}, where the two orderings are indistinguishable
 at the decision level until late and differ mainly in routing rather than in
 vocabulary.
 

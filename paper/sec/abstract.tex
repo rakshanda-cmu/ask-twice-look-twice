@@ -1,24 +1,23 @@
 \begin{abstract}
 Whether a question is placed before or after an image changes nothing about a
-prompt's content, yet it changes a vision-language model's accuracy by up to
-$18$ points. Question-first prompting, the layout that lets every image token
-attend to the question, costs Qwen3-VL-8B $7.0$ points on average across 13
-benchmarks and drives LLaVA-1.5 to exactly zero group accuracy. Degraded
-perception does not explain this: question-first makes $2.49\times$ \emph{more}
-image patches decode a content word from the question, and it measurably
-rewrites the image tokens themselves. The ordering that looks most like it found
-the answer is the one that answers wrong. We locate the failure in read-out. At
-the peak read-out layer, question-first sends $2.19\times$ less attention from
-the answer position to the question, the two orderings are indistinguishable at
-chance through layer 25 of 36, and they then diverge to $P(\text{correct})$ of
-$0.0986$ versus $0.8747$. Attention knockout makes the dependence causal and
-doubly dissociated: severing answer-to-question costs question-last $5.6$ points
-and question-first nothing, while severing answer-to-image costs question-first
-$9.6$ points and question-last nothing. The diagnosis prescribes the fix.
-Echoing the question after the image costs $13$ tokens and recovers $78\%$ of
-the deficit while provably leaving perception untouched; echoing the image
-recovers all of it and adds $1.18$ points over question-last. The echo works by
-position, not content: a spatially reversed echo is statistically
-indistinguishable from a correct one, and an eighth-resolution echo carrying
-$\tfrac{1}{64}$ of the pixels matches a full one at $3\%$ of the added tokens.
+prompt's content, yet it changes a vision-language model's accuracy. Prior work
+by the present authors established this question-first paradox on three yes/no
+benchmarks and traced it to read-out rather than perception: the question
+demonstrably steers the image patches, but the answer position cannot read it
+back, and echoing the question or the image repairs the damage. That work left
+open how far the effect reaches, what the echo is actually made of, and what it
+costs. We answer all three. Across fourteen benchmarks never previously tested,
+question-first costs $7.0$ points on average and hurts on 12 of 13 image and
+video datasets and on 7 of 7 categories of a $24{,}449$-item detection-style
+benchmark, where one category falls from $86.3$ to $38.9$, a $47.4$-point
+collapse. The echo turns out to carry almost no information: downscaling the
+echoed image to $\tfrac{1}{8}$ resolution, $\tfrac{1}{64}$ of the pixels, is
+statistically indistinguishable from a full-resolution echo ($p = 1.00$) while
+still beating question-last ($p = 0.005$), which cuts its price from $3{,}352$
+extra tokens per query to $107$. Breadth also exposes a boundary: on video,
+where the echo doubles an already long frame sequence, image echoing helps on
+only 1 of 4 datasets while question echoing still recovers $3.3$ points. A
+reflective prompt optimizer, given the same budget, gains only under the
+ordering our diagnosis says has headroom and never reaches the question-last
+baseline, so rewording does not substitute for fixing token order.
 \end{abstract}

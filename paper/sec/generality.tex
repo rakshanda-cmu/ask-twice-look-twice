@@ -1,0 +1,147 @@
+\section{Generality and boundaries}
+\label{sec:generality}
+
+Prior work tested three yes/no benchmarks. That leaves open whether the paradox
+is a property of yes/no visual question answering, of those three datasets, or
+of the prompt layout itself. We run the full ordering ladder on 13 further
+benchmarks spanning single-image perception, high-resolution perception,
+counting, medical VQA and four video QA datasets, and separately on RF20, a
+$24{,}449$-item presence-detection benchmark built from 20 detection datasets
+across 7 categories.
+
+\subsection{The paradox holds on 13 new benchmarks}
+
+Moving the question from after the image to before it costs Qwen3-VL-8B $7.01$
+points on average and hurts on 12 of 13 (Table~\ref{tab:breadth}). The effect is
+far larger than the differences that usually separate published models:
+CV-Bench loses $18.01$ points, MMStar $11.40$, MMVP $9.00$, NExT-QA $8.91$.
+WorldMedQA-V is the single benchmark where question-first is not worse
+($+1.06$); we report it rather than dropping it, and note it is also the
+smallest benchmark in the set ($N = 568$).
+
+The two echo orderings separate the cost of the repair from its size. Question
+echoing recovers $5.49$ of the $7.01$ points, or $78\%$ of the deficit, for $13$
+extra tokens. Image echoing recovers all of it and exceeds question-last by
+$1.18$ points, winning on 9 of 13.
+
+\begin{table}[t]
+\caption{Full ordering ladder for Qwen3-VL-8B across 13 benchmarks not tested in
+prior work, video QA below the rule. Best of the four orderings in bold. The
+echo column gives \sitit{} with the second image copy at half resolution.
+Question-first hurts on 12 of 13; image echoing recovers the loss on the image
+benchmarks and does not on video.}
+\label{tab:breadth}
+\begin{center}
+\small
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & & \multicolumn{4}{c}{Ordering} & Echo $\tfrac{1}{2}$ & \multicolumn{2}{c}{$\Delta$ vs \sit{}} \\
+\cmidrule(lr){3-6}\cmidrule(lr){8-9}
+Benchmark & $N$ & \sit{} & \sti{} & \stit{} & \sitit{} & \sitit{} & \sti{} & \sitit{} \\
+\midrule
+BLINK         &         793 & 53.09 & 44.51 & 52.21 & \best{53.97} & 50.44 & $-8.58$ & $+0.88$ \\
+CV-Bench      &     2{,}638 & 81.35 & 63.34 & 79.98 & \best{83.55} & 83.70 & $-18.01$ & $+2.20$ \\
+HR-Bench      &     1{,}600 & 67.81 & 59.25 & 63.94 & \best{69.75} & 68.44 & $-8.56$ & $+1.94$ \\
+MMStar        &     1{,}500 & 53.33 & 41.93 & 51.47 & \best{55.13} & 56.07 & $-11.40$ & $+1.80$ \\
+MMVP          &         300 & 73.00 & 64.00 & 72.33 & \best{77.67} & 76.00 & $-9.00$ & $+4.67$ \\
+RealWorldQA   &         765 & 69.28 & 63.92 & 67.19 & \best{70.33} & 70.33 & $-5.36$ & $+1.05$ \\
+WorldMedQA-V  &         568 & 53.35 & 54.40 & 56.87 & \best{57.22} & 57.57 & $+1.06$ & $+3.87$ \\
+TallyQA       &    38{,}589 & 79.14 & 74.15 & 77.85 & \best{79.99} & 79.36 & $-5.00$ & $+0.84$ \\
+VQAv2         &   214{,}354 & \best{81.66} & 78.72 & 80.49 & 81.30 & 81.38 & $-2.94$ & $-0.36$ \\
+\cmidrule(lr){1-9}
+\multicolumn{2}{l}{\emph{Mean, 9 image}} & & & & & & $-7.53$ & $+1.88$ \\
+\midrule
+MVBench       &     2{,}600 & 64.08 & 55.88 & 62.23 & \best{64.62} & 66.08 & $-8.19$ & $+0.54$ \\
+NExT-QA       &     8{,}564 & \best{78.21} & 69.30 & 76.05 & 77.95 & 78.11 & $-8.91$ & $-0.26$ \\
+MSVD-QA       &    13{,}157 & \best{40.05} & 35.52 & 36.61 & 39.27 & 39.51 & $-4.53$ & $-0.78$ \\
+TGIF-QA       &    25{,}751 & \best{36.32} & 34.59 & 33.62 & 35.26 & 35.50 & $-1.74$ & $-1.06$ \\
+\cmidrule(lr){1-9}
+\multicolumn{2}{l}{\emph{Mean, 4 video}} & & & & & & $-5.84$ & $-0.39$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{finding}
+\textbf{Finding.} The paradox is a property of the layout, not of yes/no visual
+question answering. Across 13 benchmarks never previously tested, question-first
+costs $7.01$ points on average and hurts on 12 of 13, with a worst case of
+$18.01$ points on CV-Bench, while prompt content is held identical.
+\end{finding}
+
+\subsection{RF20: a category where question-first more than halves accuracy}
+\label{sec:generality-rf20}
+
+RF20 asks whether a given object class is present in a detection-style image,
+over $24{,}449$ items drawn from 20 datasets in 7 categories. It is the hardest
+test of generality here because its images are not web photographs and its
+questions are not natural language questions about scenes.
+
+Question-first hurts on all 7 categories, by $11.36$ points on average
+(Table~\ref{tab:rf20}). On Lab Imaging it does not merely hurt: accuracy falls
+from $86.29$ to $38.94$, a loss of $47.35$ points, which is below the rate this
+binary task would get by answering a single class blindly. Industrial loses
+$14.26$. Both are domains where the target is a small, low-contrast region and
+the decision hinges on evidence the model must go back and look at, which is
+exactly the read-out the question-first layout strands.
+
+Echoing repairs the collapse and then some. On Lab Imaging, question echoing
+reaches $91.71$ and image echoing $90.93$, against question-last's $86.29$,
+so the ordering that broke the category worst is also the one the cheaper repair
+helps most.
+
+\begin{table}[t]
+\caption{RF20 accuracy by category, Qwen3-VL-8B, $24{,}449$ items. Question-first
+hurts on 7 of 7 categories. Lab Imaging loses $47.35$ points, and both echo
+orderings recover it past the question-last baseline.}
+\label{tab:rf20}
+\begin{center}
+\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Category & $N$ & \sit{} & \sti{} & \stit{} & \sitit{} & $\Delta$ \sti{} & $\Delta$ \sitit{} \\
+\midrule
+Document    & 10{,}200 & 80.94 & 76.20 & 80.30 & \best{84.19} & $-4.74$ & $+3.25$ \\
+Misc        &  4{,}114 & 85.71 & 82.50 & \best{85.90} & 85.05 & $-3.21$ & $-0.66$ \\
+Industrial  &  2{,}958 & \best{82.45} & 68.19 & 81.54 & 82.18 & $-14.26$ & $-0.27$ \\
+Lab Imaging &  2{,}822 & 86.29 & 38.94 & \best{91.71} & 90.93 & $-47.35$ & $+4.64$ \\
+Sport       &  2{,}654 & 49.06 & 48.61 & 42.99 & \best{51.96} & $-0.45$ & $+2.90$ \\
+Flora/Fauna &  1{,}592 & 86.56 & 82.54 & \best{87.44} & 86.75 & $-4.02$ & $+0.19$ \\
+Aerial      &      109 & \best{94.50} & 88.99 & 89.91 & \best{94.50} & $-5.51$ & $+0.00$ \\
+\midrule
+\multicolumn{2}{l}{\emph{Mean over 7}} & & & & & $-11.36$ & $+1.44$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{finding}
+\textbf{Finding.} Question-first can be catastrophic, not merely costly. On
+RF20's Lab Imaging category it takes accuracy from $86.29$ to $38.94$, a
+$47.35$-point loss, and it hurts on 7 of 7 categories. Echoing recovers the
+category to $91.71$, above the question-last baseline.
+\end{finding}
+
+\subsection{Where the repair stops: video}
+\label{sec:generality-video}
+
+The four video QA datasets draw a boundary the original benchmarks could not.
+The paradox itself is if anything more reliable there: question-first hurts on 4
+of 4, by $5.84$ points on average. The repair, however, splits by which thing is
+echoed. Question echoing still recovers $3.31$ of those points. Image echoing
+does not: it beats question-last on only 1 of 4 video datasets and loses $0.39$
+points on average, against $+1.88$ on the nine image benchmarks.
+
+The reason is mechanical rather than mysterious. For video the ``image'' is a
+frame sequence, so an image echo doubles a visual context that is already long,
+and the read-out surface it adds is buried behind far more tokens than in the
+single-image case. The practical rule is to echo the question on video and the
+image on stills.
+
+\begin{finding}
+\textbf{Finding.} The paradox and its repair have different domains. On video,
+question-first still hurts on 4 of 4 datasets ($-5.84$), but image echoing helps
+on only 1 of 4 ($-0.39$ on average, against $+1.88$ on nine image benchmarks),
+while question echoing still recovers $+3.31$. Echo the question on video, the
+image on stills.
+\end{finding}

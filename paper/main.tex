@@ -40,9 +40,12 @@
 
 % Breaks are explicit and hyphenation is off, so no word (and no existing
 % hyphen, as in Vision-Language) is split across title lines.
+% Retitled away from the prior workshop paper's title: that title is public and
+% searchable, so reusing it would defeat double-blind review. This title also
+% names what is new here rather than what prior work established.
 \title{\hyphenpenalty=10000\exhyphenpenalty=10000
-Ask Twice, Look Twice: Prompt Echoing\\
-Resolves the Question-First Paradox\\
+Position, Not Content: What Repairs\\
+Question-First Prompting\\
 in Vision-Language Models}
 
 \author{Anonymous authors\\Paper under double-blind review}
@@ -56,12 +59,11 @@ in Vision-Language Models}
 \input{sec/abstract}
 \input{sec/intro}
 \input{sec/setup}
-\input{sec/paradox}
-\input{sec/anatomy}
-\input{sec/method}
-\input{sec/results}
+\input{sec/background}
+\input{sec/generality}
 \input{sec/ablations}
 \input{sec/discussion}
+\input{sec/endmatter}
 
 \bibliography{main}
 \bibliographystyle{iclr2026_conference}
