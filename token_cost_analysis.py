@@ -6,8 +6,8 @@ relative to an STI baseline (1 image, 1 task, no repetition)?
 Two repetition mechanisms are compared:
   - "text repetition"  (STIT): the TASK text is repeated after the image.
   - "image repetition" (SITIT): the IMAGE is echoed a second time, at
-    full / half / quarter resolution for the echoed occurrence, mirroring
-    rf20_eval.py's --echo-scale ablation (echo_which='second').
+    full / half / quarter / eighth resolution for the echoed occurrence,
+    mirroring rf20_eval.py's --echo-scale ablation (echo_which='second').
 
 Only needs the HF processor + config (vision_start_token_id/vision_end_token_id/
 spatial_merge_size), NOT the model weights -- so it runs on CPU and doesn't
@@ -112,13 +112,17 @@ def main():
                                          echo_variants(img, 0.5), "SITIT")
         row["SITIT_quarter"] = count_tokens(processor, config, SYSTEM_MESSAGE, TASK_TEXT,
                                             echo_variants(img, 0.25), "SITIT")
+        row["SITIT_eighth"] = count_tokens(processor, config, SYSTEM_MESSAGE, TASK_TEXT,
+                                           echo_variants(img, 0.125), "SITIT")
         per_image.append(row)
         print(f"  {os.path.basename(p)}: STI={row['STI']['total']} "
               f"STIT={row['STIT']['total']} SITIT_full={row['SITIT_full']['total']} "
               f"SITIT_half={row['SITIT_half']['total']} "
-              f"SITIT_quarter={row['SITIT_quarter']['total']}", flush=True)
+              f"SITIT_quarter={row['SITIT_quarter']['total']} "
+              f"SITIT_eighth={row['SITIT_eighth']['total']}", flush=True)
 
-    variants = ["STI", "STIT", "SITIT_full", "SITIT_half", "SITIT_quarter"]
+    variants = ["STI", "STIT", "SITIT_full", "SITIT_half", "SITIT_quarter",
+                "SITIT_eighth"]
     summary = {}
     for v in variants:
         tot = sum(r[v]["total"] for r in per_image) / len(per_image)

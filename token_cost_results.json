@@ -34,6 +34,11 @@
         "total": 3886,
         "image": 3820,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 3732,
+        "image": 3666,
+        "text": 66
       }
     },
     {
@@ -65,6 +70,11 @@
       "SITIT_quarter": {
         "total": 5234,
         "image": 5168,
+        "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 5010,
+        "image": 4944,
         "text": 66
       }
     },
@@ -98,6 +108,11 @@
         "total": 3957,
         "image": 3891,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 3795,
+        "image": 3729,
+        "text": 66
       }
     },
     {
@@ -129,6 +144,11 @@
       "SITIT_quarter": {
         "total": 586,
         "image": 520,
+        "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 588,
+        "image": 522,
         "text": 66
       }
     },
@@ -162,6 +182,11 @@
         "total": 1052,
         "image": 986,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 1058,
+        "image": 992,
+        "text": 66
       }
     },
     {
@@ -194,6 +219,11 @@
         "total": 3886,
         "image": 3820,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 3732,
+        "image": 3666,
+        "text": 66
       }
     },
     {
@@ -223,6 +253,11 @@
         "text": 66
       },
       "SITIT_quarter": {
+        "total": 530,
+        "image": 464,
+        "text": 66
+      },
+      "SITIT_eighth": {
         "total": 530,
         "image": 464,
         "text": 66
@@ -258,6 +293,11 @@
         "total": 12678,
         "image": 12612,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 12102,
+        "image": 12036,
+        "text": 66
       }
     },
     {
@@ -287,6 +327,11 @@
         "text": 66
       },
       "SITIT_quarter": {
+        "total": 436,
+        "image": 370,
+        "text": 66
+      },
+      "SITIT_eighth": {
         "total": 436,
         "image": 370,
         "text": 66
@@ -322,6 +367,11 @@
         "total": 1294,
         "image": 1228,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 1294,
+        "image": 1228,
+        "text": 66
       }
     },
     {
@@ -351,6 +401,11 @@
         "text": 66
       },
       "SITIT_quarter": {
+        "total": 274,
+        "image": 208,
+        "text": 66
+      },
+      "SITIT_eighth": {
         "total": 274,
         "image": 208,
         "text": 66
@@ -386,6 +441,11 @@
         "total": 230,
         "image": 164,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 230,
+        "image": 164,
+        "text": 66
       }
     },
     {
@@ -415,6 +475,11 @@
         "text": 66
       },
       "SITIT_quarter": {
+        "total": 386,
+        "image": 320,
+        "text": 66
+      },
+      "SITIT_eighth": {
         "total": 386,
         "image": 320,
         "text": 66
@@ -450,6 +515,11 @@
         "total": 12678,
         "image": 12612,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 12102,
+        "image": 12036,
+        "text": 66
       }
     },
     {
@@ -479,6 +549,11 @@
         "text": 66
       },
       "SITIT_quarter": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      },
+      "SITIT_eighth": {
         "total": 194,
         "image": 128,
         "text": 66
@@ -514,6 +589,11 @@
         "total": 7639,
         "image": 7573,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 7303,
+        "image": 7237,
+        "text": 66
       }
     },
     {
@@ -543,6 +623,11 @@
         "text": 66
       },
       "SITIT_quarter": {
+        "total": 194,
+        "image": 128,
+        "text": 66
+      },
+      "SITIT_eighth": {
         "total": 194,
         "image": 128,
         "text": 66
@@ -578,6 +663,11 @@
         "total": 2086,
         "image": 2020,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 2036,
+        "image": 1970,
+        "text": 66
       }
     },
     {
@@ -609,6 +699,11 @@
       "SITIT_quarter": {
         "total": 13291,
         "image": 13225,
+        "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 12683,
+        "image": 12617,
         "text": 66
       }
     },
@@ -642,6 +737,11 @@
         "total": 2241,
         "image": 2175,
         "text": 66
+      },
+      "SITIT_eighth": {
+        "total": 2172,
+        "image": 2106,
+        "text": 66
       }
     }
   ],
@@ -670,6 +770,11 @@
       "total": 3637.6,
       "image": 3571.6,
       "text": 66.0
+    },
+    "SITIT_eighth": {
+      "total": 3492.55,
+      "image": 3426.55,
+      "text": 66.0
     }
   },
   "delta_vs_STI": {
@@ -696,6 +801,11 @@
     "SITIT_quarter": {
       "delta_total": 251.8499999999999,
       "delta_image": 235.8499999999999,
+      "delta_text": 16.0
+    },
+    "SITIT_eighth": {
+      "delta_total": 106.80000000000018,
+      "delta_image": 90.80000000000018,
       "delta_text": 16.0
     }
   }

@@ -90,6 +90,7 @@ TOKEN_COST_VARIANTS = [
     ("SITIT_full", "SITIT (image repetition, full-res echo)"),
     ("SITIT_half", "SITIT (image repetition, ½-res echo)"),
     ("SITIT_quarter", "SITIT (image repetition, ¼-res echo)"),
+    ("SITIT_eighth", "SITIT (image repetition, ⅛-res echo)"),
 ]
 
 
@@ -98,7 +99,7 @@ def _token_cost_section():
     st.caption(
         "How many extra tokens does each intervention cost, relative to STI "
         "baseline: repeating the TASK text (STIT) vs repeating the IMAGE "
-        "(SITIT), at full/½/¼ resolution for the echoed occurrence."
+        "(SITIT), at full/½/¼/⅛ resolution for the echoed occurrence."
     )
     if not os.path.exists(TOKEN_COST_PATH):
         st.info("Not computed yet — run token_cost_analysis.py (CPU-only, no "
@@ -317,10 +318,11 @@ ECHO2HALF_DATASETS = [
 
 EMPTY_ECHO_ROW = {"Benchmark": None, "N": "—", "Metric": "—",
                  "SITIT baseline": "—", "SITIT echo2half": "—", "Δ half": "—",
-                 "SITIT echo2quarter": "—", "Δ quarter": "—"}
+                 "SITIT echo2quarter": "—", "Δ quarter": "—",
+                 "SITIT echo2eighth": "—", "Δ eighth": "—"}
 
 
-def _echo_row(label, metric_name, base_v, half_v, quarter_v, n):
+def _echo_row(label, metric_name, base_v, half_v, quarter_v, n, eighth_v=None):
     row = dict(EMPTY_ECHO_ROW)
     row["Benchmark"] = label
     row["N"] = n
@@ -332,6 +334,9 @@ def _echo_row(label, metric_name, base_v, half_v, quarter_v, n):
     if quarter_v is not None:
         row["SITIT echo2quarter"] = f"{quarter_v*100:.2f}%"
         row["Δ quarter"] = f"{(quarter_v-base_v)*100:+.2f} pts"
+    if eighth_v is not None:
+        row["SITIT echo2eighth"] = f"{eighth_v*100:.2f}%"
+        row["Δ eighth"] = f"{(eighth_v-base_v)*100:+.2f} pts"
     return row
 
 
@@ -377,24 +382,35 @@ def _echo2half_extension_section():
         p = "winoground/results/qwen3-vl-8b__SITIT__results.json"
         ph = "winoground/results/qwen3-vl-8b__SITIT_echo2half__results.json"
         pq = "winoground/results/qwen3-vl-8b__SITIT_echo2quarter__results.json"
+        pe = "winoground/results/qwen3-vl-8b__SITIT_echo2eighth__results.json"
         if not os.path.exists(p):
             row = dict(EMPTY_ECHO_ROW); row["Benchmark"] = "Winoground"; return row
         b = json.load(open(p))["meta"]["overall"]
         h = json.load(open(ph))["meta"]["overall"]["group_acc"] if os.path.exists(ph) else None
         q = json.load(open(pq))["meta"]["overall"]["group_acc"] if os.path.exists(pq) else None
-        return _echo_row("Winoground", "group_acc", b["group_acc"], h, q, b["n"])
+        e = json.load(open(pe))["meta"]["overall"]["group_acc"] if os.path.exists(pe) else None
+        return _echo_row("Winoground", "group_acc", b["group_acc"], h, q, b["n"], eighth_v=e)
 
     def _naturalbench_row():
         d = "naturalbench/results"
         p = os.path.join(d, "qwen3-vl-8b__SITIT__results.json")
         ph = os.path.join(d, "qwen3-vl-8b__SITIT_echo2half__results.json")
         pq = os.path.join(d, "qwen3-vl-8b__SITIT_echo2quarter__results.json")
+        pe = os.path.join(d, "qwen3-vl-8b__SITIT_echo2eighth__results.json")
         if not os.path.exists(p):
             row = dict(EMPTY_ECHO_ROW); row["Benchmark"] = "NaturalBench"; return row
         b = json.load(open(p))["meta"]  # metrics live directly in meta, no "overall" nesting
         h = json.load(open(ph))["meta"]["pair_acc"] if os.path.exists(ph) else None
         q = json.load(open(pq))["meta"]["pair_acc"] if os.path.exists(pq) else None
-        return _echo_row("NaturalBench", "pair_acc", b["pair_acc"], h, q, b["num_groups"] * 4)
+        # Only count the eighth-res run once it covers the same 1900 groups as
+        # the baseline -- the eval writes periodic checkpoints mid-run.
+        e = None
+        if os.path.exists(pe):
+            em = json.load(open(pe))["meta"]
+            if em.get("num_groups") == b.get("num_groups"):
+                e = em["pair_acc"]
+        return _echo_row("NaturalBench", "pair_acc", b["pair_acc"], h, q,
+                        b["num_groups"] * 4, eighth_v=e)
 
     rows.append(_pope_row())
     rows.append(_winoground_row())
@@ -402,8 +418,19 @@ def _echo2half_extension_section():
     st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
     n_done = sum(1 for r in rows if r["Δ half"] != "—")
     n_quarter_done = sum(1 for r in rows if r["Δ quarter"] != "—")
+    n_eighth_done = sum(1 for r in rows if r["Δ eighth"] != "—")
     st.caption(f"{n_done}/{len(rows)} benchmarks have half-res echo; "
-              f"{n_quarter_done} also have quarter-res echo for direct comparison.")
+              f"{n_quarter_done} also have quarter-res echo for direct comparison; "
+              f"{n_eighth_done} have the eighth-res (0.125x) echo. The eighth-res "
+              "sweep was deliberately scoped to NaturalBench rather than run "
+              "across every benchmark; Winoground's eighth-res run had already "
+              "completed before that scoping, so it is shown too.")
+    st.caption(
+        "**Extra tokens each echo resolution costs** (per query, vs the STI "
+        "baseline, from the token-cost table lower on this page): full-res echo "
+        "**+3352**, ½-res **+875**, ¼-res **+252**, ⅛-res **+107**. For "
+        "reference, repeating only the task text (STIT) costs **+13**."
+    )
 
 
 def render_new_experiments_page():

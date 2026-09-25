@@ -52,3 +52,11 @@ website/wait_and_search.sh
 # DetPO eval intermediate prediction cache
 detpo_map/results/_detpo_run/
 detpo_map/results/_rf20cache/
+
+# ---- LaTeX build artifacts (paper/main.tex is the source; .pdf is committed) ----
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz

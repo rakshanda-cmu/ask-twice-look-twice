@@ -1,0 +1,39 @@
+\section{Discussion}
+\label{sec:discussion}
+
+The standard picture of a vision-language model answering a question is that the
+question selects what to look for and the model then looks. Under question-first
+prompting the first half of that picture is measurably correct: the question
+reaches the image and rewrites its tokens, and $2.49\times$ more patches decode
+the question's own words. The model still answers worse. The missing step is that
+the evidence has to be read back out at the answer position, through attention
+paths that token order determines. This is why the fix is so cheap relative to
+its size: nothing has to be learned and nothing has to be re-perceived. The
+intervention is not supplying information, it is putting a read-out surface where
+the answer position can reach it.
+
+\paragraph{Implications beyond prompt ordering.} For benchmarking, an unreported
+prompt-layout choice is a confound of the same size as the model differences
+benchmarks are built to detect: question-first versus question-last moves
+CV-Bench by $18.01$ points, so two implementations of ``the same'' prompt can
+differ by more than the gap being measured. For deployed and agentic systems,
+pipelines that prepend a goal to a growing context and then append retrieved
+images produce question-first layouts by construction and pay for it silently;
+appending a one-line restatement of the request after the visual content costs
+$13$ tokens. For training recipes, the failure lives in the read-out path rather
+than in perception, which suggests instruction tuning that varies section order
+rather than fixing one canonical template, and the Gemma models show the failure
+is trainable away.
+
+\paragraph{Limitations.} The diagnosis is established on Qwen3-VL-8B. The paradox
+replicates on Qwen2.5-VL-7B, InternVL3-8B and LLaVA-1.5 but not on either Gemma
+model, so the read-out account describes a common failure mode rather than a
+property of the architecture; image echoing still helps the Gemma models, but the
+mechanism we document cannot be the reason there. Image echoing is also not
+uniformly right: it does not beat question-last on POPE ($88.12$ against $88.35$
+F1), and on the four video QA benchmarks it loses to question-last on three of
+four. Finally, our knockout result depends on restricting the query side to the
+answer position; widening it does not reproduce the question-side half of the
+dissociation, and the span-size control is itself large there, so we treat the
+broader scope as uninformative rather than as contrary evidence
+(Appendix~\ref{app:repro}).
