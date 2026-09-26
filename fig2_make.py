@@ -86,6 +86,17 @@ def main():
                          'boxed in the SIT panel with a dotted arrow to the SAME patch '
                          'in the STI panel, showing what that one patch decoded to before '
                          'and after the question moved in front')
+    ap.add_argument("--figheight", type=float, default=None, dest="figheight",
+                    help="figure height in inches; default keeps the 11.2x3.35 aspect")
+    ap.add_argument("--figwidth", type=float, default=11.2, dest="figwidth",
+                    help="figure width in inches; set to the target \\textwidth "
+                         "so cell text renders at its true size instead of being "
+                         "scaled down by includegraphics")
+    ap.add_argument("--orders", default="",
+                    help="comma list of panels to draw, e.g. 'SIT,STI'; default all")
+    ap.add_argument("--fit-text", action="store_true", dest="fit_text",
+                    help="shrink a cell's font until the whole token fits instead "
+                         "of truncating it at --cell-chars")
     ap.add_argument("--mm", default=None, help=argparse.SUPPRESS)
     args = ap.parse_args()
 
@@ -137,8 +148,12 @@ def render(mm, hits, group, args):
     disp = small.resize((gw * 64, gh * 64), Image.LANCZOS)
     cell = 64
 
-    fig = plt.figure(figsize=(11.2, 3.35), dpi=400)
-    gs = fig.add_gridspec(1, 5, width_ratios=[1.06, 1, 1, 1, 0.045],
+    panels = [o for o in (args.orders.split(",") if args.orders else ORDERS)
+              if o in ORDERS]
+    ratios = [1.06] + [1.0] * len(panels) + [0.045]
+    fh = args.figheight if args.figheight else args.figwidth * 0.299
+    fig = plt.figure(figsize=(args.figwidth, fh), dpi=400)
+    gs = fig.add_gridspec(1, len(ratios), width_ratios=ratios,
                           left=0.006, right=0.965, top=0.775, bottom=0.035, wspace=0.055)
 
     # ── input with the magnified region boxed
@@ -156,7 +171,7 @@ def render(mm, hits, group, args):
     dark_at_high = args.cmap.lower().startswith("blues")
 
     panel_ax = {}
-    for k, o in enumerate(ORDERS):
+    for k, o in enumerate(panels):
         ax = fig.add_subplot(gs[0, k + 1])
         panel_ax[o] = ax
         crop = disp.crop((c0 * cell, r0 * cell, c1 * cell, r1 * cell))
@@ -166,6 +181,10 @@ def render(mm, hits, group, args):
             crop = crop.convert("L").convert("RGB")
         ax.imshow(crop, extent=[c0, c1, r1, r0])
         right = ok(A[o], rec["gt"])
+        # width of one cell in points, so a token can be sized to actually fit
+        # inside its box rather than spilling over the neighbouring cells
+        _bb = ax.get_window_extent(fig.canvas.get_renderer())
+        cell_pt = (_bb.width * 72.0 / fig.dpi) / max(1, (c1 - c0))
         for r in range(r0, r1):
             for c in range(c0, c1):
                 i = r * gw + c
@@ -188,9 +207,23 @@ def render(mm, hits, group, args):
                                            lw=1.8 if hit else 0))
                     txt = ("white" if p > 0.55 else "black") if dark_at_high \
                         else ("white" if p < 0.55 else "black")
-                ax.text(c + 0.5, r + 0.5, w[:args.cell_chars],
+                if args.fit_text:
+                    label = w.strip()
+                    # DejaVu Sans averages ~0.58em per glyph; leave 8% padding so
+                    # the token never touches the cell border
+                    avail = 0.92 * cell_pt
+                    fs = min(args.cell_fontsize,
+                             avail / (0.58 * max(1, len(label))))
+                    fs = max(fs, args.cell_fontsize * 0.42)
+                    # only if the word is still too long at the floor size do we
+                    # trim it, so clipping is the exception rather than the rule
+                    fits = max(2, int(avail / (0.58 * fs)))
+                    label = label[:fits]
+                else:
+                    label, fs = w[:args.cell_chars], args.cell_fontsize
+                ax.text(c + 0.5, r + 0.5, label,
                         ha="center", va="center",
-                        fontsize=args.cell_fontsize, color=txt, zorder=4,
+                        fontsize=fs, color=txt, zorder=4,
                         fontweight="bold" if hit else "normal")
         ax.set_xlim(c0, c1); ax.set_ylim(r1, r0); ax.axis("off")
         mark = "✓" if right else "✗"
@@ -209,11 +242,16 @@ def render(mm, hits, group, args):
                 cells_.append((r, c))
         # deeper rows bow further, so the arcs nest instead of crossing each other
         cells_.sort(key=lambda rc: rc[0])
-        a, b = panel_ax["SIT"], panel_ax["STI"]
+        if "SIT" in panel_ax and "STI" in panel_ax:
+            a, b = panel_ax["SIT"], panel_ax["STI"]
+        else:
+            cells_ = []
         for k_, (r, c) in enumerate(cells_):
-            # box only the source cell: the destination already carries its red ring,
-            # and a second outline there would compete with it
-            a.add_patch(Rectangle((c, r), 1, 1, fill=False, ec=LINK, lw=1.6, zorder=5))
+            # ring both ends, so the patch being traced is marked where it
+            # starts and where it lands
+            for ax_ in (a, b):
+                ax_.add_patch(Rectangle((c, r), 1, 1, fill=False, ec=HITC,
+                                        lw=2.4, zorder=6))
             fig.add_artist(ConnectionPatch(
                 xyA=(c + 1.0, r + 0.5), coordsA=a.transData,
                 xyB=(c + 0.0, r + 0.5), coordsB=b.transData,
@@ -221,7 +259,7 @@ def render(mm, hits, group, args):
                 linestyle=(0, (2.2, 1.8)), color=LINK, zorder=11,
                 connectionstyle=f"arc3,rad={-(0.20 + 0.14 * k_):.2f}"))
 
-    cax = fig.add_subplot(gs[0, 4])
+    cax = fig.add_subplot(gs[0, -1])
     fig.colorbar(sm, cax=cax)
     cax.tick_params(labelsize=5.5)
     cax.set_ylabel("token probability", fontsize=6.2)

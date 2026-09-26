@@ -38,25 +38,26 @@ the echo has two separable jobs, and that only one of them needs pixels.
 \captionof{table}{Echo-resolution sweep, Qwen3-VL-8B. Only the \emph{second}
 image occurrence is downscaled; the first stays at full resolution. Three of four
 benchmarks are flat or better at quarter resolution. RF20, whose targets are
-small, degrades monotonically. Blank cells were not run.}
+small, degrades monotonically. Metrics are F1 for POPE and RF20, group accuracy for Winoground, pair accuracy for NaturalBench. Blank cells were not run.}
 \label{tab:resolution}
 \vspace{2pt}
 \small
+\setlength{\tabcolsep}{3.5pt}
 \begin{tabular}{lrrrr}
 \toprule
 Benchmark & Echo $1$ & $\tfrac{1}{2}$ & $\tfrac{1}{4}$ & $\tfrac{1}{8}$ \\
 \midrule
-POPE\,\tiny(F1)            & 88.12 & \best{88.35} & 88.07 & \\
-Winoground\,\tiny(grp)     & 40.25 & \best{41.75} & 41.00 & \best{41.75} \\
-NaturalBench\,\tiny(pair)  & 80.36 & 80.55 & \best{80.57} & 80.18 \\
-RF20\,\tiny(F1)            & \best{80.56} & 80.06 & 78.80 & \\
+POPE         & 88.12 & \best{88.35} & 88.07 & \\
+Winoground   & 40.25 & \best{41.75} & 41.00 & \best{41.75} \\
+NaturalBench & 80.36 & 80.55 & \best{80.57} & 80.18 \\
+RF20         & \best{80.56} & 80.06 & 78.80 & \\
 \bottomrule
 \end{tabular}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.47\textwidth}
 \vspace{0pt}
 \centering
-\includegraphics{figs/fig_pareto.pdf}
+\includegraphics[width=\linewidth]{figs/fig_pareto.pdf}
 \caption{Cost against accuracy on NaturalBench. The $x$ axis is extra tokens per
 query versus question-first (symmetric log, so $0$ is shown); the dashed line is
 question-last. Every image echo clears that baseline, and the
@@ -137,6 +138,8 @@ as the read-out diagnosis predicts. It never reaches the \sit{} baseline it is
 competing with.}
 \label{tab:gepa}
 \begin{center}
+\small
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{llrrrrr}
 \toprule
  & & & \multicolumn{2}{c}{Accuracy} & & Gap \\

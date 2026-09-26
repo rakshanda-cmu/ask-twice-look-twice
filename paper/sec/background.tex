@@ -49,7 +49,7 @@ RF20         & F1         & 78.92 & 78.57 & 65.59 & 78.61 & \best{80.56} & 79.78
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics{figs/fig1_chase.pdf}
+\includegraphics[width=\linewidth]{figs/fig1_chase.pdf}
 \end{center}
 \caption{Steering happens, and is not read out. Every image patch is shown:
 each cell holds the vocabulary token that patch's layer-32 hidden state decodes
@@ -58,9 +58,10 @@ patches decoding a word from the question. Question-last leaves the patches
 generic (1 ringed patch) and answers correctly; question-first steers the same
 patches onto the question's vocabulary (12 ringed patches) and answers wrong.
 Dashed arrows trace three individual patches from question-last to
-question-first, where \emph{running} becomes \emph{chase}, \emph{boy} becomes
-\emph{ahead}, and \emph{baseball} becomes \emph{child}. Echoing keeps the
-steering and recovers the answer.}
+question-first, ringing each patch at both ends, where \emph{running} becomes
+\emph{chase}, \emph{boy} becomes \emph{ahead}, and \emph{baseball} becomes
+\emph{child}. Echoing the question keeps all 12 steered patches and answers
+correctly again.}
 \label{fig:steering}
 \end{figure}
 
@@ -82,7 +83,7 @@ question-last nothing. An equal-length random span moves both by at most $0.8$.
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics{figs/fig_mechanism.pdf}
+\includegraphics[width=\linewidth]{figs/fig_mechanism.pdf}
 \end{center}
 \caption{Where question-first breaks (150 NaturalBench pairs where it is wrong
 and question-last is right). \textbf{(a)} Attention leaving the answer position,

@@ -15,6 +15,10 @@
 \usepackage{capt-of}
 \usepackage[most]{tcolorbox}
 
+% The ordering names are \texttt and do not hyphenate, so a line packed with
+% them can overrun the margin; let TeX stretch the spaces instead.
+\emergencystretch=1.5em
+
 % Tighter float separation: the page budget is 9 pages of main text.
 \setlength{\textfloatsep}{11pt plus 2pt minus 2pt}
 \setlength{\floatsep}{9pt plus 2pt minus 2pt}

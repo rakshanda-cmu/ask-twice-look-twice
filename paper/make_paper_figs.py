@@ -27,12 +27,12 @@ INK, MUTED, GRID = "#1a1a1a", "#5c5c5c", "#dcdcdc"
 plt.rcParams.update({
     "font.family": "serif",
     "font.serif": ["Times New Roman", "DejaVu Serif"],
-    "font.size": 9,
-    "axes.labelsize": 8.5,
-    "axes.titlesize": 9.5,
-    "xtick.labelsize": 8.5,
-    "ytick.labelsize": 8,
-    "legend.fontsize": 8,
+    "font.size": 8,
+    "axes.labelsize": 7.5,
+    "axes.titlesize": 8.5,
+    "xtick.labelsize": 7,
+    "ytick.labelsize": 7,
+    "legend.fontsize": 7,
     "axes.edgecolor": MUTED,
     "axes.linewidth": 0.6,
     "xtick.color": MUTED,
@@ -68,8 +68,8 @@ def fig_teaser():
     g = {t: nb_meta(t)["g_acc"] * 100
          for t in ("SIT", "STI", "STIT", "SITIT", "SITIT_echo2eighth")}
 
-    fig, axes = plt.subplots(1, 3, figsize=(7.1, 2.28),
-                             gridspec_kw={"width_ratios": [1, 1, 1.3]})
+    fig, axes = plt.subplots(1, 3, figsize=(5.5, 2.05),
+                             gridspec_kw={"width_ratios": [1, 1, 1.5]})
 
     # (a) perception goes UP
     ax = axes[0]
@@ -84,9 +84,11 @@ def fig_teaser():
     ax.text(0.5, top * 0.90, f"{m_sti/m_sit:.2f}$\\times$ more", ha="center",
             fontsize=9.5, fontweight="bold", color=GREEN)
     ax.set_xticks([0, 1]); ax.set_xticklabels(["question\nlast", "question\nfirst"])
-    ax.set_ylabel("image patches decoding\na question word")
+    ax.tick_params(axis="x", labelsize=6.3)
+    ax.set_ylabel("patches decoding\na question word")
     ax.set_ylim(0, top); ax.set_xlim(-0.6, 1.6)
-    ax.set_title("(a) Perception improves", color=GREEN, fontweight="bold", pad=6)
+    ax.set_title("(a) Perception improves", color=GREEN, fontweight="bold",
+                 pad=6, fontsize=8)
     bare(ax)
 
     # (b) accuracy goes DOWN
@@ -102,9 +104,11 @@ def fig_teaser():
     ax.text(0.5, top_b * 0.885, f"{g['STI']-g['SIT']:+.1f} pts", ha="center",
             fontsize=9.5, fontweight="bold", color=VERM)
     ax.set_xticks([0, 1]); ax.set_xticklabels(["question\nlast", "question\nfirst"])
-    ax.set_ylabel("NaturalBench group acc. (%)")
+    ax.tick_params(axis="x", labelsize=6.3)
+    ax.set_ylabel("group accuracy (%)")
     ax.set_ylim(0, top_b); ax.set_xlim(-0.6, 1.6)
-    ax.set_title("(b) Accuracy collapses", color=VERM, fontweight="bold", pad=6)
+    ax.set_title("(b) Accuracy collapses", color=VERM, fontweight="bold",
+                 pad=6, fontsize=8)
     bare(ax)
 
     # (c) the repair
@@ -120,15 +124,18 @@ def fig_teaser():
     ax.legend(frameon=False, loc="upper left", handlelength=1.6, fontsize=7.8,
               borderpad=0.0, bbox_to_anchor=(-0.02, 1.02))
     ax.set_xticks(range(3))
-    ax.set_xticklabels(["question\nfirst",
-                        "+ question\n(13 tok)",
-                        "+ image\n(107 tok)"])
-    ax.set_ylabel("NaturalBench group acc. (%)")
+    ax.set_xticklabels(["question\nfirst", "+question\n13 tok",
+                        "+image\n107 tok"])
+    # three labels in one panel sit closer than the two-bar panels, so drop a
+    # point of type rather than letting them touch
+    ax.tick_params(axis="x", labelsize=6.3)
+    ax.set_ylabel("group accuracy (%)")
     ax.set_ylim(0, top_b); ax.set_xlim(-0.6, 2.6)
-    ax.set_title("(c) Echoing repairs it", color=BLUE, fontweight="bold", pad=6)
+    ax.set_title("(c) Echoing repairs it", color=BLUE, fontweight="bold",
+                 pad=6, fontsize=8)
     bare(ax)
 
-    fig.tight_layout(w_pad=2.2)
+    fig.tight_layout(w_pad=3.2)
     out = os.path.join(FIGS, "fig_teaser.pdf")
     fig.savefig(out); plt.close(fig)
     print(f"[fig] {out}  patches {m_sit:.3f}->{m_sti:.3f}; g_acc {g}")
@@ -142,7 +149,7 @@ def fig_mechanism():
     po = pr.get("orders", pr)
     do = dec.get("orders", dec)
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.48))
+    fig, axes = plt.subplots(1, 2, figsize=(5.05, 2.05))
 
     # (a) answer-position attention to question vs image
     ax = axes[0]
@@ -153,19 +160,19 @@ def fig_mechanism():
     ax.plot(L, po["STI"]["a_img"], color=VERM, lw=1.2, ls=(0, (3, 2)), alpha=0.85)
     pk = int(np.argmax(po["SIT"]["a_q"]))
     ratio = po["SIT"]["a_q"][pk] / po["STI"]["a_q"][pk]
-    ax.annotate(f"{ratio:.2f}$\\times$ less question\nattention at layer {pk}",
+    ax.annotate(f"{ratio:.2f}$\\times$ less\nat layer {pk}",
                 xy=(pk, po["STI"]["a_q"][pk] + 0.004),
-                xytext=(pk + 3.5, 0.196), fontsize=8, color=INK,
+                xytext=(pk + 4.5, 0.235), fontsize=7.5, color=INK,
                 fontweight="bold", ha="left", va="top",
                 arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9,
                                 connectionstyle="arc3,rad=0.25"))
     ax.scatter([pk, pk], [po["SIT"]["a_q"][pk], po["STI"]["a_q"][pk]], s=22,
                facecolor="white", edgecolor=[BLUE, VERM], linewidth=1.4, zorder=5)
     ax.set_xlabel("layer")
-    ax.set_ylabel("attention from answer position")
+    ax.set_ylabel("attention mass")
     ax.set_ylim(0, 0.255); ax.set_xlim(-1, 36)
-    ax.set_title("(a) Question-first routes through the image",
-                 fontweight="bold", pad=6)
+    ax.set_title("(a) Question-first routes to the image",
+                 fontweight="bold", pad=5, fontsize=8)
     h = [plt.Line2D([], [], color=BLUE, lw=2.0),
          plt.Line2D([], [], color=VERM, lw=2.0),
          plt.Line2D([], [], color=INK, lw=1.2, ls=(0, (3, 2)))]
@@ -189,21 +196,19 @@ def fig_mechanism():
     sti = np.array(do["STI"]["p_corr2"]); sit = np.array(do["SIT"]["p_corr2"])
     fork = next(i for i in range(len(sti)) if abs(sti[i] - sit[i]) > 0.05)
     ax.axvspan(0, fork, color=GRID, alpha=0.45, lw=0, zorder=0)
-    ax.text(fork / 2, 94, "indistinguishable", fontsize=8, color=MUTED,
-            ha="center", va="top", style="italic")
     ax.axvline(fork, color=INK, lw=0.9, ls=(0, (2, 2)), zorder=2)
-    ax.text(fork + 0.8, 94, f"fork at\nlayer {fork}", fontsize=8.5, color=INK,
-            ha="left", va="top", fontweight="bold")
+    ax.text(fork - 1.2, 99, f"fork at\nlayer {fork}", fontsize=7.5, color=INK,
+            ha="right", va="top", fontweight="bold")
     ax.axhline(50, color=MUTED, lw=0.7, zorder=1)
-    ax.set_xlabel("layer"); ax.set_ylabel("P(correct) at answer position (%)")
+    ax.set_xlabel("layer"); ax.set_ylabel("P(correct) (%)")
     ax.set_ylim(0, 100); ax.set_xlim(-1, 36)
-    ax.set_title("(b) Identical until layer %d, then it forks" % fork,
-                 fontweight="bold", pad=6)
+    ax.set_title("(b) Identical until layer %d, then forks" % fork,
+                 fontweight="bold", pad=5, fontsize=8)
     ax.legend(frameon=False, loc="lower left", handlelength=1.5,
               borderpad=0.0, labelspacing=0.22, bbox_to_anchor=(0.01, 0.0))
     bare(ax)
 
-    fig.tight_layout(w_pad=2.2)
+    fig.tight_layout(w_pad=2.8)
     out = os.path.join(FIGS, "fig_mechanism.pdf")
     fig.savefig(out); plt.close(fig)
     print(f"[fig] {out}  fork L{fork}, peak L{pk} ratio {ratio:.3f}")
@@ -216,7 +221,7 @@ def fig_knockout():
     conds = [("ko_question", "sever\nquestion path"),
              ("ko_image", "sever\nimage path"),
              ("ko_random", "sever random\nspan (control)")]
-    fig, ax = plt.subplots(figsize=(3.3, 2.32))
+    fig, ax = plt.subplots(figsize=(2.78, 2.15))
     w = 0.34
     x = np.arange(len(conds))
     for i, (tag, lab, c) in enumerate([("STI", "question-first", VERM),
@@ -249,14 +254,14 @@ def fig_pareto():
     """Cost versus accuracy: the cheapest echo matches the dearest."""
     tc = json.load(open(os.path.join(REPO, "token_cost_results.json")))
     dv = tc["delta_vs_STI"]
-    spec = [("STI", None, "question-first", VERM, "X", 62, (8, 0), "left"),
-            ("SIT", None, "question-last", MUTED, "s", 36, (8, 8), "left"),
+    spec = [("STI", None, "question-first", VERM, "X", 58, (7, 0), "left"),
+            ("SIT", None, "question-last", MUTED, "s", 34, (5, 10), "left"),
             ("STIT", "STIT", "question echo", ORANGE, "D", 36, (6, -10), "left"),
-            ("SITIT_echo2eighth", "SITIT_eighth", "$\\frac{1}{8}$", BLUE, "o", 50, (-9, 1), "right"),
+            ("SITIT_echo2eighth", "SITIT_eighth", "$\\frac{1}{8}$", BLUE, "o", 46, (0, 10), "center"),
             ("SITIT_echo2quarter", "SITIT_quarter", "$\\frac{1}{4}$", BLUE, "o", 40, (0, 10), "center"),
             ("SITIT_echo2half", "SITIT_half", "$\\frac{1}{2}$", BLUE, "o", 40, (0, 10), "center"),
             ("SITIT", "SITIT_full", "full", BLUE, "o", 40, (0, 10), "center")]
-    fig, ax = plt.subplots(figsize=(3.02, 2.28))
+    fig, ax = plt.subplots(figsize=(2.52, 2.05))
     pts = []
     for tag, key, lab, c, mk, s, (ox, oy), ha in spec:
         m = nb_meta(tag)
@@ -269,8 +274,8 @@ def fig_pareto():
         ax.scatter(cost, acc, s=s, marker=mk, color=c, zorder=5,
                    edgecolor="white", linewidth=0.9)
         ax.annotate(lab, xy=(cost, acc), xytext=(ox, oy),
-                    textcoords="offset points", fontsize=8, color=INK, ha=ha,
-                    va="center")
+                    textcoords="offset points", fontsize=6.6, color=INK,
+                    ha=ha, va="center")
     echo = sorted([p for p in pts if p[2].startswith("SITIT")])
     ax.plot([p[0] for p in echo], [p[1] for p in echo], color=BLUE, lw=1.2,
             alpha=0.45, zorder=3)
@@ -280,9 +285,9 @@ def fig_pareto():
     ax.set_xticks([0, 100, 1000, 3000])
     ax.set_xticklabels(["0", "100", "1k", "3k"])
     ax.set_xlabel("extra tokens per query")
-    ax.set_ylabel("NaturalBench pair acc. (%)")
+    ax.set_ylabel("pair accuracy (%)")
     ax.set_title("image echo: cheapest matches\ndearest at 3% of the cost",
-                 fontweight="bold", pad=6)
+                 fontweight="bold", pad=5, fontsize=7.6)
     ax.set_xlim(-6, 14000); ax.set_ylim(74.2, 82.6)
     bare(ax)
     fig.tight_layout()

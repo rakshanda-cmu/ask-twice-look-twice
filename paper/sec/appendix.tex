@@ -99,7 +99,8 @@ benchmarks and absent for Gemma-3-27B. \sitit{} versus \sit{} is significant on
 Winoground for both models.}
 \label{tab:significance}
 \begin{center}
-\small
+\scriptsize
+\setlength{\tabcolsep}{3pt}
 \begin{tabular}{lllrrrl}
 \toprule
 Benchmark & Model & Comparison & acc A & acc B & $\Delta$ (95\% CI) & McNemar $p$ \\
@@ -153,13 +154,24 @@ Ordering & probe acc & $\max a_q$ (layer) & $\max a_{img}$ (layer) & $a_q{:}a_{i
 \end{center}
 \end{table}
 
-$P(\text{correct})$ over the $\{$Yes, No$\}$ decision, layers 26 to 35, on the
-$300$-pair disagreement set:
-\sti{} $0.480, 0.456, 0.440, 0.449, 0.495, 0.429, 0.398, 0.222, 0.099, 0.152$;
-\sit{} $0.593, 0.665, 0.680, 0.663, 0.529, 0.691, 0.728, 0.824, 0.875, 0.851$;
-\sitit{} $0.624, 0.691, 0.710, 0.704, 0.546, 0.704, 0.722, 0.827, 0.819, 0.827$;
-\stit{} $0.526, 0.513, 0.523, 0.521, 0.500, 0.532, 0.533, 0.547, 0.553, 0.570$.
-Both orderings sit at $\approx 0.50$ through layer 25.
+$P(\text{correct})$ over the $\{$Yes, No$\}$ decision on the $300$-pair
+disagreement set. All four orderings sit at $\approx 0.50$ through layer 25, so
+only layers 26 to 35 are shown.
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Layer & 26 & 27 & 28 & 29 & 30 & 31 & 32 & 33 & 34 & 35 \\
+\midrule
+\sti{}   & 0.480 & 0.456 & 0.440 & 0.449 & 0.495 & 0.429 & 0.398 & 0.222 & 0.099 & 0.152 \\
+\sit{}   & 0.593 & 0.665 & 0.680 & 0.663 & 0.529 & 0.691 & 0.728 & 0.824 & 0.875 & 0.851 \\
+\sitit{} & 0.624 & 0.691 & 0.710 & 0.704 & 0.546 & 0.704 & 0.722 & 0.827 & 0.819 & 0.827 \\
+\stit{}  & 0.526 & 0.513 & 0.523 & 0.521 & 0.500 & 0.532 & 0.533 & 0.547 & 0.553 & 0.570 \\
+\bottomrule
+\end{tabular}
+\end{center}
 
 \section{Per-patch cosine to an image-only forward pass}
 \label{app:cosine}
