@@ -8,8 +8,13 @@ directory is excluded from the release so the build never stages itself.
 The source tree is read-only here: every file is copied into STAGE and rewritten
 there. Nothing outside this directory is modified.
 
-Shipped: Python sources, requirements.txt, the detection-prompt reference, a
-freshly written anonymous README, and a .gitignore.
+Shipped into STAGE: Python sources, requirements.txt, the detection-prompt
+reference, a freshly written anonymous README, and a .gitignore.
+
+Shipped next to STAGE, not inside it: the anonymized prior workshop paper this
+submission extends, copied verbatim to OUT as prior_workshop_paper.pdf. It sits
+at the root of the submission zip rather than inside the code tree so a reviewer
+checking the dual-submission statement finds it without unpacking code/.
 
 Not shipped: all result and data files (per-run JSONs, figure-search dumps,
 contact sheets, logs), the project page under website/ (author names and
@@ -43,6 +48,13 @@ DROP_DIRS = (SELF, "website/", "paper/", ".claude/")
 KEEP_EXT = {".py"}
 # Named exceptions: install manifest and the detection-prompt reference.
 KEEP_FILES = {"requirements.txt", "detpo_map/PROMPTS.md"}
+# The prior workshop paper, copied byte for byte to OUT rather than into STAGE.
+# Its source is under paper/, which DROP_DIRS excludes, so it is handled on its
+# own below and never passes through the text-scrubbing path: it is already
+# anonymous (no author block, no institution, no acknowledgements, no venue and
+# no self-citation), and rewriting bytes inside a PDF would corrupt it.
+WORKSHOP_PDF_SRC = "paper/Anonymous_Workshop_Paper.pdf"
+WORKSHOP_PDF_OUT = "prior_workshop_paper.pdf"
 
 PATH_SUBS = [
     # Agent scratch directories, which also carry session ids.
@@ -170,6 +182,14 @@ def main():
         copied += 1
         scrubbed += new != text
 
+    src_pdf = os.path.join(SRC, WORKSHOP_PDF_SRC)
+    if not os.path.exists(src_pdf):
+        raise SystemExit(
+            f"missing {WORKSHOP_PDF_SRC}: the submission cites the prior "
+            "workshop paper as supplementary material, so the release must not "
+            "be built without it")
+    shutil.copy2(src_pdf, os.path.join(OUT, WORKSHOP_PDF_OUT))
+
     with open(os.path.join(STAGE, ".gitignore"), "w") as fh:
         fh.write(GITIGNORE)
 
@@ -182,6 +202,7 @@ def main():
         fh.write(EXTRA_REQUIREMENTS)
 
     print(f"staged {copied} source files, rewrote paths in {scrubbed}")
+    print(f"copied {WORKSHOP_PDF_SRC} to {WORKSHOP_PDF_OUT} for the zip root")
 
 
 if __name__ == "__main__":

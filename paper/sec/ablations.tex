@@ -126,26 +126,23 @@ moving or echoing the image recovers the rest.
 \caption{A prompt optimizer improves only the ordering our diagnosis says has
 headroom, and never catches the ordering it is competing with. GEPA run under
 both orderings with the same budget, Qwen3-VL-8B, scored on held-out evaluation
-sets. ``Gap closed'' is the fraction of the \sti{}-to-\sit{} accuracy gap the
-optimized prompt recovers, and is undefined for the \sit{} rows, shown as n/a.}
+sets of size $N$. Each ordering gives the seed prompt's accuracy and the
+optimized prompt's, with the change in parentheses. ``Gap closed'' is the
+fraction of the \sti{}-to-\sit{} accuracy gap the optimized \sti{} prompt
+recovers.}
 \label{tab:gepa}
 \begin{center}
 \small
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{llrrrrr}
+\begin{tabular}{lrrlrrl}
 \toprule
- & & & \multicolumn{2}{c}{Accuracy} & & Gap \\
-\cmidrule(lr){4-5}
-Benchmark & Order & $N$ & Seed & GEPA & $\Delta$ & closed \\
+ & & \multicolumn{3}{c}{Question-first (\sti{})} & \multicolumn{2}{c}{Question-last (\sit{})} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-7}
+Benchmark & $N$ & Seed & GEPA & Gap closed & Seed & GEPA \\
 \midrule
-\multirow{2}{*}{POPE}         & \sti{} & 8{,}800 & 86.41 & 87.25 & $+0.84$ & $45\%$ \\
-                              & \sit{} & 8{,}800 & 88.27 & 88.27 & $+0.00$ & n/a \\
-\midrule
-\multirow{2}{*}{VQAv2}        & \sti{} & 10{,}000 & 86.11 & 88.13 & $+2.02$ & $83\%$ \\
-                              & \sit{} & 10{,}000 & 88.55 & 88.55 & $+0.00$ & n/a \\
-\midrule
-\multirow{2}{*}{NaturalBench} & \sti{} & 7{,}000 & 74.74 & 75.79 & $+1.04$ & $26\%$ \\
-                              & \sit{} & 7{,}000 & 78.80 & 78.39 & $-0.41$ & n/a \\
+POPE         &  8{,}800 & 86.41 & 87.25 ($+0.84$) & $45\%$ & 88.27 & 88.27 ($+0.00$) \\
+VQAv2        & 10{,}000 & 86.11 & 88.13 ($+2.02$) & $83\%$ & 88.55 & 88.55 ($+0.00$) \\
+NaturalBench &  7{,}000 & 74.74 & 75.79 ($+1.04$) & $26\%$ & 78.80 & 78.39 ($-0.41$) \\
 \bottomrule
 \end{tabular}
 \end{center}

@@ -3,12 +3,20 @@
 Supplementary code for an anonymous ICLR submission. Paper under double-blind
 review.
 
-This release is **code only**. It contains every script that produced the
+This directory is **code only**. It contains every script that produced the
 paper's tables, figures and mechanistic analyses, and nothing else: no result
 files, no model weights, no datasets, no figure assets. Each script writes its
 own result JSON on the first run, and the interactive browser reads those files
 once they exist, so the numbers in the paper are reproduced by running the code
 rather than by reading a shipped artifact.
+
+## Prior work included with this submission
+
+`prior_workshop_paper.pdf`, at the root of this archive next to `code/`, is the
+anonymized workshop paper the submission extends and cites as prior work by the
+same authors. The submission's related-work section states exactly which
+material is recapped from it and which results are new. It is included so that
+overlap can be checked directly rather than taken on trust.
 
 Absolute paths have been replaced by repository-relative placeholders
 (`datasets/`, `hf_cache/`, `third_party/`). Point them at your own copies, or

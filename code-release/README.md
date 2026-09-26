@@ -1,15 +1,16 @@
 # code-release
 
-Builds the anonymous, code-only supplementary package for the ICLR submission.
-Nothing here is shipped to reviewers except `supplementary/`, which is what the
-zip contains.
+Builds the anonymous supplementary package for the ICLR submission. Two things
+reach reviewers: `supplementary/`, which becomes `code/` in the zip, and
+`prior_workshop_paper.pdf`, which sits at the zip root beside it.
 
 | Path | Role |
 |------|------|
-| `build_release.py` | stages `supplementary/` from the repository above, read-only |
-| `README_release.md` | the anonymous README, copied into the release as `README.md` |
-| `supplementary/` | the staged release tree, 112 files, regenerated on every build |
-| `iclr_supplementary_code.zip` | the submission artifact, `supplementary/` under a top-level `code/` |
+| `build_release.py` | stages `supplementary/` from the repository above, read-only, and copies the prior paper |
+| `README_release.md` | the anonymous README, copied into the release as `code/README.md` |
+| `supplementary/` | the staged release tree, regenerated on every build |
+| `prior_workshop_paper.pdf` | the anonymized prior workshop paper, copied verbatim, regenerated on every build |
+| `iclr_supplementary_code.zip` | the submission artifact: `code/` plus the prior paper at the root |
 
 ## Rebuild
 
@@ -17,7 +18,8 @@ zip contains.
 python code-release/build_release.py
 
 rm -rf /tmp/rel && mkdir -p /tmp/rel && cp -r code-release/supplementary /tmp/rel/code
-(cd /tmp/rel && zip -qr9 iclr_supplementary_code.zip code -x '*.pyc')
+cp code-release/prior_workshop_paper.pdf /tmp/rel/
+(cd /tmp/rel && zip -qr9 iclr_supplementary_code.zip code prior_workshop_paper.pdf -x '*.pyc')
 mv /tmp/rel/iclr_supplementary_code.zip code-release/
 ```
 
@@ -28,13 +30,16 @@ excluded from its own output, so the release never contains a copy of itself.
 ## Scope
 
 Shipped: Python sources, `requirements.txt`, `detpo_map/PROMPTS.md`, the
-anonymous README, a `.gitignore`.
+anonymous README, a `.gitignore`, and the anonymized prior workshop paper. The
+paper is copied byte for byte and never passes through the scrubbing rules,
+which would corrupt a PDF; it is already anonymous, and the check below confirms
+that on every build.
 
 Not shipped: every result file (the repository's tracked results run to about
 2 GB, and the nine VQAv2-val dumps are 97 to 151 MB each), `website/` (author
-names and institution links), `paper/` (LaTeX and PDF, carrying the prior
-workshop title, which is public and searchable), and `fig3_pool.txt` (a dump of
-absolute local image paths).
+names and institution links), `paper/` except the prior workshop paper (the LaTeX and the
+submission PDF carry the prior workshop title, which is public and searchable),
+and `fig3_pool.txt` (a dump of absolute local image paths).
 
 `refcoco_gaze/` ships although the paper never uses it, because
 `logit_lens_app.py` imports `refcoco_gaze.gaze_browser` at module level and the
@@ -66,3 +71,18 @@ python -m compileall -q . && find . -name __pycache__ -type d -exec rm -rf {} +
 
 A clean run prints nothing. The scan must also pass on the unpacked zip, not
 only on the staged tree.
+
+`grep -I` skips the prior paper because it is binary, so scan its text
+separately. This also catches a PDF that carries an author name only in its
+metadata, which `pdftotext` does not print:
+
+```bash
+pdfinfo code-release/prior_workshop_paper.pdf | grep -E '^(Author|Title|Subject|Keywords)'
+pdftotext code-release/prior_workshop_paper.pdf - | grep -inE \
+  'rakshanda|gautam|ggare|carnegie|cmu|acknowledg|funding|eccv|workshop|2607\.15565'
+```
+
+The `pdfinfo` fields must be empty and the `pdftotext` scan must print nothing.
+A hit on `eccv` or `workshop` means the venue leaked; a hit on `2607.15565`
+means the paper cites its own public arXiv id, either of which de-anonymizes the
+submission through its own supplementary material.
