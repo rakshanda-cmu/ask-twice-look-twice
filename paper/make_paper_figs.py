@@ -261,7 +261,7 @@ def fig_pareto():
             ("SITIT_echo2quarter", "SITIT_quarter", "$\\frac{1}{4}$", BLUE, "o", 40, (0, 10), "center"),
             ("SITIT_echo2half", "SITIT_half", "$\\frac{1}{2}$", BLUE, "o", 40, (0, 10), "center"),
             ("SITIT", "SITIT_full", "full", BLUE, "o", 40, (0, 10), "center")]
-    fig, ax = plt.subplots(figsize=(2.52, 2.05))
+    fig, ax = plt.subplots(figsize=(2.52, 1.66))
     pts = []
     for tag, key, lab, c, mk, s, (ox, oy), ha in spec:
         m = nb_meta(tag)
