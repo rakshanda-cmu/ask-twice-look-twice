@@ -66,49 +66,43 @@ TGIF-QA       &    25{,}751 & \best{36.32} & 34.59 & 33.62 & 35.26 & 35.50 & $-1
 \end{table}
 
 \begin{finding}
-\textbf{Finding.} The paradox is a property of the layout, not of yes/no visual
-question answering. Across 13 benchmarks never previously tested, question-first
-costs $7.01$ points on average and hurts on 12 of 13, with a worst case of
-$18.01$ points on CV-Bench, while prompt content is held identical.
+\textbf{Finding.} The paradox belongs to the layout, not to yes/no visual
+question answering: across 13 previously untested benchmarks, question-first
+costs $7.01$ points on average and hurts on 12 of 13, worst case $18.01$ on
+CV-Bench, with prompt content held identical.
 \end{finding}
 
 \subsection{RF20-VL: the sign flips when the output is boxes}
 \label{sec:generality-rf20}
 
-Every benchmark so far asks for a short answer that the model reads out at a
-single position. RF20-VL asks for something else: given all class names for an
-image, emit bounding boxes, scored by mAP over 20 detection datasets and
-$3{,}970$ images. It is the one task here whose output is localization rather
-than a read-out, which makes it the sharpest test of how far the paradox
-extends.
+Every benchmark so far asks for a short answer read out at a single position.
+RF20-VL asks for something else: given all class names for an image, emit
+bounding boxes, scored by mAP over 20 detection datasets and $3{,}970$ images.
+Its output is localization rather than a read-out, which makes it the sharpest
+test of how far the paradox extends.
 
-It does not extend. The sign reverses (Table~\ref{tab:rf20map}). For
+It does not extend; the sign reverses (Table~\ref{tab:rf20map}). For
 Qwen3-VL-8B, question-first is $2.80$ mAP \emph{better} than question-last
-($7.94$ vs $5.14$), and better on 17 of 20 datasets. Gemma-4-31B agrees in the
-same direction at a smaller size ($+0.69$ mAP, better on 13 of 20). We take this
-as a scope limit on the paradox rather than a contradiction: when the answer is
-a set of boxes rather than a token the decoder must read out, stranding the
-question before the image costs nothing, and the extra conditioning it gives
-every image patch appears to help.
+($7.94$ vs $5.14$) and wins on 17 of 20 datasets, and Gemma-4-31B agrees at a
+smaller size ($+0.69$ mAP, 13 of 20). We read this as a scope limit rather than
+a contradiction: when the answer is a set of boxes rather than a token the
+decoder must read out, stranding the question before the image costs nothing,
+and the extra conditioning it gives every patch appears to help. Echoing
+survives the reversal: question echoing is the best ordering for both models
+($+3.34$ mAP for Qwen3-VL-8B, $+0.91$ for Gemma-4-31B), so the recommendation we
+make from the yes/no benchmarks stands here even though its justification does
+not.
 
-Echoing survives the reversal. Question echoing is the best ordering for both
-models ($+3.34$ mAP for Qwen3-VL-8B, $+0.91$ for Gemma-4-31B), so the
-recommendation we make from the yes/no benchmarks does not have to be withdrawn
-here even though its justification does.
-
-One control separates this task from the others. On the yes/no benchmarks,
-reversing the echoed image copy was free (NaturalBench $p = 1.00$). On detection
-it costs $1.89$ mAP and helps on only 1 of 20 datasets. Together with the
-resolution sweep, where RF20 was the one benchmark that degraded monotonically
-as the echo shrank (Section~\ref{sec:ablation-resolution}), this says the echo's
-content only matters when the task needs evidence localized in the image.
-
-We exclude Gemma-3-27B from this table: it scores $0.06$ mAP under every
-ordering, emitting many boxes that almost never land, so ordering differences
-there are not interpretable. The yes/no presence variant of RF20, $24{,}449$
-questions over the same images, is reported in Appendix~\ref{app:rf20presence};
-that variant behaves like the other yes/no benchmarks and question-first hurts
-it on 7 of 7 categories.
+One control separates this task from the others. Reversing the echoed copy was
+free on the yes/no benchmarks (NaturalBench $p = 1.00$); on detection it costs
+$1.89$ mAP and helps on 1 of 20 datasets. With the resolution sweep, where RF20
+alone degraded at every step as the echo shrank
+(Section~\ref{sec:ablation-resolution}), this says the echo's content matters
+only when the task needs evidence localized in the image. We exclude
+Gemma-3-27B: it scores $0.06$ mAP under every ordering, so differences there are
+not interpretable. RF20's yes/no presence variant ($24{,}449$ questions over the
+same images, Appendix~\ref{app:rf20presence}) behaves like the other yes/no
+benchmarks, with question-first hurting on 7 of 7 categories.
 
 \begin{table}[t]
 \caption{Ask the model for boxes instead of a word and the paradox inverts:
@@ -141,32 +135,30 @@ Gemma-4-31B & mAP & 13.52 & 14.21 & \best{14.43} & 14.36 & n/a \\
 
 \begin{finding}
 \textbf{Finding.} The paradox is a property of read-out, not of prompt order as
-such. On RF20-VL detection, where the output is boxes rather than an answer
-token, question-first is $2.80$ mAP \emph{better} than question-last and wins on
-17 of 20 datasets. Echoing the question remains the best ordering ($+3.34$
-mAP), but the reversed echo, free on yes/no tasks, now costs $1.89$ mAP.
+such: on RF20-VL detection, where the output is boxes, question-first is $2.80$
+mAP \emph{better} than question-last and wins on 17 of 20 datasets. Question
+echoing stays best ($+3.34$ mAP), but the reversed echo, free on yes/no tasks,
+now costs $1.89$ mAP.
 \end{finding}
 
 \subsection{Where the repair stops: video}
 \label{sec:generality-video}
 
 The four video QA datasets draw a boundary the original benchmarks could not.
-The paradox itself is if anything more reliable there: question-first hurts on 4
-of 4, by $5.84$ points on average. The repair, however, splits by which thing is
-echoed. Question echoing still recovers $3.31$ of those points. Image echoing
-does not: it beats question-last on only 1 of 4 video datasets and loses $0.39$
-points on average, against $+1.88$ on the nine image benchmarks.
+The paradox is if anything more reliable there, hurting on 4 of 4 by $5.84$
+points on average, but the repair splits by which thing is echoed. Question
+echoing still recovers $3.31$ of those points. Image echoing does not: it beats
+question-last on 1 of 4 video datasets and loses $0.39$ points on average,
+against $+1.88$ on the nine image benchmarks.
 
-The reason is mechanical rather than mysterious. For video the ``image'' is a
-frame sequence, so an image echo doubles a visual context that is already long,
-and the read-out surface it adds is buried behind far more tokens than in the
-single-image case. The practical rule is to echo the question on video and the
-image on stills.
+The reason is mechanical. For video the ``image'' is a frame sequence, so an
+image echo doubles a visual context that is already long, and the read-out
+surface it adds sits behind far more tokens than in the single-image case. Echo
+the question on video, the image on stills.
 
 \begin{finding}
-\textbf{Finding.} The paradox and its repair have different domains. On video,
-question-first still hurts on 4 of 4 datasets ($-5.84$), but image echoing helps
-on only 1 of 4 ($-0.39$ on average, against $+1.88$ on nine image benchmarks),
-while question echoing still recovers $+3.31$. Echo the question on video, the
-image on stills.
+\textbf{Finding.} The paradox and its repair have different domains: on video
+question-first still hurts on 4 of 4 ($-5.84$), but image echoing helps on 1 of
+4 ($-0.39$ on average against $+1.88$ on stills) while question echoing still
+recovers $+3.31$. Echo the question on video, the image on stills.
 \end{finding}

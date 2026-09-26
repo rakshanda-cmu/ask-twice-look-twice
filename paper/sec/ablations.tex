@@ -16,34 +16,27 @@ full resolution, and sweep the echo scale over $1$, $\tfrac{1}{2}$,
 $\tfrac{1}{4}$ and $\tfrac{1}{8}$ (Table~\ref{tab:resolution}). On three of four
 benchmarks a quarter-resolution echo matches or beats a full-resolution one:
 POPE moves by $-0.05$ F1, Winoground by $+0.75$ group accuracy, and NaturalBench
-by $+0.21$ pair accuracy. Pushing to an eighth costs POPE a further $0.17$ and
-leaves Winoground at its best value of the sweep.
+by $+0.21$ pair accuracy. An eighth sharpens the point. On NaturalBench, an echo
+carrying $\tfrac{1}{64}$ of the original pixels scores $37.32$ group accuracy
+against the full echo's $37.37$, a difference of $0.001$ with $p = 1.00$, while
+still beating question-last by $+0.023$ ($p = 0.005$). The echo can be destroyed
+as an image and keep its entire benefit.
 
-Pushing to an eighth makes the point sharper. On NaturalBench, an echo carrying
-$\tfrac{1}{64}$ of the original pixels scores $37.32$ group accuracy against the
-full echo's $37.37$, a difference of $0.001$ with $p = 1.00$, while still beating
-question-last by $+0.023$ ($p = 0.005$). The echo can be destroyed as an image
-and keep its entire benefit.
-
-RF20 is the exception, and it is the informative one. Its accuracy falls at
-every step of the sweep ($-0.50$ F1 at half, $-1.76$ at quarter, $-1.88$ at an
-eighth).
-RF20 asks whether a specific, often small object class is present in a
-detection-style image, so the second look is doing real perceptual work there
-rather than only re-anchoring. The split between RF20 and the other three says
-the echo has two separable jobs, and that only one of them needs pixels.
+RF20 is the exception, and the informative one: its accuracy falls at every step
+($-0.50$ F1 at half, $-1.76$ at quarter, $-1.88$ at an eighth). It asks whether a
+specific, often small object class is present, so the second look does real
+perceptual work there rather than only re-anchoring. The split says the echo has
+two separable jobs and that only one of them needs pixels.
 
 \begin{figure}[t]
 \begin{minipage}[t]{0.50\textwidth}
 \vspace{0pt}
 \centering
 \captionof{table}{The echoed image can be shrunk until it is barely an image
-without costing accuracy, except where the evidence is small. Only the
-\emph{second} image occurrence is downscaled; the first stays at full
-resolution. Bold marks the best echo scale in each row. Metrics are F1 for POPE
-and the RF20 presence task, group accuracy for Winoground and pair accuracy for
-NaturalBench. RF20 is the one benchmark that degrades monotonically at every
-step, $80.56 \to 80.06 \to 78.80 \to 78.68$.}
+without costing accuracy, except on RF20, where the evidence is small and
+accuracy falls at every step. Only the \emph{second} occurrence is downscaled.
+Bold marks the best scale per row. Metrics: F1 for POPE and RF20, group accuracy
+for Winoground, pair accuracy for NaturalBench.}
 \label{tab:resolution}
 \vspace{2pt}
 \small
@@ -64,48 +57,43 @@ RF20 (presence) & \best{80.56} & 80.06 & 78.80 & 78.68 \\
 \centering
 \includegraphics[width=\linewidth]{figs/fig_pareto.pdf}
 \caption{Accuracy is flat across a $31\times$ range of echo cost, so the
-cheapest echo is the one to ship. Cost against accuracy on NaturalBench; the
-$x$ axis is extra tokens per query relative to question-first, on a symmetric
-log scale so that $0$ can be shown. The dashed line is the question-last
-baseline, which every image echo clears. The $\tfrac{1}{8}$-resolution echo
-($+107$ tokens) is statistically indistinguishable from the full-resolution one
-($+3{,}352$).}
+cheapest echo is the one to ship. NaturalBench; $x$ is extra tokens per query
+against question-first, symmetric log so $0$ shows. Every image echo clears the
+question-last baseline (dashed), and the $\tfrac{1}{8}$ echo ($+107$ tokens) is
+indistinguishable from the full one ($+3{,}352$).}
 \label{fig:pareto}
 \end{minipage}
 \end{figure}
 
 \begin{finding}
-\textbf{Finding.} The echoed image does not need to be legible. An
-eighth-resolution echo, carrying $\tfrac{1}{64}$ of the pixels, is statistically
-indistinguishable from a full-resolution one on NaturalBench ($37.32$ vs
-$37.37$ group accuracy, $p = 1.00$) while still beating question-last
-($p = 0.005$). Only RF20, whose targets are small, needs the pixels
-($-1.76$ F1 at quarter resolution).
+\textbf{Finding.} The echoed image does not need to be legible: an
+eighth-resolution echo carrying $\tfrac{1}{64}$ of the pixels is statistically
+indistinguishable from a full one on NaturalBench ($37.32$ vs $37.37$,
+$p = 1.00$) while still beating question-last ($p = 0.005$). Only RF20, whose
+targets are small, needs the pixels ($-1.76$ F1 at quarter).
 \end{finding}
 
 \subsection{What echoing costs}
 \label{sec:ablation-cost}
 
 Prompt-level interventions are usually reported without their bill. We count
-exact token counts for each ordering with the Qwen3-VL-8B processor over 20
-images spanning RF20's constituent datasets, separating vision from text tokens
-(Table~\ref{tab:cost} in Appendix~\ref{app:cost}).
+exact tokens for each ordering with the Qwen3-VL-8B processor over 20 images
+spanning RF20's constituent datasets, separating vision from text tokens
+(Table~\ref{tab:cost}, Appendix~\ref{app:cost}).
 
 The two echo mechanisms are three orders of magnitude apart. Repeating the
-question costs $13$ tokens. Repeating the image at full resolution costs
-$3{,}352$, which roughly doubles the prompt. Downscaling the echo collapses that
-cost quickly, because vision-token count falls with area: a half-resolution echo
-costs $875$ added tokens, a quarter-resolution echo $252$, and an
-eighth-resolution echo $107$. Figure~\ref{fig:pareto} puts the two axes
-together. The accuracy curve is flat across a $31\times$ range of echo cost, so
+question costs $13$ tokens; repeating the image at full resolution costs
+$3{,}352$, roughly doubling the prompt. Downscaling collapses that cost quickly
+because vision-token count falls with area: $875$ added tokens at half, $252$ at
+a quarter, $107$ at an eighth. Figure~\ref{fig:pareto} puts the two axes
+together, and the accuracy curve is flat across a $31\times$ range of cost, so
 the operating point to ship is the cheapest one.
-
 
 \begin{finding}
 \textbf{Finding.} Echo cost is a tunable knob, not a fixed doubling of the
-prompt. A full-resolution image echo adds $3{,}352$ tokens per query, but a
-quarter-resolution echo adds $252$ ($7.5\%$) and an eighth-resolution echo adds
-$107$ ($3.2\%$) for indistinguishable accuracy, while question echoing adds $13$.
+prompt: a full-resolution echo adds $3{,}352$ tokens per query, a quarter adds
+$252$ ($7.5\%$) and an eighth adds $107$ ($3.2\%$) for indistinguishable
+accuracy, while question echoing adds $13$.
 \end{finding}
 
 \subsection{Prompt optimization finds part of the fix, and only where the
@@ -115,28 +103,24 @@ mechanism says it should}
 
 A reviewer will reasonably ask whether careful prompt engineering would do the
 same work as echoing, making the ordering story incidental. We test this with
-GEPA \citep{gepa2025}, a reflective prompt optimizer, and use it as a prediction
-test rather than as a baseline to beat.
-
-The mechanism predicts an asymmetry. GEPA may rewrite the system message text
-but cannot move the image, so it cannot repair a read-out failure caused by
-token order. It should find recoverable headroom under \sti{}, where read-out is
-broken, and little or nothing under \sit{}, where it is not. That is what
-happens (Table~\ref{tab:gepa}, Appendix~\ref{app:gepa}). Under \sti{}, GEPA
+GEPA \citep{gepa2025}, a reflective prompt optimizer, used as a prediction test
+rather than a baseline to beat. The mechanism predicts an asymmetry: GEPA may
+rewrite the system message but cannot move the image, so it should find
+recoverable headroom under \sti{}, where read-out is broken, and little or
+nothing under \sit{}, where it is not. That is what happens (Table~\ref{tab:gepa}, Appendix~\ref{app:gepa}). Under \sti{}, GEPA
 improves all three benchmarks: POPE $86.41 \to 87.25$, VQAv2 $86.11 \to 88.13$,
 NaturalBench $74.74 \to 75.79$. Under \sit{}, the same optimizer with the same
 budget returns the seed prompt unchanged on POPE and VQAv2, both exact ties, and
 regresses NaturalBench by $0.41$ by overfitting its validation split.
 
-Two further numbers matter. First, \sit{}'s baseline is higher than \sti{}'s on
-every benchmark ($88.27$ vs $86.41$, $88.55$ vs $86.11$, $78.80$ vs $74.74$),
-so the asymmetry is a headroom effect and not a quirk of the optimizer. Second,
-GEPA's best \sti{} prompt never reaches the plain \sit{} baseline: it closes
-$26\%$ to $83\%$ of the \sti{}-to-\sit{} gap and stops there. Its optimized
-prompts add $26$, $32$ and $71$ tokens per query, less than even an
-eighth-resolution echo, but its search costs $157{,}725$ to $982{,}343$ tokens
-once plus a separate reflection model. Rewording the prompt recovers part of
-what bad ordering costs. Moving or echoing the image recovers the rest.
+Two further numbers matter. \sit{}'s baseline is higher than \sti{}'s on every
+benchmark ($88.27$ vs $86.41$, $88.55$ vs $86.11$, $78.80$ vs $74.74$), so the
+asymmetry is headroom rather than a quirk of the optimizer; and GEPA's best
+\sti{} prompt closes only $26\%$ to $83\%$ of the gap, never reaching the plain
+\sit{} baseline. Its prompts add $26$ to $71$ tokens per query, less than an
+eighth-resolution echo, but its search costs up to $982{,}343$ tokens once plus
+a separate reflection model. Rewording recovers part of what bad ordering costs;
+moving or echoing the image recovers the rest.
 
 \begin{table}[t]
 \caption{A prompt optimizer improves only the ordering our diagnosis says has
@@ -168,10 +152,9 @@ Benchmark & Order & $N$ & Seed & GEPA & $\Delta$ & closed \\
 \end{table}
 
 \begin{finding}
-\textbf{Finding.} Prompt optimization behaves exactly as the read-out diagnosis
+\textbf{Finding.} Prompt optimization behaves as the read-out diagnosis
 predicts: GEPA gains under \sti{} (POPE $+0.84$, VQAv2 $+2.02$, NaturalBench
-$+1.04$) and finds nothing under \sit{} (two exact ties and $-0.41$), because
-\sit{} has less headroom to recover. It closes $26\%$ to $83\%$ of the
-\sti{}-to-\sit{} gap and never reaches the \sit{} baseline, so rewording is not
-a substitute for fixing token order.
+$+1.04$) and finds nothing under \sit{} (two exact ties and $-0.41$). It closes
+$26\%$ to $83\%$ of the gap and never reaches the \sit{} baseline, so rewording
+is not a substitute for fixing token order.
 \end{finding}

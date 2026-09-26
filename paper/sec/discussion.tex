@@ -26,14 +26,10 @@ Qwen3-VL-8B and does not hold for either Gemma model, so the read-out account
 describes a common failure mode rather than a property of the architecture;
 image echoing still helps the Gemma models (Appendix~\ref{app:models}), but the
 mechanism we recap cannot be the reason there. The repair is also not uniformly
-right. It does not beat question-last on POPE ($88.12$ against $88.35$ F1), and
+right: it does not beat question-last on POPE ($88.12$ against $88.35$ F1), and
 on video it loses on three of four datasets, which is why we recommend question
-echoing rather than image echoing there. Question echoing alone is not reliably
-better than simply asking the question last: on NaturalBench \stit{} scores
-$35.00$ against \sit{}'s $35.05$ ($p = 1.00$), so its role is to repair
-question-first prompting, not to improve on question-last prompting. Finally,
-the knockout result depends on restricting the query side to the answer
-position; widening it does not reproduce the question-side half of the
-dissociation, and the span-size control is itself large there, so we treat the
-broader scope as uninformative rather than as contrary evidence
+echoing there. Finally, the knockout result depends on restricting the query side
+to the answer position; widening it does not reproduce the question-side half of
+the dissociation, and the span-size control is itself large there, so we treat
+the broader scope as uninformative rather than as contrary evidence
 (Appendix~\ref{app:repro}).
