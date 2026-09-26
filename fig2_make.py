@@ -187,6 +187,9 @@ def render(mm, hits, group, args):
         rend = fig.canvas.get_renderer()
         cell_px = abs(ax.transData.transform((1, 0))[0]
                       - ax.transData.transform((0, 0))[0])
+        # where the grid actually sits, for headers that describe only the grid
+        _gb = ax.get_window_extent(rend).transformed(fig.transFigure.inverted())
+        grid_xc, grid_px = 0.5 * (_gb.x0 + _gb.x1), cell_px * gw
         for r_ in range(1, gh):
             ax.axhline(r_, color="white", lw=0.35, alpha=0.35)
         for c_ in range(1, gw):
@@ -239,16 +242,34 @@ def render(mm, hits, group, args):
                 _fit(t_, 0.88)
         ax.set_xlim(0, gw); ax.set_ylim(gh, 0); ax.axis("off")
 
-        fig.text(0.5, 0.985, f"Q: \u201c{rec['question']}\u201d   "
-                 f"(ground truth: {rec['gt']})", ha="center", va="top",
-                 fontsize=8.8, fontweight="bold")
-        fig.text(0.5, 0.905,
-                 f"{len(changed)} of {gh * gw} patches change what they decode to",
-                 ha="center", va="top", fontsize=7.4, color=INKC)
-        fig.text(0.5, 0.863,
-                 f"white above: question-last \u2192 \u201c{A['SIT']}\u201d      "
-                 f"red below: question-first \u2192 \u201c{A['STI']}\u201d",
-                 ha="center", va="top", fontsize=7.0, color=INKC)
+        def _fit_header(t, lim_px, floor):
+            for _ in range(24):
+                if t.get_window_extent(rend).width <= lim_px:
+                    return
+                f_ = t.get_fontsize() * 0.94
+                if f_ < floor:
+                    return
+                t.set_fontsize(f_)
+
+        # the question titles the whole figure, so it stays centred on the
+        # figure; the two lines under it describe the grid alone, so they centre
+        # on the grid and are held inside it. Centred on the figure they ran out
+        # over the input thumbnail, and the legend is wider than the grid at full
+        # size.
+        _fit_header(fig.text(0.5, 0.985, f"Q: \u201c{rec['question']}\u201d   "
+                             f"(ground truth: {rec['gt']})", ha="center",
+                             va="top", fontsize=8.8, fontweight="bold"),
+                    fig.bbox.width * 0.98, 6.6)
+        _fit_header(fig.text(grid_xc, 0.905,
+                             f"{len(changed)} of {gh * gw} patches change what "
+                             "they decode to", ha="center", va="top",
+                             fontsize=7.4, color=INKC), grid_px, 5.4)
+        _fit_header(fig.text(grid_xc, 0.863,
+                             f"white above: question-last \u2192 "
+                             f"\u201c{A['SIT']}\u201d      red below: "
+                             f"question-first \u2192 \u201c{A['STI']}\u201d",
+                             ha="center", va="top", fontsize=7.0, color=INKC),
+                    grid_px, 5.4)
         fig.savefig(args.out + ".pdf"); fig.savefig(args.out + ".png", dpi=300)
         plt.close(fig)
         print(f"wrote {args.out}.png/.pdf  ({len(changed)} changed cells)")
