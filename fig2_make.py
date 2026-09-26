@@ -170,7 +170,7 @@ def render(mm, hits, group, args):
         fig = plt.figure(figsize=(args.figwidth, fh), dpi=400)
         # the grid carries the content, so the input thumbnail stays small
         gs = fig.add_gridspec(1, 2, width_ratios=[1.00, 2.75],
-                              left=0.004, right=0.996, top=0.845, bottom=0.01,
+                              left=0.004, right=0.996, top=0.822, bottom=0.01,
                               wspace=0.025)
         ax0 = fig.add_subplot(gs[0, 0])
         ax0.imshow(small); ax0.axis("off")
@@ -260,16 +260,18 @@ def render(mm, hits, group, args):
                              f"(ground truth: {rec['gt']})", ha="center",
                              va="top", fontsize=8.8, fontweight="bold"),
                     fig.bbox.width * 0.98, 6.6)
-        _fit_header(fig.text(grid_xc, 0.905,
+        _fit_header(fig.text(grid_xc, 0.936,
                              f"{len(changed)} of {gh * gw} patches change what "
                              "they decode to", ha="center", va="top",
                              fontsize=7.4, color=INKC), grid_px, 5.4)
-        _fit_header(fig.text(grid_xc, 0.863,
-                             f"white above: question-last \u2192 "
-                             f"\u201c{A['SIT']}\u201d      red below: "
-                             f"question-first \u2192 \u201c{A['STI']}\u201d",
-                             ha="center", va="top", fontsize=7.0, color=INKC),
-                    grid_px, 5.4)
+        # one legend line per ordering: side by side the pair is wider than the
+        # grid, and shrinking it to fit takes it below a readable size in print
+        for _y, _s in ((0.898, f"white above: question-last \u2192 "
+                               f"\u201c{A['SIT']}\u201d"),
+                       (0.866, f"red below: question-first \u2192 "
+                               f"\u201c{A['STI']}\u201d")):
+            _fit_header(fig.text(grid_xc, _y, _s, ha="center", va="top",
+                                 fontsize=7.0, color=INKC), grid_px, 5.4)
         fig.savefig(args.out + ".pdf"); fig.savefig(args.out + ".png", dpi=300)
         plt.close(fig)
         print(f"wrote {args.out}.png/.pdf  ({len(changed)} changed cells)")
