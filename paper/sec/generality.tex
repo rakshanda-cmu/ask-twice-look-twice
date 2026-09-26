@@ -25,11 +25,13 @@ extra tokens. Image echoing recovers all of it and exceeds question-last by
 $1.18$ points, winning on 9 of 13.
 
 \begin{table}[t]
-\caption{Full ordering ladder for Qwen3-VL-8B across 13 benchmarks not tested in
-prior work, video QA below the rule. Best of the four orderings in bold. The
-echo column gives \sitit{} with the second image copy at half resolution.
-Question-first hurts on 12 of 13; image echoing recovers the loss on the image
-benchmarks and does not on video.}
+\caption{The paradox is not a property of the three benchmarks it was found on:
+question-first hurts on 12 of these 13, and image echoing repays the loss on
+still images but not on video. Full ordering ladder for Qwen3-VL-8B, with the
+four video QA datasets below the rule. Bold marks the best of the four
+orderings in each row; the echo column gives \sitit{} with the second image
+copy at half resolution. The two mean rows average the $\Delta$ columns over
+the block above them.}
 \label{tab:breadth}
 \begin{center}
 \small
@@ -108,10 +110,12 @@ that variant behaves like the other yes/no benchmarks and question-first hurts
 it on 7 of 7 categories.
 
 \begin{table}[t]
-\caption{RF20-VL detection, mean over 20 datasets and $3{,}970$ images,
-multi-class prompting. Unlike every yes/no benchmark in this paper,
-question-first \emph{beats} question-last here. Question echoing is still the
-best ordering; the reversed echo, which is free on yes/no tasks, is the worst.}
+\caption{Ask the model for boxes instead of a word and the paradox inverts:
+question-first now \emph{beats} question-last, while echoing the question stays
+the best ordering. RF20-VL detection, mean over 20 datasets and $3{,}970$
+images, multi-class prompting. Bold marks the best ordering in each row;
+\sititrev{} was not run for Gemma-4-31B, shown as n/a. The reversed echo, which
+costs nothing on yes/no tasks, is the worst ordering here.}
 \label{tab:rf20map}
 \begin{center}
 \small

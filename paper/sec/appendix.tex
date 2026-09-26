@@ -13,9 +13,10 @@ a detection objective show the opposite sign, is the cleanest evidence we have
 that the paradox tracks the answer format rather than the imagery.
 
 \begin{table}[h]
-\caption{RF20 presence task, accuracy by category, Qwen3-VL-8B, $24{,}449$
-questions. Question-first hurts on 7 of 7 categories, opposite in sign to the
-detection results on the same images.}
+\caption{Asked as a yes/no question rather than as detection, the same RF20
+images give the opposite result: question-first hurts on 7 of 7 categories.
+Accuracy by category, Qwen3-VL-8B, $24{,}449$ questions. Bold marks the best
+ordering in each row. Compare Table~\ref{tab:rf20map}, where the sign flips.}
 \label{tab:rf20}
 \begin{center}
 \small
@@ -50,11 +51,13 @@ span-size control.
 \begin{center}
 \includegraphics[width=0.52\textwidth]{figs/fig_knockout.pdf}
 \end{center}
-\caption{Each ordering answers through a different path. Bars are the change in
-accuracy against the unmodified run ($57.6$ for question-first, $58.8$ for
-question-last). Severing answer-to-question hurts only question-last; severing
-answer-to-image hurts only question-first; the random span-size control moves
-both by at most $0.8$ points.}
+\caption{Each ordering answers through a different path, and cutting the other
+one costs it nothing. Bars are the change in accuracy against the unmodified
+run ($57.6$ for question-first, $58.8$ for question-last), so downward is
+damage. Severing answer-to-question hurts only question-last; severing
+answer-to-image hurts only question-first; severing a random pre-image span of
+equal length, the control for simply removing attention mass, moves both by at
+most $0.8$ points.}
 \label{fig:knockout}
 \end{figure}
 
@@ -66,9 +69,11 @@ zero.
 \label{app:models}
 
 \begin{table}[h]
-\caption{NaturalBench ladder across five models ($1{,}900$ groups). Four of five
-models lose accuracy when the question moves before the image. Missing entries
-were not run. LLaVA-1.5's question-first group accuracy is exactly zero.}
+\caption{Four of five model families lose accuracy when the question moves
+before the image, so the paradox is not one model's quirk. NaturalBench,
+$1{,}900$ groups. Bold marks the best ordering in each row; n/a marks
+combinations that were not run. LLaVA-1.5's question-first group accuracy is
+exactly zero, meaning it never gets all four items of any group right.}
 \label{tab:models-nb}
 \begin{center}
 \small
@@ -92,9 +97,11 @@ Gemma-3-27B   & pair acc.  & 73.34 & 73.21 & \best{74.64} & 74.61 & $-0.13$ \\
 \end{table}
 
 \begin{table}[h]
-\caption{Cross-model check on the four benchmarks run for all three models. The
-question-first paradox does not replicate on either Gemma model, yet image
-echoing is still the best ordering on 7 of 8 model-benchmark pairs.}
+\caption{The repair outlives the diagnosis: neither Gemma model shows the
+paradox, yet image echoing is still their best ordering on 7 of 8
+model-benchmark pairs. The four benchmarks run for all three models. Bold marks
+the best ordering in each row; the mean rows average the $\Delta$ columns above
+them.}
 \label{tab:crossmodel}
 \begin{center}
 \small
@@ -132,10 +139,12 @@ two-sided McNemar plus a paired bootstrap 95\% CI over $5{,}000$ resamples,
 seed 0. Accuracies are group accuracy.
 
 \begin{table}[h]
-\caption{Significance for consecutive rungs of the ladder and for the headline
-comparisons. \sti{} versus \sit{} is highly significant for Qwen3-VL-8B on both
-benchmarks and absent for Gemma-3-27B. \sitit{} versus \sit{} is significant on
-Winoground for both models.}
+\caption{The paradox is significant wherever it appears, and its absence in
+Gemma is also clear rather than merely underpowered. Consecutive rungs of the
+ladder plus the headline comparisons, paired on group or example index.
+$\Delta$ is B minus A with a paired bootstrap 95\% interval; $p$ is an exact
+two-sided McNemar test. \sti{} versus \sit{} is highly significant for
+Qwen3-VL-8B on both benchmarks and absent for Gemma-3-27B.}
 \label{tab:significance}
 \begin{center}
 \scriptsize
@@ -175,8 +184,10 @@ $300$ pairs. $a_q$ and $a_{img}$ are attention mass from the answer position ont
 the question and image spans, averaged over heads.
 
 \begin{table}[h]
-\caption{Read-out probe on the disagreement set. \sti{} peaks lower on the
-question and much higher on the image, and the mid-to-late band ratio inverts.}
+\caption{Question-first reads the image where question-last reads the question,
+and the ratio between the two inverts. Read-out probe on the disagreement set;
+$a_q$ and $a_{img}$ are attention mass from the answer position onto the
+question and image spans, and the layer of each peak is in brackets.}
 \label{tab:probe}
 \begin{center}
 \begin{tabular}{lrrrrr}
@@ -220,9 +231,12 @@ Qwen3-VL-8B. Mean per-patch cosine between each ordering's image-token hidden
 states and a forward pass on the image alone.
 
 \begin{table}[h]
-\caption{The question rewrites the image tokens. \ist{} is the image-only
-baseline by construction; \stit{} is identical to \sti{} because causal masking
-prevents a later question copy from affecting earlier patches.}
+\caption{The question rewrites the image tokens themselves, and a later copy of
+it provably cannot. Mean cosine between each ordering's layer-18 image tokens
+and a forward pass on the image alone, so $1.0$ means untouched. \ist{} is that
+baseline by construction; \stit{} is identical to \sti{} to five decimals
+because causal masking prevents a later question copy from reaching earlier
+patches.}
 \label{tab:cosine}
 \begin{center}
 \begin{tabular}{lrrrr}
@@ -245,11 +259,12 @@ $\cos(\sti{}, \stit{}) = 0.999992$ at $n = 7{,}600$.
 \label{app:cost}
 
 \begin{table}[h]
-\caption{Exact token cost per query, mean over 20 images spanning RF20's
-constituent datasets, Qwen3-VL-8B. $\Delta$ is against the \sti{} baseline.
-\sti{} and \sit{} contain the same tokens in a different order, so their totals
-are identical. Repeating the question is nearly free; repeating the image is not,
-but its cost falls with echo area because vision tokens scale with pixels.}
+\caption{Repeating the question is nearly free; repeating the image is not, but
+its price falls with echo area because vision tokens scale with pixels. Exact
+counts per query, mean over 20 images spanning RF20's constituent datasets,
+Qwen3-VL-8B. $\Delta$ is against the \sti{} baseline, which is why that row
+reads n/a. \sti{} and \sit{} contain the same tokens in a different order, so
+their totals are identical and only \sti{} is listed.}
 \label{tab:cost}
 \begin{center}
 \begin{tabular}{lrrrrrr}
@@ -278,9 +293,9 @@ GEPA's strict-improvement acceptance test. Training and validation examples are
 disjoint from the held-out evaluation set.
 
 \begin{table}[h]
-\caption{GEPA search budget and cost, \sti{} ordering. Training tokens are a
-one-time cost; the per-query cost is the prompt-length delta in
-Table~\ref{tab:gepa-tokens}.}
+\caption{GEPA's cost is dominated by a one-time search, not by inference.
+Search budget under the \sti{} ordering; the recurring per-query cost is the
+prompt-length delta in Table~\ref{tab:gepa-tokens}.}
 \label{tab:gepa-cost}
 \begin{center}
 \begin{tabular}{lrrrrr}
@@ -296,9 +311,10 @@ NaturalBench & 250 & 120 & 1{,}540 & 982{,}343 & 528.7 \\
 \end{table}
 
 \begin{table}[h]
-\caption{Prompt-length cost of GEPA's optimized system messages, in tokens per
-query. Under \sit{} on POPE and VQAv2 the optimizer returned the seed prompt, so
-the delta is zero.}
+\caption{The optimized prompts are cheap to run, and under question-last the
+optimizer had nothing to add. Prompt length of GEPA's system messages in tokens
+per query. A zero delta means the optimizer returned the seed prompt unchanged,
+which is what happened under \sit{} on POPE and VQAv2.}
 \label{tab:gepa-tokens}
 \begin{center}
 \begin{tabular}{llrrr}

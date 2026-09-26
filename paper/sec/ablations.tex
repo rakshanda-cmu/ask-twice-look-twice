@@ -35,10 +35,13 @@ the echo has two separable jobs, and that only one of them needs pixels.
 \begin{minipage}[t]{0.50\textwidth}
 \vspace{0pt}
 \centering
-\captionof{table}{Echo-resolution sweep, Qwen3-VL-8B. Only the \emph{second}
-image occurrence is downscaled; the first stays at full resolution. Three of four
-benchmarks are flat or better at quarter resolution. RF20, whose targets are
-small, degrades monotonically. Metrics are F1 for POPE and the RF20 presence task, group accuracy for Winoground, pair accuracy for NaturalBench. Blank cells were not run.}
+\captionof{table}{The echoed image can be shrunk until it is barely an image
+without costing accuracy, except where the evidence is small. Only the
+\emph{second} image occurrence is downscaled; the first stays at full
+resolution. Bold marks the best echo scale in each row. Metrics are F1 for POPE
+and the RF20 presence task, group accuracy for Winoground and pair accuracy for
+NaturalBench; blank cells were not run. RF20 is the one benchmark that degrades
+monotonically as the echo shrinks.}
 \label{tab:resolution}
 \vspace{2pt}
 \small
@@ -58,11 +61,13 @@ RF20 (presence) & \best{80.56} & 80.06 & 78.80 & \\
 \vspace{0pt}
 \centering
 \includegraphics[width=\linewidth]{figs/fig_pareto.pdf}
-\caption{Cost against accuracy on NaturalBench. The $x$ axis is extra tokens per
-query versus question-first (symmetric log, so $0$ is shown); the dashed line is
-question-last. Every image echo clears that baseline, and the
-$\tfrac{1}{8}$-resolution echo ($+107$ tokens) is indistinguishable from the full
-one ($+3{,}352$).}
+\caption{Accuracy is flat across a $31\times$ range of echo cost, so the
+cheapest echo is the one to ship. Cost against accuracy on NaturalBench; the
+$x$ axis is extra tokens per query relative to question-first, on a symmetric
+log scale so that $0$ can be shown. The dashed line is the question-last
+baseline, which every image echo clears. The $\tfrac{1}{8}$-resolution echo
+($+107$ tokens) is statistically indistinguishable from the full-resolution one
+($+3{,}352$).}
 \label{fig:pareto}
 \end{minipage}
 \end{figure}
@@ -132,10 +137,11 @@ once plus a separate reflection model. Rewording the prompt recovers part of
 what bad ordering costs. Moving or echoing the image recovers the rest.
 
 \begin{table}[t]
-\caption{GEPA prompt optimization under two orderings, Qwen3-VL-8B, on held-out
-evaluation sets. GEPA finds real gains under \sti{} and nothing under \sit{},
-as the read-out diagnosis predicts. It never reaches the \sit{} baseline it is
-competing with.}
+\caption{A prompt optimizer improves only the ordering our diagnosis says has
+headroom, and never catches the ordering it is competing with. GEPA run under
+both orderings with the same budget, Qwen3-VL-8B, scored on held-out evaluation
+sets. ``Gap closed'' is the fraction of the \sti{}-to-\sit{} accuracy gap the
+optimized prompt recovers, and is undefined for the \sit{} rows, shown as n/a.}
 \label{tab:gepa}
 \begin{center}
 \small

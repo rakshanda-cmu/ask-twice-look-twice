@@ -23,13 +23,16 @@ results are not interpretable without it, and we cite rather than re-derive it.
 \begin{center}
 \includegraphics[width=\linewidth]{figs/fig_teaser.pdf}
 \end{center}
-\caption{The question-first paradox and its repair, Qwen3-VL-8B.
-\textbf{(a)} Question-first makes $2.49\times$ more image patches decode a
-question content word (160 NaturalBench candidates), so the question reaches the
-image. \textbf{(b)} It still loses $8.1$ points of group accuracy
-($p = 1.3\times10^{-12}$). \textbf{(c)} Echoing the question after the image
-repairs it for $13$ tokens; an $\tfrac{1}{8}$-resolution image echo beats the
-baseline for $107$.}
+\caption{The ordering that looks most like it found the answer is the one that
+answers wrong, and repeating the prompt repairs it for the price of a sentence.
+Qwen3-VL-8B on NaturalBench; grey bars are question-last, orange question-first,
+blue the two repairs. \textbf{(a)} Question-first puts a question content word
+on $2.49\times$ more image patches (mean over 160 candidates), so the question
+demonstrably reaches the image. \textbf{(b)} It nonetheless loses $8.1$ points
+of group accuracy ($p = 1.3\times10^{-12}$), which is the paradox.
+\textbf{(c)} Repeating the question after the image recovers it for $13$
+tokens, and repeating the image at $\tfrac{1}{8}$ resolution passes the
+question-last baseline (dashed) for $107$.}
 \label{fig:teaser}
 \end{figure}
 

@@ -15,8 +15,11 @@ repeated image turns out to carry almost no information. Shrinking it to $\tfrac
 its price from thousands of extra tokens to about 100, and a reversed copy
 works as well as a correct one, so what matters is where the tokens sit and not
 what they show. Breadth also marks a limit: on video, repeating the image stops
-helping, while repeating the question still does. Finally, a reflective prompt
-optimizer given the same budget improves only the ordering our diagnosis says
-has room left, and never catches the simpler fix, so this is not something
-better wording would have found.
+helping, while repeating the question still does. A reflective prompt optimizer given the same budget improves
+only the ordering our diagnosis says has room left, and never catches the
+simpler fix, so this is not something better wording would have found. The
+practical consequence is immediate: put the question after the image, and where
+it has to come first, repeat it afterwards. The consequence for the field is
+that prompt layout, which papers rarely report, moves benchmarks further than
+the model differences those benchmarks are built to measure.
 \end{abstract}

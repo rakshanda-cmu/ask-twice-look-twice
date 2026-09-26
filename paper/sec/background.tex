@@ -25,11 +25,12 @@ decoding a question word from 1 to 12, and the model then answers ``No'' to a
 question whose ground truth is Yes.
 
 \begin{table}[t]
-\caption{Ordering ladder on four benchmarks, Qwen3-VL-8B, reproducing
-\citet{anon-workshop} and adding RF20. \sti{} (question first) is worst
-everywhere. POPE is the exception to the repair: plain question-last already
-wins there. $N$: NaturalBench 1{,}900 groups, POPE 9{,}000, Winoground 400
-examples, RF20 24{,}449.}
+\caption{Moving the question in front of the image is the worst choice on all
+four benchmarks, and echoing it back is the best on three. Ordering ladder for
+Qwen3-VL-8B, reproducing \citet{anon-workshop} and adding RF20. Bold marks the
+best ordering in each row. POPE is the exception to the repair: plain
+question-last already wins there. $N$ is 1{,}900 groups for NaturalBench,
+9{,}000 items for POPE, 400 examples for Winoground and 24{,}449 for RF20.}
 \label{tab:ladder}
 \begin{center}
 \small
@@ -107,12 +108,15 @@ question-last nothing. An equal-length random span moves both by at most $0.8$.
 \begin{center}
 \includegraphics[width=\linewidth]{figs/fig_mechanism.pdf}
 \end{center}
-\caption{Where question-first breaks (150 NaturalBench pairs where it is wrong
-and question-last is right). \textbf{(a)} Attention leaving the answer position,
-to the question (solid) and the image (dashed): at layer 23 question-first sends
-$2.19\times$ less to the question. \textbf{(b)} $P(\text{correct})$ per layer.
-The two baselines sit at chance through layer 25, fork at 26 and never re-cross;
-both echo orderings track question-last.}
+\caption{Question-first answers by reading the image instead of the question,
+and the two orderings only part company in the last quarter of the network.
+Measured on the 150 NaturalBench pairs where question-first is wrong and
+question-last is right. \textbf{(a)} Attention mass leaving the answer position,
+to the question (solid lines) and to the image (dashed): at layer 23, where
+question attention peaks for both, question-first sends $2.19\times$ less of it
+to the question. \textbf{(b)} Probability of the correct answer at each layer.
+Both baselines sit at chance through layer 25 (shaded), fork at layer 26 and
+never re-cross; both echo orderings track question-last, not question-first.}
 \label{fig:mechanism}
 \end{figure}
 
