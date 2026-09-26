@@ -9,11 +9,10 @@ surface, whose content barely matters and whose position matters entirely. The
 one place content does matter, RF20, is the one place the evidence is a small
 region rather than a whole scene.
 
-\paragraph{Implications beyond prompt ordering.} For benchmarking, an unreported
-prompt-layout choice is a confound of the same size as the model differences
-benchmarks are built to detect: question-first versus question-last moves
-CV-Bench by $18.01$ points and one RF20 category by $47.35$, so two
-implementations of ``the same'' prompt can differ by more than the gap being
+\paragraph{Implications beyond prompt ordering.} An unreported prompt-layout
+choice is a confound the size of the model differences benchmarks exist to
+detect: it moves CV-Bench by $18.01$ points and one RF20 category by $47.35$, so
+two implementations of ``the same'' prompt can differ by more than the gap being
 measured. For deployed and agentic systems, pipelines that prepend a goal to a
 growing context and then append retrieved images produce question-first layouts
 by construction and pay for it silently; the fix costs $13$ tokens on video and

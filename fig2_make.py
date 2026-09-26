@@ -169,12 +169,12 @@ def render(mm, hits, group, args):
         fh = args.figheight if args.figheight else args.figwidth * 0.58
         fig = plt.figure(figsize=(args.figwidth, fh), dpi=400)
         # the grid carries the content, so the input thumbnail stays small
-        gs = fig.add_gridspec(1, 2, width_ratios=[0.60, 3.05],
+        gs = fig.add_gridspec(1, 2, width_ratios=[1.00, 2.75],
                               left=0.004, right=0.996, top=0.845, bottom=0.01,
-                              wspace=0.02)
+                              wspace=0.025)
         ax0 = fig.add_subplot(gs[0, 0])
         ax0.imshow(small); ax0.axis("off")
-        ax0.set_title("Input", fontsize=7.6, fontweight="bold", pad=3)
+        ax0.set_title("Input", fontsize=8.4, fontweight="bold", pad=3)
 
         ax = fig.add_subplot(gs[0, 1])
         ax.imshow(disp, extent=[0, gw, gh, 0])

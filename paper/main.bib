@@ -6,14 +6,15 @@
         in the supplementary material for reviewers}
 }
 
-@article{gepa2025,
+@inproceedings{gepa2025,
   title={{GEPA}: Reflective Prompt Evolution Can Outperform Reinforcement Learning},
   author={Agrawal, Lakshya A and Tan, Shangyin and Soylu, Dilara and Ziems, Noah and
           Khare, Rishi and Opsahl-Ong, Krista and Singhvi, Arnav and Shandilya, Herumb and
           Ryan, Michael J and Jiang, Meng and Potts, Christopher and Sen, Koushik and
-          Stoica, Ion and Klein, Dan and Zaharia, Matei and Khattab, Omar},
-  journal={arXiv preprint arXiv:2507.19457},
-  year={2025}
+          Dimakis, Alexandros G and Stoica, Ion and Klein, Dan and Zaharia, Matei and
+          Khattab, Omar},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
 }
 
 @inproceedings{naturalbench2024,
@@ -21,7 +22,8 @@
   author={Li, Baiqi and Lin, Zhiqiu and Peng, Wenxuan and Nyandwi, Jean de Dieu and
           Jiang, Daniel and Ma, Zixian and Khanuja, Simran and Krishna, Ranjay and
           Neubig, Graham and Ramanan, Deva},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS) Datasets and
+             Benchmarks Track},
   year={2024}
 }
 
@@ -56,8 +58,8 @@
 
 @article{tunedlens2023,
   title={Eliciting Latent Predictions from Transformers with the Tuned Lens},
-  author={Belrose, Nora and Furman, Zach and Smith, Logan and Halawi, Danny and
-          Ostrovsky, Igor and McKinney, Lev and Biderman, Stella and Steinhardt, Jacob},
+  author={Belrose, Nora and Ostrovsky, Igor and McKinney, Lev and Furman, Zach and
+          Smith, Logan and Halawi, Danny and Biderman, Stella and Steinhardt, Jacob},
   journal={arXiv preprint arXiv:2303.08112},
   year={2023}
 }
@@ -89,6 +91,7 @@
   year={2025}
 }
 
+% LLaVA v1, NOT the LLaVA-1.5 this paper runs. For LLaVA-1.5 cite llava15.
 @inproceedings{llava2023,
   title={Visual Instruction Tuning},
   author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
@@ -96,6 +99,7 @@
   year={2023}
 }
 
+% InternVL v1, NOT the InternVL3 this paper runs. For InternVL3 cite internvl3.
 @inproceedings{internvl2024,
   title={{InternVL}: Scaling up Vision Foundation Models and Aligning for Generic
          Visual-Linguistic Tasks},
@@ -130,7 +134,7 @@
 @inproceedings{rereading2024,
   title={Re-Reading Improves Reasoning in Large Language Models},
   author={Xu, Xiaohan and Tao, Chongyang and Shen, Tao and Xu, Can and Xu, Hongbo and
-          Long, Guodong and Lou, Jian-Guang},
+          Long, Guodong and Lou, Jian-Guang and Ma, Shuai},
   booktitle={Proceedings of the 2024 Conference on Empirical Methods in Natural Language
              Processing (EMNLP)},
   year={2024}
@@ -187,12 +191,13 @@
   year={2024}
 }
 
-@article{mmstar2024,
+@inproceedings{mmstar2024,
   title={Are We on the Right Way for Evaluating Large Vision-Language Models?},
   author={Chen, Lin and Li, Jinsong and Dong, Xiaoyi and Zhang, Pan and Zang, Yuhang and
           Chen, Zehui and Duan, Haodong and Wang, Jiaqi and Qiao, Yu and Lin, Dahua and
           Zhao, Feng},
-  journal={arXiv preprint arXiv:2403.20330},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS) Datasets and
+             Benchmarks Track},
   year={2024}
 }
 
@@ -236,4 +241,86 @@
           He, Xiangnan and Zhuang, Yueting},
   booktitle={Proceedings of the 25th ACM International Conference on Multimedia},
   year={2017}
+}
+
+@article{qwen3vl,
+  title={{Qwen3-VL} Technical Report},
+  author={Bai, Shuai and Cai, Yuxuan and Chen, Ruizhe and Chen, Keqin and
+          Chen, Xionghui and Cheng, Zesen and Deng, Lianghao and Ding, Wei and others},
+  journal={arXiv preprint arXiv:2511.21631},
+  year={2025}
+}
+
+@article{gemma4,
+  title={{Gemma} 4 Technical Report},
+  author={{Gemma Team}},
+  journal={arXiv preprint arXiv:2607.02770},
+  year={2026}
+}
+
+@article{internvl3,
+  title={{InternVL3}: Exploring Advanced Training and Test-Time Recipes for Open-Source
+         Multimodal Models},
+  author={Zhu, Jinguo and Wang, Weiyun and Chen, Zhe and Liu, Zhaoyang and
+          Ye, Shenglong and Gu, Lixin and Tian, Hao and Duan, Yuchen and others},
+  journal={arXiv preprint arXiv:2504.10479},
+  year={2025}
+}
+
+@inproceedings{llava15,
+  title={Improved Baselines with Visual Instruction Tuning},
+  author={Liu, Haotian and Li, Chunyuan and Li, Yuheng and Lee, Yong Jae},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+             Recognition (CVPR)},
+  year={2024}
+}
+
+@inproceedings{rf100vl2025,
+  title={{Roboflow100-VL}: A Multi-Domain Object Detection Benchmark for Vision-Language
+         Models},
+  author={Robicheaux, Peter and Popov, Matvei and Madan, Anish and Robinson, Isaac and
+          Nelson, Joseph and Ramanan, Deva and Peri, Neehar},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS) Datasets and
+             Benchmarks Track},
+  year={2025}
+}
+
+@inproceedings{mmvp2024,
+  title={Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal {LLM}s},
+  author={Tong, Shengbang and Liu, Zhuang and Zhai, Yuexiang and Ma, Yi and
+          LeCun, Yann and Xie, Saining},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+             Recognition (CVPR)},
+  year={2024}
+}
+
+@inproceedings{hrbench2025,
+  title={Divide, Conquer and Combine: A Training-Free Framework for High-Resolution
+         Image Perception in Multimodal Large Language Models},
+  author={Wang, Wenbin and Ding, Liang and Zeng, Minyan and Zhou, Xiabin and
+          Shen, Li and Luo, Yong and Tao, Dacheng},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  pages={7907--7915},
+  year={2025}
+}
+
+@article{worldmedqav2024,
+  title={{WorldMedQA-V}: A Multilingual, Multimodal Medical Examination Dataset for
+         Multimodal Language Models Evaluation},
+  author={Matos, Jo{\~a}o and Chen, Shan and Placino, Siena and Li, Yingya and
+          Pardo, Juan Carlos Climent and Idan, Daphna and Tohyama, Takeshi and
+          Restrepo, David and Nakayama, Luis F and Pascual-Leone, Jose M M and
+          Savova, Guergana and Aerts, Hugo and Celi, Leo A and Wong, A Ian and
+          Bitterman, Danielle S and Gallifant, Jack},
+  journal={arXiv preprint arXiv:2410.12722},
+  year={2024}
+}
+
+@misc{realworldqa2024,
+  title={{RealWorldQA}},
+  author={{xAI}},
+  year={2024},
+  howpublished={Benchmark released with the Grok-1.5 Vision preview},
+  note={\url{https://x.ai/news/grok-1.5v}}
 }

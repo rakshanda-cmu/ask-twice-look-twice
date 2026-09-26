@@ -18,8 +18,10 @@ baselines are \sit{}, which is what most inference code emits by default, and
 \sti{}, which is what a reader is told to do when looking for something
 specific.
 
-Qwen3-VL-8B is the primary model and carries every analysis; for breadth we also
-run Gemma-3-27B, Gemma-4-31B, Qwen2.5-VL-7B, InternVL3-8B and LLaVA-1.5. All
+Qwen3-VL-8B \citep{qwen3vl} is the primary model and carries every analysis; for
+breadth we also run Gemma-3-27B \citep{gemma3}, Gemma-4-31B \citep{gemma4},
+Qwen2.5-VL-7B \citep{qwen25vl}, InternVL3-8B \citep{internvl3} and LLaVA-1.5
+\citep{llava15}. All
 results use greedy decoding with a fixed answer-token budget, and every ordering
 of a benchmark shares one system message, one question string per item, one
 image preprocessing path and one scoring function, so the ordering is the only
@@ -27,11 +29,13 @@ difference between columns.
 
 Three benchmarks carry the diagnosis: NaturalBench \citep{naturalbench2024},
 POPE \citep{pope2023} and Winoground \citep{winoground2022}.
-Section~\ref{sec:results} adds fourteen not tested in prior work: RF20-VL, used
-both as a detection benchmark scored by mAP and as a $24{,}449$-question yes/no
-presence task over the same images; nine image benchmarks (BLINK
-\citep{blink2024}, CV-Bench \citep{cambrian2024}, HR-Bench, MMStar
-\citep{mmstar2024}, MMVP, RealWorldQA, WorldMedQA-V, TallyQA
+Section~\ref{sec:results} adds fourteen not tested in prior work: RF20-VL,
+twenty detection datasets drawn from RF100-VL \citep{rf100vl2025}, used both as
+a detection benchmark scored by mAP and as a $24{,}449$-question yes/no presence
+task over the same images; nine image benchmarks (BLINK \citep{blink2024},
+CV-Bench \citep{cambrian2024}, HR-Bench \citep{hrbench2025}, MMStar
+\citep{mmstar2024}, MMVP \citep{mmvp2024}, RealWorldQA
+\citep{realworldqa2024}, WorldMedQA-V \citep{worldmedqav2024}, TallyQA
 \citep{tallyqa2019}, VQAv2 \citep{vqav2}); and four video QA benchmarks
 (MVBench \citep{mvbench2024}, NExT-QA \citep{nextqa2021}, MSVD-QA
 \citep{msvdqa2017}, TGIF-QA \citep{tgifqa2017}), where each \texttt{I} expands
