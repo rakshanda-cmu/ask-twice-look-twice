@@ -69,57 +69,77 @@ costs $7.01$ points on average and hurts on 12 of 13, with a worst case of
 $18.01$ points on CV-Bench, while prompt content is held identical.
 \end{finding}
 
-\subsection{RF20: a category where question-first more than halves accuracy}
+\subsection{RF20-VL: the sign flips when the output is boxes}
 \label{sec:generality-rf20}
 
-RF20 asks whether a given object class is present in a detection-style image,
-over $24{,}449$ items drawn from 20 datasets in 7 categories. It is the hardest
-test of generality here because its images are not web photographs and its
-questions are not natural language questions about scenes.
+Every benchmark so far asks for a short answer that the model reads out at a
+single position. RF20-VL asks for something else: given all class names for an
+image, emit bounding boxes, scored by mAP over 20 detection datasets and
+$3{,}970$ images. It is the one task here whose output is localization rather
+than a read-out, which makes it the sharpest test of how far the paradox
+extends.
 
-Question-first hurts on all 7 categories, by $11.36$ points on average
-(Table~\ref{tab:rf20}). On Lab Imaging it does not merely hurt: accuracy falls
-from $86.29$ to $38.94$, a loss of $47.35$ points, which is below the rate this
-binary task would get by answering a single class blindly. Industrial loses
-$14.26$. Both are domains where the target is a small, low-contrast region and
-the decision hinges on evidence the model must go back and look at, which is
-exactly the read-out the question-first layout strands.
+It does not extend. The sign reverses (Table~\ref{tab:rf20map}). For
+Qwen3-VL-8B, question-first is $2.80$ mAP \emph{better} than question-last
+($7.94$ vs $5.14$), and better on 17 of 20 datasets. Gemma-4-31B agrees in the
+same direction at a smaller size ($+0.69$ mAP, better on 13 of 20). We take this
+as a scope limit on the paradox rather than a contradiction: when the answer is
+a set of boxes rather than a token the decoder must read out, stranding the
+question before the image costs nothing, and the extra conditioning it gives
+every image patch appears to help.
 
-Echoing repairs the collapse and then some. On Lab Imaging, question echoing
-reaches $91.71$ and image echoing $90.93$, against question-last's $86.29$,
-so the ordering that broke the category worst is also the one the cheaper repair
-helps most.
+Echoing survives the reversal. Question echoing is the best ordering for both
+models ($+3.34$ mAP for Qwen3-VL-8B, $+0.91$ for Gemma-4-31B), so the
+recommendation we make from the yes/no benchmarks does not have to be withdrawn
+here even though its justification does.
+
+One control separates this task from the others. On the yes/no benchmarks,
+reversing the echoed image copy was free (NaturalBench $p = 1.00$). On detection
+it costs $1.89$ mAP and helps on only 1 of 20 datasets. Together with the
+resolution sweep, where RF20 was the one benchmark that degraded monotonically
+as the echo shrank (Section~\ref{sec:ablation-resolution}), this says the echo's
+content only matters when the task needs evidence localized in the image.
+
+We exclude Gemma-3-27B from this table: it scores $0.06$ mAP under every
+ordering, emitting many boxes that almost never land, so ordering differences
+there are not interpretable. The yes/no presence variant of RF20, $24{,}449$
+questions over the same images, is reported in Appendix~\ref{app:rf20presence};
+that variant behaves like the other yes/no benchmarks and question-first hurts
+it on 7 of 7 categories.
 
 \begin{table}[t]
-\caption{RF20 accuracy by category, Qwen3-VL-8B, $24{,}449$ items. Question-first
-hurts on 7 of 7 categories. Lab Imaging loses $47.35$ points, and both echo
-orderings recover it past the question-last baseline.}
-\label{tab:rf20}
+\caption{RF20-VL detection, mean over 20 datasets and $3{,}970$ images,
+multi-class prompting. Unlike every yes/no benchmark in this paper,
+question-first \emph{beats} question-last here. Question echoing is still the
+best ordering; the reversed echo, which is free on yes/no tasks, is the worst.}
+\label{tab:rf20map}
 \begin{center}
 \small
-\begin{tabular}{lrrrrrrr}
+\begin{tabular}{llrrrrr}
 \toprule
-Category & $N$ & \sit{} & \sti{} & \stit{} & \sitit{} & $\Delta$ \sti{} & $\Delta$ \sitit{} \\
+Model & Metric & \sit{} & \sti{} & \stit{} & \sitit{} & \sititrev{} \\
 \midrule
-Document    & 10{,}200 & 80.94 & 76.20 & 80.30 & \best{84.19} & $-4.74$ & $+3.25$ \\
-Misc        &  4{,}114 & 85.71 & 82.50 & \best{85.90} & 85.05 & $-3.21$ & $-0.66$ \\
-Industrial  &  2{,}958 & \best{82.45} & 68.19 & 81.54 & 82.18 & $-14.26$ & $-0.27$ \\
-Lab Imaging &  2{,}822 & 86.29 & 38.94 & \best{91.71} & 90.93 & $-47.35$ & $+4.64$ \\
-Sport       &  2{,}654 & 49.06 & 48.61 & 42.99 & \best{51.96} & $-0.45$ & $+2.90$ \\
-Flora/Fauna &  1{,}592 & 86.56 & 82.54 & \best{87.44} & 86.75 & $-4.02$ & $+0.19$ \\
-Aerial      &      109 & \best{94.50} & 88.99 & 89.91 & \best{94.50} & $-5.51$ & $+0.00$ \\
+Qwen3-VL-8B & mAP & 5.14 & 7.94 & \best{8.48} & 6.47 & 3.25 \\
+            & mAP$_{50}$ & 11.15 & 14.97 & \best{16.01} & 12.07 & 7.67 \\
 \midrule
-\multicolumn{2}{l}{\emph{Mean over 7}} & & & & & $-11.36$ & $+1.44$ \\
+Gemma-4-31B & mAP & 13.52 & 14.21 & \best{14.43} & 14.36 & n/a \\
+            & mAP$_{50}$ & 29.75 & 30.12 & 30.48 & \best{30.58} & n/a \\
+\midrule
+\multicolumn{2}{l}{\emph{Qwen3-VL-8B $\Delta$ vs \sit{} (mAP)}}
+ & & $+2.80$ & $+3.34$ & $+1.33$ & $-1.89$ \\
+\multicolumn{2}{l}{\emph{\quad datasets improved}}
+ & & 17/20 & 16/20 & 16/20 & 1/20 \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
 \begin{finding}
-\textbf{Finding.} Question-first can be catastrophic, not merely costly. On
-RF20's Lab Imaging category it takes accuracy from $86.29$ to $38.94$, a
-$47.35$-point loss, and it hurts on 7 of 7 categories. Echoing recovers the
-category to $91.71$, above the question-last baseline.
+\textbf{Finding.} The paradox is a property of read-out, not of prompt order as
+such. On RF20-VL detection, where the output is boxes rather than an answer
+token, question-first is $2.80$ mAP \emph{better} than question-last and wins on
+17 of 20 datasets. Echoing the question remains the best ordering ($+3.34$
+mAP), but the reversed echo, free on yes/no tasks, now costs $1.89$ mAP.
 \end{finding}
 
 \subsection{Where the repair stops: video}

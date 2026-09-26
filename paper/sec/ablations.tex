@@ -38,7 +38,7 @@ the echo has two separable jobs, and that only one of them needs pixels.
 \captionof{table}{Echo-resolution sweep, Qwen3-VL-8B. Only the \emph{second}
 image occurrence is downscaled; the first stays at full resolution. Three of four
 benchmarks are flat or better at quarter resolution. RF20, whose targets are
-small, degrades monotonically. Metrics are F1 for POPE and RF20, group accuracy for Winoground, pair accuracy for NaturalBench. Blank cells were not run.}
+small, degrades monotonically. Metrics are F1 for POPE and the RF20 presence task, group accuracy for Winoground, pair accuracy for NaturalBench. Blank cells were not run.}
 \label{tab:resolution}
 \vspace{2pt}
 \small
@@ -50,7 +50,7 @@ Benchmark & Echo $1$ & $\tfrac{1}{2}$ & $\tfrac{1}{4}$ & $\tfrac{1}{8}$ \\
 POPE         & 88.12 & \best{88.35} & 88.07 & \\
 Winoground   & 40.25 & \best{41.75} & 41.00 & \best{41.75} \\
 NaturalBench & 80.36 & 80.55 & \best{80.57} & 80.18 \\
-RF20         & \best{80.56} & 80.06 & 78.80 & \\
+RF20 (presence) & \best{80.56} & 80.06 & 78.80 & \\
 \bottomrule
 \end{tabular}
 \end{minipage}\hfill

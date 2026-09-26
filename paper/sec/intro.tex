@@ -39,12 +39,15 @@ out to have a sharp answer.
 \emph{Does the paradox survive outside yes/no visual question answering?} We run
 the full ordering ladder on 14 benchmarks not previously tested, including four
 video QA datasets and a $24{,}449$-item detection-style presence benchmark
-(RF20). Question-first hurts on 12 of 13 image and video benchmarks and on 7 of
-7 RF20 categories, costing $7.0$ points on average and $47.4$ points on RF20's
-Lab Imaging category, where accuracy falls from $86.3$ to $38.9$. The same
-breadth exposes a boundary the original three benchmarks could not: on video,
-where the echo doubles an already long frame sequence, image echoing loses to
-question-last on three of four datasets.
+(RF20-VL). Question-first hurts on 12 of 13 image and video benchmarks, costing
+$7.0$ points on average, and on RF20's yes/no presence task it hurts on 7 of 7
+categories, taking Lab Imaging from $86.3$ to $38.9$. The same breadth exposes
+two boundaries the original three benchmarks could not. On video, where the echo
+doubles an already long frame sequence, image echoing loses to question-last on
+three of four datasets. On RF20-VL detection, where the model emits boxes rather
+than an answer token, the paradox itself reverses: question-first is $2.80$ mAP
+\emph{better} and wins on 17 of 20 datasets, which places the effect in
+read-out rather than in prompt order as such.
 
 \emph{What is the echo actually made of?} If the echo re-anchors read-out rather
 than supplying a second look, it should survive being destroyed as an image. It

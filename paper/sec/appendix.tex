@@ -1,3 +1,42 @@
+\section{RF20 presence task: the yes/no variant}
+\label{app:rf20presence}
+
+Besides the detection task of Section~\ref{sec:generality-rf20}, RF20's images
+support a yes/no presence question ("is a \textless class\textgreater\ in the
+image?"), $24{,}449$ questions over 20 datasets in 7 categories. This variant
+has the same answer format as NaturalBench, POPE and Winoground, and it behaves
+like them: question-first hurts on 7 of 7 categories, by $11.36$ points on
+average. On Lab Imaging it takes accuracy from $86.29$ to $38.94$, a $47.35$
+point loss, and both echo orderings recover the category past the question-last
+baseline. The contrast with Table~\ref{tab:rf20map}, where the same images under
+a detection objective show the opposite sign, is the cleanest evidence we have
+that the paradox tracks the answer format rather than the imagery.
+
+\begin{table}[h]
+\caption{RF20 presence task, accuracy by category, Qwen3-VL-8B, $24{,}449$
+questions. Question-first hurts on 7 of 7 categories, opposite in sign to the
+detection results on the same images.}
+\label{tab:rf20}
+\begin{center}
+\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Category & $N$ & \sit{} & \sti{} & \stit{} & \sitit{} & $\Delta$ \sti{} & $\Delta$ \sitit{} \\
+\midrule
+Document    & 10{,}200 & 80.94 & 76.20 & 80.30 & \best{84.19} & $-4.74$ & $+3.25$ \\
+Misc        &  4{,}114 & 85.71 & 82.50 & \best{85.90} & 85.05 & $-3.21$ & $-0.66$ \\
+Industrial  &  2{,}958 & \best{82.45} & 68.19 & 81.54 & 82.18 & $-14.26$ & $-0.27$ \\
+Lab Imaging &  2{,}822 & 86.29 & 38.94 & \best{91.71} & 90.93 & $-47.35$ & $+4.64$ \\
+Sport       &  2{,}654 & 49.06 & 48.61 & 42.99 & \best{51.96} & $-0.45$ & $+2.90$ \\
+Flora/Fauna &  1{,}592 & 86.56 & 82.54 & \best{87.44} & 86.75 & $-4.02$ & $+0.19$ \\
+Aerial      &      109 & \best{94.50} & 88.99 & 89.91 & \best{94.50} & $-5.51$ & $+0.00$ \\
+\midrule
+\multicolumn{2}{l}{\emph{Mean over 7}} & & & & & $-11.36$ & $+1.44$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
 \section{Attention knockout in full}
 \label{app:knockout}
 

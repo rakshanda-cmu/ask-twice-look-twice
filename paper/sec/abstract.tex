@@ -8,9 +8,11 @@ back, and echoing the question or the image repairs the damage. That work left
 open how far the effect reaches, what the echo is actually made of, and what it
 costs. We answer all three. Across fourteen benchmarks never previously tested,
 question-first costs $7.0$ points on average and hurts on 12 of 13 image and
-video datasets and on 7 of 7 categories of a $24{,}449$-item detection-style
-benchmark, where one category falls from $86.3$ to $38.9$, a $47.4$-point
-collapse. The echo turns out to carry almost no information: downscaling the
+video datasets, and on a $24{,}449$-question presence benchmark it hurts on 7 of
+7 categories, taking one from $86.3$ to $38.9$. It also has a limit we can name:
+on RF20-VL object detection, where the output is bounding boxes rather than an
+answer token, the sign reverses and question-first is $2.80$ mAP \emph{better},
+winning on 17 of 20 datasets. The echo turns out to carry almost no information: downscaling the
 echoed image to $\tfrac{1}{8}$ resolution, $\tfrac{1}{64}$ of the pixels, is
 statistically indistinguishable from a full-resolution echo ($p = 1.00$) while
 still beating question-last ($p = 0.005$), which cuts its price from $3{,}352$
