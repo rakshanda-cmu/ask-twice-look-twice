@@ -48,6 +48,7 @@ from detpo_map_browser import render_detpo_map_page
 from extra_tasks_browser import render_extra_tasks_page
 from refcoco_gaze.gaze_browser import render_gaze_page
 from patchcos_browser import render_patchcos_page
+from token_change_browser import render_token_change_page
 from sitit_compare_browser import render_sitit_compare_page
 from logitlens_demo_browser import render_logitlens_demo_page
 from summary_browser import render_summary_page
@@ -184,7 +185,8 @@ _page = st.sidebar.radio(
      "🎬 Extended Benchmarks (VQA/Counting/MMVP/BLINK/Video-QA)",
      "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)",
      "🖼️ Patch Perturbation", "🔬 Logit Lens (this image)", "🎞️ SITIT vs STIT",
-     "📊 Cross-Dataset Summary", "🔬 Echo Ablations & GEPA"],
+     "📊 Cross-Dataset Summary", "🔬 Echo Ablations & GEPA",
+     "🔤 Token Change Explorer"],
     key="app_page",
 )
 if _page == "🧪 NaturalBench Experiments":
@@ -222,6 +224,9 @@ if _page == "🎬 Extended Benchmarks (VQA/Counting/MMVP/BLINK/Video-QA)":
     st.stop()
 if _page == "👁️ RefCOCO-Gaze (Grad-CAM vs human attention)":
     render_gaze_page()
+    st.stop()
+if _page == "🔤 Token Change Explorer":
+    render_token_change_page()
     st.stop()
 if _page == "🖼️ Patch Perturbation":
     render_patchcos_page()
