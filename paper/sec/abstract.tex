@@ -7,13 +7,12 @@ question does reach the image and visibly steers it, but the answer position
 cannot read it back, and repeating either the question or the image repairs the
 damage. What that work could not say is how far the effect reaches, what the
 repeated image actually contributes, and what it costs. We answer those three
-questions. Across fourteen further benchmarks the paradox proves general,
-costing seven points on average and as much as eighteen on a single benchmark,
+questions. Across 14 further benchmarks the paradox proves general, costing 7 points on
+average and as much as 18 on a single benchmark,
 yet it is not a law: on object detection, where the model returns boxes instead
 of a word, the effect reverses and asking first is the better choice. The
-repeated image turns out to carry almost no information. Shrinking it to an
-eighth of its resolution leaves accuracy statistically unchanged while cutting
-its price from thousands of extra tokens to about a hundred, and a reversed copy
+repeated image turns out to carry almost no information. Shrinking it to $\tfrac{1}{8}$ of its resolution leaves accuracy statistically unchanged while cutting
+its price from thousands of extra tokens to about 100, and a reversed copy
 works as well as a correct one, so what matters is where the tokens sit and not
 what they show. Breadth also marks a limit: on video, repeating the image stops
 helping, while repeating the question still does. Finally, a reflective prompt
