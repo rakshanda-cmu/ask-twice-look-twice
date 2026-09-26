@@ -1,31 +1,23 @@
-\subsection*{Ethics statement}
-
-This work studies prompt layout for existing, publicly released vision-language
-models and introduces no new model, no new data collection and no human
-subjects. All benchmarks used are public research datasets used for their stated
-purpose. The intervention we study makes models more accurate without
-fine-tuning, which lowers the compute cost of deployment but does nothing to
-correct the biases those models already carry; a more accurate answer is not a
-fairer one. RF20 includes surveillance-adjacent detection domains, and improving
-presence detection there carries the usual dual-use risk of object detection
-systems. We report the settings where our intervention fails, including video
-and POPE, so that it is not applied where it does not help.
-
-\subsection*{Reproducibility statement}
-
-Every accuracy in this paper is read from a per-run result file recording the
-model, ordering, system prompt, decoding budget and sample count.
-Section~\ref{sec:setup} gives the models, benchmarks and protocol;
-Appendix~\ref{app:repro} records the two configuration details that change the
-result if missed, namely the knockout query scope and the exclusion of a
-degenerate Gemma RF20 run. Code, the per-run result files and the figure
-scripts, which regenerate every figure directly from those files, are provided
-in the supplementary material, along with the prior workshop paper this work
-extends. Significance tests use paired McNemar plus a paired bootstrap over
-$5{,}000$ resamples with a fixed seed.
-
-\subsection*{AI use statement}
-
-We used generative AI tools to help write code and to proofread and edit the
-paper text. All AI-assisted code and text were reviewed and checked by the
-authors, who take full responsibility for the content of this work.
+\section*{Reproducibility, AI Use, and Ethics Statements}
+\textbf{Reproducibility.}
+Models, benchmarks and protocol: Section~\ref{sec:setup}. Per-run detail,
+including the two configuration choices that change a result if missed:
+Appendices~\ref{app:rf20presence}--\ref{app:repro}. Every accuracy is read from
+a per-run result file, and significance tests use paired McNemar with a paired
+bootstrap over $5{,}000$ resamples at a fixed seed. Code and the figure scripts,
+which regenerate every figure from those result files, are provided in the
+supplementary material together with the prior workshop paper this work extends,
+and will be released publicly.
+%
+\textbf{AI use.}
+AI tools helped with code and editing; the authors reviewed all of it and take
+full responsibility.
+%
+\textbf{Ethics.}
+We audit existing, publicly released models on public research benchmarks,
+collecting no new data and involving no human subjects. RF20 includes
+surveillance-adjacent detection domains, so the usual dual-use risk of detection
+systems applies. Our intervention improves accuracy without fine-tuning but does
+nothing about the biases these models already carry; a more accurate answer is
+not a fairer one. We report where it fails, on video and POPE, so that it is not
+applied where it does not help.
