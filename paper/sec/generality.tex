@@ -29,10 +29,9 @@ $1.18$ points, winning on 9 of 13.
 \caption{The paradox is not a property of the three benchmarks it was found on:
 question-first hurts on 12 of these 13, and image echoing repays the loss on
 still images but not on video. Full ordering ladder for Qwen3-VL-8B, with the
-four video QA datasets below the rule. Bold marks the best of the four
-orderings in each row; the echo column gives \sitit{} with the second image
-copy at half resolution. The two mean rows average the $\Delta$ columns over
-the block above them.}
+four video QA datasets below the rule. Bold marks the best of the four orderings
+per row, the echo column is \sitit{} with the second image copy at half
+resolution, and each mean row averages the $\Delta$ columns above it.}
 \label{tab:breadth}
 \begin{center}
 \small
@@ -106,11 +105,10 @@ benchmarks, with question-first hurting on 7 of 7 categories.
 
 \begin{table}[t]
 \caption{Ask the model for boxes instead of a word and the paradox inverts:
-question-first now \emph{beats} question-last, while echoing the question stays
-the best ordering. RF20-VL detection, mean over 20 datasets and $3{,}970$
-images, multi-class prompting. Bold marks the best ordering in each row;
-\sititrev{} was not run for Gemma-4-31B, shown as n/a. The reversed echo, which
-costs nothing on yes/no tasks, is the worst ordering here.}
+question-first now \emph{beats} question-last, while question echoing stays the
+best ordering. RF20-VL detection, mean over 20 datasets and $3{,}970$ images,
+multi-class prompting. Bold marks the best ordering per row; \sititrev{}, not run
+for Gemma-4-31B (n/a), costs nothing on yes/no tasks but is worst here.}
 \label{tab:rf20map}
 \begin{center}
 \small

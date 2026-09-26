@@ -21,18 +21,17 @@ and~\ref{sec:anatomy} compress the diagnosis, which the new results need.
 \includegraphics[width=\linewidth]{figs/fig1_chase.pdf}
 \end{center}
 \caption{The ordering that looks most like it found the answer is the one that
-answers wrong. Every image patch of one NaturalBench example is shown once, with
-the vocabulary token that patch decodes to under a logit lens at layer 32. Where
-the token is the same under both orderings the cell carries it once, dimmed.
-Where it changed, the cell is outlined and carries both: the question-last token
-above in white, the question-first token below in red. Moving the question in
-front of the image changes 47 of the 100 patches and takes the count decoding a
-word from the question itself from 1 to 12, yet the model then answers ``No'' to
-a question whose ground truth is Yes, while question-last answers ``Yes''. Amber
-outlines mark three of those changes: \emph{running} becomes \emph{chase},
-\emph{boy} becomes \emph{ahead}, \emph{baseball} becomes \emph{child}. Better
-perception, worse answer. Echoing the question after the image keeps all 12
-steered patches and recovers the answer for 13 tokens.}
+answers wrong. Every image patch of one NaturalBench example is shown once,
+carrying the vocabulary token it decodes to under a logit lens at layer 32.
+Unchanged patches carry one dimmed token; changed patches are outlined and carry
+both, question-last above in white and question-first below in red, with amber
+outlines on three of them (\emph{running} to \emph{chase}, \emph{boy} to
+\emph{ahead}, \emph{baseball} to \emph{child}). Moving the question in front of
+the image changes 47 of the 100 patches and takes the count decoding a word from
+the question itself from 1 to 12, yet the model then answers ``No'' where the
+ground truth is Yes and question-last answers ``Yes''. Better perception, worse
+answer. Echoing the question after the image keeps all 12 steered patches and
+recovers the answer for 13 tokens.}
 \label{fig:teaser}
 \end{figure}
 
