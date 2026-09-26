@@ -178,8 +178,15 @@ def render(mm, hits, group, args):
 
         ax = fig.add_subplot(gs[0, 1])
         ax.imshow(disp, extent=[0, gw, gh, 0])
+        ax.set_xlim(0, gw); ax.set_ylim(gh, 0)
+        # imshow locks the aspect, so the square grid is drawn narrower than the
+        # axes slot it sits in. Measure one data unit after a draw has applied
+        # that aspect; sizing from the slot overstates the cell by half and lets
+        # long tokens run past their own box.
+        fig.canvas.draw()
         rend = fig.canvas.get_renderer()
-        cell_px = ax.get_window_extent(rend).width / max(1, gw)
+        cell_px = abs(ax.transData.transform((1, 0))[0]
+                      - ax.transData.transform((0, 0))[0])
         for r_ in range(1, gh):
             ax.axhline(r_, color="white", lw=0.35, alpha=0.35)
         for c_ in range(1, gw):
@@ -190,11 +197,21 @@ def render(mm, hits, group, args):
                 return
             lim = cell_px * frac
             f_ = t.get_fontsize()
+            floor = args.cell_fontsize * 0.55
             for _ in range(16):
                 if t.get_window_extent(rend).width <= lim:
                     return
+                if f_ * 0.88 < floor:
+                    break
                 f_ *= 0.88
                 t.set_fontsize(f_)
+            # still too wide at the smallest size that stays legible in print:
+            # clip the token rather than let it bleed into its neighbours
+            base = t.get_text()
+            for n in range(len(base) - 1, 1, -1):
+                t.set_text(base[:n] + "\u2026")
+                if t.get_window_extent(rend).width <= lim:
+                    return
 
         for i in range(gh * gw):
             r_, c_ = divmod(i, gw)
@@ -273,9 +290,12 @@ def render(mm, hits, group, args):
         right = ok(A[o], rec["gt"])
         # width of one cell in points, so a token can be sized to actually fit
         # inside its box rather than spilling over the neighbouring cells
+        ax.set_xlim(c0, c1); ax.set_ylim(r1, r0)
+        fig.canvas.draw()
         rend = fig.canvas.get_renderer()
-        _bb = ax.get_window_extent(rend)
-        cell_px = _bb.width / max(1, (c1 - c0))
+        # as in the diff branch: one data unit after the aspect is applied
+        cell_px = abs(ax.transData.transform((1, 0))[0]
+                      - ax.transData.transform((0, 0))[0])
         for r in range(r0, r1):
             for c in range(c0, c1):
                 i = r * gw + c
