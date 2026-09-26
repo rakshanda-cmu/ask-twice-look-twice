@@ -2,13 +2,13 @@
 \label{sec:results}
 \label{sec:generality}
 
-Prior work tested three yes/no benchmarks. That leaves open whether the paradox
-is a property of yes/no visual question answering, of those three datasets, or
-of the prompt layout itself. We run the full ordering ladder on 13 further
-benchmarks spanning single-image perception, high-resolution perception,
-counting, medical VQA and four video QA datasets, and separately on RF20, a
-$24{,}449$-item presence-detection benchmark built from 20 detection datasets
-across 7 categories.
+Prior work tested three yes/no benchmarks, which leaves open whether the paradox
+belongs to yes/no visual question answering, to those three datasets, or to the
+prompt layout itself. We run the full ordering ladder on 13 further benchmarks
+spanning single-image and high-resolution perception, counting, medical VQA and
+four video QA datasets, and separately on RF20, a $24{,}449$-item
+presence-detection benchmark built from 20 detection datasets across 7
+categories.
 
 \subsection{The paradox holds on 13 new benchmarks}
 
@@ -17,8 +17,8 @@ points on average and hurts on 12 of 13 (Table~\ref{tab:breadth}). The effect is
 far larger than the differences that usually separate published models:
 CV-Bench loses $18.01$ points, MMStar $11.40$, MMVP $9.00$, NExT-QA $8.91$.
 WorldMedQA-V is the single benchmark where question-first is not worse
-($+1.06$); we report it rather than dropping it, and note it is also the
-smallest benchmark in the set ($N = 568$).
+($+1.06$); we report it rather than dropping it, and it is also the smallest in
+the set ($N = 568$).
 
 The two echo orderings separate the cost of the repair from its size. Question
 echoing recovers $5.49$ of the $7.01$ points, or $78\%$ of the deficit, for $13$

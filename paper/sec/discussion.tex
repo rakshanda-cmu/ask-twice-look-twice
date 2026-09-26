@@ -6,8 +6,8 @@ $\tfrac{1}{64}$ of its pixels, it survives being turned upside down, and it
 fails where the visual context is already long. None of that fits an echo that
 supplies a second, better look; all of it fits an echo that supplies a read-out
 surface, whose content barely matters and whose position matters entirely. The
-one place content does matter, RF20, is the one place the evidence is a small
-region rather than a whole scene.
+one place content does matter, RF20, is the one whose evidence is a small region
+rather than a whole scene.
 
 \paragraph{Implications beyond prompt ordering.} An unreported prompt-layout
 choice is a confound the size of the model differences benchmarks exist to
@@ -29,6 +29,6 @@ the reason there. The repair is also not uniformly right: it does not beat
 question-last on POPE ($88.12$ against $88.35$ F1), and on video it loses on
 three of four datasets, which is why we recommend question echoing there.
 Finally, the knockout result depends on restricting the query side to the answer
-position; widening it does not reproduce the question-side half of the
-dissociation, and the span-size control is large there, so we treat the broader
-scope as uninformative rather than contrary (Appendix~\ref{app:repro}).
+position; the broader scope does not reproduce the question-side half of the
+dissociation, but its span-size control is large, so we treat it as uninformative
+rather than contrary (Appendix~\ref{app:repro}).

@@ -21,11 +21,11 @@ group accuracy moves from $37.37$ to $37.37$ ($p = 1.00$) and Winoground from
 $40.25$ to $41.00$ ($p = 0.68$).
 
 Two results in Table~\ref{tab:ladder} keep us honest. Question echoing alone is
-not reliably better than simply asking the question last (NaturalBench $35.00$
-against $35.05$, $p = 1.00$), so its role is to repair question-first prompting,
-not to improve on question-last. Image echoing is a real gain and is the claim
-we defend ($+0.085$ on Winoground, $p = 2.4\times10^{-5}$), though on POPE it
-does not help at all.
+not reliably better than asking the question last (NaturalBench $35.00$ against
+$35.05$, $p = 1.00$), so its role is to repair question-first prompting, not to
+improve on question-last. Image echoing is the real gain and the claim we defend
+($+0.085$ on Winoground, $p = 2.4\times10^{-5}$), though on POPE it does not
+help.
 
 Prior work left open what the echo is made of and what it costs.
 Sections~\ref{sec:results} and~\ref{sec:ablations} take up that thread.
