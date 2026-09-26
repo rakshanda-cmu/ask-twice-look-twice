@@ -25,6 +25,7 @@ import imageio
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.patheffects as pe
 import numpy as np
 import streamlit as st
 from matplotlib.patches import Rectangle, ConnectionPatch
@@ -83,52 +84,63 @@ def _rank(ex, changes):
     return sorted(changes, key=key)
 
 
-def _panel(ax, img, ex, words, boxes, title, color):
+def _grid(ax, img, ex, changed, focus, reveal):
+    """One combined grid. A cell whose token changed carries both words, the
+    question-last one above and the question-first one below; everything else
+    carries its single unchanged word. `reveal` gates whether the new words are
+    shown yet, which is what the animation steps through."""
     gh, gw = ex["grid_h"], ex["grid_w"]
     ax.imshow(img, extent=[0, gw, gh, 0])
     for r in range(1, gh):
         ax.axhline(r, color="white", lw=0.4, alpha=0.35)
     for c in range(1, gw):
         ax.axvline(c, color="white", lw=0.4, alpha=0.35)
-    for i, w in enumerate(words):
+
+    chg = {i: (old, new) for i, old, new, _ in changed}
+    for i, (a, b) in enumerate(zip(ex["sit_words"], ex["sti_words"])):
         r, c = divmod(i, gw)
-        t = ax.text(c + 0.5, r + 0.5, _norm(w), ha="center", va="center",
-                    fontsize=5.6, color="white", fontfamily=FONTS, zorder=4)
-        t.set_path_effects([])
-    for (r, c) in boxes:
-        ax.add_patch(Rectangle((c, r), 1, 1, fill=False, ec=color, lw=2.6, zorder=6))
-    ax.set_xlim(0, gw); ax.set_ylim(gh, 0); ax.axis("off")
-    ax.set_title(title, fontsize=9, fontweight="bold", color=color, pad=4)
-
-
-def _frame(ex, img, focus, show_new):
-    """One animation frame: the pair of panels, with `focus` highlighted.
-    show_new=False holds on the question-last token, True flips to the new one."""
-    gh, gw = ex["grid_h"], ex["grid_w"]
-    fig, axes = plt.subplots(1, 2, figsize=(8.4, 4.3), dpi=110)
-    rc = focus[3] if focus else None
-    _panel(axes[0], img, ex, ex["sit_words"], [rc] if rc else [],
-           f"question-last  ->  “{ex['SIT']['answer']}”", "#0072B2")
-    _panel(axes[1], img, ex, ex["sti_words"] if show_new else ex["sit_words"],
-           [rc] if (rc and show_new) else [],
-           f"question-first  ->  “{ex['STI']['answer']}”", RED)
-    if rc:
-        r, c = rc
-        axes[0].add_patch(Rectangle((c, r), 1, 1, fill=False, ec=AMBER, lw=2.8, zorder=7))
-        if show_new:
-            fig.add_artist(ConnectionPatch(
-                xyA=(c + 1.0, r + 0.16), coordsA=axes[0].transData,
-                xyB=(c + 0.0, r + 0.16), coordsB=axes[1].transData,
-                arrowstyle="-|>", mutation_scale=11, linewidth=1.6, color=AMBER,
-                linestyle=(0, (3, 2)), zorder=11))
-            fig.text(0.5, 0.035, f"{focus[1]}  →  {focus[2]}", ha="center",
-                     fontsize=13, fontweight="bold", color=RED, fontfamily=FONTS)
+        if i in chg:
+            old, new = chg[i]
+            shown = reveal is True or (focus is not None and i == focus[0])
+            # old token sits above, dimmed once its replacement is visible
+            t0 = ax.text(c + 0.5, r + 0.32, old, ha="center", va="center",
+                         fontsize=5.2, color="#f2f2f2", fontfamily=FONTS,
+                         zorder=4, alpha=0.8 if shown else 1.0)
+            t0.set_path_effects([pe.withStroke(linewidth=1.5, foreground="#00000090")])
+            if shown:
+                t1 = ax.text(c + 0.5, r + 0.70, new, ha="center", va="center",
+                             fontsize=5.8, color="#ff5a5a", fontweight="bold",
+                             fontfamily=FONTS, zorder=5)
+                t1.set_path_effects([pe.withStroke(linewidth=1.8, foreground="#3a0000")])
+            ec = AMBER if (focus is not None and i == focus[0]) else RED
+            lw = 2.8 if (focus is not None and i == focus[0]) else 1.4
+            ax.add_patch(Rectangle((c, r), 1, 1, fill=False, ec=ec, lw=lw,
+                                   zorder=6))
         else:
-            fig.text(0.5, 0.035, f"{focus[1]}", ha="center", fontsize=13,
-                     fontweight="bold", color=INK, fontfamily=FONTS)
-    fig.suptitle(f"“{ex['question']}”   (truth: {ex['gt']})", fontsize=10,
-                 fontweight="bold", y=0.985)
-    fig.tight_layout(rect=[0, 0.06, 1, 0.94])
+            tu = ax.text(c + 0.5, r + 0.5, _norm(a), ha="center", va="center",
+                         fontsize=5.2, color="white", fontfamily=FONTS,
+                         zorder=4, alpha=0.7)
+            tu.set_path_effects([pe.withStroke(linewidth=1.2, foreground="#00000070")])
+    ax.set_xlim(0, gw); ax.set_ylim(gh, 0); ax.axis("off")
+
+
+def _frame(ex, img, changed, focus, reveal):
+    """One animation frame over the combined grid."""
+    gh, gw = ex["grid_h"], ex["grid_w"]
+    fig, ax = plt.subplots(figsize=(6.6, 6.6 * gh / gw * 1.02 + 0.9), dpi=110)
+    _grid(ax, img, ex, changed, focus, reveal)
+    fig.suptitle(f"\u201c{ex['question']}\u201d   (truth: {ex['gt']})",
+                 fontsize=10.5, fontweight="bold", y=0.975)
+    sub = (f"question-last \u2192 \u201c{ex['SIT']['answer']}\u201d      "
+           f"question-first \u2192 \u201c{ex['STI']['answer']}\u201d")
+    fig.text(0.5, 0.935, sub, ha="center", fontsize=9, color=INK)
+    if focus is not None:
+        fig.text(0.5, 0.028, f"{focus[1]}  \u2192  {focus[2]}", ha="center",
+                 fontsize=14, fontweight="bold", color=RED, fontfamily=FONTS)
+    else:
+        fig.text(0.5, 0.022, "white above: question-last     red below: question-first",
+                 ha="center", fontsize=9, color=INK)
+    fig.tight_layout(rect=[0, 0.05, 1, 0.92])
     buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=110)
     plt.close(fig)
@@ -140,14 +152,14 @@ def _frame(ex, img, focus, show_new):
 def _build_gif(idx, picked, hold_ms):
     ex = next(e for e in _load_examples() if e["idx"] == idx)
     img = Image.open(os.path.join(ASSETS, ex["image"])).convert("RGB")
-    chosen = [c for c in _changes(ex) if c[0] in set(picked)]
-    frames = []
+    changed = _changes(ex)
+    chosen = [c for c in changed if c[0] in set(picked)]
+    frames = [_frame(ex, img, changed, None, False)]
     for c in chosen:
-        frames.append(_frame(ex, img, c, False))
-        frames.append(_frame(ex, img, c, True))
-        frames.append(_frame(ex, img, c, True))
-    if not frames:
-        return None
+        frames.append(_frame(ex, img, changed, c, False))
+        frames.append(_frame(ex, img, changed, c, False))
+    frames.append(_frame(ex, img, changed, None, True))
+    frames.append(_frame(ex, img, changed, None, True))
     buf = io.BytesIO()
     imageio.mimsave(buf, frames, format="GIF", duration=hold_ms / 1000.0, loop=0)
     return buf.getvalue()

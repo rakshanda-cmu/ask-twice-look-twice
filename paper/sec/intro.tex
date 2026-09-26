@@ -49,6 +49,16 @@ than an answer token, the paradox itself reverses: question-first is $2.80$ mAP
 \emph{better} and wins on 17 of 20 datasets, which places the effect in
 read-out rather than in prompt order as such.
 
+\emph{Which patches change, and can we find them without cherry-picking?} The
+qualitative evidence for steering has so far been chosen by hand, one
+persuasive image at a time, which is exactly the kind of evidence a reader
+should distrust. We replace that with a procedure. For a given example we
+decode every image patch under both orderings with a logit lens, drop the
+patches whose top-1 token is unchanged, and rank what survives by whether the
+new token belongs to the question's own vocabulary. Nothing is selected by eye:
+the figure reports every patch that changed, and the ranking, not the author,
+decides which ones are worth naming. Figure~\ref{fig:teaser} is that output.
+
 \emph{What is the echo actually made of?} If the echo re-anchors read-out rather
 than supplying a second look, it should survive being destroyed as an image. It
 does. Downscaling the echoed copy to $\tfrac{1}{8}$ resolution, $\tfrac{1}{64}$

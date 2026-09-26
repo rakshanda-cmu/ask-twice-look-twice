@@ -35,6 +35,8 @@ from naturalbench_eval import answer_suffix
 from fig2_search import run, matches, ok, VAGUE, STOP, NB_ROOT, LOW_MAX, ORDERS
 
 CRIMSON = "#dc143c"
+LINKC = "#f5a800"   # amber: the individually traced cells
+INKC = "#1a1a1a"
 RING = "#ff2d55"
 HITC = "#d81b26"      # red boxes mark the patches decoding a question word
 GRIDC = "#ffffff"     # thin cell separators in the translucent "wash" style
@@ -97,6 +99,10 @@ def main():
     ap.add_argument("--fit-text", action="store_true", dest="fit_text",
                     help="shrink a cell's font until the whole token fits instead "
                          "of truncating it at --cell-chars")
+    ap.add_argument("--diff", action="store_true",
+                    help="one combined grid instead of one panel per ordering: "
+                         "a changed cell carries the question-last token above "
+                         "and the question-first token below")
     ap.add_argument("--mm", default=None, help=argparse.SUPPRESS)
     args = ap.parse_args()
 
@@ -147,6 +153,90 @@ def render(mm, hits, group, args):
 
     disp = small.resize((gw * 64, gh * 64), Image.LANCZOS)
     cell = 64
+
+    if args.diff:
+        import matplotlib.patheffects as pe
+        sit_w, sti_w = W["SIT"], W["STI"]
+        changed = [i for i in range(gh * gw)
+                   if sit_w[i].strip() and sti_w[i].strip()
+                   and sit_w[i].strip() != sti_w[i].strip()]
+        linked = set()
+        for spec in (args.link.split(";") if args.link else []):
+            if spec.strip():
+                rr, cc = [int(v) for v in spec.split(",")]
+                linked.add(rr * gw + cc)
+
+        fh = args.figheight if args.figheight else args.figwidth * 0.58
+        fig = plt.figure(figsize=(args.figwidth, fh), dpi=400)
+        # the grid carries the content, so the input thumbnail stays small
+        gs = fig.add_gridspec(1, 2, width_ratios=[0.60, 3.05],
+                              left=0.004, right=0.996, top=0.845, bottom=0.01,
+                              wspace=0.02)
+        ax0 = fig.add_subplot(gs[0, 0])
+        ax0.imshow(small); ax0.axis("off")
+        ax0.set_title("Input", fontsize=7.6, fontweight="bold", pad=3)
+
+        ax = fig.add_subplot(gs[0, 1])
+        ax.imshow(disp, extent=[0, gw, gh, 0])
+        rend = fig.canvas.get_renderer()
+        cell_px = ax.get_window_extent(rend).width / max(1, gw)
+        for r_ in range(1, gh):
+            ax.axhline(r_, color="white", lw=0.35, alpha=0.35)
+        for c_ in range(1, gw):
+            ax.axvline(c_, color="white", lw=0.35, alpha=0.35)
+
+        def _fit(t, frac):
+            if not args.fit_text:
+                return
+            lim = cell_px * frac
+            f_ = t.get_fontsize()
+            for _ in range(16):
+                if t.get_window_extent(rend).width <= lim:
+                    return
+                f_ *= 0.88
+                t.set_fontsize(f_)
+
+        for i in range(gh * gw):
+            r_, c_ = divmod(i, gw)
+            if i in changed:
+                t0 = ax.text(c_ + 0.5, r_ + 0.30, sit_w[i].strip(),
+                             ha="center", va="center", fontsize=args.cell_fontsize,
+                             color="#f4f4f4", zorder=4)
+                t1 = ax.text(c_ + 0.5, r_ + 0.72, sti_w[i].strip(),
+                             ha="center", va="center",
+                             fontsize=args.cell_fontsize * 1.05,
+                             color="#ff5252", fontweight="bold", zorder=5)
+                for t_, lw_ in ((t0, 1.0), (t1, 1.2)):
+                    t_.set_path_effects([pe.withStroke(linewidth=lw_,
+                                                       foreground="#000000a0")])
+                    _fit(t_, 0.82)
+                ec = LINKC if i in linked else HITC
+                ax.add_patch(Rectangle((c_, r_), 1, 1, fill=False, ec=ec,
+                                       lw=2.2 if i in linked else 1.0, zorder=6))
+            else:
+                t_ = ax.text(c_ + 0.5, r_ + 0.5, sit_w[i].strip(),
+                             ha="center", va="center", fontsize=args.cell_fontsize,
+                             color="white", alpha=0.6, zorder=4)
+                t_.set_path_effects([pe.withStroke(linewidth=0.9,
+                                                   foreground="#00000080")])
+                _fit(t_, 0.88)
+        ax.set_xlim(0, gw); ax.set_ylim(gh, 0); ax.axis("off")
+
+        fig.text(0.5, 0.985, f"Q: \u201c{rec['question']}\u201d   "
+                 f"(ground truth: {rec['gt']})", ha="center", va="top",
+                 fontsize=8.8, fontweight="bold")
+        fig.text(0.5, 0.905,
+                 f"{len(changed)} of {gh * gw} patches change what they decode to",
+                 ha="center", va="top", fontsize=7.4, color=INKC)
+        fig.text(0.5, 0.863,
+                 f"white above: question-last \u2192 \u201c{A['SIT']}\u201d      "
+                 f"red below: question-first \u2192 \u201c{A['STI']}\u201d",
+                 ha="center", va="top", fontsize=7.0, color=INKC)
+        fig.savefig(args.out + ".pdf"); fig.savefig(args.out + ".png", dpi=300)
+        plt.close(fig)
+        print(f"wrote {args.out}.png/.pdf  ({len(changed)} changed cells)")
+        return
+
 
     panels = [o for o in (args.orders.split(",") if args.orders else ORDERS)
               if o in ORDERS]
