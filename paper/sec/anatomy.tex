@@ -1,0 +1,76 @@
+\section{Anatomy of the Paradox}
+\label{sec:anatomy}
+
+Two explanations come to mind, and both are wrong. A length or budget effect is
+ruled out immediately: \sti{} and \sit{} hold the same tokens in a different
+order, so their prompts are identical in length (Table~\ref{tab:cost}). The
+other, that question-first degrades perception, takes the rest of this section
+to reject.
+
+\subsection{Perception probe: the question reaches the image, and rewrites it}
+\label{sec:anatomy-steering}
+
+Reading image patches with a logit lens, question-first makes $6.975$ patches
+per image decode a question content word against $2.800$ for question-last, a
+factor of $2.49$ over 160 NaturalBench candidates. Figure~\ref{fig:teaser}
+shows this patch by patch: asking ``Is the adult in the image chasing a child?''
+before the image turns \emph{running} into \emph{chase}, \emph{boy} into
+\emph{ahead} and \emph{baseball} into \emph{child}, taking the count of patches
+decoding a question word from 1 to 12, and the model then answers ``No'' to a
+question whose ground truth is Yes.
+
+The rewrite shows in the representations too: against a forward pass on the
+image alone, \sti{}'s layer-18 image tokens sit at mean cosine $0.8627$ where
+\sit{}'s sit at $0.9110$ and \ist{}'s are untouched
+(Appendix~\ref{app:cosine}). Causal masking supplies a control that matters
+later: a question copy placed \emph{after} the image provably cannot alter the
+image tokens, and the measurement confirms it,
+$\cos(\sti{}, \stit{}) = 0.99999$.
+
+
+\subsection{Finding the rewrite without cherry-picking}
+\label{sec:anatomy-diff}
+
+The patch-level evidence above is produced by a procedure rather than by
+inspection, which matters because the alternative is choosing the persuasive
+image and hoping it is typical. Given an example and a layer, we run the model
+under both orderings, project every image patch through the unembedding, and
+take the top-1 token per patch. Patches whose token is unchanged are dropped. Of
+those that remain, we mark the ones whose new token belongs to the question's
+vocabulary, matched by stem against the question's content words and their near
+variants, so that a patch turning \emph{throws} into \emph{chase} counts and one
+turning \emph{lush} into \emph{grass} does not. The result is a count with a
+denominator, reported in every figure caption, rather than a gallery.
+
+Two properties make this usable as evidence. It is exhaustive, so the figure
+shows every patch that changed and a reader can check the ones we did not name.
+And it is cheap, needing two forward passes and no training, so it runs on any
+example rather than the handful that happen to look good. We ship it as an
+interactive viewer in the supplementary material, which steps through the
+changed patches one at a time; the paper figures are single frames of it.
+
+\subsection{Read-out probe: the question is under-attended, and late}
+\label{sec:anatomy-readout}
+
+If perception is intact, the failure is downstream of it. Probing the answer
+position on the $150$ NaturalBench pairs where question-first is wrong and
+question-last is right, question-first sends $2.19\times$ less attention to the
+question at the peak read-out layer ($0.0676$ vs $0.1479$) and over twice as
+much to the image. The timing matters as much as the size: the two orderings are
+indistinguishable at chance through layer 25 of 36, then fork at layer 26 and
+reach $P(\text{correct})$ of $0.0986$ and $0.8747$ (Figure~\ref{fig:mechanism}).
+A failure that appears only in the last quarter of the network is not an
+encoding failure.
+
+
+\subsection{Causal intervention: each ordering depends on a different path}
+\label{sec:anatomy-knockout}
+
+The attention numbers are correlational; severing the edges makes the dependence
+causal and doubly dissociated (Appendix~\ref{app:knockout}). Cutting
+answer-to-question costs question-last $5.6$ points (95\% CI $[+1.99, +9.60]$)
+and question-first nothing ($+0.4$); cutting answer-to-image costs question-first
+$9.6$ points and question-last nothing; an equal-length random span moves both by
+at most $0.8$. Question-last answers by reading the question. Question-first
+answers by reading the image, into which it has already folded the question, and
+that path does not carry the answer.

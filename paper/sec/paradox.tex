@@ -1,0 +1,79 @@
+\section{The Question-First Paradox}
+\label{sec:paradox}
+
+This section and the next recap the phenomenon and diagnosis this paper extends
+\citep{anon-workshop}, compressed to what the new results need. All numbers are
+reproductions on our own runs.
+
+\subsection{Notation and setup}
+\label{sec:setup}
+
+A prompt has three sections: the system message (S), the image (I), which
+expands to many visual tokens, and the task or question (T). An ordering is
+written as its sequence, so \sit{} is system-image-question and \sti{} is
+system-question-image. An ordering may repeat a section: \stit{} repeats the
+question after the image, \sitit{} repeats the image after the question, and
+\sititrev{} is \sitit{} with the second image copy spatially reversed. The two
+baselines are \sit{}, which is what most inference code emits by default, and
+\sti{}, which is what a reader is told to do when looking for something
+specific.
+
+Qwen3-VL-8B is the primary model and carries every analysis; for breadth we also
+run Gemma-3-27B, Gemma-4-31B, Qwen2.5-VL-7B, InternVL3-8B and LLaVA-1.5. All
+results use greedy decoding with a fixed answer-token budget, and every ordering
+of a benchmark shares one system message, one question string per item, one
+image preprocessing path and one scoring function, so the ordering is the only
+difference between columns.
+
+Three benchmarks carry the diagnosis: NaturalBench \citep{naturalbench2024},
+POPE \citep{pope2023} and Winoground \citep{winoground2022}.
+Section~\ref{sec:results} adds fourteen not tested in prior work: RF20-VL, used
+both as a detection benchmark scored by mAP and as a $24{,}449$-question yes/no
+presence task over the same images; nine image benchmarks (BLINK
+\citep{blink2024}, CV-Bench \citep{cambrian2024}, HR-Bench, MMStar
+\citep{mmstar2024}, MMVP, RealWorldQA, WorldMedQA-V, TallyQA
+\citep{tallyqa2019}, VQAv2 \citep{vqav2}); and four video QA benchmarks
+(MVBench \citep{mvbench2024}, NExT-QA \citep{nextqa2021}, MSVD-QA
+\citep{msvdqa2017}, TGIF-QA \citep{tgifqa2017}), where each \texttt{I} expands
+to six uniformly sampled frames. Sizes are in the tables. For NaturalBench and
+Winoground we pair on the group or example index and report an exact two-sided
+McNemar test with a paired bootstrap 95\% interval over $5{,}000$ resamples.
+
+\subsection{The phenomenon: moving the question earlier makes the model worse}
+\label{sec:paradox-phenomenon}
+
+Table~\ref{tab:ladder} runs six orderings on four benchmarks with Qwen3-VL-8B.
+Every column uses the same system message, question string, image, decoding and
+scoring code; \sti{} and \sit{} contain the same tokens in the same quantity.
+Only the position of the question moves. Question-first is the worst ordering on
+all four: NaturalBench group accuracy falls from $35.05$ to $26.95$
+($p = 1.3\times10^{-12}$), Winoground from $31.75$ to $22.25$
+($p = 7.7\times10^{-5}$), RF20 F1 from $78.57$ to $65.59$.
+
+Intuition predicts the opposite. Placing the question first is what a reader
+would do when told to look for something specific, and under causal attention it
+is the only layout in which every image token can see the question.
+
+\begin{table}[t]
+\caption{Moving the question in front of the image is the worst choice on all
+four benchmarks, and echoing it back is the best on three. Ordering ladder for
+Qwen3-VL-8B, reproducing \citet{anon-workshop} and adding RF20. Bold marks the
+best ordering in each row. POPE is the exception to the repair: plain
+question-last already wins there. $N$ is 1{,}900 groups for NaturalBench,
+9{,}000 items for POPE, 400 examples for Winoground and 24{,}449 for RF20.}
+\label{tab:ladder}
+\begin{center}
+\small
+\begin{tabular}{llrrrrrr}
+\toprule
+Benchmark & Metric & \ist{} & \sit{} & \sti{} & \stit{} & \sitit{} & \sititrev{} \\
+\midrule
+NaturalBench & pair acc.  & 78.93 & 79.21 & 75.29 & 78.95 & \best{80.36} & 80.26 \\
+NaturalBench & group acc. & 33.95 & 35.05 & 26.95 & 35.00 & \best{37.37} & \best{37.37} \\
+POPE         & F1         & 88.22 & \best{88.35} & 86.13 & 87.61 & 88.12 & 88.25 \\
+Winoground   & group acc. & 28.00 & 31.75 & 22.25 & 37.50 & 40.25 & \best{41.00} \\
+RF20         & F1         & 78.92 & 78.57 & 65.59 & 78.61 & \best{80.56} & 79.78 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}

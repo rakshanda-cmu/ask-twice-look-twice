@@ -10,29 +10,28 @@ see it, which is what a reader would want when told to look for something
 specific. It makes the model worse, and on one benchmark category it more than
 halves accuracy.
 
-\paragraph{Relation to prior work.} Prior work by the present authors
-\citep{anon-workshop}, included in the supplementary material, established this
-question-first paradox on three yes/no benchmarks and diagnosed it: the question
-does reach the image and measurably steers its patches, but the answer position
-cannot read the question back out, and an attention knockout shows the two
-orderings answer through different paths. That work also proposed echoing as the
-repair. We recap the diagnosis in Section~\ref{sec:background} because the new
-results are not interpretable without it, and we cite rather than re-derive it.
+Prior work by the present authors \citep{anon-workshop}, included in the
+supplementary material, established this paradox on three yes/no benchmarks and
+diagnosed it as a read-out failure. Section~\ref{sec:related} states exactly
+what is recapped here and what is new; Sections~\ref{sec:paradox}
+and~\ref{sec:anatomy} compress the diagnosis, which the new results need.
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=\linewidth]{figs/fig_teaser.pdf}
+\includegraphics[width=\linewidth]{figs/fig1_chase.pdf}
 \end{center}
 \caption{The ordering that looks most like it found the answer is the one that
-answers wrong, and repeating the prompt repairs it for the price of a sentence.
-Qwen3-VL-8B on NaturalBench; grey bars are question-last, orange question-first,
-blue the two repairs. \textbf{(a)} Question-first puts a question content word
-on $2.49\times$ more image patches (mean over 160 candidates), so the question
-demonstrably reaches the image. \textbf{(b)} It nonetheless loses $8.1$ points
-of group accuracy ($p = 1.3\times10^{-12}$), which is the paradox.
-\textbf{(c)} Repeating the question after the image recovers it for $13$
-tokens, and repeating the image at $\tfrac{1}{8}$ resolution passes the
-question-last baseline (dashed) for $107$.}
+answers wrong. Every image patch of one NaturalBench example is shown, each cell
+holding the vocabulary token that patch's layer-32 hidden state decodes to under
+a logit lens, shaded by that token's probability. Moving the question in front
+of the image steers the patches onto the question's own vocabulary, taking
+patches that decode a question word from 1 to 12 (red rings), yet the model then
+answers ``No'' to a question whose ground truth is Yes, while question-last
+answers ``Yes''. Amber boxes mark three traced patches, joined by a dashed arrow
+to the same patch under question-first, where it is boxed in red: \emph{running}
+becomes \emph{chase}, \emph{boy} becomes \emph{ahead}, \emph{baseball} becomes
+\emph{child}. Better perception, worse answer. Echoing the question after the
+image keeps all 12 steered patches and recovers the answer for 13 tokens.}
 \label{fig:teaser}
 \end{figure}
 

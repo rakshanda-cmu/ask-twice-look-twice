@@ -1,0 +1,50 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Prompt order and position effects.} That the position of information
+in a prompt changes what a model does is established in text. Few-shot example
+order alone swings accuracy across a wide range \citep{fantasticallyordered2022},
+and long-context models recover facts placed at the ends of a context better
+than facts placed in the middle \citep{lostinthemiddle2024}. Both concern where evidence sits relative to the query. The question-first
+paradox is the multimodal counterpart with a sharper edge: our two layouts hold
+the same tokens in the same quantity, so context length, truncation and
+retrieval difficulty cannot distinguish them. Re-reading the question also helps
+text reasoning \citep{rereading2024}, the same intervention as our question echo
+reached from a different direction; that work motivates it as deliberation,
+whereas our diagnosis says it restores an attention path.
+
+\paragraph{Prompt optimization.} An alternative to reasoning about layout is to
+search over prompt text. DSPy compiles declarative pipelines into tuned prompts
+\citep{dspy2024}, and GEPA evolves prompts by reflecting on failures
+\citep{gepa2025}. We use GEPA not as a competitor but as a test of the
+diagnosis, because it can rewrite the system message and cannot move the image:
+Section~\ref{sec:gepa} shows it recovers part of the loss under the broken
+ordering and nothing under the working one, which is what a read-out account
+predicts and a wording account does not.
+
+\paragraph{Interpretability of vision-language models.} We read intermediate
+states with a logit lens \citep{logitlens2020,tunedlens2023} and establish
+causality by severing attention edges, the method used to localize factual
+recall in language models \citep{attnknockout2023,rome2022}. Our use is
+diagnostic rather than editing: we do not intervene to change behaviour at
+deployment, only to identify which path an answer depends on. The
+patch-difference procedure of Section~\ref{sec:anatomy-diff} adds a small piece
+of method here, turning per-patch logit-lens decodes into an exhaustive,
+rankable list of changes rather than a chosen illustration.
+
+\paragraph{Relation to our own prior work.} This paper extends a workshop paper
+by the present authors \citep{anon-workshop}, included in the supplementary
+material for reviewers. We state the overlap plainly. That paper established the
+question-first paradox on NaturalBench, POPE and Winoground, diagnosed it as a
+read-out failure using the perception probe, the read-out probe and the
+attention knockout, proposed question and image echoing as the repair, and
+reported the reversed-echo control. Sections~\ref{sec:paradox}
+and~\ref{sec:anatomy} recap that material in compressed form, with all numbers
+reproduced on our own runs, because the new results are not interpretable
+without it. Everything in Sections~\ref{sec:results} to~\ref{sec:ablations} is
+new: fourteen further benchmarks including video and object detection, the
+reversal of the effect under a detection objective, the echo-resolution sweep
+and its exact token accounting, the automated patch-difference procedure, and
+the prompt-optimizer comparison. The earlier paper named the second image's
+token cost as an open limitation and did not measure it; measuring it, and
+showing how little of the echo is needed, is the core of this one.

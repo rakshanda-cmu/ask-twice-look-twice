@@ -1,0 +1,34 @@
+\section{From Diagnosis to Prompt: Echoing}
+\label{sec:echoing}
+
+The diagnosis prescribes the prompt with no design freedom left. If the answer
+position cannot read the question, put something after the image that it can
+read. There are exactly two things available.
+
+\paragraph{Question echoing (\stit{}).} Repeat the question after the image.
+This restores question-answer adjacency while provably leaving perception
+untouched, since causal masking means a later copy cannot alter earlier patches
+($\cos(\sti{}, \stit{}) = 0.99999$, Section~\ref{sec:anatomy-steering}). It
+costs $13$ tokens, and it is the controlled intervention the diagnosis calls
+for: matched on content, matched on perception, differing only in whether the
+answer position has a question to read.
+
+\paragraph{Image echoing (\sitit{}).} Repeat the image after the question, so
+the answer position has both a nearby question and image tokens encoded with the
+question already in context. Prior work also reversed the echoed copy
+(\sititrev{}) and found it changed little, which we reproduce: NaturalBench
+group accuracy moves from $37.37$ to $37.37$ ($p = 1.00$) and Winoground from
+$40.25$ to $41.00$ ($p = 0.68$).
+
+Two results in Table~\ref{tab:ladder} keep us honest. Question echoing alone is
+not reliably better than simply asking the question last (NaturalBench $35.00$
+against $35.05$, $p = 1.00$), so its role is to repair question-first prompting,
+not to improve on question-last. Image echoing is a real gain and is the claim
+we defend ($+0.085$ on Winoground, $p = 2.4\times10^{-5}$), though on POPE it
+does not help at all.
+
+What prior work left open is what the echo is made of and what it costs. It
+listed the second image's token cost as a limitation and did not measure it.
+Sections~\ref{sec:results} and~\ref{sec:ablations} take up that thread: how far
+the paradox reaches, where the repair stops working, how little of the echo is
+needed, and whether a prompt optimizer would have found it anyway.

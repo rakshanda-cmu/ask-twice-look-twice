@@ -175,6 +175,22 @@ Winoground   & Qwen3-VL-8B & \sti{} vs \sit{}   & 0.223 & 0.318 & $+0.095$ $[+0.
 \end{center}
 \end{table}
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\linewidth]{figs/fig_mechanism.pdf}
+\end{center}
+\caption{Question-first answers by reading the image instead of the question,
+and the two orderings only part company in the last quarter of the network.
+Measured on the 150 NaturalBench pairs where question-first is wrong and
+question-last is right. \textbf{(a)} Attention mass leaving the answer position,
+to the question (solid lines) and to the image (dashed): at layer 23, where
+question attention peaks for both, question-first sends $2.19\times$ less of it
+to the question. \textbf{(b)} Probability of the correct answer at each layer.
+Both baselines sit at chance through layer 25 (shaded), fork at layer 26 and
+never re-cross; both echo orderings track question-last, not question-first.}
+\label{fig:mechanism}
+\end{figure}
+
 \section{Read-out probe and decision layer in full}
 \label{app:probe}
 
@@ -346,7 +362,7 @@ Genuine word changes are rare and concentrated: $8$ across 100 samples, of which
 $6$ occur at layer 16, one at layer 8 and one at layer 20, with none at layers
 0, 4, 12, 24 or 27. Divergence at the level of decoded output words is therefore
 sparse and mid-network, consistent with the read-out account in
-Section~\ref{sec:background-readout}, where the two orderings are indistinguishable
+Section~\ref{sec:anatomy-readout}, where the two orderings are indistinguishable
 at the decision level until late and differ mainly in routing rather than in
 vocabulary.
 

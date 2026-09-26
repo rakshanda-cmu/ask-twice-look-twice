@@ -29,10 +29,10 @@
 \definecolor{findingback}{RGB}{233,247,244}
 \newsavebox{\findingbox}
 \newenvironment{finding}
-  {\par\smallskip\noindent\begin{lrbox}{\findingbox}%
+  {\par\smallskip\noindent\setlength{\fboxrule}{0.9pt}%
+   \begin{lrbox}{\findingbox}%
    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}\small}
   {\end{minipage}\end{lrbox}%
-   \setlength{\fboxrule}{0.9pt}%
    \noindent\fcolorbox{findingframe}{findingback}{\usebox{\findingbox}}\par\smallskip}
 
 
@@ -68,8 +68,10 @@ in Vision-Language Models}
 
 \input{sec/abstract}
 \input{sec/intro}
-\input{sec/setup}
-\input{sec/background}
+\input{sec/related}
+\input{sec/paradox}
+\input{sec/anatomy}
+\input{sec/echoing}
 \input{sec/generality}
 \input{sec/ablations}
 \input{sec/discussion}
