@@ -1,25 +1,23 @@
 \begin{abstract}
-Whether a question is placed before or after an image changes nothing about a
-prompt's content, yet it changes a vision-language model's accuracy. Prior work
-by the present authors established this question-first paradox on three yes/no
-benchmarks and traced it to read-out rather than perception: the question
-demonstrably steers the image patches, but the answer position cannot read it
-back, and echoing the question or the image repairs the damage. That work left
-open how far the effect reaches, what the echo is actually made of, and what it
-costs. We answer all three. Across fourteen benchmarks never previously tested,
-question-first costs $7.0$ points on average and hurts on 12 of 13 image and
-video datasets, and on a $24{,}449$-question presence benchmark it hurts on 7 of
-7 categories, taking one from $86.3$ to $38.9$. It also has a limit we can name:
-on RF20-VL object detection, where the output is bounding boxes rather than an
-answer token, the sign reverses and question-first is $2.80$ mAP \emph{better},
-winning on 17 of 20 datasets. The echo turns out to carry almost no information: downscaling the
-echoed image to $\tfrac{1}{8}$ resolution, $\tfrac{1}{64}$ of the pixels, is
-statistically indistinguishable from a full-resolution echo ($p = 1.00$) while
-still beating question-last ($p = 0.005$), which cuts its price from $3{,}352$
-extra tokens per query to $107$. Breadth also exposes a boundary: on video,
-where the echo doubles an already long frame sequence, image echoing helps on
-only 1 of 4 datasets while question echoing still recovers $3.3$ points. A
-reflective prompt optimizer, given the same budget, gains only under the
-ordering our diagnosis says has headroom and never reaches the question-last
-baseline, so rewording does not substitute for fixing token order.
+Putting the question before the image rather than after it changes nothing about
+what a vision-language model is told, yet it changes what the model answers.
+Prior work by the present authors established this question-first paradox on
+three yes/no benchmarks and traced it to read-out rather than perception: the
+question does reach the image and visibly steers it, but the answer position
+cannot read it back, and repeating either the question or the image repairs the
+damage. What that work could not say is how far the effect reaches, what the
+repeated image actually contributes, and what it costs. We answer those three
+questions. Across fourteen further benchmarks the paradox proves general,
+costing seven points on average and as much as eighteen on a single benchmark,
+yet it is not a law: on object detection, where the model returns boxes instead
+of a word, the effect reverses and asking first is the better choice. The
+repeated image turns out to carry almost no information. Shrinking it to an
+eighth of its resolution leaves accuracy statistically unchanged while cutting
+its price from thousands of extra tokens to about a hundred, and a reversed copy
+works as well as a correct one, so what matters is where the tokens sit and not
+what they show. Breadth also marks a limit: on video, repeating the image stops
+helping, while repeating the question still does. Finally, a reflective prompt
+optimizer given the same budget improves only the ordering our diagnosis says
+has room left, and never catches the simpler fix, so this is not something
+better wording would have found.
 \end{abstract}
