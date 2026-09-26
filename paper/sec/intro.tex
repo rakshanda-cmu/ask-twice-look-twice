@@ -41,46 +41,43 @@ out to have a sharp answer.
 
 \emph{Does the paradox survive outside yes/no visual question answering?} We run
 the full ordering ladder on 14 benchmarks not previously tested, including four
-video QA datasets and a $24{,}449$-item detection-style presence benchmark
-(RF20-VL). Question-first hurts on 12 of 13 image and video benchmarks, costing
-$7.0$ points on average, and on RF20's yes/no presence task it hurts on 7 of 7
-categories, taking Lab Imaging from $86.3$ to $38.9$. The same breadth exposes
-two boundaries the original three benchmarks could not. On video, where the echo
-doubles an already long frame sequence, image echoing loses to question-last on
-three of four datasets. On RF20-VL detection, where the model emits boxes rather
-than an answer token, the paradox itself reverses: question-first is $2.80$ mAP
-\emph{better} and wins on 17 of 20 datasets, which places the effect in
-read-out rather than in prompt order as such.
+video QA datasets and RF20-VL, a $24{,}449$-item detection-style presence
+benchmark. Question-first hurts on 12 of 13 image and video benchmarks, costing
+$7.0$ points on average and as much as $18.0$. The same breadth exposes two
+boundaries the original three benchmarks could not. On video, where the echo
+doubles an already long frame sequence, image echoing loses on three of four
+datasets. On RF20-VL detection, where the model emits boxes rather than an answer
+token, the paradox itself reverses: question-first is $2.80$ mAP \emph{better} and
+wins on 17 of 20 datasets, which places the effect in read-out rather than in
+prompt order as such.
 
 \emph{Which patches change, and can we find them without cherry-picking?} The
-qualitative evidence for steering has so far been chosen by hand, one
-persuasive image at a time, which is exactly the kind of evidence a reader
-should distrust. We replace that with a procedure. For a given example we
-decode every image patch under both orderings with a logit lens, drop the
-patches whose top-1 token is unchanged, and rank what survives by whether the
-new token belongs to the question's own vocabulary. Nothing is selected by eye:
-the figure reports every patch that changed, and the ranking, not the author,
-decides which ones are worth naming. Figure~\ref{fig:teaser} is that output.
+qualitative evidence for steering has so far been chosen by hand, one persuasive
+image at a time, which is the kind of evidence a reader should distrust. We
+replace it with a procedure: decode every image patch under both orderings with a
+logit lens, drop the patches whose top-1 token is unchanged, and rank what
+survives by whether the new token belongs to the question's own vocabulary. The
+figure reports every patch that changed, and the ranking, not the author, decides
+which are worth naming. Figure~\ref{fig:teaser} is that output.
 
 \emph{What is the echo actually made of?} If the echo re-anchors read-out rather
 than supplying a second look, it should survive being destroyed as an image. It
-does. Downscaling the echoed copy to $\tfrac{1}{8}$ resolution, $\tfrac{1}{64}$
-of the pixels, leaves NaturalBench group accuracy statistically indistinguishable
-from a full-resolution echo ($37.32$ vs $37.37$, $p = 1.00$) while still beating
-question-last ($p = 0.005$), and it cuts the price from $3{,}352$ extra tokens
-per query to $107$. RF20 is the lone exception, and an informative one: its
-targets are small, so there the second look is doing real perceptual work and
-degrading it costs $1.76$ F1.
+does. Downscaling the echoed copy to $\tfrac{1}{8}$ resolution, $\tfrac{1}{64}$ of
+the pixels, leaves NaturalBench statistically indistinguishable from a
+full-resolution echo ($p = 1.00$) while still beating question-last
+($p = 0.005$), and cuts the price from $3{,}352$ extra tokens per query to $107$.
+RF20 is the lone exception, and an informative one: its targets are small, so the
+second look there does real perceptual work.
 
 \emph{Would careful prompt engineering do the same job?} We give GEPA
 \citep{gepa2025}, a reflective prompt optimizer, the same budget under both
 orderings. It improves question-first on all three benchmarks it is run on and
-finds nothing at all under question-last, which is what the read-out diagnosis
-predicts, since only the broken ordering has headroom to recover. It closes at
-most $83\%$ of the gap and never reaches the plain question-last baseline.
+finds nothing under question-last, which is what the read-out diagnosis predicts,
+since only the broken ordering has headroom. It closes at most $83\%$ of the gap
+and never reaches the plain question-last baseline.
 
-Together these say something the original result did not: the repair is not
-about giving the model a better look at the image, it is about where the tokens
-sit, it costs about a hundred tokens rather than a doubled prompt, and it cannot
-be replaced by rewording. We also report where it fails, which is video and any
-task whose evidence is small enough that a degraded second look loses it.
+Together these say something the original result did not: the repair is not about
+giving the model a better look at the image but about where the tokens sit, it
+costs about a hundred tokens rather than a doubled prompt, and rewording cannot
+replace it. We also report where it fails, which is video and any task whose
+evidence is small enough that a degraded second look loses it.
