@@ -24,11 +24,17 @@
 \setlength{\floatsep}{9pt plus 2pt minus 2pt}
 \setlength{\intextsep}{9pt plus 2pt minus 2pt}
 
-% House style: one boxed, numbered claim per result section.
-\newtcolorbox{finding}{
-  colback=black!4, colframe=black!55, boxrule=0.4pt, arc=1.5pt,
-  left=5pt, right=5pt, top=3pt, bottom=3pt, boxsep=1pt,
-  fontupper=\small, breakable}
+% Finding box: one boxed claim per result-bearing section (package-free).
+\definecolor{findingframe}{RGB}{38,148,132}
+\definecolor{findingback}{RGB}{233,247,244}
+\newsavebox{\findingbox}
+\newenvironment{finding}
+  {\par\smallskip\noindent\begin{lrbox}{\findingbox}%
+   \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}\small}
+  {\end{minipage}\end{lrbox}%
+   \setlength{\fboxrule}{0.9pt}%
+   \noindent\fcolorbox{findingframe}{findingback}{\usebox{\findingbox}}\par\smallskip}
+
 
 \newcommand{\up}[1]{\textcolor{black!70}{\small$+#1$}}
 \newcommand{\dn}[1]{\textcolor{black!70}{\small$-#1$}}
