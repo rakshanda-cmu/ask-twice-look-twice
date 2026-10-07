@@ -1,0 +1,9 @@
+name: qwen-vllm-env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - tqdm
+  - opencv
+  - supervision
+  - numpy=2.0.1
